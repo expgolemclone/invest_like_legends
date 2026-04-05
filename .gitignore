@@ -1,0 +1,6 @@
+# デフォルト全無視
+*
+
+# Git管理対象
+!.gitignore
+!README.md
