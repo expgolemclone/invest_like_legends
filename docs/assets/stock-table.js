@@ -24,7 +24,7 @@ function render(data) {
   const tbody = document.getElementById('tbody');
   tbody.innerHTML = data.map(function(/** @type {[string, string, number|null, number]} */ s) {
     const shikihoUrl = 'https://shikiho.toyokeizai.net/stocks/' + s[0] + '/shikiho';
-    const monexUrl = 'https://monex.ifis.co.jp/index.php?sa=find&ta=n&wd=' + s[0];
+    const monexUrl = 'https://scouter.monex.co.jp/report/zaimu/' + s[0];
     const amt = s[2] !== null ? s[2].toLocaleString() : '-';
     return '<tr>' +
       '<td class="code">' + s[0] + '</td>' +
