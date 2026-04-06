@@ -11,8 +11,8 @@ from server.browser import OpenResult, open_in_browser
 from server.config import BrowserConfig, PROJECT_ROOT
 
 
-_STATIC_ROOT: Path = PROJECT_ROOT / "assets"
-_INDEX_PATH: Path = PROJECT_ROOT / "naitou_seigo.html"
+_STATIC_ROOT: Path = PROJECT_ROOT / "docs" / "assets"
+_INDEX_PATH: Path = PROJECT_ROOT / "docs" / "index.html"
 
 _MIME_OVERRIDES: dict[str, str] = {
     ".js": "application/javascript",

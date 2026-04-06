@@ -7,13 +7,12 @@
 !pyproject.toml
 !uv.lock
 !serve.py
-!naitou_seigo.html
+!docs/
+!docs/**
 !server/
 !server/**
 !config/
 !config/**
-!assets/
-!assets/**
 !tests/
 !tests/**
 

@@ -142,6 +142,15 @@ a.monex:hover { background: var(--monex-color); color: var(--bg); }
 }
 
 @media (max-width: 768px) {
-  td, th { padding: 6px 8px; font-size: 0.8rem; }
-  td.name { max-width: 180px; }
+  .container { padding: 16px 8px; }
+  header h1 { font-size: 1.2rem; }
+  .stats { gap: 8px; }
+  .stat-card { padding: 8px 12px; flex: 1; min-width: 0; }
+  .stat-card .value { font-size: 1.1rem; }
+  .search-box input { max-width: 100%; }
+  table { font-size: 0.78rem; }
+  td, th { padding: 6px 6px; font-size: 0.75rem; }
+  td.name { max-width: 120px; word-break: break-all; }
+  td.num { font-size: 0.73rem; }
+  a.link-btn { padding: 6px 10px; font-size: 0.75rem; }
 }

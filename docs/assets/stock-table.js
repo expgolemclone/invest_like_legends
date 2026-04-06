@@ -1,14 +1,23 @@
 /** @type {Array<[string, string, number|null, number]>} */
 const stocks = window.stockData;
 
-/**
- * @param {string} browserKey
- * @param {string} url
- */
-function openInBrowser(browserKey, url) {
+// デスクトップのサーバー経由でブラウザを開く。サーバー不在時はデフォルトのリンク動作にフォールバック。
+document.addEventListener('click', function(/** @type {MouseEvent} */ e) {
+  var /** @type {HTMLAnchorElement|null} */ link = /** @type {HTMLAnchorElement|null} */ (e.target.closest('a[data-browser]'));
+  if (!link) return;
+
+  var /** @type {string} */ browserKey = link.getAttribute('data-browser') || '';
+  var /** @type {string} */ url = link.href;
+
+  e.preventDefault();
   fetch('/open?browser=' + encodeURIComponent(browserKey) + '&url=' + encodeURIComponent(url))
-    .catch(function() {});
-}
+    .then(function(/** @type {Response} */ res) {
+      if (!res.ok) window.open(url, '_blank', 'noopener');
+    })
+    .catch(function() {
+      window.open(url, '_blank', 'noopener');
+    });
+});
 
 /** @param {Array<[string, string, number|null, number]>} data */
 function render(data) {
@@ -23,8 +32,8 @@ function render(data) {
       '<td class="num">' + amt + '</td>' +
       '<td class="num">' + s[3] + '</td>' +
       '<td><div class="links-cell">' +
-        '<a class="link-btn shikiho" href="#" onclick="event.preventDefault(); openInBrowser(\'shikiho\', \'' + shikihoUrl + '\')">四季報 →</a>' +
-        '<a class="link-btn monex" href="#" onclick="event.preventDefault(); openInBrowser(\'monex\', \'' + monexUrl + '\')">Monex →</a>' +
+        '<a class="link-btn shikiho" href="' + shikihoUrl + '" target="_blank" rel="noopener" data-browser="shikiho">四季報</a>' +
+        '<a class="link-btn monex" href="' + monexUrl + '" target="_blank" rel="noopener" data-browser="monex">Monex</a>' +
       '</div></td>' +
     '</tr>';
   }).join('');
