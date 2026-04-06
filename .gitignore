@@ -16,3 +16,6 @@
 !assets/**
 !tests/
 !tests/**
+
+# 生成物は除外
+__pycache__/
