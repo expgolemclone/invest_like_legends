@@ -1,0 +1,14 @@
+[project]
+name = "invest-like-legends"
+version = "0.1.0"
+description = "偉大な投資家から学ぶ - 保有銘柄ビューア"
+requires-python = ">=3.12,<3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0,<9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

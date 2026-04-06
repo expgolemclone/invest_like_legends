@@ -1,0 +1,7 @@
+[browsers]
+shikiho = "qutebrowser"
+monex = "google-chrome"
+
+[allowed_url_prefixes]
+shikiho = "https://shikiho.toyokeizai.net/"
+monex = "https://monex.ifis.co.jp/"

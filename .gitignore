@@ -4,3 +4,15 @@
 # Git管理対象
 !.gitignore
 !README.md
+!pyproject.toml
+!uv.lock
+!serve.py
+!naitou_seigo.html
+!server/
+!server/**
+!config/
+!config/**
+!assets/
+!assets/**
+!tests/
+!tests/**
