@@ -4168,5 +4168,71 @@
         "ratio_percent": 0.61
       }
     ]
+  },
+  "one_warikabunihon": {
+    "name": "one割安株日本株ファンド",
+    "subtitle": "総資産: 40,270百万円 ｜ 組入上位10銘柄 ｜ 四季報オンラインへのリンク付き",
+    "stocks": [
+      {
+        "code": "8306",
+        "name": "三菱ＵＦＪフィナンシャル・グループ",
+        "amount_millions": 2066,
+        "ratio_percent": 5.13
+      },
+      {
+        "code": "8015",
+        "name": "豊田通商",
+        "amount_millions": 1768,
+        "ratio_percent": 4.39
+      },
+      {
+        "code": "8316",
+        "name": "三井住友フィナンシャルグループ",
+        "amount_millions": 1627,
+        "ratio_percent": 4.04
+      },
+      {
+        "code": "7203",
+        "name": "トヨタ自動車",
+        "amount_millions": 1474,
+        "ratio_percent": 3.66
+      },
+      {
+        "code": "6758",
+        "name": "ソニーグループ",
+        "amount_millions": 1422,
+        "ratio_percent": 3.53
+      },
+      {
+        "code": "8766",
+        "name": "東京海上ホールディングス",
+        "amount_millions": 1289,
+        "ratio_percent": 3.2
+      },
+      {
+        "code": "5802",
+        "name": "住友電気工業",
+        "amount_millions": 1240,
+        "ratio_percent": 3.08
+      },
+      {
+        "code": "1942",
+        "name": "関電工",
+        "amount_millions": 1079,
+        "ratio_percent": 2.68
+      },
+      {
+        "code": "8591",
+        "name": "オリックス",
+        "amount_millions": 1071,
+        "ratio_percent": 2.66
+      },
+      {
+        "code": "6503",
+        "name": "三菱電機",
+        "amount_millions": 1051,
+        "ratio_percent": 2.61
+      }
+    ]
   }
 }

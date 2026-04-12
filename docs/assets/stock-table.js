@@ -1,4 +1,4 @@
-/** @typedef {"naito" | "hikari" | "kiyohara" | "katayama" | "imura" | "gomi"} InvestorKey */
+/** @typedef {"naito" | "hikari" | "kiyohara" | "katayama" | "imura" | "gomi" | "one_warikabunihon"} InvestorKey */
 /** @typedef {"code" | "name" | "amount_millions" | "ratio_percent"} SortColumn */
 /** @typedef {"asc" | "desc"} SortDirection */
 /**
@@ -22,13 +22,14 @@
  * @property {InvestorDataset} katayama
  * @property {InvestorDataset} imura
  * @property {InvestorDataset} gomi
+ * @property {InvestorDataset} one_warikabunihon
  */
 
 const DEFAULT_TITLE = "保有銘柄ビューア - 四季報オンラインリンク一覧";
 const DEFAULT_INVESTOR_KEY = "naito";
 const DEFAULT_SORT_COLUMN = "amount_millions";
 const DEFAULT_SORT_DIRECTION = "desc";
-const INVESTOR_DATA_URL = "assets/data/investors.json?v=07593bcc1ea5";
+const INVESTOR_DATA_URL = "assets/data/investors.json?v=a4123689e1bf";
 const ASC_ARROW = "▲";
 const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
@@ -110,7 +111,7 @@ function bindEvents() {
   elements.tabs.forEach(function(tab) {
     tab.addEventListener("click", function() {
       const investorKey = tab.getAttribute("data-investor-key");
-      if (investorKey === "naito" || investorKey === "hikari" || investorKey === "kiyohara" || investorKey === "katayama" || investorKey === "imura" || investorKey === "gomi") {
+      if (investorKey === "naito" || investorKey === "hikari" || investorKey === "kiyohara" || investorKey === "katayama" || investorKey === "imura" || investorKey === "gomi" || investorKey === "one_warikabunihon") {
         switchInvestor(investorKey);
       }
     });
@@ -161,7 +162,7 @@ function normalizeInvestors(rawInvestors) {
   }
 
   const investors = /** @type {Partial<InvestorsDocument>} */ (rawInvestors);
-  if (!isInvestorDataset(investors.naito) || !isInvestorDataset(investors.hikari) || !isInvestorDataset(investors.kiyohara) || !isInvestorDataset(investors.katayama) || !isInvestorDataset(investors.imura) || !isInvestorDataset(investors.gomi)) {
+  if (!isInvestorDataset(investors.naito) || !isInvestorDataset(investors.hikari) || !isInvestorDataset(investors.kiyohara) || !isInvestorDataset(investors.katayama) || !isInvestorDataset(investors.imura) || !isInvestorDataset(investors.gomi) || !isInvestorDataset(investors.one_warikabunihon)) {
     throw new Error("Investor datasets are missing or invalid");
   }
 
@@ -172,6 +173,7 @@ function normalizeInvestors(rawInvestors) {
     katayama: investors.katayama,
     imura: investors.imura,
     gomi: investors.gomi,
+    one_warikabunihon: investors.one_warikabunihon,
   });
 }
 
