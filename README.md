@@ -1,7 +1,5 @@
 # invest_like_legends
 
-偉大な投資家から学ぶ
-
 https://expgolemclone.github.io/invest_like_legends/
 
-monexと四季報にログインしてから見てくれ
+[monex](https://mxp2.monex.co.jp/pc/ITS/login/LoginIDPassword.jsp)と[四季報オンライン](https://dcl.toyokeizai.net/ap/bz/login)にログインしてから見てくれ
