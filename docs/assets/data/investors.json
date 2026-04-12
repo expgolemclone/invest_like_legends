@@ -3508,5 +3508,227 @@
         "ratio_percent": 0.29
       }
     ]
+  },
+  "katayama": {
+    "name": "片山晃",
+    "subtitle": "出典: バフェット・コード ｜ 四季報オンラインへのリンク付き",
+    "stocks": [
+      {
+        "code": "7163",
+        "name": "住信SBIネット銀行株式会社",
+        "amount_millions": 7605,
+        "ratio_percent": 1.03
+      },
+      {
+        "code": "6227",
+        "name": "AIメカテック株式会社",
+        "amount_millions": 7489,
+        "ratio_percent": 6.53
+      },
+      {
+        "code": "4461",
+        "name": "第一工業製薬株式会社",
+        "amount_millions": 4523,
+        "ratio_percent": 4.94
+      },
+      {
+        "code": "4022",
+        "name": "ラサ工業株式会社",
+        "amount_millions": 3364,
+        "ratio_percent": 5.08
+      },
+      {
+        "code": "7575",
+        "name": "日本ライフライン株式会社",
+        "amount_millions": 2098,
+        "ratio_percent": 1.61
+      },
+      {
+        "code": "6785",
+        "name": "株式会社鈴木",
+        "amount_millions": 1238,
+        "ratio_percent": 3.04
+      },
+      {
+        "code": "6062",
+        "name": "株式会社チャーム・ケア・コーポレーション",
+        "amount_millions": 1075,
+        "ratio_percent": 3.07
+      },
+      {
+        "code": "7185",
+        "name": "ヒロセ通商株式会社",
+        "amount_millions": 936,
+        "ratio_percent": 4.22
+      },
+      {
+        "code": "5989",
+        "name": "株式会社エイチワン",
+        "amount_millions": 907,
+        "ratio_percent": 2.49
+      },
+      {
+        "code": "4369",
+        "name": "株式会社トリケミカル研究所",
+        "amount_millions": 861,
+        "ratio_percent": 0.94
+      },
+      {
+        "code": "4318",
+        "name": "株式会社クイック",
+        "amount_millions": 848,
+        "ratio_percent": 1.72
+      },
+      {
+        "code": "6638",
+        "name": "株式会社ミマキエンジニアリング",
+        "amount_millions": 817,
+        "ratio_percent": 1.77
+      },
+      {
+        "code": "3540",
+        "name": "株式会社歯愛メディカル",
+        "amount_millions": 470,
+        "ratio_percent": 0.63
+      },
+      {
+        "code": "6239",
+        "name": "株式会社ナガオカ",
+        "amount_millions": 357,
+        "ratio_percent": 4.76
+      },
+      {
+        "code": "9159",
+        "name": "株式会社W TOKYO",
+        "amount_millions": 260,
+        "ratio_percent": 4.77
+      },
+      {
+        "code": "3683",
+        "name": "株式会社サイバーリンクス",
+        "amount_millions": 255,
+        "ratio_percent": 2.63
+      },
+      {
+        "code": "378A",
+        "name": "株式会社ヒット",
+        "amount_millions": 198,
+        "ratio_percent": 1.13
+      },
+      {
+        "code": "3926",
+        "name": "株式会社オープンドア",
+        "amount_millions": 165,
+        "ratio_percent": 1.78
+      },
+      {
+        "code": "4584",
+        "name": "キッズウェル・バイオ株式会社",
+        "amount_millions": 115,
+        "ratio_percent": 1.7
+      },
+      {
+        "code": "4382",
+        "name": "HEROZ株式会社",
+        "amount_millions": 114,
+        "ratio_percent": 1.01
+      },
+      {
+        "code": "3641",
+        "name": "株式会社パピレス",
+        "amount_millions": 96,
+        "ratio_percent": 0.93
+      },
+      {
+        "code": "4019",
+        "name": "株式会社スタメン",
+        "amount_millions": 83,
+        "ratio_percent": 1.47
+      },
+      {
+        "code": "151A",
+        "name": "株式会社ダイブ",
+        "amount_millions": 74,
+        "ratio_percent": 1.41
+      },
+      {
+        "code": "2138",
+        "name": "クルーズ株式会社",
+        "amount_millions": 50,
+        "ratio_percent": 0.85
+      },
+      {
+        "code": "4883",
+        "name": "株式会社モダリス",
+        "amount_millions": 43,
+        "ratio_percent": 3.19
+      },
+      {
+        "code": "3985",
+        "name": "テモナ株式会社",
+        "amount_millions": 18,
+        "ratio_percent": 0.85
+      },
+      {
+        "code": "3787",
+        "name": "株式会社テクノマセマティカル",
+        "amount_millions": 17,
+        "ratio_percent": 1.38
+      }
+    ]
+  },
+  "imura": {
+    "name": "井村俊哉",
+    "subtitle": "出典: バフェット・コード ｜ 四季報オンラインへのリンク付き",
+    "stocks": [
+      {
+        "code": "7184",
+        "name": "株式会社富山第一銀行",
+        "amount_millions": 3694,
+        "ratio_percent": 2.21
+      },
+      {
+        "code": "3540",
+        "name": "株式会社歯愛メディカル",
+        "amount_millions": 3539,
+        "ratio_percent": 4.74
+      },
+      {
+        "code": "6235",
+        "name": "株式会社オプトラン",
+        "amount_millions": 2660,
+        "ratio_percent": 2.1
+      },
+      {
+        "code": "4776",
+        "name": "サイボウズ株式会社",
+        "amount_millions": 2485,
+        "ratio_percent": 2.63
+      },
+      {
+        "code": "1518",
+        "name": "三井松島ホールディングス株式会社",
+        "amount_millions": 2215,
+        "ratio_percent": 2.48
+      },
+      {
+        "code": "1514",
+        "name": "住石ホールディングス株式会社",
+        "amount_millions": 2123,
+        "ratio_percent": 3.88
+      },
+      {
+        "code": "7908",
+        "name": "株式会社きもと",
+        "amount_millions": 660,
+        "ratio_percent": 5.34
+      },
+      {
+        "code": "6081",
+        "name": "アライドアーキテクツ株式会社",
+        "amount_millions": 80,
+        "ratio_percent": 2.0
+      }
+    ]
   }
 }

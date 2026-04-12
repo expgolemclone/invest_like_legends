@@ -1,4 +1,4 @@
-/** @typedef {"naito" | "hikari" | "kiyohara"} InvestorKey */
+/** @typedef {"naito" | "hikari" | "kiyohara" | "katayama" | "imura"} InvestorKey */
 /** @typedef {"code" | "name" | "amount_millions" | "ratio_percent"} SortColumn */
 /** @typedef {"asc" | "desc"} SortDirection */
 /**
@@ -19,13 +19,15 @@
  * @property {InvestorDataset} naito
  * @property {InvestorDataset} hikari
  * @property {InvestorDataset} kiyohara
+ * @property {InvestorDataset} katayama
+ * @property {InvestorDataset} imura
  */
 
 const DEFAULT_TITLE = "保有銘柄ビューア - 四季報オンラインリンク一覧";
 const DEFAULT_INVESTOR_KEY = "naito";
 const DEFAULT_SORT_COLUMN = "amount_millions";
 const DEFAULT_SORT_DIRECTION = "desc";
-const INVESTOR_DATA_URL = "assets/data/investors.json?v=c05997c50bd6";
+const INVESTOR_DATA_URL = "assets/data/investors.json?v=eef9910df533";
 const ASC_ARROW = "▲";
 const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
@@ -107,7 +109,7 @@ function bindEvents() {
   elements.tabs.forEach(function(tab) {
     tab.addEventListener("click", function() {
       const investorKey = tab.getAttribute("data-investor-key");
-      if (investorKey === "naito" || investorKey === "hikari" || investorKey === "kiyohara") {
+      if (investorKey === "naito" || investorKey === "hikari" || investorKey === "kiyohara" || investorKey === "katayama" || investorKey === "imura") {
         switchInvestor(investorKey);
       }
     });
@@ -158,7 +160,7 @@ function normalizeInvestors(rawInvestors) {
   }
 
   const investors = /** @type {Partial<InvestorsDocument>} */ (rawInvestors);
-  if (!isInvestorDataset(investors.naito) || !isInvestorDataset(investors.hikari) || !isInvestorDataset(investors.kiyohara)) {
+  if (!isInvestorDataset(investors.naito) || !isInvestorDataset(investors.hikari) || !isInvestorDataset(investors.kiyohara) || !isInvestorDataset(investors.katayama) || !isInvestorDataset(investors.imura)) {
     throw new Error("Investor datasets are missing or invalid");
   }
 
@@ -166,6 +168,8 @@ function normalizeInvestors(rawInvestors) {
     naito: investors.naito,
     hikari: investors.hikari,
     kiyohara: investors.kiyohara,
+    katayama: investors.katayama,
+    imura: investors.imura,
   });
 }
 
