@@ -3394,5 +3394,119 @@
         "ratio_percent": 3.05
       }
     ]
+  },
+  "kiyohara": {
+    "name": "清原達郎",
+    "subtitle": "出典: バフェット・コード ｜ 四季報オンラインへのリンク付き",
+    "stocks": [
+      {
+        "code": "4813",
+        "name": "株式会社ACCESS",
+        "amount_millions": 6681,
+        "ratio_percent": 30.62
+      },
+      {
+        "code": "7460",
+        "name": "株式会社ヤギ",
+        "amount_millions": 2697,
+        "ratio_percent": 7.76
+      },
+      {
+        "code": "1879",
+        "name": "新日本建設株式会社",
+        "amount_millions": 2085,
+        "ratio_percent": 1.77
+      },
+      {
+        "code": "2329",
+        "name": "株式会社東北新社",
+        "amount_millions": 1669,
+        "ratio_percent": 1.98
+      },
+      {
+        "code": "6637",
+        "name": "寺崎電気産業株式会社",
+        "amount_millions": 1618,
+        "ratio_percent": 2.99
+      },
+      {
+        "code": "6293",
+        "name": "日精樹脂工業株式会社",
+        "amount_millions": 1383,
+        "ratio_percent": 8.24
+      },
+      {
+        "code": "6492",
+        "name": "岡野バルブ製造株式会社",
+        "amount_millions": 1017,
+        "ratio_percent": 5.52
+      },
+      {
+        "code": "8881",
+        "name": "株式会社日神グループホールディングス",
+        "amount_millions": 1001,
+        "ratio_percent": 2.98
+      },
+      {
+        "code": "6210",
+        "name": "TOYOイノベックス株式会社",
+        "amount_millions": 964,
+        "ratio_percent": 7.19
+      },
+      {
+        "code": "6390",
+        "name": "株式会社加藤製作所",
+        "amount_millions": 837,
+        "ratio_percent": 5.07
+      },
+      {
+        "code": "1828",
+        "name": "田辺工業株式会社",
+        "amount_millions": 759,
+        "ratio_percent": 2.9
+      },
+      {
+        "code": "7841",
+        "name": "株式会社遠藤製作所",
+        "amount_millions": 631,
+        "ratio_percent": 6.05
+      },
+      {
+        "code": "7539",
+        "name": "株式会社アイナボホールディングス",
+        "amount_millions": 569,
+        "ratio_percent": 3.0
+      },
+      {
+        "code": "2138",
+        "name": "クルーズ株式会社",
+        "amount_millions": 496,
+        "ratio_percent": 9.78
+      },
+      {
+        "code": "6994",
+        "name": "株式会社指月電機製作所",
+        "amount_millions": 407,
+        "ratio_percent": 1.54
+      },
+      {
+        "code": "4295",
+        "name": "株式会社フェイス",
+        "amount_millions": 340,
+        "ratio_percent": 2.52
+      },
+      {
+        "code": "8999",
+        "name": "グランディハウス株式会社",
+        "amount_millions": 328,
+        "ratio_percent": 1.99
+      },
+      {
+        "code": "3454",
+        "name": "ファーストブラザーズ株式会社",
+        "amount_millions": 50,
+        "ratio_percent": 0.29
+      }
+    ]
   }
 }
