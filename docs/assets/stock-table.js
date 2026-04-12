@@ -367,7 +367,7 @@ function compareStocks(leftStock, rightStock) {
 function renderStocks(stocks) {
   elements.tbody.innerHTML = stocks.map(function(stock) {
     const shikihoUrl = "https://shikiho.toyokeizai.net/stocks/" + encodeURIComponent(stock.code) + "/shikiho";
-    const monexUrl = "https://scouter.monex.co.jp/report/zaimu/" + encodeURIComponent(stock.code);
+    const monexUrl = "https://monex.ifis.co.jp/index.php?sa=report_zaimu&bcode=" + encodeURIComponent(stock.code);
     const amountText = stock.amount_millions === null ? "-" : stock.amount_millions.toLocaleString("ja-JP");
 
     return (
