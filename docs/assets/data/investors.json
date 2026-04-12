@@ -3730,5 +3730,443 @@
         "ratio_percent": 2.0
       }
     ]
+  },
+  "gomi": {
+    "name": "五味大輔",
+    "subtitle": "出典: バフェット・コード ｜ 四季報オンラインへのリンク付き",
+    "stocks": [
+      {
+        "code": "4565",
+        "name": "ネクセラファーマ株式会社",
+        "amount_millions": 7422,
+        "ratio_percent": 8.03
+      },
+      {
+        "code": "4588",
+        "name": "オンコリスバイオファーマ株式会社",
+        "amount_millions": 3688,
+        "ratio_percent": 5.04
+      },
+      {
+        "code": "2121",
+        "name": "株式会社MIXI",
+        "amount_millions": 3412,
+        "ratio_percent": 1.6
+      },
+      {
+        "code": "7575",
+        "name": "日本ライフライン株式会社",
+        "amount_millions": 1726,
+        "ratio_percent": 1.32
+      },
+      {
+        "code": "3723",
+        "name": "日本ファルコム株式会社",
+        "amount_millions": 1245,
+        "ratio_percent": 6.03
+      },
+      {
+        "code": "3182",
+        "name": "オイシックス・ラ・大地株式会社",
+        "amount_millions": 1141,
+        "ratio_percent": 2.33
+      },
+      {
+        "code": "4599",
+        "name": "株式会社ステムリム",
+        "amount_millions": 1027,
+        "ratio_percent": 5.4
+      },
+      {
+        "code": "4849",
+        "name": "エン株式会社",
+        "amount_millions": 1005,
+        "ratio_percent": 1.77
+      },
+      {
+        "code": "219A",
+        "name": "Heartseed株式会社",
+        "amount_millions": 673,
+        "ratio_percent": 1.53
+      },
+      {
+        "code": "6050",
+        "name": "イー・ガーディアン株式会社",
+        "amount_millions": 661,
+        "ratio_percent": 3.84
+      },
+      {
+        "code": "6083",
+        "name": "ERIホールディングス株式会社",
+        "amount_millions": 576,
+        "ratio_percent": 1.87
+      },
+      {
+        "code": "4235",
+        "name": "ウルトラファブリックス・ホールディングス株式会社",
+        "amount_millions": 528,
+        "ratio_percent": 4.51
+      },
+      {
+        "code": "2461",
+        "name": "株式会社ファンコミュニケーションズ",
+        "amount_millions": 493,
+        "ratio_percent": 1.42
+      },
+      {
+        "code": "6027",
+        "name": "弁護士ドットコム株式会社",
+        "amount_millions": 461,
+        "ratio_percent": 0.82
+      },
+      {
+        "code": "3196",
+        "name": "株式会社ホットランドホールディングス",
+        "amount_millions": 407,
+        "ratio_percent": 1.07
+      },
+      {
+        "code": "4572",
+        "name": "カルナバイオサイエンス株式会社",
+        "amount_millions": 406,
+        "ratio_percent": 5.14
+      },
+      {
+        "code": "3741",
+        "name": "株式会社セック",
+        "amount_millions": 406,
+        "ratio_percent": 1.36
+      },
+      {
+        "code": "2410",
+        "name": "株式会社キャリアデザインセンター",
+        "amount_millions": 366,
+        "ratio_percent": 2.13
+      },
+      {
+        "code": "5834",
+        "name": "SBIリーシングサービス株式会社",
+        "amount_millions": 354,
+        "ratio_percent": 0.84
+      },
+      {
+        "code": "4498",
+        "name": "サイバートラスト株式会社",
+        "amount_millions": 350,
+        "ratio_percent": 1.83
+      },
+      {
+        "code": "3665",
+        "name": "株式会社エニグモ",
+        "amount_millions": 349,
+        "ratio_percent": 2.2
+      },
+      {
+        "code": "2705",
+        "name": "株式会社大戸屋ホールディングス",
+        "amount_millions": 346,
+        "ratio_percent": 0.69
+      },
+      {
+        "code": "6562",
+        "name": "株式会社ジーニー",
+        "amount_millions": 305,
+        "ratio_percent": 1.52
+      },
+      {
+        "code": "3652",
+        "name": "株式会社ディジタルメディアプロフェッショナル",
+        "amount_millions": 277,
+        "ratio_percent": 4.67
+      },
+      {
+        "code": "4312",
+        "name": "サイバネットシステム株式会社",
+        "amount_millions": 273,
+        "ratio_percent": 0.8
+      },
+      {
+        "code": "2497",
+        "name": "ユナイテッド株式会社",
+        "amount_millions": 273,
+        "ratio_percent": 1.14
+      },
+      {
+        "code": "2120",
+        "name": "株式会社LIFULL",
+        "amount_millions": 271,
+        "ratio_percent": 1.09
+      },
+      {
+        "code": "3979",
+        "name": "株式会社うるる",
+        "amount_millions": 257,
+        "ratio_percent": 2.62
+      },
+      {
+        "code": "3850",
+        "name": "株式会社エヌ・ティ・ティ・データ・イントラマート",
+        "amount_millions": 192,
+        "ratio_percent": 1.44
+      },
+      {
+        "code": "7774",
+        "name": "株式会社ジャパン・ティッシュエンジニアリング",
+        "amount_millions": 177,
+        "ratio_percent": 0.73
+      },
+      {
+        "code": "4356",
+        "name": "応用技術株式会社",
+        "amount_millions": 171,
+        "ratio_percent": 1.71
+      },
+      {
+        "code": "7600",
+        "name": "株式会社日本エム・ディ・エム",
+        "amount_millions": 165,
+        "ratio_percent": 1.13
+      },
+      {
+        "code": "4441",
+        "name": "トビラシステムズ株式会社",
+        "amount_millions": 163,
+        "ratio_percent": 1.09
+      },
+      {
+        "code": "5572",
+        "name": "株式会社Ridge‐i",
+        "amount_millions": 143,
+        "ratio_percent": 1.62
+      },
+      {
+        "code": "6069",
+        "name": "トレンダーズ株式会社",
+        "amount_millions": 141,
+        "ratio_percent": 2.74
+      },
+      {
+        "code": "4667",
+        "name": "アイサンテクノロジー株式会社",
+        "amount_millions": 139,
+        "ratio_percent": 1.7
+      },
+      {
+        "code": "3917",
+        "name": "株式会社アイリッジ",
+        "amount_millions": 120,
+        "ratio_percent": 3.3
+      },
+      {
+        "code": "4124",
+        "name": "大阪油化工業株式会社",
+        "amount_millions": 120,
+        "ratio_percent": 4.31
+      },
+      {
+        "code": "4380",
+        "name": "株式会社Mマート",
+        "amount_millions": 110,
+        "ratio_percent": 1.91
+      },
+      {
+        "code": "7374",
+        "name": "株式会社コンフィデンス・インターワークス",
+        "amount_millions": 104,
+        "ratio_percent": 1.04
+      },
+      {
+        "code": "8940",
+        "name": "株式会社インテリックス",
+        "amount_millions": 98,
+        "ratio_percent": 1.13
+      },
+      {
+        "code": "7707",
+        "name": "プレシジョン・システム・サイエンス株式会社",
+        "amount_millions": 95,
+        "ratio_percent": 1.66
+      },
+      {
+        "code": "6769",
+        "name": "ザインエレクトロニクス株式会社",
+        "amount_millions": 93,
+        "ratio_percent": 0.81
+      },
+      {
+        "code": "7079",
+        "name": "WDBココ株式会社",
+        "amount_millions": 89,
+        "ratio_percent": 1.4
+      },
+      {
+        "code": "4080",
+        "name": "株式会社田中化学研究所",
+        "amount_millions": 81,
+        "ratio_percent": 0.79
+      },
+      {
+        "code": "148A",
+        "name": "株式会社ハッチ・ワーク",
+        "amount_millions": 79,
+        "ratio_percent": 2.3
+      },
+      {
+        "code": "3858",
+        "name": "株式会社ユビキタスAI",
+        "amount_millions": 66,
+        "ratio_percent": 1.92
+      },
+      {
+        "code": "2341",
+        "name": "株式会社アルバイトタイムス",
+        "amount_millions": 64,
+        "ratio_percent": 1.6
+      },
+      {
+        "code": "4884",
+        "name": "クリングルファーマ株式会社",
+        "amount_millions": 63,
+        "ratio_percent": 2.6
+      },
+      {
+        "code": "3991",
+        "name": "ウォンテッドリー株式会社",
+        "amount_millions": 62,
+        "ratio_percent": 0.59
+      },
+      {
+        "code": "6054",
+        "name": "株式会社リブセンス",
+        "amount_millions": 57,
+        "ratio_percent": 1.72
+      },
+      {
+        "code": "6046",
+        "name": "株式会社リンクバル",
+        "amount_millions": 57,
+        "ratio_percent": 1.87
+      },
+      {
+        "code": "6563",
+        "name": "株式会社みらいワークス",
+        "amount_millions": 56,
+        "ratio_percent": 1.85
+      },
+      {
+        "code": "6567",
+        "name": "株式会社SERIOホールディングス",
+        "amount_millions": 56,
+        "ratio_percent": 1.03
+      },
+      {
+        "code": "3760",
+        "name": "株式会社ケイブ",
+        "amount_millions": 56,
+        "ratio_percent": 1.36
+      },
+      {
+        "code": "9820",
+        "name": "エムティジェネックス株式会社",
+        "amount_millions": 51,
+        "ratio_percent": 1.35
+      },
+      {
+        "code": "5256",
+        "name": "株式会社Fusic",
+        "amount_millions": 49,
+        "ratio_percent": 1.58
+      },
+      {
+        "code": "2454",
+        "name": "株式会社オールアバウト",
+        "amount_millions": 47,
+        "ratio_percent": 0.94
+      },
+      {
+        "code": "3826",
+        "name": "株式会社システムインテグレータ",
+        "amount_millions": 46,
+        "ratio_percent": 0.92
+      },
+      {
+        "code": "3113",
+        "name": "株式会社UNIVA・Oakホールディングス",
+        "amount_millions": 45,
+        "ratio_percent": 1.15
+      },
+      {
+        "code": "3842",
+        "name": "株式会社ネクストジェン",
+        "amount_millions": 44,
+        "ratio_percent": 1.47
+      },
+      {
+        "code": "4179",
+        "name": "株式会社ジーネクスト",
+        "amount_millions": 43,
+        "ratio_percent": 3.83
+      },
+      {
+        "code": "4582",
+        "name": "シンバイオ製薬株式会社",
+        "amount_millions": 29,
+        "ratio_percent": 0.76
+      },
+      {
+        "code": "6972",
+        "name": "エルナー株式会社",
+        "amount_millions": 27,
+        "ratio_percent": 1.04
+      },
+      {
+        "code": "6096",
+        "name": "株式会社レアジョブ",
+        "amount_millions": 25,
+        "ratio_percent": 0.89
+      },
+      {
+        "code": "4256",
+        "name": "株式会社サインド",
+        "amount_millions": 23,
+        "ratio_percent": 0.38
+      },
+      {
+        "code": "3686",
+        "name": "株式会社ディー・エル・イー",
+        "amount_millions": 21,
+        "ratio_percent": 0.47
+      },
+      {
+        "code": "9327",
+        "name": "株式会社イー・ロジット",
+        "amount_millions": 17,
+        "ratio_percent": 2.13
+      },
+      {
+        "code": "4591",
+        "name": "株式会社リボミック",
+        "amount_millions": 17,
+        "ratio_percent": 1.38
+      },
+      {
+        "code": "4068",
+        "name": "ベイシス株式会社",
+        "amount_millions": 16,
+        "ratio_percent": 0.47
+      },
+      {
+        "code": "3624",
+        "name": "アクセルマーク株式会社",
+        "amount_millions": 13,
+        "ratio_percent": 1.45
+      },
+      {
+        "code": "7829",
+        "name": "株式会社サマンサタバサジャパンリミテッド",
+        "amount_millions": 9,
+        "ratio_percent": 0.61
+      }
+    ]
   }
 }
