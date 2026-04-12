@@ -1,5 +1,5 @@
 [browsers]
-shikiho = "qutebrowser"
+shikiho = "google-chrome"
 monex = "google-chrome"
 
 [allowed_url_prefixes]

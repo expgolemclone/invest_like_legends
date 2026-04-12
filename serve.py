@@ -15,8 +15,7 @@ _LISTEN_STATE: str = "0A"
 _PROC_PATH: Path = Path("/proc")
 _TERM_TIMEOUT_SECONDS: float = 1.0
 _POLL_INTERVAL_SECONDS: float = 0.1
-_STARTUP_BROWSER_COMMAND: str = "qutebrowser"
-_STARTUP_BROWSER_TARGET: str = "window"
+_STARTUP_BROWSER_COMMAND: str = "google-chrome"
 
 
 def main() -> None:
@@ -147,7 +146,7 @@ def _wait_for_port_release(port: int) -> bool:
 def _open_startup_browser(url: str) -> None:
     try:
         subprocess.Popen(
-            [_STARTUP_BROWSER_COMMAND, "--target", _STARTUP_BROWSER_TARGET, url],
+            [_STARTUP_BROWSER_COMMAND, url],
             stdin=subprocess.DEVNULL,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
