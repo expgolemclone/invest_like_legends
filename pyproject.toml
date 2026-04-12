@@ -1,7 +1,7 @@
 [project]
 name = "invest-like-legends"
 version = "0.1.0"
-description = "偉大な投資家から学ぶ - 保有銘柄ビューア"
+description = "invest_like_legends"
 requires-python = ">=3.12,<3.14"
 dependencies = []
 
