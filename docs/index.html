@@ -1,84 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>保有銘柄ビューア - 四季報オンラインリンク一覧</title>
-<link rel="stylesheet" href="assets/style.css">
-<script src="assets/stock-table.js" defer></script>
-</head>
-<body>
-<div class="container">
-  <header class="page-header">
-    <h1 id="pageTitle">保有銘柄一覧</h1>
-    <p id="pageSubtitle">投資家データを読み込み中です。</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>保有銘柄ビューア - 四季報オンラインリンク一覧</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/stock-table.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <h1 id="pageTitle">保有銘柄一覧</h1>
+        <p id="pageSubtitle">投資家データを読み込み中です。</p>
+      </header>
 
-  <nav class="tab-bar" aria-label="投資家切替">
-    <button class="tab active" type="button" data-investor-key="naito" aria-selected="true">内藤征吾</button>
-    <button class="tab" type="button" data-investor-key="hikari" aria-selected="false">光通信</button>
-    <button class="tab" type="button" data-investor-key="kiyohara" aria-selected="false">清原達郎</button>
-    <button class="tab" type="button" data-investor-key="katayama" aria-selected="false">片山晃</button>
-    <button class="tab" type="button" data-investor-key="imura" aria-selected="false">井村俊哉</button>
-    <button class="tab" type="button" data-investor-key="gomi" aria-selected="false">五味大輔</button>
-    <button class="tab" type="button" data-investor-key="one_warikabunihon" aria-selected="false">one割安株日本株</button>
-  </nav>
+      <nav class="tab-bar" aria-label="投資家切替">
+        <button
+          class="tab active"
+          type="button"
+          data-investor-key="naito"
+          aria-selected="true"
+        >
+          内藤征吾
+        </button>
+        <button
+          class="tab"
+          type="button"
+          data-investor-key="hikari"
+          aria-selected="false"
+        >
+          光通信
+        </button>
+        <button
+          class="tab"
+          type="button"
+          data-investor-key="kiyohara"
+          aria-selected="false"
+        >
+          清原達郎
+        </button>
+        <button
+          class="tab"
+          type="button"
+          data-investor-key="katayama"
+          aria-selected="false"
+        >
+          片山晃
+        </button>
+        <button
+          class="tab"
+          type="button"
+          data-investor-key="imura"
+          aria-selected="false"
+        >
+          井村俊哉
+        </button>
+        <button
+          class="tab"
+          type="button"
+          data-investor-key="gomi"
+          aria-selected="false"
+        >
+          五味大輔
+        </button>
+        <button
+          class="tab"
+          type="button"
+          data-investor-key="one_warikabunihon"
+          aria-selected="false"
+        >
+          one割安株日本株
+        </button>
+      </nav>
 
-  <div class="stats" aria-label="統計">
-    <div class="stat-card">
-      <div class="label">保有銘柄数</div>
-      <div class="value" id="statCount">-</div>
+      <div class="stats" aria-label="統計">
+        <div class="stat-card">
+          <div class="label">保有銘柄数</div>
+          <div class="value" id="statCount">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">最大保有額</div>
+          <div class="value" id="statMaxAmount">-</div>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-box">
+          <label class="sr-only" for="search">銘柄コード or 会社名で検索</label>
+          <input
+            type="text"
+            id="search"
+            placeholder="銘柄コード or 会社名で検索..."
+            autocomplete="off"
+          />
+        </div>
+        <p id="statusMessage" class="status-message" aria-live="polite">
+          投資家データを読み込み中です。
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table id="stockTable">
+          <thead>
+            <tr>
+              <th scope="col">
+                <button
+                  class="sort-button"
+                  type="button"
+                  data-sort-column="code"
+                >
+                  コード <span class="arrow" aria-hidden="true">▽</span>
+                </button>
+              </th>
+              <th scope="col">
+                <button
+                  class="sort-button"
+                  type="button"
+                  data-sort-column="name"
+                >
+                  会社名 <span class="arrow" aria-hidden="true">▽</span>
+                </button>
+              </th>
+              <th scope="col">
+                <button
+                  class="sort-button"
+                  type="button"
+                  data-sort-column="amount_millions"
+                >
+                  保有額(百万円) <span class="arrow" aria-hidden="true">▼</span>
+                </button>
+              </th>
+              <th scope="col">
+                <button
+                  class="sort-button"
+                  type="button"
+                  data-sort-column="ratio_percent"
+                >
+                  保有割合(%) <span class="arrow" aria-hidden="true">▽</span>
+                </button>
+              </th>
+              <th scope="col">リンク</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr>
+              <td class="table-message" colspan="5">
+                投資家データを読み込み中です。
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="footer">※ 保有額順（降順）で表示</div>
     </div>
-    <div class="stat-card">
-      <div class="label">最大保有額</div>
-      <div class="value" id="statMaxAmount">-</div>
-    </div>
-  </div>
-
-  <div class="toolbar">
-    <div class="search-box">
-      <label class="sr-only" for="search">銘柄コード or 会社名で検索</label>
-      <input type="text" id="search" placeholder="銘柄コード or 会社名で検索..." autocomplete="off">
-    </div>
-    <p id="statusMessage" class="status-message" aria-live="polite">投資家データを読み込み中です。</p>
-  </div>
-
-  <div class="table-wrap">
-    <table id="stockTable">
-      <thead>
-        <tr>
-          <th scope="col">
-            <button class="sort-button" type="button" data-sort-column="code">
-              コード <span class="arrow" aria-hidden="true">▽</span>
-            </button>
-          </th>
-          <th scope="col">
-            <button class="sort-button" type="button" data-sort-column="name">
-              会社名 <span class="arrow" aria-hidden="true">▽</span>
-            </button>
-          </th>
-          <th scope="col">
-            <button class="sort-button" type="button" data-sort-column="amount_millions">
-              保有額(百万円) <span class="arrow" aria-hidden="true">▼</span>
-            </button>
-          </th>
-          <th scope="col">
-            <button class="sort-button" type="button" data-sort-column="ratio_percent">
-              保有割合(%) <span class="arrow" aria-hidden="true">▽</span>
-            </button>
-          </th>
-          <th scope="col">リンク</th>
-        </tr>
-      </thead>
-      <tbody id="tbody">
-        <tr>
-          <td class="table-message" colspan="5">投資家データを読み込み中です。</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="footer">※ 保有額順（降順）で表示。データはバフェット・コードより取得。</div>
-</div>
-</body>
+  </body>
 </html>
