@@ -13,7 +13,7 @@ invest_like_legends/
 ├── docs/                  # 静的サイト（GitHub Pages）
 │   └── assets/
 │       ├── data/          # 生成データ（investors.json, metrics.json）
-│       ├── style.css      # スタイルシート
+│       ├── style.css      # スタイルシート（テーブルヘッダー sticky 固定）
 │       └── stock-table.js # メインJavaScript
 ├── scripts/               # ユーティリティスクリプト
 ├── server/                # ローカル開発サーバー
