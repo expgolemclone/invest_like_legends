@@ -49,12 +49,9 @@ const ASC_ARROW = "▲";
 const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
 const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent", "net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
-const AMOUNT_SUFFIX = "億円";
-
 /** @type {{
  *   investors: InvestorsDocument | null,
  *   currentInvestorKey: InvestorKey,
- *   searchQuery: string,
  *   sortColumn: SortColumn,
  *   sortDirection: SortDirection,
  *   isLoading: boolean,
@@ -66,7 +63,6 @@ const AMOUNT_SUFFIX = "億円";
 const state = {
   investors: null,
   currentInvestorKey: DEFAULT_INVESTOR_KEY,
-  searchQuery: "",
   sortColumn: DEFAULT_SORT_COLUMN,
   sortDirection: DEFAULT_SORT_DIRECTION,
   isLoading: true,
@@ -76,10 +72,6 @@ const state = {
 };
 
 const elements = {
-  pageTitle: /** @type {HTMLElement} */ (document.getElementById("pageTitle")),
-  statCount: /** @type {HTMLElement} */ (document.getElementById("statCount")),
-  statMaxAmount: /** @type {HTMLElement} */ (document.getElementById("statMaxAmount")),
-  search: /** @type {HTMLInputElement} */ (document.getElementById("search")),
   statusMessage: /** @type {HTMLElement} */ (document.getElementById("statusMessage")),
   tbody: /** @type {HTMLElement} */ (document.getElementById("tbody")),
   tabs: /** @type {HTMLButtonElement[]} */ (Array.from(document.querySelectorAll("[data-investor-key]"))),
@@ -121,11 +113,6 @@ function initialize() {
 }
 
 function bindEvents() {
-  elements.search.addEventListener("input", function() {
-    state.searchQuery = elements.search.value.trim().toLowerCase();
-    render();
-  });
-
   elements.tabs.forEach(function(tab) {
     tab.addEventListener("click", function() {
       const investorKey = tab.getAttribute("data-investor-key");
@@ -270,10 +257,8 @@ function switchInvestor(investorKey) {
   }
 
   state.currentInvestorKey = investorKey;
-  state.searchQuery = "";
   state.sortColumn = DEFAULT_SORT_COLUMN;
   state.sortDirection = DEFAULT_SORT_DIRECTION;
-  elements.search.value = "";
   render();
 }
 
@@ -283,20 +268,14 @@ function render() {
 
   if (state.isLoading) {
     document.title = DEFAULT_TITLE;
-    elements.pageTitle.textContent = "保有銘柄一覧";
-    elements.search.disabled = true;
     elements.statusMessage.textContent = "投資家データを読み込み中です。";
-    renderStats(null);
     renderMessageRow("投資家データを読み込み中です。");
     return;
   }
 
   if (state.errorMessage !== "") {
     document.title = DEFAULT_TITLE;
-    elements.pageTitle.textContent = "保有銘柄一覧";
-    elements.search.disabled = true;
     elements.statusMessage.textContent = state.errorMessage;
-    renderStats(null);
     renderMessageRow(state.errorMessage);
     return;
   }
@@ -304,24 +283,15 @@ function render() {
   const investor = getCurrentInvestor();
   if (!investor) {
     document.title = DEFAULT_TITLE;
-    elements.pageTitle.textContent = "保有銘柄一覧";
-    elements.search.disabled = true;
     elements.statusMessage.textContent = "投資家データが見つかりません。";
-    renderStats(null);
     renderMessageRow("投資家データが見つかりません。");
     return;
   }
 
-  elements.search.disabled = false;
   document.title = investor.name + " 保有銘柄 - 四季報オンラインリンク一覧";
-  elements.pageTitle.textContent = investor.name + " 保有銘柄一覧";
-  renderStats(investor.stocks);
 
   const visibleStocks = getVisibleStocks(investor.stocks);
-  elements.statusMessage.textContent = visibleStocks.length.toLocaleString("ja-JP") +
-    " / " +
-    investor.stocks.length.toLocaleString("ja-JP") +
-    " 件表示";
+  elements.statusMessage.textContent = visibleStocks.length.toLocaleString("ja-JP") + " 件";
 
   if (visibleStocks.length === 0) {
     renderMessageRow("該当する銘柄はありません。");
@@ -367,44 +337,13 @@ function renderSortButtons() {
   });
 }
 
-/** @param {InvestorStock[] | null} stocks */
-function renderStats(stocks) {
-  if (!stocks) {
-    elements.statCount.textContent = "-";
-    elements.statMaxAmount.textContent = "-";
-    return;
-  }
-
-  elements.statCount.textContent = stocks.length.toLocaleString("ja-JP");
-  elements.statMaxAmount.textContent = formatMaxAmount(stocks);
-}
-
-/** @param {InvestorStock[]} stocks */
-function formatMaxAmount(stocks) {
-  const amounts = stocks
-    .map(function(stock) { return stock.amount_millions; })
-    .filter(function(amount) { return amount !== null; });
-  if (amounts.length === 0) {
-    return "-";
-  }
-
-  return (Math.max.apply(null, amounts) / 100).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + AMOUNT_SUFFIX;
-}
-
 function getCurrentInvestor() {
   return state.investors ? state.investors[state.currentInvestorKey] : null;
 }
 
 /** @param {InvestorStock[]} stocks */
 function getVisibleStocks(stocks) {
-  const query = state.searchQuery;
-  const filteredStocks = query === ""
-    ? stocks.slice()
-    : stocks.filter(function(stock) {
-        return stock.code.toLowerCase().includes(query) || stock.name.toLowerCase().includes(query);
-      });
-
-  return filteredStocks.sort(compareStocks);
+  return stocks.slice().sort(compareStocks);
 }
 
 /** @param {InvestorStock} leftStock

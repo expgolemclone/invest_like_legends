@@ -28,7 +28,7 @@ invest_like_legends/
 - **index.html**: メインHTMLページ
 - **assets/stock-table.js**: メインJavaScript
   - 投資家タブ切り替え
-  - 検索・ソート機能
+  - ソート機能
   - 指標データ表示（GitHub Pages では静的JSON、ローカルでは API 使用）
 - **assets/data/investors.json**: 投資家保有銘柄データ
 - **assets/data/metrics.json**: 指標データ（GitHub Actions で生成）
