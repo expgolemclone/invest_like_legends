@@ -3,7 +3,7 @@
 
 # Git管理対象
 !.gitignore
-!README.md
+!*.md
 !*.toml
 !uv.lock
 !*.py
