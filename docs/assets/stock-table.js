@@ -49,7 +49,7 @@ const ASC_ARROW = "▲";
 const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
 const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent", "net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
-const AMOUNT_SUFFIX = "百万円";
+const AMOUNT_SUFFIX = "億円";
 
 /** @type {{
  *   investors: InvestorsDocument | null,
@@ -388,7 +388,7 @@ function formatMaxAmount(stocks) {
     return "-";
   }
 
-  return Math.max.apply(null, amounts).toLocaleString("ja-JP") + AMOUNT_SUFFIX;
+  return (Math.max.apply(null, amounts) / 100).toLocaleString("ja-JP", { maximumFractionDigits: 1 }) + AMOUNT_SUFFIX;
 }
 
 function getCurrentInvestor() {
@@ -462,7 +462,7 @@ function renderStocks(stocks) {
   elements.tbody.innerHTML = stocks.map(function(stock) {
     const shikihoUrl = "https://shikiho.toyokeizai.net/stocks/" + encodeURIComponent(stock.code) + "/shikiho";
     const monexUrl = "https://monex.ifis.co.jp/index.php?sa=report_zaimu&bcode=" + encodeURIComponent(stock.code);
-    const amountText = stock.amount_millions === null ? "-" : stock.amount_millions.toLocaleString("ja-JP");
+    const amountText = stock.amount_millions === null ? "-" : (stock.amount_millions / 100).toLocaleString("ja-JP", { maximumFractionDigits: 1 });
 
     const metrics = state.metricsCache[stock.code];
     const netCashRatio = metrics && metrics.net_cash_ratio !== null ? metrics.net_cash_ratio.toFixed(2) : "-";
