@@ -120,7 +120,7 @@
                   name <span class="arrow" aria-hidden="true">▽</span>
                 </button>
               </th>
-              <th scope="col" title="投資家の保有額（億円）">
+              <th scope="col" title="投資家の保有金額">
                 <button
                   class="sort-button"
                   type="button"
@@ -129,7 +129,7 @@
                   amount <span class="arrow" aria-hidden="true">▼</span>
                 </button>
               </th>
-              <th scope="col" title="投資家の保有割合（%）">
+              <th scope="col" title="投資家の保有株数 / 発行済株式総数 * 100">
                 <button
                   class="sort-button"
                   type="button"
@@ -138,7 +138,10 @@
                   ratio <span class="arrow" aria-hidden="true">▽</span>
                 </button>
               </th>
-              <th scope="col" title="ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全">
+              <th
+                scope="col"
+                title="(流動資産 - 棚卸資産 + 有価証券 * 0.7) / 時価総額"
+              >
                 <button
                   class="sort-button"
                   type="button"
@@ -147,7 +150,7 @@
                   ncr <span class="arrow" aria-hidden="true">▽</span>
                 </button>
               </th>
-              <th scope="col" title="株価収益率 — 株価を1株当たり利益で割った値。低いほど割安（目安: 15倍以下）">
+              <th scope="col" title="株価 / 来期予想EPS">
                 <button
                   class="sort-button"
                   type="button"
@@ -156,7 +159,7 @@
                   per <span class="arrow" aria-hidden="true">▽</span>
                 </button>
               </th>
-              <th scope="col" title="自己資本比率 — 総資産に占める自己資本の割合。高いほど経営が安定">
+              <th scope="col" title="自己資本 / 総資産 * 100">
                 <button
                   class="sort-button"
                   type="button"
@@ -165,7 +168,7 @@
                   equity <span class="arrow" aria-hidden="true">▽</span>
                 </button>
               </th>
-              <th scope="col" title="フリーキャッシュフローイールド — FCFを時価総額で割った値。高いほどキャッシュ創出力が優れている">
+              <th scope="col" title="10期の平均FCF / 時価総額">
                 <button
                   class="sort-button"
                   type="button"
@@ -174,7 +177,7 @@
                   fcf_y <span class="arrow" aria-hidden="true">▽</span>
                 </button>
               </th>
-              <th scope="col" title="投下資本キャッシュリターン — FCFを投下資本で割った値。高いほど資本効率が良い">
+              <th scope="col" title="FCF / (自己資本 + 有利子負債)">
                 <button
                   class="sort-button"
                   type="button"
