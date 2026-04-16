@@ -43,6 +43,8 @@ const DEFAULT_INVESTOR_KEY = "naito";
 const DEFAULT_SORT_COLUMN = "amount_millions";
 const DEFAULT_SORT_DIRECTION = "desc";
 const INVESTOR_DATA_URL = "assets/data/investors.json?v=a4123689e1bf";
+const METRICS_DATA_URL = "assets/data/metrics.json";
+const IS_GITHUB_PAGES = location.hostname === "expgolemclone.github.io";
 const ASC_ARROW = "▲";
 const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
@@ -158,6 +160,29 @@ async function loadMetrics(codes) {
     return;
   }
 
+  // GitHub Pages では静的 JSON を使用
+  if (IS_GITHUB_PAGES) {
+    // まだキャッシュがない場合のみ全データを読み込み
+    if (Object.keys(state.metricsCache).length === 0) {
+      state.metricsLoading = true;
+      try {
+        const response = await fetch(METRICS_DATA_URL + "?v=" + Date.now());
+        if (!response.ok) {
+          console.error("Failed to load metrics:", response.statusText);
+          return;
+        }
+        const metrics = /** @type {Object<string, StockMetrics>} */ (await response.json());
+        Object.assign(state.metricsCache, metrics);
+      } catch (error) {
+        console.error("Error loading metrics:", error);
+      } finally {
+        state.metricsLoading = false;
+      }
+    }
+    return;
+  }
+
+  // ローカル環境では API を使用
   const uncachedCodes = codes.filter(function(code) {
     return !(code in state.metricsCache);
   });

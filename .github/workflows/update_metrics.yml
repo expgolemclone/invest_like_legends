@@ -1,0 +1,54 @@
+name: Update Metrics Data
+
+on:
+  schedule:
+    # 毎日日本時間 0:00（UTC 15:00）に実行
+    - cron: "0 15 * * *"
+  workflow_dispatch:  # 手動実行を許可
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # コミット許可
+
+    steps:
+      - name: Checkout invest_like_legends
+        uses: actions/checkout@v4
+
+      - name: Checkout stock_db
+        uses: actions/checkout@v4
+        with:
+          repository: expgolemclone/stock_db
+          path: external/stock_db
+
+      - name: Checkout formula_screening
+        uses: actions/checkout@v4
+        with:
+          repository: expgolemclone/formula_screening
+          path: external/formula_screening
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: |
+          # ローカルパッケージへのパスを設定
+          uv sync --no-dev
+
+      - name: Generate metrics data
+        run: |
+          uv run python scripts/generate_metrics.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/assets/data/metrics.json
+          git diff --staged --quiet || git commit -m "指標データを更新"
+          git push

@@ -4,9 +4,9 @@
 # Git管理対象
 !.gitignore
 !README.md
-!pyproject.toml
+!*.toml
 !uv.lock
-!serve.py
+!*.py
 !docs/
 !docs/**
 !server/
@@ -15,6 +15,10 @@
 !config/**
 !tests/
 !tests/**
+!.github/
+!.github/**
+!scripts/
+!scripts/**
 
 # 生成物は除外
 __pycache__/
