@@ -1,5 +1,5 @@
 /** @typedef {"naito" | "hikari" | "kiyohara" | "katayama" | "imura" | "gomi" | "one_warikabunihon"} InvestorKey */
-/** @typedef {"code" | "name" | "amount_millions" | "ratio_percent"} SortColumn */
+/** @typedef {"code" | "name" | "amount_millions" | "ratio_percent" | "net_cash_ratio" | "per" | "equity_ratio" | "fcf_yield_avg" | "croic"} SortColumn */
 /** @typedef {"asc" | "desc"} SortDirection */
 /**
  * @typedef {Object} InvestorStock
@@ -7,11 +7,24 @@
  * @property {string} name
  * @property {number | null} amount_millions
  * @property {number} ratio_percent
+ * @property {number | null} [net_cash_ratio]
+ * @property {number | null} [per]
+ * @property {number | null} [equity_ratio]
+ * @property {number | null} [fcf_yield_avg]
+ * @property {number | null} [croic]
+ */
+/**
+ * @typedef {Object} StockMetrics
+ * @property {number | null} net_cash_ratio
+ * @property {number | null} per
+ * @property {number | null} equity_ratio
+ * @property {number | null} fcf_yield_avg
+ * @property {number | null} croic
+ * @property {number | null} market_cap
  */
 /**
  * @typedef {Object} InvestorDataset
  * @property {string} name
- * @property {string} subtitle
  * @property {InvestorStock[]} stocks
  */
 /**
@@ -33,7 +46,7 @@ const INVESTOR_DATA_URL = "assets/data/investors.json?v=a4123689e1bf";
 const ASC_ARROW = "▲";
 const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
-const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent"];
+const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent", "net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
 const AMOUNT_SUFFIX = "百万円";
 
 /** @type {{
@@ -43,7 +56,9 @@ const AMOUNT_SUFFIX = "百万円";
  *   sortColumn: SortColumn,
  *   sortDirection: SortDirection,
  *   isLoading: boolean,
- *   errorMessage: string
+ *   errorMessage: string,
+ *   metricsCache: Object<string, StockMetrics>,
+ *   metricsLoading: boolean
  * }}
  */
 const state = {
@@ -54,11 +69,12 @@ const state = {
   sortDirection: DEFAULT_SORT_DIRECTION,
   isLoading: true,
   errorMessage: "",
+  metricsCache: {},
+  metricsLoading: false,
 };
 
 const elements = {
   pageTitle: /** @type {HTMLElement} */ (document.getElementById("pageTitle")),
-  pageSubtitle: /** @type {HTMLElement} */ (document.getElementById("pageSubtitle")),
   statCount: /** @type {HTMLElement} */ (document.getElementById("statCount")),
   statMaxAmount: /** @type {HTMLElement} */ (document.getElementById("statMaxAmount")),
   search: /** @type {HTMLInputElement} */ (document.getElementById("search")),
@@ -136,6 +152,38 @@ function bindEvents() {
   });
 }
 
+/** @param {string[]} codes */
+async function loadMetrics(codes) {
+  if (state.metricsLoading) {
+    return;
+  }
+
+  const uncachedCodes = codes.filter(function(code) {
+    return !(code in state.metricsCache);
+  });
+
+  if (uncachedCodes.length === 0) {
+    return;
+  }
+
+  state.metricsLoading = true;
+
+  try {
+    const response = await fetch("/api/metrics?codes=" + uncachedCodes.join(","));
+    if (!response.ok) {
+      console.error("Failed to load metrics:", response.statusText);
+      return;
+    }
+
+    const metrics = /** @type {Object<string, StockMetrics>} */ (await response.json());
+    Object.assign(state.metricsCache, metrics);
+  } catch (error) {
+    console.error("Error loading metrics:", error);
+  } finally {
+    state.metricsLoading = false;
+  }
+}
+
 async function loadInvestors() {
   try {
     const response = await fetch(INVESTOR_DATA_URL, { cache: "no-store" });
@@ -186,7 +234,6 @@ function isInvestorDataset(candidate) {
   const dataset = /** @type {Partial<InvestorDataset>} */ (candidate);
   return (
     typeof dataset.name === "string" &&
-    typeof dataset.subtitle === "string" &&
     Array.isArray(dataset.stocks)
   );
 }
@@ -212,7 +259,6 @@ function render() {
   if (state.isLoading) {
     document.title = DEFAULT_TITLE;
     elements.pageTitle.textContent = "保有銘柄一覧";
-    elements.pageSubtitle.textContent = "投資家データを読み込み中です。";
     elements.search.disabled = true;
     elements.statusMessage.textContent = "投資家データを読み込み中です。";
     renderStats(null);
@@ -223,7 +269,6 @@ function render() {
   if (state.errorMessage !== "") {
     document.title = DEFAULT_TITLE;
     elements.pageTitle.textContent = "保有銘柄一覧";
-    elements.pageSubtitle.textContent = state.errorMessage;
     elements.search.disabled = true;
     elements.statusMessage.textContent = state.errorMessage;
     renderStats(null);
@@ -235,7 +280,6 @@ function render() {
   if (!investor) {
     document.title = DEFAULT_TITLE;
     elements.pageTitle.textContent = "保有銘柄一覧";
-    elements.pageSubtitle.textContent = "投資家データが見つかりません。";
     elements.search.disabled = true;
     elements.statusMessage.textContent = "投資家データが見つかりません。";
     renderStats(null);
@@ -246,7 +290,6 @@ function render() {
   elements.search.disabled = false;
   document.title = investor.name + " 保有銘柄 - 四季報オンラインリンク一覧";
   elements.pageTitle.textContent = investor.name + " 保有銘柄一覧";
-  elements.pageSubtitle.textContent = investor.subtitle;
   renderStats(investor.stocks);
 
   const visibleStocks = getVisibleStocks(investor.stocks);
@@ -261,6 +304,12 @@ function render() {
   }
 
   renderStocks(visibleStocks);
+
+  // Load metrics for visible stocks
+  const codes = visibleStocks.map(function(stock) { return stock.code; });
+  void loadMetrics(codes).then(function() {
+    renderStocks(getVisibleStocks(investor.stocks));
+  });
 }
 
 function renderTabs() {
@@ -360,6 +409,26 @@ function compareStocks(leftStock, rightStock) {
     return leftStock.code.localeCompare(rightStock.code, "ja", { numeric: true }) * directionMultiplier;
   }
 
+  // Handle metric columns (net_cash_ratio, per, equity_ratio, fcf_yield_avg, croic)
+  const metricColumns = ["net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
+  if (metricColumns.includes(state.sortColumn)) {
+    const leftMetrics = state.metricsCache[leftStock.code];
+    const rightMetrics = state.metricsCache[rightStock.code];
+    const leftValue = leftMetrics ? leftMetrics[state.sortColumn] : null;
+    const rightValue = rightMetrics ? rightMetrics[state.sortColumn] : null;
+
+    if (leftValue === null && rightValue === null) {
+      return leftStock.code.localeCompare(rightStock.code, "ja", { numeric: true });
+    }
+    if (leftValue === null) {
+      return 1;
+    }
+    if (rightValue === null) {
+      return -1;
+    }
+    return (leftValue - rightValue) * directionMultiplier;
+  }
+
   return leftStock.name.localeCompare(rightStock.name, "ja") * directionMultiplier;
 }
 
@@ -370,12 +439,24 @@ function renderStocks(stocks) {
     const monexUrl = "https://monex.ifis.co.jp/index.php?sa=report_zaimu&bcode=" + encodeURIComponent(stock.code);
     const amountText = stock.amount_millions === null ? "-" : stock.amount_millions.toLocaleString("ja-JP");
 
+    const metrics = state.metricsCache[stock.code];
+    const netCashRatio = metrics && metrics.net_cash_ratio !== null ? metrics.net_cash_ratio.toFixed(2) : "-";
+    const per = metrics && metrics.per !== null ? metrics.per.toFixed(1) : "-";
+    const equityRatio = metrics && metrics.equity_ratio !== null ? metrics.equity_ratio.toFixed(1) : "-";
+    const fcfYield = metrics && metrics.fcf_yield_avg !== null ? (metrics.fcf_yield_avg * 100).toFixed(2) : "-";
+    const croic = metrics && metrics.croic !== null ? (metrics.croic * 100).toFixed(2) : "-";
+
     return (
       "<tr>" +
         '<td class="code">' + escapeHtml(stock.code) + "</td>" +
         '<td class="name">' + escapeHtml(stock.name) + "</td>" +
         '<td class="num">' + amountText + "</td>" +
         '<td class="num">' + escapeHtml(String(stock.ratio_percent)) + "</td>" +
+        '<td class="num">' + netCashRatio + "</td>" +
+        '<td class="num">' + per + "</td>" +
+        '<td class="num">' + equityRatio + "%</td>" +
+        '<td class="num">' + fcfYield + "%</td>" +
+        '<td class="num">' + croic + "%</td>" +
         '<td><div class="links-cell">' +
           '<a class="link-btn shikiho" href="' + shikihoUrl + '" target="_blank" rel="noopener" data-browser="shikiho">四季報</a>' +
           '<a class="link-btn monex" href="' + monexUrl + '" target="_blank" rel="noopener" data-browser="monex">Monex</a>' +
@@ -388,7 +469,7 @@ function renderStocks(stocks) {
 /** @param {string} message */
 function renderMessageRow(message) {
   elements.tbody.innerHTML =
-    '<tr><td class="table-message" colspan="5">' + escapeHtml(message) + "</td></tr>";
+    '<tr><td class="table-message" colspan="10">' + escapeHtml(message) + "</td></tr>";
 }
 
 /** @param {string | null} candidate */

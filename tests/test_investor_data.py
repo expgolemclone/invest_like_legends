@@ -14,7 +14,6 @@ class InvestorStock(TypedDict):
 
 class InvestorDataset(TypedDict):
     name: str
-    subtitle: str
     stocks: list[InvestorStock]
 
 
@@ -106,11 +105,9 @@ def _load_investors_document() -> InvestorsDocument:
         assert isinstance(raw_dataset, dict)
 
         raw_name: object = raw_dataset["name"]
-        raw_subtitle: object = raw_dataset["subtitle"]
         raw_stocks: object = raw_dataset["stocks"]
 
         assert isinstance(raw_name, str)
-        assert isinstance(raw_subtitle, str)
         assert isinstance(raw_stocks, list)
 
         stocks: list[InvestorStock] = []
@@ -138,7 +135,6 @@ def _load_investors_document() -> InvestorsDocument:
 
         normalized[investor_key] = {
             "name": raw_name,
-            "subtitle": raw_subtitle,
             "stocks": stocks,
         }
 
