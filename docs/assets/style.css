@@ -160,7 +160,8 @@ body {
 }
 
 .table-wrap {
-  overflow-x: auto;
+  max-height: 70vh;
+  overflow: auto;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: rgba(22, 33, 62, 0.88);
