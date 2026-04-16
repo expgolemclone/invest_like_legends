@@ -65,7 +65,7 @@ def test_release_port_if_needed_force_kills_stubborn_listener(
         _stop_process(proc)
 
 
-def test_open_startup_browser_launches_chrome(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_open_startup_browser_launches_qutebrowser(monkeypatch: pytest.MonkeyPatch) -> None:
     calls: list[dict[str, object]] = []
 
     def fake_popen(
@@ -92,7 +92,7 @@ def test_open_startup_browser_launches_chrome(monkeypatch: pytest.MonkeyPatch) -
 
     assert calls == [
         {
-            "command": ["google-chrome", "http://127.0.0.1:8080"],
+            "command": ["qutebrowser", "--target", "window", "http://127.0.0.1:8080"],
             "stdin": subprocess.DEVNULL,
             "stdout": subprocess.DEVNULL,
             "stderr": subprocess.DEVNULL,
@@ -101,7 +101,7 @@ def test_open_startup_browser_launches_chrome(monkeypatch: pytest.MonkeyPatch) -
     ]
 
 
-def test_open_startup_browser_skips_missing_chrome(
+def test_open_startup_browser_skips_missing_qutebrowser(
     monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
 ) -> None:
     def fake_popen(
@@ -118,7 +118,7 @@ def test_open_startup_browser_skips_missing_chrome(
     serve._open_startup_browser("http://127.0.0.1:8080")
 
     captured = capsys.readouterr()
-    assert "google-chrome" in captured.out
+    assert "qutebrowser" in captured.out
     assert "http://127.0.0.1:8080" in captured.out
 
 

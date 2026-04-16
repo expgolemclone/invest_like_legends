@@ -9,7 +9,6 @@ from urllib.parse import parse_qs, urlparse
 
 from server.browser import OpenResult, open_in_browser
 from server.config import BrowserConfig, PROJECT_ROOT
-from server.metrics import fetch_metrics
 
 
 _STATIC_ROOT: Path = PROJECT_ROOT / "docs" / "assets"
@@ -28,9 +27,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:
         parsed_url: str = urlparse(self.path).path
 
-        if parsed_url == "/api/metrics":
-            self._handle_metrics()
-        elif parsed_url == "/open":
+        if parsed_url == "/open":
             self._handle_open()
         elif parsed_url == "/":
             self._serve_file(_INDEX_PATH, "text/html")
@@ -44,17 +41,6 @@ class RequestHandler(BaseHTTPRequestHandler):
                 self._send_json_response(404, {"error": "Not found"})
         else:
             self._send_json_response(404, {"error": "Not found"})
-
-    def _handle_metrics(self) -> None:
-        query_params: dict[str, list[str]] = parse_qs(urlparse(self.path).query)
-        codes_param: list[str] = query_params.get("codes", [])
-        if not codes_param:
-            self._send_json_response(400, {"error": "Missing codes parameter"})
-            return
-
-        codes: list[str] = codes_param[0].split(",")
-        result: dict[str, dict[str, float | None]] = fetch_metrics(codes)
-        self._send_json_response(200, result)
 
     def _handle_open(self) -> None:
         query_params: dict[str, list[str]] = parse_qs(urlparse(self.path).query)
@@ -77,7 +63,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(content)
 
-    def _send_json_response(self, status_code: int, body: object) -> None:
+    def _send_json_response(self, status_code: int, body: dict[str, str | bool]) -> None:
         payload: bytes = json.dumps(body, ensure_ascii=False).encode("utf-8")
         self.send_response(status_code)
         self.send_header("Content-Type", "application/json; charset=utf-8")

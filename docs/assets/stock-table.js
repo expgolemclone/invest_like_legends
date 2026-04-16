@@ -1,5 +1,5 @@
 /** @typedef {"naito" | "hikari" | "kiyohara" | "katayama" | "imura" | "gomi" | "one_warikabunihon"} InvestorKey */
-/** @typedef {"code" | "name" | "amount_millions" | "ratio_percent" | "ncr" | "div" | "fcf_y"} SortColumn */
+/** @typedef {"code" | "name" | "amount_millions" | "ratio_percent"} SortColumn */
 /** @typedef {"asc" | "desc"} SortDirection */
 /**
  * @typedef {Object} InvestorStock
@@ -7,12 +7,6 @@
  * @property {string} name
  * @property {number | null} amount_millions
  * @property {number} ratio_percent
- */
-/**
- * @typedef {Object} StockMetric
- * @property {number | null} ncr
- * @property {number | null} div
- * @property {number | null} fcf_y
  */
 /**
  * @typedef {Object} InvestorDataset
@@ -39,7 +33,7 @@ const INVESTOR_DATA_URL = "assets/data/investors.json?v=a4123689e1bf";
 const ASC_ARROW = "▲";
 const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
-const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent", "ncr", "div", "fcf_y"];
+const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent"];
 const AMOUNT_SUFFIX = "百万円";
 
 /** @type {{
@@ -60,8 +54,6 @@ const state = {
   sortDirection: DEFAULT_SORT_DIRECTION,
   isLoading: true,
   errorMessage: "",
-  /** @type {Record<string, StockMetric>} */
-  metrics: {},
 };
 
 const elements = {
@@ -160,32 +152,6 @@ async function loadInvestors() {
     state.isLoading = false;
     state.errorMessage = "投資家データを読み込めませんでした。";
     render();
-  }
-}
-
-/**
- * @param {InvestorStock[]} stocks
- * @return {Promise<void>}
- */
-async function fetchMetrics(stocks) {
-  const missingCodes = stocks
-    .map(function(stock) { return stock.code; })
-    .filter(function(code) { return !state.metrics[code]; });
-
-  if (missingCodes.length === 0) {
-    return;
-  }
-
-  try {
-    const response = await fetch("/api/metrics?codes=" + encodeURIComponent(missingCodes.join(",")));
-    if (!response.ok) {
-      console.error("Failed to fetch metrics:", response.status);
-      return;
-    }
-    const data = /** @type {Record<string, StockMetric>} */ (await response.json());
-    Object.assign(state.metrics, data);
-  } catch (error) {
-    console.error("Error fetching metrics:", error);
   }
 }
 
@@ -295,7 +261,6 @@ function render() {
   }
 
   renderStocks(visibleStocks);
-  void fetchMetrics(investor.stocks).then(function() { render(); });
 }
 
 function renderTabs() {
@@ -391,23 +356,6 @@ function compareStocks(leftStock, rightStock) {
     return (leftStock.ratio_percent - rightStock.ratio_percent) * directionMultiplier;
   }
 
-  if (state.sortColumn === "ncr" || state.sortColumn === "div" || state.sortColumn === "fcf_y") {
-    var leftM = state.metrics[leftStock.code];
-    var rightM = state.metrics[rightStock.code];
-    var leftVal = leftM ? leftM[state.sortColumn] : null;
-    var rightVal = rightM ? rightM[state.sortColumn] : null;
-    if (leftVal === null && rightVal === null) {
-      return leftStock.code.localeCompare(rightStock.code, "ja", { numeric: true });
-    }
-    if (leftVal === null) {
-      return 1;
-    }
-    if (rightVal === null) {
-      return -1;
-    }
-    return (leftVal - rightVal) * directionMultiplier;
-  }
-
   if (state.sortColumn === "code") {
     return leftStock.code.localeCompare(rightStock.code, "ja", { numeric: true }) * directionMultiplier;
   }
@@ -422,20 +370,12 @@ function renderStocks(stocks) {
     const monexUrl = "https://monex.ifis.co.jp/index.php?sa=report_zaimu&bcode=" + encodeURIComponent(stock.code);
     const amountText = stock.amount_millions === null ? "-" : stock.amount_millions.toLocaleString("ja-JP");
 
-    const m = state.metrics[stock.code];
-    const ncrText = m && m.ncr !== null ? m.ncr.toFixed(2) : "-";
-    const divText = m && m.div !== null ? m.div.toFixed(2) : "-";
-    const fcfYText = m && m.fcf_y !== null ? (m.fcf_y * 100).toFixed(2) : "-";
-
     return (
       "<tr>" +
         '<td class="code">' + escapeHtml(stock.code) + "</td>" +
         '<td class="name">' + escapeHtml(stock.name) + "</td>" +
         '<td class="num">' + amountText + "</td>" +
         '<td class="num">' + escapeHtml(String(stock.ratio_percent)) + "</td>" +
-        '<td class="num">' + ncrText + "</td>" +
-        '<td class="num">' + divText + "</td>" +
-        '<td class="num">' + fcfYText + "</td>" +
         '<td><div class="links-cell">' +
           '<a class="link-btn shikiho" href="' + shikihoUrl + '" target="_blank" rel="noopener" data-browser="shikiho">四季報</a>' +
           '<a class="link-btn monex" href="' + monexUrl + '" target="_blank" rel="noopener" data-browser="monex">Monex</a>' +
@@ -448,7 +388,7 @@ function renderStocks(stocks) {
 /** @param {string} message */
 function renderMessageRow(message) {
   elements.tbody.innerHTML =
-    '<tr><td class="table-message" colspan="8">' + escapeHtml(message) + "</td></tr>";
+    '<tr><td class="table-message" colspan="5">' + escapeHtml(message) + "</td></tr>";
 }
 
 /** @param {string | null} candidate */

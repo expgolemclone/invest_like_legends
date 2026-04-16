@@ -2,13 +2,8 @@
 name = "invest-like-legends"
 version = "0.1.0"
 description = "invest_like_legends"
-requires-python = ">=3.13,<3.14"
-dependencies = [
-    "formula-screening",
-]
-
-[tool.uv.sources]
-formula-screening = { path = "../formula_screening", editable = true }
+requires-python = ">=3.12,<3.14"
+dependencies = []
 
 [dependency-groups]
 dev = [
