@@ -43,7 +43,7 @@ invest_like_legends/
 | ratio(%) | 保有割合 | `ratio_percent` |
 | ncr | ネットキャッシュレシオ | `net_cash_ratio` |
 | per | PER | `per` |
-| eqr | 自己資本比率 | `equity_ratio` |
+| equity | 自己資本比率 | `equity_ratio` |
 | fcf_y | FCFイールド | `fcf_yield_avg` |
 | croic | CROIC | `croic` |
 | url | リンク（ソート機能なし） | - |
