@@ -33,6 +33,21 @@ invest_like_legends/
 - **assets/data/investors.json**: 投資家保有銘柄データ
 - **assets/data/metrics.json**: 指標データ（GitHub Actions で生成）
 
+#### テーブルカラム
+
+| カラム | 説明 | ソートキー |
+|--------|------|------------|
+| code | 銘柄コード | `code` |
+| name | 会社名 | `name` |
+| amount(¥100m) | 保有額（億円単位） | `amount_millions` |
+| ratio(%) | 保有割合 | `ratio_percent` |
+| ncr | ネットキャッシュレシオ | `net_cash_ratio` |
+| per | PER | `per` |
+| eqr | 自己資本比率 | `equity_ratio` |
+| fcf_y | FCFイールド | `fcf_yield_avg` |
+| croic | CROIC | `croic` |
+| url | リンク（ソート機能なし） | - |
+
 ### バックエンド (`server/`)
 
 - **handler.py**: HTTP リクエストハンドラー
