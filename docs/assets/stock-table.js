@@ -474,7 +474,7 @@ function renderStocks(stocks) {
     return (
       "<tr>" +
         '<td class="code">' + escapeHtml(stock.code) + "</td>" +
-        '<td class="name">' + escapeHtml(stock.name) + "</td>" +
+        '<td class="name"><a href="https://www.google.com/search?q=' + encodeURIComponent(stock.name) + '" target="_blank" rel="noopener">' + escapeHtml(stock.name) + "</a></td>" +
         '<td class="num">' + amountText + "</td>" +
         '<td class="num">' + escapeHtml(String(stock.ratio_percent)) + "%</td>" +
         '<td class="num">' + netCashRatio + "</td>" +

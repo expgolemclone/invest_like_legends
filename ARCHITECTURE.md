@@ -40,7 +40,7 @@ invest_like_legends/
 | カラム | 説明 | ソートキー |
 |--------|------|------------|
 | code | 銘柄コード（証券コード） | `code` |
-| name | 会社名 | `name` |
+| name | 会社名（クリックでGoogle検索） | `name` |
 | amount | 投資家の保有額（億円、小数点第一位まで表示） | `amount_millions` |
 | ratio | 投資家の保有割合（%） | `ratio_percent` |
 | ncr | ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全 | `net_cash_ratio` |
