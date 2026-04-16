@@ -35,17 +35,19 @@ invest_like_legends/
 
 #### テーブルカラム
 
+各ヘッダーには `data-tooltip` 属性が設定されており、ホバー時に日本語の解説がツールチップで表示される。
+
 | カラム | 説明 | ソートキー |
 |--------|------|------------|
-| code | 銘柄コード | `code` |
+| code | 銘柄コード（証券コード） | `code` |
 | name | 会社名 | `name` |
-| amount | 保有額（億円単位、単位付き） | `amount_millions` |
-| ratio | 保有割合（%付き） | `ratio_percent` |
-| ncr | ネットキャッシュレシオ | `net_cash_ratio` |
-| per | PER | `per` |
-| equity | 自己資本比率 | `equity_ratio` |
-| fcf_y | FCFイールド | `fcf_yield_avg` |
-| croic | CROIC | `croic` |
+| amount | 投資家の保有額（億円） | `amount_millions` |
+| ratio | 投資家の保有割合（%） | `ratio_percent` |
+| ncr | ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全 | `net_cash_ratio` |
+| per | 株価収益率 — 株価を1株当たり利益で割った値。低いほど割安（目安: 15倍以下） | `per` |
+| equity | 自己資本比率 — 総資産に占める自己資本の割合。高いほど経営が安定 | `equity_ratio` |
+| fcf_y | フリーキャッシュフローイールド — FCFを時価総額で割った値。高いほどキャッシュ創出力が優れている | `fcf_yield_avg` |
+| croic | 投下資本キャッシュリターン — FCFを投下資本で割った値。高いほど資本効率が良い | `croic` |
 | url | リンク（ソート機能なし） | - |
 
 ### バックエンド (`server/`)
