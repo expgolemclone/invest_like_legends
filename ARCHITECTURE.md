@@ -39,8 +39,8 @@ invest_like_legends/
 |--------|------|------------|
 | code | 銘柄コード | `code` |
 | name | 会社名 | `name` |
-| amount(¥100m) | 保有額（億円単位） | `amount_millions` |
-| ratio(%) | 保有割合 | `ratio_percent` |
+| amount | 保有額（億円単位、単位付き） | `amount_millions` |
+| ratio | 保有割合（%付き） | `ratio_percent` |
 | ncr | ネットキャッシュレシオ | `net_cash_ratio` |
 | per | PER | `per` |
 | equity | 自己資本比率 | `equity_ratio` |

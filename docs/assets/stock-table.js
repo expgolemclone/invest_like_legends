@@ -462,7 +462,7 @@ function renderStocks(stocks) {
   elements.tbody.innerHTML = stocks.map(function(stock) {
     const shikihoUrl = "https://shikiho.toyokeizai.net/stocks/" + encodeURIComponent(stock.code) + "/shikiho";
     const monexUrl = "https://monex.ifis.co.jp/index.php?sa=report_zaimu&bcode=" + encodeURIComponent(stock.code);
-    const amountText = stock.amount_millions === null ? "-" : (stock.amount_millions / 100).toLocaleString("ja-JP", { maximumFractionDigits: 1 });
+    const amountText = stock.amount_millions === null ? "-" : (stock.amount_millions / 100).toLocaleString("ja-JP", { maximumFractionDigits: 1 }) + "億";
 
     const metrics = state.metricsCache[stock.code];
     const netCashRatio = metrics && metrics.net_cash_ratio !== null ? metrics.net_cash_ratio.toFixed(2) : "-";
@@ -476,7 +476,7 @@ function renderStocks(stocks) {
         '<td class="code">' + escapeHtml(stock.code) + "</td>" +
         '<td class="name">' + escapeHtml(stock.name) + "</td>" +
         '<td class="num">' + amountText + "</td>" +
-        '<td class="num">' + escapeHtml(String(stock.ratio_percent)) + "</td>" +
+        '<td class="num">' + escapeHtml(String(stock.ratio_percent)) + "%</td>" +
         '<td class="num">' + netCashRatio + "</td>" +
         '<td class="num">' + per + "</td>" +
         '<td class="num">' + equityRatio + "%</td>" +
