@@ -5,8 +5,11 @@ description = "invest_like_legends"
 requires-python = ">=3.13,<3.14"
 dependencies = [
     "formula-screening",
-    "stock-db @ /home/exp/projects/stock_db",
+    "stock-db @ ../stock_db",
 ]
+
+[tool.setuptools]
+packages = ["server"]
 
 [dependency-groups]
 dev = [

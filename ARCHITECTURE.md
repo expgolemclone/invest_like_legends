@@ -97,5 +97,10 @@ GitHub Pages デプロイ
 
 ## 依存プロジェクト
 
-- **formula_screening**: 指標計算ロジック
-- **stock_db**: 財務データベース
+- **formula_screening**: 指標計算ロジック（相対パス: `../formula_screening`）
+- **stock_db**: 財務データベース（相対パス: `../stock_db`）
+
+## pyproject.toml
+
+- `[tool.setuptools] packages = ["server"]`: `server` ディレクトリのみをパッケージとしてインストール
+- 依存パスは相対パス指定によりOS（Linux/Windows）共通で動作
