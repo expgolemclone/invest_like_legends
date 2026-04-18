@@ -5,7 +5,7 @@ description = "invest_like_legends"
 requires-python = ">=3.13,<3.14"
 dependencies = [
     "formula-screening",
-    "stock-db @ ../stock_db",
+    "stock-db",
 ]
 
 [tool.setuptools]
@@ -21,3 +21,4 @@ testpaths = ["tests"]
 
 [tool.uv.sources]
 formula-screening = { path = "../formula_screening", editable = true }
+stock-db = { path = "../stock_db", editable = true }

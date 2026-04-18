@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import platform
 import signal
 import subprocess
 import time
@@ -16,6 +17,7 @@ _PROC_PATH: Path = Path("/proc")
 _TERM_TIMEOUT_SECONDS: float = 1.0
 _POLL_INTERVAL_SECONDS: float = 0.1
 _STARTUP_BROWSER_COMMAND: str = "google-chrome"
+_IS_WINDOWS: bool = platform.system() == "Windows"
 
 
 def main() -> None:
@@ -32,7 +34,11 @@ def main() -> None:
 
 
 def _release_port_if_needed(host: str, port: int) -> None:
-    pids: list[int] = _find_listening_pids(port)
+    if _IS_WINDOWS:
+        pids: list[int] = _find_listening_pids_windows(port)
+    else:
+        pids: list[int] = _find_listening_pids(port)
+
     if not pids:
         return
 
@@ -42,8 +48,17 @@ def _release_port_if_needed(host: str, port: int) -> None:
         print(f"Released port {host}:{port}")
         return
 
-    remaining_pids: list[int] = _find_listening_pids(port)
+    if _IS_WINDOWS:
+        remaining_pids: list[int] = _find_listening_pids_windows(port)
+    else:
+        remaining_pids: list[int] = _find_listening_pids(port)
+
     if remaining_pids:
+        if _IS_WINDOWS:
+            raise RuntimeError(
+                f"Port {host}:{port} is still in use after SIGTERM; "
+                f"remaining PIDs {remaining_pids}"
+            )
         print(f"Port {host}:{port} is still in use; force killing PIDs {remaining_pids}")
         _signal_pids(remaining_pids, signal.SIGKILL)
 
@@ -59,6 +74,38 @@ def _find_listening_pids(port: int) -> list[int]:
     if not socket_inodes:
         return []
     return _find_pids_by_socket_inodes(socket_inodes)
+
+
+def _find_listening_pids_windows(port: int) -> list[int]:
+    try:
+        result: subprocess.CompletedProcess[bytes] = subprocess.run(
+            ["netstat", "-ano"],
+            capture_output=True,
+            timeout=5,
+            check=True,
+        )
+        output: str = result.stdout.decode("utf-8", errors="ignore")
+        pids: set[int] = set()
+        for line in output.splitlines():
+            parts: list[str] = line.split()
+            if len(parts) >= 5 and parts[0] == "TCP":
+                local_address: str = parts[1]
+                state: str = parts[3]
+                if state != "LISTENING":
+                    continue
+                if local_address.endswith(f":{port}"):
+                    pid_str: str = parts[4]
+                    try:
+                        pid: int = int(pid_str)
+                    except ValueError:
+                        continue
+                    if pid == 0:
+                        continue
+                    pids.add(pid)
+        return sorted(pids)
+    except (subprocess.CalledProcessError, FileNotFoundError, subprocess.TimeoutExpired) as exc:
+        print(f"Failed to find listening PIDs on port {port}: {exc}")
+        return []
 
 
 def _find_listening_socket_inodes(port: int) -> set[str]:
@@ -136,22 +183,32 @@ def _signal_pids(pids: list[int], sig: signal.Signals) -> None:
 def _wait_for_port_release(port: int) -> bool:
     deadline: float = time.monotonic() + _TERM_TIMEOUT_SECONDS
     while time.monotonic() < deadline:
-        if not _find_listening_pids(port):
-            return True
+        if _IS_WINDOWS:
+            if not _find_listening_pids_windows(port):
+                return True
+        else:
+            if not _find_listening_pids(port):
+                return True
         time.sleep(_POLL_INTERVAL_SECONDS)
 
-    return not _find_listening_pids(port)
+    if _IS_WINDOWS:
+        return not _find_listening_pids_windows(port)
+    else:
+        return not _find_listening_pids(port)
 
 
 def _open_startup_browser(url: str) -> None:
     try:
-        subprocess.Popen(
-            [_STARTUP_BROWSER_COMMAND, url],
-            stdin=subprocess.DEVNULL,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-            start_new_session=True,
-        )
+        if _IS_WINDOWS:
+            os.startfile(url)  # type: ignore[attr-defined]
+        else:
+            subprocess.Popen(
+                [_STARTUP_BROWSER_COMMAND, url],
+                stdin=subprocess.DEVNULL,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                start_new_session=True,
+            )
     except FileNotFoundError:
         print(
             f"Startup browser '{_STARTUP_BROWSER_COMMAND}' was not found; "

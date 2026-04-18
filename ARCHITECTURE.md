@@ -59,6 +59,13 @@ invest_like_legends/
 - **browser.py**: ブラウザ起動ユーティリティ
 - **config.py**: 設定管理
 
+### サーバー起動スクリプト (`serve.py`)
+
+- 設定読込 → 既存ポートの解放 → `HTTPServer` 起動 → 起動用ブラウザ起動 の順で実行
+- ポート解放処理は OS ごとに分岐
+  - **Linux**: `/proc/net/tcp` を読んで LISTEN (state `0A`) のソケット inode を特定し、`/proc/<pid>/fd` 経由で所有プロセスを逆引き。`SIGTERM` で解放されない場合は `SIGKILL` で強制終了
+  - **Windows**: `netstat -ano` をパースし、状態が `LISTENING` のエントリのみを対象。PID=0 (System Idle Process / HNS 予約 / TIME_WAIT 等) は除外。`os.kill(pid, SIGTERM)` は内部で `TerminateProcess()` を呼ぶため強制終了相当となり、`SIGKILL` 経路は使わない（Windows には `signal.SIGKILL` が存在しないため）
+
 ### スクリプト (`scripts/`)
 
 - **generate_metrics.py**: 全銘柄の指標を計算して JSON に保存
@@ -97,10 +104,5 @@ GitHub Pages デプロイ
 
 ## 依存プロジェクト
 
-- **formula_screening**: 指標計算ロジック（相対パス: `../formula_screening`）
-- **stock_db**: 財務データベース（相対パス: `../stock_db`）
-
-## pyproject.toml
-
-- `[tool.setuptools] packages = ["server"]`: `server` ディレクトリのみをパッケージとしてインストール
-- 依存パスは相対パス指定によりOS（Linux/Windows）共通で動作
+- **formula_screening**: 指標計算ロジック
+- **stock_db**: 財務データベース

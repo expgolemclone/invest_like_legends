@@ -121,7 +121,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "formula-screening", editable = "../formula_screening" },
-    { name = "stock-db", directory = "/home/exp/projects/stock_db" },
+    { name = "stock-db", editable = "../stock_db" },
 ]
 
 [package.metadata.requires-dev]
