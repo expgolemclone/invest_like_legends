@@ -10,6 +10,10 @@
   --border: #2a2a4e;
   --thead-bg: #0f1a36;
   --thead-hover: #1a2d50;
+  --position-thead-bg: #352212;
+  --position-thead-hover: #4a3116;
+  --position-thead-text: #ffd39d;
+  --position-thead-border: rgba(240, 160, 80, 0.28);
   --row-hover: #253561;
   --monex-bg: #3a2510;
   --monex-color: #f0a050;
@@ -84,6 +88,41 @@ body {
   white-space: nowrap;
 }
 
+.column-toggles {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.toggle-chip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.toggle-chip:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.toggle-chip.active {
+  background: rgba(91, 155, 255, 0.18);
+  border-color: rgba(91, 155, 255, 0.5);
+  color: var(--accent);
+}
+
+.hidden-col {
+  display: none;
+}
+
 .table-wrap {
   max-height: 70vh;
   overflow: auto;
@@ -113,6 +152,12 @@ thead th {
   border-bottom: 1px solid var(--border);
 }
 
+.column-position {
+  background: var(--position-thead-bg);
+  color: var(--position-thead-text);
+  border-bottom-color: var(--position-thead-border);
+}
+
 .sort-button {
   width: 100%;
   display: flex;
@@ -131,6 +176,11 @@ thead th {
 thead th:hover .sort-button,
 .sort-button.active {
   background: var(--thead-hover);
+}
+
+.column-position:hover .sort-button,
+.column-position .sort-button.active {
+  background: var(--position-thead-hover);
 }
 
 .sort-button .arrow {

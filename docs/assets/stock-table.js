@@ -49,6 +49,8 @@ const ASC_ARROW = "▲";
 const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
 const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent", "net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
+const TOGGLEABLE_COLUMNS = ["net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
+const HIDDEN_COLUMNS_KEY = "hiddenColumns";
 /** @type {{
  *   investors: InvestorsDocument | null,
  *   currentInvestorKey: InvestorKey,
@@ -65,6 +67,7 @@ const state = {
   currentInvestorKey: DEFAULT_INVESTOR_KEY,
   sortColumn: DEFAULT_SORT_COLUMN,
   sortDirection: DEFAULT_SORT_DIRECTION,
+  hiddenColumns: loadHiddenColumns(),
   isLoading: true,
   errorMessage: "",
   metricsCache: {},
@@ -76,6 +79,7 @@ const elements = {
   tbody: /** @type {HTMLElement} */ (document.getElementById("tbody")),
   tabs: /** @type {HTMLButtonElement[]} */ (Array.from(document.querySelectorAll("[data-investor-key]"))),
   sortButtons: /** @type {HTMLButtonElement[]} */ (Array.from(document.querySelectorAll("[data-sort-column]"))),
+  toggleChips: /** @type {HTMLButtonElement[]} */ (Array.from(document.querySelectorAll("[data-toggle-column]"))),
 };
 
 // Open desktop-targeted links through the local helper server when available.
@@ -99,6 +103,31 @@ document.addEventListener("click", function(/** @type {MouseEvent} */ event) {
       window.open(url, "_blank", "noopener");
     });
 });
+
+/** @returns {Set<string>} */
+function loadHiddenColumns() {
+  try {
+    var stored = localStorage.getItem(HIDDEN_COLUMNS_KEY);
+    if (stored) {
+      var parsed = JSON.parse(stored);
+      if (Array.isArray(parsed)) {
+        return new Set(parsed.filter(function(c) { return TOGGLEABLE_COLUMNS.includes(c); }));
+      }
+    }
+  } catch (_e) {
+    // ignore
+  }
+  return new Set();
+}
+
+/** @param {Set<string>} columns */
+function saveHiddenColumns(columns) {
+  try {
+    localStorage.setItem(HIDDEN_COLUMNS_KEY, JSON.stringify(Array.from(columns)));
+  } catch (_e) {
+    // ignore
+  }
+}
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initialize);
@@ -136,6 +165,22 @@ function bindEvents() {
         state.sortDirection = sortColumn === DEFAULT_SORT_COLUMN ? DEFAULT_SORT_DIRECTION : "asc";
       }
 
+      render();
+    });
+  });
+
+  elements.toggleChips.forEach(function(chip) {
+    chip.addEventListener("click", function() {
+      var column = chip.getAttribute("data-toggle-column");
+      if (!column || !TOGGLEABLE_COLUMNS.includes(column)) {
+        return;
+      }
+      if (state.hiddenColumns.has(column)) {
+        state.hiddenColumns.delete(column);
+      } else {
+        state.hiddenColumns.add(column);
+      }
+      saveHiddenColumns(state.hiddenColumns);
       render();
     });
   });
@@ -265,6 +310,7 @@ function switchInvestor(investorKey) {
 function render() {
   renderTabs();
   renderSortButtons();
+  renderToggleChips();
 
   if (state.isLoading) {
     document.title = DEFAULT_TITLE;
@@ -333,7 +379,15 @@ function renderSortButtons() {
     button.classList.toggle("active", isActive);
     if (th) {
       th.setAttribute("aria-sort", isActive ? (state.sortDirection === "asc" ? "ascending" : "descending") : "none");
+      th.classList.toggle("hidden-col", state.hiddenColumns.has(sortColumn));
     }
+  });
+}
+
+function renderToggleChips() {
+  elements.toggleChips.forEach(function(chip) {
+    var column = chip.getAttribute("data-toggle-column");
+    chip.classList.toggle("active", !state.hiddenColumns.has(column));
   });
 }
 
@@ -398,6 +452,13 @@ function compareStocks(leftStock, rightStock) {
 
 /** @param {InvestorStock[]} stocks */
 function renderStocks(stocks) {
+  var h = state.hiddenColumns;
+  var ncrCls = h.has("net_cash_ratio") ? " hidden-col" : "";
+  var perCls = h.has("per") ? " hidden-col" : "";
+  var eqCls = h.has("equity_ratio") ? " hidden-col" : "";
+  var fcfCls = h.has("fcf_yield_avg") ? " hidden-col" : "";
+  var croicCls = h.has("croic") ? " hidden-col" : "";
+
   elements.tbody.innerHTML = stocks.map(function(stock) {
     const shikihoUrl = "https://shikiho.toyokeizai.net/stocks/" + encodeURIComponent(stock.code) + "/shikiho";
     const monexUrl = "https://monex.ifis.co.jp/index.php?sa=report_zaimu&bcode=" + encodeURIComponent(stock.code);
@@ -413,14 +474,14 @@ function renderStocks(stocks) {
     return (
       "<tr>" +
         '<td class="code">' + escapeHtml(stock.code) + "</td>" +
-        '<td class="name"><a href="https://www.google.com/search?q=' + encodeURIComponent(stock.name) + '" target="_blank" rel="noopener">' + escapeHtml(stock.name) + "</a></td>" +
+        '<td class="name"><a href="' + shikihoUrl + '" target="_blank" rel="noopener">' + escapeHtml(stock.name) + "</a></td>" +
         '<td class="num">' + amountText + "</td>" +
         '<td class="num">' + escapeHtml(String(stock.ratio_percent)) + "%</td>" +
-        '<td class="num">' + netCashRatio + "</td>" +
-        '<td class="num">' + per + "</td>" +
-        '<td class="num">' + equityRatio + "%</td>" +
-        '<td class="num">' + fcfYield + "%</td>" +
-        '<td class="num">' + croic + "%</td>" +
+        '<td class="num' + ncrCls + '">' + netCashRatio + "</td>" +
+        '<td class="num' + perCls + '">' + per + "</td>" +
+        '<td class="num' + eqCls + '">' + equityRatio + "%</td>" +
+        '<td class="num' + fcfCls + '">' + fcfYield + "%</td>" +
+        '<td class="num' + croicCls + '">' + croic + "%</td>" +
         '<td><div class="links-cell">' +
           '<a class="link-btn shikiho" href="' + shikihoUrl + '" target="_blank" rel="noopener" data-browser="shikiho">四季報</a>' +
           '<a class="link-btn monex" href="' + monexUrl + '" target="_blank" rel="noopener" data-browser="monex">Monex</a>' +
@@ -432,8 +493,9 @@ function renderStocks(stocks) {
 
 /** @param {string} message */
 function renderMessageRow(message) {
+  var visibleColCount = 10 - state.hiddenColumns.size;
   elements.tbody.innerHTML =
-    '<tr><td class="table-message" colspan="10">' + escapeHtml(message) + "</td></tr>";
+    '<tr><td class="table-message" colspan="' + visibleColCount + '">' + escapeHtml(message) + "</td></tr>";
 }
 
 /** @param {string | null} candidate */
