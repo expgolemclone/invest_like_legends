@@ -13,7 +13,7 @@ invest_like_legends/
 ├── docs/                  # 静的サイト（GitHub Pages）
 │   └── assets/
 │       ├── data/          # 生成データ（investors.json, metrics.json）
-│       ├── style.css      # スタイルシート（テーブルヘッダー sticky 固定）
+│       ├── style.css      # スタイルシート
 │       └── stock-table.js # メインJavaScript
 ├── scripts/               # ユーティリティスクリプト
 ├── server/                # ローカル開発サーバー
@@ -29,6 +29,7 @@ invest_like_legends/
 - **assets/stock-table.js**: メインJavaScript
   - 投資家タブ切り替え
   - ソート機能
+  - 指標カラムの表示/非表示トグル（localStorage で永続化）
   - 指標データ表示（GitHub Pages では静的JSON、ローカルでは API 使用）
 - **assets/data/investors.json**: 投資家保有銘柄データ
 - **assets/data/metrics.json**: 指標データ（GitHub Actions で生成）
@@ -37,18 +38,18 @@ invest_like_legends/
 
 各ヘッダーには `title` 属性が設定されており、ホバー時にネイティブのツールチップで日本語の解説が表示される。
 
-| カラム | 説明 | ソートキー |
-|--------|------|------------|
-| code | 銘柄コード（証券コード） | `code` |
-| name | 会社名（クリックでGoogle検索） | `name` |
-| amount | 投資家の保有額（億円、小数点第一位まで表示） | `amount_millions` |
-| ratio | 投資家の保有割合（%） | `ratio_percent` |
-| ncr | ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全 | `net_cash_ratio` |
-| per | 株価収益率 — 株価を1株当たり利益で割った値。低いほど割安（目安: 15倍以下） | `per` |
-| equity | 自己資本比率 — 自己資本 / 総資産 * 100 | `equity_ratio` |
-| fcf_y | フリーキャッシュフローイールド — FCFを時価総額で割った値。高いほどキャッシュ創出力が優れている | `fcf_yield_avg` |
-| croic | CROIC — FCF / (自己資本 + 有利子負債) | `croic` |
-| url | リンク（ソート機能なし） | - |
+| カラム | 説明 | ソートキー | トグル可 |
+|--------|------|------------|----------|
+| code | 銘柄コード（証券コード） | `code` | - |
+| name | 会社名（クリックで四季報に遷移） | `name` | - |
+| amount | 投資家の保有額（億円、小数点第一位まで表示） | `amount_millions` | - |
+| ratio | 投資家の保有割合（%） | `ratio_percent` | - |
+| ncr | ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全 | `net_cash_ratio` | o |
+| per | 株価収益率 — 株価を1株当たり利益で割った値。低いほど割安（目安: 15倍以下） | `per` | o |
+| equity | 自己資本比率 — 自己資本 / 総資産 * 100 | `equity_ratio` | o |
+| fcf_y | フリーキャッシュフローイールド — FCFを時価総額で割った値。高いほどキャッシュ創出力が優れている | `fcf_yield_avg` | o |
+| croic | CROIC — FCF / (自己資本 + 有利子負債) | `croic` | o |
+| url | リンク（四季報・Monex、ソート機能なし） | - | - |
 
 ### バックエンド (`server/`)
 
