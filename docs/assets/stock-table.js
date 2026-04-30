@@ -30,9 +30,9 @@
 /** @typedef {Object.<string, InvestorDataset>} InvestorsDocument */
 
 const DEFAULT_TITLE = "保有銘柄ビューア - 四季報オンラインリンク一覧";
-const DEFAULT_INVESTOR_KEY = "naito";
-const DEFAULT_SORT_COLUMN = "amount_millions";
-const DEFAULT_SORT_DIRECTION = "desc";
+const DEFAULT_INVESTOR_KEY = "watch";
+const DEFAULT_SORT_COLUMN = "code";
+const DEFAULT_SORT_DIRECTION = "asc";
 const INVESTOR_DATA_URL = "assets/data/investors.json?v=20260501-yoshida";
 const METRICS_DATA_URL = "assets/data/metrics.json";
 const IS_GITHUB_PAGES = location.hostname === "expgolemclone.github.io";

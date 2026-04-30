@@ -22,6 +22,7 @@ InvestorsDocument = dict[str, InvestorDataset]
 PROJECT_ROOT: Path = Path(__file__).resolve().parent.parent
 INVESTOR_DATA_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "data" / "investors.json"
 EXPECTED_INVESTOR_NAMES: dict[str, str] = {
+    "watch": "監視銘柄",
     "naito": "内藤征吾",
     "hikari": "光通信",
     "kiyohara": "清原達郎",
@@ -32,6 +33,7 @@ EXPECTED_INVESTOR_NAMES: dict[str, str] = {
     "yoshida": "ヨシダトモヒロ",
 }
 EXPECTED_STOCK_COUNTS: dict[str, int] = {
+    "watch": 64,
     "naito": 113,
     "hikari": 451,
     "kiyohara": 18,
@@ -106,7 +108,8 @@ def test_investor_data_has_expected_counts_and_max_amounts() -> None:
         amounts: list[int] = _non_null_amounts(stocks)
 
         assert len(stocks) == expected_count
-        assert max(amounts) == EXPECTED_MAX_AMOUNTS[investor_key]
+        if investor_key in EXPECTED_MAX_AMOUNTS:
+            assert max(amounts) == EXPECTED_MAX_AMOUNTS[investor_key]
 
 
 def test_investor_data_normalizes_missing_names_and_amounts() -> None:
