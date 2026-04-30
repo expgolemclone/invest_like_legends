@@ -1,4 +1,4 @@
-/** @typedef {"naito" | "hikari" | "kiyohara" | "katayama" | "imura" | "gomi" | "one_warikabunihon"} InvestorKey */
+/** @typedef {string} InvestorKey */
 /** @typedef {"code" | "name" | "amount_millions" | "ratio_percent" | "net_cash_ratio" | "per" | "equity_ratio" | "fcf_yield_avg" | "croic"} SortColumn */
 /** @typedef {"asc" | "desc"} SortDirection */
 /**
@@ -27,22 +27,13 @@
  * @property {string} name
  * @property {InvestorStock[]} stocks
  */
-/**
- * @typedef {Object} InvestorsDocument
- * @property {InvestorDataset} naito
- * @property {InvestorDataset} hikari
- * @property {InvestorDataset} kiyohara
- * @property {InvestorDataset} katayama
- * @property {InvestorDataset} imura
- * @property {InvestorDataset} gomi
- * @property {InvestorDataset} one_warikabunihon
- */
+/** @typedef {Object.<string, InvestorDataset>} InvestorsDocument */
 
 const DEFAULT_TITLE = "保有銘柄ビューア - 四季報オンラインリンク一覧";
 const DEFAULT_INVESTOR_KEY = "naito";
 const DEFAULT_SORT_COLUMN = "amount_millions";
 const DEFAULT_SORT_DIRECTION = "desc";
-const INVESTOR_DATA_URL = "assets/data/investors.json?v=a4123689e1bf";
+const INVESTOR_DATA_URL = "assets/data/investors.json?v=20260501-yoshida";
 const METRICS_DATA_URL = "assets/data/metrics.json";
 const IS_GITHUB_PAGES = location.hostname === "expgolemclone.github.io";
 const ASC_ARROW = "▲";
@@ -51,14 +42,16 @@ const INACTIVE_ARROW = "▽";
 const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent", "net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
 const TOGGLEABLE_COLUMNS = ["net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
 const HIDDEN_COLUMNS_KEY = "hiddenColumns";
+
 /** @type {{
  *   investors: InvestorsDocument | null,
  *   currentInvestorKey: InvestorKey,
  *   sortColumn: SortColumn,
  *   sortDirection: SortDirection,
+ *   hiddenColumns: Set<string>,
  *   isLoading: boolean,
  *   errorMessage: string,
- *   metricsCache: Object<string, StockMetrics>,
+ *   metricsCache: Object.<string, StockMetrics>,
  *   metricsLoading: boolean
  * }}
  */
@@ -75,9 +68,9 @@ const state = {
 };
 
 const elements = {
+  tabBar: /** @type {HTMLElement} */ (document.getElementById("investorTabs")),
   statusMessage: /** @type {HTMLElement} */ (document.getElementById("statusMessage")),
   tbody: /** @type {HTMLElement} */ (document.getElementById("tbody")),
-  tabs: /** @type {HTMLButtonElement[]} */ (Array.from(document.querySelectorAll("[data-investor-key]"))),
   sortButtons: /** @type {HTMLButtonElement[]} */ (Array.from(document.querySelectorAll("[data-sort-column]"))),
   toggleChips: /** @type {HTMLButtonElement[]} */ (Array.from(document.querySelectorAll("[data-toggle-column]"))),
 };
@@ -142,13 +135,18 @@ function initialize() {
 }
 
 function bindEvents() {
-  elements.tabs.forEach(function(tab) {
-    tab.addEventListener("click", function() {
-      const investorKey = tab.getAttribute("data-investor-key");
-      if (investorKey === "naito" || investorKey === "hikari" || investorKey === "kiyohara" || investorKey === "katayama" || investorKey === "imura" || investorKey === "gomi" || investorKey === "one_warikabunihon") {
-        switchInvestor(investorKey);
-      }
-    });
+  elements.tabBar.addEventListener("click", function(event) {
+    const tab = /** @type {HTMLElement | null} */ (event.target instanceof Element ? event.target.closest("[data-investor-key]") : null);
+    if (!tab) {
+      return;
+    }
+
+    const investorKey = tab.getAttribute("data-investor-key");
+    if (!investorKey || !hasInvestorKey(investorKey)) {
+      return;
+    }
+
+    switchInvestor(investorKey);
   });
 
   elements.sortButtons.forEach(function(button) {
@@ -203,7 +201,7 @@ async function loadMetrics(codes) {
           console.error("Failed to load metrics:", response.statusText);
           return;
         }
-        const metrics = /** @type {Object<string, StockMetrics>} */ (await response.json());
+        const metrics = /** @type {Object.<string, StockMetrics>} */ (await response.json());
         Object.assign(state.metricsCache, metrics);
       } catch (error) {
         console.error("Error loading metrics:", error);
@@ -232,7 +230,7 @@ async function loadMetrics(codes) {
       return;
     }
 
-    const metrics = /** @type {Object<string, StockMetrics>} */ (await response.json());
+    const metrics = /** @type {Object.<string, StockMetrics>} */ (await response.json());
     Object.assign(state.metricsCache, metrics);
   } catch (error) {
     console.error("Error loading metrics:", error);
@@ -250,8 +248,10 @@ async function loadInvestors() {
 
     const rawInvestors = /** @type {unknown} */ (await response.json());
     state.investors = normalizeInvestors(rawInvestors);
+    state.currentInvestorKey = resolveDefaultInvestorKey(state.investors);
     state.isLoading = false;
-    switchInvestor(DEFAULT_INVESTOR_KEY);
+    state.errorMessage = "";
+    render();
   } catch (error) {
     console.error(error);
     state.isLoading = false;
@@ -260,44 +260,106 @@ async function loadInvestors() {
   }
 }
 
-/** @param {unknown} rawInvestors */
+/** @param {unknown} rawInvestors
+ *  @returns {InvestorsDocument}
+ */
 function normalizeInvestors(rawInvestors) {
-  if (!rawInvestors || typeof rawInvestors !== "object") {
+  if (!rawInvestors || typeof rawInvestors !== "object" || Array.isArray(rawInvestors)) {
     throw new Error("Investor data must be an object");
   }
 
-  const investors = /** @type {Partial<InvestorsDocument>} */ (rawInvestors);
-  if (!isInvestorDataset(investors.naito) || !isInvestorDataset(investors.hikari) || !isInvestorDataset(investors.kiyohara) || !isInvestorDataset(investors.katayama) || !isInvestorDataset(investors.imura) || !isInvestorDataset(investors.gomi) || !isInvestorDataset(investors.one_warikabunihon)) {
+  const investors = /** @type {Object.<string, unknown>} */ (rawInvestors);
+  const normalized = /** @type {InvestorsDocument} */ ({});
+
+  Object.entries(investors).forEach(function(entry) {
+    const investorKey = entry[0];
+    const rawDataset = entry[1];
+
+    if (investorKey === "") {
+      throw new Error("Investor key must not be empty");
+    }
+
+    normalized[investorKey] = normalizeInvestorDataset(rawDataset);
+  });
+
+  if (Object.keys(normalized).length === 0) {
     throw new Error("Investor datasets are missing or invalid");
   }
 
-  return /** @type {InvestorsDocument} */ ({
-    naito: investors.naito,
-    hikari: investors.hikari,
-    kiyohara: investors.kiyohara,
-    katayama: investors.katayama,
-    imura: investors.imura,
-    gomi: investors.gomi,
-    one_warikabunihon: investors.one_warikabunihon,
-  });
+  return normalized;
 }
 
-/** @param {unknown} candidate */
-function isInvestorDataset(candidate) {
-  if (!candidate || typeof candidate !== "object") {
-    return false;
+/** @param {unknown} candidate
+ *  @returns {InvestorDataset}
+ */
+function normalizeInvestorDataset(candidate) {
+  if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) {
+    throw new Error("Investor dataset must be an object");
   }
 
-  const dataset = /** @type {Partial<InvestorDataset>} */ (candidate);
-  return (
-    typeof dataset.name === "string" &&
-    Array.isArray(dataset.stocks)
-  );
+  const dataset = /** @type {{name?: unknown, stocks?: unknown}} */ (candidate);
+  if (typeof dataset.name !== "string" || dataset.name === "") {
+    throw new Error("Investor name must be a non-empty string");
+  }
+  if (!Array.isArray(dataset.stocks)) {
+    throw new Error("Investor stocks must be an array");
+  }
+
+  return {
+    name: dataset.name,
+    stocks: dataset.stocks.map(normalizeInvestorStock),
+  };
+}
+
+/** @param {unknown} candidate
+ *  @returns {InvestorStock}
+ */
+function normalizeInvestorStock(candidate) {
+  if (!candidate || typeof candidate !== "object" || Array.isArray(candidate)) {
+    throw new Error("Investor stock must be an object");
+  }
+
+  const stock = /** @type {{code?: unknown, name?: unknown, amount_millions?: unknown, ratio_percent?: unknown}} */ (candidate);
+  if (typeof stock.code !== "string" || stock.code === "") {
+    throw new Error("Investor stock code must be a non-empty string");
+  }
+  if (typeof stock.name !== "string" || stock.name === "") {
+    throw new Error("Investor stock name must be a non-empty string");
+  }
+  if (stock.amount_millions !== null && !isInteger(stock.amount_millions)) {
+    throw new Error("Investor stock amount must be an integer or null");
+  }
+  if (!isNumber(stock.ratio_percent)) {
+    throw new Error("Investor stock ratio must be numeric");
+  }
+
+  return {
+    code: stock.code,
+    name: stock.name,
+    amount_millions: stock.amount_millions === null ? null : stock.amount_millions,
+    ratio_percent: Number(stock.ratio_percent),
+  };
+}
+
+/** @param {InvestorsDocument} investors
+ *  @returns {InvestorKey}
+ */
+function resolveDefaultInvestorKey(investors) {
+  if (Object.prototype.hasOwnProperty.call(investors, DEFAULT_INVESTOR_KEY)) {
+    return DEFAULT_INVESTOR_KEY;
+  }
+
+  const investorKeys = Object.keys(investors);
+  if (investorKeys.length === 0) {
+    throw new Error("Investor datasets are missing or invalid");
+  }
+
+  return investorKeys[0];
 }
 
 /** @param {InvestorKey} investorKey */
 function switchInvestor(investorKey) {
-  if (!state.investors || !state.investors[investorKey]) {
+  if (!hasInvestorKey(investorKey)) {
     return;
   }
 
@@ -354,11 +416,27 @@ function render() {
 }
 
 function renderTabs() {
-  elements.tabs.forEach(function(tab) {
-    const isActive = tab.getAttribute("data-investor-key") === state.currentInvestorKey;
-    tab.classList.toggle("active", isActive);
-    tab.setAttribute("aria-selected", String(isActive));
-  });
+  const investorEntries = getInvestorEntries();
+  if (investorEntries.length === 0) {
+    elements.tabBar.innerHTML = "";
+    return;
+  }
+
+  elements.tabBar.innerHTML = investorEntries.map(function(entry) {
+    const investorKey = entry[0];
+    const investor = entry[1];
+    const isActive = investorKey === state.currentInvestorKey;
+
+    return (
+      '<button class="tab' + (isActive ? " active" : "") + '" type="button" data-investor-key="' +
+      escapeHtml(investorKey) +
+      '" aria-selected="' +
+      String(isActive) +
+      '">' +
+      escapeHtml(investor.name) +
+      "</button>"
+    );
+  }).join("");
 }
 
 function renderSortButtons() {
@@ -387,12 +465,29 @@ function renderSortButtons() {
 function renderToggleChips() {
   elements.toggleChips.forEach(function(chip) {
     var column = chip.getAttribute("data-toggle-column");
-    chip.classList.toggle("active", !state.hiddenColumns.has(column));
+    chip.classList.toggle("active", !state.hiddenColumns.has(column || ""));
   });
 }
 
+/** @returns {InvestorDataset | null} */
 function getCurrentInvestor() {
-  return state.investors ? state.investors[state.currentInvestorKey] : null;
+  if (!state.investors || !hasInvestorKey(state.currentInvestorKey)) {
+    return null;
+  }
+
+  return state.investors[state.currentInvestorKey];
+}
+
+/** @returns {Array<[InvestorKey, InvestorDataset]>} */
+function getInvestorEntries() {
+  return state.investors ? /** @type {Array<[InvestorKey, InvestorDataset]>} */ (Object.entries(state.investors)) : [];
+}
+
+/** @param {InvestorKey} investorKey
+ *  @returns {boolean}
+ */
+function hasInvestorKey(investorKey) {
+  return state.investors !== null && Object.prototype.hasOwnProperty.call(state.investors, investorKey);
 }
 
 /** @param {InvestorStock[]} stocks */
@@ -501,6 +596,16 @@ function renderMessageRow(message) {
 /** @param {string | null} candidate */
 function isSortColumn(candidate) {
   return candidate !== null && SORTABLE_COLUMNS.includes(candidate);
+}
+
+/** @param {unknown} value */
+function isInteger(value) {
+  return typeof value === "number" && Number.isInteger(value);
+}
+
+/** @param {unknown} value */
+function isNumber(value) {
+  return typeof value === "number" && Number.isFinite(value);
 }
 
 /** @param {string} value */

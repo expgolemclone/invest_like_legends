@@ -28,10 +28,13 @@ invest_like_legends/
 - **index.html**: メインHTMLページ
 - **assets/stock-table.js**: メインJavaScript
   - 投資家タブ切り替え
+  - `investors.json` のトップレベル順から投資家タブを動的生成
   - ソート機能
   - 指標カラムの表示/非表示トグル（localStorage で永続化）
   - 指標データ表示（GitHub Pages では静的JSON、ローカルでは API 使用）
 - **assets/data/investors.json**: 投資家保有銘柄データ
+  - 対応キー: `naito`, `hikari`, `kiyohara`, `katayama`, `imura`, `gomi`, `one_warikabunihon`, `yoshida`
+  - 新規投資家追加時は dataset 追加に加え、`stock-table.js` / `index.html` のキャッシュバスターと `tests/test_investor_data.py` の期待値も更新する
 - **assets/data/metrics.json**: 指標データ（GitHub Actions で生成）
 
 #### テーブルカラム

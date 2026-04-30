@@ -4227,5 +4227,436 @@
         "ratio_percent": 2.61
       }
     ]
+  },
+  "yoshida": {
+    "name": "ヨシダトモヒロ",
+    "stocks": [
+      {
+        "code": "1885",
+        "name": "東亜建設工業株式会社",
+        "amount_millions": 7246,
+        "ratio_percent": 3.17
+      },
+      {
+        "code": "1909",
+        "name": "日本ドライケミカル株式会社",
+        "amount_millions": 2558,
+        "ratio_percent": 3.21
+      },
+      {
+        "code": "9534",
+        "name": "北海道瓦斯株式会社",
+        "amount_millions": 2199,
+        "ratio_percent": 3.01
+      },
+      {
+        "code": "2986",
+        "name": "株式会社LAホールディングス",
+        "amount_millions": 2034,
+        "ratio_percent": 2.96
+      },
+      {
+        "code": "5970",
+        "name": "株式会社ジーテクト",
+        "amount_millions": 2029,
+        "ratio_percent": 2.59
+      },
+      {
+        "code": "1518",
+        "name": "三井松島ホールディングス株式会社",
+        "amount_millions": 1598,
+        "ratio_percent": 3.02
+      },
+      {
+        "code": "5949",
+        "name": "ユニプレス株式会社",
+        "amount_millions": 908,
+        "ratio_percent": 1.5
+      },
+      {
+        "code": "7971",
+        "name": "東リ株式会社",
+        "amount_millions": 846,
+        "ratio_percent": 2.26
+      },
+      {
+        "code": "9739",
+        "name": "NSW株式会社",
+        "amount_millions": 790,
+        "ratio_percent": 2.16
+      },
+      {
+        "code": "5845",
+        "name": "全保連株式会社",
+        "amount_millions": 786,
+        "ratio_percent": 3.11
+      },
+      {
+        "code": "367A",
+        "name": "プリモグローバルホールディングス株式会社",
+        "amount_millions": 759,
+        "ratio_percent": 3.0
+      },
+      {
+        "code": "9702",
+        "name": "株式会社アイ・エス・ビー",
+        "amount_millions": 736,
+        "ratio_percent": 2.99
+      },
+      {
+        "code": "4743",
+        "name": "株式会社アイティフォー",
+        "amount_millions": 722,
+        "ratio_percent": 1.54
+      },
+      {
+        "code": "8011",
+        "name": "株式会社三陽商会",
+        "amount_millions": 721,
+        "ratio_percent": 1.6
+      },
+      {
+        "code": "6245",
+        "name": "株式会社ヒラノテクシード",
+        "amount_millions": 649,
+        "ratio_percent": 2.41
+      },
+      {
+        "code": "3393",
+        "name": "スターティアホールディングス株式会社",
+        "amount_millions": 604,
+        "ratio_percent": 2.22
+      },
+      {
+        "code": "4304",
+        "name": "株式会社Eストアー",
+        "amount_millions": 579,
+        "ratio_percent": 5.65
+      },
+      {
+        "code": "3565",
+        "name": "アセンテック株式会社",
+        "amount_millions": 573,
+        "ratio_percent": 3.05
+      },
+      {
+        "code": "4783",
+        "name": "NCD株式会社",
+        "amount_millions": 545,
+        "ratio_percent": 2.71
+      },
+      {
+        "code": "9709",
+        "name": "NCS&A株式会社",
+        "amount_millions": 535,
+        "ratio_percent": 2.13
+      },
+      {
+        "code": "4767",
+        "name": "株式会社テー・オー・ダブリュー",
+        "amount_millions": 524,
+        "ratio_percent": 3.4
+      },
+      {
+        "code": "6540",
+        "name": "株式会社船場",
+        "amount_millions": 488,
+        "ratio_percent": 2.76
+      },
+      {
+        "code": "6039",
+        "name": "株式会社日本動物高度医療センター",
+        "amount_millions": 448,
+        "ratio_percent": 2.35
+      },
+      {
+        "code": "287A",
+        "name": "黒田グループ株式会社",
+        "amount_millions": 417,
+        "ratio_percent": 1.04
+      },
+      {
+        "code": "9753",
+        "name": "アイエックス・ナレッジ株式会社",
+        "amount_millions": 409,
+        "ratio_percent": 3.38
+      },
+      {
+        "code": "9691",
+        "name": "株式会社両毛システムズ",
+        "amount_millions": 405,
+        "ratio_percent": 3.0
+      },
+      {
+        "code": "3300",
+        "name": "株式会社アンビションDXホールディングス",
+        "amount_millions": 313,
+        "ratio_percent": 1.77
+      },
+      {
+        "code": "7608",
+        "name": "株式会社エスケイジャパン",
+        "amount_millions": 308,
+        "ratio_percent": 2.25
+      },
+      {
+        "code": "7727",
+        "name": "株式会社オーバル",
+        "amount_millions": 290,
+        "ratio_percent": 1.86
+      },
+      {
+        "code": "9769",
+        "name": "株式会社学究社",
+        "amount_millions": 287,
+        "ratio_percent": 1.16
+      },
+      {
+        "code": "8023",
+        "name": "DAIKO XTECH株式会社",
+        "amount_millions": 260,
+        "ratio_percent": 2.12
+      },
+      {
+        "code": "2418",
+        "name": "株式会社ツカダ・グローバルホールディング",
+        "amount_millions": 258,
+        "ratio_percent": 0.88
+      },
+      {
+        "code": "7523",
+        "name": "アールビバン株式会社",
+        "amount_millions": 254,
+        "ratio_percent": 1.74
+      },
+      {
+        "code": "2903",
+        "name": "シノブフーズ株式会社",
+        "amount_millions": 241,
+        "ratio_percent": 1.37
+      },
+      {
+        "code": "8928",
+        "name": "穴吹興産株式会社",
+        "amount_millions": 240,
+        "ratio_percent": 0.91
+      },
+      {
+        "code": "7175",
+        "name": "今村証券株式会社",
+        "amount_millions": 215,
+        "ratio_percent": 3.11
+      },
+      {
+        "code": "4262",
+        "name": "ニフティライフスタイル株式会社",
+        "amount_millions": 198,
+        "ratio_percent": 2.2
+      },
+      {
+        "code": "6748",
+        "name": "星和電機株式会社",
+        "amount_millions": 197,
+        "ratio_percent": 2.02
+      },
+      {
+        "code": "5391",
+        "name": "株式会社エーアンドエーマテリアル",
+        "amount_millions": 188,
+        "ratio_percent": 1.78
+      },
+      {
+        "code": "9867",
+        "name": "ソレキア株式会社",
+        "amount_millions": 187,
+        "ratio_percent": 2.41
+      },
+      {
+        "code": "6570",
+        "name": "株式会社共和コーポレーション",
+        "amount_millions": 185,
+        "ratio_percent": 2.53
+      },
+      {
+        "code": "2927",
+        "name": "株式会社AFC-HDアムスライフサイエンス",
+        "amount_millions": 179,
+        "ratio_percent": 1.43
+      },
+      {
+        "code": "7374",
+        "name": "株式会社コンフィデンス・インターワークス",
+        "amount_millions": 179,
+        "ratio_percent": 1.97
+      },
+      {
+        "code": "6176",
+        "name": "株式会社ブランジスタ",
+        "amount_millions": 172,
+        "ratio_percent": 1.45
+      },
+      {
+        "code": "6360",
+        "name": "株式会社東京自働機械製作所",
+        "amount_millions": 170,
+        "ratio_percent": 2.98
+      },
+      {
+        "code": "5888",
+        "name": "DAIWA CYCLE株式会社",
+        "amount_millions": 165,
+        "ratio_percent": 1.82
+      },
+      {
+        "code": "5283",
+        "name": "株式会社高見澤",
+        "amount_millions": 158,
+        "ratio_percent": 2.92
+      },
+      {
+        "code": "4012",
+        "name": "株式会社アクシス",
+        "amount_millions": 154,
+        "ratio_percent": 2.36
+      },
+      {
+        "code": "7343",
+        "name": "ブロードマインド株式会社",
+        "amount_millions": 150,
+        "ratio_percent": 2.21
+      },
+      {
+        "code": "7792",
+        "name": "株式会社コラントッテ",
+        "amount_millions": 143,
+        "ratio_percent": 1.15
+      },
+      {
+        "code": "9647",
+        "name": "株式会社協和コンサルタンツ",
+        "amount_millions": 139,
+        "ratio_percent": 2.97
+      },
+      {
+        "code": "7625",
+        "name": "株式会社グローバルダイニング",
+        "amount_millions": 137,
+        "ratio_percent": 3.0
+      },
+      {
+        "code": "2981",
+        "name": "株式会社ランディックス",
+        "amount_millions": 130,
+        "ratio_percent": 1.07
+      },
+      {
+        "code": "5753",
+        "name": "日本伸銅株式会社",
+        "amount_millions": 124,
+        "ratio_percent": 2.3
+      },
+      {
+        "code": "7807",
+        "name": "株式会社幸和製作所",
+        "amount_millions": 122,
+        "ratio_percent": 3.64
+      },
+      {
+        "code": "7849",
+        "name": "スターツ出版株式会社",
+        "amount_millions": 116,
+        "ratio_percent": 0.76
+      },
+      {
+        "code": "3945",
+        "name": "スーパーバッグ株式会社",
+        "amount_millions": 111,
+        "ratio_percent": 3.39
+      },
+      {
+        "code": "3912",
+        "name": "株式会社モバイルファクトリー",
+        "amount_millions": 105,
+        "ratio_percent": 1.27
+      },
+      {
+        "code": "3131",
+        "name": "シンデン・ハイテックス株式会社",
+        "amount_millions": 83,
+        "ratio_percent": 1.55
+      },
+      {
+        "code": "3181",
+        "name": "株式会社買取王国",
+        "amount_millions": 83,
+        "ratio_percent": 2.38
+      },
+      {
+        "code": "7134",
+        "name": "株式会社アップガレージグループ",
+        "amount_millions": 82,
+        "ratio_percent": 1.0
+      },
+      {
+        "code": "2449",
+        "name": "株式会社プラップジャパン",
+        "amount_millions": 69,
+        "ratio_percent": 1.46
+      },
+      {
+        "code": "7361",
+        "name": "株式会社ヒューマンクリエイションホールディングス",
+        "amount_millions": 50,
+        "ratio_percent": 1.38
+      },
+      {
+        "code": "5905",
+        "name": "日本製罐株式会社",
+        "amount_millions": 47,
+        "ratio_percent": 2.74
+      },
+      {
+        "code": "8181",
+        "name": "株式会社東天紅",
+        "amount_millions": 44,
+        "ratio_percent": 1.67
+      },
+      {
+        "code": "3416",
+        "name": "ピクスタ株式会社",
+        "amount_millions": 41,
+        "ratio_percent": 2.68
+      },
+      {
+        "code": "7369",
+        "name": "株式会社メイホーホールディングス",
+        "amount_millions": 35,
+        "ratio_percent": 1.57
+      },
+      {
+        "code": "7462",
+        "name": "株式会社CAPITA",
+        "amount_millions": 27,
+        "ratio_percent": 1.3
+      },
+      {
+        "code": "9376",
+        "name": "株式会社ユーラシア旅行社",
+        "amount_millions": 26,
+        "ratio_percent": 0.84
+      },
+      {
+        "code": "9213",
+        "name": "株式会社セイファート",
+        "amount_millions": 19,
+        "ratio_percent": 1.58
+      },
+      {
+        "code": "6076",
+        "name": "（銘柄コード 6076）",
+        "amount_millions": null,
+        "ratio_percent": 1.79
+      }
+    ]
   }
 }

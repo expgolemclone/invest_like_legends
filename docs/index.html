@@ -5,68 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>保有銘柄ビューア - 四季報オンラインリンク一覧</title>
     <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/stock-table.js?v=58ba05a" defer></script>
+    <script src="assets/stock-table.js?v=20260501-yoshida" defer></script>
   </head>
   <body>
     <div class="container">
-      <nav class="tab-bar" aria-label="投資家切替">
-        <button
-          class="tab active"
-          type="button"
-          data-investor-key="naito"
-          aria-selected="true"
-        >
-          内藤征吾
-        </button>
-        <button
-          class="tab"
-          type="button"
-          data-investor-key="hikari"
-          aria-selected="false"
-        >
-          光通信
-        </button>
-        <button
-          class="tab"
-          type="button"
-          data-investor-key="kiyohara"
-          aria-selected="false"
-        >
-          清原達郎
-        </button>
-        <button
-          class="tab"
-          type="button"
-          data-investor-key="katayama"
-          aria-selected="false"
-        >
-          片山晃
-        </button>
-        <button
-          class="tab"
-          type="button"
-          data-investor-key="imura"
-          aria-selected="false"
-        >
-          井村俊哉
-        </button>
-        <button
-          class="tab"
-          type="button"
-          data-investor-key="gomi"
-          aria-selected="false"
-        >
-          五味大輔
-        </button>
-        <button
-          class="tab"
-          type="button"
-          data-investor-key="one_warikabunihon"
-          aria-selected="false"
-        >
-          one割安株日本株
-        </button>
-      </nav>
+      <nav id="investorTabs" class="tab-bar" aria-label="投資家切替"></nav>
 
       <div class="toolbar">
         <p id="statusMessage" class="status-message" aria-live="polite">

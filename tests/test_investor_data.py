@@ -17,13 +17,50 @@ class InvestorDataset(TypedDict):
     stocks: list[InvestorStock]
 
 
-class InvestorsDocument(TypedDict):
-    naito: InvestorDataset
-    hikari: InvestorDataset
-
+InvestorsDocument = dict[str, InvestorDataset]
 
 PROJECT_ROOT: Path = Path(__file__).resolve().parent.parent
 INVESTOR_DATA_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "data" / "investors.json"
+EXPECTED_INVESTOR_NAMES: dict[str, str] = {
+    "naito": "内藤征吾",
+    "hikari": "光通信",
+    "kiyohara": "清原達郎",
+    "katayama": "片山晃",
+    "imura": "井村俊哉",
+    "gomi": "五味大輔",
+    "one_warikabunihon": "one割安株日本株ファンド",
+    "yoshida": "ヨシダトモヒロ",
+}
+EXPECTED_STOCK_COUNTS: dict[str, int] = {
+    "naito": 113,
+    "hikari": 451,
+    "kiyohara": 18,
+    "katayama": 27,
+    "imura": 8,
+    "gomi": 72,
+    "one_warikabunihon": 10,
+    "yoshida": 71,
+}
+EXPECTED_MAX_AMOUNTS: dict[str, int] = {
+    "naito": 1150,
+    "hikari": 66352,
+    "kiyohara": 6681,
+    "katayama": 7605,
+    "imura": 3694,
+    "gomi": 7422,
+    "one_warikabunihon": 2066,
+    "yoshida": 7246,
+}
+EXPECTED_PLACEHOLDER_CODES: dict[str, list[str]] = {
+    "naito": ["3047", "1999"],
+    "hikari": ["4842", "2759", "3734", "3731"],
+    "yoshida": ["6076"],
+}
+EXPECTED_NULL_AMOUNT_CODES: dict[str, list[str]] = {
+    "naito": ["3047", "1999", "5039"],
+    "hikari": ["5039"],
+    "yoshida": ["6076"],
+}
 
 
 def test_investor_data_contains_expected_datasets() -> None:
@@ -35,9 +72,9 @@ def test_investor_data_contains_expected_datasets() -> None:
 
     # Assert
     assert INVESTOR_DATA_PATH.exists()
-    assert investor_keys == {"naito", "hikari"}
-    assert investors["naito"]["name"] == "内藤征吾"
-    assert investors["hikari"]["name"] == "光通信"
+    assert investor_keys == set(EXPECTED_INVESTOR_NAMES)
+    for investor_key, expected_name in EXPECTED_INVESTOR_NAMES.items():
+        assert investors[investor_key]["name"] == expected_name
 
 
 def test_investor_data_uses_expected_schema() -> None:
@@ -45,7 +82,7 @@ def test_investor_data_uses_expected_schema() -> None:
     investors: InvestorsDocument = _load_investors_document()
 
     # Act
-    stock_lists: list[list[InvestorStock]] = [investors["naito"]["stocks"], investors["hikari"]["stocks"]]
+    stock_lists: list[list[InvestorStock]] = [dataset["stocks"] for dataset in investors.values()]
 
     # Assert
     for stocks in stock_lists:
@@ -63,35 +100,33 @@ def test_investor_data_has_expected_counts_and_max_amounts() -> None:
     # Arrange
     investors: InvestorsDocument = _load_investors_document()
 
-    # Act
-    naito_stocks: list[InvestorStock] = investors["naito"]["stocks"]
-    hikari_stocks: list[InvestorStock] = investors["hikari"]["stocks"]
-    naito_amounts: list[int] = _non_null_amounts(naito_stocks)
-    hikari_amounts: list[int] = _non_null_amounts(hikari_stocks)
+    # Act / Assert
+    for investor_key, expected_count in EXPECTED_STOCK_COUNTS.items():
+        stocks: list[InvestorStock] = investors[investor_key]["stocks"]
+        amounts: list[int] = _non_null_amounts(stocks)
 
-    # Assert
-    assert len(naito_stocks) == 113
-    assert len(hikari_stocks) == 451
-    assert max(naito_amounts) == 1150
-    assert max(hikari_amounts) == 66352
+        assert len(stocks) == expected_count
+        assert max(amounts) == EXPECTED_MAX_AMOUNTS[investor_key]
 
 
 def test_investor_data_normalizes_missing_names_and_amounts() -> None:
     # Arrange
     investors: InvestorsDocument = _load_investors_document()
-    hikari_stocks: list[InvestorStock] = investors["hikari"]["stocks"]
-    naito_stocks: list[InvestorStock] = investors["naito"]["stocks"]
-    hikari_by_code: dict[str, InvestorStock] = {stock["code"]: stock for stock in hikari_stocks}
-    naito_by_code: dict[str, InvestorStock] = {stock["code"]: stock for stock in naito_stocks}
 
-    # Act
-    hikari_placeholder_codes: list[str] = ["4842", "2759", "3734", "3731"]
+    # Act / Assert
+    for investor_key, placeholder_codes in EXPECTED_PLACEHOLDER_CODES.items():
+        stocks_by_code: dict[str, InvestorStock] = {
+            stock["code"]: stock for stock in investors[investor_key]["stocks"]
+        }
+        for code in placeholder_codes:
+            assert stocks_by_code[code]["name"] == f"（銘柄コード {code}）"
 
-    # Assert
-    for code in hikari_placeholder_codes:
-        assert hikari_by_code[code]["name"] == f"（銘柄コード {code}）"
-    assert hikari_by_code["5039"]["amount_millions"] is None
-    assert naito_by_code["5039"]["amount_millions"] is None
+    for investor_key, null_amount_codes in EXPECTED_NULL_AMOUNT_CODES.items():
+        stocks_by_code: dict[str, InvestorStock] = {
+            stock["code"]: stock for stock in investors[investor_key]["stocks"]
+        }
+        for code in null_amount_codes:
+            assert stocks_by_code[code]["amount_millions"] is None
 
 
 def _load_investors_document() -> InvestorsDocument:
@@ -99,9 +134,9 @@ def _load_investors_document() -> InvestorsDocument:
     raw_document: object = cast(object, json.loads(raw_text))
     assert isinstance(raw_document, dict)
 
-    normalized: dict[str, InvestorDataset] = {}
-    for investor_key in ("naito", "hikari"):
-        raw_dataset: object = raw_document[investor_key]
+    normalized: InvestorsDocument = {}
+    for investor_key, raw_dataset in raw_document.items():
+        assert isinstance(investor_key, str)
         assert isinstance(raw_dataset, dict)
 
         raw_name: object = raw_dataset["name"]
@@ -138,7 +173,7 @@ def _load_investors_document() -> InvestorsDocument:
             "stocks": stocks,
         }
 
-    return {"naito": normalized["naito"], "hikari": normalized["hikari"]}
+    return normalized
 
 
 def _non_null_amounts(stocks: list[InvestorStock]) -> list[int]:
