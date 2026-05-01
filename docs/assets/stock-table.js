@@ -1,5 +1,5 @@
 /** @typedef {string} InvestorKey */
-/** @typedef {"code" | "name" | "amount_millions" | "ratio_percent" | "net_cash_ratio" | "per" | "equity_ratio" | "fcf_yield_avg" | "croic"} SortColumn */
+/** @typedef {"code" | "name" | "price" | "amount_millions" | "ratio_percent" | "net_cash_ratio" | "per" | "equity_ratio" | "fcf_yield_avg" | "croic"} SortColumn */
 /** @typedef {"asc" | "desc"} SortDirection */
 /**
  * @typedef {Object} InvestorStock
@@ -15,6 +15,7 @@
  */
 /**
  * @typedef {Object} StockMetrics
+ * @property {number | null} price
  * @property {number | null} net_cash_ratio
  * @property {number | null} per
  * @property {number | null} equity_ratio
@@ -39,8 +40,8 @@ const IS_GITHUB_PAGES = location.hostname === "expgolemclone.github.io";
 const ASC_ARROW = "▲";
 const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
-const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent", "net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
-const TOGGLEABLE_COLUMNS = ["net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
+const SORTABLE_COLUMNS = ["code", "name", "price", "amount_millions", "ratio_percent", "net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
+const TOGGLEABLE_COLUMNS = ["price", "net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
 
 /** @type {Object.<string, {good?: function(number): boolean, bad?: function(number): boolean}>} */
 const METRIC_THRESHOLDS = {
@@ -104,6 +105,17 @@ document.addEventListener("click", function(/** @type {MouseEvent} */ event) {
     .catch(function() {
       window.open(url, "_blank", "noopener");
     });
+});
+
+// Open PDF in yazi via local server endpoint.
+document.addEventListener("click", function(/** @type {MouseEvent} */ event) {
+  const link = /** @type {HTMLAnchorElement | null} */ (event.target instanceof Element ? event.target.closest("a[data-yazi]") : null);
+  if (!link) {
+    return;
+  }
+
+  event.preventDefault();
+  fetch(link.href).catch(function() { /* ignore */ });
 });
 
 /** @returns {Set<string>} */
@@ -531,6 +543,24 @@ function compareStocks(leftStock, rightStock) {
     return leftStock.code.localeCompare(rightStock.code, "ja", { numeric: true }) * directionMultiplier;
   }
 
+  if (state.sortColumn === "price") {
+    const leftMetrics = state.metricsCache[leftStock.code];
+    const rightMetrics = state.metricsCache[rightStock.code];
+    const leftValue = leftMetrics ? leftMetrics.price : null;
+    const rightValue = rightMetrics ? rightMetrics.price : null;
+
+    if (leftValue === null && rightValue === null) {
+      return leftStock.code.localeCompare(rightStock.code, "ja", { numeric: true });
+    }
+    if (leftValue === null) {
+      return 1;
+    }
+    if (rightValue === null) {
+      return -1;
+    }
+    return (leftValue - rightValue) * directionMultiplier;
+  }
+
   // Handle metric columns (net_cash_ratio, per, equity_ratio, fcf_yield_avg, croic)
   const metricColumns = ["net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
   if (metricColumns.includes(state.sortColumn)) {
@@ -578,6 +608,7 @@ function metricClass(column, rawValue) {
 /** @param {InvestorStock[]} stocks */
 function renderStocks(stocks) {
   var h = state.hiddenColumns;
+  var priceCls = h.has("price") ? " hidden-col" : "";
   var ncrCls = h.has("net_cash_ratio") ? " hidden-col" : "";
   var perCls = h.has("per") ? " hidden-col" : "";
   var eqCls = h.has("equity_ratio") ? " hidden-col" : "";
@@ -590,12 +621,14 @@ function renderStocks(stocks) {
     const amountText = stock.amount_millions === null ? "-" : (stock.amount_millions / 100).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "億";
 
     const metrics = state.metricsCache[stock.code];
+    const priceRaw = metrics && metrics.price !== null ? metrics.price : null;
     const ncrRaw = metrics && metrics.net_cash_ratio !== null ? metrics.net_cash_ratio : null;
     const perRaw = metrics && metrics.per !== null ? metrics.per : null;
     const eqRaw = metrics && metrics.equity_ratio !== null ? metrics.equity_ratio : null;
     const fcfRaw = metrics && metrics.fcf_yield_avg !== null ? metrics.fcf_yield_avg * 100 : null;
     const croicRaw = metrics && metrics.croic !== null ? metrics.croic * 100 : null;
     const netCashRatio = ncrRaw !== null ? ncrRaw.toFixed(2) : "-";
+    const price = priceRaw !== null ? priceRaw.toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "-";
     const per = perRaw !== null ? perRaw.toFixed(1) : "-";
     const equityRatio = eqRaw !== null ? eqRaw.toFixed(1) : "-";
     const fcfYield = fcfRaw !== null ? fcfRaw.toFixed(2) : "-";
@@ -603,19 +636,16 @@ function renderStocks(stocks) {
 
     return (
       "<tr>" +
-        '<td class="code">' + escapeHtml(stock.code) + "</td>" +
-        '<td class="name"><a href="' + (IS_GITHUB_PAGES ? shikihoUrl : "/pdf/" + encodeURIComponent(stock.code)) + '" target="_blank" rel="noopener">' + escapeHtml(stock.name) + "</a></td>" +
-        '<td class="num">' + amountText + "</td>" +
-        '<td class="num">' + escapeHtml(String(stock.ratio_percent)) + "%</td>" +
+        '<td class="code"><a href="' + monexUrl + '" target="_blank" rel="noopener" data-browser="monex">' + escapeHtml(stock.code) + "</a></td>" +
+        '<td class="name"><a href="' + (IS_GITHUB_PAGES ? shikihoUrl : "/open-yazi/" + encodeURIComponent(stock.code)) + '" target="_blank" rel="noopener"' + (IS_GITHUB_PAGES ? "" : " data-yazi") + '>' + escapeHtml(stock.name) + "</a></td>" +
+        '<td class="num' + priceCls + '">' + price + "</td>" +
         '<td class="num' + ncrCls + metricClass("net_cash_ratio", ncrRaw) + '">' + netCashRatio + "</td>" +
         '<td class="num' + perCls + metricClass("per", perRaw) + '">' + per + "</td>" +
         '<td class="num' + eqCls + metricClass("equity_ratio", eqRaw) + '">' + equityRatio + "%</td>" +
         '<td class="num' + fcfCls + metricClass("fcf_yield_avg", fcfRaw) + '">' + fcfYield + "%</td>" +
         '<td class="num' + croicCls + metricClass("croic", croicRaw) + '">' + croic + "%</td>" +
-        '<td><div class="links-cell">' +
-          '<a class="link-btn shikiho" href="' + shikihoUrl + '" target="_blank" rel="noopener" data-browser="shikiho">四季報</a>' +
-          '<a class="link-btn monex" href="' + monexUrl + '" target="_blank" rel="noopener" data-browser="monex">Monex</a>' +
-        "</div></td>" +
+        '<td class="num">' + amountText + "</td>" +
+        '<td class="num">' + escapeHtml(String(stock.ratio_percent)) + "%</td>" +
       "</tr>"
     );
   }).join("");

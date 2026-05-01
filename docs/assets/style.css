@@ -271,6 +271,14 @@ a.monex:hover {
   color: var(--bg);
 }
 
+.metric-good {
+  color: #ff6b6b;
+}
+
+.metric-bad {
+  color: #6bb3ff;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

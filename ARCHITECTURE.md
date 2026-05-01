@@ -46,22 +46,22 @@ invest_like_legends/
 
 | カラム | 説明 | ソートキー | トグル可 | 閾値 |
 |--------|------|------------|----------|------|
-| code | 銘柄コード（証券コード） | `code` | - |
-| name | 会社名（クリックで四季報PDFを開く。GitHub Pagesでは四季報オンラインにフォールバック） | `name` | - |
-| amount | 投資家の保有額（億円、小数点第一位まで表示） | `amount_millions` | - |
-| ratio | 投資家の保有割合（%） | `ratio_percent` | - |
+| code | 銘柄コード（クリックでMonex財務ページを開く） | `code` | - |
+| name | 会社名（クリックでyaziで四季報PDFを開く。GitHub Pagesでは四季報オンラインにフォールバック） | `name` | - |
+| price | 株価（終値、小数点第一位まで表示） | `price` | o |
 | ncr | ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全 | `net_cash_ratio` | o | > 1: good |
 | per | 株価収益率 — 株価を1株当たり利益で割った値。低いほど割安（目安: 15倍以下） | `per` | o | 0<per<=7: good, >7: bad |
 | equity | 自己資本比率 — 自己資本 / 総資産 * 100 | `equity_ratio` | o | >= 50: good |
 | fcf_y | フリーキャッシュフローイールド — FCFを時価総額で割った値。高いほどキャッシュ創出力が優れている | `fcf_yield_avg` | o | >= 10%: good |
 | croic | CROIC — FCF / (自己資本 + 有利子負債) | `croic` | o | >= 15%: good |
-| url | リンク（四季報・Monex、ソート機能なし） | - | - |
+| amount | 投資家の保有額（億円、小数点第一位まで表示） | `amount_millions` | - |
+| ratio | 投資家の保有割合（%） | `ratio_percent` | - |
 
 ### バックエンド (`server/`)
 
 - **handler.py**: HTTP リクエストハンドラー
   - `/`: 静的ファイル配信
-  - `/pdf/{code}`: 四季報PDF配信（`japan_company_handbook` の最新四半期ディレクトリから自動選択）
+  - `/open-yazi/{code}`: 四季報PDFをyaziで開く（`kitty -e yazi` で新しいターミナルウィンドウを起動）
   - `/api/metrics`: 指標データ API（ローカル開発用）
   - `/open`: ブラウザで URL を開く
 - **browser.py**: ブラウザ起動ユーティリティ

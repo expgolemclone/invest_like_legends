@@ -77,6 +77,7 @@ def generate_metrics() -> dict[str, dict[str, float | None]]:
                 croic_value = croic(stock_dict)
 
                 result[code] = {
+                    "price": price,
                     "net_cash_ratio": metrics.get("net_cash_ratio"),
                     "per": metrics.get("per"),
                     "equity_ratio": metrics.get("equity_ratio"),
@@ -87,6 +88,7 @@ def generate_metrics() -> dict[str, dict[str, float | None]]:
             except (KeyError, ValueError, ZeroDivisionError, TypeError):
                 # データ不足の銘柄は null 値を設定
                 result[code] = {
+                    "price": None,
                     "net_cash_ratio": None,
                     "per": None,
                     "equity_ratio": None,

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import mimetypes
+import subprocess
 from http.server import BaseHTTPRequestHandler
 from pathlib import Path
 from typing import ClassVar
@@ -54,9 +55,9 @@ class RequestHandler(BaseHTTPRequestHandler):
             self._handle_metrics()
         elif parsed_url == "/":
             self._serve_file(_INDEX_PATH, "text/html")
-        elif parsed_url.startswith("/pdf/"):
-            code: str = parsed_url[len("/pdf/"):]
-            self._handle_pdf(code)
+        elif parsed_url.startswith("/open-yazi/"):
+            code: str = parsed_url[len("/open-yazi/"):]
+            self._handle_open_yazi(code)
         elif parsed_url.startswith("/assets/"):
             filename: str = parsed_url[len("/assets/"):]
             file_path: Path = _STATIC_ROOT / filename
@@ -95,7 +96,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         except RuntimeError as e:
             self._send_json_response(500, {"error": str(e)})
 
-    def _handle_pdf(self, code: str) -> None:
+    def _handle_open_yazi(self, code: str) -> None:
         latest_dir: Path | None = _find_latest_quarter()
         if latest_dir is None:
             self._send_json_response(404, {"error": "Handbook data not found"})
@@ -106,7 +107,12 @@ class RequestHandler(BaseHTTPRequestHandler):
             self._send_json_response(404, {"error": f"PDF not found: {code}"})
             return
 
-        self._serve_file(pdf_path, "application/pdf")
+        subprocess.Popen(
+            ["kitty", "-e", "yazi", str(pdf_path)],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        self._send_json_response(200, {"success": True, "message": f"Opened in yazi: {code}"})
 
     def _handle_open(self) -> None:
         query_params: dict[str, list[str]] = parse_qs(urlparse(self.path).query)
@@ -218,6 +224,7 @@ def _compute_metrics_for_codes(codes: list[str]) -> dict[str, dict[str, float | 
                 croic_value = croic(stock_dict)
 
                 result[code] = {
+                    "price": price,
                     "net_cash_ratio": metrics.get("net_cash_ratio"),
                     "per": metrics.get("per"),
                     "equity_ratio": metrics.get("equity_ratio"),
@@ -228,6 +235,7 @@ def _compute_metrics_for_codes(codes: list[str]) -> dict[str, dict[str, float | 
             except (KeyError, ValueError, ZeroDivisionError, TypeError) as e:
                 # Skip stocks with missing data or computation errors
                 result[code] = {
+                    "price": None,
                     "net_cash_ratio": None,
                     "per": None,
                     "equity_ratio": None,

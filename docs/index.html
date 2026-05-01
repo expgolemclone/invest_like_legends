@@ -16,6 +16,7 @@
           投資家データを読み込み中です。
         </p>
         <div class="column-toggles" aria-label="指標カラム表示切替">
+          <button class="toggle-chip active" type="button" data-toggle-column="price">price</button>
           <button class="toggle-chip active" type="button" data-toggle-column="net_cash_ratio">ncr</button>
           <button class="toggle-chip active" type="button" data-toggle-column="per">per</button>
           <button class="toggle-chip active" type="button" data-toggle-column="equity_ratio">equity</button>
@@ -46,22 +47,13 @@
                   name <span class="arrow" aria-hidden="true">▽</span>
                 </button>
               </th>
-              <th scope="col" class="column-position" title="投資家の保有金額">
+              <th scope="col" title="株価（終値）">
                 <button
                   class="sort-button"
                   type="button"
-                  data-sort-column="amount_millions"
+                  data-sort-column="price"
                 >
-                  amount <span class="arrow" aria-hidden="true">▼</span>
-                </button>
-              </th>
-              <th scope="col" class="column-position" title="投資家の保有株数 / 発行済株式総数 * 100">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="ratio_percent"
-                >
-                  ratio <span class="arrow" aria-hidden="true">▽</span>
+                  price <span class="arrow" aria-hidden="true">▽</span>
                 </button>
               </th>
               <th
@@ -112,7 +104,24 @@
                   croic <span class="arrow" aria-hidden="true">▽</span>
                 </button>
               </th>
-              <th scope="col">url</th>
+              <th scope="col" class="column-position" title="投資家の保有金額">
+                <button
+                  class="sort-button"
+                  type="button"
+                  data-sort-column="amount_millions"
+                >
+                  amount <span class="arrow" aria-hidden="true">▼</span>
+                </button>
+              </th>
+              <th scope="col" class="column-position" title="投資家の保有株数 / 発行済株式総数 * 100">
+                <button
+                  class="sort-button"
+                  type="button"
+                  data-sort-column="ratio_percent"
+                >
+                  ratio <span class="arrow" aria-hidden="true">▽</span>
+                </button>
+              </th>
             </tr>
           </thead>
           <tbody id="tbody">
