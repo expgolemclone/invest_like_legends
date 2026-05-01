@@ -15,6 +15,7 @@ _STATIC_ROOT: Path = _DOCS_DIR / "assets"
 _INDEX_PATH: Path = _DOCS_DIR / "index.html"
 _INVESTORS_PATH: Path = _DOCS_DIR / "assets" / "data" / "investors.json"
 _HANDBOOK_DATA_DIR: Path = _PROJECT_ROOT.parent / "japan_company_handbook" / "data"
+_PACKAGE_ASSETS: Path = Path(__file__).resolve().parent.parent / "stock_web_ui" / "docs" / "assets"
 
 _portfolio_payload: bytes | None = None
 
@@ -73,6 +74,7 @@ def main() -> None:
         index_path=_INDEX_PATH,
         api_routes=api_routes,
         yazi_base_dir=_HANDBOOK_DATA_DIR,
+        extra_static_roots=[_PACKAGE_ASSETS],
     )
 
 
