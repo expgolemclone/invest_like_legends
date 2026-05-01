@@ -14,8 +14,6 @@ invest_like_legends/
 │   ├── index.html         # stock_web_ui テンプレートから生成した HTML
 │   └── assets/
 │       ├── data/          # 生成データ（investors.json, metrics.json）
-│       ├── style.css      # stock_web_ui 共有スタイルのコピー
-│       ├── stock-table.js # stock_web_ui 共有ランタイムのコピー
 │       └── app.js         # invest_like_legends 用テーブル設定
 ├── scripts/               # ユーティリティスクリプト
 ├── src_ts/                # TypeScript ソース
@@ -27,19 +25,19 @@ invest_like_legends/
 
 ### フロントエンド (`docs/`)
 
-- **index.html**: `python -m stock_web_ui.render_index` で共通テンプレートから生成した HTML
-- **assets/stock-table.js**: `stock_web_ui` 共有ランタイム
+- **index.html**: `python -m stock_web_ui.render_index --shared-asset-base-url https://expgolemclone.github.io/stock_web_ui/assets ...` で共通テンプレートから生成した HTML
+- **共有 runtime / style**: `stock_web_ui` の GitHub Pages 配下 `assets/stock-table.js` / `assets/style.css`
   - 投資家タブ切り替え
   - `investors.json` のトップレベル順から投資家タブを動的生成
   - ソート機能
   - 指標カラムの表示/非表示トグル（localStorage で永続化）
   - 指標データ表示（GitHub Pages では静的JSON、ローカルでは API 使用）
   - 指標の色分け（閾値による good/bad 表示）
+- **assets/app.js**: `@stock-web-ui/runtime` の型を参照しつつ、ブラウザでは先に読み込まれた共有 `StockTable` API を使って起動する
 - **assets/data/investors.json**: 投資家保有銘柄データ
   - 対応キー: `watch`, `naito`, `hikari`, `kiyohara`, `katayama`, `imura`, `gomi`, `one_warikabunihon`, `yoshida`
   - `watch` は監視銘柄（保有していない銘柄の一覧）。`amount_millions: null`, `ratio_percent: 0`
   - 銘柄の追加・削除で dataset 件数が変わる場合は `tests/test_investor_data.py` の `EXPECTED_STOCK_COUNTS` も更新する
-  - 共有 UI 更新時は `stock_web_ui` 由来の `stock-table.js` / `style.css` と生成済み `index.html` を取り込む
 - **assets/data/metrics.json**: 指標データ（GitHub Actions で生成）
 
 #### テーブルカラム
@@ -62,7 +60,7 @@ invest_like_legends/
 ### サーバー起動スクリプト (`serve.py`)
 
 - `investors.json` と `metrics.json` を読み込み、`/api/portfolio` を `stock_web_ui.handler.json_route()` で組み立てる
-- `stock_web_ui.page.IndexPage` を使ってローカル用 `index.html` を共通テンプレートから描画する
+- `stock_web_ui.page.IndexPage` を使ってローカル用 `index.html` を共通テンプレートから描画する。共有 runtime / style はローカル相対の `/assets/*` を指し、実体は `docs/assets/` 不在時に `stock_web_ui.ASSETS_DIR` からフォールバック配信される
 - HTTP サーバー本体、ポート解放、起動ブラウザ、`/open`、`/open-yazi/{code}` は `stock_web_ui.serve` / `stock_web_ui.handler` に委譲する
 
 ### スクリプト (`scripts/`)
