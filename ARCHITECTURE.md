@@ -35,6 +35,7 @@ invest_like_legends/
 - **assets/data/investors.json**: 投資家保有銘柄データ
   - 対応キー: `watch`, `naito`, `hikari`, `kiyohara`, `katayama`, `imura`, `gomi`, `one_warikabunihon`, `yoshida`
   - `watch` は監視銘柄（保有していない銘柄の一覧）。`amount_millions: null`, `ratio_percent: 0`
+  - 銘柄の追加・削除で dataset 件数が変わる場合は `tests/test_investor_data.py` の `EXPECTED_STOCK_COUNTS` も更新する
   - 新規投資家追加時は dataset 追加に加え、`stock-table.js` / `index.html` のキャッシュバスターと `tests/test_investor_data.py` の期待値も更新する
 - **assets/data/metrics.json**: 指標データ（GitHub Actions で生成）
 

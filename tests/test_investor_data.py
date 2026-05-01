@@ -33,7 +33,7 @@ EXPECTED_INVESTOR_NAMES: dict[str, str] = {
     "yoshida": "ヨシダトモヒロ",
 }
 EXPECTED_STOCK_COUNTS: dict[str, int] = {
-    "watch": 64,
+    "watch": 65,
     "naito": 113,
     "hikari": 451,
     "kiyohara": 18,

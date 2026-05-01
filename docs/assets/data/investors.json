@@ -65,7 +65,8 @@
       {"code": "5285", "name": "ヤマックス", "amount_millions": null, "ratio_percent": 0},
       {"code": "5288", "name": "アジアパイル HD", "amount_millions": null, "ratio_percent": 0},
       {"code": "5445", "name": "東京鐵鋼", "amount_millions": null, "ratio_percent": 0},
-      {"code": "5607", "name": "中央可鍛工業", "amount_millions": null, "ratio_percent": 0}
+      {"code": "5607", "name": "中央可鍛工業", "amount_millions": null, "ratio_percent": 0},
+      {"code": "5989", "name": "エイチワン", "amount_millions": null, "ratio_percent": 0}
     ]
   },
   "naito": {
