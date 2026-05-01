@@ -11,22 +11,24 @@ invest_like_legends/
 ├── .github/workflows/     # GitHub Actions ワークフロー
 ├── config/                # 設定ファイル
 ├── docs/                  # 静的サイト（GitHub Pages）
+│   ├── index.html         # stock_web_ui テンプレートから生成した HTML
 │   └── assets/
 │       ├── data/          # 生成データ（investors.json, metrics.json）
-│       ├── style.css      # スタイルシート
-│       └── stock-table.js # メインJavaScript
+│       ├── style.css      # stock_web_ui 共有スタイルのコピー
+│       ├── stock-table.js # stock_web_ui 共有ランタイムのコピー
+│       └── app.js         # invest_like_legends 用テーブル設定
 ├── scripts/               # ユーティリティスクリプト
-├── server/                # ローカル開発サーバー
+├── src_ts/                # TypeScript ソース
 ├── tests/                 # テスト
-└── serve.py              # サーバー起動スクリプト
+└── serve.py               # ローカルサーバー起動スクリプト
 ```
 
 ## コンポーネント
 
 ### フロントエンド (`docs/`)
 
-- **index.html**: メインHTMLページ
-- **assets/stock-table.js**: メインJavaScript
+- **index.html**: `python -m stock_web_ui.render_index` で共通テンプレートから生成した HTML
+- **assets/stock-table.js**: `stock_web_ui` 共有ランタイム
   - 投資家タブ切り替え
   - `investors.json` のトップレベル順から投資家タブを動的生成
   - ソート機能
@@ -37,7 +39,7 @@ invest_like_legends/
   - 対応キー: `watch`, `naito`, `hikari`, `kiyohara`, `katayama`, `imura`, `gomi`, `one_warikabunihon`, `yoshida`
   - `watch` は監視銘柄（保有していない銘柄の一覧）。`amount_millions: null`, `ratio_percent: 0`
   - 銘柄の追加・削除で dataset 件数が変わる場合は `tests/test_investor_data.py` の `EXPECTED_STOCK_COUNTS` も更新する
-  - 新規投資家追加時は dataset 追加に加え、`stock-table.js` / `index.html` のキャッシュバスターと `tests/test_investor_data.py` の期待値も更新する
+  - 共有 UI 更新時は `stock_web_ui` 由来の `stock-table.js` / `style.css` と生成済み `index.html` を取り込む
 - **assets/data/metrics.json**: 指標データ（GitHub Actions で生成）
 
 #### テーブルカラム
@@ -57,22 +59,11 @@ invest_like_legends/
 | amount | 投資家の保有額（億円、小数点第一位まで表示） | `amount_millions` | - |
 | ratio | 投資家の保有割合（%） | `ratio_percent` | - |
 
-### バックエンド (`server/`)
-
-- **handler.py**: HTTP リクエストハンドラー
-  - `/`: 静的ファイル配信
-  - `/open-yazi/{code}`: 四季報PDFをyaziで開く（`kitty -e yazi` で新しいターミナルウィンドウを起動）
-  - `/api/metrics`: 指標データ API（ローカル開発用）
-  - `/open`: ブラウザで URL を開く
-- **browser.py**: ブラウザ起動ユーティリティ
-- **config.py**: 設定管理
-
 ### サーバー起動スクリプト (`serve.py`)
 
-- 設定読込 → 既存ポートの解放 → `HTTPServer` 起動 → 起動用ブラウザ起動 の順で実行
-- ポート解放処理は OS ごとに分岐
-  - **Linux**: `/proc/net/tcp` を読んで LISTEN (state `0A`) のソケット inode を特定し、`/proc/<pid>/fd` 経由で所有プロセスを逆引き。`SIGTERM` で解放されない場合は `SIGKILL` で強制終了
-  - **Windows**: `netstat -ano` をパースし、状態が `LISTENING` のエントリのみを対象。PID=0 (System Idle Process / HNS 予約 / TIME_WAIT 等) は除外。`os.kill(pid, SIGTERM)` は内部で `TerminateProcess()` を呼ぶため強制終了相当となり、`SIGKILL` 経路は使わない（Windows には `signal.SIGKILL` が存在しないため）
+- `investors.json` と `metrics.json` を読み込み、`/api/portfolio` を `stock_web_ui.handler.json_route()` で組み立てる
+- `stock_web_ui.page.IndexPage` を使ってローカル用 `index.html` を共通テンプレートから描画する
+- HTTP サーバー本体、ポート解放、起動ブラウザ、`/open`、`/open-yazi/{code}` は `stock_web_ui.serve` / `stock_web_ui.handler` に委譲する
 
 ### スクリプト (`scripts/`)
 
@@ -87,11 +78,13 @@ invest_like_legends/
 ### ローカル開発環境
 
 ```
-ブラウザ → HTTP リクエスト → server/handler.py
+ブラウザ → HTTP リクエスト → stock_web_ui.handler
                                     ↓
-                            formula_screening DB
+                              serve.py (/api/portfolio)
                                     ↓
-                            JSON レスポンス
+                   investors.json + metrics.json + handbook PDF
+                                    ↓
+                            JSON / yazi / 外部ブラウザ
 ```
 
 ### GitHub Pages

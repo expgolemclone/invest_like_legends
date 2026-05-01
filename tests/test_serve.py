@@ -12,7 +12,7 @@ PROJECT_ROOT: Path = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-import serve
+import stock_web_ui.serve as serve
 
 
 pytestmark = pytest.mark.skipif(not Path("/proc").exists(), reason="/proc is required")
@@ -65,7 +65,7 @@ def test_release_port_if_needed_force_kills_stubborn_listener(
         _stop_process(proc)
 
 
-def test_open_startup_browser_launches_google_chrome(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_open_startup_browser_launches_xdg_open(monkeypatch: pytest.MonkeyPatch) -> None:
     calls: list[dict[str, object]] = []
 
     def fake_popen(
@@ -92,7 +92,7 @@ def test_open_startup_browser_launches_google_chrome(monkeypatch: pytest.MonkeyP
 
     assert calls == [
         {
-            "command": ["google-chrome", "http://127.0.0.1:8080"],
+            "command": ["xdg-open", "http://127.0.0.1:8080"],
             "stdin": subprocess.DEVNULL,
             "stdout": subprocess.DEVNULL,
             "stderr": subprocess.DEVNULL,
@@ -101,7 +101,7 @@ def test_open_startup_browser_launches_google_chrome(monkeypatch: pytest.MonkeyP
     ]
 
 
-def test_open_startup_browser_skips_missing_google_chrome(
+def test_open_startup_browser_skips_missing_xdg_open(
     monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
 ) -> None:
     def fake_popen(
@@ -118,7 +118,7 @@ def test_open_startup_browser_skips_missing_google_chrome(
     serve._open_startup_browser("http://127.0.0.1:8080")
 
     captured = capsys.readouterr()
-    assert "google-chrome" in captured.out
+    assert "xdg-open" in captured.out
     assert "http://127.0.0.1:8080" in captured.out
 
 
