@@ -5,135 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>保有銘柄ビューア - 四季報オンラインリンク一覧</title>
     <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/stock-table.js?v=20260501-yoshida" defer></script>
+    <script src="assets/stock-table.js?v=20260501" defer></script>
+    <script src="assets/app.js?v=20260501" defer></script>
   </head>
   <body>
     <div class="container">
-      <nav id="investorTabs" class="tab-bar" aria-label="投資家切替"></nav>
+      <nav id="tabBar" class="tab-bar" aria-label="投資家切替"></nav>
 
       <div class="toolbar">
         <p id="statusMessage" class="status-message" aria-live="polite">
           投資家データを読み込み中です。
         </p>
-        <div class="column-toggles" aria-label="指標カラム表示切替">
-          <button class="toggle-chip active" type="button" data-toggle-column="price">price</button>
-          <button class="toggle-chip active" type="button" data-toggle-column="net_cash_ratio">ncr</button>
-          <button class="toggle-chip active" type="button" data-toggle-column="per">per</button>
-          <button class="toggle-chip active" type="button" data-toggle-column="equity_ratio">equity</button>
-          <button class="toggle-chip active" type="button" data-toggle-column="fcf_yield_avg">fcf_y</button>
-          <button class="toggle-chip active" type="button" data-toggle-column="croic">croic</button>
-        </div>
+        <div id="toggleBar" class="column-toggles" aria-label="指標カラム表示切替"></div>
       </div>
 
       <div class="table-wrap">
         <table id="stockTable">
           <thead>
-            <tr>
-              <th scope="col" title="銘柄コード（証券コード）">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="code"
-                >
-                  code <span class="arrow" aria-hidden="true">▽</span>
-                </button>
-              </th>
-              <th scope="col" title="会社名">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="name"
-                >
-                  name <span class="arrow" aria-hidden="true">▽</span>
-                </button>
-              </th>
-              <th scope="col" title="株価（終値）">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="price"
-                >
-                  price <span class="arrow" aria-hidden="true">▽</span>
-                </button>
-              </th>
-              <th
-                scope="col"
-                title="(流動資産 - 棚卸資産 + 有価証券 * 0.7) / 時価総額"
-              >
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="net_cash_ratio"
-                >
-                  ncr <span class="arrow" aria-hidden="true">▽</span>
-                </button>
-              </th>
-              <th scope="col" title="株価 / 来期予想EPS">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="per"
-                >
-                  per <span class="arrow" aria-hidden="true">▽</span>
-                </button>
-              </th>
-              <th scope="col" title="自己資本 / 総資産 * 100">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="equity_ratio"
-                >
-                  equity <span class="arrow" aria-hidden="true">▽</span>
-                </button>
-              </th>
-              <th scope="col" title="10期の平均FCF / 時価総額">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="fcf_yield_avg"
-                >
-                  fcf_y <span class="arrow" aria-hidden="true">▽</span>
-                </button>
-              </th>
-              <th scope="col" title="FCF / (自己資本 + 有利子負債)">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="croic"
-                >
-                  croic <span class="arrow" aria-hidden="true">▽</span>
-                </button>
-              </th>
-              <th scope="col" class="column-position" title="投資家の保有金額">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="amount_millions"
-                >
-                  amount <span class="arrow" aria-hidden="true">▼</span>
-                </button>
-              </th>
-              <th scope="col" class="column-position" title="投資家の保有株数 / 発行済株式総数 * 100">
-                <button
-                  class="sort-button"
-                  type="button"
-                  data-sort-column="ratio_percent"
-                >
-                  ratio <span class="arrow" aria-hidden="true">▽</span>
-                </button>
-              </th>
-            </tr>
+            <tr></tr>
           </thead>
           <tbody id="tbody">
             <tr>
-              <td class="table-message" colspan="10">
+              <td class="table-message" colspan="1">
                 投資家データを読み込み中です。
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-
     </div>
   </body>
 </html>
