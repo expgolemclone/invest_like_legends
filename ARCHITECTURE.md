@@ -32,6 +32,7 @@ invest_like_legends/
   - ソート機能
   - 指標カラムの表示/非表示トグル（localStorage で永続化）
   - 指標データ表示（GitHub Pages では静的JSON、ローカルでは API 使用）
+  - 指標の色分け（閾値による good/bad 表示）
 - **assets/data/investors.json**: 投資家保有銘柄データ
   - 対応キー: `watch`, `naito`, `hikari`, `kiyohara`, `katayama`, `imura`, `gomi`, `one_warikabunihon`, `yoshida`
   - `watch` は監視銘柄（保有していない銘柄の一覧）。`amount_millions: null`, `ratio_percent: 0`
@@ -43,23 +44,24 @@ invest_like_legends/
 
 各ヘッダーには `title` 属性が設定されており、ホバー時にネイティブのツールチップで日本語の解説が表示される。
 
-| カラム | 説明 | ソートキー | トグル可 |
-|--------|------|------------|----------|
+| カラム | 説明 | ソートキー | トグル可 | 閾値 |
+|--------|------|------------|----------|------|
 | code | 銘柄コード（証券コード） | `code` | - |
-| name | 会社名（クリックで四季報に遷移） | `name` | - |
+| name | 会社名（クリックで四季報PDFを開く。GitHub Pagesでは四季報オンラインにフォールバック） | `name` | - |
 | amount | 投資家の保有額（億円、小数点第一位まで表示） | `amount_millions` | - |
 | ratio | 投資家の保有割合（%） | `ratio_percent` | - |
-| ncr | ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全 | `net_cash_ratio` | o |
-| per | 株価収益率 — 株価を1株当たり利益で割った値。低いほど割安（目安: 15倍以下） | `per` | o |
-| equity | 自己資本比率 — 自己資本 / 総資産 * 100 | `equity_ratio` | o |
-| fcf_y | フリーキャッシュフローイールド — FCFを時価総額で割った値。高いほどキャッシュ創出力が優れている | `fcf_yield_avg` | o |
-| croic | CROIC — FCF / (自己資本 + 有利子負債) | `croic` | o |
+| ncr | ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全 | `net_cash_ratio` | o | > 1: good |
+| per | 株価収益率 — 株価を1株当たり利益で割った値。低いほど割安（目安: 15倍以下） | `per` | o | 0<per<=7: good, >7: bad |
+| equity | 自己資本比率 — 自己資本 / 総資産 * 100 | `equity_ratio` | o | >= 50: good |
+| fcf_y | フリーキャッシュフローイールド — FCFを時価総額で割った値。高いほどキャッシュ創出力が優れている | `fcf_yield_avg` | o | >= 10%: good |
+| croic | CROIC — FCF / (自己資本 + 有利子負債) | `croic` | o | >= 15%: good |
 | url | リンク（四季報・Monex、ソート機能なし） | - | - |
 
 ### バックエンド (`server/`)
 
 - **handler.py**: HTTP リクエストハンドラー
   - `/`: 静的ファイル配信
+  - `/pdf/{code}`: 四季報PDF配信（`japan_company_handbook` の最新四半期ディレクトリから自動選択）
   - `/api/metrics`: 指標データ API（ローカル開発用）
   - `/open`: ブラウザで URL を開く
 - **browser.py**: ブラウザ起動ユーティリティ
@@ -112,3 +114,4 @@ GitHub Pages デプロイ
 
 - **formula_screening**: 指標計算ロジック
 - **stock_db**: 財務データベース
+- **japan_company_handbook**: 四季報PDFデータ（`data/{YYYY_Q}/{code}.pdf`）

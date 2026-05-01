@@ -41,6 +41,15 @@ const DESC_ARROW = "▼";
 const INACTIVE_ARROW = "▽";
 const SORTABLE_COLUMNS = ["code", "name", "amount_millions", "ratio_percent", "net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
 const TOGGLEABLE_COLUMNS = ["net_cash_ratio", "per", "equity_ratio", "fcf_yield_avg", "croic"];
+
+/** @type {Object.<string, {good?: function(number): boolean, bad?: function(number): boolean}>} */
+const METRIC_THRESHOLDS = {
+  net_cash_ratio: { good: function(v) { return v > 1; } },
+  per: { good: function(v) { return v > 0 && v <= 7; }, bad: function(v) { return v > 7; } },
+  equity_ratio: { good: function(v) { return v >= 50; } },
+  fcf_yield_avg: { good: function(v) { return v >= 10; } },
+  croic: { good: function(v) { return v >= 15; } },
+};
 const HIDDEN_COLUMNS_KEY = "hiddenColumns";
 
 /** @type {{
@@ -545,6 +554,27 @@ function compareStocks(leftStock, rightStock) {
   return leftStock.name.localeCompare(rightStock.name, "ja") * directionMultiplier;
 }
 
+/** @param {string} column
+ *  @param {number | null} rawValue
+ *  @returns {string} CSS class string or empty string
+ */
+function metricClass(column, rawValue) {
+  if (rawValue === null) {
+    return "";
+  }
+  var t = METRIC_THRESHOLDS[column];
+  if (!t) {
+    return "";
+  }
+  if (t.good && t.good(rawValue)) {
+    return " metric-good";
+  }
+  if (t.bad && t.bad(rawValue)) {
+    return " metric-bad";
+  }
+  return "";
+}
+
 /** @param {InvestorStock[]} stocks */
 function renderStocks(stocks) {
   var h = state.hiddenColumns;
@@ -560,23 +590,28 @@ function renderStocks(stocks) {
     const amountText = stock.amount_millions === null ? "-" : (stock.amount_millions / 100).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "億";
 
     const metrics = state.metricsCache[stock.code];
-    const netCashRatio = metrics && metrics.net_cash_ratio !== null ? metrics.net_cash_ratio.toFixed(2) : "-";
-    const per = metrics && metrics.per !== null ? metrics.per.toFixed(1) : "-";
-    const equityRatio = metrics && metrics.equity_ratio !== null ? metrics.equity_ratio.toFixed(1) : "-";
-    const fcfYield = metrics && metrics.fcf_yield_avg !== null ? (metrics.fcf_yield_avg * 100).toFixed(2) : "-";
-    const croic = metrics && metrics.croic !== null ? (metrics.croic * 100).toFixed(2) : "-";
+    const ncrRaw = metrics && metrics.net_cash_ratio !== null ? metrics.net_cash_ratio : null;
+    const perRaw = metrics && metrics.per !== null ? metrics.per : null;
+    const eqRaw = metrics && metrics.equity_ratio !== null ? metrics.equity_ratio : null;
+    const fcfRaw = metrics && metrics.fcf_yield_avg !== null ? metrics.fcf_yield_avg * 100 : null;
+    const croicRaw = metrics && metrics.croic !== null ? metrics.croic * 100 : null;
+    const netCashRatio = ncrRaw !== null ? ncrRaw.toFixed(2) : "-";
+    const per = perRaw !== null ? perRaw.toFixed(1) : "-";
+    const equityRatio = eqRaw !== null ? eqRaw.toFixed(1) : "-";
+    const fcfYield = fcfRaw !== null ? fcfRaw.toFixed(2) : "-";
+    const croic = croicRaw !== null ? croicRaw.toFixed(2) : "-";
 
     return (
       "<tr>" +
         '<td class="code">' + escapeHtml(stock.code) + "</td>" +
-        '<td class="name"><a href="' + shikihoUrl + '" target="_blank" rel="noopener">' + escapeHtml(stock.name) + "</a></td>" +
+        '<td class="name"><a href="' + (IS_GITHUB_PAGES ? shikihoUrl : "/pdf/" + encodeURIComponent(stock.code)) + '" target="_blank" rel="noopener">' + escapeHtml(stock.name) + "</a></td>" +
         '<td class="num">' + amountText + "</td>" +
         '<td class="num">' + escapeHtml(String(stock.ratio_percent)) + "%</td>" +
-        '<td class="num' + ncrCls + '">' + netCashRatio + "</td>" +
-        '<td class="num' + perCls + '">' + per + "</td>" +
-        '<td class="num' + eqCls + '">' + equityRatio + "%</td>" +
-        '<td class="num' + fcfCls + '">' + fcfYield + "%</td>" +
-        '<td class="num' + croicCls + '">' + croic + "%</td>" +
+        '<td class="num' + ncrCls + metricClass("net_cash_ratio", ncrRaw) + '">' + netCashRatio + "</td>" +
+        '<td class="num' + perCls + metricClass("per", perRaw) + '">' + per + "</td>" +
+        '<td class="num' + eqCls + metricClass("equity_ratio", eqRaw) + '">' + equityRatio + "%</td>" +
+        '<td class="num' + fcfCls + metricClass("fcf_yield_avg", fcfRaw) + '">' + fcfYield + "%</td>" +
+        '<td class="num' + croicCls + metricClass("croic", croicRaw) + '">' + croic + "%</td>" +
         '<td><div class="links-cell">' +
           '<a class="link-btn shikiho" href="' + shikihoUrl + '" target="_blank" rel="noopener" data-browser="shikiho">四季報</a>' +
           '<a class="link-btn monex" href="' + monexUrl + '" target="_blank" rel="noopener" data-browser="monex">Monex</a>' +

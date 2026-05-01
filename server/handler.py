@@ -32,11 +32,13 @@ except ImportError as e:
 
 _STATIC_ROOT: Path = PROJECT_ROOT / "docs" / "assets"
 _INDEX_PATH: Path = PROJECT_ROOT / "docs" / "index.html"
+_HANDBOOK_DATA_DIR: Path = PROJECT_ROOT.parent / "japan_company_handbook" / "data"
 
 _MIME_OVERRIDES: dict[str, str] = {
     ".js": "application/javascript",
     ".css": "text/css",
     ".html": "text/html",
+    ".pdf": "application/pdf",
 }
 
 
@@ -52,6 +54,9 @@ class RequestHandler(BaseHTTPRequestHandler):
             self._handle_metrics()
         elif parsed_url == "/":
             self._serve_file(_INDEX_PATH, "text/html")
+        elif parsed_url.startswith("/pdf/"):
+            code: str = parsed_url[len("/pdf/"):]
+            self._handle_pdf(code)
         elif parsed_url.startswith("/assets/"):
             filename: str = parsed_url[len("/assets/"):]
             file_path: Path = _STATIC_ROOT / filename
@@ -89,6 +94,19 @@ class RequestHandler(BaseHTTPRequestHandler):
             self._send_json_response(404, {"error": str(e)})
         except RuntimeError as e:
             self._send_json_response(500, {"error": str(e)})
+
+    def _handle_pdf(self, code: str) -> None:
+        latest_dir: Path | None = _find_latest_quarter()
+        if latest_dir is None:
+            self._send_json_response(404, {"error": "Handbook data not found"})
+            return
+
+        pdf_path: Path = latest_dir / f"{code}.pdf"
+        if not pdf_path.is_file():
+            self._send_json_response(404, {"error": f"PDF not found: {code}"})
+            return
+
+        self._serve_file(pdf_path, "application/pdf")
 
     def _handle_open(self) -> None:
         query_params: dict[str, list[str]] = parse_qs(urlparse(self.path).query)
@@ -129,6 +147,16 @@ def _resolve_mime(path: Path) -> str:
         return _MIME_OVERRIDES[suffix]
     guessed: str | None = mimetypes.guess_type(str(path))[0]
     return guessed or "application/octet-stream"
+
+
+def _find_latest_quarter() -> Path | None:
+    if not _HANDBOOK_DATA_DIR.is_dir():
+        return None
+    quarters: list[str] = sorted(
+        p.name for p in _HANDBOOK_DATA_DIR.iterdir()
+        if p.is_dir() and len(p.name) == 6 and p.name[4] == "_"
+    )
+    return _HANDBOOK_DATA_DIR / quarters[-1] if quarters else None
 
 
 def _compute_metrics_for_codes(codes: list[str]) -> dict[str, dict[str, float | None]]:
