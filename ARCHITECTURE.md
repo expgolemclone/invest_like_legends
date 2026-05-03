@@ -59,7 +59,8 @@ invest_like_legends/
 
 ### サーバー起動スクリプト (`serve.py`)
 
-- `investors.json` と `metrics.json` を読み込み、`/api/portfolio` を `stock_web_ui.handler.json_route()` で組み立てる
+- `investors.json` を読み込み、`formula_screening` の関数で DB からリアルタイムに指標を計算して `/api/portfolio` を組み立てる
+- API リクエストごとに最新データを返すため、DB 更新後にサーバー再起動なしで指標が反映される
 - `stock_web_ui.page.IndexPage` を使ってローカル用 `index.html` を共通テンプレートから描画する。共有 runtime / style はローカル相対の `/assets/*` を指し、実体は `docs/assets/` 不在時に `stock_web_ui.ASSETS_DIR` からフォールバック配信される
 - HTTP サーバー本体、ポート解放、起動ブラウザ、`/open`、`/open-yazi/{code}` は `stock_web_ui.serve` / `stock_web_ui.handler` に委譲する
 
@@ -80,7 +81,7 @@ invest_like_legends/
                                     ↓
                               serve.py (/api/portfolio)
                                     ↓
-                   investors.json + metrics.json + handbook PDF
+                     investors.json + formula_screening (DB)
                                     ↓
                             JSON / yazi / 外部ブラウザ
 ```
@@ -103,6 +104,6 @@ GitHub Pages デプロイ
 
 ## 依存プロジェクト
 
-- **formula_screening**: 指標計算ロジック
+- **formula_screening**: 指標計算ロジック（ローカルではDBから直接計算、GitHub Pages用は `generate_metrics.py` で静的JSONを生成）
 - **stock_db**: 財務データベース
 - **japan_company_handbook**: 四季報PDFデータ（`data/{YYYY_Q}/{code}.pdf`）

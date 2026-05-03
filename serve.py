@@ -5,6 +5,14 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from formula_screening.db.repository import (
+    get_financial_dict,
+    get_latest_price_with_shares,
+    get_stock_names,
+)
+from formula_screening.db.schema import get_connection
+from formula_screening.indicators import croic, fcf_yield_avg
+from formula_screening.metrics import compute_metrics
 from stock_web_ui.handler import ApiHandler, json_route
 from stock_web_ui.page import IndexPage
 from stock_web_ui.serve import serve as _serve
@@ -21,7 +29,7 @@ def _load_and_enrich_investors() -> dict:
     with _INVESTORS_PATH.open("r", encoding="utf-8") as f:
         investors: dict = json.load(f)
 
-    metrics_map: dict[str, dict] = _load_metrics()
+    metrics_map: dict[str, dict] = _compute_metrics_map()
 
     for _tab_key, dataset in investors.items():
         for stock in dataset.get("stocks", []):
@@ -37,21 +45,56 @@ def _load_and_enrich_investors() -> dict:
     return investors
 
 
-def _load_metrics() -> dict[str, dict]:
-    """Load pre-computed metrics from metrics.json."""
-    metrics_path: Path = _DOCS_DIR / "assets" / "data" / "metrics.json"
-    if not metrics_path.is_file():
-        return {}
+def _compute_metrics_map() -> dict[str, dict[str, float | None]]:
+    """Compute metrics for all tickers directly from the DB."""
+    conn = get_connection()
+    try:
+        names = get_stock_names(conn)
+        result: dict[str, dict[str, float | None]] = {}
 
-    with metrics_path.open("r", encoding="utf-8") as f:
-        return json.load(f)
+        for code in names:
+            try:
+                financials = get_financial_dict(conn, code)
+                if not financials:
+                    continue
+                price_data = get_latest_price_with_shares(conn, code)
+                price = price_data["price"]
+                shares = price_data["shares_outstanding"]
+                metrics = compute_metrics(financials, price, shares)
+
+                stock_dict = {
+                    "ticker": code,
+                    "price": price,
+                    "shares_outstanding": shares,
+                    "pl": financials.get("pl", {}),
+                    "bs": financials.get("bs", {}),
+                    "cf": financials.get("cf", {}),
+                    "dividend": financials.get("dividend", {}),
+                    "forecast": financials.get("forecast", {}),
+                    "metrics": metrics,
+                }
+                stock_dict["cf_history"] = []
+
+                result[code] = {
+                    "price": price,
+                    "net_cash_ratio": metrics.get("net_cash_ratio"),
+                    "per": metrics.get("per"),
+                    "equity_ratio": metrics.get("equity_ratio"),
+                    "fcf_yield_avg": fcf_yield_avg(stock_dict),
+                    "croic": croic(stock_dict),
+                    "market_cap": metrics.get("market_cap"),
+                }
+            except (KeyError, ValueError, ZeroDivisionError, TypeError):
+                continue
+
+        return result
+    finally:
+        conn.close()
 
 
 def _create_api_routes() -> dict[str, ApiHandler]:
     """Create API routes for the investor portfolio UI."""
-    portfolio_data: dict = _load_and_enrich_investors()
-
-    return {"/api/portfolio": json_route(lambda _params: portfolio_data)}
+    return {"/api/portfolio": json_route(lambda _params: _load_and_enrich_investors())}
 
 
 def main() -> None:
