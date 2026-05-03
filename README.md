@@ -6,4 +6,7 @@
 
 ## coding rules
 
-- `../stock_web_ui/`, `../formula_screening` の機能をapiとして呼び出して利用すること. - apiとして, 機能分離しろ.
+### 1. `../stock_web_ui/`, `../formula_screening` の機能をapiとして呼び出して利用すること.
+
+- apiとして, 機能分離すること.
+- 静的json依存は避けること.
