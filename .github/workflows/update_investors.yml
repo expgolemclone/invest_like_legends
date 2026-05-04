@@ -1,4 +1,4 @@
-name: Update Metrics Data
+name: Update Investors Data
 
 on:
   schedule:
@@ -10,7 +10,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # コミット許可
+      contents: write
 
     steps:
       - name: Checkout invest_like_legends
@@ -37,18 +37,15 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies
-        run: |
-          # ローカルパッケージへのパスを設定
-          uv sync --no-dev
+        run: uv sync --no-dev
 
-      - name: Generate metrics data
-        run: |
-          uv run python scripts/generate_metrics.py
+      - name: Enrich investors data
+        run: uv run python scripts/enrich_investors.py
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/assets/data/metrics.json
-          git diff --staged --quiet || git commit -m "指標データを更新"
+          git add docs/assets/data/investors.json
+          git diff --staged --quiet || git commit -m "投資家データに指標を反映"
           git push
