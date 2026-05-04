@@ -13,7 +13,7 @@ invest_like_legends/
 ├── docs/                  # 静的サイト（GitHub Pages）
 │   ├── index.html         # stock_web_ui テンプレートから生成した HTML
 │   └── assets/
-│       ├── data/          # 生成データ（investors.json, metrics.json）
+│       ├── data/          # 生成データ（investors.json）
 │       └── app.js         # invest_like_legends 用テーブル設定
 ├── scripts/               # ユーティリティスクリプト
 ├── src_ts/                # TypeScript ソース
@@ -31,14 +31,13 @@ invest_like_legends/
   - `investors.json` のトップレベル順から投資家タブを動的生成
   - ソート機能
   - 指標カラムの表示/非表示トグル（localStorage で永続化）
-  - 指標データ表示（GitHub Pages では静的JSON、ローカルでは API 使用）
+  - 指標データ表示（ローカル・GitHub Pages ともに同じenrichmentロジックで指標を表示）
   - 指標の色分け（閾値による good/bad 表示）
 - **assets/app.js**: `@stock-web-ui/runtime` の型を参照しつつ、ブラウザでは先に読み込まれた共有 `StockTable` API を使って起動する
-- **assets/data/investors.json**: 投資家保有銘柄データ
+- **assets/data/investors.json**: 投資家保有銘柄データ（CI で指標をenrichment済み）
   - 対応キー: `watch`, `naito`, `hikari`, `kiyohara`, `katayama`, `imura`, `gomi`, `one_warikabunihon`, `yoshida`
   - `watch` は監視銘柄（保有していない銘柄の一覧）。`amount_millions: null`, `ratio_percent: 0`
   - 銘柄の追加・削除で dataset 件数が変わる場合は `tests/test_investor_data.py` の `EXPECTED_STOCK_COUNTS` も更新する
-- **assets/data/metrics.json**: 指標データ（GitHub Actions で生成）
 
 #### テーブルカラム
 
@@ -67,11 +66,11 @@ invest_like_legends/
 
 ### スクリプト (`scripts/`)
 
-- **generate_metrics.py**: 全銘柄の指標を `formula_screening.web.compute_all_stock_metrics()` 公開APIで計算して JSON に保存
+- **enrich_investors.py**: `formula_screening.web.compute_all_stock_metrics()` 公開APIで指標を計算し、`investors.json` にマージして上書きする。CI で GitHub Pages 用データを生成する際に使用
 
 ### GitHub Actions (`.github/workflows/`)
 
-- **update_metrics.yml**: 毎日日本時間 0:00 に指標データを更新
+- **update_investors.yml**: 毎日日本時間 0:00 に `enrich_investors.py` を実行し、指標を反映した `investors.json` をコミット
 
 ## データフロー
 
@@ -92,9 +91,10 @@ invest_like_legends/
 ```
 GitHub Actions (毎日0:00)
         ↓
-scripts/generate_metrics.py
-        ↓
-docs/assets/data/metrics.json
+scripts/enrich_investors.py
+        ↓   formula_screening.web.compute_all_stock_metrics() で指標計算
+        ↓   investors.json に指標をマージ
+docs/assets/data/investors.json (enriched)
         ↓
 git commit & push
         ↓
