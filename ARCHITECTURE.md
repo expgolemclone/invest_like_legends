@@ -27,12 +27,14 @@ invest_like_legends/
 
 - **index.html**: `python -m stock_web_ui.render_index --shared-asset-base-url https://expgolemclone.github.io/stock_web_ui/assets ...` で共通テンプレートから生成した HTML
 - **共有 runtime / style**: `stock_web_ui` の GitHub Pages 配下 `assets/stock-table.js` / `assets/style.css`
+  - `invest_like_legends` 側には共有 runtime / style をコピーしない。配信元は `stock_web_ui` repo の `deploy-pages.yml`
   - 投資家タブ切り替え
   - `investors.json` のトップレベル順から投資家タブを動的生成
   - ソート機能
   - 指標カラムの表示/非表示トグル（localStorage で永続化）
   - 指標データ表示（ローカル・GitHub Pages ともに同じenrichmentロジックで指標を表示）
   - 指標の色分け（閾値による good/bad 表示）
+  - `stock_web_ui` 側の Pages 配信が壊れると、この repo の `index.html` と `investors.json` が `200` でも画面は表示できない
 - **assets/app.js**: `@stock-web-ui/runtime` の型を参照しつつ、ブラウザでは先に読み込まれた共有 `StockTable` API を使って起動する
 - **assets/data/investors.json**: 投資家保有銘柄データ（CI で指標をenrichment済み）
   - 対応キー: `watch`, `naito`, `hikari`, `kiyohara`, `katayama`, `imura`, `gomi`, `one_warikabunihon`, `yoshida`
@@ -71,6 +73,7 @@ invest_like_legends/
 ### GitHub Actions (`.github/workflows/`)
 
 - **update_investors.yml**: 毎日日本時間 0:00 に `enrich_investors.py` を実行し、指標を反映した `investors.json` をコミット
+- 共有 runtime / style の Pages 配信はこの repo ではなく `stock_web_ui` repo の `deploy-pages.yml` が担当する
 
 ## データフロー
 
@@ -100,11 +103,15 @@ git commit & push
         ↓
 GitHub Pages デプロイ
         ↓
-ブラウザ → 静的 JSON 読み込み
+ブラウザ → invest_like_legends/index.html
+        ↓
+      stock_web_ui/assets/stock-table.js + style.css
+        ↓
+      invest_like_legends/assets/data/investors.json
 ```
 
 ## 依存プロジェクト
 
 - **formula_screening**: 指標計算ロジック。`formula_screening.web.compute_all_stock_metrics()` 公開API経由で利用（内部モジュールの直接importはしない）
-- **stock_web_ui**: Web UI フレームワーク（ハンドラ、ページ、サーバー機能をAPIとして利用）
+- **stock_web_ui**: Web UI フレームワーク（ハンドラ、ページ、サーバー機能をAPIとして利用）。GitHub Pages 上では共有 runtime / style の配信元でもある
 - **japan_company_handbook**: 四季報PDFデータ（`data/{YYYY_Q}/{code}.pdf`）
