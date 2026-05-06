@@ -38,6 +38,7 @@ const COLUMNS = [
         type: "num",
         title: "株価（終値）",
         toggleable: true,
+        stockLink: "shikiho",
         render: (row) => {
             const v = row.price;
             return v !== null && v !== undefined

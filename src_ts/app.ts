@@ -50,6 +50,7 @@ const COLUMNS: ColumnDef[] = [
     type: "num",
     title: "株価（終値）",
     toggleable: true,
+    stockLink: "shikiho",
     render: (row): string => {
       const v = row.price as number | null | undefined;
       return v !== null && v !== undefined
