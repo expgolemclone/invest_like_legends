@@ -12,15 +12,6 @@ function getStockTable() {
     return runtime;
 }
 const StockTable = getStockTable();
-function buildMonexUrl(code) {
-    return "https://monex.ifis.co.jp/index.php?sa=report_zaimu&bcode=" + encodeURIComponent(code);
-}
-function buildShikihoUrl(code) {
-    return "https://shikiho.toyokeizai.net/stocks/" + encodeURIComponent(code) + "/shikiho";
-}
-function buildYaziUrl(code) {
-    return "/open-yazi/" + encodeURIComponent(code);
-}
 /* ------------------------------------------------------------------ */
 /*  Column definitions                                                 */
 /* ------------------------------------------------------------------ */
@@ -31,9 +22,7 @@ const COLUMNS = [
         type: "code",
         title: "銘柄コード（証券コード）",
         render: (row) => String(row.code ?? ""),
-        linkHref: (row) => buildMonexUrl(String(row.code ?? "")),
-        linkMode: "browser",
-        browserKey: "monex",
+        stockLink: "monex",
     },
     {
         key: "name",
@@ -41,11 +30,7 @@ const COLUMNS = [
         type: "name",
         title: "会社名",
         render: (row) => String(row.name ?? ""),
-        linkHref: (row, context) => {
-            const code = String(row.code ?? "");
-            return context.githubPages ? buildShikihoUrl(code) : buildYaziUrl(code);
-        },
-        linkMode: (_row, context) => context.githubPages ? "direct" : "yazi",
+        stockLink: "yazi",
     },
     {
         key: "price",

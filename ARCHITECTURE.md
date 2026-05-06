@@ -35,7 +35,7 @@ invest_like_legends/
   - 指標データ表示（ローカル・GitHub Pages ともに同じenrichmentロジックで指標を表示）
   - 指標の色分け（閾値による good/bad 表示）
   - `stock_web_ui` 側の Pages 配信が壊れると、この repo の `index.html` と `investors.json` が `200` でも画面は表示できない
-- **assets/app.js**: `@stock-web-ui/runtime` の型を参照しつつ、ブラウザでは先に読み込まれた共有 `StockTable` API を使って起動する
+- **assets/app.js**: `@stock-web-ui/runtime` の型を参照しつつ、ブラウザでは先に読み込まれた共有 `StockTable` API を使って起動する。`code` は `stockLink: "monex"`、`name` は `stockLink: "yazi"` を使い、独自のリンク分岐は持たない
 - **assets/data/investors.json**: 投資家保有銘柄データ（CI で指標をenrichment済み）
   - 対応キー: `watch`, `naito`, `hikari`, `kiyohara`, `katayama`, `imura`, `gomi`, `one_warikabunihon`, `yoshida`
   - `watch` は監視銘柄（保有していない銘柄の一覧）。`amount_millions: null`, `ratio_percent: 0`
@@ -48,7 +48,7 @@ invest_like_legends/
 | カラム | 説明 | ソートキー | トグル可 | 閾値 |
 |--------|------|------------|----------|------|
 | code | 銘柄コード（クリックでMonex財務ページを開く） | `code` | - |
-| name | 会社名（クリックでyaziで四季報PDFを開く。GitHub Pagesでは四季報オンラインにフォールバック） | `name` | - |
+| name | 会社名（ローカルでは yazi で四季報PDFを開く。GitHub Pages では非リンク） | `name` | - |
 | price | 株価（終値、小数点第一位まで表示） | `price` | o |
 | ncr | ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全 | `net_cash_ratio` | o | > 1: good |
 | per | 株価収益率 — 株価を1株当たり利益で割った値。低いほど割安（目安: 15倍以下） | `per` | o | 0<per<=7: good, >7: bad |
