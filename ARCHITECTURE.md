@@ -2,116 +2,149 @@
 
 ## 概要
 
-投資家の保有銘柄一覧を表示するWebアプリケーション。GitHub Pages で静的にホスティングされ、指標データは GitHub Actions で毎日更新されます。
+投資家ごとの保有銘柄一覧を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json` は毎日 GitHub Actions で再生成する。投資家別の銘柄一覧は静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
 
 ## ディレクトリ構成
 
 ```
 invest_like_legends/
 ├── .github/workflows/     # GitHub Actions ワークフロー
-├── config/                # 設定ファイル
+├── config/                # names-only の設定と watch 銘柄コード
+│   ├── investors.json     # タブキー -> 投資家名
+│   └── watch_codes.txt    # watch タブ用の銘柄コード
 ├── docs/                  # 静的サイト（GitHub Pages）
 │   ├── index.html         # stock_web_ui テンプレートから生成した HTML
 │   └── assets/
-│       ├── data/          # 生成データ（investors.json）
+│       ├── data/
+│       │   └── investors.json   # 生成済みの表示用データ
 │       └── app.js         # invest_like_legends 用テーブル設定
-├── scripts/               # ユーティリティスクリプト
-├── src_ts/                # TypeScript ソース
-├── tests/                 # テスト
-└── serve.py               # ローカルサーバー起動スクリプト
+├── scripts/
+│   └── enrich_investors.py
+├── tests/
+├── investor_data.py       # 共有データビルダー
+├── serve.py               # ローカルサーバー
+└── src_ts/                # TypeScript ソース
 ```
 
 ## コンポーネント
 
+### 設定ファイル (`config/`)
+
+- `investors.json`: 生成元の唯一のJSON設定。保持するのは投資家名だけで、保有銘柄一覧は持たない
+- `watch_codes.txt`: `watch` タブ専用の静的銘柄コード一覧。`watch` は大株主DBから導出できないため別管理
+
+### データビルダー (`investor_data.py`)
+
+- `build_investors_document()` がローカルAPIと静的JSON生成の共通入口
+- 入力ソース
+  - `config/investors.json`
+  - `config/watch_codes.txt`
+  - `japan_company_handbook/data/stock_performance.db` の `major_shareholders`
+  - `stock_db` の `stocks.db` から引く会社名
+  - `formula_screening.web.compute_all_stock_metrics()` が返す指標
+- 投資家名の照合手順
+  - NFKC 正規化
+  - 空白・記号・法人格表現の除去
+  - 完全一致
+  - 包含一致
+  - それでも0件なら、先頭2文字が CJK の投資家名に限って先頭2文字一致
+- 同一銘柄で複数の株主別名が一致した場合は、`shares` と `ratio_pct` を銘柄単位で合算する
+- `amount_millions` は四季報の `shares` を万株単位として `round(shares * price / 100)` で百万円換算する
+- 会社名が取れない場合は `（銘柄コード XXXX）` を使う
+- 一致する大株主が0件でも、設定上の投資家タブは残し `stocks: []` を返す
+
 ### フロントエンド (`docs/`)
 
-- **index.html**: `python -m stock_web_ui.render_index --shared-asset-base-url https://expgolemclone.github.io/stock_web_ui/assets ...` で共通テンプレートから生成した HTML
-- **共有 runtime / style**: `stock_web_ui` の GitHub Pages 配下 `assets/stock-table.js` / `assets/style.css`
-  - `invest_like_legends` 側には共有 runtime / style をコピーしない。配信元は `stock_web_ui` repo の `deploy-pages.yml`
-  - 投資家タブ切り替え
-  - `investors.json` のトップレベル順から投資家タブを動的生成
-  - ソート機能
-  - 指標カラムの表示/非表示トグル（localStorage で永続化）
-  - 指標データ表示（ローカル・GitHub Pages ともに同じenrichmentロジックで指標を表示）
-  - 指標の色分け（閾値による good/bad 表示）
-  - `stock_web_ui` 側の Pages 配信が壊れると、この repo の `index.html` と `investors.json` が `200` でも画面は表示できない
-- **assets/app.js**: `@stock-web-ui/runtime` の型を参照しつつ、ブラウザでは先に読み込まれた共有 `StockTable` API を使って起動する。`code` は `stockLink: "monex"`、`name` は `stockLink: "yazi"`、`price` は `stockLink: "shikiho"` を使い、独自のリンク分岐は持たない
-- **assets/data/investors.json**: 投資家保有銘柄データ（CI で指標をenrichment済み）
-  - 対応キー: `watch`, `naito`, `hikari`, `kiyohara`, `katayama`, `imura`, `gomi`, `one_warikabunihon`, `yoshida`
-  - `watch` は監視銘柄（保有していない銘柄の一覧）。`amount_millions: null`, `ratio_percent: 0`
-  - 銘柄の追加・削除で dataset 件数が変わる場合は `tests/test_investor_data.py` の `EXPECTED_STOCK_COUNTS` も更新する
+- `index.html`: `stock_web_ui` 共通テンプレートから生成したHTML
+- `assets/app.js`: 共有 `StockTable` runtime を起動するだけの設定ファイル
+- `assets/data/investors.json`: 表示用の完全データ
+  - トップレベル順から投資家タブを生成する
+  - 各銘柄は `code`, `name`, `amount_millions`, `ratio_percent`, 指標列を含む
+  - `watch` は `amount_millions: null`, `ratio_percent: 0`
+  - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 
 #### テーブルカラム
 
-各ヘッダーには `title` 属性が設定されており、ホバー時にネイティブのツールチップで日本語の解説が表示される。
+各ヘッダーには `title` 属性が設定され、ホバー時に日本語ツールチップを表示する。
 
 | カラム | 説明 | ソートキー | トグル可 | 閾値 |
 |--------|------|------------|----------|------|
-| code | 銘柄コード（クリックでMonex財務ページを開く） | `code` | - |
-| name | 会社名（ローカルでは yazi で四季報PDFを開く。GitHub Pages では非リンク） | `name` | - |
+| code | 銘柄コード（クリックでMonex財務ページ） | `code` | - |
+| name | 会社名（ローカルでは yazi で四季報PDFを開く） | `name` | - |
 | price | 株価（終値。クリックで四季報オンラインを開く） | `price` | o |
-| ncr | ネットキャッシュレシオ — 現金同等物から有利子負債を引いた額を時価総額で割った値。高いほど財務が安全 | `net_cash_ratio` | o | > 1: good |
-| per | 株価収益率 — 株価を1株当たり利益で割った値。低いほど割安（目安: 15倍以下） | `per` | o | 0<per<=7: good, >7: bad |
-| equity | 自己資本比率 — 自己資本 / 総資産 * 100 | `equity_ratio` | o | >= 50: good |
-| fcf_y | フリーキャッシュフローイールド — FCFを時価総額で割った値。高いほどキャッシュ創出力が優れている | `fcf_yield_avg` | o | >= 10%: good |
-| croic | CROIC — FCF / (自己資本 + 有利子負債) | `croic` | o | >= 15%: good |
-| amount | 投資家の保有額（億円、小数点第一位まで表示） | `amount_millions` | - |
+| ncr | `(流動資産 - 棚卸資産 + 有価証券 * 0.7) / 時価総額` | `net_cash_ratio` | o | > 1: good |
+| per | `株価 / 来期予想EPS` | `per` | o | 0<per<=7: good, >7: bad |
+| equity | `自己資本 / 総資産 * 100` | `equity_ratio` | o | >= 50: good |
+| fcf_y | `10期の平均FCF / 時価総額` | `fcf_yield_avg` | o | >= 10%: good |
+| croic | `FCF / (自己資本 + 有利子負債)` | `croic` | o | >= 15%: good |
+| amount | 投資家の保有金額（百万円を億円表示） | `amount_millions` | - |
 | ratio | 投資家の保有割合（%） | `ratio_percent` | - |
 
-### サーバー起動スクリプト (`serve.py`)
+### ローカルサーバー (`serve.py`)
 
-- `investors.json` を読み込み、`formula_screening.web.compute_all_stock_metrics()` 公開APIで DB からリアルタイムに指標を計算して `/api/portfolio` を組み立てる
-- `formula_screening` の内部モジュール（db.repository, indicators, metrics）は直接importせず、公開API経由で利用する
-- API リクエストごとに最新データを返すため、DB 更新後にサーバー再起動なしで指標が反映される
-- `stock_web_ui.page.IndexPage` を使ってローカル用 `index.html` を共通テンプレートから描画する。共有 runtime / style はローカル相対の `/assets/*` を指し、実体は `docs/assets/` 不在時に `stock_web_ui.ASSETS_DIR` からフォールバック配信される
-- HTTP サーバー本体、ポート解放、起動ブラウザ、`/open`、`/open-yazi/{code}` は `stock_web_ui.serve` / `stock_web_ui.handler` に委譲する
+- `/api/portfolio` は `build_investors_document()` を毎回呼び、最新DBから投資家データを組み立てて返す
+- 生成済み `docs/assets/data/investors.json` はローカルAPIの入力には使わない
+- `stock_web_ui.page.IndexPage` でローカル用 `index.html` を描画し、HTTPサーバー本体は `stock_web_ui` に委譲する
 
-### スクリプト (`scripts/`)
+### 生成スクリプト (`scripts/enrich_investors.py`)
 
-- **enrich_investors.py**: `formula_screening.web.compute_all_stock_metrics()` 公開APIで指標を計算し、`investors.json` にマージして上書きする。CI で GitHub Pages 用データを生成する際に使用
+- `build_investors_document()` を使って `docs/assets/data/investors.json` を完全再生成する
+- 既存JSONへのマージは行わない
 
-### GitHub Actions (`.github/workflows/`)
+### GitHub Actions (`.github/workflows/update_investors.yml`)
 
-- **update_investors.yml**: 毎日日本時間 0:00 に `enrich_investors.py` を実行し、指標を反映した `investors.json` をコミット
-- 共有 runtime / style の Pages 配信はこの repo ではなく `stock_web_ui` repo の `deploy-pages.yml` が担当する
+- 毎日日本時間 0:00 に `scripts/enrich_investors.py` を実行する
+- 依存repoとして `stock_db`, `formula_screening`, `stock_web_ui`, `japan_company_handbook` を checkout する
+- `stock_db` の `stocks.db` は `stocks-db` artifact から取得する
+- `japan_company_handbook` は `data/stock_performance.db` だけ sparse checkout する
+- `uv` の相対パス依存を満たすため、workflow 内で sibling symlink を作る
+- 生成後は `docs/assets/data/investors.json` だけをコミットして push する
 
 ## データフロー
 
 ### ローカル開発環境
 
 ```
-ブラウザ → HTTP リクエスト → stock_web_ui.handler
-                                    ↓
-                              serve.py (/api/portfolio)
-                                    ↓
-                     investors.json + formula_screening (DB)
-                                    ↓
-                            JSON / yazi / 外部ブラウザ
+ブラウザ
+  ↓
+stock_web_ui.handler
+  ↓
+serve.py (/api/portfolio)
+  ↓
+investor_data.build_investors_document()
+  ↓
+config/investors.json + watch_codes.txt
+  ↓
+major_shareholders + stocks.db + formula_screening metrics
+  ↓
+JSON / yazi / 外部ブラウザ
 ```
 
 ### GitHub Pages
 
 ```
 GitHub Actions (毎日0:00)
-        ↓
+  ↓
 scripts/enrich_investors.py
-        ↓   formula_screening.web.compute_all_stock_metrics() で指標計算
-        ↓   investors.json に指標をマージ
-docs/assets/data/investors.json (enriched)
-        ↓
+  ↓
+investor_data.build_investors_document()
+  ↓
+docs/assets/data/investors.json
+  ↓
 git commit & push
-        ↓
+  ↓
 GitHub Pages デプロイ
-        ↓
+  ↓
 ブラウザ → invest_like_legends/index.html
-        ↓
-      stock_web_ui/assets/stock-table.js + style.css
-        ↓
-      invest_like_legends/assets/data/investors.json
+  ↓
+stock_web_ui/assets/stock-table.js + style.css
+  ↓
+invest_like_legends/assets/data/investors.json
 ```
 
 ## 依存プロジェクト
 
-- **formula_screening**: 指標計算ロジック。`formula_screening.web.compute_all_stock_metrics()` 公開API経由で利用（内部モジュールの直接importはしない）
-- **stock_web_ui**: Web UI フレームワーク（ハンドラ、ページ、サーバー機能をAPIとして利用）。GitHub Pages 上では共有 runtime / style の配信元でもある
-- **japan_company_handbook**: 四季報PDFデータ（`data/{YYYY_Q}/{code}.pdf`）
+- `formula_screening`: 指標計算ロジック。`compute_all_stock_metrics()` を公開APIとして利用する
+- `stock_db`: 会社名DB (`stocks.db`) と接続APIを提供する
+- `stock_web_ui`: Web UI フレームワーク。GitHub Pages 上の共有 runtime / style 配信元でもある
+- `japan_company_handbook`: 四季報の大株主データ (`stock_performance.db`) とPDF群を保持する
