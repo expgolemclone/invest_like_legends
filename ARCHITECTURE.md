@@ -42,6 +42,7 @@ invest_like_legends/
   - `japan_company_handbook/data/stock_performance.db` の `major_shareholders`
   - `stock_db` の `stocks.db` から引く会社名
   - `formula_screening.web.compute_all_stock_metrics()` が返す指標
+    - 指標計算に使う財務データは `stock_db` の `financial_items` を参照し、現在は EDINET XBRL (`source=edinet_xbrl`) を正とする
 - 投資家名の照合手順
   - NFKC 正規化
   - 空白・記号・法人格表現の除去
@@ -145,6 +146,6 @@ invest_like_legends/assets/data/investors.json
 ## 依存プロジェクト
 
 - `formula_screening`: 指標計算ロジック。`compute_all_stock_metrics()` を公開APIとして利用する
-- `stock_db`: 会社名DB (`stocks.db`) と接続APIを提供する
+- `stock_db`: 会社名DB (`stocks.db`) と EDINET XBRL 由来の `financial_items` を提供する
 - `stock_web_ui`: Web UI フレームワーク。GitHub Pages 上の共有 runtime / style 配信元でもある
 - `japan_company_handbook`: 四季報の大株主データ (`stock_performance.db`) とPDF群を保持する
