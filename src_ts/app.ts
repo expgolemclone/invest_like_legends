@@ -72,6 +72,18 @@ const COLUMNS: ColumnDef[] = [
     sortValue: (row): number | null => (row.net_cash_ratio as number) ?? null,
   },
   {
+    key: "per_actual",
+    header: "per_a",
+    type: "num",
+    title: "時価総額 / 実績純利益",
+    toggleable: true,
+    render: (row): string => {
+      const v = row.per_actual as number | null | undefined;
+      return v !== null && v !== undefined ? v.toFixed(1) : "-";
+    },
+    sortValue: (row): number | null => (row.per_actual as number) ?? null,
+  },
+  {
     key: "per",
     header: "per_c",
     type: "num",
@@ -169,6 +181,7 @@ const COLUMNS: ColumnDef[] = [
 
 const METRIC_THRESHOLDS: Record<string, MetricThreshold> = {
   net_cash_ratio: { good: (v): boolean => v > 1 },
+  per_actual: { good: (v): boolean => v > 0 && v <= 7, bad: (v): boolean => v > 7 },
   per: { good: (v): boolean => v > 0 && v <= 7, bad: (v): boolean => v > 7 },
   per_next: { good: (v): boolean => v > 0 && v <= 7, bad: (v): boolean => v > 7 },
   equity_ratio: { good: (v): boolean => v >= 50 },

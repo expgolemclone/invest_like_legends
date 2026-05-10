@@ -8,7 +8,7 @@
 
 - `config/investors.json` に定義した投資家ごとの保有銘柄タブを表示する
 - `config/watch_codes.txt` に並べた監視銘柄を `watch` タブに表示する
-- 株価、ネットキャッシュ比率、今期予想 PER、来期予想 PER、自己資本比率、平均 FCF 利回り、CROIC を同じテーブルで確認する
+- 株価、ネットキャッシュ比率、実績 PER、今期予想 PER、来期予想 PER、自己資本比率、平均 FCF 利回り、CROIC を同じテーブルで確認する
 - 投資家の保有金額と保有割合を銘柄ごとに表示する
 - 銘柄コードから Monex、株価から四季報オンライン、会社名からローカルの四季報 PDF へ移動する
 
@@ -30,7 +30,7 @@
 - `formula_screening`: 財務指標の計算
 - `stock_web_ui`: 共通テーブル UI とローカルサーバー
 
-PER は `formula_screening` が `stock_db` の四季報予想 (`source=shikiho`) から計算した値を使い、今期予想 PER と来期予想 PER を分けて表示します。
+PER は `formula_screening` が `stock_db` の財務データから計算した値を使い、実績 PER・今期予想 PER・来期予想 PER を分けて表示します。
 
 より詳しい構成は [ARCHITECTURE.md](ARCHITECTURE.md) を参照してください。
 

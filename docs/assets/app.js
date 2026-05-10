@@ -60,6 +60,18 @@ const COLUMNS = [
         sortValue: (row) => row.net_cash_ratio ?? null,
     },
     {
+        key: "per_actual",
+        header: "per_a",
+        type: "num",
+        title: "時価総額 / 実績純利益",
+        toggleable: true,
+        render: (row) => {
+            const v = row.per_actual;
+            return v !== null && v !== undefined ? v.toFixed(1) : "-";
+        },
+        sortValue: (row) => row.per_actual ?? null,
+    },
+    {
         key: "per",
         header: "per_c",
         type: "num",
@@ -164,6 +176,7 @@ const COLUMNS = [
 ];
 const METRIC_THRESHOLDS = {
     net_cash_ratio: { good: (v) => v > 1 },
+    per_actual: { good: (v) => v > 0 && v <= 7, bad: (v) => v > 7 },
     per: { good: (v) => v > 0 && v <= 7, bad: (v) => v > 7 },
     per_next: { good: (v) => v > 0 && v <= 7, bad: (v) => v > 7 },
     equity_ratio: { good: (v) => v >= 50 },

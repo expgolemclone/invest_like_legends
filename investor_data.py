@@ -20,6 +20,7 @@ DEFAULT_HANDBOOK_DB_PATH: Path = (
 _METRIC_FIELDS: tuple[str, ...] = (
     "price",
     "net_cash_ratio",
+    "per_actual",
     "per",
     "per_next",
     "equity_ratio",

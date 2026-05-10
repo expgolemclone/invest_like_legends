@@ -98,6 +98,7 @@ EXPECTED_WATCH_CODES: list[str] = [
 METRIC_FIELDS: tuple[str, ...] = (
     "price",
     "net_cash_ratio",
+    "per_actual",
     "per",
     "per_next",
     "equity_ratio",
@@ -195,7 +196,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     )
 
     metrics_map: dict[str, dict[str, float | None]] = {
-        "1301": _metrics(price=800.0, per=4.5, per_next=4.0),
+        "1301": _metrics(price=800.0, per_actual=5.1, per=4.5, per_next=4.0),
         "1429": _metrics(price=1000.0, equity_ratio=55.0),
         "1450": _metrics(price=1000.0, net_cash_ratio=1.2),
         "1518": _metrics(price=1500.0, croic=0.19),
@@ -224,11 +225,13 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     assert watch_stocks[0]["amount_millions"] is None
     assert watch_stocks[0]["ratio_percent"] == 0
     assert watch_stocks[0]["price"] == 500.0
+    assert watch_stocks[0]["per_actual"] is None
 
     hikari_stocks: list[dict[str, object]] = _stocks(document, "hikari")
     assert [stock["code"] for stock in hikari_stocks] == ["1301", "1450"]
     assert hikari_stocks[0]["amount_millions"] == 80
     assert hikari_stocks[0]["ratio_percent"] == 0.5
+    assert hikari_stocks[0]["per_actual"] == 5.1
     assert hikari_stocks[0]["per_next"] == 4.0
     assert hikari_stocks[1]["amount_millions"] == 750
     assert hikari_stocks[1]["ratio_percent"] == 5.1
@@ -243,6 +246,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "ratio_percent": 0.6,
             "price": 1000.0,
             "net_cash_ratio": None,
+            "per_actual": None,
             "per": None,
             "per_next": None,
             "equity_ratio": 55.0,
@@ -260,6 +264,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "ratio_percent": 2.9,
             "price": None,
             "net_cash_ratio": None,
+            "per_actual": None,
             "per": None,
             "per_next": None,
             "equity_ratio": None,
@@ -309,6 +314,7 @@ def _metrics(
     *,
     price: float | None,
     net_cash_ratio: float | None = None,
+    per_actual: float | None = None,
     per: float | None = None,
     per_next: float | None = None,
     equity_ratio: float | None = None,
@@ -318,6 +324,7 @@ def _metrics(
     return {
         "price": price,
         "net_cash_ratio": net_cash_ratio,
+        "per_actual": per_actual,
         "per": per,
         "per_next": per_next,
         "equity_ratio": equity_ratio,

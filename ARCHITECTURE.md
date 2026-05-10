@@ -37,13 +37,13 @@ invest_like_legends/
 
 - `build_investors_document()` がローカルAPIと静的JSON生成の共通入口
 - 入力ソース
-  - `config/investors.json`
-  - `config/watch_codes.txt`
-  - `japan_company_handbook/data/stock_performance.db` の `major_shareholders`
-  - `stock_db` の `stocks.db` から引く会社名
-  - `formula_screening.web.compute_all_stock_metrics()` が返す指標
-    - 指標計算に使う財務データは `stock_db` の `financial_items` を参照し、現在は EDINET XBRL (`source=edinet_xbrl`) を正とする
-    - `per` は四季報今期予想純利益、`per_next` は四季報来期予想純利益 (`source=shikiho`) から計算された値を使う
+- `config/investors.json`
+- `config/watch_codes.txt`
+- `japan_company_handbook/data/stock_performance.db` の `major_shareholders`
+- `stock_db` の `stocks.db` から引く会社名
+- `formula_screening.web.compute_all_stock_metrics()` が返す指標
+  - 指標計算に使う財務データは `stock_db` の `financial_items` を参照し、現在は EDINET XBRL (`source=edinet_xbrl`) を正とする
+  - `per_actual` は実績純利益、`per` は四季報今期予想純利益、`per_next` は四季報来期予想純利益 (`source=shikiho`) から計算された値を使う
 - 投資家名の照合手順
   - NFKC 正規化
   - 空白・記号・法人格表現の除去
@@ -75,6 +75,7 @@ invest_like_legends/
 | name | 会社名（ローカルでは yazi で四季報PDFを開く） | `name` | - |
 | price | 株価（終値。クリックで四季報オンラインを開く） | `price` | o |
 | ncr | `(流動資産 - 棚卸資産 + 有価証券 * 0.7) / 時価総額` | `net_cash_ratio` | o | > 1: good |
+| per_a | `時価総額 / 実績純利益` | `per_actual` | o | 0<per_actual<=7: good, >7: bad |
 | per_c | `時価総額 / 今期予想純利益` | `per` | o | 0<per<=7: good, >7: bad |
 | per_n | `時価総額 / 来期予想純利益` | `per_next` | o | 0<per_next<=7: good, >7: bad |
 | equity | `自己資本 / 総資産 * 100` | `equity_ratio` | o | >= 50: good |
