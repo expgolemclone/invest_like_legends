@@ -12,6 +12,7 @@
         "per_actual": 10.640550560749178,
         "per": 10.219413333333334,
         "per_next": 9.854434285714285,
+        "peg_5": 1.0364014567581952,
         "equity_ratio": 52.417412358669054,
         "fcf_yield_avg": null,
         "croic": 0.45722043359909353
@@ -26,6 +27,7 @@
         "per_actual": 11.448753160016123,
         "per": 10.144413067857142,
         "per_next": 9.468118863333334,
+        "peg_5": 0.2672541466247955,
         "equity_ratio": 61.33734939759036,
         "fcf_yield_avg": null,
         "croic": null
@@ -40,6 +42,7 @@
         "per_actual": 8.771676900149032,
         "per": 7.491012072727273,
         "per_next": 7.491012072727273,
+        "peg_5": null,
         "equity_ratio": 49.09026360166859,
         "fcf_yield_avg": null,
         "croic": 0.17078261744291318
@@ -54,6 +57,7 @@
         "per_actual": 11.591511464497042,
         "per": 7.462725476190476,
         "per_next": 7.289173720930233,
+        "peg_5": null,
         "equity_ratio": 36.52246099277399,
         "fcf_yield_avg": null,
         "croic": -0.2201317774073192
@@ -63,12 +67,13 @@
         "name": "カドス・コーポレーション",
         "amount_millions": null,
         "ratio_percent": 0,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
+        "price": 3795.0,
+        "net_cash_ratio": -0.38944289920135333,
+        "per_actual": 5.838745435675505,
         "per": null,
         "per_next": null,
-        "equity_ratio": null,
+        "peg_5": null,
+        "equity_ratio": 55.75784137954224,
         "fcf_yield_avg": null,
         "croic": null
       },
@@ -82,6 +87,7 @@
         "per_actual": 7.693848341232227,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 37.72437753329473,
         "fcf_yield_avg": null,
         "croic": 0.1165597667638484
@@ -96,6 +102,7 @@
         "per_actual": 6.082095232752161,
         "per": null,
         "per_next": null,
+        "peg_5": 0.07554624827246444,
         "equity_ratio": 28.262185838467662,
         "fcf_yield_avg": null,
         "croic": -0.1235777558405184
@@ -110,6 +117,7 @@
         "per_actual": 11.255179175005912,
         "per": null,
         "per_next": null,
+        "peg_5": 0.34076997246275004,
         "equity_ratio": 29.23021204913899,
         "fcf_yield_avg": null,
         "croic": -0.16668268484215717
@@ -124,6 +132,7 @@
         "per_actual": 5.767611109153659,
         "per": null,
         "per_next": null,
+        "peg_5": 0.1711841685407976,
         "equity_ratio": 31.254042514421926,
         "fcf_yield_avg": null,
         "croic": -0.16111490071244505
@@ -138,6 +147,7 @@
         "per_actual": 5.943368421052631,
         "per": null,
         "per_next": null,
+        "peg_5": 1.6994235434044493,
         "equity_ratio": 58.67486000297338,
         "fcf_yield_avg": null,
         "croic": null
@@ -152,6 +162,7 @@
         "per_actual": 5.5424441925357515,
         "per": null,
         "per_next": null,
+        "peg_5": 0.10725280568905095,
         "equity_ratio": 23.389145727406667,
         "fcf_yield_avg": null,
         "croic": -0.012787285131684263
@@ -166,6 +177,7 @@
         "per_actual": 4.412237490664675,
         "per": null,
         "per_next": null,
+        "peg_5": 0.17630681505200052,
         "equity_ratio": 21.686362911856456,
         "fcf_yield_avg": null,
         "croic": 0.10118158359364389
@@ -180,6 +192,7 @@
         "per_actual": 8.073994143264754,
         "per": null,
         "per_next": null,
+        "peg_5": 0.1578692910245256,
         "equity_ratio": 33.44205139740201,
         "fcf_yield_avg": null,
         "croic": -0.14387862732111756
@@ -194,6 +207,7 @@
         "per_actual": 7.55026733690917,
         "per": null,
         "per_next": null,
+        "peg_5": 0.18425140103980606,
         "equity_ratio": 21.16324352278011,
         "fcf_yield_avg": null,
         "croic": -0.19464811027664378
@@ -208,6 +222,7 @@
         "per_actual": 16.475271420791362,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 46.07880905681906,
         "fcf_yield_avg": null,
         "croic": 0.05000438927450951
@@ -222,6 +237,7 @@
         "per_actual": 4.95753124835188,
         "per": null,
         "per_next": null,
+        "peg_5": 0.19611824726484975,
         "equity_ratio": 20.643213169148122,
         "fcf_yield_avg": null,
         "croic": 0.1228443709484672
@@ -236,6 +252,7 @@
         "per_actual": 6.458409502262444,
         "per": null,
         "per_next": null,
+        "peg_5": 0.13814357096026794,
         "equity_ratio": 19.662062914658073,
         "fcf_yield_avg": null,
         "croic": -0.20461195846388897
@@ -250,6 +267,7 @@
         "per_actual": 5.613815942365791,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 41.31330531892552,
         "fcf_yield_avg": null,
         "croic": 0.012590386997146092
@@ -264,6 +282,7 @@
         "per_actual": 8.011925777331996,
         "per": null,
         "per_next": null,
+        "peg_5": 0.34572302643400055,
         "equity_ratio": 26.205790373021248,
         "fcf_yield_avg": null,
         "croic": -0.04028040138453643
@@ -278,6 +297,7 @@
         "per_actual": 6.435914001344407,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 31.269464664065982,
         "fcf_yield_avg": null,
         "croic": -0.08584008320931134
@@ -292,6 +312,7 @@
         "per_actual": 7.9733716860398145,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 32.511371225655324,
         "fcf_yield_avg": null,
         "croic": 0.16749317165777633
@@ -306,6 +327,7 @@
         "per_actual": 6.749711976902324,
         "per": null,
         "per_next": null,
+        "peg_5": 0.7338914792694812,
         "equity_ratio": 30.791234761476655,
         "fcf_yield_avg": null,
         "croic": 0.003269627089249178
@@ -320,6 +342,7 @@
         "per_actual": 6.882138486492822,
         "per": null,
         "per_next": null,
+        "peg_5": 0.13797642856690837,
         "equity_ratio": 66.33748687371785,
         "fcf_yield_avg": null,
         "croic": null
@@ -334,6 +357,7 @@
         "per_actual": 9.41698004745359,
         "per": null,
         "per_next": null,
+        "peg_5": 0.29042381249811894,
         "equity_ratio": 57.53207238968567,
         "fcf_yield_avg": null,
         "croic": 0.1403882009551718
@@ -343,12 +367,13 @@
         "name": "協立情報通信",
         "amount_millions": null,
         "ratio_percent": 0,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
+        "price": 1640.0,
+        "net_cash_ratio": 0.5365732273779273,
+        "per_actual": 11.507231362871826,
         "per": null,
         "per_next": null,
-        "equity_ratio": null,
+        "peg_5": 1.696673952320519,
+        "equity_ratio": 66.20957763848139,
         "fcf_yield_avg": null,
         "croic": null
       },
@@ -362,6 +387,7 @@
         "per_actual": 9.160236370957156,
         "per": null,
         "per_next": null,
+        "peg_5": 0.3539204210256995,
         "equity_ratio": 48.91562854838173,
         "fcf_yield_avg": null,
         "croic": 0.13200365177984927
@@ -376,6 +402,7 @@
         "per_actual": null,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": null,
         "fcf_yield_avg": null,
         "croic": null
@@ -390,6 +417,7 @@
         "per_actual": null,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": null,
         "fcf_yield_avg": null,
         "croic": null
@@ -404,6 +432,7 @@
         "per_actual": 7.105784581280788,
         "per": null,
         "per_next": null,
+        "peg_5": 0.11849259649339731,
         "equity_ratio": 36.153264207200394,
         "fcf_yield_avg": null,
         "croic": -0.02664482193670777
@@ -418,6 +447,7 @@
         "per_actual": 12.639726211410707,
         "per": null,
         "per_next": null,
+        "peg_5": 3.1095510499058303,
         "equity_ratio": 54.94574262698888,
         "fcf_yield_avg": null,
         "croic": 0.023020127081040787
@@ -432,6 +462,7 @@
         "per_actual": 7.661410702692195,
         "per": null,
         "per_next": null,
+        "peg_5": 0.596001181005286,
         "equity_ratio": 55.224510122774205,
         "fcf_yield_avg": null,
         "croic": 0.04403409090909091
@@ -446,6 +477,7 @@
         "per_actual": 1.7840400349611045,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 39.668676191716465,
         "fcf_yield_avg": null,
         "croic": -0.013827254690116154
@@ -460,6 +492,7 @@
         "per_actual": null,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": null,
         "fcf_yield_avg": null,
         "croic": null
@@ -474,6 +507,7 @@
         "per_actual": 15.655566142180785,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 76.6749751910173,
         "fcf_yield_avg": null,
         "croic": null
@@ -488,6 +522,7 @@
         "per_actual": 5.943735531582194,
         "per": null,
         "per_next": null,
+        "peg_5": 0.13264304370970506,
         "equity_ratio": 58.69496186198171,
         "fcf_yield_avg": null,
         "croic": 0.03404117403159161
@@ -502,6 +537,7 @@
         "per_actual": 34.67089664948236,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 45.999470303317736,
         "fcf_yield_avg": null,
         "croic": -0.0632511760480275
@@ -516,6 +552,7 @@
         "per_actual": 9.538485595567867,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 50.01876366836186,
         "fcf_yield_avg": null,
         "croic": 0.09489284461954167
@@ -530,6 +567,7 @@
         "per_actual": 10.45890466885991,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 42.01423816269169,
         "fcf_yield_avg": null,
         "croic": -0.010488773169034054
@@ -544,6 +582,7 @@
         "per_actual": 15.022361213915618,
         "per": 6.150063636363637,
         "per_next": 5.798631428571428,
+        "peg_5": null,
         "equity_ratio": 73.2217046455999,
         "fcf_yield_avg": null,
         "croic": null
@@ -558,6 +597,7 @@
         "per_actual": 10.899886429717167,
         "per": null,
         "per_next": null,
+        "peg_5": 0.7532961744072956,
         "equity_ratio": 51.794306019136094,
         "fcf_yield_avg": null,
         "croic": null
@@ -572,6 +612,7 @@
         "per_actual": 11.576538477858083,
         "per": null,
         "per_next": null,
+        "peg_5": 0.5856149330078642,
         "equity_ratio": 69.43102456245646,
         "fcf_yield_avg": null,
         "croic": null
@@ -586,6 +627,7 @@
         "per_actual": 27.60757053120802,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 60.16428502654606,
         "fcf_yield_avg": null,
         "croic": null
@@ -600,6 +642,7 @@
         "per_actual": 11.597314762045523,
         "per": null,
         "per_next": null,
+        "peg_5": 0.4784824183104528,
         "equity_ratio": 62.90765817965103,
         "fcf_yield_avg": null,
         "croic": null
@@ -609,14 +652,15 @@
         "name": "ワシントンホテル",
         "amount_millions": null,
         "ratio_percent": 0,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
+        "price": 2300.0,
+        "net_cash_ratio": -0.5685001536208066,
+        "per_actual": 13.88735224439676,
         "per": null,
         "per_next": null,
-        "equity_ratio": null,
+        "peg_5": null,
+        "equity_ratio": 30.49100402288828,
         "fcf_yield_avg": null,
-        "croic": null
+        "croic": 0.07518364019705029
       },
       {
         "code": "4750",
@@ -628,6 +672,7 @@
         "per_actual": 12.702574841011323,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 52.78008915115087,
         "fcf_yield_avg": null,
         "croic": 0.18893341954582468
@@ -637,12 +682,13 @@
         "name": "昭和システムエンジニアリング",
         "amount_millions": null,
         "ratio_percent": 0,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
+        "price": 1568.0,
+        "net_cash_ratio": 0.49571778607492895,
+        "per_actual": 10.561169978141326,
         "per": null,
         "per_next": null,
-        "equity_ratio": null,
+        "peg_5": null,
+        "equity_ratio": 61.134802025310975,
         "fcf_yield_avg": null,
         "croic": null
       },
@@ -656,6 +702,7 @@
         "per_actual": 19.787622786677286,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 60.37280190377107,
         "fcf_yield_avg": null,
         "croic": null
@@ -670,6 +717,7 @@
         "per_actual": null,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": null,
         "fcf_yield_avg": null,
         "croic": null
@@ -679,12 +727,13 @@
         "name": "PRONI",
         "amount_millions": null,
         "ratio_percent": 0,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
+        "price": 1538.0,
+        "net_cash_ratio": 0.16923597028213253,
+        "per_actual": 12.686045631224442,
         "per": null,
         "per_next": null,
-        "equity_ratio": null,
+        "peg_5": null,
+        "equity_ratio": 47.359020880870936,
         "fcf_yield_avg": null,
         "croic": null
       },
@@ -698,6 +747,7 @@
         "per_actual": 14.011060141414813,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 75.43485679591802,
         "fcf_yield_avg": null,
         "croic": null
@@ -712,6 +762,7 @@
         "per_actual": null,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": null,
         "fcf_yield_avg": null,
         "croic": null
@@ -726,6 +777,7 @@
         "per_actual": 11.770381051630435,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 52.37247103579457,
         "fcf_yield_avg": null,
         "croic": -0.1110715641609719
@@ -740,6 +792,7 @@
         "per_actual": 6.968034457739791,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 44.89891866478609,
         "fcf_yield_avg": null,
         "croic": 0.17338064125308295
@@ -754,6 +807,7 @@
         "per_actual": 10.779365931266847,
         "per": null,
         "per_next": null,
+        "peg_5": 0.9751799899271765,
         "equity_ratio": 50.88788659793815,
         "fcf_yield_avg": null,
         "croic": null
@@ -768,6 +822,7 @@
         "per_actual": 7.970157819225251,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 2.5404157043879905,
         "fcf_yield_avg": null,
         "croic": 0.18964035841414018
@@ -782,6 +837,7 @@
         "per_actual": 11.081395967555041,
         "per": null,
         "per_next": null,
+        "peg_5": 0.24663288184781293,
         "equity_ratio": 58.936344710112934,
         "fcf_yield_avg": null,
         "croic": 0.08545454545454545
@@ -796,6 +852,7 @@
         "per_actual": 4.092475463082901,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 24.958921298186564,
         "fcf_yield_avg": null,
         "croic": -0.03193466241482943
@@ -810,6 +867,7 @@
         "per_actual": 6.133712177772299,
         "per": null,
         "per_next": null,
+        "peg_5": 0.3083311514023775,
         "equity_ratio": 61.64190031993113,
         "fcf_yield_avg": null,
         "croic": 0.05584423350102705
@@ -824,6 +882,7 @@
         "per_actual": 5.566533425842077,
         "per": null,
         "per_next": null,
+        "peg_5": 0.3095932744373021,
         "equity_ratio": 51.00456613923097,
         "fcf_yield_avg": null,
         "croic": 0.10010435195447394
@@ -838,6 +897,7 @@
         "per_actual": 8.601735727316253,
         "per": null,
         "per_next": null,
+        "peg_5": 0.19009335139630884,
         "equity_ratio": 47.24595200991046,
         "fcf_yield_avg": null,
         "croic": 0.07811726539742275
@@ -852,6 +912,7 @@
         "per_actual": 23.08767443478261,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 44.297961907695466,
         "fcf_yield_avg": null,
         "croic": 0.038986287700221944
@@ -866,6 +927,7 @@
         "per_actual": 4.510180390675389,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": 70.01489285758244,
         "fcf_yield_avg": null,
         "croic": null
@@ -880,6 +942,7 @@
         "per_actual": 5.577807109884793,
         "per": null,
         "per_next": null,
+        "peg_5": 0.4190099807063408,
         "equity_ratio": 54.07487182635984,
         "fcf_yield_avg": null,
         "croic": null
@@ -894,6 +957,7 @@
         "per_actual": null,
         "per": null,
         "per_next": null,
+        "peg_5": null,
         "equity_ratio": null,
         "fcf_yield_avg": null,
         "croic": null
@@ -908,6 +972,7 @@
         "per_actual": 4.233103002209468,
         "per": null,
         "per_next": null,
+        "peg_5": 0.05612469681883472,
         "equity_ratio": 52.8947229927138,
         "fcf_yield_avg": null,
         "croic": null
@@ -927,6 +992,7 @@
         "per_actual": 5.224340985642535,
         "per": 7.464756872727273,
         "per_next": 6.9586716610169495,
+        "peg_5": 0.24787251931213786,
         "equity_ratio": 43.40246844984778,
         "fcf_yield_avg": null,
         "croic": -0.1046541717172811
@@ -941,6 +1007,7 @@
         "per_actual": 6.03308945170115,
         "per": 8.829437381818181,
         "per_next": 8.671768857142856,
+        "peg_5": 0.43827156514648635,
         "equity_ratio": 61.540042741792966,
         "fcf_yield_avg": null,
         "croic": 0.09076010411458875
@@ -955,6 +1022,7 @@
         "per_actual": 10.009057540276403,
         "per": 11.18175,
         "per_next": 10.524,
+        "peg_5": 0.9136024601443888,
         "equity_ratio": 60.469313668289374,
         "fcf_yield_avg": null,
         "croic": null
@@ -969,6 +1037,7 @@
         "per_actual": 14.1570916032161,
         "per": 13.287384210526316,
         "per_next": 9.350381481481481,
+        "peg_5": null,
         "equity_ratio": 52.37695548502723,
         "fcf_yield_avg": null,
         "croic": null
@@ -981,28 +1050,30 @@
       {
         "code": "1450",
         "name": "TANAKEN",
-        "amount_millions": null,
+        "amount_millions": 129,
         "ratio_percent": 1.1,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
-        "per": null,
-        "per_next": null,
-        "equity_ratio": null,
+        "price": 1434.0,
+        "net_cash_ratio": 0.5532637547964661,
+        "per_actual": 7.914331626998451,
+        "per": 10.396022,
+        "per_next": 8.603604413793104,
+        "peg_5": null,
+        "equity_ratio": 71.48043208394509,
         "fcf_yield_avg": null,
         "croic": null
       },
       {
         "code": "149A",
         "name": "シンカ",
-        "amount_millions": null,
+        "amount_millions": 96,
         "ratio_percent": 4.0,
-        "price": null,
+        "price": 800.0,
         "net_cash_ratio": null,
-        "per_actual": null,
-        "per": null,
+        "per_actual": 59.86395064602491,
+        "per": -4.675374545454545,
         "per_next": null,
-        "equity_ratio": null,
+        "peg_5": null,
+        "equity_ratio": 81.85342486627569,
         "fcf_yield_avg": null,
         "croic": null
       },
@@ -1016,6 +1087,7 @@
         "per_actual": 13.547257108998556,
         "per": 11.62289552238806,
         "per_next": 11.124771428571428,
+        "peg_5": 0.6352023356656102,
         "equity_ratio": 60.43384438575371,
         "fcf_yield_avg": null,
         "croic": 0.11594825609387481
@@ -1023,14 +1095,15 @@
       {
         "code": "173A",
         "name": "ハンモック",
-        "amount_millions": null,
+        "amount_millions": 374,
         "ratio_percent": 6.2,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
-        "per": null,
-        "per_next": null,
-        "equity_ratio": null,
+        "price": 1386.0,
+        "net_cash_ratio": 0.1564830149463177,
+        "per_actual": 9.77701843456651,
+        "per": 9.592,
+        "per_next": 9.296861538461538,
+        "peg_5": null,
+        "equity_ratio": 43.2293436421799,
         "fcf_yield_avg": null,
         "croic": null
       },
@@ -1044,6 +1117,7 @@
         "per_actual": 10.963397135251617,
         "per": 11.68787027027027,
         "per_next": 11.380294736842105,
+        "peg_5": 0.9249426449207507,
         "equity_ratio": 58.21973821737666,
         "fcf_yield_avg": null,
         "croic": null
@@ -1058,6 +1132,7 @@
         "per_actual": 10.009057540276403,
         "per": 11.18175,
         "per_next": 10.524,
+        "peg_5": 0.9136024601443888,
         "equity_ratio": 60.469313668289374,
         "fcf_yield_avg": null,
         "croic": null
@@ -1072,6 +1147,7 @@
         "per_actual": 17.24191489361702,
         "per": 11.463770731707317,
         "per_next": 11.463770731707317,
+        "peg_5": 3.5250345408176202,
         "equity_ratio": 52.31866678205398,
         "fcf_yield_avg": null,
         "croic": null
@@ -1086,6 +1162,7 @@
         "per_actual": 13.140117296394553,
         "per": 12.982159254789474,
         "per_next": 12.753931015563598,
+        "peg_5": 1.2171894336824278,
         "equity_ratio": 37.96961521381962,
         "fcf_yield_avg": null,
         "croic": 0.07547763386196821
@@ -1100,6 +1177,7 @@
         "per_actual": 11.591511464497042,
         "per": 7.462725476190476,
         "per_next": 7.289173720930233,
+        "peg_5": null,
         "equity_ratio": 36.52246099277399,
         "fcf_yield_avg": null,
         "croic": -0.2201317774073192
@@ -1119,6 +1197,7 @@
         "per_actual": 10.640550560749178,
         "per": 10.219413333333334,
         "per_next": 9.854434285714285,
+        "peg_5": 1.0364014567581952,
         "equity_ratio": 52.417412358669054,
         "fcf_yield_avg": null,
         "croic": 0.45722043359909353
@@ -1133,6 +1212,7 @@
         "per_actual": 9.302737122347066,
         "per": 8.766461688235294,
         "per_next": 8.45559425248227,
+        "peg_5": 1.2559819295540815,
         "equity_ratio": 70.37535992229148,
         "fcf_yield_avg": null,
         "croic": null
@@ -1145,14 +1225,15 @@
       {
         "code": "1429",
         "name": "日本アクア",
-        "amount_millions": null,
+        "amount_millions": 167,
         "ratio_percent": 0.6,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
-        "per": null,
-        "per_next": null,
-        "equity_ratio": null,
+        "price": 694.0,
+        "net_cash_ratio": 0.12231583886875172,
+        "per_actual": 12.723964162780222,
+        "per": 12.06172,
+        "per_next": 11.48735238095238,
+        "peg_5": null,
+        "equity_ratio": 45.07172559198366,
         "fcf_yield_avg": null,
         "croic": null
       }
@@ -1168,16 +1249,17 @@
       {
         "code": "148A",
         "name": "ハッチ・ワーク",
-        "amount_millions": null,
+        "amount_millions": 72,
         "ratio_percent": 2.2,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
-        "per": null,
-        "per_next": null,
-        "equity_ratio": null,
+        "price": 1810.0,
+        "net_cash_ratio": 0.1692486118734137,
+        "per_actual": 14.062963427918861,
+        "per": 15.784845454545454,
+        "per_next": 12.40237857142857,
+        "peg_5": null,
+        "equity_ratio": 35.59313984461555,
         "fcf_yield_avg": null,
-        "croic": null
+        "croic": 0.10595202808338999
       }
     ]
   },
@@ -1198,6 +1280,7 @@
         "per_actual": 10.21577142857143,
         "per": 13.083754666666668,
         "per_next": 13.7992725,
+        "peg_5": null,
         "equity_ratio": 52.759995579246265,
         "fcf_yield_avg": null,
         "croic": -0.07826439146051607

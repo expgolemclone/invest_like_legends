@@ -96,6 +96,18 @@ const COLUMNS = [
         sortValue: (row) => row.per_next ?? null,
     },
     {
+        key: "peg_5",
+        header: "peg_5",
+        type: "num",
+        title: "実績PER / 過去5期純利益CAGR[%]",
+        toggleable: true,
+        render: (row) => {
+            const v = row.peg_5;
+            return v !== null && v !== undefined ? v.toFixed(2) : "-";
+        },
+        sortValue: (row) => row.peg_5 ?? null,
+    },
+    {
         key: "equity_ratio",
         header: "equity",
         type: "num",

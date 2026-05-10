@@ -23,6 +23,7 @@ _METRIC_FIELDS: tuple[str, ...] = (
     "per_actual",
     "per",
     "per_next",
+    "peg_5",
     "equity_ratio",
     "fcf_yield_avg",
     "croic",
