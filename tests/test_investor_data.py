@@ -99,6 +99,7 @@ METRIC_FIELDS: tuple[str, ...] = (
     "price",
     "net_cash_ratio",
     "per",
+    "per_next",
     "equity_ratio",
     "fcf_yield_avg",
     "croic",
@@ -194,7 +195,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     )
 
     metrics_map: dict[str, dict[str, float | None]] = {
-        "1301": _metrics(price=800.0, per=4.5),
+        "1301": _metrics(price=800.0, per=4.5, per_next=4.0),
         "1429": _metrics(price=1000.0, equity_ratio=55.0),
         "1450": _metrics(price=1000.0, net_cash_ratio=1.2),
         "1518": _metrics(price=1500.0, croic=0.19),
@@ -228,6 +229,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     assert [stock["code"] for stock in hikari_stocks] == ["1301", "1450"]
     assert hikari_stocks[0]["amount_millions"] == 80
     assert hikari_stocks[0]["ratio_percent"] == 0.5
+    assert hikari_stocks[0]["per_next"] == 4.0
     assert hikari_stocks[1]["amount_millions"] == 750
     assert hikari_stocks[1]["ratio_percent"] == 5.1
     assert hikari_stocks[1]["net_cash_ratio"] == 1.2
@@ -242,6 +244,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "price": 1000.0,
             "net_cash_ratio": None,
             "per": None,
+            "per_next": None,
             "equity_ratio": 55.0,
             "fcf_yield_avg": None,
             "croic": None,
@@ -258,6 +261,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "price": None,
             "net_cash_ratio": None,
             "per": None,
+            "per_next": None,
             "equity_ratio": None,
             "fcf_yield_avg": None,
             "croic": None,
@@ -306,6 +310,7 @@ def _metrics(
     price: float | None,
     net_cash_ratio: float | None = None,
     per: float | None = None,
+    per_next: float | None = None,
     equity_ratio: float | None = None,
     fcf_yield_avg: float | None = None,
     croic: float | None = None,
@@ -314,6 +319,7 @@ def _metrics(
         "price": price,
         "net_cash_ratio": net_cash_ratio,
         "per": per,
+        "per_next": per_next,
         "equity_ratio": equity_ratio,
         "fcf_yield_avg": fcf_yield_avg,
         "croic": croic,

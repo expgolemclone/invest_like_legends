@@ -21,6 +21,7 @@ _METRIC_FIELDS: tuple[str, ...] = (
     "price",
     "net_cash_ratio",
     "per",
+    "per_next",
     "equity_ratio",
     "fcf_yield_avg",
     "croic",

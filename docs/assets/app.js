@@ -61,15 +61,27 @@ const COLUMNS = [
     },
     {
         key: "per",
-        header: "per",
+        header: "per_c",
         type: "num",
-        title: "株価 / 来期予想EPS",
+        title: "時価総額 / 今期予想純利益",
         toggleable: true,
         render: (row) => {
             const v = row.per;
             return v !== null && v !== undefined ? v.toFixed(1) : "-";
         },
         sortValue: (row) => row.per ?? null,
+    },
+    {
+        key: "per_next",
+        header: "per_n",
+        type: "num",
+        title: "時価総額 / 来期予想純利益",
+        toggleable: true,
+        render: (row) => {
+            const v = row.per_next;
+            return v !== null && v !== undefined ? v.toFixed(1) : "-";
+        },
+        sortValue: (row) => row.per_next ?? null,
     },
     {
         key: "equity_ratio",
@@ -153,6 +165,7 @@ const COLUMNS = [
 const METRIC_THRESHOLDS = {
     net_cash_ratio: { good: (v) => v > 1 },
     per: { good: (v) => v > 0 && v <= 7, bad: (v) => v > 7 },
+    per_next: { good: (v) => v > 0 && v <= 7, bad: (v) => v > 7 },
     equity_ratio: { good: (v) => v >= 50 },
     fcf_yield_avg: { good: (v) => v >= 10 },
     croic: { good: (v) => v >= 15 },

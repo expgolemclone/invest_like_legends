@@ -73,15 +73,27 @@ const COLUMNS: ColumnDef[] = [
   },
   {
     key: "per",
-    header: "per",
+    header: "per_c",
     type: "num",
-    title: "株価 / 来期予想EPS",
+    title: "時価総額 / 今期予想純利益",
     toggleable: true,
     render: (row): string => {
       const v = row.per as number | null | undefined;
       return v !== null && v !== undefined ? v.toFixed(1) : "-";
     },
     sortValue: (row): number | null => (row.per as number) ?? null,
+  },
+  {
+    key: "per_next",
+    header: "per_n",
+    type: "num",
+    title: "時価総額 / 来期予想純利益",
+    toggleable: true,
+    render: (row): string => {
+      const v = row.per_next as number | null | undefined;
+      return v !== null && v !== undefined ? v.toFixed(1) : "-";
+    },
+    sortValue: (row): number | null => (row.per_next as number) ?? null,
   },
   {
     key: "equity_ratio",
@@ -158,6 +170,7 @@ const COLUMNS: ColumnDef[] = [
 const METRIC_THRESHOLDS: Record<string, MetricThreshold> = {
   net_cash_ratio: { good: (v): boolean => v > 1 },
   per: { good: (v): boolean => v > 0 && v <= 7, bad: (v): boolean => v > 7 },
+  per_next: { good: (v): boolean => v > 0 && v <= 7, bad: (v): boolean => v > 7 },
   equity_ratio: { good: (v): boolean => v >= 50 },
   fcf_yield_avg: { good: (v): boolean => v >= 10 },
   croic: { good: (v): boolean => v >= 15 },
