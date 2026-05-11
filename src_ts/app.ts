@@ -6,9 +6,27 @@
  */
 
 import type { ColumnDef, MetricThreshold, StockTableConfig } from "@stock-web-ui/runtime";
+import type { MetricColSpec } from "@stock-web-ui/columns";
 
 type StockTableApi = {
   init: (config: StockTableConfig) => void;
+};
+
+type StockColumnsApi = {
+  buildMetricCol: (spec: MetricColSpec, accessor: (row: Record<string, unknown>) => number | null) => ColumnDef;
+  codeCol: ColumnDef;
+  nameCol: ColumnDef;
+  priceCol: ColumnDef;
+  peg5yCol: ColumnDef;
+  peg5y2fCol: ColumnDef;
+  fcfYCol: ColumnDef;
+  croicCol: ColumnDef;
+  NCR_SPEC: MetricColSpec;
+  PER_A_SPEC: MetricColSpec;
+  PER_C_SPEC: MetricColSpec;
+  PER_N_SPEC: MetricColSpec;
+  EQUITY_SPEC: MetricColSpec;
+  COMMON_THRESHOLDS: Record<string, MetricThreshold>;
 };
 
 function getStockTable(): StockTableApi {
@@ -21,170 +39,54 @@ function getStockTable(): StockTableApi {
   return runtime;
 }
 
+function getStockColumns(): StockColumnsApi {
+  const cols: StockColumnsApi | undefined = (
+    globalThis as typeof globalThis & { StockColumns?: StockColumnsApi }
+  ).StockColumns;
+  if (!cols) {
+    throw new Error("Shared StockColumns module is not loaded.");
+  }
+  return cols;
+}
+
 const StockTable: StockTableApi = getStockTable();
+const C: StockColumnsApi = getStockColumns();
+
+/* ------------------------------------------------------------------ */
+/*  Metrics accessor (flat access)                                     */
+/* ------------------------------------------------------------------ */
+
+function flatAccessor(key: string): (row: Record<string, unknown>) => number | null {
+  return (row: Record<string, unknown>): number | null => (row[key] as number) ?? null;
+}
 
 /* ------------------------------------------------------------------ */
 /*  Column definitions                                                 */
 /* ------------------------------------------------------------------ */
 
 const COLUMNS: ColumnDef[] = [
-  {
-    key: "code",
-    header: "code",
-    type: "code",
-    title: "銘柄コード（証券コード）",
-    render: (row): string => String(row.code ?? ""),
-    stockLink: "monex",
-  },
-  {
-    key: "name",
-    header: "name",
-    type: "name",
-    title: "会社名",
-    render: (row): string => String(row.name ?? ""),
-    stockLink: "yazi",
-  },
-  {
-    key: "price",
-    header: "price",
-    type: "num",
-    title: "株価（終値）",
-    toggleable: true,
-    stockLink: "shikiho",
-    render: (row): string => {
-      const v = row.price as number | null | undefined;
-      return v !== null && v !== undefined
-        ? v.toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 })
-        : "-";
-    },
-    sortValue: (row): number | null => (row.price as number) ?? null,
-  },
-  {
-    key: "net_cash_ratio",
-    header: "ncr",
-    type: "num",
-    title: "(流動資産 - 棚卸資産 + 有価証券 * 0.7) / 時価総額",
-    toggleable: true,
-    render: (row): string => {
-      const v = row.net_cash_ratio as number | null | undefined;
-      return v !== null && v !== undefined ? v.toFixed(2) : "-";
-    },
-    sortValue: (row): number | null => (row.net_cash_ratio as number) ?? null,
-  },
-  {
-    key: "per_actual",
-    header: "per_a",
-    type: "num",
-    title: "時価総額 / 実績純利益",
-    toggleable: true,
-    render: (row): string => {
-      const v = row.per_actual as number | null | undefined;
-      return v !== null && v !== undefined ? v.toFixed(1) : "-";
-    },
-    sortValue: (row): number | null => (row.per_actual as number) ?? null,
-  },
-  {
-    key: "per",
-    header: "per_c",
-    type: "num",
-    title: "時価総額 / 今期予想純利益",
-    toggleable: true,
-    render: (row): string => {
-      const v = row.per as number | null | undefined;
-      return v !== null && v !== undefined ? v.toFixed(1) : "-";
-    },
-    sortValue: (row): number | null => (row.per as number) ?? null,
-  },
-  {
-    key: "per_next",
-    header: "per_n",
-    type: "num",
-    title: "時価総額 / 来期予想純利益",
-    toggleable: true,
-    render: (row): string => {
-      const v = row.per_next as number | null | undefined;
-      return v !== null && v !== undefined ? v.toFixed(1) : "-";
-    },
-    sortValue: (row): number | null => (row.per_next as number) ?? null,
-  },
-  {
-    key: "peg_trailing_5",
-    header: "PEG実績5年",
-    type: "num",
-    title: "実績PER / 過去5年EPS CAGR[%]",
-    toggleable: true,
-    render: (row): string => {
-      const v = row.peg_trailing_5 as number | null | undefined;
-      return v !== null && v !== undefined ? v.toFixed(2) : "-";
-    },
-    sortValue: (row): number | null => (row.peg_trailing_5 as number) ?? null,
-  },
-  {
-    key: "peg_blended_5y_actual_2f",
-    header: "PEG5年+2F",
-    type: "num",
-    title: "来期予想PER / (過去5年実績+2期予想)EPS CAGR[%]",
-    toggleable: true,
-    render: (row): string => {
-      const v = row.peg_blended_5y_actual_2f as number | null | undefined;
-      return v !== null && v !== undefined ? v.toFixed(2) : "-";
-    },
-    sortValue: (row): number | null => (row.peg_blended_5y_actual_2f as number) ?? null,
-  },
-  {
-    key: "equity_ratio",
-    header: "equity",
-    type: "num",
-    title: "自己資本 / 総資産 * 100",
-    toggleable: true,
-    render: (row): string => {
-      const v = row.equity_ratio as number | null | undefined;
-      return v !== null && v !== undefined ? v.toFixed(1) + "%" : "-";
-    },
-    sortValue: (row): number | null => (row.equity_ratio as number) ?? null,
-  },
-  {
-    key: "fcf_yield_avg",
-    header: "fcf_y",
-    type: "num",
-    title: "10期の平均FCF / 時価総額",
-    toggleable: true,
-    render: (row): string => {
-      const v = row.fcf_yield_avg as number | null | undefined;
-      if (v === null || v === undefined) { return "-"; }
-      return (v * 100).toFixed(2) + "%";
-    },
-    sortValue: (row): number | null => {
-      const v = row.fcf_yield_avg as number | null | undefined;
-      return v != null ? v * 100 : null;
-    },
-  },
-  {
-    key: "croic",
-    header: "croic",
-    type: "num",
-    title: "FCF / (自己資本 + 有利子負債)",
-    toggleable: true,
-    render: (row): string => {
-      const v = row.croic as number | null | undefined;
-      if (v === null || v === undefined) { return "-"; }
-      return (v * 100).toFixed(2) + "%";
-    },
-    sortValue: (row): number | null => {
-      const v = row.croic as number | null | undefined;
-      return v != null ? v * 100 : null;
-    },
-  },
+  C.codeCol,
+  C.nameCol,
+  C.priceCol,
+  C.buildMetricCol(C.NCR_SPEC, flatAccessor("net_cash_ratio")),
+  C.buildMetricCol(C.PER_A_SPEC, flatAccessor("per_actual")),
+  C.buildMetricCol(C.PER_C_SPEC, flatAccessor("per")),
+  C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
+  C.peg5yCol,
+  C.peg5y2fCol,
+  C.buildMetricCol(C.EQUITY_SPEC, flatAccessor("equity_ratio")),
+  C.fcfYCol,
+  C.croicCol,
   {
     key: "amount_millions",
     header: "amount",
     type: "num",
-    title: "投資家の保有金額",
+    title: "investor holding amount",
     isPosition: true,
     render: (row): string => {
       const v = row.amount_millions as number | null | undefined;
       if (v === null || v === undefined) { return "-"; }
-      return (v / 100).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "億";
+      return (v / 100).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "儆";
     },
     sortValue: (row): number | null => (row.amount_millions as number) ?? null,
   },
@@ -192,7 +94,7 @@ const COLUMNS: ColumnDef[] = [
     key: "ratio_percent",
     header: "ratio",
     type: "num",
-    title: "投資家の保有株数 / 発行済株式総数 * 100",
+    title: "investor shares / total shares * 100",
     isPosition: true,
     render: (row): string => {
       const v = row.ratio_percent as number | null | undefined;
@@ -203,15 +105,7 @@ const COLUMNS: ColumnDef[] = [
   },
 ];
 
-const METRIC_THRESHOLDS: Record<string, MetricThreshold> = {
-  net_cash_ratio: { good: (v): boolean => v > 1 },
-  per_actual: { good: (v): boolean => v > 0 && v <= 7, bad: (v): boolean => v > 7 },
-  per: { good: (v): boolean => v > 0 && v <= 7, bad: (v): boolean => v > 7 },
-  per_next: { good: (v): boolean => v > 0 && v <= 7, bad: (v): boolean => v > 7 },
-  equity_ratio: { good: (v): boolean => v >= 50 },
-  fcf_yield_avg: { good: (v): boolean => v >= 10 },
-  croic: { good: (v): boolean => v >= 15 },
-};
+const METRIC_THRESHOLDS: Record<string, MetricThreshold> = C.COMMON_THRESHOLDS;
 
 const IS_GITHUB_PAGES: boolean = location.hostname === "expgolemclone.github.io";
 
@@ -221,7 +115,7 @@ const IS_GITHUB_PAGES: boolean = location.hostname === "expgolemclone.github.io"
 
 function bootstrap(): void {
   StockTable.init({
-    defaultTitle: "保有銘柄ビューア - 四季報オンラインリンク一覧",
+    defaultTitle: "investor holdings viewer",
     dataUrl: IS_GITHUB_PAGES ? "assets/data/investors.json" : "/api/portfolio",
     columns: COLUMNS,
     metricThresholds: METRIC_THRESHOLDS,

@@ -1,0 +1,21 @@
+{
+  "prefersReducedMotion": true,
+  "permissions": {
+    "allow": [
+      "Bash(python3 .claude/hooks/stop_require_lowercase_headers.py)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/stop_require_lowercase_headers.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

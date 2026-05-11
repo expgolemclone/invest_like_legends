@@ -24,6 +24,10 @@
 !.github/**
 !scripts/
 !scripts/**
+!.claude/
+!.claude/hooks/
+!.claude/hooks/**
+!.claude/settings.local.json
 
 # 生成物は除外
 __pycache__/
