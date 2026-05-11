@@ -61,7 +61,7 @@ invest_like_legends/
 - `assets/app.js`: 共有 `StockTable` runtime を起動するだけの設定ファイル
 - `assets/data/investors.json`: 表示用の完全データ
   - トップレベル順から投資家タブを生成する
-  - 各銘柄は `code`, `name`, `amount_millions`, `ratio_percent`, `peg_5` を含む指標列を含む
+  - 各銘柄は `code`, `name`, `amount_millions`, `ratio_percent`, `peg_trailing_5`, `peg_blended_5y_actual_2f` を含む指標列を含む
   - `watch` は `amount_millions: null`, `ratio_percent: 0`
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 
@@ -78,7 +78,8 @@ invest_like_legends/
 | per_a | `時価総額 / 実績純利益` | `per_actual` | o | 0<per_actual<=7: good, >7: bad |
 | per_c | `時価総額 / 今期予想純利益` | `per` | o | 0<per<=7: good, >7: bad |
 | per_n | `時価総額 / 来期予想純利益` | `per_next` | o | 0<per_next<=7: good, >7: bad |
-| peg_5 | `実績PER / 過去5期純利益CAGR[%]` | `peg_5` | o |
+| PEG実績5年 | `実績PER / 過去5年EPS CAGR[%]` | `peg_trailing_5` | o |
+| PEG5年+2F | `来期予想PER / (過去5年実績+2期予想)EPS CAGR[%]` | `peg_blended_5y_actual_2f` | o |
 | equity | `自己資本 / 総資産 * 100` | `equity_ratio` | o | >= 50: good |
 | fcf_y | `10期の平均FCF / 時価総額` | `fcf_yield_avg` | o | >= 10%: good |
 | croic | `FCF / (自己資本 + 有利子負債)` | `croic` | o | >= 15%: good |

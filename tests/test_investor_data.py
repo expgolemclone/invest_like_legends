@@ -101,7 +101,8 @@ METRIC_FIELDS: tuple[str, ...] = (
     "per_actual",
     "per",
     "per_next",
-    "peg_5",
+    "peg_trailing_5",
+    "peg_blended_5y_actual_2f",
     "equity_ratio",
     "fcf_yield_avg",
     "croic",
@@ -197,7 +198,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     )
 
     metrics_map: dict[str, dict[str, float | None]] = {
-        "1301": _metrics(price=800.0, per_actual=5.1, per=4.5, per_next=4.0, peg_5=0.53),
+        "1301": _metrics(price=800.0, per_actual=5.1, per=4.5, per_next=4.0, peg_trailing_5=0.53, peg_blended_5y_actual_2f=0.41),
         "1429": _metrics(price=1000.0, equity_ratio=55.0),
         "1450": _metrics(price=1000.0, net_cash_ratio=1.2),
         "1518": _metrics(price=1500.0, croic=0.19),
@@ -234,7 +235,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     assert hikari_stocks[0]["ratio_percent"] == 0.5
     assert hikari_stocks[0]["per_actual"] == 5.1
     assert hikari_stocks[0]["per_next"] == 4.0
-    assert hikari_stocks[0]["peg_5"] == 0.53
+    assert hikari_stocks[0]["peg_trailing_5"] == 0.53
     assert hikari_stocks[1]["amount_millions"] == 750
     assert hikari_stocks[1]["ratio_percent"] == 5.1
     assert hikari_stocks[1]["net_cash_ratio"] == 1.2
@@ -251,7 +252,8 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "per_actual": None,
             "per": None,
             "per_next": None,
-            "peg_5": None,
+            "peg_trailing_5": None,
+            "peg_blended_5y_actual_2f": None,
             "equity_ratio": 55.0,
             "fcf_yield_avg": None,
             "croic": None,
@@ -270,7 +272,8 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "per_actual": None,
             "per": None,
             "per_next": None,
-            "peg_5": None,
+            "peg_trailing_5": None,
+            "peg_blended_5y_actual_2f": None,
             "equity_ratio": None,
             "fcf_yield_avg": None,
             "croic": None,
@@ -321,7 +324,8 @@ def _metrics(
     per_actual: float | None = None,
     per: float | None = None,
     per_next: float | None = None,
-    peg_5: float | None = None,
+    peg_trailing_5: float | None = None,
+    peg_blended_5y_actual_2f: float | None = None,
     equity_ratio: float | None = None,
     fcf_yield_avg: float | None = None,
     croic: float | None = None,
@@ -332,7 +336,8 @@ def _metrics(
         "per_actual": per_actual,
         "per": per,
         "per_next": per_next,
-        "peg_5": peg_5,
+        "peg_trailing_5": peg_trailing_5,
+        "peg_blended_5y_actual_2f": peg_blended_5y_actual_2f,
         "equity_ratio": equity_ratio,
         "fcf_yield_avg": fcf_yield_avg,
         "croic": croic,
