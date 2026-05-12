@@ -6,8 +6,9 @@ import re
 import sqlite3
 import unicodedata
 from collections import defaultdict
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Any
+from typing import TypedDict
 
 PROJECT_ROOT: Path = Path(__file__).resolve().parent
 DEFAULT_CONFIG_PATH: Path = PROJECT_ROOT / "config" / "investors.json"
@@ -46,6 +47,35 @@ _CORPORATE_TOKENS: tuple[str, ...] = (
 )
 
 
+class ShareholderRow(TypedDict):
+    stock_code: str
+    shareholder_name: str
+    shares: int | None
+    ratio_pct: float | None
+
+
+class StockEntry(TypedDict):
+    code: str
+    name: str
+    amount_millions: int | None
+    ratio_percent: float
+    price: float | None
+    net_cash_ratio: float | None
+    per_actual: float | None
+    per: float | None
+    per_next: float | None
+    peg_trailing_5: float | None
+    peg_blended_5y_actual_2f: float | None
+    equity_ratio: float | None
+    fcf_yield_avg: float | None
+    croic: float | None
+
+
+class InvestorEntry(TypedDict):
+    name: str
+    stocks: list[StockEntry]
+
+
 def load_investor_config(path: Path | None = None) -> dict[str, str]:
     config_path: Path = path or DEFAULT_CONFIG_PATH
     raw_document: object = json.loads(config_path.read_text(encoding="utf-8"))
@@ -80,7 +110,7 @@ def build_investors_document(
     stocks_db_path: Path | None = None,
     metrics_map: dict[str, dict[str, float | None]] | None = None,
     stock_names: dict[str, str] | None = None,
-) -> dict[str, dict[str, Any]]:
+) -> dict[str, InvestorEntry]:
     investor_config: dict[str, str] = load_investor_config(config_path)
     watch_codes: list[str] = load_watch_codes(watch_codes_path)
     names_map: dict[str, str] = (
@@ -89,15 +119,15 @@ def build_investors_document(
     resolved_metrics_map: dict[str, dict[str, float | None]] = (
         metrics_map if metrics_map is not None else compute_metrics_map()
     )
-    shareholder_rows: list[dict[str, Any]] = load_major_shareholder_rows(handbook_db_path)
+    shareholder_rows: list[ShareholderRow] = load_major_shareholder_rows(handbook_db_path)
     distinct_shareholder_names: list[str] = list(
         dict.fromkeys(row["shareholder_name"] for row in shareholder_rows)
     )
 
-    document: dict[str, dict[str, Any]] = {}
+    document: dict[str, InvestorEntry] = {}
     for investor_key, investor_name in investor_config.items():
         if investor_key == "watch":
-            stocks: list[dict[str, Any]] = _build_watch_stocks(
+            stocks: list[StockEntry] = _build_watch_stocks(
                 watch_codes=watch_codes,
                 stock_names=names_map,
                 metrics_map=resolved_metrics_map,
@@ -123,7 +153,7 @@ def build_investors_document(
 
 
 def write_investors_document(
-    document: dict[str, dict[str, Any]],
+    document: dict[str, InvestorEntry],
     *,
     output_path: Path | None = None,
 ) -> Path:
@@ -136,7 +166,7 @@ def write_investors_document(
     return resolved_output_path
 
 
-def load_major_shareholder_rows(db_path: Path | None = None) -> list[dict[str, Any]]:
+def load_major_shareholder_rows(db_path: Path | None = None) -> list[ShareholderRow]:
     resolved_db_path: Path = resolve_handbook_db_path(db_path)
     with sqlite3.connect(resolved_db_path) as con:
         rows = con.execute(
@@ -147,7 +177,7 @@ def load_major_shareholder_rows(db_path: Path | None = None) -> list[dict[str, A
             """
         ).fetchall()
 
-    normalized_rows: list[dict[str, Any]] = []
+    normalized_rows: list[ShareholderRow] = []
     for stock_code, shareholder_name, shares, ratio_pct in rows:
         normalized_rows.append(
             {
@@ -254,10 +284,10 @@ def _build_watch_stocks(
     watch_codes: list[str],
     stock_names: dict[str, str],
     metrics_map: dict[str, dict[str, float | None]],
-) -> list[dict[str, Any]]:
-    stocks: list[dict[str, Any]] = []
+) -> list[StockEntry]:
+    stocks: list[StockEntry] = []
     for code in watch_codes:
-        stock: dict[str, Any] = {
+        stock: StockEntry = {
             "code": code,
             "name": _resolve_stock_name(code, stock_names),
             "amount_millions": None,
@@ -272,18 +302,18 @@ def _build_watch_stocks(
 def _build_investor_stocks(
     *,
     matched_names: list[str],
-    shareholder_rows: list[dict[str, Any]],
+    shareholder_rows: list[ShareholderRow],
     stock_names: dict[str, str],
     metrics_map: dict[str, dict[str, float | None]],
-) -> list[dict[str, Any]]:
-    rows_by_code: dict[str, list[dict[str, Any]]] = defaultdict(list)
+) -> list[StockEntry]:
+    rows_by_code: dict[str, list[ShareholderRow]] = defaultdict(list)
     matched_name_set: set[str] = set(matched_names)
 
     for row in shareholder_rows:
         if row["shareholder_name"] in matched_name_set:
             rows_by_code[str(row["stock_code"])].append(row)
 
-    stocks: list[dict[str, Any]] = []
+    stocks: list[StockEntry] = []
     for code, rows in rows_by_code.items():
         total_shares: int | None = _sum_nullable_ints(
             row["shares"] for row in rows
@@ -294,7 +324,7 @@ def _build_investor_stocks(
         )
         metrics: dict[str, float | None] | None = metrics_map.get(code)
 
-        stock: dict[str, Any] = {
+        stock: StockEntry = {
             "code": code,
             "name": _resolve_stock_name(code, stock_names),
             "amount_millions": _compute_amount_millions(total_shares, metrics),
@@ -307,7 +337,7 @@ def _build_investor_stocks(
 
 
 def _add_metrics(
-    stock: dict[str, Any],
+    stock: StockEntry,
     metrics: dict[str, float | None] | None,
 ) -> None:
     metrics_dict: dict[str, float | None] = metrics or {}
@@ -373,20 +403,20 @@ def _is_cjk_character(char: str) -> bool:
     return unicodedata.east_asian_width(char) in {"W", "F"}
 
 
-def _sum_nullable_ints(values: Any) -> int | None:
+def _sum_nullable_ints(values: Iterable[int | None]) -> int | None:
     normalized_values: list[int] = [value for value in values if value is not None]
     if not normalized_values:
         return None
     return sum(normalized_values)
 
 
-def _normalize_int(value: Any) -> int | None:
+def _normalize_int(value: object) -> int | None:
     if value is None:
         return None
     return int(value)
 
 
-def _normalize_float(value: Any) -> float | None:
+def _normalize_float(value: object) -> float | None:
     if value is None:
         return None
     return float(value)
