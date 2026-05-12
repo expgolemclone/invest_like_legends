@@ -88,6 +88,7 @@ invest_like_legends/
 
 ### ローカルサーバー (`serve.py`)
 
+- 起動時に `build_investors_document()` + `write_investors_document()` を呼び出し、`docs/assets/data/investors.json` を自動生成する
 - `/api/portfolio` は `build_investors_document()` を毎回呼び、最新DBから投資家データを組み立てて返す
 - 生成済み `docs/assets/data/investors.json` はローカルAPIの入力には使わない
 - `stock_web_ui.page.IndexPage` でローカル用 `index.html` を描画し、HTTPサーバー本体は `stock_web_ui` に委譲する

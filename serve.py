@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from investor_data import build_investors_document
+from investor_data import build_investors_document, write_investors_document
 from stock_web_ui.handler import ApiHandler, json_route
 from stock_web_ui.page import IndexPage
 from stock_web_ui.serve import serve as _serve
@@ -26,6 +26,10 @@ def _create_api_routes() -> dict[str, ApiHandler]:
 
 
 def main() -> None:
+    doc = build_investors_document()
+    output = write_investors_document(doc)
+    print(f"GitHub Pages JSON saved to {output}")
+
     api_routes = _create_api_routes()
     _serve(
         static_root=_STATIC_ROOT,

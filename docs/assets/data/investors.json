@@ -15,7 +15,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.417412358669054,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10540938133144992,
         "croic": 0.45722043359909353
       },
       {
@@ -31,7 +31,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.33734939759036,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0006865144062747491,
         "croic": null
       },
       {
@@ -47,7 +47,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 49.09026360166859,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1648278311047685,
         "croic": 0.17078261744291318
       },
       {
@@ -63,7 +63,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.52246099277399,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.08802477915080623,
         "croic": -0.2201317774073192
       },
       {
@@ -79,7 +79,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.75784137954224,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.096778282014997,
         "croic": null
       },
       {
@@ -95,7 +95,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 37.72437753329473,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.31902141305727105,
         "croic": 0.1165597667638484
       },
       {
@@ -111,7 +111,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 28.262185838467662,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.14613262960721185,
         "croic": -0.1235777558405184
       },
       {
@@ -127,7 +127,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 29.23021204913899,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.11672319608018161,
         "croic": -0.16668268484215717
       },
       {
@@ -143,7 +143,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 31.254042514421926,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.2627298308759394,
         "croic": -0.16111490071244505
       },
       {
@@ -159,7 +159,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.67486000297338,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.164350711849972,
         "croic": null
       },
       {
@@ -175,7 +175,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 23.389145727406667,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06861447512812546,
         "croic": -0.012787285131684263
       },
       {
@@ -191,7 +191,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 21.686362911856456,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.3497807882415429,
         "croic": 0.10118158359364389
       },
       {
@@ -207,7 +207,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 33.44205139740201,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.08781779920504384,
         "croic": -0.14387862732111756
       },
       {
@@ -223,7 +223,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 21.16324352278011,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.282449658821436,
         "croic": -0.19464811027664378
       },
       {
@@ -239,7 +239,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 46.07880905681906,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05002485136741974,
         "croic": 0.05000438927450951
       },
       {
@@ -255,7 +255,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 20.643213169148122,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.13692695991212742,
         "croic": 0.1228443709484672
       },
       {
@@ -271,7 +271,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 19.662062914658073,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.16877920925994627,
         "croic": -0.20461195846388897
       },
       {
@@ -287,7 +287,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.31330531892552,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07819987063389391,
         "croic": 0.012590386997146092
       },
       {
@@ -303,7 +303,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 26.205790373021248,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.17855153238214347,
         "croic": -0.04028040138453643
       },
       {
@@ -319,7 +319,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 31.269464664065982,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.02131021721241222,
         "croic": -0.08584008320931134
       },
       {
@@ -335,7 +335,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 32.511371225655324,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.015710043602465792,
         "croic": 0.16749317165777633
       },
       {
@@ -351,7 +351,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 30.791234761476655,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09600931828845982,
         "croic": 0.003269627089249178
       },
       {
@@ -367,7 +367,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 66.33748687371785,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.17128426605121858,
         "croic": null
       },
       {
@@ -383,7 +383,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 57.53207238968567,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06444701358041555,
         "croic": 0.1403882009551718
       },
       {
@@ -399,7 +399,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 66.20957763848139,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1994318687588004,
         "croic": null
       },
       {
@@ -415,7 +415,7 @@
         "peg_trailing_5": 0.38530100059685024,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 48.91562854838173,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07259454685509142,
         "croic": 0.13200365177984927
       },
       {
@@ -463,7 +463,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.153264207200394,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.027799456000001995,
         "croic": -0.02664482193670777
       },
       {
@@ -479,7 +479,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.94574262698888,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0469159750924093,
         "croic": 0.023020127081040787
       },
       {
@@ -495,7 +495,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.224510122774205,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0834408934126913,
         "croic": 0.04403409090909091
       },
       {
@@ -511,7 +511,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 39.668676191716465,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07692454120290561,
         "croic": -0.013827254690116154
       },
       {
@@ -543,7 +543,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.6749751910173,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06378322957743987,
         "croic": null
       },
       {
@@ -559,7 +559,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.69496186198171,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.13354796570615624,
         "croic": 0.03404117403159161
       },
       {
@@ -575,7 +575,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 45.999470303317736,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.028498403566665692,
         "croic": -0.0632511760480275
       },
       {
@@ -591,7 +591,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 50.01876366836186,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.25141543436883096,
         "croic": 0.09489284461954167
       },
       {
@@ -607,7 +607,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.01423816269169,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07409358382565115,
         "croic": -0.010488773169034054
       },
       {
@@ -623,7 +623,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 73.2217046455999,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.020842356398381688,
         "croic": null
       },
       {
@@ -639,7 +639,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 51.794306019136094,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.032323057274120104,
         "croic": null
       },
       {
@@ -655,7 +655,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.43102456245646,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11951768854093361,
         "croic": null
       },
       {
@@ -671,7 +671,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.16428502654606,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.016474316339929112,
         "croic": null
       },
       {
@@ -687,7 +687,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.90765817965103,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.02853413132127125,
         "croic": null
       },
       {
@@ -703,7 +703,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 30.49100402288828,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05066226644278518,
         "croic": 0.07518364019705029
       },
       {
@@ -719,7 +719,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.78008915115087,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.21960581073636443,
         "croic": 0.18893341954582468
       },
       {
@@ -735,7 +735,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.134802025310975,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06935162448555306,
         "croic": null
       },
       {
@@ -751,7 +751,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.37280190377107,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.042730946640424615,
         "croic": null
       },
       {
@@ -783,7 +783,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.359020880870936,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.012676897907143655,
         "croic": null
       },
       {
@@ -799,7 +799,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.43485679591802,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.030775666671206178,
         "croic": null
       },
       {
@@ -831,7 +831,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.37247103579457,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.011117128853805357,
         "croic": -0.1110715641609719
       },
       {
@@ -847,7 +847,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 44.89891866478609,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.13392682206786782,
         "croic": 0.17338064125308295
       },
       {
@@ -863,7 +863,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 50.88788659793815,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1038763764617334,
         "croic": null
       },
       {
@@ -879,7 +879,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 2.5404157043879905,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.5295938940092166,
         "croic": 0.18964035841414018
       },
       {
@@ -895,7 +895,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.936344710112934,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08765853269934935,
         "croic": 0.08545454545454545
       },
       {
@@ -911,7 +911,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 24.958921298186564,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.16585474557069768,
         "croic": -0.03193466241482943
       },
       {
@@ -927,7 +927,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.64190031993113,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.014603190974837373,
         "croic": 0.05584423350102705
       },
       {
@@ -943,7 +943,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 51.00456613923097,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.15344854413020018,
         "croic": 0.10010435195447394
       },
       {
@@ -959,7 +959,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.24595200991046,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05056036818376606,
         "croic": 0.07811726539742275
       },
       {
@@ -975,7 +975,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 44.297961907695466,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.023622839146400825,
         "croic": 0.038986287700221944
       },
       {
@@ -991,7 +991,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.01489285758244,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10331163583460724,
         "croic": null
       },
       {
@@ -1007,7 +1007,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.07487182635984,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.13963274900916253,
         "croic": null
       },
       {
@@ -1039,7 +1039,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.8947229927138,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11686608322615334,
         "croic": null
       }
     ]
@@ -1060,7 +1060,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 43.40246844984778,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.16029530163495942,
         "croic": -0.1046541717172811
       },
       {
@@ -1076,7 +1076,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.540042741792966,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.054051626837312586,
         "croic": 0.09076010411458875
       },
       {
@@ -1092,7 +1092,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.469313668289374,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03277824356652581,
         "croic": null
       },
       {
@@ -1108,7 +1108,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.37695548502723,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.06117876751314959,
         "croic": null
       },
       {
@@ -1124,7 +1124,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.577959262653124,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.31633119101011076,
         "croic": 0.1328717660805028
       },
       {
@@ -1140,7 +1140,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 73.18134354333449,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06971149625103162,
         "croic": 0.08368386096967013
       },
       {
@@ -1156,7 +1156,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.45105233546191,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.050427895003545845,
         "croic": null
       },
       {
@@ -1172,7 +1172,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 44.28100171963509,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11653249730730986,
         "croic": 0.08609387407482061
       },
       {
@@ -1188,7 +1188,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 22.42446771765262,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.2195479907417391,
         "croic": null
       },
       {
@@ -1204,7 +1204,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 48.39742859485248,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.09939954238509939,
         "croic": 0.018656728301938874
       },
       {
@@ -1220,7 +1220,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.67486000297338,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.164350711849972,
         "croic": null
       },
       {
@@ -1236,7 +1236,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 23.389145727406667,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06861447512812546,
         "croic": -0.012787285131684263
       },
       {
@@ -1252,7 +1252,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 31.10683727984856,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.09416680318735213,
         "croic": null
       },
       {
@@ -1268,7 +1268,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 28.95765781536786,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10722763476394824,
         "croic": 0.05430928572369208
       },
       {
@@ -1284,7 +1284,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.09904797985604,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.08830881369767779,
         "croic": null
       },
       {
@@ -1300,7 +1300,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 28.988700186362788,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.15449408209762128,
         "croic": -0.07373669959695131
       },
       {
@@ -1316,7 +1316,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.13549591036667,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03402753026104847,
         "croic": null
       },
       {
@@ -1332,7 +1332,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.17152528545206,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.02572379124117624,
         "croic": null
       },
       {
@@ -1348,7 +1348,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.12727921495164,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.07705968016580614,
         "croic": -0.11905505975789227
       },
       {
@@ -1364,7 +1364,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 45.999470303317736,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.028498403566665692,
         "croic": -0.0632511760480275
       },
       {
@@ -1380,7 +1380,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 91.42956440054044,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05298511859762759,
         "croic": null
       },
       {
@@ -1396,7 +1396,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 73.11379244563145,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.07049003820595881,
         "croic": null
       },
       {
@@ -1412,7 +1412,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.96123760266609,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.016436933333333334,
         "croic": null
       },
       {
@@ -1444,7 +1444,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 89.65856999748151,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.0088772899031598,
         "croic": null
       },
       {
@@ -1460,7 +1460,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 84.99134409349463,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06140251936223956,
         "croic": null
       },
       {
@@ -1476,7 +1476,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.64190031993113,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.014603190974837373,
         "croic": 0.05584423350102705
       },
       {
@@ -1492,7 +1492,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.736978506044395,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0497688948769379,
         "croic": 0.0916888955179204
       },
       {
@@ -1508,7 +1508,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.634327759738696,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.04396669157380366,
         "croic": -0.2318464068389232
       },
       {
@@ -1524,7 +1524,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.87052849441649,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05559111111111112,
         "croic": null
       },
       {
@@ -1540,7 +1540,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 59.5901101897817,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.07485346772306023,
         "croic": -0.037719188552455755
       },
       {
@@ -1556,7 +1556,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 81.44786505072075,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07857074528368609,
         "croic": null
       },
       {
@@ -1572,7 +1572,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.04003881978389,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10154346227077082,
         "croic": null
       },
       {
@@ -1588,7 +1588,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 40.00047601331667,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0647992995765803,
         "croic": null
       },
       {
@@ -1604,7 +1604,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.02623331007472,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10396821922786106,
         "croic": null
       },
       {
@@ -1620,7 +1620,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.94796166985039,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.07480774853000283,
         "croic": null
       },
       {
@@ -1636,7 +1636,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 85.36206760093035,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0624340177841124,
         "croic": null
       },
       {
@@ -1652,7 +1652,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.44469444776675,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08063732370306212,
         "croic": null
       },
       {
@@ -1668,7 +1668,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.23263398292057,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1308938207423006,
         "croic": 0.049806879096066056
       },
       {
@@ -1684,7 +1684,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.8272670695228,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04427223719676551,
         "croic": null
       },
       {
@@ -1700,7 +1700,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 50.04904919013531,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09776571837008036,
         "croic": null
       },
       {
@@ -1716,7 +1716,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 46.01056458077557,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.07792476174638757,
         "croic": 0.03523957775772354
       },
       {
@@ -1732,7 +1732,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 38.01894743045071,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.27891825807987436,
         "croic": 0.1575523321348906
       },
       {
@@ -1748,7 +1748,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 16.11559818273599,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.6660813000544454,
         "croic": -0.265005265005265
       },
       {
@@ -1764,7 +1764,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.95152254840338,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.01908384044373186,
         "croic": -0.046831579300265595
       },
       {
@@ -1780,7 +1780,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.4100780938266,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10845736702434522,
         "croic": 0.10435421142810519
       },
       {
@@ -1796,7 +1796,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.48634371153439,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09752864602002533,
         "croic": null
       },
       {
@@ -1812,7 +1812,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.8151310655098,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.17256673100828945,
         "croic": null
       },
       {
@@ -1828,7 +1828,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.70220114806986,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1755513267460514,
         "croic": 0.03447287142015719
       },
       {
@@ -1844,7 +1844,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 14.871228890881612,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.17613258542231136,
         "croic": -0.07430772117627085
       },
       {
@@ -1860,7 +1860,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.70706300057364,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08213509722218217,
         "croic": null
       },
       {
@@ -1876,7 +1876,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.80476037311033,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.015604992606799276,
         "croic": -0.02849207981896729
       },
       {
@@ -1892,7 +1892,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.52095049120995,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.16124572223995726,
         "croic": -0.008647090480420679
       },
       {
@@ -1908,7 +1908,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.413405219256774,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07565998013193026,
         "croic": 0.10669456066945607
       }
     ]
@@ -1929,7 +1929,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.48043208394509,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10140958243451197,
         "croic": null
       },
       {
@@ -1945,7 +1945,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 81.85342486627569,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.010238557455387143,
         "croic": null
       },
       {
@@ -1961,7 +1961,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.43384438575371,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.058502787858241714,
         "croic": 0.11594825609387481
       },
       {
@@ -1977,7 +1977,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 43.2293436421799,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10070495253981493,
         "croic": null
       },
       {
@@ -1993,7 +1993,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.21973821737666,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09596169463745274,
         "croic": null
       },
       {
@@ -2009,7 +2009,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.469313668289374,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03277824356652581,
         "croic": null
       },
       {
@@ -2025,7 +2025,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.31866678205398,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.09320987050189505,
         "croic": null
       },
       {
@@ -2041,7 +2041,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 37.96961521381962,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0473804078295429,
         "croic": 0.07547763386196821
       },
       {
@@ -2057,7 +2057,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.52246099277399,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.08802477915080623,
         "croic": -0.2201317774073192
       },
       {
@@ -2073,7 +2073,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.45933053861185,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06569589087830197,
         "croic": null
       },
       {
@@ -2089,7 +2089,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 89.46456658089606,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09764029502322569,
         "croic": null
       },
       {
@@ -2105,7 +2105,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.7133114797305,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04998005500886807,
         "croic": 0.09584115788027298
       },
       {
@@ -2121,7 +2121,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 64.31217638042091,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.01953505398569222,
         "croic": null
       },
       {
@@ -2137,7 +2137,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.564789721971295,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.01833418164306482,
         "croic": -0.02562035295171549
       },
       {
@@ -2153,7 +2153,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.82567703851741,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.09302319949128345,
         "croic": -0.17949919735654946
       },
       {
@@ -2169,7 +2169,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.25048514578069,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.11169994012206155,
         "croic": -0.10928657956826425
       },
       {
@@ -2185,7 +2185,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.0280894529134,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.020492114529463073,
         "croic": null
       },
       {
@@ -2201,7 +2201,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 59.931448985010505,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11890480417796331,
         "croic": null
       },
       {
@@ -2217,7 +2217,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.09463043587049,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0074150971377725024,
         "croic": null
       },
       {
@@ -2233,7 +2233,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.70954754035316,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0602637934880833,
         "croic": null
       },
       {
@@ -2249,7 +2249,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 67.20553171631587,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.12324087282398452,
         "croic": null
       },
       {
@@ -2265,7 +2265,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 50.570342239329,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.01927894995952146,
         "croic": null
       },
       {
@@ -2281,7 +2281,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.66263620240701,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04486038823085285,
         "croic": null
       },
       {
@@ -2297,7 +2297,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 67.40245914493889,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05965481212685516,
         "croic": null
       },
       {
@@ -2313,7 +2313,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.87686542107362,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03982676027209416,
         "croic": null
       },
       {
@@ -2329,7 +2329,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.39760673426663,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.031082316753652355,
         "croic": 0.12773636636404034
       },
       {
@@ -2345,7 +2345,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 82.88528508841225,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.008008252427184465,
         "croic": null
       },
       {
@@ -2361,7 +2361,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 89.73281182660172,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.012932024324881468,
         "croic": null
       },
       {
@@ -2377,7 +2377,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.5368807177266,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03306729408760117,
         "croic": null
       },
       {
@@ -2393,7 +2393,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.28880546547819,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06600512319757468,
         "croic": null
       },
       {
@@ -2409,7 +2409,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 83.31810246715919,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.00434741402394537,
         "croic": null
       },
       {
@@ -2425,7 +2425,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.0903792160998,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0648454052673029,
         "croic": null
       },
       {
@@ -2441,7 +2441,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.9814552995912,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.023775500770892275,
         "croic": -0.02393065370623158
       },
       {
@@ -2457,7 +2457,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 88.39372196769688,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.054677303580509554,
         "croic": null
       },
       {
@@ -2473,7 +2473,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 59.84877520197789,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.061899187975042506,
         "croic": null
       },
       {
@@ -2489,7 +2489,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.05091934902725,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.006321005082900531,
         "croic": null
       },
       {
@@ -2521,7 +2521,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.6260558166212,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08020430686549976,
         "croic": null
       },
       {
@@ -2537,7 +2537,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 93.77024692608316,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06038984532774464,
         "croic": null
       },
       {
@@ -2553,7 +2553,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.0144266917186,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06686373372878562,
         "croic": null
       },
       {
@@ -2569,7 +2569,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 85.0862525153207,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09071699184850479,
         "croic": null
       },
       {
@@ -2585,7 +2585,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.09711276821795,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08343853835270855,
         "croic": null
       },
       {
@@ -2601,7 +2601,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.83623595296531,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0767224051068079,
         "croic": null
       },
       {
@@ -2617,7 +2617,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.63665128661522,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03808310120264528,
         "croic": 0.06658307597282273
       },
       {
@@ -2649,7 +2649,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 25.65555712807414,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05342537142857143,
         "croic": null
       },
       {
@@ -2681,7 +2681,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.11508069894882,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07632064214695619,
         "croic": null
       },
       {
@@ -2697,7 +2697,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 86.49287583465234,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03905519034669973,
         "croic": null
       },
       {
@@ -2713,7 +2713,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 66.24873126753836,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.051984188437811635,
         "croic": 0.1641983747246905
       },
       {
@@ -2729,7 +2729,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.67486000297338,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.164350711849972,
         "croic": null
       },
       {
@@ -2745,7 +2745,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.42100184548917,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09741036386237101,
         "croic": null
       },
       {
@@ -2761,7 +2761,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.06990475920117,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.054682226988113605,
         "croic": null
       },
       {
@@ -2777,7 +2777,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 35.68921520243975,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.033153531900892916,
         "croic": null
       },
       {
@@ -2793,7 +2793,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 30.219223510343614,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03587947707350692,
         "croic": 0.023382465697143227
       },
       {
@@ -2809,7 +2809,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.51710887462879,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05118350626236149,
         "croic": null
       },
       {
@@ -2825,7 +2825,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 40.0612938980835,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06890813695144374,
         "croic": 0.07945215960824821
       },
       {
@@ -2841,7 +2841,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.08515599642117,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10337406703989434,
         "croic": null
       },
       {
@@ -2857,7 +2857,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 73.63028520110832,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08527782196097985,
         "croic": null
       },
       {
@@ -2873,7 +2873,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.77140187267423,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.17104873256042444,
         "croic": null
       },
       {
@@ -2889,7 +2889,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.70131100931923,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.043608634246084445,
         "croic": null
       },
       {
@@ -2905,7 +2905,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.28780195500163,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09496831531028291,
         "croic": null
       },
       {
@@ -2921,7 +2921,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.41604506432291,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.1131767749989932,
         "croic": -0.06239672250216678
       },
       {
@@ -2937,7 +2937,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 45.96627057924347,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.00168261251669969,
         "croic": -0.03638605326637907
       },
       {
@@ -2953,7 +2953,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.80798208104256,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05677169249169852,
         "croic": null
       },
       {
@@ -2969,7 +2969,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 51.04791454232674,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.055394165469773014,
         "croic": 0.1594367369222844
       },
       {
@@ -2985,7 +2985,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 43.00192307945092,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.012638461767553247,
         "croic": -0.1234855946343526
       },
       {
@@ -3001,7 +3001,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 39.394796558709025,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06291255263469595,
         "croic": null
       },
       {
@@ -3017,7 +3017,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 31.015801354401805,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.17247405379239455,
         "croic": 0.21526087416657846
       },
       {
@@ -3033,7 +3033,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.25001319868811,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06666197164852951,
         "croic": null
       },
       {
@@ -3049,7 +3049,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 82.59665649483145,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.019391237895200746,
         "croic": null
       },
       {
@@ -3081,7 +3081,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.25642394655361,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.023773090153405334,
         "croic": null
       },
       {
@@ -3097,7 +3097,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.99201354344903,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03610279304029304,
         "croic": null
       },
       {
@@ -3113,7 +3113,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.4631848501988,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.08082108089884144,
         "croic": null
       },
       {
@@ -3129,7 +3129,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.70229458909733,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.04799157782929586,
         "croic": null
       },
       {
@@ -3145,7 +3145,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.57806091145663,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05852323125659979,
         "croic": null
       },
       {
@@ -3161,7 +3161,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 81.90132062545621,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09493471726380726,
         "croic": null
       },
       {
@@ -3177,7 +3177,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 82.50839875061999,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.08629184318634059,
         "croic": null
       },
       {
@@ -3193,7 +3193,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 86.98180834516805,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06566039644012946,
         "croic": null
       },
       {
@@ -3209,7 +3209,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.80132083631499,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0780661741713571,
         "croic": 0.041257267308344316
       },
       {
@@ -3225,7 +3225,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 15.629106374098544,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10687258968201993,
         "croic": 0.17827504549781414
       },
       {
@@ -3241,7 +3241,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.7956141442529,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.023259836205060884,
         "croic": -0.035052906549712555
       },
       {
@@ -3257,7 +3257,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.85655845771426,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.023850435463426963,
         "croic": null
       },
       {
@@ -3273,7 +3273,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.06992229014354,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1027090789452567,
         "croic": null
       },
       {
@@ -3289,7 +3289,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 29.052909106342106,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.13929371378843097,
         "croic": -0.22426874907502573
       },
       {
@@ -3305,7 +3305,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 66.81437998092989,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08883014225207515,
         "croic": 0.11519793435732376
       },
       {
@@ -3321,7 +3321,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 67.25633976188776,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06031266025883392,
         "croic": null
       },
       {
@@ -3337,7 +3337,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.80256098600003,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06349031965099217,
         "croic": null
       },
       {
@@ -3353,7 +3353,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.17804195380669,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.2107401195760242,
         "croic": -0.28120768109249583
       },
       {
@@ -3369,7 +3369,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 48.500836193686716,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.055245418549343235,
         "croic": null
       },
       {
@@ -3385,7 +3385,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 48.621336708228334,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.21309506377448706,
         "croic": 0.12179237232618523
       },
       {
@@ -3401,7 +3401,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.79322961404752,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.25028206941739845,
         "croic": null
       },
       {
@@ -3417,7 +3417,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.45898146444436,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06074446792520627,
         "croic": 0.0444891160738605
       },
       {
@@ -3433,7 +3433,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 56.48536985681136,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.010385893580259061,
         "croic": -0.03451338012534795
       },
       {
@@ -3449,7 +3449,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.19871935051202,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.002992106588557493,
         "croic": null
       },
       {
@@ -3465,7 +3465,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.249942765006345,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07576650673025216,
         "croic": 0.05753194356199351
       },
       {
@@ -3481,7 +3481,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.53094247920396,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.02562015697432884,
         "croic": null
       },
       {
@@ -3497,7 +3497,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.57745837917325,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.03115365723415732,
         "croic": null
       },
       {
@@ -3513,7 +3513,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 59.73374218725206,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04143760565661866,
         "croic": null
       },
       {
@@ -3529,7 +3529,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 81.33749133749134,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08224743216311513,
         "croic": null
       },
       {
@@ -3545,7 +3545,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.191400535822886,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.030565154666291294,
         "croic": null
       },
       {
@@ -3561,7 +3561,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 64.89336463517465,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03605696891926628,
         "croic": null
       },
       {
@@ -3577,7 +3577,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 67.98009367681499,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04055373657303693,
         "croic": null
       },
       {
@@ -3593,7 +3593,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 22.928059388547304,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1523673591286298,
         "croic": 0.021028774708093067
       },
       {
@@ -3609,7 +3609,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.96501088352659,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09947358456396832,
         "croic": null
       },
       {
@@ -3625,7 +3625,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 83.90386327639126,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08243299742137036,
         "croic": null
       },
       {
@@ -3641,7 +3641,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.57916813199468,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.055387802954174635,
         "croic": null
       },
       {
@@ -3657,7 +3657,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 30.872451285955606,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.07874560054268466,
         "croic": -0.08655113957430778
       },
       {
@@ -3673,7 +3673,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 84.48389220171735,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.046612496818039126,
         "croic": null
       },
       {
@@ -3689,7 +3689,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 44.94956316426419,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04063195660452984,
         "croic": null
       },
       {
@@ -3705,7 +3705,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.02172663372148,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.056189224127032394,
         "croic": null
       },
       {
@@ -3721,7 +3721,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.84723234496199,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10475101708888662,
         "croic": 0.18686910167580797
       },
       {
@@ -3737,7 +3737,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 64.83772595382176,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07065653732298843,
         "croic": null
       },
       {
@@ -3753,7 +3753,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.68216941880267,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04417595219099664,
         "croic": null
       },
       {
@@ -3769,7 +3769,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 57.92405876612053,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05563993421984201,
         "croic": null
       },
       {
@@ -3785,7 +3785,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 67.67412103394419,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.070927300725695,
         "croic": 0.1457666322761008
       },
       {
@@ -3801,7 +3801,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.95341635834313,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.047828622664577006,
         "croic": null
       },
       {
@@ -3817,7 +3817,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.96123760266609,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.016436933333333334,
         "croic": null
       },
       {
@@ -3833,7 +3833,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.9368475572185,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10109508005116216,
         "croic": null
       },
       {
@@ -3849,7 +3849,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.04032039195072,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.08040375391944186,
         "croic": -0.09811719747662441
       },
       {
@@ -3865,7 +3865,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.28389421654099,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.01577288187315834,
         "croic": null
       },
       {
@@ -3881,7 +3881,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.2334323551459,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06362848593834092,
         "croic": 0.0556523759730452
       },
       {
@@ -3897,7 +3897,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.90765817965103,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.02853413132127125,
         "croic": null
       },
       {
@@ -3913,7 +3913,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 86.84980171844019,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.016057013137835086,
         "croic": null
       },
       {
@@ -3929,7 +3929,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.02442338837283,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06144183016352401,
         "croic": 0.006672335971740695
       },
       {
@@ -3945,7 +3945,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.66823368642422,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.025326336050564877,
         "croic": null
       },
       {
@@ -3961,7 +3961,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.52392986697573,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03018513567042979,
         "croic": null
       },
       {
@@ -3977,7 +3977,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.20145207949606,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10646202424819722,
         "croic": 0.07871367964518294
       },
       {
@@ -3993,7 +3993,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 43.733235942140055,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11943806609057328,
         "croic": null
       },
       {
@@ -4009,7 +4009,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.08614481268608,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.029887097344831328,
         "croic": null
       },
       {
@@ -4025,7 +4025,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.11331147619798,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.025911159730835846,
         "croic": null
       },
       {
@@ -4041,7 +4041,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.18087432216815,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.12663674872400263,
         "croic": null
       },
       {
@@ -4057,7 +4057,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.41429830636959,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04858956248730417,
         "croic": null
       },
       {
@@ -4073,7 +4073,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.96661726601816,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06181601084403476,
         "croic": 0.17255413894948765
       },
       {
@@ -4089,7 +4089,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.30347504107226,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.024463199212792264,
         "croic": 0.0602501558411395
       },
       {
@@ -4105,7 +4105,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.02124836940398,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09688227435689023,
         "croic": null
       },
       {
@@ -4121,7 +4121,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.37247103579457,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.011117128853805357,
         "croic": -0.1110715641609719
       },
       {
@@ -4137,7 +4137,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.646475686201626,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0714934723970509,
         "croic": 0.11040184591518128
       },
       {
@@ -4153,7 +4153,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 38.57885708159108,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11289739884393063,
         "croic": 0.14269953748886155
       },
       {
@@ -4169,7 +4169,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.86229259664786,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08192452075646946,
         "croic": null
       },
       {
@@ -4185,7 +4185,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 84.99134409349463,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06140251936223956,
         "croic": null
       },
       {
@@ -4201,7 +4201,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 82.01908889111704,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.15826303632339936,
         "croic": null
       },
       {
@@ -4217,7 +4217,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.44860507712845,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04756053854873489,
         "croic": null
       },
       {
@@ -4233,7 +4233,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 73.06666666666666,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.08462307421626249,
         "croic": null
       },
       {
@@ -4249,7 +4249,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.03398837121352,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04181945030340397,
         "croic": 0.19896799283633876
       },
       {
@@ -4265,7 +4265,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.66164001096148,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10663360348952887,
         "croic": null
       },
       {
@@ -4281,7 +4281,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.25538182642194,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07872601055253367,
         "croic": null
       },
       {
@@ -4297,7 +4297,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.469833359304495,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.041128283261219784,
         "croic": -0.07842103366850327
       },
       {
@@ -4313,7 +4313,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.3252630779866,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10611576096175049,
         "croic": 0.049231209957580103
       },
       {
@@ -4329,7 +4329,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 86.5488086087625,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.12699008021554098,
         "croic": null
       },
       {
@@ -4345,7 +4345,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.84261619083074,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07954271941378681,
         "croic": 0.003913360029122679
       },
       {
@@ -4361,7 +4361,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 78.95035778348783,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11426397169874705,
         "croic": null
       },
       {
@@ -4377,7 +4377,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.70715364444457,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.002621311538737466,
         "croic": null
       },
       {
@@ -4393,7 +4393,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 64.14642909054467,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08043692313355234,
         "croic": null
       },
       {
@@ -4409,7 +4409,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.50737608686515,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.09834736831020678,
         "croic": null
       },
       {
@@ -4425,7 +4425,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.9648776033987,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06303925360320844,
         "croic": 0.005400833363048484
       },
       {
@@ -4441,7 +4441,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.73394895620515,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.010354403826626049,
         "croic": null
       },
       {
@@ -4457,7 +4457,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 31.596520516650557,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09966795290165867,
         "croic": null
       },
       {
@@ -4473,7 +4473,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 84.8442340261262,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.02384869171073223,
         "croic": null
       },
       {
@@ -4489,7 +4489,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.6316057195866,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.024341864280672303,
         "croic": null
       },
       {
@@ -4505,7 +4505,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.67626585096298,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.05509436159134196,
         "croic": null
       },
       {
@@ -4521,7 +4521,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 43.097293944044665,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.01143162516738739,
         "croic": null
       },
       {
@@ -4537,7 +4537,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.61566485213077,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07339644367153753,
         "croic": 0.16488023098345622
       },
       {
@@ -4553,7 +4553,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 78.43707158498478,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.021447953678800143,
         "croic": null
       },
       {
@@ -4569,7 +4569,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.239144986263184,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.016030901339905555,
         "croic": -0.008521910146266297
       },
       {
@@ -4585,7 +4585,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.02623331007472,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10396821922786106,
         "croic": null
       },
       {
@@ -4601,7 +4601,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.00863115167309,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.036973733087594475,
         "croic": 0.055207245401063317
       },
       {
@@ -4617,7 +4617,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 44.83055865281466,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.008027199030032656,
         "croic": 0.012037353726725977
       },
       {
@@ -4633,7 +4633,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 34.73220056842124,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.040803479168702514,
         "croic": 0.06022956262781731
       },
       {
@@ -4649,7 +4649,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.50834496082965,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1208438349587113,
         "croic": 0.05318353440108833
       },
       {
@@ -4665,7 +4665,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.26218215951848,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08148216085863723,
         "croic": -0.020635065986456175
       },
       {
@@ -4681,7 +4681,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.16521735558224,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.023483617825721153,
         "croic": null
       },
       {
@@ -4697,7 +4697,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.50143669879462,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08595306691547464,
         "croic": null
       },
       {
@@ -4713,7 +4713,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 89.64237595360402,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0030351565660570526,
         "croic": null
       },
       {
@@ -4729,7 +4729,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 73.05862881620249,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.043764400257151954,
         "croic": -0.0932844479606152
       },
       {
@@ -4745,7 +4745,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.42788620240893,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.02444996482980296,
         "croic": null
       },
       {
@@ -4761,7 +4761,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 46.960834969515346,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.023350285531260007,
         "croic": 0.05
       },
       {
@@ -4777,7 +4777,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.98800124224607,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11209178926191374,
         "croic": null
       },
       {
@@ -4793,7 +4793,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.75906203718003,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.2675880856404642,
         "croic": null
       },
       {
@@ -4809,7 +4809,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.44775269208778,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.02592622950819672,
         "croic": null
       },
       {
@@ -4825,7 +4825,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 64.39991104302058,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.035212485448539936,
         "croic": null
       },
       {
@@ -4841,7 +4841,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 46.63363708749889,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05305390523112592,
         "croic": 0.12409054163298303
       },
       {
@@ -4857,7 +4857,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.19604847390535,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.002315563257638314,
         "croic": null
       },
       {
@@ -4873,7 +4873,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.35979325678704,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.09918672124416589,
         "croic": null
       },
       {
@@ -4889,7 +4889,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.01705974979207,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.040535577398615234,
         "croic": 0.05090528191247228
       },
       {
@@ -4905,7 +4905,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 37.88524275570907,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.014755067457176821,
         "croic": null
       },
       {
@@ -4921,7 +4921,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.09807809879723,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.018201258671028574,
         "croic": null
       },
       {
@@ -4937,7 +4937,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.40453170925376,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.06831075316867077,
         "croic": null
       },
       {
@@ -4953,7 +4953,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.33535009099845,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.055902832170105096,
         "croic": 0.0660005959037422
       },
       {
@@ -4969,7 +4969,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 66.33693537422938,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.01262885741553303,
         "croic": null
       },
       {
@@ -4985,7 +4985,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.77589881075136,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03398583806624085,
         "croic": null
       },
       {
@@ -5001,7 +5001,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 67.37396779242432,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.015413671989229435,
         "croic": null
       },
       {
@@ -5017,7 +5017,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.28934736621541,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04077706209220668,
         "croic": null
       },
       {
@@ -5033,7 +5033,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 57.093374318864335,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.03232647262528313,
         "croic": -0.15136299380002002
       },
       {
@@ -5065,7 +5065,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.3253696244584,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07857619776870266,
         "croic": null
       },
       {
@@ -5081,7 +5081,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.49619014239912,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1398337112622827,
         "croic": null
       },
       {
@@ -5097,7 +5097,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 84.3777067994803,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.01785832177989041,
         "croic": null
       },
       {
@@ -5113,7 +5113,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.44145492586897,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.036746320590225506,
         "croic": null
       },
       {
@@ -5129,7 +5129,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.48168676598327,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.032949959367755854,
         "croic": 0.06600530732733897
       },
       {
@@ -5145,7 +5145,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.53900737413289,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1332051519768888,
         "croic": null
       },
       {
@@ -5161,7 +5161,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 57.4720328045268,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.027372801961876306,
         "croic": -0.03248167907822855
       },
       {
@@ -5177,7 +5177,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 83.68792495449586,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06717445552602316,
         "croic": null
       },
       {
@@ -5193,7 +5193,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.29147031521855,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06723910359837842,
         "croic": null
       },
       {
@@ -5209,7 +5209,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.303957312529086,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.0049673455025133414,
         "croic": -0.0844732128872333
       },
       {
@@ -5225,7 +5225,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.91226480879904,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.13501542536764588,
         "croic": null
       },
       {
@@ -5241,7 +5241,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.952121217138824,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10645371190861547,
         "croic": null
       },
       {
@@ -5257,7 +5257,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.50944429236244,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.033298613993897073,
         "croic": null
       },
       {
@@ -5289,7 +5289,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 46.60472055214299,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.12367089192359121,
         "croic": null
       },
       {
@@ -5305,7 +5305,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.84616174287095,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.002287997727512349,
         "croic": null
       },
       {
@@ -5321,7 +5321,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 22.029359618582177,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.002455245679294806,
         "croic": null
       },
       {
@@ -5337,7 +5337,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.01722965676668,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -7.892734962013765e-05,
         "croic": null
       },
       {
@@ -5369,7 +5369,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 56.127272727272725,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.12246586066361992,
         "croic": 0.10590686718608444
       },
       {
@@ -5385,7 +5385,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 82.25259656600475,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.10122151110974344,
         "croic": null
       },
       {
@@ -5401,7 +5401,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 33.26120942167997,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0713200722062075,
         "croic": null
       },
       {
@@ -5417,7 +5417,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.35637510553353,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.015086541287655644,
         "croic": null
       },
       {
@@ -5433,7 +5433,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.44469444776675,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08063732370306212,
         "croic": null
       },
       {
@@ -5449,7 +5449,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.17322766180924,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.11092056301637351,
         "croic": -0.04144813090461324
       },
       {
@@ -5465,7 +5465,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.37774772768053,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.2919595588235294,
         "croic": 0.10095297170310011
       },
       {
@@ -5481,7 +5481,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.16993740742359,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.031178797219896925,
         "croic": -0.055040909347367585
       },
       {
@@ -5497,7 +5497,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.121779890960795,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0591016548463357,
         "croic": null
       },
       {
@@ -5513,7 +5513,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.56181448290036,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.007881978547428276,
         "croic": null
       },
       {
@@ -5529,7 +5529,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 50.56663124621863,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.02046288696093209,
         "croic": null
       },
       {
@@ -5545,7 +5545,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.6238644641412,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.011422498394543925,
         "croic": null
       },
       {
@@ -5561,7 +5561,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.16135341286916,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.15711614958802128,
         "croic": null
       },
       {
@@ -5577,7 +5577,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.21535507756686,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.23238020523363812,
         "croic": null
       },
       {
@@ -5593,7 +5593,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 40.82962191948615,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0990724319837645,
         "croic": null
       },
       {
@@ -5609,7 +5609,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.19812138428023,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.04108224110860809,
         "croic": null
       },
       {
@@ -5625,7 +5625,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 34.083369707551284,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1731308948700253,
         "croic": 0.08620511228396978
       },
       {
@@ -5641,7 +5641,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.73735668976143,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07466005276280853,
         "croic": null
       },
       {
@@ -5657,7 +5657,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 51.14929495207786,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.05853312595623656,
         "croic": null
       },
       {
@@ -5673,7 +5673,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 81.09793156396168,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.0027393948624047865,
         "croic": -0.0023004226463722954
       },
       {
@@ -5689,7 +5689,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.91253873468437,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.223297417913442,
         "croic": null
       },
       {
@@ -5705,7 +5705,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.35516727726559,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.006407381993253619,
         "croic": null
       },
       {
@@ -5721,7 +5721,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 82.52973574399583,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.002739018775925625,
         "croic": null
       },
       {
@@ -5737,7 +5737,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.05401730854707,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.012764023846871541,
         "croic": null
       },
       {
@@ -5753,7 +5753,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.3494107037348,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.012235759510045463,
         "croic": -0.030150331737633325
       },
       {
@@ -5769,7 +5769,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.47024787849165,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1852453755657525,
         "croic": null
       },
       {
@@ -5785,7 +5785,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 43.60294346917776,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1724435947228031,
         "croic": 0.13520335686343074
       },
       {
@@ -5801,7 +5801,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.04339420955672,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09643634385201305,
         "croic": null
       },
       {
@@ -5817,7 +5817,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 37.971361606760986,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.025024371090054513,
         "croic": -0.024717037197114995
       },
       {
@@ -5833,7 +5833,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 35.89280038143674,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07904647629304104,
         "croic": null
       },
       {
@@ -5849,7 +5849,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.32856400949974,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.038197199786377894,
         "croic": null
       },
       {
@@ -5865,7 +5865,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 30.720356974670548,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05104408322378764,
         "croic": 0.22312617702448212
       },
       {
@@ -5881,7 +5881,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 21.232253259725983,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.15087697017628746,
         "croic": 0.2497348136624001
       },
       {
@@ -5897,7 +5897,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.177794774627564,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.014970559229609003,
         "croic": 0.05432957110609481
       },
       {
@@ -5913,7 +5913,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 57.552026479805626,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1765937992859225,
         "croic": 0.21862290572346657
       },
       {
@@ -5929,7 +5929,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.976663892774305,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.024245907418999874,
         "croic": -0.08266369639589466
       },
       {
@@ -5945,7 +5945,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.156293756940755,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05911860049183993,
         "croic": -0.014203554466338112
       },
       {
@@ -5961,7 +5961,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 83.74790040562351,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.044147310113467314,
         "croic": null
       },
       {
@@ -5977,7 +5977,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 49.5119602771537,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.032329699179495255,
         "croic": 0.1375238971889825
       },
       {
@@ -5993,7 +5993,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 44.80435763553149,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.13391439482325626,
         "croic": 0.17359920239282153
       },
       {
@@ -6009,7 +6009,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.42999194669002,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0839583612463043,
         "croic": 0.14075710575363487
       },
       {
@@ -6025,7 +6025,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.10019415190916,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.003811150349039956,
         "croic": null
       },
       {
@@ -6041,7 +6041,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.564819157447516,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.018539007627826044,
         "croic": null
       },
       {
@@ -6057,7 +6057,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.76012735537356,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03588659129736292,
         "croic": 0.07470198002185903
       },
       {
@@ -6073,7 +6073,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.47559123646914,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.2070626892223529,
         "croic": null
       },
       {
@@ -6105,7 +6105,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.47598562388045,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.02442861061982919,
         "croic": null
       },
       {
@@ -6121,7 +6121,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.82980198248573,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.12894842356605696,
         "croic": null
       },
       {
@@ -6137,7 +6137,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.81703355624147,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03215215740999541,
         "croic": -0.013791416142157158
       },
       {
@@ -6153,7 +6153,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 84.90788548167437,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.03210847839820188,
         "croic": null
       },
       {
@@ -6185,7 +6185,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.56165135212301,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.058680671678059904,
         "croic": null
       },
       {
@@ -6201,7 +6201,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 67.68735085572482,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.1432719313503286,
         "croic": null
       },
       {
@@ -6217,7 +6217,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 14.871228890881612,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.17613258542231136,
         "croic": -0.07430772117627085
       },
       {
@@ -6233,7 +6233,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 38.31800444203164,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.019405146359354142,
         "croic": -0.023637074320042865
       },
       {
@@ -6249,7 +6249,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 88.45612998558371,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0437724639783509,
         "croic": null
       },
       {
@@ -6265,7 +6265,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.7276361265248,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07448581879843356,
         "croic": null
       },
       {
@@ -6281,7 +6281,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.12107774570201,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.025574856006317433,
         "croic": null
       },
       {
@@ -6297,7 +6297,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.98828195125189,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09313323451638561,
         "croic": 0.044877262580075156
       },
       {
@@ -6313,7 +6313,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.874190887059804,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.00583852018372167,
         "croic": -0.056424114831539515
       },
       {
@@ -6329,7 +6329,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.76216884247548,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03944710834553441,
         "croic": 0.036971133943894806
       },
       {
@@ -6345,7 +6345,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 37.50067364174578,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.010318891853444343,
         "croic": null
       },
       {
@@ -6361,7 +6361,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.14646289294265,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.10439358503378054,
         "croic": -0.1413471179474528
       },
       {
@@ -6377,7 +6377,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 32.4119976735813,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0977675387339499,
         "croic": 0.08401711199943895
       },
       {
@@ -6393,7 +6393,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.80141043381812,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09435575902919976,
         "croic": null
       },
       {
@@ -6409,7 +6409,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.09044659090615,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08390338662644325,
         "croic": null
       },
       {
@@ -6425,7 +6425,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 9.565664517710795,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04237686919303535,
         "croic": 0.1145122223562532
       },
       {
@@ -6441,7 +6441,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 32.043004111850834,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11959917630631418,
         "croic": null
       },
       {
@@ -6457,7 +6457,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.54649818365525,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05180438603145704,
         "croic": null
       },
       {
@@ -6473,7 +6473,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 64.69195488799372,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.11015879463152692,
         "croic": null
       },
       {
@@ -6489,7 +6489,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.80476037311033,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.015604992606799276,
         "croic": -0.02849207981896729
       },
       {
@@ -6505,7 +6505,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.91493180186647,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.2585340339140603,
         "croic": null
       },
       {
@@ -6521,7 +6521,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.49785930443758,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.052683005712365595,
         "croic": null
       },
       {
@@ -6537,7 +6537,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.503833128338194,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.010542637281600056,
         "croic": null
       },
       {
@@ -6553,7 +6553,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 38.12981812453312,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0020982984066136925,
         "croic": null
       },
       {
@@ -6569,7 +6569,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.10451589726709,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.049095384433094635,
         "croic": null
       },
       {
@@ -6585,7 +6585,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 51.6240635900955,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10607209318354124,
         "croic": null
       },
       {
@@ -6601,7 +6601,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.00904968997226,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05837390839725923,
         "croic": null
       },
       {
@@ -6633,7 +6633,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.06433054393305,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03531970770846635,
         "croic": null
       },
       {
@@ -6649,7 +6649,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.53413605424026,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.04605090366809117,
         "croic": null
       },
       {
@@ -6665,7 +6665,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.08112579269974,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08864429530201341,
         "croic": null
       },
       {
@@ -6681,7 +6681,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.066203519757195,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1441555741166989,
         "croic": 0.0010551303279299439
       },
       {
@@ -6697,7 +6697,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.434144233259524,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07012352924129137,
         "croic": null
       },
       {
@@ -6713,7 +6713,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 67.06021124987545,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0683672803921003,
         "croic": null
       },
       {
@@ -6729,7 +6729,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.99524117863753,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05385623492088136,
         "croic": null
       },
       {
@@ -6745,7 +6745,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.28097427743842,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.062077683046833546,
         "croic": 0.08271044971190564
       },
       {
@@ -6761,7 +6761,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 82.13630685312026,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03330267063353926,
         "croic": null
       },
       {
@@ -6777,7 +6777,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.10531412661905,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04150660613468366,
         "croic": null
       },
       {
@@ -6793,7 +6793,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 78.94562768201698,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05781699033845171,
         "croic": null
       },
       {
@@ -6809,7 +6809,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 66.15172941818595,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.039501970910275526,
         "croic": 0.023104151465852884
       },
       {
@@ -6825,7 +6825,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.61581751009537,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04992512766067876,
         "croic": null
       },
       {
@@ -6841,7 +6841,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 49.045394250664984,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03237882528856337,
         "croic": 0.026592663440850556
       },
       {
@@ -6857,7 +6857,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 50.02334015584042,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.002931066570123979,
         "croic": null
       },
       {
@@ -6873,7 +6873,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.977639963645785,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.058110340303648346,
         "croic": 0.013269846556307172
       },
       {
@@ -6889,7 +6889,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.83710926297677,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04413739064903327,
         "croic": 0.05751058032349701
       },
       {
@@ -6905,7 +6905,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.43874379636006,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.003421234300975004,
         "croic": null
       },
       {
@@ -6921,7 +6921,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 78.99822920268184,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04107404396230363,
         "croic": null
       },
       {
@@ -6937,7 +6937,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 73.50811822747724,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.05781128715655544,
         "croic": null
       }
     ]
@@ -6958,7 +6958,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.417412358669054,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10540938133144992,
         "croic": 0.45722043359909353
       },
       {
@@ -6974,7 +6974,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.37535992229148,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.08525137823615063,
         "croic": null
       },
       {
@@ -6990,7 +6990,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 30.28824490861311,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.697972031025037,
         "croic": null
       },
       {
@@ -7006,7 +7006,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 77.39930599186135,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.198475811327963,
         "croic": null
       },
       {
@@ -7022,7 +7022,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.50237015254395,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.03326550491496354,
         "croic": null
       },
       {
@@ -7038,7 +7038,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 37.59136519801064,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.3945949085347606,
         "croic": -0.18908661438220736
       },
       {
@@ -7054,7 +7054,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.77589881075136,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03398583806624085,
         "croic": null
       },
       {
@@ -7070,7 +7070,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 59.608244734315264,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06208188643116039,
         "croic": 0.11134258632191091
       },
       {
@@ -7086,7 +7086,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 51.98047786879106,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.01663519606757654,
         "croic": 0.03637716605112175
       },
       {
@@ -7102,7 +7102,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 48.512551138946414,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.02668414986553527,
         "croic": 0.02339756193472277
       },
       {
@@ -7118,7 +7118,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.50192369416674,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09603478658911185,
         "croic": 0.05115428978096951
       },
       {
@@ -7134,7 +7134,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.95152254840338,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.01908384044373186,
         "croic": -0.046831579300265595
       },
       {
@@ -7150,7 +7150,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 50.692910407657166,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.06803973486656763,
         "croic": -0.024358439162459004
       },
       {
@@ -7166,7 +7166,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 35.860359758478126,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.17081710875386252,
         "croic": 0.18277845777072466
       }
     ]
@@ -7187,7 +7187,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 51.978535880198386,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.02819432687260051,
         "croic": 0.11470868288427602
       },
       {
@@ -7203,7 +7203,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 56.91347790043195,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.03472685592028,
         "croic": 0.0932144309533492
       },
       {
@@ -7219,7 +7219,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.345288478370556,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05476097160340667,
         "croic": 0.0918071878725941
       },
       {
@@ -7256,7 +7256,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.71869872028776,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.014696959656670375,
         "croic": null
       },
       {
@@ -7272,7 +7272,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 77.29757875553241,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.013234560823085134,
         "croic": null
       }
     ]
@@ -7293,7 +7293,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 35.59313984461555,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.01328172648910088,
         "croic": 0.10595202808338999
       },
       {
@@ -7309,7 +7309,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 93.67437627259568,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.0031232045101247403,
         "croic": null
       },
       {
@@ -7325,7 +7325,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 94.6236609651664,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.043136964609261294,
         "croic": null
       },
       {
@@ -7341,7 +7341,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.85655845771426,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.023850435463426963,
         "croic": null
       },
       {
@@ -7357,7 +7357,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.67086486596211,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.039257715785051245,
         "croic": -0.14151052109981793
       },
       {
@@ -7373,7 +7373,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 48.500836193686716,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.055245418549343235,
         "croic": null
       },
       {
@@ -7389,7 +7389,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.3154793719481,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1495398691085365,
         "croic": null
       },
       {
@@ -7421,7 +7421,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.96501088352659,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09947358456396832,
         "croic": null
       },
       {
@@ -7437,7 +7437,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.90122087287116,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.06454219733446558,
         "croic": null
       },
       {
@@ -7453,7 +7453,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.63513141590388,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04619247616412128,
         "croic": null
       },
       {
@@ -7485,7 +7485,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 77.9594206892479,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.09010059117687083,
         "croic": null
       },
       {
@@ -7501,7 +7501,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.38333298297715,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.008857017114220208,
         "croic": null
       },
       {
@@ -7517,7 +7517,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.96852565314207,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.00018636906566129935,
         "croic": null
       },
       {
@@ -7533,7 +7533,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 72.28718739321786,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.042992160705536506,
         "croic": null
       },
       {
@@ -7549,7 +7549,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 87.84627728547761,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0017931733917565529,
         "croic": null
       },
       {
@@ -7581,7 +7581,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.078609172787544,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.012467343600129896,
         "croic": null
       },
       {
@@ -7597,7 +7597,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.91226480879904,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.13501542536764588,
         "croic": null
       },
       {
@@ -7613,7 +7613,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 89.43718629999432,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.006919067182466418,
         "croic": null
       },
       {
@@ -7629,7 +7629,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.61581751009537,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.04992512766067876,
         "croic": null
       }
     ]
@@ -7650,7 +7650,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 75.2710306024427,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.022300865071340298,
         "croic": null
       }
     ]
@@ -7671,7 +7671,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.759995579246265,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.01275542786766476,
         "croic": -0.07826439146051607
       },
       {
@@ -7687,7 +7687,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 25.1723301317273,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.038860241066123416,
         "croic": null
       },
       {
@@ -7703,7 +7703,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 29.23021204913899,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.11672319608018161,
         "croic": -0.16668268484215717
       },
       {
@@ -7719,7 +7719,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.590713039426134,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.056635184409264475,
         "croic": null
       },
       {
@@ -7735,7 +7735,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 21.16324352278011,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.282449658821436,
         "croic": -0.19464811027664378
       },
       {
@@ -7751,7 +7751,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.92132260589915,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.05881642013251702,
         "croic": 0.1399069624453117
       },
       {
@@ -7767,7 +7767,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.28780195500163,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.09496831531028291,
         "croic": null
       },
       {
@@ -7783,7 +7783,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 17.63710885663595,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.1560845795365471,
         "croic": null
       },
       {
@@ -7799,7 +7799,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.12727921495164,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.07705968016580614,
         "croic": -0.11905505975789227
       },
       {
@@ -7831,7 +7831,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 77.42178510319047,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.007022510419685962,
         "croic": null
       },
       {
@@ -7847,7 +7847,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 28.95890410958904,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.23442121554156398,
         "croic": 0.1464582453175609
       },
       {
@@ -7863,7 +7863,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 66.23792952684104,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.10898519378655264,
         "croic": 0.06407194908056699
       },
       {
@@ -7879,7 +7879,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 71.34272186475658,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08260647731966278,
         "croic": null
       },
       {
@@ -7895,7 +7895,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.84844789811571,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.00680128588105107,
         "croic": null
       },
       {
@@ -7911,7 +7911,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.07291600734224,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0010515134327686512,
         "croic": -0.0924133162106095
       },
       {
@@ -7927,7 +7927,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 30.496294113608908,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.007903302690755364,
         "croic": null
       },
       {
@@ -7943,7 +7943,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 50.52455298130369,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.13231432327283427,
         "croic": 0.10835918076270094
       },
       {
@@ -7959,7 +7959,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.02987319153614,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.035990219074279815,
         "croic": null
       },
       {
@@ -7975,7 +7975,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 46.01056458077557,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.07792476174638757,
         "croic": 0.03523957775772354
       },
       {
@@ -7991,7 +7991,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.9777475394558,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.0336801189654218,
         "croic": null
       },
       {
@@ -8007,7 +8007,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.91253873468437,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.223297417913442,
         "croic": null
       },
       {
@@ -8023,7 +8023,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 77.75978759423468,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.049917545572916666,
         "croic": null
       },
       {
@@ -8039,7 +8039,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.85462599349604,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.2152719115095735,
         "croic": 0.05567903208082455
       },
       {
@@ -8055,7 +8055,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 29.363343746789134,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.16983064682745097,
         "croic": -0.06814232439095967
       },
       {
@@ -8071,7 +8071,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.110003018968335,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.16633501122379957,
         "croic": null
       },
       {
@@ -8087,7 +8087,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 54.53413605424026,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": -0.04605090366809117,
         "croic": null
       },
       {
@@ -8103,7 +8103,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 64.92364645997225,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.02473860258303015,
         "croic": null
       },
       {
@@ -8119,7 +8119,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.434144233259524,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.07012352924129137,
         "croic": null
       },
       {
@@ -8135,7 +8135,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.494614520632375,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.08003340376551882,
         "croic": null
       },
       {
@@ -8151,7 +8151,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 48.901439513484924,
-        "fcf_yield_avg": null,
+        "fcf_yield_avg": 0.2152593953323593,
         "croic": 0.0964647158525476
       }
     ]
