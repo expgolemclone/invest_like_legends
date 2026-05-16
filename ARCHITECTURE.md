@@ -88,6 +88,7 @@ invest_like_legends/
 
 ### ローカルサーバー (`serve.py`)
 
+- 起動時に `stock_db.storage.prices.is_stooq_price_update_required()` で株価鮮度を判定し、古い場合だけ `stock_db.sources.stooq.run_stooq_price_update_command()` で Stooq 価格を更新する。成功した更新チェックは記録されるため、Stooq 側のデータがまだ進んでいない場合も起動ごとの再実行は抑止される
 - 起動時に `build_investors_document()` + `write_investors_document()` を呼び出し、`docs/assets/data/investors.json` を自動生成する
 - `/api/portfolio` は `build_investors_document()` を毎回呼び、最新DBから投資家データを組み立てて返す
 - 生成済み `docs/assets/data/investors.json` はローカルAPIの入力には使わない

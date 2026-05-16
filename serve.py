@@ -2,9 +2,17 @@
 
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 
-from investor_data import build_investors_document, write_investors_document
+from investor_data import build_investors_document, resolve_stocks_db_path, write_investors_document
+from stock_db.sources.stooq import (
+    StooqDailyPriceUpdateError,
+    StooqPriceUpdateCommandResult,
+    run_stooq_price_update_command,
+)
+from stock_db.storage.connection import get_connection
+from stock_db.storage.prices import is_stooq_price_update_required
 from stock_web_ui.handler import ApiHandler, json_route
 from stock_web_ui.page import IndexPage
 from stock_web_ui.serve import serve as _serve
@@ -25,7 +33,33 @@ def _create_api_routes() -> dict[str, ApiHandler]:
     return {"/api/portfolio": json_route(lambda _params: _load_and_enrich_investors())}
 
 
+def _ensure_stooq_prices_fresh() -> StooqPriceUpdateCommandResult | None:
+    """Refresh Stooq prices when the configured stocks DB is stale."""
+    db_path = resolve_stocks_db_path()
+    conn = get_connection(db_path)
+    try:
+        update_required = is_stooq_price_update_required(conn)
+    finally:
+        conn.close()
+
+    if not update_required:
+        return None
+
+    try:
+        result = run_stooq_price_update_command(db_path=db_path)
+    except (StooqDailyPriceUpdateError, ValueError) as exc:
+        print(f"Failed to update Stooq prices: {exc}", file=sys.stderr)
+        raise SystemExit(1) from exc
+
+    update_message = (result.stderr or result.stdout).strip()
+    suffix = f": {update_message}" if update_message else ""
+    print(f"Updated Stooq prices{suffix}", file=sys.stderr)
+    return result
+
+
 def main() -> None:
+    _ensure_stooq_prices_fresh()
+
     doc = build_investors_document()
     output = write_investors_document(doc)
     print(f"GitHub Pages JSON saved to {output}")
