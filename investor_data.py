@@ -29,6 +29,7 @@ _METRIC_FIELDS: tuple[str, ...] = (
     "equity_ratio",
     "fcf_yield_avg",
     "croic",
+    "has_preferred_shares",
 )
 _NORMALIZE_RE: re.Pattern[str] = re.compile(r"[\s\u3000・･·•\-ー_()（）\[\]【】.,/]")
 _CORPORATE_TOKENS: tuple[str, ...] = (
@@ -69,6 +70,7 @@ class StockEntry(TypedDict):
     equity_ratio: float | None
     fcf_yield_avg: float | None
     croic: float | None
+    has_preferred_shares: bool | None
 
 
 class InvestorEntry(TypedDict):
@@ -108,7 +110,7 @@ def build_investors_document(
     watch_codes_path: Path | None = None,
     handbook_db_path: Path | None = None,
     stocks_db_path: Path | None = None,
-    metrics_map: dict[str, dict[str, float | None]] | None = None,
+    metrics_map: dict[str, dict[str, float | bool | None]] | None = None,
     stock_names: dict[str, str] | None = None,
 ) -> dict[str, InvestorEntry]:
     investor_config: dict[str, str] = load_investor_config(config_path)
@@ -116,7 +118,7 @@ def build_investors_document(
     names_map: dict[str, str] = (
         stock_names if stock_names is not None else load_stock_names(stocks_db_path)
     )
-    resolved_metrics_map: dict[str, dict[str, float | None]] = (
+    resolved_metrics_map: dict[str, dict[str, float | bool | None]] = (
         metrics_map if metrics_map is not None else compute_metrics_map()
     )
     shareholder_rows: list[ShareholderRow] = load_major_shareholder_rows(handbook_db_path)
@@ -200,7 +202,7 @@ def load_stock_names(db_path: Path | None = None) -> dict[str, str]:
         return get_stock_names(conn)
 
 
-def compute_metrics_map() -> dict[str, dict[str, float | None]]:
+def compute_metrics_map() -> dict[str, dict[str, float | bool | None]]:
     from formula_screening.web import compute_all_stock_metrics
 
     return compute_all_stock_metrics()
@@ -283,7 +285,7 @@ def _build_watch_stocks(
     *,
     watch_codes: list[str],
     stock_names: dict[str, str],
-    metrics_map: dict[str, dict[str, float | None]],
+    metrics_map: dict[str, dict[str, float | bool | None]],
 ) -> list[StockEntry]:
     stocks: list[StockEntry] = []
     for code in watch_codes:
@@ -304,7 +306,7 @@ def _build_investor_stocks(
     matched_names: list[str],
     shareholder_rows: list[ShareholderRow],
     stock_names: dict[str, str],
-    metrics_map: dict[str, dict[str, float | None]],
+    metrics_map: dict[str, dict[str, float | bool | None]],
 ) -> list[StockEntry]:
     rows_by_code: dict[str, list[ShareholderRow]] = defaultdict(list)
     matched_name_set: set[str] = set(matched_names)
@@ -322,7 +324,7 @@ def _build_investor_stocks(
             sum(row["ratio_pct"] or 0 for row in rows),
             2,
         )
-        metrics: dict[str, float | None] | None = metrics_map.get(code)
+        metrics: dict[str, float | bool | None] | None = metrics_map.get(code)
 
         stock: StockEntry = {
             "code": code,
@@ -338,16 +340,16 @@ def _build_investor_stocks(
 
 def _add_metrics(
     stock: StockEntry,
-    metrics: dict[str, float | None] | None,
+    metrics: dict[str, float | bool | None] | None,
 ) -> None:
-    metrics_dict: dict[str, float | None] = metrics or {}
+    metrics_dict: dict[str, float | bool | None] = metrics or {}
     for field in _METRIC_FIELDS:
         stock[field] = metrics_dict.get(field)
 
 
 def _compute_amount_millions(
     shares: int | None,
-    metrics: dict[str, float | None] | None,
+    metrics: dict[str, float | bool | None] | None,
 ) -> int | None:
     if shares is None or metrics is None:
         return None

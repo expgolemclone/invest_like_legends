@@ -34,6 +34,14 @@ EXPECTED_WATCH_CODES: list[str] = [
     "4231",
     "1869",
     "5363",
+    "8152",
+    "5458",
+    "3758",
+    "6396",
+    "8158",
+    "1866",
+    "8103",
+    "9845",
 ]
 METRIC_FIELDS: tuple[str, ...] = (
     "price",
@@ -46,6 +54,7 @@ METRIC_FIELDS: tuple[str, ...] = (
     "equity_ratio",
     "fcf_yield_avg",
     "croic",
+    "has_preferred_shares",
 )
 
 
@@ -79,7 +88,10 @@ def test_generated_investor_data_matches_config_and_schema() -> None:
             assert _is_number(raw_stock["ratio_percent"])
             for metric_field in METRIC_FIELDS:
                 metric_value: object = raw_stock[metric_field]
-                assert metric_value is None or _is_number(metric_value)
+                if metric_field == "has_preferred_shares":
+                    assert metric_value is None or isinstance(metric_value, bool)
+                else:
+                    assert metric_value is None or _is_number(metric_value)
 
 
 def test_shareholder_name_matching_handles_aliases_and_prefix_fallback() -> None:
@@ -137,8 +149,8 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
         ],
     )
 
-    metrics_map: dict[str, dict[str, float | None]] = {
-        "1301": _metrics(price=800.0, per_actual=5.1, per=4.5, per_next=4.0, peg_trailing_5=0.53, peg_blended_5y_actual_2f=0.41),
+    metrics_map: dict[str, dict[str, float | bool | None]] = {
+        "1301": _metrics(price=800.0, per_actual=5.1, per=4.5, per_next=4.0, peg_trailing_5=0.53, peg_blended_5y_actual_2f=0.41, has_preferred_shares=True),
         "1429": _metrics(price=1000.0, equity_ratio=55.0),
         "1450": _metrics(price=1000.0, net_cash_ratio=1.2),
         "1518": _metrics(price=1500.0, croic=0.19),
@@ -176,6 +188,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     assert hikari_stocks[0]["per_actual"] == 5.1
     assert hikari_stocks[0]["per_next"] == 4.0
     assert hikari_stocks[0]["peg_trailing_5"] == 0.53
+    assert hikari_stocks[0]["has_preferred_shares"] is True
     assert hikari_stocks[1]["amount_millions"] == 750
     assert hikari_stocks[1]["ratio_percent"] == 5.1
     assert hikari_stocks[1]["net_cash_ratio"] == 1.2
@@ -197,6 +210,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "equity_ratio": 55.0,
             "fcf_yield_avg": None,
             "croic": None,
+            "has_preferred_shares": None,
         }
     ]
 
@@ -217,6 +231,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "equity_ratio": None,
             "fcf_yield_avg": None,
             "croic": None,
+            "has_preferred_shares": None,
         }
     ]
 
@@ -269,7 +284,8 @@ def _metrics(
     equity_ratio: float | None = None,
     fcf_yield_avg: float | None = None,
     croic: float | None = None,
-) -> dict[str, float | None]:
+    has_preferred_shares: bool | None = None,
+) -> dict[str, float | bool | None]:
     return {
         "price": price,
         "net_cash_ratio": net_cash_ratio,
@@ -281,6 +297,7 @@ def _metrics(
         "equity_ratio": equity_ratio,
         "fcf_yield_avg": fcf_yield_avg,
         "croic": croic,
+        "has_preferred_shares": has_preferred_shares,
     }
 
 

@@ -60,6 +60,26 @@ function flatAccessor(key: string): (row: Record<string, unknown>) => number | n
   return (row: Record<string, unknown>): number | null => (row[key] as number) ?? null;
 }
 
+function renderPreferredShares(row: Record<string, unknown>): string {
+  if (row.has_preferred_shares === true) {
+    return "あり";
+  }
+  if (row.has_preferred_shares === false) {
+    return "なし";
+  }
+  return "-";
+}
+
+function preferredSharesSortValue(row: Record<string, unknown>): number | null {
+  if (row.has_preferred_shares === true) {
+    return 1;
+  }
+  if (row.has_preferred_shares === false) {
+    return 0;
+  }
+  return null;
+}
+
 /* ------------------------------------------------------------------ */
 /*  Column definitions                                                 */
 /* ------------------------------------------------------------------ */
@@ -74,6 +94,15 @@ const COLUMNS: ColumnDef[] = [
   C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
   C.peg5yCol,
   C.peg5y2fCol,
+  {
+    key: "has_preferred_shares",
+    header: "pref",
+    type: "text",
+    title: "優先株",
+    toggleable: true,
+    render: renderPreferredShares,
+    sortValue: preferredSharesSortValue,
+  },
   C.buildMetricCol(C.EQUITY_SPEC, flatAccessor("equity_ratio")),
   C.fcfYCol,
   C.croicCol,

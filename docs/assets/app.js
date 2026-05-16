@@ -26,6 +26,24 @@ const C = getStockColumns();
 function flatAccessor(key) {
     return (row) => row[key] ?? null;
 }
+function renderPreferredShares(row) {
+    if (row.has_preferred_shares === true) {
+        return "あり";
+    }
+    if (row.has_preferred_shares === false) {
+        return "なし";
+    }
+    return "-";
+}
+function preferredSharesSortValue(row) {
+    if (row.has_preferred_shares === true) {
+        return 1;
+    }
+    if (row.has_preferred_shares === false) {
+        return 0;
+    }
+    return null;
+}
 /* ------------------------------------------------------------------ */
 /*  Column definitions                                                 */
 /* ------------------------------------------------------------------ */
@@ -39,6 +57,15 @@ const COLUMNS = [
     C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
     C.peg5yCol,
     C.peg5y2fCol,
+    {
+        key: "has_preferred_shares",
+        header: "pref",
+        type: "text",
+        title: "優先株",
+        toggleable: true,
+        render: renderPreferredShares,
+        sortValue: preferredSharesSortValue,
+    },
     C.buildMetricCol(C.EQUITY_SPEC, flatAccessor("equity_ratio")),
     C.fcfYCol,
     C.croicCol,
