@@ -26,6 +26,54 @@ invest_like_legends/
 └── src_ts/                # TypeScript ソース
 ```
 
+## 開発と運用
+
+### 前提
+
+- Python 3.13
+- [uv](https://docs.astral.sh/uv/)
+- Node.js / npm
+- このリポジトリと同じ親ディレクトリに、以下の関連リポジトリがあること
+
+```text
+../formula_screening
+../stock_db
+../stock_web_ui
+../japan_company_handbook
+```
+
+DB の場所を標準構成から変える場合は、環境変数で指定する。
+
+```powershell
+$env:STOCKS_DB_PATH="C:\path\to\stocks.db"
+$env:HANDBOOK_DB_PATH="C:\path\to\stock_performance.db"
+```
+
+### セットアップと確認
+
+```powershell
+uv sync
+npm install
+uv run pytest
+```
+
+`src_ts/app.ts` を変更した場合は `npx tsc` を実行し、生成済み JavaScript の `docs/assets/app.js` も更新する。
+
+### ローカル確認と公開データ更新
+
+```powershell
+uv run python serve.py
+uv run python scripts/enrich_investors.py
+```
+
+`serve.py` はローカル確認用で、`/api/portfolio` が手元の DB と設定から毎回データを組み立てる。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json` を完全再生成する。
+
+### 投資家と監視銘柄の追加
+
+投資家タブを追加する場合は `config/investors.json` にキーと表示名を追加する。保有銘柄は大株主 DB から自動照合するため、銘柄一覧は書かない。
+
+監視銘柄を追加する場合は `config/watch_codes.txt` に銘柄コードを 1 行ずつ追加する。設定変更後は、ローカル確認には `uv run python serve.py`、公開用 JSON の更新には `uv run python scripts/enrich_investors.py` を使う。
+
 ## コンポーネント
 
 ### 設定ファイル (`config/`)
@@ -103,6 +151,7 @@ invest_like_legends/
 ### GitHub Actions (`.github/workflows/update_investors.yml`)
 
 - 毎日日本時間 0:00 に `scripts/enrich_investors.py` を実行する
+- 手動実行は GitHub Actions の `workflow_dispatch` から行う
 - 依存repoとして `stock_db`, `formula_screening`, `stock_web_ui`, `japan_company_handbook` を checkout する
 - `stock_db` の `stocks.db` は `stocks-db` artifact から取得する
 - `japan_company_handbook` は `data/stock_performance.db` だけ sparse checkout する
