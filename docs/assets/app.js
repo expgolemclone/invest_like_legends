@@ -28,10 +28,10 @@ function flatAccessor(key) {
 }
 function renderPreferredShares(row) {
     if (row.has_preferred_shares === true) {
-        return "あり";
+        return "yes";
     }
     if (row.has_preferred_shares === false) {
-        return "なし";
+        return "no";
     }
     return "-";
 }

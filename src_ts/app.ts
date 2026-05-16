@@ -62,10 +62,10 @@ function flatAccessor(key: string): (row: Record<string, unknown>) => number | n
 
 function renderPreferredShares(row: Record<string, unknown>): string {
   if (row.has_preferred_shares === true) {
-    return "あり";
+    return "yes";
   }
   if (row.has_preferred_shares === false) {
-    return "なし";
+    return "no";
   }
   return "-";
 }

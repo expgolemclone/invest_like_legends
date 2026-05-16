@@ -119,7 +119,7 @@
         "equity_ratio": 60.6877262195036,
         "fcf_yield_avg": 0.04696720910779166,
         "croic": 0.03835678842545073,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5458",
@@ -136,7 +136,7 @@
         "equity_ratio": 51.49237231925713,
         "fcf_yield_avg": 0.12542833388454047,
         "croic": -0.05002146844139115,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6396",
@@ -153,7 +153,7 @@
         "equity_ratio": 36.53626640152627,
         "fcf_yield_avg": 0.04986098758569575,
         "croic": 0.09368885829456117,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8103",
@@ -170,7 +170,7 @@
         "equity_ratio": 42.63070450464936,
         "fcf_yield_avg": 0.06567376322274097,
         "croic": 0.14053826997509677,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8152",
@@ -187,7 +187,7 @@
         "equity_ratio": 52.8947229927138,
         "fcf_yield_avg": 0.058987367785407495,
         "croic": 0.05853547916080036,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8158",
@@ -204,7 +204,7 @@
         "equity_ratio": 31.256830601092894,
         "fcf_yield_avg": 0.044326721339298936,
         "croic": 0.05582645421386063,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9845",
@@ -221,7 +221,7 @@
         "equity_ratio": 53.413405219256774,
         "fcf_yield_avg": 0.057039755928343996,
         "croic": 0.10669456066945607,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       }
     ]
   },
@@ -600,7 +600,7 @@
         "equity_ratio": 73.11379244563145,
         "fcf_yield_avg": 0.06294491118862248,
         "croic": 0.014426665801174906,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4624",
@@ -617,7 +617,7 @@
         "equity_ratio": 79.96123760266609,
         "fcf_yield_avg": 0.03353081364829396,
         "croic": 0.009322400957123781,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "463A",
@@ -651,7 +651,7 @@
         "equity_ratio": 89.65856999748151,
         "fcf_yield_avg": 0.04574033661578684,
         "croic": 0.10870888650781164,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5039",
@@ -668,7 +668,7 @@
         "equity_ratio": 84.99134409349463,
         "fcf_yield_avg": null,
         "croic": 0.10818675256018546,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5280",
@@ -685,7 +685,7 @@
         "equity_ratio": 61.64190031993113,
         "fcf_yield_avg": -0.009845911747952487,
         "croic": 0.05584423350102705,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5698",
@@ -702,7 +702,7 @@
         "equity_ratio": 53.736978506044395,
         "fcf_yield_avg": 0.012176240180889116,
         "croic": 0.0916888955179204,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5699",
@@ -719,7 +719,7 @@
         "equity_ratio": 60.634327759738696,
         "fcf_yield_avg": null,
         "croic": -0.2318464068389232,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5921",
@@ -736,7 +736,7 @@
         "equity_ratio": 79.87052849441649,
         "fcf_yield_avg": 0.04935558401241754,
         "croic": 0.1086595514530075,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5923",
@@ -753,7 +753,7 @@
         "equity_ratio": 59.5901101897817,
         "fcf_yield_avg": -0.0016420739714264315,
         "croic": -0.037719188552455755,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6035",
@@ -770,7 +770,7 @@
         "equity_ratio": 81.44786505072075,
         "fcf_yield_avg": 0.09646926226458263,
         "croic": 0.08615849445081465,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6038",
@@ -787,7 +787,7 @@
         "equity_ratio": 69.04003881978389,
         "fcf_yield_avg": 0.04399170448006463,
         "croic": 0.08416760149672747,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6074",
@@ -804,7 +804,7 @@
         "equity_ratio": 40.00047601331667,
         "fcf_yield_avg": 0.06809264381273647,
         "croic": 0.02578576840769233,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6091",
@@ -821,7 +821,7 @@
         "equity_ratio": 74.02623331007472,
         "fcf_yield_avg": 0.05698468692073011,
         "croic": 0.077174647893952,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6943",
@@ -838,7 +838,7 @@
         "equity_ratio": 72.94796166985039,
         "fcf_yield_avg": -0.018020425399206487,
         "croic": 0.0008382697752984774,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7371",
@@ -855,7 +855,7 @@
         "equity_ratio": 85.36206760093035,
         "fcf_yield_avg": null,
         "croic": 0.06862397220377689,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7399",
@@ -872,7 +872,7 @@
         "equity_ratio": 80.44469444776675,
         "fcf_yield_avg": 0.08136014347309971,
         "croic": 0.025620390737269048,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7509",
@@ -889,7 +889,7 @@
         "equity_ratio": 55.23263398292057,
         "fcf_yield_avg": 0.11040770771350272,
         "croic": 0.049806879096066056,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7521",
@@ -906,7 +906,7 @@
         "equity_ratio": 63.8272670695228,
         "fcf_yield_avg": 0.0335606311375924,
         "croic": 0.16044068084624316,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7619",
@@ -923,7 +923,7 @@
         "equity_ratio": 50.04904919013531,
         "fcf_yield_avg": 0.10664951189341891,
         "croic": -0.020747275272150645,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7625",
@@ -940,7 +940,7 @@
         "equity_ratio": 46.01056458077557,
         "fcf_yield_avg": -0.01293908679945476,
         "croic": 0.03523957775772354,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7812",
@@ -957,7 +957,7 @@
         "equity_ratio": 38.01894743045071,
         "fcf_yield_avg": 0.1045011207095385,
         "croic": 0.1575523321348906,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7831",
@@ -974,7 +974,7 @@
         "equity_ratio": 16.11559818273599,
         "fcf_yield_avg": 0.12854412972649318,
         "croic": -0.265005265005265,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7841",
@@ -991,7 +991,7 @@
         "equity_ratio": 63.95152254840338,
         "fcf_yield_avg": 0.046076138225897574,
         "croic": -0.046831579300265595,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7932",
@@ -1008,7 +1008,7 @@
         "equity_ratio": 42.4100780938266,
         "fcf_yield_avg": 0.05656977471639766,
         "croic": 0.10435421142810519,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7986",
@@ -1025,7 +1025,7 @@
         "equity_ratio": 68.48634371153439,
         "fcf_yield_avg": 0.05911432911239413,
         "croic": 0.07694341330355768,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8617",
@@ -1042,7 +1042,7 @@
         "equity_ratio": 68.8151310655098,
         "fcf_yield_avg": -0.019679964497504372,
         "croic": -0.14543028685790527,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8917",
@@ -1059,7 +1059,7 @@
         "equity_ratio": 65.70220114806986,
         "fcf_yield_avg": 0.08066796554188896,
         "croic": 0.03447287142015719,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9268",
@@ -1076,7 +1076,7 @@
         "equity_ratio": 14.871228890881612,
         "fcf_yield_avg": null,
         "croic": -0.07430772117627085,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9476",
@@ -1093,7 +1093,7 @@
         "equity_ratio": 69.70706300057364,
         "fcf_yield_avg": -0.004616369382992006,
         "croic": 0.09085302756995882,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9478",
@@ -1110,7 +1110,7 @@
         "equity_ratio": 42.80476037311033,
         "fcf_yield_avg": 0.028162717626742505,
         "croic": -0.02849207981896729,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9791",
@@ -1127,7 +1127,7 @@
         "equity_ratio": 53.52095049120995,
         "fcf_yield_avg": 0.09954584018787911,
         "croic": -0.008647090480420679,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9845",
@@ -1144,7 +1144,7 @@
         "equity_ratio": 53.413405219256774,
         "fcf_yield_avg": 0.057039755928343996,
         "croic": 0.10669456066945607,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       }
     ]
   },
@@ -3155,7 +3155,7 @@
         "equity_ratio": 75.95341635834313,
         "fcf_yield_avg": 0.03869070902306971,
         "croic": 0.08770754423223605,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4624",
@@ -3172,7 +3172,7 @@
         "equity_ratio": 79.96123760266609,
         "fcf_yield_avg": 0.03353081364829396,
         "croic": 0.009322400957123781,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4629",
@@ -3189,7 +3189,7 @@
         "equity_ratio": 63.9368475572185,
         "fcf_yield_avg": 0.07194876959930314,
         "croic": 0.15256337199341513,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4642",
@@ -3206,7 +3206,7 @@
         "equity_ratio": 61.04032039195072,
         "fcf_yield_avg": 0.024330367556929758,
         "croic": -0.09811719747662441,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4659",
@@ -3223,7 +3223,7 @@
         "equity_ratio": 80.28389421654099,
         "fcf_yield_avg": 0.04057297799998925,
         "croic": 0.11274643072294127,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4671",
@@ -3240,7 +3240,7 @@
         "equity_ratio": 68.2334323551459,
         "fcf_yield_avg": 0.04915465853040457,
         "croic": 0.0556523759730452,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4685",
@@ -3257,7 +3257,7 @@
         "equity_ratio": 62.90765817965103,
         "fcf_yield_avg": 0.014994412973997492,
         "croic": 0.04815789473684211,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4686",
@@ -3274,7 +3274,7 @@
         "equity_ratio": 86.84980171844019,
         "fcf_yield_avg": 0.02690832033284194,
         "croic": -0.11519838665182691,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4725",
@@ -3291,7 +3291,7 @@
         "equity_ratio": 52.02442338837283,
         "fcf_yield_avg": 0.07310169273326604,
         "croic": 0.006672335971740695,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4743",
@@ -3308,7 +3308,7 @@
         "equity_ratio": 75.66823368642422,
         "fcf_yield_avg": 0.03083869263125652,
         "croic": 0.005565917882917483,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4746",
@@ -3325,7 +3325,7 @@
         "equity_ratio": 52.52392986697573,
         "fcf_yield_avg": 0.02102427085725534,
         "croic": 0.0854240040094005,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4754",
@@ -3342,7 +3342,7 @@
         "equity_ratio": 74.20145207949606,
         "fcf_yield_avg": 0.08291270362585011,
         "croic": 0.07871367964518294,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4762",
@@ -3359,7 +3359,7 @@
         "equity_ratio": 43.733235942140055,
         "fcf_yield_avg": 0.05084214922048998,
         "croic": 0.3874336936072891,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4769",
@@ -3376,7 +3376,7 @@
         "equity_ratio": 60.08614481268608,
         "fcf_yield_avg": 0.04669175658263266,
         "croic": -0.004031579108498653,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4771",
@@ -3393,7 +3393,7 @@
         "equity_ratio": 76.11331147619798,
         "fcf_yield_avg": 0.018264206184561083,
         "croic": 0.06356073875762681,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4783",
@@ -3410,7 +3410,7 @@
         "equity_ratio": 47.18087432216815,
         "fcf_yield_avg": 0.04680917862320652,
         "croic": 0.31346579286896253,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4792",
@@ -3427,7 +3427,7 @@
         "equity_ratio": 75.41429830636959,
         "fcf_yield_avg": 0.037646587917082884,
         "croic": -0.049655769229374265,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4800",
@@ -3444,7 +3444,7 @@
         "equity_ratio": 80.96661726601816,
         "fcf_yield_avg": 0.05098325121415472,
         "croic": 0.17255413894948765,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4826",
@@ -3461,7 +3461,7 @@
         "equity_ratio": 76.30347504107226,
         "fcf_yield_avg": 0.029928657480444015,
         "croic": 0.0602501558411395,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4832",
@@ -3478,7 +3478,7 @@
         "equity_ratio": 60.02124836940398,
         "fcf_yield_avg": 0.06223342778097783,
         "croic": 0.17459113230987305,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4848",
@@ -3495,7 +3495,7 @@
         "equity_ratio": 52.37247103579457,
         "fcf_yield_avg": 0.051706061242768865,
         "croic": -0.1110715641609719,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4972",
@@ -3512,7 +3512,7 @@
         "equity_ratio": 60.646475686201626,
         "fcf_yield_avg": 0.03249084337349398,
         "croic": 0.11040184591518128,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4979",
@@ -3529,7 +3529,7 @@
         "equity_ratio": 38.57885708159108,
         "fcf_yield_avg": 0.021648319122899523,
         "croic": 0.14269953748886155,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5025",
@@ -3546,7 +3546,7 @@
         "equity_ratio": 70.86229259664786,
         "fcf_yield_avg": null,
         "croic": 0.3673925652643139,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5039",
@@ -3563,7 +3563,7 @@
         "equity_ratio": 84.99134409349463,
         "fcf_yield_avg": null,
         "croic": 0.10818675256018546,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5078",
@@ -3580,7 +3580,7 @@
         "equity_ratio": 82.01908889111704,
         "fcf_yield_avg": null,
         "croic": 0.06990104998674099,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5125",
@@ -3597,7 +3597,7 @@
         "equity_ratio": 79.44860507712845,
         "fcf_yield_avg": null,
         "croic": 0.11972279366976589,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5126",
@@ -3614,7 +3614,7 @@
         "equity_ratio": 73.06666666666666,
         "fcf_yield_avg": null,
         "croic": -0.06204379562043796,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5134",
@@ -3631,7 +3631,7 @@
         "equity_ratio": 70.03398837121352,
         "fcf_yield_avg": null,
         "croic": 0.19896799283633876,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5187",
@@ -3648,7 +3648,7 @@
         "equity_ratio": 65.66164001096148,
         "fcf_yield_avg": 0.06117306613748772,
         "croic": -0.0032478961786147832,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5241",
@@ -3665,7 +3665,7 @@
         "equity_ratio": 61.25538182642194,
         "fcf_yield_avg": null,
         "croic": 0.08705926512735221,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5252",
@@ -3682,7 +3682,7 @@
         "equity_ratio": 53.469833359304495,
         "fcf_yield_avg": null,
         "croic": -0.07842103366850327,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5368",
@@ -3699,7 +3699,7 @@
         "equity_ratio": 71.3252630779866,
         "fcf_yield_avg": null,
         "croic": 0.049231209957580103,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5461",
@@ -3716,7 +3716,7 @@
         "equity_ratio": 86.5488086087625,
         "fcf_yield_avg": 0.04584717607973422,
         "croic": 0.16988659652958055,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5464",
@@ -3733,7 +3733,7 @@
         "equity_ratio": 75.84261619083074,
         "fcf_yield_avg": 0.07232529916507272,
         "croic": 0.003913360029122679,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5484",
@@ -3750,7 +3750,7 @@
         "equity_ratio": 78.95035778348783,
         "fcf_yield_avg": 0.036493240892242484,
         "croic": 0.05737644360333695,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5576",
@@ -3767,7 +3767,7 @@
         "equity_ratio": 68.70715364444457,
         "fcf_yield_avg": null,
         "croic": 0.00384598083756916,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5589",
@@ -3784,7 +3784,7 @@
         "equity_ratio": 64.14642909054467,
         "fcf_yield_avg": null,
         "croic": 0.14072566652746982,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5592",
@@ -3801,7 +3801,7 @@
         "equity_ratio": 69.50737608686515,
         "fcf_yield_avg": null,
         "croic": -0.8372335305062923,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5658",
@@ -3818,7 +3818,7 @@
         "equity_ratio": 63.9648776033987,
         "fcf_yield_avg": 0.05856693380705854,
         "croic": 0.005400833363048484,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5695",
@@ -3835,7 +3835,7 @@
         "equity_ratio": 80.73394895620515,
         "fcf_yield_avg": 0.06801881309798966,
         "croic": 0.027611666746149375,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5845",
@@ -3852,7 +3852,7 @@
         "equity_ratio": 31.596520516650557,
         "fcf_yield_avg": null,
         "croic": 0.29597132970835394,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5951",
@@ -3869,7 +3869,7 @@
         "equity_ratio": 84.8442340261262,
         "fcf_yield_avg": 0.016223054040790393,
         "croic": -0.004879195226056513,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5982",
@@ -3886,7 +3886,7 @@
         "equity_ratio": 72.6316057195866,
         "fcf_yield_avg": 0.03056934858827462,
         "croic": -0.14565702419204415,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6013",
@@ -3903,7 +3903,7 @@
         "equity_ratio": 52.67626585096298,
         "fcf_yield_avg": 0.01167094870122394,
         "croic": -0.024934534641161066,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6018",
@@ -3920,7 +3920,7 @@
         "equity_ratio": 43.097293944044665,
         "fcf_yield_avg": 0.0228712156834295,
         "croic": 0.146540427475438,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6044",
@@ -3937,7 +3937,7 @@
         "equity_ratio": 47.61566485213077,
         "fcf_yield_avg": 0.01653076804667208,
         "croic": 0.16488023098345622,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6061",
@@ -3954,7 +3954,7 @@
         "equity_ratio": 78.43707158498478,
         "fcf_yield_avg": 0.023713723956636033,
         "croic": 0.06440754239328134,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6083",
@@ -3971,7 +3971,7 @@
         "equity_ratio": 47.239144986263184,
         "fcf_yield_avg": 0.0185542751839149,
         "croic": -0.008521910146266297,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6091",
@@ -3988,7 +3988,7 @@
         "equity_ratio": 74.02623331007472,
         "fcf_yield_avg": 0.05698468692073011,
         "croic": 0.077174647893952,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6099",
@@ -4005,7 +4005,7 @@
         "equity_ratio": 55.00863115167309,
         "fcf_yield_avg": 0.021540352128433183,
         "croic": 0.055207245401063317,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6193",
@@ -4022,7 +4022,7 @@
         "equity_ratio": 44.83055865281466,
         "fcf_yield_avg": 0.03882832562385467,
         "croic": 0.012037353726725977,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6224",
@@ -4039,7 +4039,7 @@
         "equity_ratio": 34.73220056842124,
         "fcf_yield_avg": null,
         "croic": 0.06022956262781731,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6239",
@@ -4056,7 +4056,7 @@
         "equity_ratio": 69.50834496082965,
         "fcf_yield_avg": 0.05565391951600161,
         "croic": 0.05318353440108833,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6245",
@@ -4073,7 +4073,7 @@
         "equity_ratio": 58.26218215951848,
         "fcf_yield_avg": 0.010742499151376293,
         "croic": -0.020635065986456175,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6246",
@@ -4090,7 +4090,7 @@
         "equity_ratio": 54.16521735558224,
         "fcf_yield_avg": 0.03501004589079469,
         "croic": -0.1194075814962109,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6248",
@@ -4107,7 +4107,7 @@
         "equity_ratio": 80.50143669879462,
         "fcf_yield_avg": 0.05348042706725233,
         "croic": 0.1305091231617414,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6265",
@@ -4124,7 +4124,7 @@
         "equity_ratio": 89.64237595360402,
         "fcf_yield_avg": 0.038949245070952807,
         "croic": -0.04562490213219865,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6307",
@@ -4141,7 +4141,7 @@
         "equity_ratio": 73.05862881620249,
         "fcf_yield_avg": 0.05063253112587203,
         "croic": -0.0932844479606152,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6309",
@@ -4158,7 +4158,7 @@
         "equity_ratio": 70.42788620240893,
         "fcf_yield_avg": 0.027120474483009673,
         "croic": -0.002466728551653344,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6328",
@@ -4175,7 +4175,7 @@
         "equity_ratio": 46.960834969515346,
         "fcf_yield_avg": 0.03448708065613568,
         "croic": 0.05,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6342",
@@ -4192,7 +4192,7 @@
         "equity_ratio": 65.98800124224607,
         "fcf_yield_avg": 0.04642289390628793,
         "croic": 0.048662606168695395,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6345",
@@ -4209,7 +4209,7 @@
         "equity_ratio": 79.75906203718003,
         "fcf_yield_avg": 0.07134533908836621,
         "croic": 0.09889956886192296,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6346",
@@ -4226,7 +4226,7 @@
         "equity_ratio": 80.44775269208778,
         "fcf_yield_avg": 0.06074322697170379,
         "croic": -0.02629910715814637,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6365",
@@ -4243,7 +4243,7 @@
         "equity_ratio": 64.39991104302058,
         "fcf_yield_avg": 0.023493827426485092,
         "croic": 0.04892180185710997,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6378",
@@ -4260,7 +4260,7 @@
         "equity_ratio": 46.63363708749889,
         "fcf_yield_avg": 0.03594630228934436,
         "croic": 0.12409054163298303,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6379",
@@ -4277,7 +4277,7 @@
         "equity_ratio": 71.19604847390535,
         "fcf_yield_avg": 0.01671613002947151,
         "croic": -0.028869065437346585,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6382",
@@ -4294,7 +4294,7 @@
         "equity_ratio": 69.35979325678704,
         "fcf_yield_avg": 0.02995522651642906,
         "croic": -0.25394968804840745,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6392",
@@ -4311,7 +4311,7 @@
         "equity_ratio": 80.01705974979207,
         "fcf_yield_avg": 0.024779082125603865,
         "croic": 0.05090528191247228,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6403",
@@ -4328,7 +4328,7 @@
         "equity_ratio": 37.88524275570907,
         "fcf_yield_avg": -0.003797473156955134,
         "croic": 0.20091131550080163,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6459",
@@ -4345,7 +4345,7 @@
         "equity_ratio": 75.09807809879723,
         "fcf_yield_avg": 0.037627868649731944,
         "croic": 0.039639738105022304,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6466",
@@ -4362,7 +4362,7 @@
         "equity_ratio": 65.40453170925376,
         "fcf_yield_avg": 0.006485101791970085,
         "croic": -0.29759765785883396,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6488",
@@ -4379,7 +4379,7 @@
         "equity_ratio": 72.33535009099845,
         "fcf_yield_avg": 0.03188933580413651,
         "croic": 0.0660005959037422,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6489",
@@ -4396,7 +4396,7 @@
         "equity_ratio": 66.33693537422938,
         "fcf_yield_avg": 0.021834016828338777,
         "croic": 0.03218187186300561,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6492",
@@ -4413,7 +4413,7 @@
         "equity_ratio": 79.77589881075136,
         "fcf_yield_avg": 0.01156730790898387,
         "croic": 0.07338696437366607,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6497",
@@ -4430,7 +4430,7 @@
         "equity_ratio": 67.37396779242432,
         "fcf_yield_avg": 0.023292001083368163,
         "croic": 0.014245046857673452,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6543",
@@ -4447,7 +4447,7 @@
         "equity_ratio": 70.28934736621541,
         "fcf_yield_avg": 0.056043327675273445,
         "croic": 0.12008426628916052,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6546",
@@ -4464,7 +4464,7 @@
         "equity_ratio": 57.093374318864335,
         "fcf_yield_avg": 0.020711347386936384,
         "croic": -0.15136299380002002,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6555",
@@ -4498,7 +4498,7 @@
         "equity_ratio": 79.3253696244584,
         "fcf_yield_avg": null,
         "croic": 0.08086439839808549,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6718",
@@ -4515,7 +4515,7 @@
         "equity_ratio": 75.49619014239912,
         "fcf_yield_avg": 0.04713625492125571,
         "croic": 0.0857634112792297,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6820",
@@ -4532,7 +4532,7 @@
         "equity_ratio": 84.3777067994803,
         "fcf_yield_avg": 0.008475755200646029,
         "croic": -0.00250220546956452,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6853",
@@ -4549,7 +4549,7 @@
         "equity_ratio": 70.44145492586897,
         "fcf_yield_avg": 0.029984264713329833,
         "croic": 0.010472249417827203,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6888",
@@ -4566,7 +4566,7 @@
         "equity_ratio": 62.48168676598327,
         "fcf_yield_avg": 0.041361362497164246,
         "croic": 0.06600530732733897,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6915",
@@ -4583,7 +4583,7 @@
         "equity_ratio": 62.53900737413289,
         "fcf_yield_avg": 0.07815333301729009,
         "croic": 0.17657923900997413,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7031",
@@ -4600,7 +4600,7 @@
         "equity_ratio": 57.4720328045268,
         "fcf_yield_avg": null,
         "croic": -0.03248167907822855,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7039",
@@ -4617,7 +4617,7 @@
         "equity_ratio": 83.68792495449586,
         "fcf_yield_avg": null,
         "croic": 0.062296756575555175,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7058",
@@ -4634,7 +4634,7 @@
         "equity_ratio": 71.29147031521855,
         "fcf_yield_avg": null,
         "croic": 0.04979768828244947,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7060",
@@ -4651,7 +4651,7 @@
         "equity_ratio": 36.303957312529086,
         "fcf_yield_avg": null,
         "croic": -0.0844732128872333,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7079",
@@ -4668,7 +4668,7 @@
         "equity_ratio": 76.91226480879904,
         "fcf_yield_avg": null,
         "croic": 0.23647824976728476,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7081",
@@ -4685,7 +4685,7 @@
         "equity_ratio": 60.952121217138824,
         "fcf_yield_avg": null,
         "croic": 0.23505010968584847,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7092",
@@ -4702,7 +4702,7 @@
         "equity_ratio": 63.50944429236244,
         "fcf_yield_avg": null,
         "croic": 0.02064990181795148,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7111",
@@ -4736,7 +4736,7 @@
         "equity_ratio": 46.60472055214299,
         "fcf_yield_avg": null,
         "croic": 0.4073745388509978,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7196",
@@ -4753,7 +4753,7 @@
         "equity_ratio": 42.84616174287095,
         "fcf_yield_avg": 0.06917136272744864,
         "croic": 0.050656404185713585,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7326",
@@ -4770,7 +4770,7 @@
         "equity_ratio": 22.029359618582177,
         "fcf_yield_avg": null,
         "croic": 0.03899001271866725,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7345",
@@ -4787,7 +4787,7 @@
         "equity_ratio": 63.01722965676668,
         "fcf_yield_avg": null,
         "croic": -0.013427834315470807,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7354",
@@ -4821,7 +4821,7 @@
         "equity_ratio": 56.127272727272725,
         "fcf_yield_avg": null,
         "croic": 0.10590686718608444,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7360",
@@ -4838,7 +4838,7 @@
         "equity_ratio": 82.25259656600475,
         "fcf_yield_avg": null,
         "croic": -0.21946335116906066,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7361",
@@ -4855,7 +4855,7 @@
         "equity_ratio": 33.26120942167997,
         "fcf_yield_avg": null,
         "croic": 0.05050330877866616,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7377",
@@ -4872,7 +4872,7 @@
         "equity_ratio": 54.35637510553353,
         "fcf_yield_avg": null,
         "croic": 0.17119828729227773,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7399",
@@ -4889,7 +4889,7 @@
         "equity_ratio": 80.44469444776675,
         "fcf_yield_avg": 0.08136014347309971,
         "croic": 0.025620390737269048,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7444",
@@ -4906,7 +4906,7 @@
         "equity_ratio": 65.17322766180924,
         "fcf_yield_avg": 0.01451308914994601,
         "croic": -0.04144813090461324,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7464",
@@ -4923,7 +4923,7 @@
         "equity_ratio": 65.37774772768053,
         "fcf_yield_avg": 0.2450931860609832,
         "croic": 0.10095297170310011,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7466",
@@ -4940,7 +4940,7 @@
         "equity_ratio": 58.16993740742359,
         "fcf_yield_avg": 0.010853502948897246,
         "croic": -0.055040909347367585,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7472",
@@ -4957,7 +4957,7 @@
         "equity_ratio": 63.121779890960795,
         "fcf_yield_avg": 0.05425857554038038,
         "croic": -0.06865228676664453,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7488",
@@ -4974,7 +4974,7 @@
         "equity_ratio": 72.56181448290036,
         "fcf_yield_avg": 0.024522389506332384,
         "croic": 0.0009921234964893005,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7500",
@@ -4991,7 +4991,7 @@
         "equity_ratio": 50.56663124621863,
         "fcf_yield_avg": 0.02283795217560374,
         "croic": 0.0208670954007827,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7504",
@@ -5008,7 +5008,7 @@
         "equity_ratio": 63.6238644641412,
         "fcf_yield_avg": 0.016787467280821276,
         "croic": -0.03968542037625739,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7544",
@@ -5025,7 +5025,7 @@
         "equity_ratio": 75.16135341286916,
         "fcf_yield_avg": 0.14162087106054574,
         "croic": 0.12464220660941973,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7565",
@@ -5042,7 +5042,7 @@
         "equity_ratio": 54.21535507756686,
         "fcf_yield_avg": 0.058647488410417316,
         "croic": 0.22687925847941914,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7609",
@@ -5059,7 +5059,7 @@
         "equity_ratio": 40.82962191948615,
         "fcf_yield_avg": 0.03038943571089146,
         "croic": 0.14043330403905577,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7634",
@@ -5076,7 +5076,7 @@
         "equity_ratio": 71.19812138428023,
         "fcf_yield_avg": 0.04526603707088627,
         "croic": -0.17677712344095858,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7670",
@@ -5093,7 +5093,7 @@
         "equity_ratio": 34.083369707551284,
         "fcf_yield_avg": null,
         "croic": 0.08620511228396978,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7673",
@@ -5110,7 +5110,7 @@
         "equity_ratio": 47.73735668976143,
         "fcf_yield_avg": null,
         "croic": 0.16544351209735078,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7681",
@@ -5127,7 +5127,7 @@
         "equity_ratio": 51.14929495207786,
         "fcf_yield_avg": null,
         "croic": -0.1270721054287314,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7713",
@@ -5144,7 +5144,7 @@
         "equity_ratio": 81.09793156396168,
         "fcf_yield_avg": 0.02741756766113048,
         "croic": -0.0023004226463722954,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7807",
@@ -5161,7 +5161,7 @@
         "equity_ratio": 55.91253873468437,
         "fcf_yield_avg": null,
         "croic": 0.3261394974076399,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7823",
@@ -5178,7 +5178,7 @@
         "equity_ratio": 52.35516727726559,
         "fcf_yield_avg": 0.050982937792635276,
         "croic": -0.012649467492021992,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7833",
@@ -5195,7 +5195,7 @@
         "equity_ratio": 82.52973574399583,
         "fcf_yield_avg": 0.0594043080528142,
         "croic": 0.07165852867418396,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7970",
@@ -5212,7 +5212,7 @@
         "equity_ratio": 72.05401730854707,
         "fcf_yield_avg": 0.014540479254345248,
         "croic": 0.04566649128218154,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8006",
@@ -5229,7 +5229,7 @@
         "equity_ratio": 52.3494107037348,
         "fcf_yield_avg": 0.04059603309537922,
         "croic": -0.030150331737633325,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8023",
@@ -5246,7 +5246,7 @@
         "equity_ratio": 42.47024787849165,
         "fcf_yield_avg": 0.10588584793507438,
         "croic": 0.0926779608870775,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8037",
@@ -5263,7 +5263,7 @@
         "equity_ratio": 43.60294346917776,
         "fcf_yield_avg": 0.07539329145006042,
         "croic": 0.13520335686343074,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8046",
@@ -5280,7 +5280,7 @@
         "equity_ratio": 68.04339420955672,
         "fcf_yield_avg": 0.07637078651685393,
         "croic": 0.02110592412387402,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8051",
@@ -5297,7 +5297,7 @@
         "equity_ratio": 37.971361606760986,
         "fcf_yield_avg": 0.047824907583739765,
         "croic": -0.024717037197114995,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8052",
@@ -5314,7 +5314,7 @@
         "equity_ratio": 35.89280038143674,
         "fcf_yield_avg": 0.06468860882224256,
         "croic": 0.11216582719876017,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8059",
@@ -5331,7 +5331,7 @@
         "equity_ratio": 41.32856400949974,
         "fcf_yield_avg": 0.042671930483184746,
         "croic": 0.1412939143789595,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8061",
@@ -5348,7 +5348,7 @@
         "equity_ratio": 30.720356974670548,
         "fcf_yield_avg": 0.018305475241594683,
         "croic": 0.22312617702448212,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8070",
@@ -5365,7 +5365,7 @@
         "equity_ratio": 21.232253259725983,
         "fcf_yield_avg": -0.01762536383545491,
         "croic": 0.2497348136624001,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8074",
@@ -5382,7 +5382,7 @@
         "equity_ratio": 36.177794774627564,
         "fcf_yield_avg": 0.043910726075264486,
         "croic": 0.05432957110609481,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8084",
@@ -5399,7 +5399,7 @@
         "equity_ratio": 57.552026479805626,
         "fcf_yield_avg": 0.042230939601550894,
         "croic": 0.21862290572346657,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8085",
@@ -5416,7 +5416,7 @@
         "equity_ratio": 41.976663892774305,
         "fcf_yield_avg": 0.07372850286380599,
         "croic": -0.08266369639589466,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8097",
@@ -5433,7 +5433,7 @@
         "equity_ratio": 53.156293756940755,
         "fcf_yield_avg": 0.04642513273362493,
         "croic": -0.014203554466338112,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8117",
@@ -5450,7 +5450,7 @@
         "equity_ratio": 83.74790040562351,
         "fcf_yield_avg": 0.020788637660496954,
         "croic": 0.11008524753488738,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8132",
@@ -5467,7 +5467,7 @@
         "equity_ratio": 49.5119602771537,
         "fcf_yield_avg": 0.02384132666950235,
         "croic": 0.1375238971889825,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8137",
@@ -5484,7 +5484,7 @@
         "equity_ratio": 44.80435763553149,
         "fcf_yield_avg": 0.030625285151242382,
         "croic": 0.17359920239282153,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8275",
@@ -5501,7 +5501,7 @@
         "equity_ratio": 41.42999194669002,
         "fcf_yield_avg": 0.0550835360736443,
         "croic": 0.14075710575363487,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8595",
@@ -5518,7 +5518,7 @@
         "equity_ratio": 71.10019415190916,
         "fcf_yield_avg": 0.15013744128332368,
         "croic": 0.08738184942825038,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8715",
@@ -5535,7 +5535,7 @@
         "equity_ratio": 41.564819157447516,
         "fcf_yield_avg": 0.010846821755496271,
         "croic": 0.043442187707420685,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8739",
@@ -5552,7 +5552,7 @@
         "equity_ratio": 60.76012735537356,
         "fcf_yield_avg": 0.02766555275781074,
         "croic": 0.07470198002185903,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8772",
@@ -5569,7 +5569,7 @@
         "equity_ratio": 41.47559123646914,
         "fcf_yield_avg": -0.06810610030354694,
         "croic": -0.04723120263805785,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8876",
@@ -5603,7 +5603,7 @@
         "equity_ratio": 72.47598562388045,
         "fcf_yield_avg": 0.0581206588796588,
         "croic": -0.2925287786646196,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9074",
@@ -5620,7 +5620,7 @@
         "equity_ratio": 53.82980198248573,
         "fcf_yield_avg": 0.11474987184059134,
         "croic": 0.10604328124338289,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9225",
@@ -5637,7 +5637,7 @@
         "equity_ratio": 74.81703355624147,
         "fcf_yield_avg": null,
         "croic": -0.013791416142157158,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9236",
@@ -5654,7 +5654,7 @@
         "equity_ratio": 84.90788548167437,
         "fcf_yield_avg": null,
         "croic": 0.002624500745576773,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9252",
@@ -5688,7 +5688,7 @@
         "equity_ratio": 80.56165135212301,
         "fcf_yield_avg": null,
         "croic": 0.050299216466809946,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9258",
@@ -5705,7 +5705,7 @@
         "equity_ratio": 67.68735085572482,
         "fcf_yield_avg": null,
         "croic": -0.12964890126594011,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9268",
@@ -5722,7 +5722,7 @@
         "equity_ratio": 14.871228890881612,
         "fcf_yield_avg": null,
         "croic": -0.07430772117627085,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9325",
@@ -5739,7 +5739,7 @@
         "equity_ratio": 38.31800444203164,
         "fcf_yield_avg": 0.023738249917783852,
         "croic": -0.023637074320042865,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9340",
@@ -5756,7 +5756,7 @@
         "equity_ratio": 88.45612998558371,
         "fcf_yield_avg": null,
         "croic": 0.10960133829617032,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9346",
@@ -5773,7 +5773,7 @@
         "equity_ratio": 75.7276361265248,
         "fcf_yield_avg": null,
         "croic": 0.15049646814180526,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9347",
@@ -5790,7 +5790,7 @@
         "equity_ratio": 65.12107774570201,
         "fcf_yield_avg": null,
         "croic": 0.05339406495643166,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9359",
@@ -5807,7 +5807,7 @@
         "equity_ratio": 69.98828195125189,
         "fcf_yield_avg": 0.07891912606383637,
         "croic": 0.044877262580075156,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9367",
@@ -5824,7 +5824,7 @@
         "equity_ratio": 55.874190887059804,
         "fcf_yield_avg": 0.02198609929245623,
         "croic": -0.056424114831539515,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9408",
@@ -5841,7 +5841,7 @@
         "equity_ratio": 65.76216884247548,
         "fcf_yield_avg": 0.07381626045400239,
         "croic": 0.036971133943894806,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9418",
@@ -5858,7 +5858,7 @@
         "equity_ratio": 37.50067364174578,
         "fcf_yield_avg": -0.0020914822539567467,
         "croic": 0.00315548273125272,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9419",
@@ -5875,7 +5875,7 @@
         "equity_ratio": 36.14646289294265,
         "fcf_yield_avg": 0.02998638884129991,
         "croic": -0.1413471179474528,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9428",
@@ -5892,7 +5892,7 @@
         "equity_ratio": 32.4119976735813,
         "fcf_yield_avg": 0.06820980527666738,
         "croic": 0.08401711199943895,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9438",
@@ -5909,7 +5909,7 @@
         "equity_ratio": 53.80141043381812,
         "fcf_yield_avg": 0.030566003273066085,
         "croic": 0.20142689864057164,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9441",
@@ -5926,7 +5926,7 @@
         "equity_ratio": 62.09044659090615,
         "fcf_yield_avg": 0.06228335759819872,
         "croic": 0.1684211671325595,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9444",
@@ -5943,7 +5943,7 @@
         "equity_ratio": 9.565664517710795,
         "fcf_yield_avg": -0.39286397867671546,
         "croic": 0.1145122223562532,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9445",
@@ -5960,7 +5960,7 @@
         "equity_ratio": 32.043004111850834,
         "fcf_yield_avg": 0.03755411216661866,
         "croic": 0.45496983915218353,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9466",
@@ -5977,7 +5977,7 @@
         "equity_ratio": 71.54649818365525,
         "fcf_yield_avg": 0.07378904937856903,
         "croic": 0.023797685831325636,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9475",
@@ -5994,7 +5994,7 @@
         "equity_ratio": 64.69195488799372,
         "fcf_yield_avg": -0.04429230941733774,
         "croic": 0.033493111469583954,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9478",
@@ -6011,7 +6011,7 @@
         "equity_ratio": 42.80476037311033,
         "fcf_yield_avg": 0.028162717626742505,
         "croic": -0.02849207981896729,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9514",
@@ -6028,7 +6028,7 @@
         "equity_ratio": 41.91493180186647,
         "fcf_yield_avg": -0.09502544311683507,
         "croic": 0.05655975244363672,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9537",
@@ -6045,7 +6045,7 @@
         "equity_ratio": 70.49785930443758,
         "fcf_yield_avg": 0.03931492637215529,
         "croic": 0.061279885948826975,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9539",
@@ -6062,7 +6062,7 @@
         "equity_ratio": 47.503833128338194,
         "fcf_yield_avg": -0.014369092878304878,
         "croic": 0.005455830135859114,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9551",
@@ -6079,7 +6079,7 @@
         "equity_ratio": 38.12981812453312,
         "fcf_yield_avg": 0.004595318960160211,
         "croic": 0.11522746866917397,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9625",
@@ -6096,7 +6096,7 @@
         "equity_ratio": 70.10451589726709,
         "fcf_yield_avg": 0.13547547053996278,
         "croic": 0.05134119820138224,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9629",
@@ -6113,7 +6113,7 @@
         "equity_ratio": 51.6240635900955,
         "fcf_yield_avg": 0.08801851062292239,
         "croic": 0.14333979507061756,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9651",
@@ -6130,7 +6130,7 @@
         "equity_ratio": 76.00904968997226,
         "fcf_yield_avg": 0.040450508428065635,
         "croic": 0.13902424480850156,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9658",
@@ -6164,7 +6164,7 @@
         "equity_ratio": 71.06433054393305,
         "fcf_yield_avg": 0.01703739346091934,
         "croic": 0.05482980680772769,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9691",
@@ -6181,7 +6181,7 @@
         "equity_ratio": 54.53413605424026,
         "fcf_yield_avg": 0.005837099755132541,
         "croic": 0.09303997232188296,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9739",
@@ -6198,7 +6198,7 @@
         "equity_ratio": 75.08112579269974,
         "fcf_yield_avg": 0.06368474123666865,
         "croic": 0.2897175141242938,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9740",
@@ -6215,7 +6215,7 @@
         "equity_ratio": 58.066203519757195,
         "fcf_yield_avg": 0.07316806406118403,
         "croic": 0.0010551303279299439,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9753",
@@ -6232,7 +6232,7 @@
         "equity_ratio": 58.434144233259524,
         "fcf_yield_avg": 0.04015480943481708,
         "croic": 0.08828704578904145,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9767",
@@ -6249,7 +6249,7 @@
         "equity_ratio": 67.06021124987545,
         "fcf_yield_avg": 0.1509592742739208,
         "croic": 0.01527456345191569,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9768",
@@ -6266,7 +6266,7 @@
         "equity_ratio": 76.99524117863753,
         "fcf_yield_avg": 0.027816471148723175,
         "croic": 0.002410316078070391,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9780",
@@ -6283,7 +6283,7 @@
         "equity_ratio": 61.28097427743842,
         "fcf_yield_avg": 0.04855724403863679,
         "croic": 0.08271044971190564,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9782",
@@ -6300,7 +6300,7 @@
         "equity_ratio": 82.13630685312026,
         "fcf_yield_avg": 0.04958203548507624,
         "croic": -0.015141355787350326,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9790",
@@ -6317,7 +6317,7 @@
         "equity_ratio": 80.10531412661905,
         "fcf_yield_avg": 0.04533762057877814,
         "croic": 0.10139780884019645,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9799",
@@ -6334,7 +6334,7 @@
         "equity_ratio": 78.94562768201698,
         "fcf_yield_avg": 0.03821794734257014,
         "croic": 0.03394046661494647,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9818",
@@ -6351,7 +6351,7 @@
         "equity_ratio": 66.15172941818595,
         "fcf_yield_avg": 0.013246136700557878,
         "croic": 0.023104151465852884,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9820",
@@ -6368,7 +6368,7 @@
         "equity_ratio": 80.61581751009537,
         "fcf_yield_avg": 0.04778212609608497,
         "croic": 0.06780943314541031,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9857",
@@ -6385,7 +6385,7 @@
         "equity_ratio": 49.045394250664984,
         "fcf_yield_avg": 0.03987069105884534,
         "croic": 0.026592663440850556,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9872",
@@ -6402,7 +6402,7 @@
         "equity_ratio": 50.02334015584042,
         "fcf_yield_avg": 0.06678845268307582,
         "croic": -0.03481444261000646,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9908",
@@ -6419,7 +6419,7 @@
         "equity_ratio": 36.977639963645785,
         "fcf_yield_avg": 0.031834257730931445,
         "croic": 0.013269846556307172,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9928",
@@ -6436,7 +6436,7 @@
         "equity_ratio": 63.83710926297677,
         "fcf_yield_avg": 0.03992957325089545,
         "croic": 0.05751058032349701,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9930",
@@ -6453,7 +6453,7 @@
         "equity_ratio": 53.43874379636006,
         "fcf_yield_avg": 0.019886851375661173,
         "croic": -0.09558778283911883,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9932",
@@ -6470,7 +6470,7 @@
         "equity_ratio": 78.99822920268184,
         "fcf_yield_avg": 0.04840462647882755,
         "croic": 0.027303826497419203,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9996",
@@ -6487,7 +6487,7 @@
         "equity_ratio": 73.50811822747724,
         "fcf_yield_avg": 0.02263064429354982,
         "croic": -0.14938549777276322,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       }
     ]
   },
@@ -6577,7 +6577,7 @@
         "equity_ratio": 48.913998936189444,
         "fcf_yield_avg": -0.10764079613764102,
         "croic": -0.659264300631398,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6390",
@@ -6594,7 +6594,7 @@
         "equity_ratio": 37.59136519801064,
         "fcf_yield_avg": -0.08822816298918457,
         "croic": -0.18908661438220736,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6492",
@@ -6611,7 +6611,7 @@
         "equity_ratio": 79.77589881075136,
         "fcf_yield_avg": 0.01156730790898387,
         "croic": 0.07338696437366607,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6637",
@@ -6628,7 +6628,7 @@
         "equity_ratio": 59.608244734315264,
         "fcf_yield_avg": 0.025838915323612176,
         "croic": 0.11134258632191091,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6994",
@@ -6645,7 +6645,7 @@
         "equity_ratio": 51.98047786879106,
         "fcf_yield_avg": -0.007532882803068507,
         "croic": 0.03637716605112175,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7460",
@@ -6662,7 +6662,7 @@
         "equity_ratio": 48.512551138946414,
         "fcf_yield_avg": 0.023554915097428752,
         "croic": 0.02339756193472277,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7539",
@@ -6679,7 +6679,7 @@
         "equity_ratio": 53.50192369416674,
         "fcf_yield_avg": 0.06864073038044657,
         "croic": 0.05115428978096951,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7841",
@@ -6696,7 +6696,7 @@
         "equity_ratio": 63.95152254840338,
         "fcf_yield_avg": 0.046076138225897574,
         "croic": -0.046831579300265595,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8881",
@@ -6713,7 +6713,7 @@
         "equity_ratio": 50.692910407657166,
         "fcf_yield_avg": 0.03864142993243232,
         "croic": -0.024358439162459004,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8999",
@@ -6730,7 +6730,7 @@
         "equity_ratio": 35.860359758478126,
         "fcf_yield_avg": -0.0431808652902193,
         "croic": 0.18277845777072466,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       }
     ]
   },
@@ -6786,7 +6786,7 @@
         "equity_ratio": 36.345288478370556,
         "fcf_yield_avg": 0.008497997583589722,
         "croic": 0.0918071878725941,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5989",
@@ -6825,7 +6825,7 @@
         "equity_ratio": 53.71869872028776,
         "fcf_yield_avg": 0.021206632738827308,
         "croic": 0.18822407073812636,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7908",
@@ -6842,7 +6842,7 @@
         "equity_ratio": 77.29757875553241,
         "fcf_yield_avg": 0.03774823408974551,
         "croic": 0.025822386886718313,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       }
     ]
   },
@@ -7034,7 +7034,7 @@
         "equity_ratio": 68.63513141590388,
         "fcf_yield_avg": null,
         "croic": 0.1707552083650255,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "4565",
@@ -7068,7 +7068,7 @@
         "equity_ratio": 77.9594206892479,
         "fcf_yield_avg": null,
         "croic": -0.24858914172695978,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5256",
@@ -7085,7 +7085,7 @@
         "equity_ratio": 72.38333298297715,
         "fcf_yield_avg": null,
         "croic": 0.09055562987108992,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5572",
@@ -7102,7 +7102,7 @@
         "equity_ratio": 76.96852565314207,
         "fcf_yield_avg": null,
         "croic": -0.0008307585144759672,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6046",
@@ -7119,7 +7119,7 @@
         "equity_ratio": 72.28718739321786,
         "fcf_yield_avg": 0.009149445082280902,
         "croic": -0.16849406101368997,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6054",
@@ -7136,7 +7136,7 @@
         "equity_ratio": 87.84627728547761,
         "fcf_yield_avg": 0.055779211956521746,
         "croic": -0.06645354857731291,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6562",
@@ -7170,7 +7170,7 @@
         "equity_ratio": 42.078609172787544,
         "fcf_yield_avg": 0.030245349917908275,
         "croic": -0.02992622137261459,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7079",
@@ -7187,7 +7187,7 @@
         "equity_ratio": 76.91226480879904,
         "fcf_yield_avg": null,
         "croic": 0.23647824976728476,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7774",
@@ -7204,7 +7204,7 @@
         "equity_ratio": 89.43718629999432,
         "fcf_yield_avg": -0.01448993347910645,
         "croic": -0.06538861998254088,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9820",
@@ -7221,7 +7221,7 @@
         "equity_ratio": 80.61581751009537,
         "fcf_yield_avg": 0.04778212609608497,
         "croic": 0.06780943314541031,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       }
     ]
   },
@@ -7469,7 +7469,7 @@
         "equity_ratio": 66.23792952684104,
         "fcf_yield_avg": 0.07137628520163333,
         "croic": 0.06407194908056699,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5753",
@@ -7486,7 +7486,7 @@
         "equity_ratio": 71.34272186475658,
         "fcf_yield_avg": 0.031151040403467035,
         "croic": 0.016449105862823513,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "5888",
@@ -7503,7 +7503,7 @@
         "equity_ratio": 65.84844789811571,
         "fcf_yield_avg": null,
         "croic": -0.08465080727975426,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6076",
@@ -7520,7 +7520,7 @@
         "equity_ratio": 52.07291600734224,
         "fcf_yield_avg": 0.08538289074081434,
         "croic": -0.0924133162106095,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6570",
@@ -7537,7 +7537,7 @@
         "equity_ratio": 30.496294113608908,
         "fcf_yield_avg": null,
         "croic": -0.02078482980222912,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "6748",
@@ -7554,7 +7554,7 @@
         "equity_ratio": 50.52455298130369,
         "fcf_yield_avg": 0.05222042958091777,
         "croic": 0.10835918076270094,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7134",
@@ -7571,7 +7571,7 @@
         "equity_ratio": 70.02987319153614,
         "fcf_yield_avg": null,
         "croic": -0.021051802386398834,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7625",
@@ -7588,7 +7588,7 @@
         "equity_ratio": 46.01056458077557,
         "fcf_yield_avg": -0.01293908679945476,
         "croic": 0.03523957775772354,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7792",
@@ -7605,7 +7605,7 @@
         "equity_ratio": 76.9777475394558,
         "fcf_yield_avg": null,
         "croic": 0.13440231245756057,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7807",
@@ -7622,7 +7622,7 @@
         "equity_ratio": 55.91253873468437,
         "fcf_yield_avg": null,
         "croic": 0.3261394974076399,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "7849",
@@ -7639,7 +7639,7 @@
         "equity_ratio": 77.75978759423468,
         "fcf_yield_avg": 0.041288151041666665,
         "croic": -0.0185746648640179,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8181",
@@ -7656,7 +7656,7 @@
         "equity_ratio": 74.85462599349604,
         "fcf_yield_avg": -0.07942446650478636,
         "croic": 0.05567903208082455,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "8928",
@@ -7673,7 +7673,7 @@
         "equity_ratio": 29.363343746789134,
         "fcf_yield_avg": -0.09807434096242874,
         "croic": -0.06814232439095967,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9534",
@@ -7690,7 +7690,7 @@
         "equity_ratio": 42.110003018968335,
         "fcf_yield_avg": 0.03397915150747938,
         "croic": 0.10185513288170922,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9691",
@@ -7707,7 +7707,7 @@
         "equity_ratio": 54.53413605424026,
         "fcf_yield_avg": 0.005837099755132541,
         "croic": 0.09303997232188296,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9702",
@@ -7724,7 +7724,7 @@
         "equity_ratio": 64.92364645997225,
         "fcf_yield_avg": 0.03780398261466876,
         "croic": 0.05144876325088339,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9753",
@@ -7741,7 +7741,7 @@
         "equity_ratio": 58.434144233259524,
         "fcf_yield_avg": 0.04015480943481708,
         "croic": 0.08828704578904145,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9769",
@@ -7758,7 +7758,7 @@
         "equity_ratio": 60.494614520632375,
         "fcf_yield_avg": 0.039362659283735765,
         "croic": 0.24645842720282457,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       },
       {
         "code": "9867",
@@ -7775,7 +7775,7 @@
         "equity_ratio": 48.901439513484924,
         "fcf_yield_avg": 0.06727665728287545,
         "croic": 0.0964647158525476,
-        "has_preferred_shares": null
+        "has_preferred_shares": false
       }
     ]
   }
