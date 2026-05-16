@@ -115,7 +115,7 @@ const COLUMNS: ColumnDef[] = [
     render: (row): string => {
       const v = row.amount_millions as number | null | undefined;
       if (v === null || v === undefined) { return "-"; }
-      return (v / 100).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "儆";
+      return (v / 100).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "億";
     },
     sortValue: (row): number | null => (row.amount_millions as number) ?? null,
   },

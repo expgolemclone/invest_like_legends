@@ -80,7 +80,7 @@ const COLUMNS = [
             if (v === null || v === undefined) {
                 return "-";
             }
-            return (v / 100).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "儆";
+            return (v / 100).toLocaleString("ja-JP", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "億";
         },
         sortValue: (row) => row.amount_millions ?? null,
     },
