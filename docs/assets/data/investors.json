@@ -67,20 +67,20 @@
         "croic": 0.03404117403159161
       },
       {
-        "code": "5653",
-        "name": "（銘柄コード 5653）",
+        "code": "5363",
+        "name": "東京窯業",
         "amount_millions": null,
         "ratio_percent": 0,
-        "price": null,
-        "net_cash_ratio": null,
-        "per_actual": null,
-        "per": null,
-        "per_next": null,
+        "price": 605.0,
+        "net_cash_ratio": 1.0073567330466022,
+        "per_actual": 8.789937328341411,
+        "per": 8.5979953125,
+        "per_next": 8.5979953125,
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
-        "equity_ratio": null,
-        "fcf_yield_avg": null,
-        "croic": null
+        "equity_ratio": 60.6877262195036,
+        "fcf_yield_avg": 0.04696720910779166,
+        "croic": 0.03835678842545073
       }
     ]
   },
