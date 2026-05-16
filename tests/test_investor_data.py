@@ -25,7 +25,6 @@ EXPECTED_INVESTOR_NAMES: dict[str, str] = {
     "katayama": "片山晃",
     "imura": "井村俊哉",
     "gomi": "五味大輔",
-    "one_warikabunihon": "one割安株日本株ファンド",
     "yoshida": "ヨシダトモヒロ",
 }
 EXPECTED_WATCH_CODES: list[str] = [
@@ -113,9 +112,6 @@ def test_shareholder_name_matching_handles_aliases_and_prefix_fallback() -> None
     assert select_matching_shareholder_names("片山晃", shareholder_names) == [
         "片山善博",
     ]
-    assert select_matching_shareholder_names("one割安株日本株ファンド", shareholder_names) == []
-
-
 def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) -> None:
     config_path: Path = tmp_path / "investors.json"
     config_path.write_text(
@@ -125,7 +121,6 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
                 "hikari": "光通信",
                 "katayama": "片山晃",
                 "naito": "内藤征吾",
-                "one_warikabunihon": "one割安株日本株ファンド",
                 "yoshida": "ヨシダトモヒロ",
             },
             ensure_ascii=False,
@@ -238,9 +233,6 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     yoshida_stocks: list[dict[str, object]] = _stocks(document, "yoshida")
     assert yoshida_stocks[0]["amount_millions"] == 345
     assert yoshida_stocks[0]["croic"] == 0.19
-
-    assert _stocks(document, "one_warikabunihon") == []
-
 
 def _create_handbook_db(
     db_path: Path,

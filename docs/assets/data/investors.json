@@ -7225,28 +7225,6 @@
       }
     ]
   },
-  "one_warikabunihon": {
-    "name": "one割安株日本株ファンド",
-    "stocks": [
-      {
-        "code": "446A",
-        "name": "ノースサンド",
-        "amount_millions": 46,
-        "ratio_percent": 3.8,
-        "price": 1149.0,
-        "net_cash_ratio": 0.16640809273344181,
-        "per_actual": 19.594908551655955,
-        "per": 21.427297297297297,
-        "per_next": 15.8562,
-        "peg_trailing_5": null,
-        "peg_blended_5y_actual_2f": null,
-        "equity_ratio": 75.2710306024427,
-        "fcf_yield_avg": null,
-        "croic": 0.14159240150093808,
-        "has_preferred_shares": false
-      }
-    ]
-  },
   "yoshida": {
     "name": "ヨシダトモヒロ",
     "stocks": [
