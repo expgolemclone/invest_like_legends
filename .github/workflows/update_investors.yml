@@ -80,7 +80,7 @@ jobs:
       - name: Install dependencies
         run: uv sync --frozen --no-dev
 
-      - name: Generate investors data
+      - name: Generate public data
         env:
           STOCK_DB_VAR_DIR: ${{ github.workspace }}/external/stock_db/var
           HANDBOOK_DB_PATH: ${{ github.workspace }}/external/japan_company_handbook/data/stock_performance.db
@@ -90,6 +90,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/assets/data/investors.json
+          git add docs/assets/data/investors.json docs/assets/data/shareholder_candidates.json
           git diff --staged --quiet || git commit -m "大株主DBから投資家データを再生成"
           git push

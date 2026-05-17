@@ -14,9 +14,14 @@ PROJECT_ROOT: Path = Path(__file__).resolve().parent
 DEFAULT_CONFIG_PATH: Path = PROJECT_ROOT / "config" / "investors.json"
 DEFAULT_WATCH_CODES_PATH: Path = PROJECT_ROOT / "config" / "watch_codes.txt"
 DEFAULT_OUTPUT_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "data" / "investors.json"
+DEFAULT_SHAREHOLDER_CANDIDATES_OUTPUT_PATH: Path = (
+    PROJECT_ROOT / "docs" / "assets" / "data" / "shareholder_candidates.json"
+)
 DEFAULT_HANDBOOK_DB_PATH: Path = (
     PROJECT_ROOT.parent / "japan_company_handbook" / "data" / "stock_performance.db"
 )
+DEFAULT_SHAREHOLDER_CANDIDATE_LIMIT: int = 100
+DEFAULT_SHAREHOLDER_CANDIDATE_MIN_HOLDINGS: int = 2
 
 _METRIC_FIELDS: tuple[str, ...] = (
     "price",
@@ -45,6 +50,25 @@ _CORPORATE_TOKENS: tuple[str, ...] = (
     "coltd",
     "inc.",
     "inc",
+)
+_SHAREHOLDER_DISCOVERY_EXCLUDED_TOKENS: tuple[str, ...] = (
+    "自己株",
+    "持株会",
+    "信託",
+    "カストディ",
+    "証券",
+    "トラスト",
+    "クライアント",
+    "msip",
+    "bny",
+    "ssbt",
+    "ssb",
+    "jpmc",
+    "ステートストリート",
+    "モクスレイ",
+    "jpモルガンチェースバンク",
+    "バンクオブニューヨークメロン",
+    "インタラクティブブローカーズ",
 )
 
 
@@ -75,6 +99,16 @@ class StockEntry(TypedDict):
 
 class InvestorEntry(TypedDict):
     name: str
+    stocks: list[StockEntry]
+
+
+class ShareholderCandidateEntry(TypedDict):
+    id: str
+    name: str
+    aliases: list[str]
+    holding_count: int
+    priced_holding_count: int
+    total_amount_millions: int
     stocks: list[StockEntry]
 
 
@@ -112,6 +146,7 @@ def build_investors_document(
     stocks_db_path: Path | None = None,
     metrics_map: dict[str, dict[str, float | bool | None]] | None = None,
     stock_names: dict[str, str] | None = None,
+    shareholder_rows: list[ShareholderRow] | None = None,
 ) -> dict[str, InvestorEntry]:
     investor_config: dict[str, str] = load_investor_config(config_path)
     watch_codes: list[str] = load_watch_codes(watch_codes_path)
@@ -121,9 +156,11 @@ def build_investors_document(
     resolved_metrics_map: dict[str, dict[str, float | bool | None]] = (
         metrics_map if metrics_map is not None else compute_metrics_map()
     )
-    shareholder_rows: list[ShareholderRow] = load_major_shareholder_rows(handbook_db_path)
+    resolved_shareholder_rows: list[ShareholderRow] = (
+        shareholder_rows if shareholder_rows is not None else load_major_shareholder_rows(handbook_db_path)
+    )
     distinct_shareholder_names: list[str] = list(
-        dict.fromkeys(row["shareholder_name"] for row in shareholder_rows)
+        dict.fromkeys(row["shareholder_name"] for row in resolved_shareholder_rows)
     )
 
     document: dict[str, InvestorEntry] = {}
@@ -141,7 +178,7 @@ def build_investors_document(
             )
             stocks = _build_investor_stocks(
                 matched_names=matched_names,
-                shareholder_rows=shareholder_rows,
+                shareholder_rows=resolved_shareholder_rows,
                 stock_names=names_map,
                 metrics_map=resolved_metrics_map,
             )
@@ -154,12 +191,94 @@ def build_investors_document(
     return document
 
 
+def build_shareholder_candidates_document(
+    *,
+    handbook_db_path: Path | None = None,
+    stocks_db_path: Path | None = None,
+    metrics_map: dict[str, dict[str, float | bool | None]] | None = None,
+    stock_names: dict[str, str] | None = None,
+    shareholder_rows: list[ShareholderRow] | None = None,
+    limit: int = DEFAULT_SHAREHOLDER_CANDIDATE_LIMIT,
+    min_holdings: int = DEFAULT_SHAREHOLDER_CANDIDATE_MIN_HOLDINGS,
+) -> list[ShareholderCandidateEntry]:
+    names_map: dict[str, str] = (
+        stock_names if stock_names is not None else load_stock_names(stocks_db_path)
+    )
+    resolved_metrics_map: dict[str, dict[str, float | bool | None]] = (
+        metrics_map if metrics_map is not None else compute_metrics_map()
+    )
+    resolved_shareholder_rows: list[ShareholderRow] = (
+        shareholder_rows if shareholder_rows is not None else load_major_shareholder_rows(handbook_db_path)
+    )
+
+    rows_by_candidate_id: dict[str, list[ShareholderRow]] = defaultdict(list)
+    alias_counts_by_candidate_id: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    for row in resolved_shareholder_rows:
+        shareholder_name: str = row["shareholder_name"]
+        candidate_id: str = normalize_shareholder_name(shareholder_name)
+        if not candidate_id or _is_discovery_excluded_shareholder_name(candidate_id):
+            continue
+        rows_by_candidate_id[candidate_id].append(row)
+        alias_counts_by_candidate_id[candidate_id][shareholder_name] += 1
+
+    candidates: list[ShareholderCandidateEntry] = []
+    for candidate_id, rows in rows_by_candidate_id.items():
+        stocks: list[StockEntry] = _build_stocks_from_shareholder_rows(
+            rows=rows,
+            stock_names=names_map,
+            metrics_map=resolved_metrics_map,
+        )
+        if len(stocks) < min_holdings:
+            continue
+
+        alias_counts: dict[str, int] = alias_counts_by_candidate_id[candidate_id]
+        aliases: list[str] = sorted(alias_counts)
+        candidates.append(
+            {
+                "id": candidate_id,
+                "name": _select_representative_shareholder_name(alias_counts),
+                "aliases": aliases,
+                "holding_count": len(stocks),
+                "priced_holding_count": sum(
+                    stock["amount_millions"] is not None for stock in stocks
+                ),
+                "total_amount_millions": sum(
+                    stock["amount_millions"] or 0 for stock in stocks
+                ),
+                "stocks": stocks,
+            }
+        )
+
+    candidates.sort(
+        key=lambda candidate: (
+            -candidate["total_amount_millions"],
+            -candidate["holding_count"],
+            candidate["name"],
+        )
+    )
+    return candidates[:limit]
+
+
 def write_investors_document(
     document: dict[str, InvestorEntry],
     *,
     output_path: Path | None = None,
 ) -> Path:
     resolved_output_path: Path = output_path or DEFAULT_OUTPUT_PATH
+    resolved_output_path.parent.mkdir(parents=True, exist_ok=True)
+    resolved_output_path.write_text(
+        json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return resolved_output_path
+
+
+def write_shareholder_candidates_document(
+    document: list[ShareholderCandidateEntry],
+    *,
+    output_path: Path | None = None,
+) -> Path:
+    resolved_output_path: Path = output_path or DEFAULT_SHAREHOLDER_CANDIDATES_OUTPUT_PATH
     resolved_output_path.parent.mkdir(parents=True, exist_ok=True)
     resolved_output_path.write_text(
         json.dumps(document, ensure_ascii=False, indent=2) + "\n",
@@ -308,12 +427,28 @@ def _build_investor_stocks(
     stock_names: dict[str, str],
     metrics_map: dict[str, dict[str, float | bool | None]],
 ) -> list[StockEntry]:
-    rows_by_code: dict[str, list[ShareholderRow]] = defaultdict(list)
     matched_name_set: set[str] = set(matched_names)
+    matched_rows: list[ShareholderRow] = [
+        row
+        for row in shareholder_rows
+        if row["shareholder_name"] in matched_name_set
+    ]
+    return _build_stocks_from_shareholder_rows(
+        rows=matched_rows,
+        stock_names=stock_names,
+        metrics_map=metrics_map,
+    )
 
-    for row in shareholder_rows:
-        if row["shareholder_name"] in matched_name_set:
-            rows_by_code[str(row["stock_code"])].append(row)
+
+def _build_stocks_from_shareholder_rows(
+    *,
+    rows: list[ShareholderRow],
+    stock_names: dict[str, str],
+    metrics_map: dict[str, dict[str, float | bool | None]],
+) -> list[StockEntry]:
+    rows_by_code: dict[str, list[ShareholderRow]] = defaultdict(list)
+    for row in rows:
+        rows_by_code[str(row["stock_code"])].append(row)
 
     stocks: list[StockEntry] = []
     for code, rows in rows_by_code.items():
@@ -366,6 +501,24 @@ def _resolve_stock_name(code: str, stock_names: dict[str, str]) -> str:
     if stock_name:
         return stock_name
     return f"（銘柄コード {code}）"
+
+
+def _is_discovery_excluded_shareholder_name(normalized_name: str) -> bool:
+    return any(
+        normalize_shareholder_name(token) in normalized_name
+        for token in _SHAREHOLDER_DISCOVERY_EXCLUDED_TOKENS
+    )
+
+
+def _select_representative_shareholder_name(alias_counts: dict[str, int]) -> str:
+    return min(
+        alias_counts,
+        key=lambda alias: (
+            -alias_counts[alias],
+            len(alias),
+            alias,
+        ),
+    )
 
 
 def _is_containment_match(normalized_investor_name: str, shareholder_name: str) -> bool:

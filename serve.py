@@ -5,7 +5,16 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from investor_data import build_investors_document, resolve_stocks_db_path, write_investors_document
+from investor_data import (
+    build_investors_document,
+    build_shareholder_candidates_document,
+    compute_metrics_map,
+    load_major_shareholder_rows,
+    load_stock_names,
+    resolve_stocks_db_path,
+    write_investors_document,
+    write_shareholder_candidates_document,
+)
 from stock_db.sources.stooq import (
     StooqDailyPriceUpdateError,
     StooqPriceUpdateCommandResult,
@@ -28,9 +37,17 @@ def _load_and_enrich_investors() -> dict:
     return build_investors_document()
 
 
+def _load_shareholder_candidates() -> list[dict]:
+    """Build shareholder discovery candidates from the handbook DB."""
+    return build_shareholder_candidates_document()
+
+
 def _create_api_routes() -> dict[str, ApiHandler]:
     """Create API routes for the investor portfolio UI."""
-    return {"/api/portfolio": json_route(lambda _params: _load_and_enrich_investors())}
+    return {
+        "/api/portfolio": json_route(lambda _params: _load_and_enrich_investors()),
+        "/api/shareholder-candidates": json_route(lambda _params: _load_shareholder_candidates()),
+    }
 
 
 def _ensure_stooq_prices_fresh() -> StooqPriceUpdateCommandResult | None:
@@ -60,16 +77,32 @@ def _ensure_stooq_prices_fresh() -> StooqPriceUpdateCommandResult | None:
 def main() -> None:
     _ensure_stooq_prices_fresh()
 
-    doc = build_investors_document()
-    output = write_investors_document(doc)
-    print(f"GitHub Pages JSON saved to {output}")
+    stock_names: dict[str, str] = load_stock_names()
+    metrics_map: dict[str, dict[str, float | bool | None]] = compute_metrics_map()
+    shareholder_rows = load_major_shareholder_rows()
+
+    investors_doc = build_investors_document(
+        stock_names=stock_names,
+        metrics_map=metrics_map,
+        shareholder_rows=shareholder_rows,
+    )
+    investors_output = write_investors_document(investors_doc)
+    print(f"GitHub Pages JSON saved to {investors_output}")
+
+    candidates_doc = build_shareholder_candidates_document(
+        stock_names=stock_names,
+        metrics_map=metrics_map,
+        shareholder_rows=shareholder_rows,
+    )
+    candidates_output = write_shareholder_candidates_document(candidates_doc)
+    print(f"GitHub Pages JSON saved to {candidates_output}")
 
     api_routes = _create_api_routes()
     _serve(
         static_root=_STATIC_ROOT,
         index_page=IndexPage(
             title="保有銘柄ビューア - 四季報オンラインリンク一覧",
-            loading_message="投資家データを読み込み中です。",
+            loading_message="データを読み込み中です。",
             tab_aria_label="投資家切替",
         ),
         api_routes=api_routes,

@@ -2,7 +2,7 @@
 
 ## 概要
 
-投資家ごとの保有銘柄一覧を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json` は毎日 GitHub Actions で再生成する。投資家別の銘柄一覧は静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
+投資家ごとの保有銘柄一覧と、四季報の大株主 DB を逆引きした株主候補一覧を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json` と `docs/assets/data/shareholder_candidates.json` は毎日 GitHub Actions で再生成する。投資家別の銘柄一覧と候補株主は静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
 
 ## ディレクトリ構成
 
@@ -16,7 +16,8 @@ invest_like_legends/
 │   ├── index.html         # stock_web_ui テンプレートから生成した HTML
 │   └── assets/
 │       ├── data/
-│       │   └── investors.json   # 生成済みの表示用データ
+│       │   ├── investors.json                 # 生成済みの投資家別表示データ
+│       │   └── shareholder_candidates.json    # 生成済みの株主候補データ
 │       └── app.js         # invest_like_legends 用テーブル設定
 ├── scripts/
 │   └── enrich_investors.py
@@ -66,7 +67,7 @@ uv run python serve.py
 uv run python scripts/enrich_investors.py
 ```
 
-`serve.py` はローカル確認用で、`/api/portfolio` が手元の DB と設定から毎回データを組み立てる。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json` を完全再生成する。
+`serve.py` はローカル確認用で、`/api/portfolio` と `/api/shareholder-candidates` が手元の DB と設定から毎回データを組み立てる。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json` と `docs/assets/data/shareholder_candidates.json` を完全再生成する。
 
 ### 投資家と監視銘柄の追加
 
@@ -83,7 +84,8 @@ uv run python scripts/enrich_investors.py
 
 ### データビルダー (`investor_data.py`)
 
-- `build_investors_document()` がローカルAPIと静的JSON生成の共通入口
+- `build_investors_document()` が投資家別表示データの共通入口
+- `build_shareholder_candidates_document()` が株主候補データの共通入口
 - 入力ソース
 - `config/investors.json`
 - `config/watch_codes.txt`
@@ -102,15 +104,21 @@ uv run python scripts/enrich_investors.py
 - `amount_millions` は四季報の `shares` を万株単位として `round(shares * price / 100)` で百万円換算する
 - 会社名が取れない場合は `（銘柄コード XXXX）` を使う
 - 一致する大株主が0件でも、設定上の投資家タブは残し `stocks: []` を返す
+- 株主候補は正規化名ごとに集約し、2銘柄以上を持つ主体から総保有額降順で上位100件を出す
+- 株主候補の初期除外語は、自己株・持株会・信託名義・カストディ・証券口座系など運用主体の発掘に不向きな名義を対象にする
 
 ### フロントエンド (`docs/`)
 
 - `index.html`: `stock_web_ui` 共通テンプレートから生成したHTML
-- `assets/app.js`: 共有 `StockTable` runtime を起動するだけの設定ファイル
+- `assets/app.js`: 共有 `StockTable` runtime を使い、投資家別表示・候補一覧・候補詳細を切り替える設定ファイル
 - `assets/data/investors.json`: 表示用の完全データ
   - トップレベル順から投資家タブを生成する
   - 各銘柄は `code`, `name`, `amount_millions`, `ratio_percent`, `peg_trailing_5`, `peg_blended_5y_actual_2f`, `has_preferred_shares` を含む指標列を含む
   - `watch` は `amount_millions: null`, `ratio_percent: 0`
+  - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
+- `assets/data/shareholder_candidates.json`: 株主候補の完全データ
+  - 各候補は `id`, `name`, `aliases`, `holding_count`, `priced_holding_count`, `total_amount_millions`, `stocks` を持つ
+  - `?view=candidates` は候補一覧、`?view=candidate&id=...` は候補ごとの既存銘柄テーブルを表示する
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 
 #### テーブルカラム
@@ -138,14 +146,15 @@ uv run python scripts/enrich_investors.py
 ### ローカルサーバー (`serve.py`)
 
 - 起動時に `stock_db.storage.prices.is_stooq_price_update_required()` で株価鮮度を判定し、古い場合だけ `stock_db.sources.stooq.run_stooq_price_update_command()` で Stooq 価格を更新する。成功した更新チェックは記録されるため、Stooq 側のデータがまだ進んでいない場合も起動ごとの再実行は抑止される
-- 起動時に `build_investors_document()` + `write_investors_document()` を呼び出し、`docs/assets/data/investors.json` を自動生成する
+- 起動時に `build_investors_document()` / `build_shareholder_candidates_document()` を呼び出し、公開用 JSON を自動生成する
 - `/api/portfolio` は `build_investors_document()` を毎回呼び、最新DBから投資家データを組み立てて返す
-- 生成済み `docs/assets/data/investors.json` はローカルAPIの入力には使わない
+- `/api/shareholder-candidates` は `build_shareholder_candidates_document()` を毎回呼び、最新DBから候補データを組み立てて返す
+- 生成済み JSON はローカルAPIの入力には使わない
 - `stock_web_ui.page.IndexPage` でローカル用 `index.html` を描画し、HTTPサーバー本体は `stock_web_ui` に委譲する
 
 ### 生成スクリプト (`scripts/enrich_investors.py`)
 
-- `build_investors_document()` を使って `docs/assets/data/investors.json` を完全再生成する
+- 投資家別表示データと株主候補データを同じ入力ソースから完全再生成する
 - 既存JSONへのマージは行わない
 
 ### GitHub Actions (`.github/workflows/update_investors.yml`)
@@ -156,7 +165,7 @@ uv run python scripts/enrich_investors.py
 - `stock_db` の `stocks.db` は `stocks-db` artifact から取得する
 - `japan_company_handbook` は `data/stock_performance.db` だけ sparse checkout する
 - `uv` の相対パス依存を満たすため、workflow 内で sibling symlink を作る
-- 生成後は `docs/assets/data/investors.json` だけをコミットして push する
+- 生成後は `docs/assets/data/investors.json` と `docs/assets/data/shareholder_candidates.json` をコミットして push する
 
 ## データフロー
 
@@ -178,6 +187,20 @@ major_shareholders + stocks.db + formula_screening metrics
 JSON / yazi / 外部ブラウザ
 ```
 
+```
+ブラウザ
+  ↓
+stock_web_ui.handler
+  ↓
+serve.py (/api/shareholder-candidates)
+  ↓
+investor_data.build_shareholder_candidates_document()
+  ↓
+major_shareholders + stocks.db + formula_screening metrics
+  ↓
+JSON / 候補一覧 / 候補別保有銘柄
+```
+
 ### GitHub Pages
 
 ```
@@ -186,8 +209,10 @@ GitHub Actions (毎日0:00)
 scripts/enrich_investors.py
   ↓
 investor_data.build_investors_document()
+investor_data.build_shareholder_candidates_document()
   ↓
 docs/assets/data/investors.json
+docs/assets/data/shareholder_candidates.json
   ↓
 git commit & push
   ↓
@@ -198,6 +223,7 @@ GitHub Pages デプロイ
 stock_web_ui/assets/stock-table.js + style.css
   ↓
 invest_like_legends/assets/data/investors.json
+invest_like_legends/assets/data/shareholder_candidates.json
 ```
 
 ## 依存プロジェクト
