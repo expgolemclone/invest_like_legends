@@ -58,7 +58,7 @@ npm install
 uv run pytest
 ```
 
-`src_ts/app.ts` を変更した場合は `npx tsc` を実行し、生成済み JavaScript の `docs/assets/app.js` も更新する。
+TypeScript は `tsconfig.json` と `package.json` / `package-lock.json` の TypeScript 依存でコンパイルする。`src_ts/app.ts` を変更した場合は `npx tsc` を実行し、生成済み JavaScript の `docs/assets/app.js` も更新する。
 
 ### ローカル確認と公開データ更新
 
@@ -91,7 +91,7 @@ uv run python scripts/enrich_investors.py
 - `config/watch_codes.txt`
 - `japan_company_handbook/data/stock_performance.db` の `major_shareholders`
 - `stock_db` の `stocks.db` から引く会社名
-- `formula_screening.web.compute_all_stock_metrics()` が返す指標
+- `formula_screening.web.compute_all_stock_metrics()` が返す Rust-backed 指標
   - 指標計算に使う財務データは `stock_db` の `financial_items` を参照し、現在は EDINET XBRL (`source=edinet_xbrl`) を正とする
   - `per_actual` は実績純利益、`per` は四季報今期予想純利益、`per_next` は四季報来期予想純利益 (`source=shikiho`) から計算された値を使う
 - 投資家名の照合手順
@@ -136,12 +136,12 @@ uv run python scripts/enrich_investors.py
 | per_a | `時価総額 / 実績純利益` | `per_actual` | o | 0<per_actual<=7: good, >7: bad |
 | per_c | `時価総額 / 今期予想純利益` | `per` | o | 0<per<=7: good, >7: bad |
 | per_n | `時価総額 / 来期予想純利益` | `per_next` | o | 0<per_next<=7: good, >7: bad |
-| PEG実績5年 | `実績PER / 過去5年EPS CAGR[%]` | `peg_trailing_5` | o |
-| PEG5年+2F | `来期予想PER / (過去5年実績+2期予想)EPS CAGR[%]` | `peg_blended_5y_actual_2f` | o |
+| peg_5y | `実績PER / 過去5年EPS CAGR[%]` | `peg_trailing_5` | o |
+| peg_5y2f | `来期予想PER / (過去5年実績+2期予想)EPS CAGR[%]` | `peg_blended_5y_actual_2f` | o |
 | pref | 優先株有無 | `has_preferred_shares` | o |
-| equity | `自己資本 / 総資産 * 100` | `equity_ratio` | o | >= 50: good |
-| fcf_y | `10期の平均FCF / 時価総額` | `fcf_yield_avg` | o | >= 10%: good |
-| croic | `FCF / (自己資本 + 有利子負債)` | `croic` | o | >= 15%: good |
+| equity% | `自己資本 / 総資産 * 100` | `equity_ratio` | o | >= 50: good |
+| fcf_10y% | `10期の平均FCF / 時価総額` | `fcf_yield_avg` | o | >= 10%: good |
+| croic% | `FCF / (自己資本 + 有利子負債)` | `croic` | o | >= 15%: good |
 | amount | 投資家の保有金額（百万円を億円表示） | `amount_millions` | - |
 | ratio | 投資家の保有割合（%） | `ratio_percent` | - |
 

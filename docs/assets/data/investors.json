@@ -84,7 +84,7 @@
         "peg_trailing_5": 0.21973387349734333,
         "peg_blended_5y_actual_2f": 0.5899641784684635,
         "equity_ratio": 75.09904797985604,
-        "fcf_yield_avg": 0.02187820367462822,
+        "fcf_yield_avg": 0.021878203674628224,
         "croic": -0.04538857208946689,
         "has_preferred_shares": false
       },
@@ -101,7 +101,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 39.02909878519635,
-        "fcf_yield_avg": 0.01781973536762822,
+        "fcf_yield_avg": 0.017819735367628223,
         "croic": -0.04525252525252525,
         "has_preferred_shares": false
       },
@@ -118,7 +118,7 @@
         "peg_trailing_5": 0.07856836665934629,
         "peg_blended_5y_actual_2f": 0.20706343954274337,
         "equity_ratio": 58.69496186198171,
-        "fcf_yield_avg": 0.05428853461074642,
+        "fcf_yield_avg": 0.05428853461074641,
         "croic": 0.03404117403159161,
         "has_preferred_shares": false
       },
@@ -169,7 +169,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.53626640152627,
-        "fcf_yield_avg": 0.04986098758569575,
+        "fcf_yield_avg": 0.049860987585695765,
         "croic": 0.09368885829456117,
         "has_preferred_shares": false
       },
@@ -237,7 +237,7 @@
         "peg_trailing_5": 0.5241764599953446,
         "peg_blended_5y_actual_2f": 0.49722523962848264,
         "equity_ratio": 31.256830601092894,
-        "fcf_yield_avg": 0.044326721339298936,
+        "fcf_yield_avg": 0.04432672133929892,
         "croic": 0.05582645421386063,
         "has_preferred_shares": false
       },
@@ -296,7 +296,7 @@
         "peg_trailing_5": 0.5971835354159165,
         "peg_blended_5y_actual_2f": 5.083761572421249,
         "equity_ratio": 61.540042741792966,
-        "fcf_yield_avg": 0.018710386027355565,
+        "fcf_yield_avg": 0.018710386027355568,
         "croic": 0.09076010411458875,
         "has_preferred_shares": false
       },
@@ -313,7 +313,7 @@
         "peg_trailing_5": 0.7926728414435541,
         "peg_blended_5y_actual_2f": 1.3012377252117875,
         "equity_ratio": 60.469313668289374,
-        "fcf_yield_avg": 0.04181537344282442,
+        "fcf_yield_avg": 0.041815373442824426,
         "croic": 0.015458731580736837,
         "has_preferred_shares": false
       },
@@ -364,7 +364,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 73.18134354333449,
-        "fcf_yield_avg": 0.08135465460614871,
+        "fcf_yield_avg": 0.08135465460614873,
         "croic": 0.08368386096967013,
         "has_preferred_shares": false
       },
@@ -415,7 +415,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 25.177602252111875,
-        "fcf_yield_avg": 0.10244849503145478,
+        "fcf_yield_avg": 0.10244849503145481,
         "croic": -0.14227720220478832,
         "has_preferred_shares": true
       },
@@ -517,7 +517,7 @@
         "peg_trailing_5": 0.21973387349734333,
         "peg_blended_5y_actual_2f": 0.5899641784684635,
         "equity_ratio": 75.09904797985604,
-        "fcf_yield_avg": 0.02187820367462822,
+        "fcf_yield_avg": 0.021878203674628224,
         "croic": -0.04538857208946689,
         "has_preferred_shares": false
       },
@@ -534,7 +534,7 @@
         "peg_trailing_5": 0.572965353177746,
         "peg_blended_5y_actual_2f": 0.6680539898114222,
         "equity_ratio": 28.988700186362788,
-        "fcf_yield_avg": -0.03748464554187446,
+        "fcf_yield_avg": -0.037484645541874445,
         "croic": -0.07373669959695131,
         "has_preferred_shares": false
       },
@@ -551,7 +551,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": 2.6149634375157254,
         "equity_ratio": 69.13549591036667,
-        "fcf_yield_avg": 0.07628610820096579,
+        "fcf_yield_avg": 0.07628610820096578,
         "croic": 0.009774085785941574,
         "has_preferred_shares": false
       },
@@ -602,7 +602,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 45.999470303317736,
-        "fcf_yield_avg": 0.03408160614068949,
+        "fcf_yield_avg": 0.0340816061406895,
         "croic": -0.0632511760480275,
         "has_preferred_shares": false
       },
@@ -653,7 +653,7 @@
         "peg_trailing_5": 38.69952397365919,
         "peg_blended_5y_actual_2f": 4.327725801302753,
         "equity_ratio": 79.96123760266609,
-        "fcf_yield_avg": 0.03353081364829396,
+        "fcf_yield_avg": 0.033530813648293974,
         "croic": 0.009322400957123781,
         "has_preferred_shares": false
       },
@@ -687,7 +687,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 89.65856999748151,
-        "fcf_yield_avg": 0.04574033661578684,
+        "fcf_yield_avg": 0.045740336615786824,
         "croic": 0.10870888650781164,
         "has_preferred_shares": false
       },
@@ -721,7 +721,7 @@
         "peg_trailing_5": 0.24754603029883593,
         "peg_blended_5y_actual_2f": 0.2677473013826016,
         "equity_ratio": 61.64190031993113,
-        "fcf_yield_avg": -0.009845911747952487,
+        "fcf_yield_avg": -0.00984591174795249,
         "croic": 0.05584423350102705,
         "has_preferred_shares": false
       },
@@ -738,7 +738,7 @@
         "peg_trailing_5": 2.115402188674818,
         "peg_blended_5y_actual_2f": 0.9493587136563753,
         "equity_ratio": 53.736978506044395,
-        "fcf_yield_avg": 0.012176240180889116,
+        "fcf_yield_avg": 0.012176240180889114,
         "croic": 0.0916888955179204,
         "has_preferred_shares": false
       },
@@ -789,7 +789,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 59.5901101897817,
-        "fcf_yield_avg": -0.0016420739714264315,
+        "fcf_yield_avg": -0.001642073971426424,
         "croic": -0.037719188552455755,
         "has_preferred_shares": false
       },
@@ -823,7 +823,7 @@
         "peg_trailing_5": 0.6124220044472376,
         "peg_blended_5y_actual_2f": 0.621874184873378,
         "equity_ratio": 69.04003881978389,
-        "fcf_yield_avg": 0.04399170448006463,
+        "fcf_yield_avg": 0.043991704480064626,
         "croic": 0.08416760149672747,
         "has_preferred_shares": false
       },
@@ -908,7 +908,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.44469444776675,
-        "fcf_yield_avg": 0.08136014347309971,
+        "fcf_yield_avg": 0.08136014347309972,
         "croic": 0.025620390737269048,
         "has_preferred_shares": false
       },
@@ -925,7 +925,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.23263398292057,
-        "fcf_yield_avg": 0.11040770771350272,
+        "fcf_yield_avg": 0.11040770771350275,
         "croic": 0.049806879096066056,
         "has_preferred_shares": false
       },
@@ -942,7 +942,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.8272670695228,
-        "fcf_yield_avg": 0.0335606311375924,
+        "fcf_yield_avg": 0.03356063113759241,
         "croic": 0.16044068084624316,
         "has_preferred_shares": false
       },
@@ -952,14 +952,14 @@
         "amount_millions": 225,
         "ratio_percent": 2.9,
         "price": 867.0,
-        "net_cash_ratio": -0.19024503796616685,
+        "net_cash_ratio": -0.1978781415592665,
         "per_actual": 8.721129994464832,
         "per": 7.657344,
         "per_next": 6.961221818181818,
         "peg_trailing_5": 23.025049315999155,
         "peg_blended_5y_actual_2f": 1.960045285561138,
         "equity_ratio": 50.04904919013531,
-        "fcf_yield_avg": 0.10664951189341891,
+        "fcf_yield_avg": 0.1066495118934189,
         "croic": -0.020747275272150645,
         "has_preferred_shares": false
       },
@@ -969,14 +969,14 @@
         "amount_millions": 38,
         "ratio_percent": 0.7,
         "price": 475.0,
-        "net_cash_ratio": -0.7455158185639028,
+        "net_cash_ratio": -0.7533984799350723,
         "per_actual": 16.077134310713287,
         "per": 7.174083333333333,
         "per_next": 6.428724025974026,
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 46.01056458077557,
-        "fcf_yield_avg": -0.01293908679945476,
+        "fcf_yield_avg": -0.012939086799454763,
         "croic": 0.03523957775772354,
         "has_preferred_shares": false
       },
@@ -1010,7 +1010,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 16.11559818273599,
-        "fcf_yield_avg": 0.12854412972649318,
+        "fcf_yield_avg": 0.1285441297264932,
         "croic": -0.265005265005265,
         "has_preferred_shares": false
       },
@@ -1027,7 +1027,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.95152254840338,
-        "fcf_yield_avg": 0.046076138225897574,
+        "fcf_yield_avg": 0.04607613822589757,
         "croic": -0.046831579300265595,
         "has_preferred_shares": false
       },
@@ -1044,7 +1044,7 @@
         "peg_trailing_5": 0.9487607454830776,
         "peg_blended_5y_actual_2f": 1.1200180100785173,
         "equity_ratio": 42.4100780938266,
-        "fcf_yield_avg": 0.05656977471639766,
+        "fcf_yield_avg": 0.05656977471639764,
         "croic": 0.10435421142810519,
         "has_preferred_shares": false
       },
@@ -1129,7 +1129,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.70706300057364,
-        "fcf_yield_avg": -0.004616369382992006,
+        "fcf_yield_avg": -0.0046163693829920065,
         "croic": 0.09085302756995882,
         "has_preferred_shares": false
       },
@@ -1163,7 +1163,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": 0.9104706979075398,
         "equity_ratio": 53.52095049120995,
-        "fcf_yield_avg": 0.09954584018787911,
+        "fcf_yield_avg": 0.09954584018787913,
         "croic": -0.008647090480420679,
         "has_preferred_shares": false
       },
@@ -1269,7 +1269,7 @@
         "amount_millions": 12544,
         "ratio_percent": 7.2,
         "price": 12800.0,
-        "net_cash_ratio": 0.29021245453533256,
+        "net_cash_ratio": 0.28712329275534443,
         "per_actual": 10.92924325009507,
         "per": 11.65145945945946,
         "per_next": 11.344842105263158,
@@ -1293,7 +1293,7 @@
         "peg_trailing_5": 0.7926728414435541,
         "peg_blended_5y_actual_2f": 1.3012377252117875,
         "equity_ratio": 60.469313668289374,
-        "fcf_yield_avg": 0.04181537344282442,
+        "fcf_yield_avg": 0.041815373442824426,
         "croic": 0.015458731580736837,
         "has_preferred_shares": false
       },
@@ -1327,7 +1327,7 @@
         "peg_trailing_5": 16.956131273871843,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 37.96961521381962,
-        "fcf_yield_avg": 0.04807859332265022,
+        "fcf_yield_avg": 0.048078593322650215,
         "croic": 0.07547763386196821,
         "has_preferred_shares": false
       },
@@ -1344,7 +1344,7 @@
         "peg_trailing_5": 24.928152548614353,
         "peg_blended_5y_actual_2f": 1.0115324021810608,
         "equity_ratio": 36.52246099277399,
-        "fcf_yield_avg": 0.06596285341557998,
+        "fcf_yield_avg": 0.06596285341557999,
         "croic": -0.2201317774073192,
         "has_preferred_shares": false
       },
@@ -1429,7 +1429,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.564789721971295,
-        "fcf_yield_avg": 0.017724840521154913,
+        "fcf_yield_avg": 0.01772484052115491,
         "croic": -0.02562035295171549,
         "has_preferred_shares": false
       },
@@ -1446,7 +1446,7 @@
         "peg_trailing_5": 6.719462974655057,
         "peg_blended_5y_actual_2f": 3.5006004282326493,
         "equity_ratio": 60.82567703851741,
-        "fcf_yield_avg": -0.011811155509091963,
+        "fcf_yield_avg": -0.011811155509091968,
         "croic": -0.17949919735654946,
         "has_preferred_shares": false
       },
@@ -1463,7 +1463,7 @@
         "peg_trailing_5": 0.5304220315027345,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 42.25048514578069,
-        "fcf_yield_avg": 0.02935817473046089,
+        "fcf_yield_avg": 0.029358174730460884,
         "croic": -0.10928657956826425,
         "has_preferred_shares": false
       },
@@ -1480,7 +1480,7 @@
         "peg_trailing_5": 2.376217520401042,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 69.0280894529134,
-        "fcf_yield_avg": 0.015712447049648196,
+        "fcf_yield_avg": 0.0157124470496482,
         "croic": -0.021362392173455026,
         "has_preferred_shares": false
       },
@@ -1599,7 +1599,7 @@
         "peg_trailing_5": 7.783685719615916,
         "peg_blended_5y_actual_2f": 5.034967094630455,
         "equity_ratio": 67.40245914493889,
-        "fcf_yield_avg": 0.06924178229136345,
+        "fcf_yield_avg": 0.06924178229136348,
         "croic": 0.027939337178490196,
         "has_preferred_shares": false
       },
@@ -1667,7 +1667,7 @@
         "peg_trailing_5": 1.3712921453471172,
         "peg_blended_5y_actual_2f": 1.5725318133918662,
         "equity_ratio": 89.73281182660172,
-        "fcf_yield_avg": 0.013656723312984656,
+        "fcf_yield_avg": 0.013656723312984658,
         "croic": -0.012403362660433933,
         "has_preferred_shares": false
       },
@@ -1752,7 +1752,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.9814552995912,
-        "fcf_yield_avg": -0.0231486574766918,
+        "fcf_yield_avg": -0.023148657476691804,
         "croic": -0.02393065370623158,
         "has_preferred_shares": false
       },
@@ -1769,7 +1769,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 88.39372196769688,
-        "fcf_yield_avg": 0.0589800149328306,
+        "fcf_yield_avg": 0.058980014932830595,
         "croic": 0.027986898421251457,
         "has_preferred_shares": false
       },
@@ -1786,7 +1786,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 59.84877520197789,
-        "fcf_yield_avg": 0.05169003931255545,
+        "fcf_yield_avg": 0.05169003931255546,
         "croic": 0.3657764630974262,
         "has_preferred_shares": false
       },
@@ -1813,14 +1813,14 @@
         "amount_millions": 444,
         "ratio_percent": 2.3,
         "price": 235.0,
-        "net_cash_ratio": -0.1768913670328901,
+        "net_cash_ratio": -1.2797600012387729,
         "per_actual": 12.85786876731302,
         "per": 11.184796686746989,
         "per_next": 9.771980263157895,
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": 3.660307542158675,
         "equity_ratio": 24.511003911968704,
-        "fcf_yield_avg": 0.019183996132874536,
+        "fcf_yield_avg": 0.019183996132874533,
         "croic": 0.1847541155499633,
         "has_preferred_shares": false
       },
@@ -1871,7 +1871,7 @@
         "peg_trailing_5": 90.42335209216425,
         "peg_blended_5y_actual_2f": 3.973637451905832,
         "equity_ratio": 79.0144266917186,
-        "fcf_yield_avg": 0.026811957189735742,
+        "fcf_yield_avg": 0.026811957189735745,
         "croic": 0.10409914347160987,
         "has_preferred_shares": false
       },
@@ -1949,7 +1949,7 @@
         "amount_millions": 32996,
         "ratio_percent": 30.1,
         "price": 3650.0,
-        "net_cash_ratio": 0.13833718699968922,
+        "net_cash_ratio": -0.5104747071681226,
         "per_actual": 14.122887115965193,
         "per": 11.360853907142857,
         "per_next": 10.603463646666667,
@@ -1957,7 +1957,7 @@
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 22.357150505014452,
         "fcf_yield_avg": 0.06163151165598344,
-        "croic": 0.21529598077763215,
+        "croic": 0.31468252384563195,
         "has_preferred_shares": false
       },
       {
@@ -1973,7 +1973,7 @@
         "peg_trailing_5": 0.2640601115195018,
         "peg_blended_5y_actual_2f": 0.40100957823058153,
         "equity_ratio": 25.65555712807414,
-        "fcf_yield_avg": 0.042182624939817046,
+        "fcf_yield_avg": 0.04218262493981704,
         "croic": -0.0006413509509377848,
         "has_preferred_shares": false
       },
@@ -1983,7 +1983,7 @@
         "amount_millions": 20036,
         "ratio_percent": 58.3,
         "price": 1132.0,
-        "net_cash_ratio": 0.7054760062586608,
+        "net_cash_ratio": 0.4830926682369481,
         "per_actual": 5.193928228640557,
         "per": 7.1557182033333335,
         "per_next": 7.1557182033333335,
@@ -1991,7 +1991,7 @@
         "peg_blended_5y_actual_2f": 1.0658592314812998,
         "equity_ratio": 73.51694915254238,
         "fcf_yield_avg": 0.09320824528686804,
-        "croic": 0.05981393756064152,
+        "croic": 0.07023657931774009,
         "has_preferred_shares": false
       },
       {
@@ -2092,8 +2092,8 @@
         "peg_trailing_5": 0.20067615510282263,
         "peg_blended_5y_actual_2f": 1.3727381976204438,
         "equity_ratio": 75.06990475920117,
-        "fcf_yield_avg": 0.037252303798480935,
-        "croic": 0.12043297333976472,
+        "fcf_yield_avg": 0.03725230379848093,
+        "croic": 0.13926336289209476,
         "has_preferred_shares": false
       },
       {
@@ -2126,7 +2126,7 @@
         "peg_trailing_5": 0.4999544719232918,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 30.219223510343614,
-        "fcf_yield_avg": 0.022784461152882206,
+        "fcf_yield_avg": 0.022784461152882202,
         "croic": 0.023382465697143227,
         "has_preferred_shares": false
       },
@@ -2143,7 +2143,7 @@
         "peg_trailing_5": 0.6092735988492484,
         "peg_blended_5y_actual_2f": 0.6173630131511887,
         "equity_ratio": 62.51710887462879,
-        "fcf_yield_avg": 0.019109483089824977,
+        "fcf_yield_avg": 0.019109483089824974,
         "croic": 0.23294161777108252,
         "has_preferred_shares": false
       },
@@ -2170,14 +2170,14 @@
         "amount_millions": 1547,
         "ratio_percent": 6.5,
         "price": 1334.0,
-        "net_cash_ratio": 0.07744075704396301,
+        "net_cash_ratio": 0.07740822293190634,
         "per_actual": 13.131189667399141,
         "per": 11.942399191919192,
         "per_next": 11.534609951219512,
         "peg_trailing_5": 1.0652835447512554,
         "peg_blended_5y_actual_2f": 1.0791818281320726,
         "equity_ratio": 53.08515599642117,
-        "fcf_yield_avg": 0.06224137220553418,
+        "fcf_yield_avg": 0.0622413722055342,
         "croic": 0.22130373530402347,
         "has_preferred_shares": false
       },
@@ -2262,7 +2262,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 62.41604506432291,
-        "fcf_yield_avg": 0.002670230133773045,
+        "fcf_yield_avg": 0.002670230133773051,
         "croic": -0.06239672250216678,
         "has_preferred_shares": false
       },
@@ -2279,7 +2279,7 @@
         "peg_trailing_5": 1.6843660982674094,
         "peg_blended_5y_actual_2f": 1.3477910447145964,
         "equity_ratio": 45.96627057924347,
-        "fcf_yield_avg": -0.007681079390901192,
+        "fcf_yield_avg": -0.007681079390901191,
         "croic": -0.03638605326637907,
         "has_preferred_shares": false
       },
@@ -2330,7 +2330,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 43.00192307945092,
-        "fcf_yield_avg": 0.020665736002283025,
+        "fcf_yield_avg": 0.02066573600228303,
         "croic": -0.1234855946343526,
         "has_preferred_shares": false
       },
@@ -2364,7 +2364,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 31.015801354401805,
-        "fcf_yield_avg": -0.0005178144838205747,
+        "fcf_yield_avg": -0.0005178144838205705,
         "croic": 0.21526087416657846,
         "has_preferred_shares": false
       },
@@ -2398,7 +2398,7 @@
         "peg_trailing_5": 2.925662842531449,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 82.59665649483145,
-        "fcf_yield_avg": 0.024237820124698998,
+        "fcf_yield_avg": 0.024237820124699,
         "croic": 0.06638701107622569,
         "has_preferred_shares": false
       },
@@ -2408,7 +2408,7 @@
         "amount_millions": 362,
         "ratio_percent": 9.8,
         "price": 167.0,
-        "net_cash_ratio": 0.16139414363564614,
+        "net_cash_ratio": 0.0725350754950036,
         "per_actual": -53.15637831307765,
         "per": 91.3027243,
         "per_next": 73.04217944,
@@ -2483,7 +2483,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 79.70229458909733,
-        "fcf_yield_avg": 0.010496680274785166,
+        "fcf_yield_avg": 0.010496680274785165,
         "croic": -0.19233155796401058,
         "has_preferred_shares": false
       },
@@ -2517,7 +2517,7 @@
         "peg_trailing_5": 1.8226684323217717,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 81.90132062545621,
-        "fcf_yield_avg": 0.06793683476579322,
+        "fcf_yield_avg": 0.06793683476579321,
         "croic": 0.036692516483015636,
         "has_preferred_shares": false
       },
@@ -2636,7 +2636,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 60.06992229014354,
-        "fcf_yield_avg": 0.02190030853263979,
+        "fcf_yield_avg": 0.021900308532639794,
         "croic": 0.18907973925469546,
         "has_preferred_shares": false
       },
@@ -2670,7 +2670,7 @@
         "peg_trailing_5": 7.79342638601782,
         "peg_blended_5y_actual_2f": 2.1554243607254686,
         "equity_ratio": 66.81437998092989,
-        "fcf_yield_avg": 0.014210200868199907,
+        "fcf_yield_avg": 0.014210200868199904,
         "croic": 0.11519793435732376,
         "has_preferred_shares": false
       },
@@ -2687,7 +2687,7 @@
         "peg_trailing_5": 1.4964999332775821,
         "peg_blended_5y_actual_2f": 1.3490645995907609,
         "equity_ratio": 67.25633976188776,
-        "fcf_yield_avg": 0.03888130581844968,
+        "fcf_yield_avg": 0.038881305818449674,
         "croic": 0.17607433751249457,
         "has_preferred_shares": false
       },
@@ -2755,7 +2755,7 @@
         "peg_trailing_5": 1.361675014883247,
         "peg_blended_5y_actual_2f": 1.5502222693076144,
         "equity_ratio": 48.621336708228334,
-        "fcf_yield_avg": 0.10108070563138549,
+        "fcf_yield_avg": 0.10108070563138546,
         "croic": 0.12179237232618523,
         "has_preferred_shares": false
       },
@@ -2772,7 +2772,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 74.79322961404752,
-        "fcf_yield_avg": -0.0054227106773744906,
+        "fcf_yield_avg": -0.005422710677374496,
         "croic": -0.8037624499261579,
         "has_preferred_shares": false
       },
@@ -2789,7 +2789,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": 1.0885732719001011,
         "equity_ratio": 47.45898146444436,
-        "fcf_yield_avg": 0.03812113181261876,
+        "fcf_yield_avg": 0.038121131812618766,
         "croic": 0.0444891160738605,
         "has_preferred_shares": false
       },
@@ -2806,7 +2806,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 56.48536985681136,
-        "fcf_yield_avg": 0.013620731934892157,
+        "fcf_yield_avg": 0.01362073193489216,
         "croic": -0.03451338012534795,
         "has_preferred_shares": false
       },
@@ -2901,7 +2901,7 @@
         "amount_millions": 822,
         "ratio_percent": 5.8,
         "price": 1126.0,
-        "net_cash_ratio": 0.8016954626190861,
+        "net_cash_ratio": 0.8003390925238172,
         "per_actual": 9.579273008507347,
         "per": 10.677586206896551,
         "per_next": 9.312781954887217,
@@ -2976,7 +2976,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 22.928059388547304,
-        "fcf_yield_avg": 0.08586100287874485,
+        "fcf_yield_avg": 0.08586100287874486,
         "croic": 0.021028774708093067,
         "has_preferred_shares": false
       },
@@ -3197,7 +3197,7 @@
         "peg_trailing_5": 1.6214557174764228,
         "peg_blended_5y_actual_2f": 2.7100889705400233,
         "equity_ratio": 75.95341635834313,
-        "fcf_yield_avg": 0.03869070902306971,
+        "fcf_yield_avg": 0.0386907090230697,
         "croic": 0.08770754423223605,
         "has_preferred_shares": false
       },
@@ -3214,7 +3214,7 @@
         "peg_trailing_5": 38.69952397365919,
         "peg_blended_5y_actual_2f": 4.327725801302753,
         "equity_ratio": 79.96123760266609,
-        "fcf_yield_avg": 0.03353081364829396,
+        "fcf_yield_avg": 0.033530813648293974,
         "croic": 0.009322400957123781,
         "has_preferred_shares": false
       },
@@ -3231,7 +3231,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.9368475572185,
-        "fcf_yield_avg": 0.07194876959930314,
+        "fcf_yield_avg": 0.07194876959930313,
         "croic": 0.15256337199341513,
         "has_preferred_shares": false
       },
@@ -3248,7 +3248,7 @@
         "peg_trailing_5": 2.394149499400036,
         "peg_blended_5y_actual_2f": 1.8616452363498435,
         "equity_ratio": 61.04032039195072,
-        "fcf_yield_avg": 0.024330367556929758,
+        "fcf_yield_avg": 0.024330367556929754,
         "croic": -0.09811719747662441,
         "has_preferred_shares": false
       },
@@ -3265,7 +3265,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.28389421654099,
-        "fcf_yield_avg": 0.04057297799998925,
+        "fcf_yield_avg": 0.04057297799998924,
         "croic": 0.11274643072294127,
         "has_preferred_shares": false
       },
@@ -3282,7 +3282,7 @@
         "peg_trailing_5": 1.500427254615145,
         "peg_blended_5y_actual_2f": 1.216506921138969,
         "equity_ratio": 68.2334323551459,
-        "fcf_yield_avg": 0.04915465853040457,
+        "fcf_yield_avg": 0.04915465853040456,
         "croic": 0.0556523759730452,
         "has_preferred_shares": false
       },
@@ -3299,7 +3299,7 @@
         "peg_trailing_5": 0.7428690671738376,
         "peg_blended_5y_actual_2f": 5.682051176786209,
         "equity_ratio": 62.90765817965103,
-        "fcf_yield_avg": 0.014994412973997492,
+        "fcf_yield_avg": 0.014994412973997489,
         "croic": 0.04815789473684211,
         "has_preferred_shares": false
       },
@@ -3333,7 +3333,7 @@
         "peg_trailing_5": 0.7847115413049421,
         "peg_blended_5y_actual_2f": 10.411578196082065,
         "equity_ratio": 52.02442338837283,
-        "fcf_yield_avg": 0.07310169273326604,
+        "fcf_yield_avg": 0.07310169273326605,
         "croic": 0.006672335971740695,
         "has_preferred_shares": false
       },
@@ -3350,7 +3350,7 @@
         "peg_trailing_5": 0.814431908727843,
         "peg_blended_5y_actual_2f": 0.8980662013740187,
         "equity_ratio": 75.66823368642422,
-        "fcf_yield_avg": 0.03083869263125652,
+        "fcf_yield_avg": 0.030838692631256527,
         "croic": 0.005565917882917483,
         "has_preferred_shares": false
       },
@@ -3384,7 +3384,7 @@
         "peg_trailing_5": 0.48699750894695615,
         "peg_blended_5y_actual_2f": 0.6744102182429123,
         "equity_ratio": 74.20145207949606,
-        "fcf_yield_avg": 0.08291270362585011,
+        "fcf_yield_avg": 0.0829127036258501,
         "croic": 0.07871367964518294,
         "has_preferred_shares": false
       },
@@ -3401,7 +3401,7 @@
         "peg_trailing_5": 9.165113602036975,
         "peg_blended_5y_actual_2f": 5.9062322984508775,
         "equity_ratio": 43.733235942140055,
-        "fcf_yield_avg": 0.05084214922048998,
+        "fcf_yield_avg": 0.05084214922048996,
         "croic": 0.3874336936072891,
         "has_preferred_shares": false
       },
@@ -3470,7 +3470,7 @@
         "peg_blended_5y_actual_2f": 0.8943985655038702,
         "equity_ratio": 75.41429830636959,
         "fcf_yield_avg": 0.037646587917082884,
-        "croic": -0.049527460636706704,
+        "croic": -0.049655769229374265,
         "has_preferred_shares": false
       },
       {
@@ -3759,7 +3759,7 @@
         "peg_blended_5y_actual_2f": 5.951472524474389,
         "equity_ratio": 86.5488086087625,
         "fcf_yield_avg": 0.04584717607973422,
-        "croic": 0.15998455995882654,
+        "croic": 0.16988659652958055,
         "has_preferred_shares": false
       },
       {
@@ -3792,7 +3792,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 78.95035778348783,
-        "fcf_yield_avg": 0.036493240892242484,
+        "fcf_yield_avg": 0.03649324089224248,
         "croic": 0.05737644360333695,
         "has_preferred_shares": false
       },
@@ -3810,7 +3810,7 @@
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.70715364444457,
         "fcf_yield_avg": null,
-        "croic": 0.0037204647317349115,
+        "croic": 0.00384598083756916,
         "has_preferred_shares": false
       },
       {
@@ -3860,7 +3860,7 @@
         "peg_trailing_5": 0.745325369346164,
         "peg_blended_5y_actual_2f": 0.7830809791332188,
         "equity_ratio": 63.9648776033987,
-        "fcf_yield_avg": 0.05856693380705854,
+        "fcf_yield_avg": 0.05856693380705853,
         "croic": 0.005400833363048484,
         "has_preferred_shares": false
       },
@@ -3928,7 +3928,7 @@
         "peg_trailing_5": 2.9158088390853103,
         "peg_blended_5y_actual_2f": 3.528297558302471,
         "equity_ratio": 72.6316057195866,
-        "fcf_yield_avg": 0.03056934858827462,
+        "fcf_yield_avg": 0.030569348588274613,
         "croic": -0.14565702419204415,
         "has_preferred_shares": false
       },
@@ -4098,7 +4098,7 @@
         "peg_trailing_5": 1.43593319309178,
         "peg_blended_5y_actual_2f": 0.9729072275903712,
         "equity_ratio": 69.50834496082965,
-        "fcf_yield_avg": 0.05565391951600161,
+        "fcf_yield_avg": 0.055653919516001606,
         "croic": 0.05318353440108833,
         "has_preferred_shares": false
       },
@@ -4115,7 +4115,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 58.26218215951848,
-        "fcf_yield_avg": 0.010742499151376293,
+        "fcf_yield_avg": 0.01074249915137629,
         "croic": -0.020635065986456175,
         "has_preferred_shares": false
       },
@@ -4201,7 +4201,7 @@
         "peg_blended_5y_actual_2f": 40.060932644361905,
         "equity_ratio": 70.42788620240893,
         "fcf_yield_avg": 0.027120474483009673,
-        "croic": -0.0024571933943421265,
+        "croic": -0.002466728551653344,
         "has_preferred_shares": false
       },
       {
@@ -4217,7 +4217,7 @@
         "peg_trailing_5": 1.0870910574735935,
         "peg_blended_5y_actual_2f": 278.00241150508685,
         "equity_ratio": 46.960834969515346,
-        "fcf_yield_avg": 0.03448708065613568,
+        "fcf_yield_avg": 0.03448708065613567,
         "croic": 0.05,
         "has_preferred_shares": false
       },
@@ -4234,7 +4234,7 @@
         "peg_trailing_5": 0.34176977245838913,
         "peg_blended_5y_actual_2f": 1.1079487963822892,
         "equity_ratio": 65.98800124224607,
-        "fcf_yield_avg": 0.04642289390628793,
+        "fcf_yield_avg": 0.04642289390628794,
         "croic": 0.048662606168695395,
         "has_preferred_shares": false
       },
@@ -4268,7 +4268,7 @@
         "peg_trailing_5": 1.1508084196490351,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.44775269208778,
-        "fcf_yield_avg": 0.06074322697170379,
+        "fcf_yield_avg": 0.0607432269717038,
         "croic": -0.02629910715814637,
         "has_preferred_shares": false
       },
@@ -4285,7 +4285,7 @@
         "peg_trailing_5": 0.7818093485907468,
         "peg_blended_5y_actual_2f": 1.1474061973895509,
         "equity_ratio": 64.39991104302058,
-        "fcf_yield_avg": 0.023493827426485092,
+        "fcf_yield_avg": 0.023493827426485085,
         "croic": 0.04892180185710997,
         "has_preferred_shares": false
       },
@@ -4370,7 +4370,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 37.88524275570907,
-        "fcf_yield_avg": -0.003797473156955134,
+        "fcf_yield_avg": -0.003797473156955133,
         "croic": 0.20091131550080163,
         "has_preferred_shares": false
       },
@@ -4438,7 +4438,7 @@
         "peg_trailing_5": 0.47090082113189174,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 66.33693537422938,
-        "fcf_yield_avg": 0.021834016828338777,
+        "fcf_yield_avg": 0.021834016828338774,
         "croic": 0.03218187186300561,
         "has_preferred_shares": false
       },
@@ -4455,7 +4455,7 @@
         "peg_trailing_5": 2.0154923767957382,
         "peg_blended_5y_actual_2f": 4.038721684670891,
         "equity_ratio": 79.77589881075136,
-        "fcf_yield_avg": 0.01156730790898387,
+        "fcf_yield_avg": 0.011567307908983871,
         "croic": 0.07338696437366607,
         "has_preferred_shares": false
       },
@@ -4516,14 +4516,14 @@
         "amount_millions": 153,
         "ratio_percent": 7.1,
         "price": 463.0,
-        "net_cash_ratio": null,
+        "net_cash_ratio": 0.11934438293181206,
         "per_actual": -7.709539694095234,
         "per": 14.190641333333334,
         "per_next": 11.825534444444445,
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 76.58534217294792,
-        "fcf_yield_avg": 0.08032810544339034,
+        "fcf_yield_avg": 0.08032810544339035,
         "croic": 0.101232115121812,
         "has_preferred_shares": false
       },
@@ -4591,7 +4591,7 @@
         "peg_trailing_5": 1.4774785196136702,
         "peg_blended_5y_actual_2f": 1.3383533360051574,
         "equity_ratio": 70.44145492586897,
-        "fcf_yield_avg": 0.029984264713329833,
+        "fcf_yield_avg": 0.02998426471332983,
         "croic": 0.010472249417827203,
         "has_preferred_shares": false
       },
@@ -4608,7 +4608,7 @@
         "peg_trailing_5": 4.949984581943335,
         "peg_blended_5y_actual_2f": 1.5310119390797634,
         "equity_ratio": 62.48168676598327,
-        "fcf_yield_avg": 0.041361362497164246,
+        "fcf_yield_avg": 0.04136136249716423,
         "croic": 0.06600530732733897,
         "has_preferred_shares": false
       },
@@ -4625,7 +4625,7 @@
         "peg_trailing_5": 0.38270358817662564,
         "peg_blended_5y_actual_2f": 0.5660511606546813,
         "equity_ratio": 62.53900737413289,
-        "fcf_yield_avg": 0.07815333301729009,
+        "fcf_yield_avg": 0.07815333301729008,
         "croic": 0.17657923900997413,
         "has_preferred_shares": false
       },
@@ -4754,7 +4754,7 @@
         "amount_millions": 1514,
         "ratio_percent": 3.0,
         "price": 456.0,
-        "net_cash_ratio": 0.6239995836977322,
+        "net_cash_ratio": -1.2470987350957565,
         "per_actual": 79.326976,
         "per": 166.5866496,
         "per_next": 111.0577664,
@@ -4762,7 +4762,7 @@
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 36.03247750713188,
         "fcf_yield_avg": null,
-        "croic": 0.11097256857855362,
+        "croic": 0.14453917986195697,
         "has_preferred_shares": false
       },
       {
@@ -4805,7 +4805,7 @@
         "amount_millions": 5765,
         "ratio_percent": 10.3,
         "price": 2226.0,
-        "net_cash_ratio": 0.03436891987513529,
+        "net_cash_ratio": null,
         "per_actual": 27.79200190140845,
         "per": 19.73232135,
         "per_next": 17.82274186451613,
@@ -4839,7 +4839,7 @@
         "amount_millions": 282,
         "ratio_percent": 1.9,
         "price": 300.0,
-        "net_cash_ratio": -0.07393286691848173,
+        "net_cash_ratio": -0.23282862229467022,
         "per_actual": 10.623964002826224,
         "per": 8.162543314285715,
         "per_next": 7.805710819672131,
@@ -4931,7 +4931,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 80.44469444776675,
-        "fcf_yield_avg": 0.08136014347309971,
+        "fcf_yield_avg": 0.08136014347309972,
         "croic": 0.025620390737269048,
         "has_preferred_shares": false
       },
@@ -4965,7 +4965,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.37774772768053,
-        "fcf_yield_avg": 0.2450931860609832,
+        "fcf_yield_avg": 0.24509318606098315,
         "croic": 0.10095297170310011,
         "has_preferred_shares": false
       },
@@ -5033,7 +5033,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 50.56663124621863,
-        "fcf_yield_avg": 0.02283795217560374,
+        "fcf_yield_avg": 0.022837952175603745,
         "croic": 0.0208670954007827,
         "has_preferred_shares": false
       },
@@ -5101,7 +5101,7 @@
         "peg_trailing_5": 0.6468278393413933,
         "peg_blended_5y_actual_2f": 2.1802540927249883,
         "equity_ratio": 40.82962191948615,
-        "fcf_yield_avg": 0.03038943571089146,
+        "fcf_yield_avg": 0.030389435710891456,
         "croic": 0.14043330403905577,
         "has_preferred_shares": false
       },
@@ -5118,7 +5118,7 @@
         "peg_trailing_5": 0.7743463251044035,
         "peg_blended_5y_actual_2f": 1.0400157151526326,
         "equity_ratio": 71.19812138428023,
-        "fcf_yield_avg": 0.04526603707088627,
+        "fcf_yield_avg": 0.04526603707088628,
         "croic": -0.17677712344095858,
         "has_preferred_shares": false
       },
@@ -5204,7 +5204,7 @@
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.91253873468437,
         "fcf_yield_avg": null,
-        "croic": 0.3168302073015906,
+        "croic": 0.3261394974076399,
         "has_preferred_shares": false
       },
       {
@@ -5220,7 +5220,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": 50.17316860037194,
         "equity_ratio": 52.35516727726559,
-        "fcf_yield_avg": 0.050982937792635276,
+        "fcf_yield_avg": 0.05098293779263528,
         "croic": -0.012649467492021992,
         "has_preferred_shares": false
       },
@@ -5237,7 +5237,7 @@
         "peg_trailing_5": 2.7329802405151518,
         "peg_blended_5y_actual_2f": 2.6238673980163596,
         "equity_ratio": 82.52973574399583,
-        "fcf_yield_avg": 0.0594043080528142,
+        "fcf_yield_avg": 0.059404308052814214,
         "croic": 0.07165852867418396,
         "has_preferred_shares": false
       },
@@ -5322,7 +5322,7 @@
         "peg_trailing_5": 1.7064189230533622,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 68.04339420955672,
-        "fcf_yield_avg": 0.07637078651685393,
+        "fcf_yield_avg": 0.07637078651685394,
         "croic": 0.02110592412387402,
         "has_preferred_shares": false
       },
@@ -5339,7 +5339,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 37.971361606760986,
-        "fcf_yield_avg": 0.047824907583739765,
+        "fcf_yield_avg": 0.04782490758373977,
         "croic": -0.024717037197114995,
         "has_preferred_shares": false
       },
@@ -5373,7 +5373,7 @@
         "peg_trailing_5": 0.8421019629893741,
         "peg_blended_5y_actual_2f": 0.8147564858034096,
         "equity_ratio": 41.32856400949974,
-        "fcf_yield_avg": 0.042671930483184746,
+        "fcf_yield_avg": 0.04267193048318474,
         "croic": 0.1412939143789595,
         "has_preferred_shares": false
       },
@@ -5424,7 +5424,7 @@
         "peg_trailing_5": 4.436238177402768,
         "peg_blended_5y_actual_2f": 1.850291403601758,
         "equity_ratio": 36.177794774627564,
-        "fcf_yield_avg": 0.043910726075264486,
+        "fcf_yield_avg": 0.04391072607526449,
         "croic": 0.05432957110609481,
         "has_preferred_shares": false
       },
@@ -5441,7 +5441,7 @@
         "peg_trailing_5": 3.173299103174213,
         "peg_blended_5y_actual_2f": 4.037086445746571,
         "equity_ratio": 57.552026479805626,
-        "fcf_yield_avg": 0.042230939601550894,
+        "fcf_yield_avg": 0.0422309396015509,
         "croic": 0.21862290572346657,
         "has_preferred_shares": false
       },
@@ -5458,7 +5458,7 @@
         "peg_trailing_5": 1.361625422265141,
         "peg_blended_5y_actual_2f": 0.8081948954079373,
         "equity_ratio": 41.976663892774305,
-        "fcf_yield_avg": 0.07372850286380599,
+        "fcf_yield_avg": 0.07372850286380597,
         "croic": -0.08266369639589466,
         "has_preferred_shares": false
       },
@@ -5475,7 +5475,7 @@
         "peg_trailing_5": 14.26895573980835,
         "peg_blended_5y_actual_2f": 5.008525143981459,
         "equity_ratio": 53.156293756940755,
-        "fcf_yield_avg": 0.04642513273362493,
+        "fcf_yield_avg": 0.04642513273362494,
         "croic": -0.014203554466338112,
         "has_preferred_shares": false
       },
@@ -5492,7 +5492,7 @@
         "peg_trailing_5": 0.7865113730463912,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 83.74790040562351,
-        "fcf_yield_avg": 0.020788637660496954,
+        "fcf_yield_avg": 0.020788637660496958,
         "croic": 0.11008524753488738,
         "has_preferred_shares": false
       },
@@ -5570,7 +5570,7 @@
         "amount_millions": 3629,
         "ratio_percent": 3.6,
         "price": 1315.0,
-        "net_cash_ratio": -0.04433507741581365,
+        "net_cash_ratio": null,
         "per_actual": 30.358901848428836,
         "per": 46.92618828571428,
         "per_next": 35.19464121428572,
@@ -5621,14 +5621,14 @@
         "amount_millions": 20106,
         "ratio_percent": 6.9,
         "price": 1895.0,
-        "net_cash_ratio": 0.3716853419962614,
+        "net_cash_ratio": -0.25154354550053176,
         "per_actual": 6.694039268647413,
         "per": 13.80789042857143,
         "per_next": 12.338965914893617,
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 22.49452463255667,
-        "fcf_yield_avg": 0.02850888925313887,
+        "fcf_yield_avg": 0.02850888925313886,
         "croic": 0.4532580428248523,
         "has_preferred_shares": false
       },
@@ -5706,7 +5706,7 @@
         "amount_millions": 231,
         "ratio_percent": 2.2,
         "price": 3850.0,
-        "net_cash_ratio": 0.2432660385640619,
+        "net_cash_ratio": -0.11504202840563182,
         "per_actual": 15.890998863545324,
         "per": 7.650676,
         "per_next": 6.6943415,
@@ -5781,7 +5781,7 @@
         "peg_trailing_5": 0.38966865641010545,
         "peg_blended_5y_actual_2f": 0.2952191195071207,
         "equity_ratio": 38.31800444203164,
-        "fcf_yield_avg": 0.023738249917783852,
+        "fcf_yield_avg": 0.02373824991778385,
         "croic": -0.023637074320042865,
         "has_preferred_shares": false
       },
@@ -5833,7 +5833,7 @@
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 65.12107774570201,
         "fcf_yield_avg": null,
-        "croic": 0.0496149708397033,
+        "croic": 0.05339406495643166,
         "has_preferred_shares": false
       },
       {
@@ -5849,7 +5849,7 @@
         "peg_trailing_5": 0.9381987191716726,
         "peg_blended_5y_actual_2f": 1.436013456872823,
         "equity_ratio": 69.98828195125189,
-        "fcf_yield_avg": 0.07891912606383637,
+        "fcf_yield_avg": 0.07891912606383639,
         "croic": 0.044877262580075156,
         "has_preferred_shares": false
       },
@@ -5866,7 +5866,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": 8.074997725465474,
         "equity_ratio": 55.874190887059804,
-        "fcf_yield_avg": 0.02198609929245623,
+        "fcf_yield_avg": 0.021986099292456235,
         "croic": -0.056424114831539515,
         "has_preferred_shares": false
       },
@@ -5900,7 +5900,7 @@
         "peg_trailing_5": 3.279099361128152,
         "peg_blended_5y_actual_2f": 2.297515690007351,
         "equity_ratio": 37.50067364174578,
-        "fcf_yield_avg": -0.0020914822539567467,
+        "fcf_yield_avg": -0.002091482253956746,
         "croic": 0.00315548273125272,
         "has_preferred_shares": false
       },
@@ -5934,7 +5934,7 @@
         "peg_trailing_5": 2.408426122033406,
         "peg_blended_5y_actual_2f": 0.348413853846832,
         "equity_ratio": 32.4119976735813,
-        "fcf_yield_avg": 0.06820980527666738,
+        "fcf_yield_avg": 0.06820980527666737,
         "croic": 0.08401711199943895,
         "has_preferred_shares": false
       },
@@ -5951,7 +5951,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 53.80141043381812,
-        "fcf_yield_avg": 0.030566003273066085,
+        "fcf_yield_avg": 0.03056600327306609,
         "croic": 0.20142689864057164,
         "has_preferred_shares": false
       },
@@ -6002,8 +6002,8 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 32.043004111850834,
-        "fcf_yield_avg": 0.03755411216661866,
-        "croic": 0.3954270742540956,
+        "fcf_yield_avg": 0.037554112166618664,
+        "croic": 0.45496983915218353,
         "has_preferred_shares": false
       },
       {
@@ -6070,7 +6070,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 41.91493180186647,
-        "fcf_yield_avg": -0.09502544311683507,
+        "fcf_yield_avg": -0.09502544311683508,
         "croic": 0.05655975244363672,
         "has_preferred_shares": false
       },
@@ -6104,7 +6104,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.503833128338194,
-        "fcf_yield_avg": -0.014369092878304878,
+        "fcf_yield_avg": -0.014369092878304877,
         "croic": 0.005455830135859114,
         "has_preferred_shares": false
       },
@@ -6121,7 +6121,7 @@
         "peg_trailing_5": 4.892369845091749,
         "peg_blended_5y_actual_2f": 1.848025809160917,
         "equity_ratio": 38.12981812453312,
-        "fcf_yield_avg": 0.004595318960160211,
+        "fcf_yield_avg": 0.004595318960160212,
         "croic": 0.11522746866917397,
         "has_preferred_shares": false
       },
@@ -6138,7 +6138,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 70.10451589726709,
-        "fcf_yield_avg": 0.13547547053996278,
+        "fcf_yield_avg": 0.1354754705399628,
         "croic": 0.05134119820138224,
         "has_preferred_shares": false
       },
@@ -6182,14 +6182,14 @@
         "amount_millions": 650,
         "ratio_percent": 6.1,
         "price": 916.0,
-        "net_cash_ratio": 0.3572408489132295,
+        "net_cash_ratio": 0.07634013774852869,
         "per_actual": 12.925972650137528,
         "per": 12.46819125,
         "per_next": 11.606752581818181,
         "peg_trailing_5": 0.7499710609912003,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 64.29056847582562,
-        "fcf_yield_avg": 0.034779913821702084,
+        "fcf_yield_avg": 0.03477991382170208,
         "croic": 0.11317886761863727,
         "has_preferred_shares": false
       },
@@ -6206,7 +6206,7 @@
         "peg_trailing_5": 1.557983424858036,
         "peg_blended_5y_actual_2f": 1.2670012189029316,
         "equity_ratio": 71.06433054393305,
-        "fcf_yield_avg": 0.01703739346091934,
+        "fcf_yield_avg": 0.017037393460919342,
         "croic": 0.05482980680772769,
         "has_preferred_shares": false
       },
@@ -6257,7 +6257,7 @@
         "peg_trailing_5": 5.107323553641976,
         "peg_blended_5y_actual_2f": 5.937267091446961,
         "equity_ratio": 58.066203519757195,
-        "fcf_yield_avg": 0.07316806406118403,
+        "fcf_yield_avg": 0.07316806406118405,
         "croic": 0.0010551303279299439,
         "has_preferred_shares": false
       },
@@ -6325,7 +6325,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 61.28097427743842,
-        "fcf_yield_avg": 0.04855724403863679,
+        "fcf_yield_avg": 0.04855724403863678,
         "croic": 0.08271044971190564,
         "has_preferred_shares": false
       },
@@ -6342,7 +6342,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 82.13630685312026,
-        "fcf_yield_avg": 0.04958203548507624,
+        "fcf_yield_avg": 0.04958203548507623,
         "croic": -0.015141355787350326,
         "has_preferred_shares": false
       },
@@ -6359,7 +6359,7 @@
         "peg_trailing_5": 2.8037679309120938,
         "peg_blended_5y_actual_2f": 3.1689117664657407,
         "equity_ratio": 80.10531412661905,
-        "fcf_yield_avg": 0.04533762057877814,
+        "fcf_yield_avg": 0.04533762057877813,
         "croic": 0.10139780884019645,
         "has_preferred_shares": false
       },
@@ -6376,7 +6376,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 78.94562768201698,
-        "fcf_yield_avg": 0.03821794734257014,
+        "fcf_yield_avg": 0.03821794734257015,
         "croic": 0.03394046661494647,
         "has_preferred_shares": false
       },
@@ -6478,7 +6478,7 @@
         "peg_trailing_5": 0.5932497885916291,
         "peg_blended_5y_actual_2f": 0.6498253844588974,
         "equity_ratio": 63.83710926297677,
-        "fcf_yield_avg": 0.03992957325089545,
+        "fcf_yield_avg": 0.03992957325089543,
         "croic": 0.05751058032349701,
         "has_preferred_shares": false
       },
@@ -6512,7 +6512,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 78.99822920268184,
-        "fcf_yield_avg": 0.04840462647882755,
+        "fcf_yield_avg": 0.048404626478827546,
         "croic": 0.027303826497419203,
         "has_preferred_shares": false
       },
@@ -6529,7 +6529,7 @@
         "peg_trailing_5": 3.0687054708621897,
         "peg_blended_5y_actual_2f": 6.865226550116235,
         "equity_ratio": 73.50811822747724,
-        "fcf_yield_avg": 0.02263064429354982,
+        "fcf_yield_avg": 0.022630644293549825,
         "croic": -0.14938549777276322,
         "has_preferred_shares": false
       }
@@ -6554,7 +6554,7 @@
         "peg_trailing_5": 1.470393877826269,
         "peg_blended_5y_actual_2f": 1.544640242161651,
         "equity_ratio": 52.417412358669054,
-        "fcf_yield_avg": 0.04424664026485268,
+        "fcf_yield_avg": 0.044246640264852685,
         "croic": 0.45722043359909353,
         "has_preferred_shares": false
       },
@@ -6605,7 +6605,7 @@
         "peg_trailing_5": 1.0659136742752178,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 77.39930599186135,
-        "fcf_yield_avg": 0.06156473461655082,
+        "fcf_yield_avg": 0.061564734616550834,
         "croic": 0.29027786450202936,
         "has_preferred_shares": false
       },
@@ -6622,7 +6622,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 48.913998936189444,
-        "fcf_yield_avg": -0.10764079613764102,
+        "fcf_yield_avg": -0.10764079613764099,
         "croic": -0.659264300631398,
         "has_preferred_shares": false
       },
@@ -6656,7 +6656,7 @@
         "peg_trailing_5": 2.0154923767957382,
         "peg_blended_5y_actual_2f": 4.038721684670891,
         "equity_ratio": 79.77589881075136,
-        "fcf_yield_avg": 0.01156730790898387,
+        "fcf_yield_avg": 0.011567307908983871,
         "croic": 0.07338696437366607,
         "has_preferred_shares": false
       },
@@ -6741,7 +6741,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 63.95152254840338,
-        "fcf_yield_avg": 0.046076138225897574,
+        "fcf_yield_avg": 0.04607613822589757,
         "croic": -0.046831579300265595,
         "has_preferred_shares": false
       },
@@ -6775,7 +6775,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 35.860359758478126,
-        "fcf_yield_avg": -0.0431808652902193,
+        "fcf_yield_avg": -0.04318086529021929,
         "croic": 0.18277845777072466,
         "has_preferred_shares": false
       }
@@ -6817,7 +6817,7 @@
         "peg_trailing_5": 1.7357569535671187,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 56.91347790043195,
-        "fcf_yield_avg": 0.011232662066574802,
+        "fcf_yield_avg": 0.011232662066574806,
         "croic": 0.0932144309533492,
         "has_preferred_shares": false
       },
@@ -6844,7 +6844,7 @@
         "amount_millions": 923,
         "ratio_percent": 2.4,
         "price": 1319.0,
-        "net_cash_ratio": 0.47222783925317463,
+        "net_cash_ratio": -1.4198610757392314,
         "per_actual": 3.4908783342654734,
         "per": 3.745014277,
         "per_next": 3.4045584336363635,
@@ -6876,7 +6876,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": 32.23463802813353,
         "equity_ratio": 53.71869872028776,
-        "fcf_yield_avg": 0.021206632738827308,
+        "fcf_yield_avg": 0.0212066327388273,
         "croic": 0.18822407073812636,
         "has_preferred_shares": false
       },
@@ -6893,7 +6893,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 77.29757875553241,
-        "fcf_yield_avg": 0.03774823408974551,
+        "fcf_yield_avg": 0.037748234089745515,
         "croic": 0.025822386886718313,
         "has_preferred_shares": false
       }
@@ -6919,7 +6919,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.759995579246265,
-        "fcf_yield_avg": 0.052891998650645436,
+        "fcf_yield_avg": 0.05289199865064544,
         "croic": -0.07826439146051607,
         "has_preferred_shares": false
       },
@@ -6936,7 +6936,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 25.1723301317273,
-        "fcf_yield_avg": -0.04393160559739834,
+        "fcf_yield_avg": -0.04393160559739835,
         "croic": 0.02948238422759406,
         "has_preferred_shares": false
       },
@@ -6970,7 +6970,7 @@
         "peg_trailing_5": 0.2806596913097868,
         "peg_blended_5y_actual_2f": 0.26588613183030996,
         "equity_ratio": 58.590713039426134,
-        "fcf_yield_avg": -0.005772742161054066,
+        "fcf_yield_avg": -0.005772742161054065,
         "croic": -0.14788094130753196,
         "has_preferred_shares": false
       },
@@ -7038,7 +7038,7 @@
         "peg_trailing_5": 0.09018071325336528,
         "peg_blended_5y_actual_2f": 0.17587286998880158,
         "equity_ratio": 17.63710885663595,
-        "fcf_yield_avg": 0.06150775607076662,
+        "fcf_yield_avg": 0.061507756070766625,
         "croic": -0.23788605819116518,
         "has_preferred_shares": false
       },
@@ -7065,7 +7065,7 @@
         "amount_millions": 631,
         "ratio_percent": 2.5,
         "price": 2868.0,
-        "net_cash_ratio": -0.4098568765261607,
+        "net_cash_ratio": -0.8775130597011186,
         "per_actual": 14.046364011198209,
         "per": 10.452835885,
         "per_next": 9.122474954181818,
@@ -7140,7 +7140,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": 1.0809395774661585,
         "equity_ratio": 71.34272186475658,
-        "fcf_yield_avg": 0.031151040403467035,
+        "fcf_yield_avg": 0.03115104040346703,
         "croic": 0.016449105862823513,
         "has_preferred_shares": false
       },
@@ -7174,7 +7174,7 @@
         "peg_trailing_5": 0.16875455872004147,
         "peg_blended_5y_actual_2f": 0.21654141763351445,
         "equity_ratio": 52.07291600734224,
-        "fcf_yield_avg": 0.08538289074081434,
+        "fcf_yield_avg": 0.08538289074081436,
         "croic": -0.0924133162106095,
         "has_preferred_shares": false
       },
@@ -7235,14 +7235,14 @@
         "amount_millions": 147,
         "ratio_percent": 2.9,
         "price": 475.0,
-        "net_cash_ratio": -0.7455158185639028,
+        "net_cash_ratio": -0.7533984799350723,
         "per_actual": 16.077134310713287,
         "per": 7.174083333333333,
         "per_next": 6.428724025974026,
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 46.01056458077557,
-        "fcf_yield_avg": -0.01293908679945476,
+        "fcf_yield_avg": -0.012939086799454763,
         "croic": 0.03523957775772354,
         "has_preferred_shares": false
       },
@@ -7277,7 +7277,7 @@
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 55.91253873468437,
         "fcf_yield_avg": null,
-        "croic": 0.3168302073015906,
+        "croic": 0.3261394974076399,
         "has_preferred_shares": false
       },
       {
@@ -7293,7 +7293,7 @@
         "peg_trailing_5": 0.19548040028174427,
         "peg_blended_5y_actual_2f": 0.1935055517763218,
         "equity_ratio": 77.75978759423468,
-        "fcf_yield_avg": 0.041288151041666665,
+        "fcf_yield_avg": 0.04128815104166667,
         "croic": -0.0185746648640179,
         "has_preferred_shares": false
       },
@@ -7327,7 +7327,7 @@
         "peg_trailing_5": 3.0656454530120363,
         "peg_blended_5y_actual_2f": 1.9309574701774732,
         "equity_ratio": 29.363343746789134,
-        "fcf_yield_avg": -0.09807434096242874,
+        "fcf_yield_avg": -0.09807434096242873,
         "croic": -0.06814232439095967,
         "has_preferred_shares": false
       },
@@ -7429,7 +7429,7 @@
         "peg_trailing_5": 0.797284129850822,
         "peg_blended_5y_actual_2f": 0.5603010867200172,
         "equity_ratio": 48.901439513484924,
-        "fcf_yield_avg": 0.06727665728287545,
+        "fcf_yield_avg": 0.06727665728287544,
         "croic": 0.0964647158525476,
         "has_preferred_shares": false
       }
@@ -7454,7 +7454,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 52.759995579246265,
-        "fcf_yield_avg": 0.052891998650645436,
+        "fcf_yield_avg": 0.05289199865064544,
         "croic": -0.07826439146051607,
         "has_preferred_shares": false
       },
@@ -7464,7 +7464,7 @@
         "amount_millions": 696,
         "ratio_percent": 3.7,
         "price": 1990.0,
-        "net_cash_ratio": 0.33072395120306464,
+        "net_cash_ratio": 0.33045854440621325,
         "per_actual": 110.55224550898204,
         "per": 43.95767857142857,
         "per_next": 38.46296875,
@@ -7481,7 +7481,7 @@
         "amount_millions": 10783,
         "ratio_percent": 3.3,
         "price": 2630.0,
-        "net_cash_ratio": 0.3177328963956631,
+        "net_cash_ratio": 0.004283364705195018,
         "per_actual": 13.278336020749803,
         "per": 18.89663431470588,
         "per_next": 14.601944697727273,
@@ -7522,7 +7522,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 47.00943417186467,
-        "fcf_yield_avg": 0.002565826964134494,
+        "fcf_yield_avg": 0.0025658269641344934,
         "croic": 0.020791314018585888,
         "has_preferred_shares": false
       },
@@ -7590,7 +7590,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 39.87244572235556,
-        "fcf_yield_avg": 0.021044005576054903,
+        "fcf_yield_avg": 0.021044005576054906,
         "croic": -0.00227524941250406,
         "has_preferred_shares": false
       },
@@ -7607,7 +7607,7 @@
         "peg_trailing_5": null,
         "peg_blended_5y_actual_2f": 4.026499902042289,
         "equity_ratio": 62.81930611798183,
-        "fcf_yield_avg": 0.02378587638995503,
+        "fcf_yield_avg": 0.023785876389955034,
         "croic": 0.04960196888672824,
         "has_preferred_shares": false
       },
@@ -7658,7 +7658,7 @@
         "peg_trailing_5": 2.8575211243261034,
         "peg_blended_5y_actual_2f": null,
         "equity_ratio": 20.67712094884648,
-        "fcf_yield_avg": -0.017542057289205992,
+        "fcf_yield_avg": -0.01754205728920599,
         "croic": -0.030751847874376025,
         "has_preferred_shares": false
       },
@@ -7675,7 +7675,7 @@
         "peg_trailing_5": 71.51030112072817,
         "peg_blended_5y_actual_2f": 2.8726191016511193,
         "equity_ratio": 49.794067555235955,
-        "fcf_yield_avg": 0.015567289668641507,
+        "fcf_yield_avg": 0.01556728966864151,
         "croic": 0.03989960658914521,
         "has_preferred_shares": false
       }
