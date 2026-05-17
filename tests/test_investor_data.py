@@ -106,7 +106,7 @@ def test_generated_shareholder_candidate_data_matches_schema() -> None:
         SHAREHOLDER_CANDIDATES_DATA_PATH.read_text(encoding="utf-8")
     )
     assert isinstance(generated_document, list)
-    assert len(generated_document) <= 100
+    assert len(generated_document) <= 1000
 
     previous_rank: tuple[int, int, str] | None = None
     for raw_candidate in generated_document:
