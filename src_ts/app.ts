@@ -66,6 +66,7 @@ function getStockColumns(): StockColumnsApi {
 const StockTable: StockTableApi = getStockTable();
 const C: StockColumnsApi = getStockColumns();
 const IS_GITHUB_PAGES: boolean = location.hostname === "expgolemclone.github.io";
+const VIEW_SWITCH_STYLE_ID = "invest-like-legends-view-switch-style";
 
 /* ------------------------------------------------------------------ */
 /*  Shared rendering helpers                                           */
@@ -269,44 +270,130 @@ function buildViewUrl(view: "candidates" | "candidate", candidateId?: string): s
   return location.pathname + "?" + params.toString();
 }
 
-function renderModeNavigation(activeView: AppView): void {
+function renderViewSwitch(activeView: AppView): void {
   const tabBar: HTMLElement | null = document.getElementById("tabBar");
   if (!tabBar?.parentElement) {
     return;
   }
 
-  const nav: HTMLElement = document.createElement("nav");
-  nav.className = "tab-bar";
-  nav.setAttribute("aria-label", "表示切替");
+  injectViewSwitchStyles();
 
-  const portfolioButton: HTMLButtonElement = createNavigationButton(
-    "保有銘柄",
-    buildPortfolioUrl(),
-    activeView === "portfolio",
-  );
-  const candidateButton: HTMLButtonElement = createNavigationButton(
-    "候補発掘",
-    buildCandidatesUrl(),
-    activeView !== "portfolio",
-  );
-  nav.append(portfolioButton, candidateButton);
-  tabBar.parentElement.insertBefore(nav, tabBar);
+  const wrapper: HTMLDivElement = document.createElement("div");
+  wrapper.className = "view-switch";
+  wrapper.setAttribute("aria-label", "表示切替");
+
+  const label: HTMLLabelElement = document.createElement("label");
+  label.className = "view-switch-control";
+
+  const input: HTMLInputElement = document.createElement("input");
+  input.type = "checkbox";
+  input.checked = activeView !== "portfolio";
+  input.setAttribute("role", "switch");
+  input.setAttribute("aria-label", "候補発掘表示");
+  input.addEventListener("change", (): void => {
+    location.href = input.checked ? buildCandidatesUrl() : buildPortfolioUrl();
+  });
+
+  const track: HTMLSpanElement = document.createElement("span");
+  track.className = "view-switch-track";
+  track.setAttribute("aria-hidden", "true");
+
+  const knob: HTMLSpanElement = document.createElement("span");
+  knob.className = "view-switch-knob";
+  track.appendChild(knob);
+
+  const portfolioLabel: HTMLSpanElement = document.createElement("span");
+  portfolioLabel.className = "view-switch-label";
+  portfolioLabel.textContent = "保有銘柄";
+
+  const candidateLabel: HTMLSpanElement = document.createElement("span");
+  candidateLabel.className = "view-switch-label";
+  candidateLabel.textContent = "候補発掘";
+
+  label.append(input, track);
+  wrapper.append(portfolioLabel, label, candidateLabel);
+
+  if (activeView === "candidate") {
+    const backLink: HTMLAnchorElement = document.createElement("a");
+    backLink.className = "view-switch-back-link";
+    backLink.href = buildCandidatesUrl();
+    backLink.textContent = "候補一覧";
+    wrapper.append(backLink);
+  }
+
+  tabBar.parentElement.insertBefore(wrapper, tabBar);
 }
 
-function createNavigationButton(
-  label: string,
-  href: string,
-  active: boolean,
-): HTMLButtonElement {
-  const button: HTMLButtonElement = document.createElement("button");
-  button.type = "button";
-  button.className = "tab" + (active ? " active" : "");
-  button.textContent = label;
-  button.setAttribute("aria-current", active ? "page" : "false");
-  button.addEventListener("click", (): void => {
-    location.href = href;
-  });
-  return button;
+function injectViewSwitchStyles(): void {
+  if (document.getElementById(VIEW_SWITCH_STYLE_ID)) {
+    return;
+  }
+
+  const style: HTMLStyleElement = document.createElement("style");
+  style.id = VIEW_SWITCH_STYLE_ID;
+  style.textContent = `
+.view-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+.view-switch-control {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.view-switch-control input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.view-switch-track {
+  width: 54px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(22, 33, 62, 0.72);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.view-switch-knob {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--muted);
+  transition: transform 0.2s, background-color 0.2s;
+}
+.view-switch-control input:checked + .view-switch-track {
+  border-color: rgba(91, 155, 255, 0.7);
+  background: rgba(91, 155, 255, 0.24);
+}
+.view-switch-control input:checked + .view-switch-track .view-switch-knob {
+  transform: translateX(26px);
+  background: var(--accent);
+}
+.view-switch-control input:focus-visible + .view-switch-track {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.view-switch-back-link {
+  color: var(--accent);
+  text-decoration: none;
+  padding-left: 6px;
+}
+.view-switch-back-link:hover {
+  text-decoration: underline;
+}
+`;
+  document.head.appendChild(style);
 }
 
 function getCandidatesDataUrl(): string {
@@ -433,7 +520,7 @@ function renderStandaloneError(message: string): void {
 
 async function bootstrap(): Promise<void> {
   const view: AppView = resolveView();
-  renderModeNavigation(view);
+  renderViewSwitch(view);
   if (view === "candidates") {
     bootstrapCandidateListView();
     return;
