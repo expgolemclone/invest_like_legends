@@ -54,6 +54,23 @@
         "has_preferred_shares": false
       },
       {
+        "code": "2124",
+        "name": "ジェイエイシーリクルートメント",
+        "amount_millions": null,
+        "ratio_percent": 0,
+        "price": 824.0,
+        "net_cash_ratio": 0.1336616032205125,
+        "per_actual": 16.24037295238095,
+        "per": 15.862689860465116,
+        "per_next": 14.359908715789473,
+        "peg_trailing_5": 0.45652534538805983,
+        "peg_blended_5y_actual_2f": 0.5421467284046296,
+        "equity_ratio": 70.92733452014889,
+        "fcf_yield_avg": 0.030258952063943922,
+        "croic": 0.03600602382147584,
+        "has_preferred_shares": false
+      },
+      {
         "code": "3504",
         "name": "丸八 HD",
         "amount_millions": null,
@@ -153,6 +170,23 @@
         "equity_ratio": 36.53626640152627,
         "fcf_yield_avg": 0.04986098758569575,
         "croic": 0.09368885829456117,
+        "has_preferred_shares": false
+      },
+      {
+        "code": "6508",
+        "name": "明電舎",
+        "amount_millions": null,
+        "ratio_percent": 0,
+        "price": 9440.0,
+        "net_cash_ratio": -0.07766392512371893,
+        "per_actual": 23.247686352572078,
+        "per": 20.964876956097562,
+        "per_next": 24.987208,
+        "peg_trailing_5": 1.3184871692238567,
+        "peg_blended_5y_actual_2f": 2.2415577141089744,
+        "equity_ratio": 35.26235765950778,
+        "fcf_yield_avg": 0.014352925500268815,
+        "croic": 0.16603956409030277,
         "has_preferred_shares": false
       },
       {

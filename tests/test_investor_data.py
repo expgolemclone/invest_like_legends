@@ -41,6 +41,8 @@ EXPECTED_WATCH_CODES: list[str] = [
     "1866",
     "8103",
     "9845",
+    "6508",
+    "2124",
 ]
 METRIC_FIELDS: tuple[str, ...] = (
     "price",
