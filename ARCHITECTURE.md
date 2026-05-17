@@ -113,11 +113,13 @@ uv run python scripts/enrich_investors.py
 - `assets/app.js`: 共有 `StockTable` runtime を使い、投資家別表示・候補一覧・候補詳細を切り替える設定ファイル。投資家タブと混同しないよう、上位の legends/amount_ranking 切替は単一スイッチで表示する
 - `assets/data/investors.json`: 表示用の完全データ
   - トップレベル順から投資家タブを生成する
+  - 各投資家は `name`, `aliases`, `stocks` を持ち、`aliases` は銘柄抽出に使った DB 上の名寄せ済み株主名をすべて列挙する
   - 各銘柄は `code`, `name`, `amount_millions`, `ratio_percent`, `peg_trailing_5`, `peg_blended_5y_actual_2f`, `has_preferred_shares` を含む指標列を含む
   - `watch` は `amount_millions: null`, `ratio_percent: 0`
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 - `assets/data/shareholder_candidates.json`: 株主候補の完全データ
   - 各候補は `id`, `name`, `aliases`, `holding_count`, `priced_holding_count`, `total_amount_millions`, `stocks` を持つ
+  - `aliases` は同一候補に名寄せして `stocks` に含めた DB 上の株主名をすべて列挙する
   - `?view=candidates` は候補一覧、`?view=candidate&id=...` は候補ごとの既存銘柄テーブルを表示する
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 

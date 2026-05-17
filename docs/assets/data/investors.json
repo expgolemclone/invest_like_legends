@@ -1,6 +1,7 @@
 {
   "watch": {
     "name": "監視銘柄",
+    "aliases": [],
     "stocks": [
       {
         "code": "1866",
@@ -261,6 +262,9 @@
   },
   "naito": {
     "name": "内藤征吾",
+    "aliases": [
+      "内藤征吾"
+    ],
     "stocks": [
       {
         "code": "1718",
@@ -1184,6 +1188,12 @@
   },
   "hikari": {
     "name": "光通信",
+    "aliases": [
+      "光通信(株)",
+      "光通信",
+      "光通信KK投資事業有限責任組合",
+      "光通信INVESTMENTS OKINAWA"
+    ],
     "stocks": [
       {
         "code": "1450",
@@ -6527,6 +6537,9 @@
   },
   "kiyohara": {
     "name": "清原達郎",
+    "aliases": [
+      "清原達郎"
+    ],
     "stocks": [
       {
         "code": "1828",
@@ -6770,6 +6783,9 @@
   },
   "katayama": {
     "name": "片山晃",
+    "aliases": [
+      "片山晃"
+    ],
     "stocks": [
       {
         "code": "378A",
@@ -6843,6 +6859,9 @@
   },
   "imura": {
     "name": "井村俊哉",
+    "aliases": [
+      "井村俊哉"
+    ],
     "stocks": [
       {
         "code": "6235",
@@ -6882,6 +6901,10 @@
   },
   "yoshida": {
     "name": "ヨシダトモヒロ",
+    "aliases": [
+      "ヨシダ･トモヒロ",
+      "ヨシダ"
+    ],
     "stocks": [
       {
         "code": "1518",

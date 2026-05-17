@@ -78,6 +78,8 @@ def test_generated_investor_data_matches_config_and_schema() -> None:
         raw_dataset: object = generated_document[investor_key]
         assert isinstance(raw_dataset, dict)
         assert raw_dataset["name"] == investor_name
+        assert isinstance(raw_dataset["aliases"], list)
+        assert all(isinstance(alias, str) and alias for alias in raw_dataset["aliases"])
 
         raw_stocks: object = raw_dataset["stocks"]
         assert isinstance(raw_stocks, list)
@@ -228,8 +230,13 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     assert watch_stocks[0]["ratio_percent"] == 0
     assert watch_stocks[0]["price"] == 500.0
     assert watch_stocks[0]["per_actual"] is None
+    assert document["watch"]["aliases"] == []
 
     hikari_stocks: list[dict[str, object]] = _stocks(document, "hikari")
+    assert document["hikari"]["aliases"] == [
+        "光通信(株)",
+        "光通信KK投資事業有限責任組合",
+    ]
     assert [stock["code"] for stock in hikari_stocks] == ["1301", "1450"]
     assert hikari_stocks[0]["amount_millions"] == 80
     assert hikari_stocks[0]["ratio_percent"] == 0.5
@@ -242,6 +249,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     assert hikari_stocks[1]["net_cash_ratio"] == 1.2
 
     katayama_stocks: list[dict[str, object]] = _stocks(document, "katayama")
+    assert document["katayama"]["aliases"] == ["片山善博"]
     assert katayama_stocks == [
         {
             "code": "1429",
@@ -263,6 +271,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     ]
 
     naito_stocks: list[dict[str, object]] = _stocks(document, "naito")
+    assert document["naito"]["aliases"] == ["内藤征吾"]
     assert naito_stocks == [
         {
             "code": "1770",
@@ -284,6 +293,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     ]
 
     yoshida_stocks: list[dict[str, object]] = _stocks(document, "yoshida")
+    assert document["yoshida"]["aliases"] == ["ヨシダ･トモヒロ"]
     assert yoshida_stocks[0]["amount_millions"] == 345
     assert yoshida_stocks[0]["croic"] == 0.19
 

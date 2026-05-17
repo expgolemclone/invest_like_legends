@@ -99,6 +99,7 @@ class StockEntry(TypedDict):
 
 class InvestorEntry(TypedDict):
     name: str
+    aliases: list[str]
     stocks: list[StockEntry]
 
 
@@ -165,6 +166,7 @@ def build_investors_document(
 
     document: dict[str, InvestorEntry] = {}
     for investor_key, investor_name in investor_config.items():
+        aliases: list[str] = []
         if investor_key == "watch":
             stocks: list[StockEntry] = _build_watch_stocks(
                 watch_codes=watch_codes,
@@ -176,6 +178,7 @@ def build_investors_document(
                 investor_name,
                 distinct_shareholder_names,
             )
+            aliases = matched_names
             stocks = _build_investor_stocks(
                 matched_names=matched_names,
                 shareholder_rows=resolved_shareholder_rows,
@@ -185,6 +188,7 @@ def build_investors_document(
 
         document[investor_key] = {
             "name": investor_name,
+            "aliases": aliases,
             "stocks": stocks,
         }
 
