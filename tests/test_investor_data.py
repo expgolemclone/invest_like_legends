@@ -24,7 +24,6 @@ EXPECTED_INVESTOR_NAMES: dict[str, str] = {
     "kiyohara": "清原達郎",
     "katayama": "片山晃",
     "imura": "井村俊哉",
-    "gomi": "五味大輔",
     "yoshida": "ヨシダトモヒロ",
 }
 EXPECTED_WATCH_CODES: list[str] = [
