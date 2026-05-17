@@ -2,9 +2,9 @@
  * invest_like_legends - app.ts
  *
  * Configures the shared StockTable runtime for:
- * - configured investor portfolios
- * - shareholder discovery candidates
- * - candidate portfolio details
+ * - portfolio
+ * - candidates
+ * - candidate details
  */
 function getStockTable() {
     const runtime = globalThis.StockTable;
@@ -148,7 +148,7 @@ const CANDIDATE_COLUMNS = [
         key: "holding_count",
         header: "holdings",
         type: "num",
-        title: "保有銘柄数",
+        title: "number of holdings",
         render: (row) => renderCount(row.holding_count),
         sortValue: (row) => toNumber(row.holding_count),
     },
@@ -156,7 +156,7 @@ const CANDIDATE_COLUMNS = [
         key: "priced_holding_count",
         header: "priced",
         type: "num",
-        title: "保有額を計算できた銘柄数",
+        title: "number of priced holdings",
         toggleable: true,
         render: (row) => renderCount(row.priced_holding_count),
         sortValue: (row) => toNumber(row.priced_holding_count),
@@ -221,7 +221,7 @@ function renderViewSwitch(activeView) {
     input.type = "checkbox";
     input.checked = activeView !== "portfolio";
     input.setAttribute("role", "switch");
-    input.setAttribute("aria-label", "amount_ranking表示");
+    input.setAttribute("aria-label", "candidates");
     input.addEventListener("change", () => {
         location.href = input.checked ? buildCandidatesUrl() : buildPortfolioUrl();
     });
@@ -233,17 +233,17 @@ function renderViewSwitch(activeView) {
     track.appendChild(knob);
     const portfolioLabel = document.createElement("span");
     portfolioLabel.className = "view-switch-label";
-    portfolioLabel.textContent = "legends";
+    portfolioLabel.textContent = "portfolio";
     const candidateLabel = document.createElement("span");
     candidateLabel.className = "view-switch-label";
-    candidateLabel.textContent = "amount_ranking";
+    candidateLabel.textContent = "candidates";
     label.append(input, track);
     wrapper.append(portfolioLabel, label, candidateLabel);
     if (activeView === "candidate") {
         const backLink = document.createElement("a");
         backLink.className = "view-switch-back-link";
         backLink.href = buildCandidatesUrl();
-        backLink.textContent = "候補一覧";
+        backLink.textContent = "candidates";
         wrapper.append(backLink);
     }
     tabBar.parentElement.insertBefore(wrapper, tabBar);
@@ -328,7 +328,7 @@ function getCandidatesDataUrl() {
 /* ------------------------------------------------------------------ */
 function bootstrapPortfolioView() {
     StockTable.init({
-        defaultTitle: "investor holdings viewer",
+        defaultTitle: "portfolio",
         dataUrl: IS_GITHUB_PAGES ? "assets/data/investors.json" : "/api/portfolio",
         columns: STOCK_COLUMNS,
         metricThresholds: METRIC_THRESHOLDS,
@@ -341,7 +341,7 @@ function bootstrapPortfolioView() {
 }
 function bootstrapCandidateListView() {
     StockTable.init({
-        defaultTitle: "shareholder candidates",
+        defaultTitle: "candidates",
         dataUrl: getCandidatesDataUrl(),
         columns: CANDIDATE_COLUMNS,
         metricThresholds: {},
@@ -377,7 +377,7 @@ async function bootstrapCandidateDetailView() {
         };
         const detailUrl = URL.createObjectURL(new Blob([JSON.stringify(payload)], { type: "application/json" }));
         StockTable.init({
-            defaultTitle: "shareholder candidate holdings viewer",
+            defaultTitle: "candidate",
             dataUrl: detailUrl,
             columns: STOCK_COLUMNS,
             metricThresholds: METRIC_THRESHOLDS,

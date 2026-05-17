@@ -2,9 +2,9 @@
  * invest_like_legends - app.ts
  *
  * Configures the shared StockTable runtime for:
- * - configured investor portfolios
- * - shareholder discovery candidates
- * - candidate portfolio details
+ * - portfolio
+ * - candidates
+ * - candidate details
  */
 
 import type { ColumnDef, MetricThreshold, StockTableConfig } from "@stock-web-ui/runtime";
@@ -202,7 +202,7 @@ const CANDIDATE_COLUMNS: ColumnDef[] = [
     key: "holding_count",
     header: "holdings",
     type: "num",
-    title: "保有銘柄数",
+    title: "number of holdings",
     render: (row): string => renderCount(row.holding_count),
     sortValue: (row): number | null => toNumber(row.holding_count),
   },
@@ -210,7 +210,7 @@ const CANDIDATE_COLUMNS: ColumnDef[] = [
     key: "priced_holding_count",
     header: "priced",
     type: "num",
-    title: "保有額を計算できた銘柄数",
+    title: "number of priced holdings",
     toggleable: true,
     render: (row): string => renderCount(row.priced_holding_count),
     sortValue: (row): number | null => toNumber(row.priced_holding_count),
@@ -289,7 +289,7 @@ function renderViewSwitch(activeView: AppView): void {
   input.type = "checkbox";
   input.checked = activeView !== "portfolio";
   input.setAttribute("role", "switch");
-  input.setAttribute("aria-label", "amount_ranking表示");
+  input.setAttribute("aria-label", "candidates");
   input.addEventListener("change", (): void => {
     location.href = input.checked ? buildCandidatesUrl() : buildPortfolioUrl();
   });
@@ -304,11 +304,11 @@ function renderViewSwitch(activeView: AppView): void {
 
   const portfolioLabel: HTMLSpanElement = document.createElement("span");
   portfolioLabel.className = "view-switch-label";
-  portfolioLabel.textContent = "legends";
+  portfolioLabel.textContent = "portfolio";
 
   const candidateLabel: HTMLSpanElement = document.createElement("span");
   candidateLabel.className = "view-switch-label";
-  candidateLabel.textContent = "amount_ranking";
+  candidateLabel.textContent = "candidates";
 
   label.append(input, track);
   wrapper.append(portfolioLabel, label, candidateLabel);
@@ -317,7 +317,7 @@ function renderViewSwitch(activeView: AppView): void {
     const backLink: HTMLAnchorElement = document.createElement("a");
     backLink.className = "view-switch-back-link";
     backLink.href = buildCandidatesUrl();
-    backLink.textContent = "候補一覧";
+    backLink.textContent = "candidates";
     wrapper.append(backLink);
   }
 
@@ -408,7 +408,7 @@ function getCandidatesDataUrl(): string {
 
 function bootstrapPortfolioView(): void {
   StockTable.init({
-    defaultTitle: "investor holdings viewer",
+    defaultTitle: "portfolio",
     dataUrl: IS_GITHUB_PAGES ? "assets/data/investors.json" : "/api/portfolio",
     columns: STOCK_COLUMNS,
     metricThresholds: METRIC_THRESHOLDS,
@@ -422,7 +422,7 @@ function bootstrapPortfolioView(): void {
 
 function bootstrapCandidateListView(): void {
   StockTable.init({
-    defaultTitle: "shareholder candidates",
+    defaultTitle: "candidates",
     dataUrl: getCandidatesDataUrl(),
     columns: CANDIDATE_COLUMNS,
     metricThresholds: {},
@@ -467,7 +467,7 @@ async function bootstrapCandidateDetailView(): Promise<void> {
     );
 
     StockTable.init({
-      defaultTitle: "shareholder candidate holdings viewer",
+      defaultTitle: "candidate",
       dataUrl: detailUrl,
       columns: STOCK_COLUMNS,
       metricThresholds: METRIC_THRESHOLDS,

@@ -1,8 +1,8 @@
 # [invest_like_legends](https://github.com/expgolemclone/invest_like_legends)
 
 - 学ぶは真似ぶ
-- [legends](https://expgolemclone.github.io/invest_like_legends/)
-- [amount_ranking](https://expgolemclone.github.io/invest_like_legends/?view=candidates)
+- [portfolio](https://expgolemclone.github.io/invest_like_legends/)
+- [candidates](https://expgolemclone.github.io/invest_like_legends/?view=candidates)
 
 ---
 

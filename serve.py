@@ -1,4 +1,4 @@
-"""Launch the investor portfolio web UI."""
+"""Launch the portfolio/candidates web UI."""
 
 from __future__ import annotations
 
@@ -38,12 +38,12 @@ def _load_and_enrich_investors() -> dict:
 
 
 def _load_shareholder_candidates() -> list[dict]:
-    """Build shareholder discovery candidates from the handbook DB."""
+    """Build candidates from the handbook DB."""
     return build_shareholder_candidates_document()
 
 
 def _create_api_routes() -> dict[str, ApiHandler]:
-    """Create API routes for the investor portfolio UI."""
+    """Create API routes for the portfolio/candidates UI."""
     return {
         "/api/portfolio": json_route(lambda _params: _load_and_enrich_investors()),
         "/api/shareholder-candidates": json_route(lambda _params: _load_shareholder_candidates()),
@@ -101,9 +101,9 @@ def main() -> None:
     _serve(
         static_root=_STATIC_ROOT,
         index_page=IndexPage(
-            title="保有銘柄ビューア - 四季報オンラインリンク一覧",
+            title="portfolio / candidates - invest_like_legends",
             loading_message="データを読み込み中です。",
-            tab_aria_label="投資家切替",
+            tab_aria_label="portfolio tabs",
         ),
         api_routes=api_routes,
         yazi_base_dir=_HANDBOOK_DATA_DIR,

@@ -2,7 +2,7 @@
 
 ## 概要
 
-投資家ごとの保有銘柄一覧と、四季報の大株主 DB を逆引きした株主候補一覧を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json` と `docs/assets/data/shareholder_candidates.json` は毎日 GitHub Actions で再生成する。投資家別の銘柄一覧と候補株主は静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
+portfolio と candidates を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json` と `docs/assets/data/shareholder_candidates.json` は毎日 GitHub Actions で再生成する。portfolio と candidates の表示データは静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
 
 ## ディレクトリ構成
 
@@ -110,7 +110,7 @@ uv run python scripts/enrich_investors.py
 ### フロントエンド (`docs/`)
 
 - `index.html`: `stock_web_ui` 共通テンプレートから生成したHTML
-- `assets/app.js`: 共有 `StockTable` runtime を使い、投資家別表示・候補一覧・候補詳細を切り替える設定ファイル。投資家タブと混同しないよう、上位の legends/amount_ranking 切替は単一スイッチで表示する
+- `assets/app.js`: 共有 `StockTable` runtime を使い、portfolio・candidates・candidate 詳細を切り替える設定ファイル。投資家タブと混同しないよう、上位の portfolio/candidates 切替は単一スイッチで表示する
 - `assets/data/investors.json`: 表示用の完全データ
   - トップレベル順から投資家タブを生成する
   - 各投資家は `name`, `aliases`, `stocks` を持ち、`aliases` は銘柄抽出に使った DB 上の名寄せ済み株主名をすべて列挙する
@@ -120,12 +120,12 @@ uv run python scripts/enrich_investors.py
 - `assets/data/shareholder_candidates.json`: 株主候補の完全データ
   - 各候補は `id`, `name`, `aliases`, `holding_count`, `priced_holding_count`, `total_amount_millions`, `stocks` を持つ
   - `aliases` は同一候補に名寄せして `stocks` に含めた DB 上の株主名をすべて列挙する
-  - `?view=candidates` は候補一覧、`?view=candidate&id=...` は候補ごとの既存銘柄テーブルを表示する
+  - `?view=candidates` は candidates、`?view=candidate&id=...` は candidate 詳細を表示する
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 
 #### テーブルカラム
 
-各ヘッダーには `title` 属性が設定され、ホバー時に日本語ツールチップを表示する。
+各ヘッダーには `title` 属性が設定され、ホバー時にツールチップを表示する。
 
 | カラム | 説明 | ソートキー | トグル可 | 閾値 |
 |--------|------|------------|----------|------|
@@ -200,7 +200,7 @@ investor_data.build_shareholder_candidates_document()
   ↓
 major_shareholders + stocks.db + formula_screening metrics
   ↓
-JSON / 候補一覧 / 候補別保有銘柄
+JSON / candidates / candidate detail
 ```
 
 ### GitHub Pages
