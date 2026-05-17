@@ -221,7 +221,7 @@ function renderViewSwitch(activeView) {
     input.type = "checkbox";
     input.checked = activeView !== "portfolio";
     input.setAttribute("role", "switch");
-    input.setAttribute("aria-label", "候補発掘表示");
+    input.setAttribute("aria-label", "amount_ranking表示");
     input.addEventListener("change", () => {
         location.href = input.checked ? buildCandidatesUrl() : buildPortfolioUrl();
     });
@@ -233,10 +233,10 @@ function renderViewSwitch(activeView) {
     track.appendChild(knob);
     const portfolioLabel = document.createElement("span");
     portfolioLabel.className = "view-switch-label";
-    portfolioLabel.textContent = "保有銘柄";
+    portfolioLabel.textContent = "legends";
     const candidateLabel = document.createElement("span");
     candidateLabel.className = "view-switch-label";
-    candidateLabel.textContent = "候補発掘";
+    candidateLabel.textContent = "amount_ranking";
     label.append(input, track);
     wrapper.append(portfolioLabel, label, candidateLabel);
     if (activeView === "candidate") {

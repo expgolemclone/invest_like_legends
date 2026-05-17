@@ -110,7 +110,7 @@ uv run python scripts/enrich_investors.py
 ### フロントエンド (`docs/`)
 
 - `index.html`: `stock_web_ui` 共通テンプレートから生成したHTML
-- `assets/app.js`: 共有 `StockTable` runtime を使い、投資家別表示・候補一覧・候補詳細を切り替える設定ファイル。投資家タブと混同しないよう、上位の保有銘柄/候補発掘切替は単一スイッチで表示する
+- `assets/app.js`: 共有 `StockTable` runtime を使い、投資家別表示・候補一覧・候補詳細を切り替える設定ファイル。投資家タブと混同しないよう、上位の legends/amount_ranking 切替は単一スイッチで表示する
 - `assets/data/investors.json`: 表示用の完全データ
   - トップレベル順から投資家タブを生成する
   - 各銘柄は `code`, `name`, `amount_millions`, `ratio_percent`, `peg_trailing_5`, `peg_blended_5y_actual_2f`, `has_preferred_shares` を含む指標列を含む

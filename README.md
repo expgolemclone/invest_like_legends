@@ -2,7 +2,7 @@
 
 - 学ぶは真似ぶ
 - [いつかは追いつき, 追い越したい](https://expgolemclone.github.io/invest_like_legends/)
-- [株主候補を逆引きで探す](https://expgolemclone.github.io/invest_like_legends/?view=candidates)
+- [amount_ranking](https://expgolemclone.github.io/invest_like_legends/?view=candidates)
 
 ---
 
