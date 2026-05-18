@@ -4,6 +4,8 @@
 
 portfolio と candidates を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json` と `docs/assets/data/shareholder_candidates.json` は毎日 GitHub Actions で再生成する。portfolio と candidates の表示データは静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
 
+コードレビュー監査メモは `codereview-report.md` に記録する。
+
 ## ディレクトリ構成
 
 ```
