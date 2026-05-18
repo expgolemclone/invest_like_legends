@@ -55,7 +55,9 @@ METRIC_FIELDS: tuple[str, ...] = (
     "per",
     "per_next",
     "peg_trailing_5",
+    "peg_trailing_5_status",
     "peg_blended_5y_actual_2f",
+    "peg_blended_5y_actual_2f_status",
     "equity_ratio",
     "fcf_yield_avg",
     "croic",
@@ -97,6 +99,8 @@ def test_generated_investor_data_matches_config_and_schema() -> None:
                 metric_value: object = raw_stock[metric_field]
                 if metric_field == "has_preferred_shares":
                     assert metric_value is None or isinstance(metric_value, bool)
+                elif metric_field.endswith("_status"):
+                    assert metric_value is None or isinstance(metric_value, str)
                 else:
                     assert metric_value is None or _is_number(metric_value)
 
@@ -145,6 +149,8 @@ def test_generated_shareholder_candidate_data_matches_schema() -> None:
                 metric_value: object = raw_stock[metric_field]
                 if metric_field == "has_preferred_shares":
                     assert metric_value is None or isinstance(metric_value, bool)
+                elif metric_field.endswith("_status"):
+                    assert metric_value is None or isinstance(metric_value, str)
                 else:
                     assert metric_value is None or _is_number(metric_value)
 
@@ -200,8 +206,18 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
         ],
     )
 
-    metrics_map: dict[str, dict[str, float | bool | None]] = {
-        "1301": _metrics(price=800.0, per_actual=5.1, per=4.5, per_next=4.0, peg_trailing_5=0.53, peg_blended_5y_actual_2f=0.41, has_preferred_shares=True),
+    metrics_map: dict[str, dict[str, float | bool | str | None]] = {
+        "1301": _metrics(
+            price=800.0,
+            per_actual=5.1,
+            per=4.5,
+            per_next=4.0,
+            peg_trailing_5=0.53,
+            peg_trailing_5_status="ok",
+            peg_blended_5y_actual_2f=0.41,
+            peg_blended_5y_actual_2f_status="ok",
+            has_preferred_shares=True,
+        ),
         "1429": _metrics(price=1000.0, equity_ratio=55.0),
         "1450": _metrics(price=1000.0, net_cash_ratio=1.2),
         "1518": _metrics(price=1500.0, croic=0.19),
@@ -244,6 +260,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     assert hikari_stocks[0]["per_actual"] == 5.1
     assert hikari_stocks[0]["per_next"] == 4.0
     assert hikari_stocks[0]["peg_trailing_5"] == 0.53
+    assert hikari_stocks[0]["peg_trailing_5_status"] == "ok"
     assert hikari_stocks[0]["has_preferred_shares"] is True
     assert hikari_stocks[1]["amount_millions"] == 750
     assert hikari_stocks[1]["ratio_percent"] == 5.1
@@ -263,7 +280,9 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "per": None,
             "per_next": None,
             "peg_trailing_5": None,
+            "peg_trailing_5_status": None,
             "peg_blended_5y_actual_2f": None,
+            "peg_blended_5y_actual_2f_status": None,
             "equity_ratio": 55.0,
             "fcf_yield_avg": None,
             "croic": None,
@@ -285,7 +304,9 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "per": None,
             "per_next": None,
             "peg_trailing_5": None,
+            "peg_trailing_5_status": None,
             "peg_blended_5y_actual_2f": None,
+            "peg_blended_5y_actual_2f_status": None,
             "equity_ratio": None,
             "fcf_yield_avg": None,
             "croic": None,
@@ -315,7 +336,7 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
             ("1009", "Single Holder", 999, 9.9),
         ],
     )
-    metrics_map: dict[str, dict[str, float | bool | None]] = {
+    metrics_map: dict[str, dict[str, float | bool | str | None]] = {
         "1001": _metrics(price=1000.0),
         "1002": _metrics(price=2000.0),
         "1003": _metrics(price=5000.0),
@@ -360,7 +381,9 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "per": None,
                 "per_next": None,
                 "peg_trailing_5": None,
+                "peg_trailing_5_status": None,
                 "peg_blended_5y_actual_2f": None,
+                "peg_blended_5y_actual_2f_status": None,
                 "equity_ratio": None,
                 "fcf_yield_avg": None,
                 "croic": None,
@@ -377,7 +400,9 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "per": None,
                 "per_next": None,
                 "peg_trailing_5": None,
+                "peg_trailing_5_status": None,
                 "peg_blended_5y_actual_2f": None,
+                "peg_blended_5y_actual_2f_status": None,
                 "equity_ratio": None,
                 "fcf_yield_avg": None,
                 "croic": None,
@@ -429,12 +454,14 @@ def _metrics(
     per: float | None = None,
     per_next: float | None = None,
     peg_trailing_5: float | None = None,
+    peg_trailing_5_status: str | None = None,
     peg_blended_5y_actual_2f: float | None = None,
+    peg_blended_5y_actual_2f_status: str | None = None,
     equity_ratio: float | None = None,
     fcf_yield_avg: float | None = None,
     croic: float | None = None,
     has_preferred_shares: bool | None = None,
-) -> dict[str, float | bool | None]:
+) -> dict[str, float | bool | str | None]:
     return {
         "price": price,
         "net_cash_ratio": net_cash_ratio,
@@ -442,7 +469,9 @@ def _metrics(
         "per": per,
         "per_next": per_next,
         "peg_trailing_5": peg_trailing_5,
+        "peg_trailing_5_status": peg_trailing_5_status,
         "peg_blended_5y_actual_2f": peg_blended_5y_actual_2f,
+        "peg_blended_5y_actual_2f_status": peg_blended_5y_actual_2f_status,
         "equity_ratio": equity_ratio,
         "fcf_yield_avg": fcf_yield_avg,
         "croic": croic,
