@@ -82,7 +82,7 @@ uv run python scripts/enrich_investors.py
 ### 設定ファイル (`config/`)
 
 - `investors.json`: 生成元の唯一のJSON設定。保持するのは投資家名だけで、保有銘柄一覧は持たない
-- `watch_codes.txt`: `watch` タブ専用の静的銘柄コード一覧。`watch` は大株主DBから導出できないため別管理
+- `watch_codes.txt`: `watch` タブ専用の静的銘柄コード一覧。`watch` は大株主DBから導出できないため別管理し、今村証券（7175）などの手動監視銘柄をここに追加する
 
 ### データビルダー (`investor_data.py`)
 
