@@ -70,7 +70,7 @@ uv run python serve.py
 uv run python scripts/enrich_investors.py
 ```
 
-`serve.py` はローカル確認用で、`/api/portfolio` と `/api/shareholder-candidates` が手元の DB と設定から毎回データを組み立てる。`/api/stock-price-meta` は `stock_db.prices.date` の最大値を返し、共通UIのステータス欄に株価基準日を表示する。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` を完全再生成する。
+`serve.py` はローカル確認用で、`/api/portfolio` と `/api/shareholder-candidates` が手元の DB と設定から毎回データを組み立てる。`/api/stock-price-meta` は `stock_db.prices.date` の最大値と前営業日を返し、共通UIのステータス欄に株価基準日を表示する。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` を完全再生成する。
 
 ### 投資家と監視銘柄の追加
 
@@ -117,7 +117,7 @@ uv run python scripts/enrich_investors.py
 - `assets/data/investors.json`: 表示用の完全データ
   - トップレベル順から投資家タブを生成する
   - 各投資家は `name`, `aliases`, `stocks` を持ち、`aliases` は銘柄抽出に使った DB 上の名寄せ済み株主名をすべて列挙する
-  - 各銘柄は `code`, `name`, `amount_millions`, `ratio_percent`, `peg_trailing_5`, `peg_trailing_5_status`, `peg_blended_5y_actual_2f`, `peg_blended_5y_actual_2f_status`, `has_preferred_shares` を含む指標列を含む
+  - 各銘柄は `code`, `name`, `price`, `price_date`, `amount_millions`, `ratio_percent`, `peg_trailing_5`, `peg_trailing_5_status`, `peg_blended_5y_actual_2f`, `peg_blended_5y_actual_2f_status`, `has_preferred_shares` を含む指標列を含む
   - `watch` は `amount_millions: null`, `ratio_percent: 0`
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 - `assets/data/shareholder_candidates.json`: 株主候補の完全データ
@@ -125,7 +125,7 @@ uv run python scripts/enrich_investors.py
   - `aliases` は同一候補に名寄せして `stocks` に含めた DB 上の株主名をすべて列挙する
   - `?view=candidates` は candidates、`?view=candidate&id=...` は candidate 詳細を表示する
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
-- `assets/stock-price-meta.json`: `stock_db.prices.date` の最大値を `price_date` として持つ metadata。ローカルでは `/api/stock-price-meta` が同じ形を返す
+- `assets/stock-price-meta.json`: `stock_db.prices.date` の最大値を `price_date`、前営業日を `target_price_date` として持つ metadata。ローカルでは `/api/stock-price-meta` が同じ形を返す
 
 #### テーブルカラム
 
@@ -151,11 +151,11 @@ uv run python scripts/enrich_investors.py
 
 ### ローカルサーバー (`serve.py`)
 
-- 起動時に `stock_db.sources.price_refresh.ensure_prices_fresh_for_api()` で株価鮮度を判定し、前営業日終値が揃っていない場合は `stock_db` 側の `refresh-prices --if-needed` 経由で Stooq 更新と Yahoo Finance JP 補完を実行する。更新失敗時や補完後も stale 銘柄が残る場合は古い株価で続行せず停止する
+- 起動時に `stock_db.sources.price_refresh.ensure_prices_fresh_for_api()` で株価鮮度を判定し、前営業日終値が揃っていない場合は `stock_db` 側の `refresh-prices --if-needed` 経由で Stooq 更新と Yahoo Finance JP 補完を実行する。個別銘柄の株価が取得できない場合も処理は継続し、古い株価は `price_date` と `target_price_date` により共通 UI 側で目立ちにくく表示する
 - 起動時に `build_investors_document()` / `build_shareholder_candidates_document()` を呼び出し、公開用 JSON を自動生成する
 - `/api/portfolio` は `build_investors_document()` を毎回呼び、最新DBから投資家データを組み立てて返す
 - `/api/shareholder-candidates` は `build_shareholder_candidates_document()` を毎回呼び、最新DBから候補データを組み立てて返す
-- `/api/stock-price-meta` は `formula_screening.web.build_stock_price_metadata()` 経由で `{ "price_date": "YYYY-MM-DD" }` を返す
+- `/api/stock-price-meta` は `formula_screening.web.build_stock_price_metadata()` 経由で `{ "price_date": "YYYY-MM-DD", "target_price_date": "YYYY-MM-DD" }` を返す
 - 生成済み JSON はローカルAPIの入力には使わない
 - `stock_web_ui.page.IndexPage` でローカル用 `index.html` を描画し、HTTPサーバー本体は `stock_web_ui` に委譲する
 

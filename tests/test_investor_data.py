@@ -54,6 +54,7 @@ EXPECTED_WATCH_CODES: list[str] = [
 ]
 METRIC_FIELDS: tuple[str, ...] = (
     "price",
+    "price_date",
     "net_cash_ratio",
     "per_actual",
     "per",
@@ -103,6 +104,8 @@ def test_generated_investor_data_matches_config_and_schema() -> None:
                 metric_value: object = raw_stock[metric_field]
                 if metric_field == "has_preferred_shares":
                     assert metric_value is None or isinstance(metric_value, bool)
+                elif metric_field == "price_date":
+                    assert metric_value is None or isinstance(metric_value, str)
                 elif metric_field.endswith("_status"):
                     assert metric_value is None or isinstance(metric_value, str)
                 else:
@@ -153,6 +156,8 @@ def test_generated_shareholder_candidate_data_matches_schema() -> None:
                 metric_value: object = raw_stock[metric_field]
                 if metric_field == "has_preferred_shares":
                     assert metric_value is None or isinstance(metric_value, bool)
+                elif metric_field == "price_date":
+                    assert metric_value is None or isinstance(metric_value, str)
                 elif metric_field.endswith("_status"):
                     assert metric_value is None or isinstance(metric_value, str)
                 else:
@@ -163,13 +168,20 @@ def test_generated_stock_price_metadata_matches_schema() -> None:
     metadata: object = json.loads(STOCK_PRICE_METADATA_PATH.read_text(encoding="utf-8"))
 
     assert isinstance(metadata, dict)
-    assert set(metadata) == {"price_date"}
+    assert set(metadata) == {"price_date", "target_price_date"}
     price_date: object = metadata["price_date"]
     assert price_date is None or (
         isinstance(price_date, str)
         and len(price_date) == 10
         and price_date[4] == "-"
         and price_date[7] == "-"
+    )
+    target_price_date: object = metadata["target_price_date"]
+    assert (
+        isinstance(target_price_date, str)
+        and len(target_price_date) == 10
+        and target_price_date[4] == "-"
+        and target_price_date[7] == "-"
     )
 
 
@@ -182,13 +194,16 @@ def test_stock_price_metadata_uses_formula_screening_api(
 
     def fake_build_stock_price_metadata(path: Path) -> dict[str, str]:
         captured["path"] = path
-        return {"price_date": "2026-05-20"}
+        return {"price_date": "2026-05-20", "target_price_date": "2026-05-20"}
 
     import formula_screening.web as web_mod
 
     monkeypatch.setattr(web_mod, "build_stock_price_metadata", fake_build_stock_price_metadata)
 
-    assert build_stock_price_metadata(db_path) == {"price_date": "2026-05-20"}
+    assert build_stock_price_metadata(db_path) == {
+        "price_date": "2026-05-20",
+        "target_price_date": "2026-05-20",
+    }
     assert captured == {"path": db_path}
 
 
@@ -196,12 +211,15 @@ def test_write_stock_price_metadata_writes_json(tmp_path: Path) -> None:
     output_path = tmp_path / "stock-price-meta.json"
 
     result_path = write_stock_price_metadata(
-        {"price_date": "2026-05-20"},
+        {"price_date": "2026-05-20", "target_price_date": "2026-05-20"},
         output_path=output_path,
     )
 
     assert result_path == output_path
-    assert output_path.read_text(encoding="utf-8") == '{\n  "price_date": "2026-05-20"\n}\n'
+    assert output_path.read_text(encoding="utf-8") == (
+        '{\n  "price_date": "2026-05-20",\n'
+        '  "target_price_date": "2026-05-20"\n}\n'
+    )
 
 
 def test_shareholder_name_matching_handles_aliases_and_prefix_fallback() -> None:
@@ -324,6 +342,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "amount_millions": 240,
             "ratio_percent": 0.6,
             "price": 1000.0,
+            "price_date": None,
             "net_cash_ratio": None,
             "per_actual": None,
             "per": None,
@@ -348,6 +367,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "amount_millions": None,
             "ratio_percent": 2.9,
             "price": None,
+            "price_date": None,
             "net_cash_ratio": None,
             "per_actual": None,
             "per": None,
@@ -425,6 +445,7 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "amount_millions": 200,
                 "ratio_percent": 1.1,
                 "price": 1000.0,
+                "price_date": None,
                 "net_cash_ratio": None,
                 "per_actual": None,
                 "per": None,
@@ -444,6 +465,7 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "amount_millions": 200,
                 "ratio_percent": 0.5,
                 "price": 2000.0,
+                "price_date": None,
                 "net_cash_ratio": None,
                 "per_actual": None,
                 "per": None,
@@ -498,6 +520,7 @@ def _create_handbook_db(
 def _metrics(
     *,
     price: float | None,
+    price_date: str | None = None,
     net_cash_ratio: float | None = None,
     per_actual: float | None = None,
     per: float | None = None,
@@ -513,6 +536,7 @@ def _metrics(
 ) -> dict[str, float | bool | str | None]:
     return {
         "price": price,
+        "price_date": price_date,
         "net_cash_ratio": net_cash_ratio,
         "per_actual": per_actual,
         "per": per,

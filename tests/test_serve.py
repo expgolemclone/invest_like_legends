@@ -134,7 +134,11 @@ def test_create_api_routes_includes_portfolios_and_candidates(
 ) -> None:
     monkeypatch.setattr(serve, "_load_and_enrich_investors", lambda: {"watch": {"stocks": []}})
     monkeypatch.setattr(serve, "_load_shareholder_candidates", lambda: [{"name": "candidate"}])
-    monkeypatch.setattr(serve, "_load_stock_price_metadata", lambda: {"price_date": "2026-05-20"})
+    monkeypatch.setattr(
+        serve,
+        "_load_stock_price_metadata",
+        lambda: {"price_date": "2026-05-20", "target_price_date": "2026-05-20"},
+    )
 
     assert set(serve._create_api_routes()) == {
         "/api/portfolio",

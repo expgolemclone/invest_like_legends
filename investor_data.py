@@ -28,6 +28,7 @@ DEFAULT_SHAREHOLDER_CANDIDATE_MIN_HOLDINGS: int = 2
 
 _METRIC_FIELDS: tuple[str, ...] = (
     "price",
+    "price_date",
     "net_cash_ratio",
     "per_actual",
     "per",
@@ -90,6 +91,7 @@ class StockEntry(TypedDict):
     amount_millions: int | None
     ratio_percent: float
     price: float | None
+    price_date: str | None
     net_cash_ratio: float | None
     per_actual: float | None
     per: float | None
