@@ -151,7 +151,7 @@ uv run python scripts/enrich_investors.py
 
 ### ローカルサーバー (`serve.py`)
 
-- 起動時に `stock_db.storage.prices.is_stooq_price_update_required()` で株価鮮度を判定し、古い場合だけ `stock_db.sources.stooq.run_stooq_price_update_command()` で Stooq 価格を更新する。成功した更新チェックは記録されるため、Stooq 側のデータがまだ進んでいない場合も起動ごとの再実行は抑止される
+- 起動時に `stock_db.sources.price_refresh.ensure_prices_fresh_for_api()` で株価鮮度を判定し、前営業日終値が揃っていない場合は `stock_db` 側の `refresh-prices --if-needed` 経由で Stooq 更新と Yahoo Finance JP 補完を実行する。更新失敗時や補完後も stale 銘柄が残る場合は古い株価で続行せず停止する
 - 起動時に `build_investors_document()` / `build_shareholder_candidates_document()` を呼び出し、公開用 JSON を自動生成する
 - `/api/portfolio` は `build_investors_document()` を毎回呼び、最新DBから投資家データを組み立てて返す
 - `/api/shareholder-candidates` は `build_shareholder_candidates_document()` を毎回呼び、最新DBから候補データを組み立てて返す

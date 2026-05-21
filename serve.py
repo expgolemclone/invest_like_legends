@@ -17,13 +17,11 @@ from investor_data import (
     write_shareholder_candidates_document,
     write_stock_price_metadata,
 )
-from stock_db.sources.stooq import (
-    StooqDailyPriceUpdateError,
-    StooqPriceUpdateCommandResult,
-    run_stooq_price_update_command,
+from stock_db.sources.price_refresh import (
+    PriceRefreshCommandResult,
+    PriceRefreshError,
+    ensure_prices_fresh_for_api,
 )
-from stock_db.storage.connection import get_connection
-from stock_db.storage.prices import is_stooq_price_update_required
 from stock_web_ui.handler import ApiHandler, json_route
 from stock_web_ui.page import IndexPage
 from stock_web_ui.serve import serve as _serve
@@ -58,32 +56,27 @@ def _create_api_routes() -> dict[str, ApiHandler]:
     }
 
 
-def _ensure_stooq_prices_fresh() -> StooqPriceUpdateCommandResult | None:
-    """Refresh Stooq prices when the configured stocks DB is stale."""
+def _ensure_prices_fresh() -> PriceRefreshCommandResult | None:
+    """Refresh stock prices when the configured stocks DB is stale."""
     db_path = resolve_stocks_db_path()
-    conn = get_connection(db_path)
-    try:
-        update_required = is_stooq_price_update_required(conn)
-    finally:
-        conn.close()
-
-    if not update_required:
-        return None
 
     try:
-        result = run_stooq_price_update_command(db_path=db_path)
-    except (StooqDailyPriceUpdateError, ValueError) as exc:
-        print(f"Failed to update Stooq prices: {exc}", file=sys.stderr)
+        result = ensure_prices_fresh_for_api(db_path=db_path)
+    except (PriceRefreshError, ValueError) as exc:
+        print(f"Failed to update stock prices: {exc}", file=sys.stderr)
         raise SystemExit(1) from exc
+
+    if result is None:
+        return None
 
     update_message = (result.stderr or result.stdout).strip()
     suffix = f": {update_message}" if update_message else ""
-    print(f"Updated Stooq prices{suffix}", file=sys.stderr)
+    print(f"Updated stock prices{suffix}", file=sys.stderr)
     return result
 
 
 def main() -> None:
-    _ensure_stooq_prices_fresh()
+    _ensure_prices_fresh()
 
     stock_names: dict[str, str] = load_stock_names()
     metrics_map: dict[str, dict[str, float | bool | None]] = compute_metrics_map()

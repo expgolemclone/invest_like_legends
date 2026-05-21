@@ -5,88 +5,69 @@ from pathlib import Path
 import pytest
 
 import serve
-from stock_db.sources.stooq import StooqDailyPriceUpdateError, StooqPriceUpdateCommandResult
+from stock_db.sources.price_refresh import PriceRefreshCommandResult, PriceRefreshError
 
 
-class FakeConnection:
-    def __init__(self) -> None:
-        self.closed = False
-
-    def close(self) -> None:
-        self.closed = True
-
-
-def test_ensure_stooq_prices_fresh_skips_command_when_fresh(
+def test_ensure_prices_fresh_skips_command_when_fresh(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     db_path = tmp_path / "stocks.db"
-    conn = FakeConnection()
 
     monkeypatch.setattr(serve, "resolve_stocks_db_path", lambda: db_path)
-    monkeypatch.setattr(serve, "get_connection", lambda path: conn)
-    monkeypatch.setattr(serve, "is_stooq_price_update_required", lambda db_conn: False)
 
-    def unexpected_run_stooq_price_update_command(**kwargs: object) -> StooqPriceUpdateCommandResult:
-        raise AssertionError(f"unexpected update: {kwargs}")
+    def fake_ensure_prices_fresh_for_api(**kwargs: object) -> None:
+        assert kwargs == {"db_path": db_path}
+        return None
 
-    monkeypatch.setattr(serve, "run_stooq_price_update_command", unexpected_run_stooq_price_update_command)
+    monkeypatch.setattr(serve, "ensure_prices_fresh_for_api", fake_ensure_prices_fresh_for_api)
 
-    assert serve._ensure_stooq_prices_fresh() is None
-    assert conn.closed is True
+    assert serve._ensure_prices_fresh() is None
 
 
-def test_ensure_stooq_prices_fresh_runs_command_with_configured_db(
+def test_ensure_prices_fresh_runs_command_with_configured_db(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
     capsys: pytest.CaptureFixture[str],
 ) -> None:
     db_path = tmp_path / "stocks.db"
-    conn = FakeConnection()
     captured: dict[str, object] = {}
 
     monkeypatch.setattr(serve, "resolve_stocks_db_path", lambda: db_path)
-    monkeypatch.setattr(serve, "get_connection", lambda path: conn)
-    monkeypatch.setattr(serve, "is_stooq_price_update_required", lambda db_conn: True)
 
-    def fake_run_stooq_price_update_command(**kwargs: object) -> StooqPriceUpdateCommandResult:
+    def fake_ensure_prices_fresh_for_api(**kwargs: object) -> PriceRefreshCommandResult:
         captured.update(kwargs)
-        return StooqPriceUpdateCommandResult(stdout="", stderr="Imported 1 JP prices for 20260515")
+        return PriceRefreshCommandResult(stdout="", stderr="Refreshed stock prices: yahoo=1 ok")
 
-    monkeypatch.setattr(serve, "run_stooq_price_update_command", fake_run_stooq_price_update_command)
+    monkeypatch.setattr(serve, "ensure_prices_fresh_for_api", fake_ensure_prices_fresh_for_api)
 
-    result = serve._ensure_stooq_prices_fresh()
+    result = serve._ensure_prices_fresh()
 
     assert result is not None
     assert captured == {"db_path": db_path}
-    assert conn.closed is True
-    assert "Updated Stooq prices: Imported 1 JP prices for 20260515" in capsys.readouterr().err
+    assert "Updated stock prices: Refreshed stock prices: yahoo=1 ok" in capsys.readouterr().err
 
 
-def test_ensure_stooq_prices_fresh_exits_when_command_fails(
+def test_ensure_prices_fresh_exits_when_command_fails(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
     capsys: pytest.CaptureFixture[str],
 ) -> None:
     db_path = tmp_path / "stocks.db"
-    conn = FakeConnection()
 
     monkeypatch.setattr(serve, "resolve_stocks_db_path", lambda: db_path)
-    monkeypatch.setattr(serve, "get_connection", lambda path: conn)
-    monkeypatch.setattr(serve, "is_stooq_price_update_required", lambda db_conn: True)
 
-    def fake_run_stooq_price_update_command(**kwargs: object) -> StooqPriceUpdateCommandResult:
+    def fake_ensure_prices_fresh_for_api(**kwargs: object) -> PriceRefreshCommandResult:
         del kwargs
-        raise StooqDailyPriceUpdateError("Unauthorized")
+        raise PriceRefreshError("Yahoo failed")
 
-    monkeypatch.setattr(serve, "run_stooq_price_update_command", fake_run_stooq_price_update_command)
+    monkeypatch.setattr(serve, "ensure_prices_fresh_for_api", fake_ensure_prices_fresh_for_api)
 
     with pytest.raises(SystemExit) as exc_info:
-        serve._ensure_stooq_prices_fresh()
+        serve._ensure_prices_fresh()
 
     assert exc_info.value.code == 1
-    assert conn.closed is True
-    assert "Failed to update Stooq prices: Unauthorized" in capsys.readouterr().err
+    assert "Failed to update stock prices: Yahoo failed" in capsys.readouterr().err
 
 
 def test_main_refreshes_prices_before_building_document(
@@ -109,7 +90,7 @@ def test_main_refreshes_prices_before_building_document(
         events.append("write_metadata")
         return tmp_path / "stock-price-meta.json"
 
-    monkeypatch.setattr(serve, "_ensure_stooq_prices_fresh", lambda: events.append("refresh"))
+    monkeypatch.setattr(serve, "_ensure_prices_fresh", lambda: events.append("refresh"))
     monkeypatch.setattr(serve, "load_stock_names", lambda: events.append("load_names") or {})
     monkeypatch.setattr(serve, "compute_metrics_map", lambda: events.append("load_metrics") or {})
     monkeypatch.setattr(serve, "load_major_shareholder_rows", lambda: events.append("load_rows") or [])
