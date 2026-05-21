@@ -105,6 +105,10 @@ def test_main_refreshes_prices_before_building_document(
         events.append("write_candidates")
         return tmp_path / "shareholder_candidates.json"
 
+    def fake_write_stock_price_metadata() -> Path:
+        events.append("write_metadata")
+        return tmp_path / "stock-price-meta.json"
+
     monkeypatch.setattr(serve, "_ensure_stooq_prices_fresh", lambda: events.append("refresh"))
     monkeypatch.setattr(serve, "load_stock_names", lambda: events.append("load_names") or {})
     monkeypatch.setattr(serve, "compute_metrics_map", lambda: events.append("load_metrics") or {})
@@ -125,6 +129,7 @@ def test_main_refreshes_prices_before_building_document(
         "write_shareholder_candidates_document",
         fake_write_shareholder_candidates_document,
     )
+    monkeypatch.setattr(serve, "write_stock_price_metadata", fake_write_stock_price_metadata)
     monkeypatch.setattr(serve, "_serve", lambda **kwargs: events.append("serve"))
 
     serve.main()
@@ -138,6 +143,7 @@ def test_main_refreshes_prices_before_building_document(
         "write_investors",
         "build_candidates",
         "write_candidates",
+        "write_metadata",
         "serve",
     ]
 
@@ -147,8 +153,10 @@ def test_create_api_routes_includes_portfolios_and_candidates(
 ) -> None:
     monkeypatch.setattr(serve, "_load_and_enrich_investors", lambda: {"watch": {"stocks": []}})
     monkeypatch.setattr(serve, "_load_shareholder_candidates", lambda: [{"name": "candidate"}])
+    monkeypatch.setattr(serve, "_load_stock_price_metadata", lambda: {"price_date": "2026-05-20"})
 
     assert set(serve._create_api_routes()) == {
         "/api/portfolio",
         "/api/shareholder-candidates",
+        "/api/stock-price-meta",
     }

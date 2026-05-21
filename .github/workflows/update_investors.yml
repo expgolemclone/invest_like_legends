@@ -90,6 +90,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/assets/data/investors.json docs/assets/data/shareholder_candidates.json
+          git add docs/assets/data/investors.json docs/assets/data/shareholder_candidates.json docs/assets/stock-price-meta.json
           git diff --staged --quiet || git commit -m "大株主DBから投資家データを再生成"
           git push

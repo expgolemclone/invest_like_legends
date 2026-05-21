@@ -17,6 +17,9 @@ DEFAULT_OUTPUT_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "data" / "investo
 DEFAULT_SHAREHOLDER_CANDIDATES_OUTPUT_PATH: Path = (
     PROJECT_ROOT / "docs" / "assets" / "data" / "shareholder_candidates.json"
 )
+DEFAULT_STOCK_PRICE_METADATA_OUTPUT_PATH: Path = (
+    PROJECT_ROOT / "docs" / "assets" / "stock-price-meta.json"
+)
 DEFAULT_HANDBOOK_DB_PATH: Path = (
     PROJECT_ROOT.parent / "japan_company_handbook" / "data" / "stock_performance.db"
 )
@@ -118,6 +121,7 @@ class ShareholderCandidateEntry(TypedDict):
 
 
 StockMetricValue = float | bool | str | None
+StockPriceMetadata = dict[str, str | None]
 
 
 def load_investor_config(path: Path | None = None) -> dict[str, str]:
@@ -298,6 +302,24 @@ def write_shareholder_candidates_document(
     return resolved_output_path
 
 
+def write_stock_price_metadata(
+    metadata: StockPriceMetadata | None = None,
+    *,
+    output_path: Path | None = None,
+    stocks_db_path: Path | None = None,
+) -> Path:
+    resolved_output_path: Path = output_path or DEFAULT_STOCK_PRICE_METADATA_OUTPUT_PATH
+    resolved_metadata: StockPriceMetadata = (
+        metadata if metadata is not None else build_stock_price_metadata(stocks_db_path)
+    )
+    resolved_output_path.parent.mkdir(parents=True, exist_ok=True)
+    resolved_output_path.write_text(
+        json.dumps(resolved_metadata, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    return resolved_output_path
+
+
 def load_major_shareholder_rows(db_path: Path | None = None) -> list[ShareholderRow]:
     resolved_db_path: Path = resolve_handbook_db_path(db_path)
     with sqlite3.connect(resolved_db_path) as con:
@@ -336,6 +358,12 @@ def compute_metrics_map() -> dict[str, dict[str, StockMetricValue]]:
     from formula_screening.web import compute_all_stock_metrics
 
     return compute_all_stock_metrics()
+
+
+def build_stock_price_metadata(stocks_db_path: Path | None = None) -> StockPriceMetadata:
+    from formula_screening.web import build_stock_price_metadata as _build_stock_price_metadata
+
+    return _build_stock_price_metadata(resolve_stocks_db_path(stocks_db_path))
 
 
 def resolve_handbook_db_path(path: Path | None = None) -> Path:

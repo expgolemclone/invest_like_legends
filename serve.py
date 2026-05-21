@@ -8,12 +8,14 @@ from pathlib import Path
 from investor_data import (
     build_investors_document,
     build_shareholder_candidates_document,
+    build_stock_price_metadata,
     compute_metrics_map,
     load_major_shareholder_rows,
     load_stock_names,
     resolve_stocks_db_path,
     write_investors_document,
     write_shareholder_candidates_document,
+    write_stock_price_metadata,
 )
 from stock_db.sources.stooq import (
     StooqDailyPriceUpdateError,
@@ -42,11 +44,17 @@ def _load_shareholder_candidates() -> list[dict]:
     return build_shareholder_candidates_document()
 
 
+def _load_stock_price_metadata() -> dict[str, str | None]:
+    """Build the latest stock price metadata from stocks.db."""
+    return build_stock_price_metadata()
+
+
 def _create_api_routes() -> dict[str, ApiHandler]:
     """Create API routes for the portfolio/candidates UI."""
     return {
         "/api/portfolio": json_route(lambda _params: _load_and_enrich_investors()),
         "/api/shareholder-candidates": json_route(lambda _params: _load_shareholder_candidates()),
+        "/api/stock-price-meta": json_route(lambda _params: _load_stock_price_metadata()),
     }
 
 
@@ -96,6 +104,9 @@ def main() -> None:
     )
     candidates_output = write_shareholder_candidates_document(candidates_doc)
     print(f"GitHub Pages JSON saved to {candidates_output}")
+
+    metadata_output = write_stock_price_metadata()
+    print(f"GitHub Pages JSON saved to {metadata_output}")
 
     api_routes = _create_api_routes()
     _serve(

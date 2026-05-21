@@ -7,11 +7,13 @@ from pathlib import Path
 import pytest
 
 from investor_data import (
+    build_stock_price_metadata,
     build_investors_document,
     build_shareholder_candidates_document,
     load_investor_config,
     load_watch_codes,
     select_matching_shareholder_names,
+    write_stock_price_metadata,
 )
 
 PROJECT_ROOT: Path = Path(__file__).resolve().parent.parent
@@ -21,6 +23,7 @@ INVESTOR_DATA_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "data" / "investor
 SHAREHOLDER_CANDIDATES_DATA_PATH: Path = (
     PROJECT_ROOT / "docs" / "assets" / "data" / "shareholder_candidates.json"
 )
+STOCK_PRICE_METADATA_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "stock-price-meta.json"
 EXPECTED_INVESTOR_NAMES: dict[str, str] = {
     "watch": "監視銘柄",
     "naito": "内藤征吾",
@@ -154,6 +157,51 @@ def test_generated_shareholder_candidate_data_matches_schema() -> None:
                     assert metric_value is None or isinstance(metric_value, str)
                 else:
                     assert metric_value is None or _is_number(metric_value)
+
+
+def test_generated_stock_price_metadata_matches_schema() -> None:
+    metadata: object = json.loads(STOCK_PRICE_METADATA_PATH.read_text(encoding="utf-8"))
+
+    assert isinstance(metadata, dict)
+    assert set(metadata) == {"price_date"}
+    price_date: object = metadata["price_date"]
+    assert price_date is None or (
+        isinstance(price_date, str)
+        and len(price_date) == 10
+        and price_date[4] == "-"
+        and price_date[7] == "-"
+    )
+
+
+def test_stock_price_metadata_uses_formula_screening_api(
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    db_path = tmp_path / "stocks.db"
+    captured: dict[str, object] = {}
+
+    def fake_build_stock_price_metadata(path: Path) -> dict[str, str]:
+        captured["path"] = path
+        return {"price_date": "2026-05-20"}
+
+    import formula_screening.web as web_mod
+
+    monkeypatch.setattr(web_mod, "build_stock_price_metadata", fake_build_stock_price_metadata)
+
+    assert build_stock_price_metadata(db_path) == {"price_date": "2026-05-20"}
+    assert captured == {"path": db_path}
+
+
+def test_write_stock_price_metadata_writes_json(tmp_path: Path) -> None:
+    output_path = tmp_path / "stock-price-meta.json"
+
+    result_path = write_stock_price_metadata(
+        {"price_date": "2026-05-20"},
+        output_path=output_path,
+    )
+
+    assert result_path == output_path
+    assert output_path.read_text(encoding="utf-8") == '{\n  "price_date": "2026-05-20"\n}\n'
 
 
 def test_shareholder_name_matching_handles_aliases_and_prefix_fallback() -> None:

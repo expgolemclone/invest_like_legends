@@ -2,7 +2,7 @@
 
 ## 概要
 
-portfolio と candidates を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json` と `docs/assets/data/shareholder_candidates.json` は毎日 GitHub Actions で再生成する。portfolio と candidates の表示データは静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
+portfolio と candidates を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` は毎日 GitHub Actions で再生成する。portfolio と candidates の表示データは静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
 
 コードレビュー監査メモは `codereview-report.md` に記録する。
 
@@ -20,6 +20,7 @@ invest_like_legends/
 │       ├── data/
 │       │   ├── investors.json                 # 生成済みの投資家別表示データ
 │       │   └── shareholder_candidates.json    # 生成済みの株主候補データ
+│       ├── stock-price-meta.json              # 株価基準日 metadata
 │       └── app.js         # invest_like_legends 用テーブル設定
 ├── scripts/
 │   └── enrich_investors.py
@@ -69,7 +70,7 @@ uv run python serve.py
 uv run python scripts/enrich_investors.py
 ```
 
-`serve.py` はローカル確認用で、`/api/portfolio` と `/api/shareholder-candidates` が手元の DB と設定から毎回データを組み立てる。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json` と `docs/assets/data/shareholder_candidates.json` を完全再生成する。
+`serve.py` はローカル確認用で、`/api/portfolio` と `/api/shareholder-candidates` が手元の DB と設定から毎回データを組み立てる。`/api/stock-price-meta` は `stock_db.prices.date` の最大値を返し、共通UIのステータス欄に株価基準日を表示する。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` を完全再生成する。
 
 ### 投資家と監視銘柄の追加
 
@@ -124,6 +125,7 @@ uv run python scripts/enrich_investors.py
   - `aliases` は同一候補に名寄せして `stocks` に含めた DB 上の株主名をすべて列挙する
   - `?view=candidates` は candidates、`?view=candidate&id=...` は candidate 詳細を表示する
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
+- `assets/stock-price-meta.json`: `stock_db.prices.date` の最大値を `price_date` として持つ metadata。ローカルでは `/api/stock-price-meta` が同じ形を返す
 
 #### テーブルカラム
 
@@ -153,12 +155,14 @@ uv run python scripts/enrich_investors.py
 - 起動時に `build_investors_document()` / `build_shareholder_candidates_document()` を呼び出し、公開用 JSON を自動生成する
 - `/api/portfolio` は `build_investors_document()` を毎回呼び、最新DBから投資家データを組み立てて返す
 - `/api/shareholder-candidates` は `build_shareholder_candidates_document()` を毎回呼び、最新DBから候補データを組み立てて返す
+- `/api/stock-price-meta` は `formula_screening.web.build_stock_price_metadata()` 経由で `{ "price_date": "YYYY-MM-DD" }` を返す
 - 生成済み JSON はローカルAPIの入力には使わない
 - `stock_web_ui.page.IndexPage` でローカル用 `index.html` を描画し、HTTPサーバー本体は `stock_web_ui` に委譲する
 
 ### 生成スクリプト (`scripts/enrich_investors.py`)
 
 - 投資家別表示データと株主候補データを同じ入力ソースから完全再生成する
+- 株価基準日 metadata も同時に `docs/assets/stock-price-meta.json` へ書き出す
 - 既存JSONへのマージは行わない
 
 ### GitHub Actions (`.github/workflows/update_investors.yml`)
@@ -169,7 +173,7 @@ uv run python scripts/enrich_investors.py
 - `stock_db` の `stocks.db` は `stocks-db` artifact から取得する
 - `japan_company_handbook` は `data/stock_performance.db` だけ sparse checkout する
 - `uv` の相対パス依存を満たすため、workflow 内で sibling symlink を作る
-- 生成後は `docs/assets/data/investors.json` と `docs/assets/data/shareholder_candidates.json` をコミットして push する
+- 生成後は `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` をコミットして push する
 
 ## データフロー
 
@@ -217,6 +221,7 @@ investor_data.build_shareholder_candidates_document()
   ↓
 docs/assets/data/investors.json
 docs/assets/data/shareholder_candidates.json
+docs/assets/stock-price-meta.json
   ↓
 git commit & push
   ↓
@@ -228,6 +233,7 @@ stock_web_ui/assets/stock-table.js + style.css
   ↓
 invest_like_legends/assets/data/investors.json
 invest_like_legends/assets/data/shareholder_candidates.json
+invest_like_legends/assets/stock-price-meta.json
 ```
 
 ## 依存プロジェクト

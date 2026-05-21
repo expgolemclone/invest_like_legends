@@ -402,6 +402,10 @@ function getCandidatesDataUrl(): string {
     : "/api/shareholder-candidates";
 }
 
+function getStockPriceMetadataUrl(): string {
+  return IS_GITHUB_PAGES ? "assets/stock-price-meta.json" : "/api/stock-price-meta";
+}
+
 /* ------------------------------------------------------------------ */
 /*  Bootstrap                                                          */
 /* ------------------------------------------------------------------ */
@@ -410,6 +414,7 @@ function bootstrapPortfolioView(): void {
   StockTable.init({
     defaultTitle: "portfolio",
     dataUrl: IS_GITHUB_PAGES ? "assets/data/investors.json" : "/api/portfolio",
+    metadataUrl: getStockPriceMetadataUrl(),
     columns: STOCK_COLUMNS,
     metricThresholds: METRIC_THRESHOLDS,
     defaultSortKey: "net_cash_ratio",
@@ -424,6 +429,7 @@ function bootstrapCandidateListView(): void {
   StockTable.init({
     defaultTitle: "candidates",
     dataUrl: getCandidatesDataUrl(),
+    metadataUrl: getStockPriceMetadataUrl(),
     columns: CANDIDATE_COLUMNS,
     metricThresholds: {},
     defaultSortKey: "total_amount_millions",
@@ -469,6 +475,7 @@ async function bootstrapCandidateDetailView(): Promise<void> {
     StockTable.init({
       defaultTitle: "candidate",
       dataUrl: detailUrl,
+      metadataUrl: getStockPriceMetadataUrl(),
       columns: STOCK_COLUMNS,
       metricThresholds: METRIC_THRESHOLDS,
       defaultSortKey: "net_cash_ratio",

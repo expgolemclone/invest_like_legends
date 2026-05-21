@@ -17,6 +17,7 @@ from investor_data import (
     load_stock_names,
     write_investors_document,
     write_shareholder_candidates_document,
+    write_stock_price_metadata,
 )
 
 
@@ -41,6 +42,9 @@ def main() -> None:
     )
     candidates_output_path = write_shareholder_candidates_document(shareholder_candidates)
     print(f"  {candidates_output_path} に保存しました")
+
+    metadata_output_path = write_stock_price_metadata()
+    print(f"  {metadata_output_path} に保存しました")
 
 
 if __name__ == "__main__":
