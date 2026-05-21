@@ -10,6 +10,7 @@ from investor_data import (
     build_stock_price_metadata,
     build_investors_document,
     build_shareholder_candidates_document,
+    compute_metrics_map,
     load_investor_config,
     load_watch_codes,
     select_matching_shareholder_names,
@@ -59,6 +60,7 @@ METRIC_FIELDS: tuple[str, ...] = (
     "per_actual",
     "per",
     "per_next",
+    "dividend_yield",
     "peg_trailing_5",
     "peg_trailing_5_status",
     "peg_blended_5y_actual_2f",
@@ -207,6 +209,70 @@ def test_stock_price_metadata_uses_formula_screening_api(
     assert captured == {"path": db_path}
 
 
+def test_compute_metrics_map_uses_screening_payload_api(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    captured: dict[str, object] = {}
+
+    def fake_run_screening_strategy_payload(
+        strategy_path: Path,
+        *,
+        return_all: bool,
+    ) -> list[dict[str, object]]:
+        captured["strategy_path"] = strategy_path
+        captured["return_all"] = return_all
+        return [
+            {
+                "code": "1301",
+                "price": 1000.0,
+                "price_date": "2026-05-20",
+                "metrics": {
+                    "net_cash_ratio": 1.1,
+                    "per_actual": 5.0,
+                    "per": 4.0,
+                    "per_next": 3.0,
+                    "dividend_yield": 2.5,
+                    "equity_ratio": 60.0,
+                },
+                "fcf_yield_avg": 0.12,
+                "croic": 0.18,
+                "peg_trailing_5": 0.7,
+                "peg_trailing_5_status": "ok",
+                "peg_blended_5y_actual_2f": 0.6,
+                "peg_blended_5y_actual_2f_status": "ok",
+                "has_preferred_shares": False,
+            }
+        ]
+
+    import formula_screening.web as web_mod
+
+    monkeypatch.setattr(
+        web_mod,
+        "run_screening_strategy_payload",
+        fake_run_screening_strategy_payload,
+    )
+
+    assert compute_metrics_map()["1301"] == {
+        "price": 1000.0,
+        "price_date": "2026-05-20",
+        "net_cash_ratio": 1.1,
+        "per_actual": 5.0,
+        "per": 4.0,
+        "per_next": 3.0,
+        "dividend_yield": 2.5,
+        "equity_ratio": 60.0,
+        "fcf_yield_avg": 0.12,
+        "croic": 0.18,
+        "peg_trailing_5": 0.7,
+        "peg_trailing_5_status": "ok",
+        "peg_blended_5y_actual_2f": 0.6,
+        "peg_blended_5y_actual_2f_status": "ok",
+        "has_preferred_shares": False,
+    }
+    assert captured["return_all"] is True
+    assert Path(captured["strategy_path"]).name == "net_cash_fcf.toml"
+
+
 def test_write_stock_price_metadata_writes_json(tmp_path: Path) -> None:
     output_path = tmp_path / "stock-price-meta.json"
 
@@ -279,6 +345,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             per_actual=5.1,
             per=4.5,
             per_next=4.0,
+            dividend_yield=3.75,
             peg_trailing_5=0.53,
             peg_trailing_5_status="ok",
             peg_blended_5y_actual_2f=0.41,
@@ -326,6 +393,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     assert hikari_stocks[0]["ratio_percent"] == 0.5
     assert hikari_stocks[0]["per_actual"] == 5.1
     assert hikari_stocks[0]["per_next"] == 4.0
+    assert hikari_stocks[0]["dividend_yield"] == 3.75
     assert hikari_stocks[0]["peg_trailing_5"] == 0.53
     assert hikari_stocks[0]["peg_trailing_5_status"] == "ok"
     assert hikari_stocks[0]["has_preferred_shares"] is True
@@ -347,6 +415,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "per_actual": None,
             "per": None,
             "per_next": None,
+            "dividend_yield": None,
             "peg_trailing_5": None,
             "peg_trailing_5_status": None,
             "peg_blended_5y_actual_2f": None,
@@ -372,6 +441,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "per_actual": None,
             "per": None,
             "per_next": None,
+            "dividend_yield": None,
             "peg_trailing_5": None,
             "peg_trailing_5_status": None,
             "peg_blended_5y_actual_2f": None,
@@ -450,6 +520,7 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "per_actual": None,
                 "per": None,
                 "per_next": None,
+                "dividend_yield": None,
                 "peg_trailing_5": None,
                 "peg_trailing_5_status": None,
                 "peg_blended_5y_actual_2f": None,
@@ -470,6 +541,7 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "per_actual": None,
                 "per": None,
                 "per_next": None,
+                "dividend_yield": None,
                 "peg_trailing_5": None,
                 "peg_trailing_5_status": None,
                 "peg_blended_5y_actual_2f": None,
@@ -525,6 +597,7 @@ def _metrics(
     per_actual: float | None = None,
     per: float | None = None,
     per_next: float | None = None,
+    dividend_yield: float | None = None,
     peg_trailing_5: float | None = None,
     peg_trailing_5_status: str | None = None,
     peg_blended_5y_actual_2f: float | None = None,
@@ -541,6 +614,7 @@ def _metrics(
         "per_actual": per_actual,
         "per": per,
         "per_next": per_next,
+        "dividend_yield": dividend_yield,
         "peg_trailing_5": peg_trailing_5,
         "peg_trailing_5_status": peg_trailing_5_status,
         "peg_blended_5y_actual_2f": peg_blended_5y_actual_2f,

@@ -24,7 +24,7 @@ from investor_data import (
 def main() -> None:
     print("公開データを生成中...")
     stock_names: dict[str, str] = load_stock_names()
-    metrics_map: dict[str, dict[str, float | bool | None]] = compute_metrics_map()
+    metrics_map: dict[str, dict[str, float | bool | str | None]] = compute_metrics_map()
     shareholder_rows = load_major_shareholder_rows()
 
     investors: dict = build_investors_document(

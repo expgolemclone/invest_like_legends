@@ -79,7 +79,7 @@ def main() -> None:
     _ensure_prices_fresh()
 
     stock_names: dict[str, str] = load_stock_names()
-    metrics_map: dict[str, dict[str, float | bool | None]] = compute_metrics_map()
+    metrics_map: dict[str, dict[str, float | bool | str | None]] = compute_metrics_map()
     shareholder_rows = load_major_shareholder_rows()
 
     investors_doc = build_investors_document(

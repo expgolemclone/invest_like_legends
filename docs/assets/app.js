@@ -76,6 +76,12 @@ function escapeHtml(value) {
 /* ------------------------------------------------------------------ */
 /*  Column definitions                                                 */
 /* ------------------------------------------------------------------ */
+const DIVIDEND_YIELD_SPEC = {
+    key: "dividend_yield",
+    header: "div%",
+    title: "dividend yield",
+    decimals: 2,
+};
 const STOCK_COLUMNS = [
     C.codeCol,
     C.nameCol,
@@ -86,6 +92,7 @@ const STOCK_COLUMNS = [
     C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
     C.peg5yCol,
     C.peg5y2fCol,
+    C.buildMetricCol(DIVIDEND_YIELD_SPEC, flatAccessor("dividend_yield")),
     {
         key: "has_preferred_shares",
         header: "pref",
@@ -178,7 +185,10 @@ const CANDIDATE_COLUMNS = [
         },
     },
 ];
-const METRIC_THRESHOLDS = C.COMMON_THRESHOLDS;
+const METRIC_THRESHOLDS = {
+    ...C.COMMON_THRESHOLDS,
+    dividend_yield: { good: (v) => v >= 4 },
+};
 /* ------------------------------------------------------------------ */
 /*  Navigation and view helpers                                        */
 /* ------------------------------------------------------------------ */

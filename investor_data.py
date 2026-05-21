@@ -23,6 +23,9 @@ DEFAULT_STOCK_PRICE_METADATA_OUTPUT_PATH: Path = (
 DEFAULT_HANDBOOK_DB_PATH: Path = (
     PROJECT_ROOT.parent / "japan_company_handbook" / "data" / "stock_performance.db"
 )
+DEFAULT_SCREENING_STRATEGY_PATH: Path = (
+    PROJECT_ROOT.parent / "formula_screening" / "strategies" / "net_cash_fcf.toml"
+)
 DEFAULT_SHAREHOLDER_CANDIDATE_LIMIT: int = 1000
 DEFAULT_SHAREHOLDER_CANDIDATE_MIN_HOLDINGS: int = 2
 
@@ -33,6 +36,7 @@ _METRIC_FIELDS: tuple[str, ...] = (
     "per_actual",
     "per",
     "per_next",
+    "dividend_yield",
     "peg_trailing_5",
     "peg_trailing_5_status",
     "peg_blended_5y_actual_2f",
@@ -96,6 +100,7 @@ class StockEntry(TypedDict):
     per_actual: float | None
     per: float | None
     per_next: float | None
+    dividend_yield: float | None
     peg_trailing_5: float | None
     peg_trailing_5_status: str | None
     peg_blended_5y_actual_2f: float | None
@@ -357,9 +362,57 @@ def load_stock_names(db_path: Path | None = None) -> dict[str, str]:
 
 
 def compute_metrics_map() -> dict[str, dict[str, StockMetricValue]]:
-    from formula_screening.web import compute_all_stock_metrics
+    from formula_screening.web import run_screening_strategy_payload
 
-    return compute_all_stock_metrics()
+    payload = run_screening_strategy_payload(
+        DEFAULT_SCREENING_STRATEGY_PATH,
+        return_all=True,
+    )
+    return _flatten_screening_payload_metrics(payload)
+
+
+def _flatten_screening_payload_metrics(
+    payload: list[dict[str, object]],
+) -> dict[str, dict[str, StockMetricValue]]:
+    result: dict[str, dict[str, StockMetricValue]] = {}
+    for row in payload:
+        code = row.get("code")
+        metrics = row.get("metrics")
+        if not isinstance(code, str) or not code:
+            raise ValueError("screening payload row must include a non-empty code")
+        if not isinstance(metrics, dict):
+            raise ValueError(f"screening payload row for {code} must include metrics")
+
+        result[code] = {
+            "price": _stock_metric_value(row.get("price")),
+            "price_date": _stock_metric_value(row.get("price_date")),
+            "net_cash_ratio": _stock_metric_value(metrics.get("net_cash_ratio")),
+            "per_actual": _stock_metric_value(metrics.get("per_actual")),
+            "per": _stock_metric_value(metrics.get("per")),
+            "per_next": _stock_metric_value(metrics.get("per_next")),
+            "dividend_yield": _stock_metric_value(metrics.get("dividend_yield")),
+            "equity_ratio": _stock_metric_value(metrics.get("equity_ratio")),
+            "fcf_yield_avg": _stock_metric_value(row.get("fcf_yield_avg")),
+            "croic": _stock_metric_value(row.get("croic")),
+            "peg_trailing_5": _stock_metric_value(row.get("peg_trailing_5")),
+            "peg_trailing_5_status": _stock_metric_value(row.get("peg_trailing_5_status")),
+            "peg_blended_5y_actual_2f": _stock_metric_value(
+                row.get("peg_blended_5y_actual_2f")
+            ),
+            "peg_blended_5y_actual_2f_status": _stock_metric_value(
+                row.get("peg_blended_5y_actual_2f_status")
+            ),
+            "has_preferred_shares": _stock_metric_value(row.get("has_preferred_shares")),
+        }
+    return result
+
+
+def _stock_metric_value(value: object) -> StockMetricValue:
+    if value is None or isinstance(value, (float, bool, str)):
+        return value
+    if isinstance(value, int):
+        return float(value)
+    raise TypeError(f"unsupported stock metric value: {value!r}")
 
 
 def build_stock_price_metadata(stocks_db_path: Path | None = None) -> StockPriceMetadata:

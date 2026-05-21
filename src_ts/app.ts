@@ -129,6 +129,13 @@ function escapeHtml(value: string): string {
 /*  Column definitions                                                 */
 /* ------------------------------------------------------------------ */
 
+const DIVIDEND_YIELD_SPEC: MetricColSpec = {
+  key: "dividend_yield",
+  header: "div%",
+  title: "dividend yield",
+  decimals: 2,
+};
+
 const STOCK_COLUMNS: ColumnDef[] = [
   C.codeCol,
   C.nameCol,
@@ -139,6 +146,7 @@ const STOCK_COLUMNS: ColumnDef[] = [
   C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
   C.peg5yCol,
   C.peg5y2fCol,
+  C.buildMetricCol(DIVIDEND_YIELD_SPEC, flatAccessor("dividend_yield")),
   {
     key: "has_preferred_shares",
     header: "pref",
@@ -235,7 +243,10 @@ const CANDIDATE_COLUMNS: ColumnDef[] = [
   },
 ];
 
-const METRIC_THRESHOLDS: Record<string, MetricThreshold> = C.COMMON_THRESHOLDS;
+const METRIC_THRESHOLDS: Record<string, MetricThreshold> = {
+  ...C.COMMON_THRESHOLDS,
+  dividend_yield: { good: (v): boolean => v >= 4 },
+};
 
 /* ------------------------------------------------------------------ */
 /*  Navigation and view helpers                                        */

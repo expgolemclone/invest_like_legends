@@ -94,7 +94,7 @@ uv run python scripts/enrich_investors.py
 - `config/watch_codes.txt`
 - `japan_company_handbook/data/stock_performance.db` の `major_shareholders`
 - `stock_db` の `stocks.db` から引く会社名
-- `formula_screening.web.compute_all_stock_metrics()` が返す Rust-backed 指標
+- `formula_screening.web.run_screening_strategy_payload(..., return_all=True)` が返す Rust-backed 公開 payload
   - 指標計算に使う財務データは `stock_db` の `financial_items` を参照し、現在は EDINET XBRL (`source=edinet_xbrl`) を正とする
   - `per_actual` は実績純利益、`per` は四季報今期予想純利益、`per_next` は四季報来期予想純利益 (`source=shikiho`) から計算された値を使う
 - 投資家名の照合手順
@@ -117,7 +117,7 @@ uv run python scripts/enrich_investors.py
 - `assets/data/investors.json`: 表示用の完全データ
   - トップレベル順から投資家タブを生成する
   - 各投資家は `name`, `aliases`, `stocks` を持ち、`aliases` は銘柄抽出に使った DB 上の名寄せ済み株主名をすべて列挙する
-  - 各銘柄は `code`, `name`, `price`, `price_date`, `amount_millions`, `ratio_percent`, `peg_trailing_5`, `peg_trailing_5_status`, `peg_blended_5y_actual_2f`, `peg_blended_5y_actual_2f_status`, `has_preferred_shares` を含む指標列を含む
+  - 各銘柄は `code`, `name`, `price`, `price_date`, `amount_millions`, `ratio_percent`, `dividend_yield`, `peg_trailing_5`, `peg_trailing_5_status`, `peg_blended_5y_actual_2f`, `peg_blended_5y_actual_2f_status`, `has_preferred_shares` を含む指標列を含む
   - `watch` は `amount_millions: null`, `ratio_percent: 0`
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 - `assets/data/shareholder_candidates.json`: 株主候補の完全データ
@@ -142,6 +142,7 @@ uv run python scripts/enrich_investors.py
 | per_n | `時価総額 / 来期予想純利益` | `per_next` | o | 0<per_next<=7: good, >7: bad |
 | peg_5y | `実績PER / 過去5年EPS CAGR[%]`。成長率が0以下なら `neg`、その他の欠損は `-` | `peg_trailing_5` | o |
 | peg_5y2f | `来期予想PER / (過去5年実績+2期予想)EPS CAGR[%]`。成長率が0以下なら `neg`、その他の欠損は `-` | `peg_blended_5y_actual_2f` | o |
+| div% | `1株配当 / 株価 * 100` | `dividend_yield` | o | >= 4: good |
 | pref | 優先株有無 | `has_preferred_shares` | o |
 | equity% | `自己資本 / 総資産 * 100` | `equity_ratio` | o | >= 50: good |
 | fcf_10y% | `10期の平均FCF / 時価総額` | `fcf_yield_avg` | o | >= 10%: good |
@@ -238,7 +239,7 @@ invest_like_legends/assets/stock-price-meta.json
 
 ## 依存プロジェクト
 
-- `formula_screening`: 指標計算ロジック。`compute_all_stock_metrics()` を公開APIとして利用する
+- `formula_screening`: 指標計算ロジック。`run_screening_strategy_payload()` を公開APIとして利用する
 - `stock_db`: 会社名DB (`stocks.db`) と EDINET XBRL 由来の `financial_items` を提供する
 - `stock_web_ui`: Web UI フレームワーク。GitHub Pages 上の共有 runtime / style 配信元でもある
 - `japan_company_handbook`: 四季報の大株主データ (`stock_performance.db`) とPDF群を保持する
