@@ -36,15 +36,16 @@ _METRIC_FIELDS: tuple[str, ...] = (
     "per_actual",
     "per",
     "per_next",
-    "dividend_yield",
+    "fcf_yield_avg",
+    "equity_ratio",
     "peg_trailing_5",
     "peg_trailing_5_status",
     "peg_blended_5y_actual_2f",
     "peg_blended_5y_actual_2f_status",
-    "equity_ratio",
-    "fcf_yield_avg",
-    "croic",
+    "dividend_yield",
     "has_preferred_shares",
+    "croic",
+    "pbr",
 )
 _NORMALIZE_RE: re.Pattern[str] = re.compile(r"[\s\u3000・･·•\-ー_()（）\[\]【】.,/]")
 _CORPORATE_TOKENS: tuple[str, ...] = (
@@ -92,23 +93,24 @@ class ShareholderRow(TypedDict):
 class StockEntry(TypedDict):
     code: str
     name: str
-    amount_millions: int | None
-    ratio_percent: float
     price: float | None
     price_date: str | None
     net_cash_ratio: float | None
     per_actual: float | None
     per: float | None
     per_next: float | None
-    dividend_yield: float | None
+    fcf_yield_avg: float | None
+    equity_ratio: float | None
     peg_trailing_5: float | None
     peg_trailing_5_status: str | None
     peg_blended_5y_actual_2f: float | None
     peg_blended_5y_actual_2f_status: str | None
-    equity_ratio: float | None
-    fcf_yield_avg: float | None
-    croic: float | None
+    dividend_yield: float | None
     has_preferred_shares: bool | None
+    croic: float | None
+    pbr: float | None
+    amount_millions: int | None
+    ratio_percent: float
 
 
 class InvestorEntry(TypedDict):
@@ -390,10 +392,8 @@ def _flatten_screening_payload_metrics(
             "per_actual": _stock_metric_value(metrics.get("per_actual")),
             "per": _stock_metric_value(metrics.get("per")),
             "per_next": _stock_metric_value(metrics.get("per_next")),
-            "dividend_yield": _stock_metric_value(metrics.get("dividend_yield")),
-            "equity_ratio": _stock_metric_value(metrics.get("equity_ratio")),
             "fcf_yield_avg": _stock_metric_value(row.get("fcf_yield_avg")),
-            "croic": _stock_metric_value(row.get("croic")),
+            "equity_ratio": _stock_metric_value(metrics.get("equity_ratio")),
             "peg_trailing_5": _stock_metric_value(row.get("peg_trailing_5")),
             "peg_trailing_5_status": _stock_metric_value(row.get("peg_trailing_5_status")),
             "peg_blended_5y_actual_2f": _stock_metric_value(
@@ -402,7 +402,10 @@ def _flatten_screening_payload_metrics(
             "peg_blended_5y_actual_2f_status": _stock_metric_value(
                 row.get("peg_blended_5y_actual_2f_status")
             ),
+            "dividend_yield": _stock_metric_value(metrics.get("dividend_yield")),
             "has_preferred_shares": _stock_metric_value(row.get("has_preferred_shares")),
+            "croic": _stock_metric_value(row.get("croic")),
+            "pbr": _stock_metric_value(metrics.get("pbr")),
         }
     return result
 
@@ -505,10 +508,10 @@ def _build_watch_stocks(
         stock: StockEntry = {
             "code": code,
             "name": _resolve_stock_name(code, stock_names),
-            "amount_millions": None,
-            "ratio_percent": 0,
         }
         _add_metrics(stock, metrics_map.get(code))
+        stock["amount_millions"] = None
+        stock["ratio_percent"] = 0
         stocks.append(stock)
 
     return sorted(stocks, key=lambda stock: str(stock["code"]))
@@ -558,10 +561,10 @@ def _build_stocks_from_shareholder_rows(
         stock: StockEntry = {
             "code": code,
             "name": _resolve_stock_name(code, stock_names),
-            "amount_millions": _compute_amount_millions(total_shares, metrics),
-            "ratio_percent": total_ratio,
         }
         _add_metrics(stock, metrics)
+        stock["amount_millions"] = _compute_amount_millions(total_shares, metrics)
+        stock["ratio_percent"] = total_ratio
         stocks.append(stock)
 
     return sorted(stocks, key=lambda stock: str(stock["code"]))

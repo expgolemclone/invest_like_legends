@@ -136,6 +136,13 @@ const DIVIDEND_YIELD_SPEC: MetricColSpec = {
   decimals: 2,
 };
 
+const PBR_SPEC: MetricColSpec = {
+  key: "pbr",
+  header: "pbr",
+  title: "price book value ratio",
+  decimals: 2,
+};
+
 const STOCK_COLUMNS: ColumnDef[] = [
   C.codeCol,
   C.nameCol,
@@ -144,6 +151,8 @@ const STOCK_COLUMNS: ColumnDef[] = [
   C.buildMetricCol(C.PER_A_SPEC, flatAccessor("per_actual")),
   C.buildMetricCol(C.PER_C_SPEC, flatAccessor("per")),
   C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
+  C.fcfYCol,
+  C.buildMetricCol(C.EQUITY_SPEC, flatAccessor("equity_ratio")),
   C.peg5yCol,
   C.peg5y2fCol,
   C.buildMetricCol(DIVIDEND_YIELD_SPEC, flatAccessor("dividend_yield")),
@@ -156,9 +165,8 @@ const STOCK_COLUMNS: ColumnDef[] = [
     render: renderPreferredShares,
     sortValue: preferredSharesSortValue,
   },
-  C.buildMetricCol(C.EQUITY_SPEC, flatAccessor("equity_ratio")),
-  C.fcfYCol,
   C.croicCol,
+  C.buildMetricCol(PBR_SPEC, flatAccessor("pbr")),
   {
     key: "amount_millions",
     header: "amount",
@@ -246,6 +254,7 @@ const CANDIDATE_COLUMNS: ColumnDef[] = [
 const METRIC_THRESHOLDS: Record<string, MetricThreshold> = {
   ...C.COMMON_THRESHOLDS,
   dividend_yield: { good: (v): boolean => v >= 4 },
+  pbr: { good: (v): boolean => v < 0.5 },
 };
 
 /* ------------------------------------------------------------------ */

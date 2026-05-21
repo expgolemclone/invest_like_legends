@@ -60,15 +60,16 @@ METRIC_FIELDS: tuple[str, ...] = (
     "per_actual",
     "per",
     "per_next",
-    "dividend_yield",
+    "fcf_yield_avg",
+    "equity_ratio",
     "peg_trailing_5",
     "peg_trailing_5_status",
     "peg_blended_5y_actual_2f",
     "peg_blended_5y_actual_2f_status",
-    "equity_ratio",
-    "fcf_yield_avg",
-    "croic",
+    "dividend_yield",
     "has_preferred_shares",
+    "croic",
+    "pbr",
 )
 
 
@@ -231,16 +232,17 @@ def test_compute_metrics_map_uses_screening_payload_api(
                     "per_actual": 5.0,
                     "per": 4.0,
                     "per_next": 3.0,
-                    "dividend_yield": 2.5,
                     "equity_ratio": 60.0,
+                    "dividend_yield": 2.5,
+                    "pbr": 0.4,
                 },
                 "fcf_yield_avg": 0.12,
-                "croic": 0.18,
                 "peg_trailing_5": 0.7,
                 "peg_trailing_5_status": "ok",
                 "peg_blended_5y_actual_2f": 0.6,
                 "peg_blended_5y_actual_2f_status": "ok",
                 "has_preferred_shares": False,
+                "croic": 0.18,
             }
         ]
 
@@ -259,15 +261,16 @@ def test_compute_metrics_map_uses_screening_payload_api(
         "per_actual": 5.0,
         "per": 4.0,
         "per_next": 3.0,
-        "dividend_yield": 2.5,
-        "equity_ratio": 60.0,
         "fcf_yield_avg": 0.12,
-        "croic": 0.18,
+        "equity_ratio": 60.0,
         "peg_trailing_5": 0.7,
         "peg_trailing_5_status": "ok",
         "peg_blended_5y_actual_2f": 0.6,
         "peg_blended_5y_actual_2f_status": "ok",
+        "dividend_yield": 2.5,
         "has_preferred_shares": False,
+        "croic": 0.18,
+        "pbr": 0.4,
     }
     assert captured["return_all"] is True
     assert Path(captured["strategy_path"]).name == "net_cash_fcf.toml"
@@ -351,6 +354,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             peg_blended_5y_actual_2f=0.41,
             peg_blended_5y_actual_2f_status="ok",
             has_preferred_shares=True,
+            pbr=0.45,
         ),
         "1429": _metrics(price=1000.0, equity_ratio=55.0),
         "1450": _metrics(price=1000.0, net_cash_ratio=1.2),
@@ -397,6 +401,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
     assert hikari_stocks[0]["peg_trailing_5"] == 0.53
     assert hikari_stocks[0]["peg_trailing_5_status"] == "ok"
     assert hikari_stocks[0]["has_preferred_shares"] is True
+    assert hikari_stocks[0]["pbr"] == 0.45
     assert hikari_stocks[1]["amount_millions"] == 750
     assert hikari_stocks[1]["ratio_percent"] == 5.1
     assert hikari_stocks[1]["net_cash_ratio"] == 1.2
@@ -424,6 +429,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "fcf_yield_avg": None,
             "croic": None,
             "has_preferred_shares": None,
+            "pbr": None,
         }
     ]
 
@@ -450,6 +456,7 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "fcf_yield_avg": None,
             "croic": None,
             "has_preferred_shares": None,
+            "pbr": None,
         }
     ]
 
@@ -529,6 +536,7 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "fcf_yield_avg": None,
                 "croic": None,
                 "has_preferred_shares": None,
+                "pbr": None,
             },
             {
                 "code": "1002",
@@ -550,6 +558,7 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "fcf_yield_avg": None,
                 "croic": None,
                 "has_preferred_shares": None,
+                "pbr": None,
             },
         ],
     }
@@ -597,15 +606,16 @@ def _metrics(
     per_actual: float | None = None,
     per: float | None = None,
     per_next: float | None = None,
-    dividend_yield: float | None = None,
+    fcf_yield_avg: float | None = None,
+    equity_ratio: float | None = None,
     peg_trailing_5: float | None = None,
     peg_trailing_5_status: str | None = None,
     peg_blended_5y_actual_2f: float | None = None,
     peg_blended_5y_actual_2f_status: str | None = None,
-    equity_ratio: float | None = None,
-    fcf_yield_avg: float | None = None,
-    croic: float | None = None,
+    dividend_yield: float | None = None,
     has_preferred_shares: bool | None = None,
+    croic: float | None = None,
+    pbr: float | None = None,
 ) -> dict[str, float | bool | str | None]:
     return {
         "price": price,
@@ -614,15 +624,16 @@ def _metrics(
         "per_actual": per_actual,
         "per": per,
         "per_next": per_next,
-        "dividend_yield": dividend_yield,
+        "fcf_yield_avg": fcf_yield_avg,
+        "equity_ratio": equity_ratio,
         "peg_trailing_5": peg_trailing_5,
         "peg_trailing_5_status": peg_trailing_5_status,
         "peg_blended_5y_actual_2f": peg_blended_5y_actual_2f,
         "peg_blended_5y_actual_2f_status": peg_blended_5y_actual_2f_status,
-        "equity_ratio": equity_ratio,
-        "fcf_yield_avg": fcf_yield_avg,
-        "croic": croic,
+        "dividend_yield": dividend_yield,
         "has_preferred_shares": has_preferred_shares,
+        "croic": croic,
+        "pbr": pbr,
     }
 
 

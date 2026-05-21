@@ -82,6 +82,12 @@ const DIVIDEND_YIELD_SPEC = {
     title: "dividend yield",
     decimals: 2,
 };
+const PBR_SPEC = {
+    key: "pbr",
+    header: "pbr",
+    title: "price book value ratio",
+    decimals: 2,
+};
 const STOCK_COLUMNS = [
     C.codeCol,
     C.nameCol,
@@ -90,6 +96,8 @@ const STOCK_COLUMNS = [
     C.buildMetricCol(C.PER_A_SPEC, flatAccessor("per_actual")),
     C.buildMetricCol(C.PER_C_SPEC, flatAccessor("per")),
     C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
+    C.fcfYCol,
+    C.buildMetricCol(C.EQUITY_SPEC, flatAccessor("equity_ratio")),
     C.peg5yCol,
     C.peg5y2fCol,
     C.buildMetricCol(DIVIDEND_YIELD_SPEC, flatAccessor("dividend_yield")),
@@ -102,9 +110,8 @@ const STOCK_COLUMNS = [
         render: renderPreferredShares,
         sortValue: preferredSharesSortValue,
     },
-    C.buildMetricCol(C.EQUITY_SPEC, flatAccessor("equity_ratio")),
-    C.fcfYCol,
     C.croicCol,
+    C.buildMetricCol(PBR_SPEC, flatAccessor("pbr")),
     {
         key: "amount_millions",
         header: "amount",
@@ -188,6 +195,7 @@ const CANDIDATE_COLUMNS = [
 const METRIC_THRESHOLDS = {
     ...C.COMMON_THRESHOLDS,
     dividend_yield: { good: (v) => v >= 4 },
+    pbr: { good: (v) => v < 0.5 },
 };
 /* ------------------------------------------------------------------ */
 /*  Navigation and view helpers                                        */
