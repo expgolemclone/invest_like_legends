@@ -188,26 +188,20 @@ def test_generated_stock_price_metadata_matches_schema() -> None:
     )
 
 
-def test_stock_price_metadata_uses_formula_screening_api(
+def test_stock_price_metadata_uses_stock_db_api(
     monkeypatch: pytest.MonkeyPatch,
-    tmp_path: Path,
 ) -> None:
-    db_path = tmp_path / "stocks.db"
-    captured: dict[str, object] = {}
-
-    def fake_build_stock_price_metadata(path: Path) -> dict[str, str]:
-        captured["path"] = path
+    def fake_get_stock_price_metadata() -> dict[str, str]:
         return {"price_date": "2026-05-20", "target_price_date": "2026-05-20"}
 
-    import formula_screening.web as web_mod
+    import stock_db.api as stock_db_api
 
-    monkeypatch.setattr(web_mod, "build_stock_price_metadata", fake_build_stock_price_metadata)
+    monkeypatch.setattr(stock_db_api, "get_stock_price_metadata", fake_get_stock_price_metadata)
 
-    assert build_stock_price_metadata(db_path) == {
+    assert build_stock_price_metadata() == {
         "price_date": "2026-05-20",
         "target_price_date": "2026-05-20",
     }
-    assert captured == {"path": db_path}
 
 
 def test_compute_metrics_map_uses_screening_payload_api(

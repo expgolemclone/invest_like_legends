@@ -12,15 +12,14 @@ from investor_data import (
     compute_metrics_map,
     load_major_shareholder_rows,
     load_stock_names,
-    resolve_stocks_db_path,
     write_investors_document,
     write_shareholder_candidates_document,
     write_stock_price_metadata,
 )
-from stock_db.sources.price_refresh import (
+from stock_db.api import (
     PriceRefreshCommandResult,
     PriceRefreshError,
-    ensure_prices_fresh_for_api,
+    ensure_prices_fresh,
 )
 from stock_web_ui.handler import ApiHandler, json_route
 from stock_web_ui.page import IndexPage
@@ -43,7 +42,7 @@ def _load_shareholder_candidates() -> list[dict]:
 
 
 def _load_stock_price_metadata() -> dict[str, str | None]:
-    """Build the latest stock price metadata from stocks.db."""
+    """Build the latest stock price metadata from stock_db API."""
     return build_stock_price_metadata()
 
 
@@ -57,11 +56,10 @@ def _create_api_routes() -> dict[str, ApiHandler]:
 
 
 def _ensure_prices_fresh() -> PriceRefreshCommandResult | None:
-    """Refresh stock prices when the configured stocks DB is stale."""
-    db_path = resolve_stocks_db_path()
+    """Refresh stock prices when stock_db reports stale data."""
 
     try:
-        result = ensure_prices_fresh_for_api(db_path=db_path)
+        result = ensure_prices_fresh()
     except (PriceRefreshError, ValueError) as exc:
         print(f"Failed to update stock prices: {exc}", file=sys.stderr)
         raise SystemExit(1) from exc

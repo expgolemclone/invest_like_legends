@@ -5,63 +5,43 @@ from pathlib import Path
 import pytest
 
 import serve
-from stock_db.sources.price_refresh import PriceRefreshCommandResult, PriceRefreshError
+from stock_db.api import PriceRefreshCommandResult, PriceRefreshError
 
 
 def test_ensure_prices_fresh_skips_command_when_fresh(
-    tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    db_path = tmp_path / "stocks.db"
-
-    monkeypatch.setattr(serve, "resolve_stocks_db_path", lambda: db_path)
-
-    def fake_ensure_prices_fresh_for_api(**kwargs: object) -> None:
-        assert kwargs == {"db_path": db_path}
+    def fake_ensure_prices_fresh() -> None:
         return None
 
-    monkeypatch.setattr(serve, "ensure_prices_fresh_for_api", fake_ensure_prices_fresh_for_api)
+    monkeypatch.setattr(serve, "ensure_prices_fresh", fake_ensure_prices_fresh)
 
     assert serve._ensure_prices_fresh() is None
 
 
 def test_ensure_prices_fresh_runs_command_with_configured_db(
-    tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    db_path = tmp_path / "stocks.db"
-    captured: dict[str, object] = {}
-
-    monkeypatch.setattr(serve, "resolve_stocks_db_path", lambda: db_path)
-
-    def fake_ensure_prices_fresh_for_api(**kwargs: object) -> PriceRefreshCommandResult:
-        captured.update(kwargs)
+    def fake_ensure_prices_fresh() -> PriceRefreshCommandResult:
         return PriceRefreshCommandResult(stdout="", stderr="Refreshed stock prices: yahoo=1 ok")
 
-    monkeypatch.setattr(serve, "ensure_prices_fresh_for_api", fake_ensure_prices_fresh_for_api)
+    monkeypatch.setattr(serve, "ensure_prices_fresh", fake_ensure_prices_fresh)
 
     result = serve._ensure_prices_fresh()
 
     assert result is not None
-    assert captured == {"db_path": db_path}
     assert "Updated stock prices: Refreshed stock prices: yahoo=1 ok" in capsys.readouterr().err
 
 
 def test_ensure_prices_fresh_exits_when_command_fails(
-    tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    db_path = tmp_path / "stocks.db"
-
-    monkeypatch.setattr(serve, "resolve_stocks_db_path", lambda: db_path)
-
-    def fake_ensure_prices_fresh_for_api(**kwargs: object) -> PriceRefreshCommandResult:
-        del kwargs
+    def fake_ensure_prices_fresh() -> PriceRefreshCommandResult:
         raise PriceRefreshError("Yahoo failed")
 
-    monkeypatch.setattr(serve, "ensure_prices_fresh_for_api", fake_ensure_prices_fresh_for_api)
+    monkeypatch.setattr(serve, "ensure_prices_fresh", fake_ensure_prices_fresh)
 
     with pytest.raises(SystemExit) as exc_info:
         serve._ensure_prices_fresh()

@@ -46,10 +46,9 @@ invest_like_legends/
 ../japan_company_handbook
 ```
 
-DB の場所を標準構成から変える場合は、環境変数で指定する。
+四季報大株主 DB の場所を標準構成から変える場合は、環境変数で指定する。`stock_db` の DB パスはこの repo では扱わず、`stock_db.api` が内部で解決する。
 
 ```powershell
-$env:STOCKS_DB_PATH="C:\path\to\stocks.db"
 $env:HANDBOOK_DB_PATH="C:\path\to\stock_performance.db"
 ```
 
@@ -70,7 +69,7 @@ uv run python serve.py
 uv run python scripts/enrich_investors.py
 ```
 
-`serve.py` はローカル確認用で、`/api/portfolio` と `/api/shareholder-candidates` が手元の DB と設定から毎回データを組み立てる。`/api/stock-price-meta` は `stock_db.prices.date` の最大値と前営業日を返し、共通UIのステータス欄に株価基準日を表示する。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` を完全再生成する。
+`serve.py` はローカル確認用で、`/api/portfolio` と `/api/shareholder-candidates` が手元の四季報 DB、設定、`stock_db` / `formula_screening` の公開 API から毎回データを組み立てる。`/api/stock-price-meta` は `stock_db.api.get_stock_price_metadata()` を返し、共通UIのステータス欄に株価基準日を表示する。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` を完全再生成する。
 
 ### 投資家と監視銘柄の追加
 
@@ -93,9 +92,9 @@ uv run python scripts/enrich_investors.py
 - `config/investors.json`
 - `config/watch_codes.txt`
 - `japan_company_handbook/data/stock_performance.db` の `major_shareholders`
-- `stock_db` の `stocks.db` から引く会社名
+- `stock_db.api.get_stock_names()` から引く会社名
 - `formula_screening.web.run_screening_strategy_payload(..., return_all=True)` が返す Rust-backed 公開 payload
-  - 指標計算に使う財務データは `stock_db` の `financial_items` を参照し、現在は EDINET XBRL (`source=edinet_xbrl`) を正とする
+  - 指標計算に使う財務データは `formula_screening` が `stock_db` 公開 API 経由で取得する。EDINET XBRL を正、四季報予想を補助ソースとする責務は `stock_db` 側に閉じる
   - `per_actual` は実績純利益、`per` は四季報今期予想純利益、`per_next` は四季報来期予想純利益 (`source=shikiho`) から計算された値を使う
 - 投資家名の照合手順
   - NFKC 正規化
@@ -125,7 +124,7 @@ uv run python scripts/enrich_investors.py
   - `aliases` は同一候補に名寄せして `stocks` に含めた DB 上の株主名をすべて列挙する
   - `?view=candidates` は candidates、`?view=candidate&id=...` は candidate 詳細を表示する
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
-- `assets/stock-price-meta.json`: `stock_db.prices.date` の最大値を `price_date`、前営業日を `target_price_date` として持つ metadata。ローカルでは `/api/stock-price-meta` が同じ形を返す
+- `assets/stock-price-meta.json`: `stock_db.api.get_stock_price_metadata()` の `price_date` と `target_price_date` を持つ metadata。ローカルでは `/api/stock-price-meta` が同じ形を返す
 
 #### テーブルカラム
 
@@ -154,11 +153,11 @@ uv run python scripts/enrich_investors.py
 
 ### ローカルサーバー (`serve.py`)
 
-- 起動時に `stock_db.sources.price_refresh.ensure_prices_fresh_for_api()` で株価鮮度を判定し、前営業日終値が揃っていない場合は `stock_db` 側の `refresh-prices --if-needed` 経由で Stooq 更新と Yahoo Finance JP 補完を実行する。個別銘柄の株価が取得できない場合も処理は継続し、古い株価は `price_date` と `target_price_date` により共通 UI 側で目立ちにくく表示する
+- 起動時に `stock_db.api.ensure_prices_fresh()` で株価鮮度を判定し、前営業日終値が揃っていない場合は `stock_db` 側の `refresh-prices --if-needed` 経由で Stooq 更新と Yahoo Finance JP 補完を実行する。個別銘柄の株価が取得できない場合も処理は継続し、古い株価は `price_date` と `target_price_date` により共通 UI 側で目立ちにくく表示する
 - 起動時に `build_investors_document()` / `build_shareholder_candidates_document()` を呼び出し、公開用 JSON を自動生成する
 - `/api/portfolio` は `build_investors_document()` を毎回呼び、最新DBから投資家データを組み立てて返す
 - `/api/shareholder-candidates` は `build_shareholder_candidates_document()` を毎回呼び、最新DBから候補データを組み立てて返す
-- `/api/stock-price-meta` は `formula_screening.web.build_stock_price_metadata()` 経由で `{ "price_date": "YYYY-MM-DD", "target_price_date": "YYYY-MM-DD" }` を返す
+- `/api/stock-price-meta` は `stock_db.api.get_stock_price_metadata()` 経由で `{ "price_date": "YYYY-MM-DD", "target_price_date": "YYYY-MM-DD" }` を返す
 - 生成済み JSON はローカルAPIの入力には使わない
 - `stock_web_ui.page.IndexPage` でローカル用 `index.html` を描画し、HTTPサーバー本体は `stock_web_ui` に委譲する
 
@@ -173,7 +172,7 @@ uv run python scripts/enrich_investors.py
 - 毎日日本時間 0:00 に `scripts/enrich_investors.py` を実行する
 - 手動実行は GitHub Actions の `workflow_dispatch` から行う
 - 依存repoとして `stock_db`, `formula_screening`, `stock_web_ui`, `japan_company_handbook` を checkout する
-- `stock_db` の `stocks.db` は `stocks-db` artifact から取得する
+- `stocks-db` artifact は `stock_db` API の内部入力として復元する。下流実装は `stocks.db` のパスやテーブルを直接読まない
 - `japan_company_handbook` は `data/stock_performance.db` だけ sparse checkout する
 - `uv` の相対パス依存を満たすため、workflow 内で sibling symlink を作る
 - 生成後は `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` をコミットして push する
@@ -193,7 +192,7 @@ investor_data.build_investors_document()
   ↓
 config/investors.json + watch_codes.txt
   ↓
-major_shareholders + stocks.db + formula_screening metrics
+major_shareholders + stock_db API + formula_screening metrics
   ↓
 JSON / yazi / 外部ブラウザ
 ```
@@ -207,7 +206,7 @@ serve.py (/api/shareholder-candidates)
   ↓
 investor_data.build_shareholder_candidates_document()
   ↓
-major_shareholders + stocks.db + formula_screening metrics
+major_shareholders + stock_db API + formula_screening metrics
   ↓
 JSON / candidates / candidate detail
 ```
@@ -242,6 +241,6 @@ invest_like_legends/assets/stock-price-meta.json
 ## 依存プロジェクト
 
 - `formula_screening`: 指標計算ロジック。`run_screening_strategy_payload()` を公開APIとして利用する
-- `stock_db`: 会社名DB (`stocks.db`) と EDINET XBRL 由来の `financial_items` を提供する
+- `stock_db`: 会社名、株価 metadata、価格更新、財務データを公開 API 経由で提供する
 - `stock_web_ui`: Web UI フレームワーク。GitHub Pages 上の共有 runtime / style 配信元でもある
 - `japan_company_handbook`: 四季報の大株主データ (`stock_performance.db`) とPDF群を保持する

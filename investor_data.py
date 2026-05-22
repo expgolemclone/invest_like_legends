@@ -164,7 +164,6 @@ def build_investors_document(
     config_path: Path | None = None,
     watch_codes_path: Path | None = None,
     handbook_db_path: Path | None = None,
-    stocks_db_path: Path | None = None,
     metrics_map: dict[str, dict[str, StockMetricValue]] | None = None,
     stock_names: dict[str, str] | None = None,
     shareholder_rows: list[ShareholderRow] | None = None,
@@ -172,7 +171,7 @@ def build_investors_document(
     investor_config: dict[str, str] = load_investor_config(config_path)
     watch_codes: list[str] = load_watch_codes(watch_codes_path)
     names_map: dict[str, str] = (
-        stock_names if stock_names is not None else load_stock_names(stocks_db_path)
+        stock_names if stock_names is not None else load_stock_names()
     )
     resolved_metrics_map: dict[str, dict[str, StockMetricValue]] = (
         metrics_map if metrics_map is not None else compute_metrics_map()
@@ -218,7 +217,6 @@ def build_investors_document(
 def build_shareholder_candidates_document(
     *,
     handbook_db_path: Path | None = None,
-    stocks_db_path: Path | None = None,
     metrics_map: dict[str, dict[str, StockMetricValue]] | None = None,
     stock_names: dict[str, str] | None = None,
     shareholder_rows: list[ShareholderRow] | None = None,
@@ -226,7 +224,7 @@ def build_shareholder_candidates_document(
     min_holdings: int = DEFAULT_SHAREHOLDER_CANDIDATE_MIN_HOLDINGS,
 ) -> list[ShareholderCandidateEntry]:
     names_map: dict[str, str] = (
-        stock_names if stock_names is not None else load_stock_names(stocks_db_path)
+        stock_names if stock_names is not None else load_stock_names()
     )
     resolved_metrics_map: dict[str, dict[str, StockMetricValue]] = (
         metrics_map if metrics_map is not None else compute_metrics_map()
@@ -315,11 +313,10 @@ def write_stock_price_metadata(
     metadata: StockPriceMetadata | None = None,
     *,
     output_path: Path | None = None,
-    stocks_db_path: Path | None = None,
 ) -> Path:
     resolved_output_path: Path = output_path or DEFAULT_STOCK_PRICE_METADATA_OUTPUT_PATH
     resolved_metadata: StockPriceMetadata = (
-        metadata if metadata is not None else build_stock_price_metadata(stocks_db_path)
+        metadata if metadata is not None else build_stock_price_metadata()
     )
     resolved_output_path.parent.mkdir(parents=True, exist_ok=True)
     resolved_output_path.write_text(
@@ -353,14 +350,10 @@ def load_major_shareholder_rows(db_path: Path | None = None) -> list[Shareholder
     return normalized_rows
 
 
-def load_stock_names(db_path: Path | None = None) -> dict[str, str]:
-    resolved_db_path: Path = resolve_stocks_db_path(db_path)
+def load_stock_names() -> dict[str, str]:
+    from stock_db.api import get_stock_names
 
-    from stock_db.storage.connection import get_connection
-    from stock_db.storage.stocks import get_stock_names
-
-    with get_connection(resolved_db_path) as conn:
-        return get_stock_names(conn)
+    return get_stock_names()
 
 
 def compute_metrics_map() -> dict[str, dict[str, StockMetricValue]]:
@@ -418,10 +411,10 @@ def _stock_metric_value(value: object) -> StockMetricValue:
     raise TypeError(f"unsupported stock metric value: {value!r}")
 
 
-def build_stock_price_metadata(stocks_db_path: Path | None = None) -> StockPriceMetadata:
-    from formula_screening.web import build_stock_price_metadata as _build_stock_price_metadata
+def build_stock_price_metadata() -> StockPriceMetadata:
+    from stock_db.api import get_stock_price_metadata
 
-    return _build_stock_price_metadata(resolve_stocks_db_path(stocks_db_path))
+    return get_stock_price_metadata()
 
 
 def resolve_handbook_db_path(path: Path | None = None) -> Path:
@@ -433,19 +426,6 @@ def resolve_handbook_db_path(path: Path | None = None) -> Path:
         return Path(env_path)
 
     return DEFAULT_HANDBOOK_DB_PATH
-
-
-def resolve_stocks_db_path(path: Path | None = None) -> Path:
-    if path is not None:
-        return path
-
-    env_path: str | None = os.environ.get("STOCKS_DB_PATH")
-    if env_path:
-        return Path(env_path)
-
-    from stock_db.paths import STOCKS_DB_PATH
-
-    return STOCKS_DB_PATH
 
 
 def select_matching_shareholder_names(
