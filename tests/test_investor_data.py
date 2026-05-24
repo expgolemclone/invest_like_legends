@@ -27,14 +27,45 @@ SHAREHOLDER_CANDIDATES_DATA_PATH: Path = (
 STOCK_PRICE_METADATA_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "stock-price-meta.json"
 EXPECTED_INVESTOR_NAMES: dict[str, str] = {
     "watch": "監視銘柄",
+    "hikari_all": "光通信_all",
+    "hikari_core": "光通信",
+    "hikari_kk_lps": "光通信KK",
+    "uh_partners_2": "UH Partners 2",
+    "uh_partners_3": "UH Partners 3",
+    "sil": "エスアイエル",
+    "noi": "エヌオーアイ",
+    "ivy": "アイビー",
+    "uh5": "UH5",
+    "ft_communications": "FTコミュニケーションズ",
+    "hikari_tsushin_inc": "Hikari Tsushin, Inc.",
+    "hikari_1_dividend_lps": "光1号配当特化",
     "naito": "内藤征吾",
-    "hikari": "光通信",
     "kiyohara": "清原達郎",
     "katayama": "片山晃",
     "imura": "井村俊哉",
     "yoshida": "ヨシダトモヒロ",
     "nomura": "野村絢",
 }
+EXPECTED_HIKARI_ALL_ALIASES: list[str] = [
+    "株式会社光通信",
+    "光通信株式会社",
+    "光通信KK投資事業有限責任組合",
+    "株式会社UH Partners 2",
+    "UH Partners 2投資事業有限責任組合",
+    "株式会社UH Partners 3",
+    "UH Partners 3投資事業有限責任組合",
+    "株式会社エスアイエル",
+    "エスアイエル投資事業有限責任組合",
+    "株式会社エヌオーアイ",
+    "エヌオーアイ投資事業有限責任組合",
+    "株式会社アイビー",
+    "アイビー投資事業有限責任組合",
+    "株式会社UH5",
+    "株式会社FTコミュニケーションズ",
+    "Hikari Tsushin, Inc.",
+    "光通信INVESTMENTS OKINAWA",
+    "光1号配当特化投資事業有限責任組合",
+]
 EXPECTED_WATCH_CODES: list[str] = [
     "3504",
     "1999",
@@ -76,7 +107,15 @@ METRIC_FIELDS: tuple[str, ...] = (
 def test_repo_config_contains_expected_investor_names_and_watch_codes() -> None:
     assert CONFIG_PATH.exists()
     assert WATCH_CODES_PATH.exists()
-    assert load_investor_config(CONFIG_PATH) == EXPECTED_INVESTOR_NAMES
+
+    investor_config = load_investor_config(CONFIG_PATH)
+
+    assert {
+        investor_key: entry["name"]
+        for investor_key, entry in investor_config.items()
+    } == EXPECTED_INVESTOR_NAMES
+    assert investor_config["hikari_all"]["aliases"] == EXPECTED_HIKARI_ALL_ALIASES
+    assert investor_config["naito"]["aliases"] == []
     assert load_watch_codes(WATCH_CODES_PATH) == EXPECTED_WATCH_CODES
 
 
@@ -304,6 +343,98 @@ def test_shareholder_name_matching_handles_aliases_and_prefix_fallback() -> None
     assert select_matching_shareholder_names("片山晃", shareholder_names) == [
         "片山善博",
     ]
+
+
+def test_build_investors_document_uses_explicit_aliases_without_containment(
+    tmp_path: Path,
+) -> None:
+    config_path: Path = tmp_path / "investors.json"
+    config_path.write_text(
+        json.dumps(
+            {
+                "hikari_all": {
+                    "name": "光通信_all",
+                    "aliases": [
+                        "株式会社光通信",
+                        "光通信KK投資事業有限責任組合",
+                        "株式会社アイビー",
+                        "アイビー投資事業有限責任組合",
+                        "株式会社FTコミュニケーションズ",
+                        "Hikari Tsushin, Inc.",
+                        "光通信INVESTMENTS OKINAWA",
+                    ],
+                },
+                "hikari_core": {
+                    "name": "光通信",
+                    "aliases": [
+                        "株式会社光通信",
+                        "光通信株式会社",
+                    ],
+                },
+                "ivy": {
+                    "name": "アイビー",
+                    "aliases": [
+                        "株式会社アイビー",
+                        "アイビー投資事業有限責任組合",
+                    ],
+                },
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    watch_codes_path: Path = tmp_path / "watch_codes.txt"
+    watch_codes_path.write_text("", encoding="utf-8")
+    handbook_db_path: Path = tmp_path / "stock_performance.db"
+    _create_handbook_db(
+        handbook_db_path,
+        rows=[
+            ("1000", "光通信(株)", 10, 1.0),
+            ("1001", "光通信KK投資事業有限責任組合", 20, 2.0),
+            ("1002", "(株)アイビー", 30, 3.0),
+            ("1003", "アイビー投資事業有限責任組合", 40, 4.0),
+            ("1004", "アイビーピー(株)", 50, 5.0),
+            ("1005", "(株)FTコミュニケーションズ", 60, 6.0),
+            ("1006", "Hikari Tsushin, Inc.", 70, 7.0),
+            ("1007", "光通信INVESTMENTS OKINAWA", 80, 8.0),
+        ],
+    )
+
+    document = build_investors_document(
+        config_path=config_path,
+        watch_codes_path=watch_codes_path,
+        handbook_db_path=handbook_db_path,
+        metrics_map={},
+        stock_names={},
+    )
+
+    assert document["hikari_all"]["aliases"] == [
+        "光通信(株)",
+        "光通信KK投資事業有限責任組合",
+        "(株)アイビー",
+        "アイビー投資事業有限責任組合",
+        "(株)FTコミュニケーションズ",
+        "Hikari Tsushin, Inc.",
+        "光通信INVESTMENTS OKINAWA",
+    ]
+    assert [stock["code"] for stock in _stocks(document, "hikari_all")] == [
+        "1000",
+        "1001",
+        "1002",
+        "1003",
+        "1005",
+        "1006",
+        "1007",
+    ]
+    assert document["hikari_core"]["aliases"] == ["光通信(株)"]
+    assert [stock["code"] for stock in _stocks(document, "hikari_core")] == ["1000"]
+    assert document["ivy"]["aliases"] == [
+        "(株)アイビー",
+        "アイビー投資事業有限責任組合",
+    ]
+    assert [stock["code"] for stock in _stocks(document, "ivy")] == ["1002", "1003"]
+
+
 def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) -> None:
     config_path: Path = tmp_path / "investors.json"
     config_path.write_text(

@@ -73,7 +73,7 @@ uv run python scripts/enrich_investors.py
 
 ### 投資家と監視銘柄の追加
 
-投資家タブを追加する場合は `config/investors.json` にキーと表示名を追加する。保有銘柄は大株主 DB から自動照合するため、銘柄一覧は書かない。
+投資家タブを追加する場合は `config/investors.json` にキーと表示名を追加する。通常は表示名から大株主 DB を自動照合する。名義を厳密に指定したい場合は `{ "name": "...", "aliases": [...] }` 形式を使い、明示した名義の正規化完全一致だけを拾う。
 
 監視銘柄を追加する場合は `config/watch_codes.txt` に銘柄コードを 1 行ずつ追加する。設定変更後は、ローカル確認には `uv run python serve.py`、公開用 JSON の更新には `uv run python scripts/enrich_investors.py` を使う。
 
@@ -81,7 +81,7 @@ uv run python scripts/enrich_investors.py
 
 ### 設定ファイル (`config/`)
 
-- `investors.json`: 生成元の唯一のJSON設定。保持するのは投資家名だけで、保有銘柄一覧は持たない
+- `investors.json`: 生成元の唯一のJSON設定。値は表示名文字列、または `name` と `aliases` を持つオブジェクト。保有銘柄一覧は持たない
 - `watch_codes.txt`: `watch` タブ専用の静的銘柄コード一覧。`watch` は大株主DBから導出できないため別管理し、今村証券（7175）などの手動監視銘柄をここに追加する
 
 ### データビルダー (`investor_data.py`)
@@ -97,11 +97,13 @@ uv run python scripts/enrich_investors.py
   - 指標計算に使う財務データは `formula_screening` が `stock_db` 公開 API 経由で取得する。EDINET XBRL を正、四季報予想を補助ソースとする責務は `stock_db` 側に閉じる
   - `per_actual` は実績純利益、`per` は四季報今期予想純利益、`per_next` は四季報来期予想純利益 (`source=shikiho`) から計算された値を使う
 - 投資家名の照合手順
-  - NFKC 正規化
-  - 空白・記号・法人格表現の除去
-  - 完全一致
-  - 包含一致
-  - それでも0件なら、先頭2文字が CJK の投資家名に限って先頭2文字一致
+  - `aliases` が指定された投資家は、各 alias と DB 上の株主名を同じルールで正規化し、完全一致する株主名だけを対象にする
+  - `aliases` がない投資家は以下の既存ルールで表示名から照合する
+    - NFKC 正規化
+    - 空白・記号・法人格表現の除去
+    - 完全一致
+    - 包含一致
+    - それでも0件なら、先頭2文字が CJK の投資家名に限って先頭2文字一致
 - 同一銘柄で複数の株主別名が一致した場合は、`shares` と `ratio_pct` を銘柄単位で合算する
 - `amount_millions` は四季報の `shares` を万株単位として `round(shares * price / 100)` で百万円換算する
 - 会社名が取れない場合は `（銘柄コード XXXX）` を使う

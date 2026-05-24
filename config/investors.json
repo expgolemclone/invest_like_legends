@@ -1,7 +1,101 @@
 {
   "watch": "監視銘柄",
+  "hikari_all": {
+    "name": "光通信_all",
+    "aliases": [
+      "株式会社光通信",
+      "光通信株式会社",
+      "光通信KK投資事業有限責任組合",
+      "株式会社UH Partners 2",
+      "UH Partners 2投資事業有限責任組合",
+      "株式会社UH Partners 3",
+      "UH Partners 3投資事業有限責任組合",
+      "株式会社エスアイエル",
+      "エスアイエル投資事業有限責任組合",
+      "株式会社エヌオーアイ",
+      "エヌオーアイ投資事業有限責任組合",
+      "株式会社アイビー",
+      "アイビー投資事業有限責任組合",
+      "株式会社UH5",
+      "株式会社FTコミュニケーションズ",
+      "Hikari Tsushin, Inc.",
+      "光通信INVESTMENTS OKINAWA",
+      "光1号配当特化投資事業有限責任組合"
+    ]
+  },
+  "hikari_core": {
+    "name": "光通信",
+    "aliases": [
+      "株式会社光通信",
+      "光通信株式会社"
+    ]
+  },
+  "hikari_kk_lps": {
+    "name": "光通信KK",
+    "aliases": [
+      "光通信KK投資事業有限責任組合"
+    ]
+  },
+  "uh_partners_2": {
+    "name": "UH Partners 2",
+    "aliases": [
+      "株式会社UH Partners 2",
+      "UH Partners 2投資事業有限責任組合"
+    ]
+  },
+  "uh_partners_3": {
+    "name": "UH Partners 3",
+    "aliases": [
+      "株式会社UH Partners 3",
+      "UH Partners 3投資事業有限責任組合"
+    ]
+  },
+  "sil": {
+    "name": "エスアイエル",
+    "aliases": [
+      "株式会社エスアイエル",
+      "エスアイエル投資事業有限責任組合"
+    ]
+  },
+  "noi": {
+    "name": "エヌオーアイ",
+    "aliases": [
+      "株式会社エヌオーアイ",
+      "エヌオーアイ投資事業有限責任組合"
+    ]
+  },
+  "ivy": {
+    "name": "アイビー",
+    "aliases": [
+      "株式会社アイビー",
+      "アイビー投資事業有限責任組合"
+    ]
+  },
+  "uh5": {
+    "name": "UH5",
+    "aliases": [
+      "株式会社UH5"
+    ]
+  },
+  "ft_communications": {
+    "name": "FTコミュニケーションズ",
+    "aliases": [
+      "株式会社FTコミュニケーションズ"
+    ]
+  },
+  "hikari_tsushin_inc": {
+    "name": "Hikari Tsushin, Inc.",
+    "aliases": [
+      "Hikari Tsushin, Inc."
+    ]
+  },
+  "hikari_1_dividend_lps": {
+    "name": "光1号配当特化",
+    "aliases": [
+      "光1号配当特化投資事業有限責任組合"
+    ]
+  },
   "naito": "内藤征吾",
-  "hikari": "光通信",
   "kiyohara": "清原達郎",
   "katayama": "片山晃",
   "imura": "井村俊哉",

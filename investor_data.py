@@ -113,6 +113,11 @@ class StockEntry(TypedDict):
     ratio_percent: float
 
 
+class InvestorConfigEntry(TypedDict):
+    name: str
+    aliases: list[str]
+
+
 class InvestorEntry(TypedDict):
     name: str
     aliases: list[str]
@@ -133,17 +138,17 @@ StockMetricValue = float | bool | str | None
 StockPriceMetadata = dict[str, str | None]
 
 
-def load_investor_config(path: Path | None = None) -> dict[str, str]:
+def load_investor_config(path: Path | None = None) -> dict[str, InvestorConfigEntry]:
     config_path: Path = path or DEFAULT_CONFIG_PATH
     raw_document: object = json.loads(config_path.read_text(encoding="utf-8"))
     if not isinstance(raw_document, dict):
         raise ValueError(f"{config_path} must contain a JSON object")
 
-    normalized: dict[str, str] = {}
+    normalized: dict[str, InvestorConfigEntry] = {}
     for key, value in raw_document.items():
-        if not isinstance(key, str) or not isinstance(value, str):
-            raise ValueError(f"{config_path} must map strings to strings")
-        normalized[key] = value
+        if not isinstance(key, str):
+            raise ValueError(f"{config_path} must map string keys to investor entries")
+        normalized[key] = _normalize_investor_config_entry(config_path, key, value)
 
     return normalized
 
@@ -168,7 +173,7 @@ def build_investors_document(
     stock_names: dict[str, str] | None = None,
     shareholder_rows: list[ShareholderRow] | None = None,
 ) -> dict[str, InvestorEntry]:
-    investor_config: dict[str, str] = load_investor_config(config_path)
+    investor_config: dict[str, InvestorConfigEntry] = load_investor_config(config_path)
     watch_codes: list[str] = load_watch_codes(watch_codes_path)
     names_map: dict[str, str] = (
         stock_names if stock_names is not None else load_stock_names()
@@ -184,7 +189,8 @@ def build_investors_document(
     )
 
     document: dict[str, InvestorEntry] = {}
-    for investor_key, investor_name in investor_config.items():
+    for investor_key, investor_entry in investor_config.items():
+        investor_name: str = investor_entry["name"]
         aliases: list[str] = []
         if investor_key == "watch":
             stocks: list[StockEntry] = _build_watch_stocks(
@@ -193,10 +199,17 @@ def build_investors_document(
                 metrics_map=resolved_metrics_map,
             )
         else:
-            matched_names: list[str] = select_matching_shareholder_names(
-                investor_name,
-                distinct_shareholder_names,
-            )
+            configured_aliases: list[str] = investor_entry["aliases"]
+            if configured_aliases:
+                matched_names = _select_explicit_matching_shareholder_names(
+                    configured_aliases,
+                    distinct_shareholder_names,
+                )
+            else:
+                matched_names = select_matching_shareholder_names(
+                    investor_name,
+                    distinct_shareholder_names,
+                )
             aliases = matched_names
             stocks = _build_investor_stocks(
                 matched_names=matched_names,
@@ -212,6 +225,31 @@ def build_investors_document(
         }
 
     return document
+
+
+def _normalize_investor_config_entry(
+    config_path: Path,
+    key: str,
+    value: object,
+) -> InvestorConfigEntry:
+    if isinstance(value, str):
+        return {"name": value, "aliases": []}
+
+    if not isinstance(value, dict):
+        raise ValueError(
+            f"{config_path} entry {key!r} must be a string or an object"
+        )
+
+    name: object = value.get("name")
+    aliases: object = value.get("aliases", [])
+    if not isinstance(name, str) or not name:
+        raise ValueError(f"{config_path} entry {key!r} must include a non-empty name")
+    if not isinstance(aliases, list) or not all(
+        isinstance(alias, str) and alias for alias in aliases
+    ):
+        raise ValueError(f"{config_path} entry {key!r} aliases must be strings")
+
+    return {"name": name, "aliases": list(aliases)}
 
 
 def build_shareholder_candidates_document(
@@ -468,6 +506,25 @@ def select_matching_shareholder_names(
             return prefix_matches
 
     return []
+
+
+def _select_explicit_matching_shareholder_names(
+    investor_aliases: list[str],
+    shareholder_names: list[str],
+) -> list[str]:
+    normalized_aliases: set[str] = {
+        normalized_alias
+        for alias in investor_aliases
+        if (normalized_alias := normalize_shareholder_name(alias))
+    }
+    if not normalized_aliases:
+        return []
+
+    return [
+        shareholder_name
+        for shareholder_name in shareholder_names
+        if normalize_shareholder_name(shareholder_name) in normalized_aliases
+    ]
 
 
 def normalize_shareholder_name(name: str) -> str:
