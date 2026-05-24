@@ -15,6 +15,7 @@ from investor_data import (
     compute_metrics_map,
     load_major_shareholder_rows,
     load_stock_names,
+    resolve_handbook_db_path,
     write_investors_document,
     write_shareholder_candidates_document,
     write_stock_price_metadata,
@@ -40,8 +41,16 @@ def _auto_push_json(paths: list[Path], message: str) -> None:
     subprocess.run(["jj", "git", "push"], check=True, cwd=str(repo_root))
 
 
+def _sync_shikiho_dividends() -> None:
+    from stock_db.cli.sync_shikiho_dividends import main as sync_shikiho_dividends
+
+    handbook_db_path = resolve_handbook_db_path()
+    sync_shikiho_dividends(["--shikiho-db", str(handbook_db_path)])
+
+
 def main() -> None:
     print("公開データを生成中...")
+    _sync_shikiho_dividends()
     stock_names: dict[str, str] = load_stock_names()
     metrics_map: dict[str, dict[str, float | bool | str | None]] = compute_metrics_map()
     shareholder_rows = load_major_shareholder_rows()
