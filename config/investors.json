@@ -17,9 +17,15 @@
       "株式会社アイビー",
       "アイビー投資事業有限責任組合",
       "株式会社UH5",
+      "株式会社EPARK",
+      "株式会社さくら損害保険",
+      "株式会社UH7",
+      "株式会社UH4",
       "株式会社FTコミュニケーションズ",
       "Hikari Tsushin, Inc.",
+      "HIKARI TSUSHIN INVESTMENTS OKINAWA",
       "光通信INVESTMENTS OKINAWA",
+      "株式会社ブロードピーク",
       "光1号配当特化投資事業有限責任組合"
     ]
   },
@@ -93,6 +99,43 @@
     "name": "光1号配当特化",
     "aliases": [
       "光1号配当特化投資事業有限責任組合"
+    ]
+  },
+  "epark": {
+    "name": "EPARK",
+    "aliases": [
+      "株式会社EPARK"
+    ]
+  },
+  "sakura_sonpo": {
+    "name": "さくら損害保険",
+    "aliases": [
+      "株式会社さくら損害保険"
+    ]
+  },
+  "uh7": {
+    "name": "UH7",
+    "aliases": [
+      "株式会社UH7"
+    ]
+  },
+  "uh4": {
+    "name": "UH4",
+    "aliases": [
+      "株式会社UH4"
+    ]
+  },
+  "hikari_tsushin_investments_okinawa": {
+    "name": "HIKARI TSUSHIN INVESTMENTS OKINAWA",
+    "aliases": [
+      "HIKARI TSUSHIN INVESTMENTS OKINAWA",
+      "光通信INVESTMENTS OKINAWA"
+    ]
+  },
+  "broadpeak": {
+    "name": "ブロードピーク",
+    "aliases": [
+      "株式会社ブロードピーク"
     ]
   },
   "naito": "内藤征吾",

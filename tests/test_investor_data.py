@@ -39,6 +39,12 @@ EXPECTED_INVESTOR_NAMES: dict[str, str] = {
     "ft_communications": "FTコミュニケーションズ",
     "hikari_tsushin_inc": "Hikari Tsushin, Inc.",
     "hikari_1_dividend_lps": "光1号配当特化",
+    "epark": "EPARK",
+    "sakura_sonpo": "さくら損害保険",
+    "uh7": "UH7",
+    "uh4": "UH4",
+    "hikari_tsushin_investments_okinawa": "HIKARI TSUSHIN INVESTMENTS OKINAWA",
+    "broadpeak": "ブロードピーク",
     "naito": "内藤征吾",
     "kiyohara": "清原達郎",
     "katayama": "片山晃",
@@ -61,9 +67,15 @@ EXPECTED_HIKARI_ALL_ALIASES: list[str] = [
     "株式会社アイビー",
     "アイビー投資事業有限責任組合",
     "株式会社UH5",
+    "株式会社EPARK",
+    "株式会社さくら損害保険",
+    "株式会社UH7",
+    "株式会社UH4",
     "株式会社FTコミュニケーションズ",
     "Hikari Tsushin, Inc.",
+    "HIKARI TSUSHIN INVESTMENTS OKINAWA",
     "光通信INVESTMENTS OKINAWA",
+    "株式会社ブロードピーク",
     "光1号配当特化投資事業有限責任組合",
 ]
 EXPECTED_WATCH_CODES: list[str] = [
@@ -359,10 +371,20 @@ def test_build_investors_document_uses_explicit_aliases_without_containment(
                         "光通信KK投資事業有限責任組合",
                         "株式会社アイビー",
                         "アイビー投資事業有限責任組合",
+                        "株式会社EPARK",
+                        "株式会社さくら損害保険",
+                        "株式会社UH7",
+                        "株式会社UH4",
                         "株式会社FTコミュニケーションズ",
                         "Hikari Tsushin, Inc.",
+                        "HIKARI TSUSHIN INVESTMENTS OKINAWA",
                         "光通信INVESTMENTS OKINAWA",
+                        "株式会社ブロードピーク",
                     ],
+                },
+                "epark": {
+                    "name": "EPARK",
+                    "aliases": ["株式会社EPARK"],
                 },
                 "hikari_core": {
                     "name": "光通信",
@@ -397,6 +419,12 @@ def test_build_investors_document_uses_explicit_aliases_without_containment(
             ("1005", "(株)FTコミュニケーションズ", 60, 6.0),
             ("1006", "Hikari Tsushin, Inc.", 70, 7.0),
             ("1007", "光通信INVESTMENTS OKINAWA", 80, 8.0),
+            ("1008", "(株)EPARK", 90, 9.0),
+            ("1009", "(株)さくら損害保険", 100, 10.0),
+            ("1010", "(株)UH7", 110, 11.0),
+            ("1011", "(株)UH4", 120, 12.0),
+            ("1012", "HIKARI TSUSHIN INVESTMENTS OKINAWA", 130, 13.0),
+            ("1013", "(株)ブロードピーク", 140, 14.0),
         ],
     )
 
@@ -416,6 +444,12 @@ def test_build_investors_document_uses_explicit_aliases_without_containment(
         "(株)FTコミュニケーションズ",
         "Hikari Tsushin, Inc.",
         "光通信INVESTMENTS OKINAWA",
+        "(株)EPARK",
+        "(株)さくら損害保険",
+        "(株)UH7",
+        "(株)UH4",
+        "HIKARI TSUSHIN INVESTMENTS OKINAWA",
+        "(株)ブロードピーク",
     ]
     assert [stock["code"] for stock in _stocks(document, "hikari_all")] == [
         "1000",
@@ -425,7 +459,15 @@ def test_build_investors_document_uses_explicit_aliases_without_containment(
         "1005",
         "1006",
         "1007",
+        "1008",
+        "1009",
+        "1010",
+        "1011",
+        "1012",
+        "1013",
     ]
+    assert document["epark"]["aliases"] == ["(株)EPARK"]
+    assert [stock["code"] for stock in _stocks(document, "epark")] == ["1008"]
     assert document["hikari_core"]["aliases"] == ["光通信(株)"]
     assert [stock["code"] for stock in _stocks(document, "hikari_core")] == ["1000"]
     assert document["ivy"]["aliases"] == [
