@@ -138,7 +138,7 @@ uv run python scripts/enrich_investors.py
 | code | 銘柄コード（クリックでMonex財務ページ） | `code` | - |
 | name | 会社名（ローカルでは yazi で四季報PDFを開く） | `name` | - |
 | price | 株価（終値。クリックで四季報オンラインを開く） | `price` | o |
-| ncr | `(流動資産 - 棚卸資産 + 有価証券 * 0.7) / 時価総額` | `net_cash_ratio` | o | > 1: good |
+| ncr | `(流動資産 - 棚卸資産 + 有価証券 * 0.7 - 流動負債 - 固定負債) / 時価総額` | `net_cash_ratio` | o | > 1: good |
 | per_a | `時価総額 / 実績純利益` | `per_actual` | o | 0<per_actual<=7: good, >7: bad |
 | per_c | `時価総額 / 今期予想純利益` | `per` | o | 0<per<=7: good, >7: bad |
 | per_n | `時価総額 / 来期予想純利益` | `per_next` | o | 0<per_next<=7: good, >7: bad |
