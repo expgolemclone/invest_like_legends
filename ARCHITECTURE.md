@@ -2,7 +2,7 @@
 
 ## 概要
 
-portfolio と candidates を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` は毎日 GitHub Actions で再生成する。portfolio と candidates の表示データは静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
+portfolio と candidates を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` は `scripts/enrich_investors.py` で再生成する。portfolio と candidates の表示データは静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
 
 コードレビュー監査メモは `codereview-report.md` に記録する。
 
@@ -10,7 +10,6 @@ portfolio と candidates を表示する Web アプリケーション。GitHub P
 
 ```
 invest_like_legends/
-├── .github/workflows/     # GitHub Actions ワークフロー
 ├── config/                # names-only の設定と watch 銘柄コード
 │   ├── investors.json     # タブキー -> 投資家名
 │   └── watch_codes.txt    # watch タブ用の銘柄コード
@@ -168,16 +167,7 @@ uv run python scripts/enrich_investors.py
 - 投資家別表示データと株主候補データを同じ入力ソースから完全再生成する
 - 株価基準日 metadata も同時に `docs/assets/stock-price-meta.json` へ書き出す
 - 既存JSONへのマージは行わない
-
-### GitHub Actions (`.github/workflows/update_investors.yml`)
-
-- 毎日日本時間 0:00 に `scripts/enrich_investors.py` を実行する
-- 手動実行は GitHub Actions の `workflow_dispatch` から行う
-- 依存repoとして `stock_db`, `formula_screening`, `stock_web_ui`, `japan_company_handbook` を checkout する
-- `stocks-db` artifact は `stock_db` API の内部入力として復元する。下流実装は `stocks.db` のパスやテーブルを直接読まない
-- `japan_company_handbook` は `data/stock_performance.db` だけ sparse checkout する
-- `uv` の相対パス依存を満たすため、workflow 内で sibling symlink を作る
-- 生成後は `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` をコミットして push する
+- 生成した公開JSONに差分がある場合は、対象JSONだけを `jj commit` し、`jj git push` する
 
 ## データフロー
 
@@ -216,9 +206,7 @@ JSON / candidates / candidate detail
 ### GitHub Pages
 
 ```
-GitHub Actions (毎日0:00)
-  ↓
-scripts/enrich_investors.py
+uv run python scripts/enrich_investors.py
   ↓
 investor_data.build_investors_document()
 investor_data.build_shareholder_candidates_document()
@@ -227,7 +215,7 @@ docs/assets/data/investors.json
 docs/assets/data/shareholder_candidates.json
 docs/assets/stock-price-meta.json
   ↓
-git commit & push
+jj commit & jj git push
   ↓
 GitHub Pages デプロイ
   ↓
