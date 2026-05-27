@@ -130,14 +130,14 @@ uv run python scripts/enrich_investors.py
 #### テーブルカラム
 
 各ヘッダーには `title` 属性が設定され、ホバー時にツールチップを表示する。
-指標カラムは `formula_screening/context.md` の順序に合わせ、`context.md` にない `ncr` は `price` 直後に残す。
+指標カラムは `formula_screening/context.md` の順序に合わせ、`context.md` にない `ncr` は `price` 直前に置く。
 
 | カラム | 説明 | ソートキー | トグル可 | 閾値 |
 |--------|------|------------|----------|------|
 | code | 銘柄コード（クリックでMonex財務ページ） | `code` | - |
 | name | 会社名（ローカルでは yazi で四季報PDFを開く） | `name` | - |
-| price | 株価（終値。クリックで四季報オンラインを開く） | `price` | o |
 | ncr | `(流動資産 - 棚卸資産 + 有価証券 * 0.7 - 流動負債 - 固定負債) / 時価総額` | `net_cash_ratio` | o | > 1: good |
+| price | 株価（終値。クリックで四季報オンラインを開く） | `price` | o |
 | per_a | `時価総額 / 実績純利益` | `per_actual` | o | 0<per_actual<=7: good, >7: bad |
 | per_c | `時価総額 / 今期予想純利益` | `per` | o | 0<per<=7: good, >7: bad |
 | per_n | `時価総額 / 来期予想純利益` | `per_next` | o | 0<per_next<=7: good, >7: bad |

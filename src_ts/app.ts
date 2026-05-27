@@ -146,8 +146,8 @@ const PBR_SPEC: MetricColSpec = {
 const STOCK_COLUMNS: ColumnDef[] = [
   C.codeCol,
   C.nameCol,
-  C.priceCol,
   C.buildMetricCol(C.NCR_SPEC, flatAccessor("net_cash_ratio")),
+  C.priceCol,
   C.buildMetricCol(C.PER_A_SPEC, flatAccessor("per_actual")),
   C.buildMetricCol(C.PER_C_SPEC, flatAccessor("per")),
   C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
