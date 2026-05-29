@@ -132,14 +132,12 @@ function escapeHtml(value: string): string {
 const DIVIDEND_YIELD_SPEC: MetricColSpec = {
   key: "dividend_yield",
   header: "div%",
-  title: "dividend yield",
   decimals: 2,
 };
 
 const PBR_SPEC: MetricColSpec = {
   key: "pbr",
   header: "pbr",
-  title: "price book value ratio",
   decimals: 2,
 };
 
