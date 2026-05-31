@@ -117,7 +117,7 @@ uv run python scripts/enrich_investors.py
 - `assets/data/investors.json`: 表示用の完全データ
   - トップレベル順から投資家タブを生成する
   - 各投資家は `name`, `aliases`, `stocks` を持ち、`aliases` は銘柄抽出に使った DB 上の名寄せ済み株主名をすべて列挙する
-  - 各銘柄は `code`, `name`, `price`, `price_date`, `net_cash_ratio`, `per_actual`, `per`, `per_next`, `fcf_yield_avg`, `equity_ratio`, `peg_trailing_5`, `peg_trailing_5_status`, `peg_blended_5y_actual_2f`, `peg_blended_5y_actual_2f_status`, `dividend_yield`, `has_preferred_shares`, `croic`, `pbr`, `amount_millions`, `ratio_percent` を含む
+  - 各銘柄は `code`, `name`, `price`, `price_date`, `net_cash_ratio`, `per_actual`, `per`, `per_next`, `fcf_yield_avg`, `total_payout_ratio`, `equity_ratio`, `peg_trailing_5`, `peg_trailing_5_status`, `peg_blended_5y_actual_2f`, `peg_blended_5y_actual_2f_status`, `dividend_yield`, `has_preferred_shares`, `croic`, `fcf_cagr`, `fcf_cagr_r2`, `fcf_sma_cagr`, `pbr`, `amount_millions`, `ratio_percent` を含む
   - `watch` は `amount_millions: null`, `ratio_percent: 0`
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 - `assets/data/shareholder_candidates.json`: 株主候補の完全データ
@@ -130,25 +130,29 @@ uv run python scripts/enrich_investors.py
 #### テーブルカラム
 
 各ヘッダーには `title` 属性が設定され、ホバー時にツールチップを表示する。
-指標カラムは `formula_screening/context.md` の順序に合わせ、`context.md` にない `ncr` は `price` 直前に置く。
+指標カラムは `../formula_screening/strategies/net_cash_fcf.toml` の列順に合わせる。投資家固有の `amount` / `ratio` は指標列の後ろに置く。
 
 | カラム | 説明 | ソートキー | トグル可 | 閾値 |
 |--------|------|------------|----------|------|
 | code | 銘柄コード（クリックでMonex財務ページ） | `code` | - |
 | name | 会社名（ローカルでは yazi で四季報PDFを開く） | `name` | - |
 | ncr | `(流動資産 - 棚卸資産 + 有価証券 * 0.7 - 流動負債 - 固定負債) / 時価総額` | `net_cash_ratio` | o | > 1: good |
-| price | 株価（終値。クリックで四季報オンラインを開く） | `price` | o |
-| per_a | `時価総額 / 実績純利益` | `per_actual` | o | 0<per_actual<=7: good, >7: bad |
-| per_c | `時価総額 / 今期予想純利益` | `per` | o | 0<per<=7: good, >7: bad |
-| per_n | `時価総額 / 来期予想純利益` | `per_next` | o | 0<per_next<=7: good, >7: bad |
 | fcf_10y% | `10期の平均FCF / 時価総額` | `fcf_yield_avg` | o | >= 10%: good |
-| equity% | `自己資本 / 総資産 * 100` | `equity_ratio` | o | >= 50: good |
+| payout% | `(|配当支払額| + |自己株式取得額|) / 時価総額 * 100` | `total_payout_ratio` | o |
 | peg_5y | `実績PER / 過去5年EPS CAGR[%]`。成長率が0以下なら `neg`、その他の欠損は `-` | `peg_trailing_5` | o |
 | peg_5y2f | `来期予想PER / (過去5年実績+2期予想)EPS CAGR[%]`。成長率が0以下なら `neg`、その他の欠損は `-` | `peg_blended_5y_actual_2f` | o |
 | div% | `1株配当 / 株価 * 100` | `dividend_yield` | o | >= 4: good |
 | pref | 優先株有無 | `has_preferred_shares` | o |
-| croic% | `FCF / (自己資本 + 有利子負債)` | `croic` | o | >= 15%: good |
+| equity% | `自己資本 / 総資産 * 100` | `equity_ratio` | o | >= 50: good |
 | pbr | `時価総額 / 純資産` | `pbr` | o | < 0.5: good |
+| croic% | `FCF / (自己資本 + 有利子負債)` | `croic` | o | >= 15%: good |
+| fcf_cagr% | 指数回帰によるFCF年平均成長率 | `fcf_cagr` | o |
+| r2 | FCF指数回帰トレンドの決定係数 | `fcf_cagr_r2` | o |
+| sma_cagr% | 3年移動平均ベースFCF年平均成長率 | `fcf_sma_cagr` | o |
+| price | 株価（終値。クリックで四季報オンラインを開く） | `price` | o |
+| per_a | `時価総額 / 実績純利益` | `per_actual` | o | 0<per_actual<=7: good, >7: bad |
+| per_c | `時価総額 / 今期予想純利益` | `per` | o | 0<per<=7: good, >7: bad |
+| per_n | `時価総額 / 来期予想純利益` | `per_next` | o | 0<per_next<=7: good, >7: bad |
 | amount | 投資家の保有金額（百万円を億円表示） | `amount_millions` | - |
 | ratio | 投資家の保有割合（%） | `ratio_percent` | - |
 

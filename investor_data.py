@@ -37,6 +37,7 @@ _METRIC_FIELDS: tuple[str, ...] = (
     "per",
     "per_next",
     "fcf_yield_avg",
+    "total_payout_ratio",
     "equity_ratio",
     "peg_trailing_5",
     "peg_trailing_5_status",
@@ -45,6 +46,9 @@ _METRIC_FIELDS: tuple[str, ...] = (
     "dividend_yield",
     "has_preferred_shares",
     "croic",
+    "fcf_cagr",
+    "fcf_cagr_r2",
+    "fcf_sma_cagr",
     "pbr",
 )
 _NORMALIZE_RE: re.Pattern[str] = re.compile(r"[\s\u3000・･·•\-ー_()（）\[\]【】.,/]")
@@ -100,6 +104,7 @@ class StockEntry(TypedDict):
     per: float | None
     per_next: float | None
     fcf_yield_avg: float | None
+    total_payout_ratio: float | None
     equity_ratio: float | None
     peg_trailing_5: float | None
     peg_trailing_5_status: str | None
@@ -108,6 +113,9 @@ class StockEntry(TypedDict):
     dividend_yield: float | None
     has_preferred_shares: bool | None
     croic: float | None
+    fcf_cagr: float | None
+    fcf_cagr_r2: float | None
+    fcf_sma_cagr: float | None
     pbr: float | None
     amount_millions: int | None
     ratio_percent: float
@@ -424,6 +432,9 @@ def _flatten_screening_payload_metrics(
             "per": _stock_metric_value(metrics.get("per")),
             "per_next": _stock_metric_value(metrics.get("per_next")),
             "fcf_yield_avg": _stock_metric_value(row.get("fcf_yield_avg")),
+            "total_payout_ratio": _stock_metric_value(
+                metrics.get("total_payout_ratio")
+            ),
             "equity_ratio": _stock_metric_value(metrics.get("equity_ratio")),
             "peg_trailing_5": _stock_metric_value(row.get("peg_trailing_5")),
             "peg_trailing_5_status": _stock_metric_value(row.get("peg_trailing_5_status")),
@@ -436,6 +447,9 @@ def _flatten_screening_payload_metrics(
             "dividend_yield": _stock_metric_value(metrics.get("dividend_yield")),
             "has_preferred_shares": _stock_metric_value(row.get("has_preferred_shares")),
             "croic": _stock_metric_value(row.get("croic")),
+            "fcf_cagr": _stock_metric_value(row.get("fcf_cagr")),
+            "fcf_cagr_r2": _stock_metric_value(row.get("fcf_cagr_r2")),
+            "fcf_sma_cagr": _stock_metric_value(row.get("fcf_sma_cagr")),
             "pbr": _stock_metric_value(metrics.get("pbr")),
         }
     return result

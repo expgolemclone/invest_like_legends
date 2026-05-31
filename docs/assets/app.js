@@ -79,25 +79,44 @@ function escapeHtml(value) {
 const DIVIDEND_YIELD_SPEC = {
     key: "dividend_yield",
     header: "div%",
-    title: "dividend yield",
     decimals: 2,
+};
+const TOTAL_PAYOUT_RATIO_SPEC = {
+    key: "total_payout_ratio",
+    header: "payout%",
+    decimals: 1,
+    suffix: "%",
+    title: "(|配当支払額| + |自己株式取得額|) / 時価総額 * 100",
 };
 const PBR_SPEC = {
     key: "pbr",
     header: "pbr",
-    title: "price book value ratio",
     decimals: 2,
+};
+const FCF_CAGR_SPEC = {
+    key: "fcf_cagr",
+    header: "fcf_cagr%",
+    decimals: 1,
+    title: "指数回帰によるFCF年平均成長率（%）",
+};
+const FCF_CAGR_R2_SPEC = {
+    key: "fcf_cagr_r2",
+    header: "r2",
+    decimals: 2,
+    title: "FCF指数回帰トレンドの決定係数（1に近いほど安定成長）",
+};
+const FCF_SMA_CAGR_SPEC = {
+    key: "fcf_sma_cagr",
+    header: "sma_cagr%",
+    decimals: 1,
+    title: "3年移動平均ベースFCF年平均成長率（%）",
 };
 const STOCK_COLUMNS = [
     C.codeCol,
     C.nameCol,
     C.buildMetricCol(C.NCR_SPEC, flatAccessor("net_cash_ratio")),
-    C.priceCol,
-    C.buildMetricCol(C.PER_A_SPEC, flatAccessor("per_actual")),
-    C.buildMetricCol(C.PER_C_SPEC, flatAccessor("per")),
-    C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
     C.fcfYCol,
-    C.buildMetricCol(C.EQUITY_SPEC, flatAccessor("equity_ratio")),
+    C.buildMetricCol(TOTAL_PAYOUT_RATIO_SPEC, flatAccessor("total_payout_ratio")),
     C.peg5yCol,
     C.peg5y2fCol,
     C.buildMetricCol(DIVIDEND_YIELD_SPEC, flatAccessor("dividend_yield")),
@@ -110,8 +129,16 @@ const STOCK_COLUMNS = [
         render: renderPreferredShares,
         sortValue: preferredSharesSortValue,
     },
-    C.croicCol,
+    C.buildMetricCol(C.EQUITY_SPEC, flatAccessor("equity_ratio")),
     C.buildMetricCol(PBR_SPEC, flatAccessor("pbr")),
+    C.croicCol,
+    C.buildMetricCol(FCF_CAGR_SPEC, flatAccessor("fcf_cagr")),
+    C.buildMetricCol(FCF_CAGR_R2_SPEC, flatAccessor("fcf_cagr_r2")),
+    C.buildMetricCol(FCF_SMA_CAGR_SPEC, flatAccessor("fcf_sma_cagr")),
+    C.priceCol,
+    C.buildMetricCol(C.PER_A_SPEC, flatAccessor("per_actual")),
+    C.buildMetricCol(C.PER_C_SPEC, flatAccessor("per")),
+    C.buildMetricCol(C.PER_N_SPEC, flatAccessor("per_next")),
     {
         key: "amount_millions",
         header: "amount",

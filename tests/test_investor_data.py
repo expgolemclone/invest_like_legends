@@ -45,12 +45,14 @@ EXPECTED_INVESTOR_NAMES: dict[str, str] = {
     "uh4": "UH4",
     "hikari_tsushin_investments_okinawa": "HIKARI TSUSHIN INVESTMENTS OKINAWA",
     "broadpeak": "ブロードピーク",
+    "freesia_macross": "フリージアマクロス",
     "naito": "内藤征吾",
     "kiyohara": "清原達郎",
     "katayama": "片山晃",
     "imura": "井村俊哉",
     "yoshida": "ヨシダトモヒロ",
     "nomura": "野村絢",
+    "sasaki_beji": "佐々木ベジ",
 }
 EXPECTED_HIKARI_ALL_ALIASES: list[str] = [
     "株式会社光通信",
@@ -79,10 +81,8 @@ EXPECTED_HIKARI_ALL_ALIASES: list[str] = [
     "光1号配当特化投資事業有限責任組合",
 ]
 EXPECTED_WATCH_CODES: list[str] = [
-    "3504",
     "1999",
     "4231",
-    "1869",
     "5363",
     "8152",
     "5458",
@@ -92,9 +92,11 @@ EXPECTED_WATCH_CODES: list[str] = [
     "1866",
     "8103",
     "9845",
+    "9647",
+    "7565",
     "6508",
-    "2124",
     "7175",
+    "9435",
 ]
 METRIC_FIELDS: tuple[str, ...] = (
     "price",
@@ -104,6 +106,7 @@ METRIC_FIELDS: tuple[str, ...] = (
     "per",
     "per_next",
     "fcf_yield_avg",
+    "total_payout_ratio",
     "equity_ratio",
     "peg_trailing_5",
     "peg_trailing_5_status",
@@ -112,6 +115,9 @@ METRIC_FIELDS: tuple[str, ...] = (
     "dividend_yield",
     "has_preferred_shares",
     "croic",
+    "fcf_cagr",
+    "fcf_cagr_r2",
+    "fcf_sma_cagr",
     "pbr",
 )
 
@@ -279,6 +285,7 @@ def test_compute_metrics_map_uses_screening_payload_api(
                     "per_next": 3.0,
                     "equity_ratio": 60.0,
                     "dividend_yield": 2.5,
+                    "total_payout_ratio": 12.3,
                     "pbr": 0.4,
                 },
                 "fcf_yield_avg": 0.12,
@@ -288,6 +295,9 @@ def test_compute_metrics_map_uses_screening_payload_api(
                 "peg_blended_5y_actual_2f_status": "ok",
                 "has_preferred_shares": False,
                 "croic": 0.18,
+                "fcf_cagr": 8.1,
+                "fcf_cagr_r2": 0.77,
+                "fcf_sma_cagr": 6.4,
             }
         ]
 
@@ -307,6 +317,7 @@ def test_compute_metrics_map_uses_screening_payload_api(
         "per": 4.0,
         "per_next": 3.0,
         "fcf_yield_avg": 0.12,
+        "total_payout_ratio": 12.3,
         "equity_ratio": 60.0,
         "peg_trailing_5": 0.7,
         "peg_trailing_5_status": "ok",
@@ -315,6 +326,9 @@ def test_compute_metrics_map_uses_screening_payload_api(
         "dividend_yield": 2.5,
         "has_preferred_shares": False,
         "croic": 0.18,
+        "fcf_cagr": 8.1,
+        "fcf_cagr_r2": 0.77,
+        "fcf_sma_cagr": 6.4,
         "pbr": 0.4,
     }
     assert captured["return_all"] is True
@@ -594,7 +608,11 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "peg_blended_5y_actual_2f_status": None,
             "equity_ratio": 55.0,
             "fcf_yield_avg": None,
+            "total_payout_ratio": None,
             "croic": None,
+            "fcf_cagr": None,
+            "fcf_cagr_r2": None,
+            "fcf_sma_cagr": None,
             "has_preferred_shares": None,
             "pbr": None,
         }
@@ -621,7 +639,11 @@ def test_build_investors_document_aggregates_shareholder_rows(tmp_path: Path) ->
             "peg_blended_5y_actual_2f_status": None,
             "equity_ratio": None,
             "fcf_yield_avg": None,
+            "total_payout_ratio": None,
             "croic": None,
+            "fcf_cagr": None,
+            "fcf_cagr_r2": None,
+            "fcf_sma_cagr": None,
             "has_preferred_shares": None,
             "pbr": None,
         }
@@ -701,7 +723,11 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "peg_blended_5y_actual_2f_status": None,
                 "equity_ratio": None,
                 "fcf_yield_avg": None,
+                "total_payout_ratio": None,
                 "croic": None,
+                "fcf_cagr": None,
+                "fcf_cagr_r2": None,
+                "fcf_sma_cagr": None,
                 "has_preferred_shares": None,
                 "pbr": None,
             },
@@ -723,7 +749,11 @@ def test_build_shareholder_candidates_document_groups_filters_and_ranks(tmp_path
                 "peg_blended_5y_actual_2f_status": None,
                 "equity_ratio": None,
                 "fcf_yield_avg": None,
+                "total_payout_ratio": None,
                 "croic": None,
+                "fcf_cagr": None,
+                "fcf_cagr_r2": None,
+                "fcf_sma_cagr": None,
                 "has_preferred_shares": None,
                 "pbr": None,
             },
@@ -774,6 +804,7 @@ def _metrics(
     per: float | None = None,
     per_next: float | None = None,
     fcf_yield_avg: float | None = None,
+    total_payout_ratio: float | None = None,
     equity_ratio: float | None = None,
     peg_trailing_5: float | None = None,
     peg_trailing_5_status: str | None = None,
@@ -782,6 +813,9 @@ def _metrics(
     dividend_yield: float | None = None,
     has_preferred_shares: bool | None = None,
     croic: float | None = None,
+    fcf_cagr: float | None = None,
+    fcf_cagr_r2: float | None = None,
+    fcf_sma_cagr: float | None = None,
     pbr: float | None = None,
 ) -> dict[str, float | bool | str | None]:
     return {
@@ -792,6 +826,7 @@ def _metrics(
         "per": per,
         "per_next": per_next,
         "fcf_yield_avg": fcf_yield_avg,
+        "total_payout_ratio": total_payout_ratio,
         "equity_ratio": equity_ratio,
         "peg_trailing_5": peg_trailing_5,
         "peg_trailing_5_status": peg_trailing_5_status,
@@ -800,6 +835,9 @@ def _metrics(
         "dividend_yield": dividend_yield,
         "has_preferred_shares": has_preferred_shares,
         "croic": croic,
+        "fcf_cagr": fcf_cagr,
+        "fcf_cagr_r2": fcf_cagr_r2,
+        "fcf_sma_cagr": fcf_sma_cagr,
         "pbr": pbr,
     }
 
