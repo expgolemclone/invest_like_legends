@@ -23593,5 +23593,57 @@
         "ratio_percent": 2.9
       }
     ]
+  },
+  "sasaki_beji": {
+    "name": "佐々木ベジ",
+    "aliases": [
+      "佐々木ベジ"
+    ],
+    "stocks": [
+      {
+        "code": "2673",
+        "name": "夢みつけ隊",
+        "price": 96.0,
+        "price_date": "2026-05-28",
+        "net_cash_ratio": -0.8180947998342577,
+        "per_actual": 11.095530701560497,
+        "per": 6.2748,
+        "per_next": 5.5776,
+        "fcf_yield_avg": null,
+        "equity_ratio": 72.00729084001074,
+        "peg_trailing_5": null,
+        "peg_trailing_5_status": "non_positive_eps",
+        "peg_blended_5y_actual_2f": null,
+        "peg_blended_5y_actual_2f_status": "non_positive_eps",
+        "dividend_yield": 0.0,
+        "has_preferred_shares": false,
+        "croic": null,
+        "pbr": 0.41395074983548646,
+        "amount_millions": 512,
+        "ratio_percent": 51.0
+      },
+      {
+        "code": "9867",
+        "name": "ソレキア",
+        "price": 10100.0,
+        "price_date": "2026-05-28",
+        "net_cash_ratio": 0.8776658739743067,
+        "per_actual": 8.086393972451148,
+        "per": 6.242528642857143,
+        "per_next": 6.242528642857143,
+        "fcf_yield_avg": 0.06794276280052768,
+        "equity_ratio": 48.901439513484924,
+        "peg_trailing_5": 0.7894676187738532,
+        "peg_trailing_5_status": "ok",
+        "peg_blended_5y_actual_2f": 0.5548079388109974,
+        "peg_blended_5y_actual_2f_status": "ok",
+        "dividend_yield": 0.6435643564356436,
+        "has_preferred_shares": false,
+        "croic": 0.0964647158525476,
+        "pbr": 0.7865730583470818,
+        "amount_millions": 1919,
+        "ratio_percent": 22.0
+      }
+    ]
   }
 }
