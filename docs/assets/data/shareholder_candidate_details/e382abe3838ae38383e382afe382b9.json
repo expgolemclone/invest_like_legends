@@ -1,0 +1,61 @@
+{
+  "id": "カナックス",
+  "name": "(株)カナックス",
+  "aliases": [
+    "(株)カナックス"
+  ],
+  "stocks": [
+    {
+      "code": "6016",
+      "name": "ジャパンエンジンコーポレーション",
+      "price": 8380.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.06940672235481304,
+      "per_actual": 16.271419632358192,
+      "per": 15.138064516129033,
+      "per_next": 14.665,
+      "fcf_yield_avg": 0.003896841970678486,
+      "total_payout_ratio": 0.08494431185361973,
+      "equity_ratio": 41.15171106640281,
+      "peg_trailing_5": 0.5061974424625252,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.61476358319903,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.23866348448687352,
+      "has_preferred_shares": false,
+      "croic": 0.11337244205308324,
+      "fcf_cagr": 72.12709693409202,
+      "fcf_cagr_r2": 0.31904302758305303,
+      "fcf_sma_cagr": 0.8372799852712418,
+      "pbr": 5.071186587204244,
+      "amount_millions": 3603,
+      "ratio_percent": 5.1
+    },
+    {
+      "code": "7022",
+      "name": "サノヤス HD",
+      "price": 283.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.41917832076560513,
+      "per_actual": 8.132702204737733,
+      "per": 11.309240007058824,
+      "per_next": 10.680948895555556,
+      "fcf_yield_avg": -0.16413439744483724,
+      "total_payout_ratio": 6.761779587979733,
+      "equity_ratio": 27.320686540198736,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.4734982332155475,
+      "has_preferred_shares": false,
+      "croic": 0.04976683182745555,
+      "fcf_cagr": 13.262809358638993,
+      "fcf_cagr_r2": 0.02745763163335945,
+      "fcf_sma_cagr": 0.1510204081632653,
+      "pbr": 0.9451237838953889,
+      "amount_millions": 283,
+      "ratio_percent": 2.9
+    }
+  ]
+}

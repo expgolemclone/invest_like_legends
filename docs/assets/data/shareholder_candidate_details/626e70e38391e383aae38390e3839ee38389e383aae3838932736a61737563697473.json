@@ -1,0 +1,61 @@
+{
+  "id": "bnpパリバマドリド2sjasucits",
+  "name": "BNPパリバ(マドリード)2S･JAS･UCITS",
+  "aliases": [
+    "BNPパリバ(マドリード)2S･JAS･UCITS"
+  ],
+  "stocks": [
+    {
+      "code": "5122",
+      "name": "オカモト",
+      "price": 5600.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.40723106893354677,
+      "per_actual": 14.851132034761761,
+      "per": 20.6492615,
+      "per_next": 18.526440224299066,
+      "fcf_yield_avg": 0.057879390343653046,
+      "total_payout_ratio": 17.208040749221627,
+      "equity_ratio": 48.25639481571708,
+      "peg_trailing_5": 1.0529471665035783,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.7913429526482263,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.0714285714285714,
+      "has_preferred_shares": false,
+      "croic": 0.07092083350257931,
+      "fcf_cagr": 1.964688576370044,
+      "fcf_cagr_r2": 0.034092039671197075,
+      "fcf_sma_cagr": 0.0025890290867076615,
+      "pbr": 1.0492510924796747,
+      "amount_millions": 3192,
+      "ratio_percent": 3.2
+    },
+    {
+      "code": "7244",
+      "name": "市光工業",
+      "price": 526.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2835136392945484,
+      "per_actual": 8.177136896018055,
+      "per": 10.1445560332,
+      "per_next": 9.754380801153847,
+      "fcf_yield_avg": 0.08865444648900082,
+      "total_payout_ratio": 6.728732117660556,
+      "equity_ratio": 54.96332178863168,
+      "peg_trailing_5": 0.4880293272910855,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.0933937335977526,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.7110266159695817,
+      "has_preferred_shares": false,
+      "croic": 0.01748649217598765,
+      "fcf_cagr": -6.449839077485403,
+      "fcf_cagr_r2": 0.03523556395714882,
+      "fcf_sma_cagr": -0.10362746492898911,
+      "pbr": 0.6330851243884174,
+      "amount_millions": 2278,
+      "ratio_percent": 4.4
+    }
+  ]
+}

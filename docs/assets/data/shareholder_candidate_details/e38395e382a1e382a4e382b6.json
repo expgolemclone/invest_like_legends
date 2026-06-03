@@ -1,0 +1,61 @@
+{
+  "id": "ファイザ",
+  "name": "ファイザー(株)",
+  "aliases": [
+    "ファイザー(株)"
+  ],
+  "stocks": [
+    {
+      "code": "4565",
+      "name": "ネクセラファーマ",
+      "price": 1016.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.44177649844120254,
+      "per_actual": -7.337963508379889,
+      "per": 183.88936552,
+      "per_next": 36.777873104,
+      "fcf_yield_avg": -0.06230594122504536,
+      "total_payout_ratio": null,
+      "equity_ratio": 45.25436429329238,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.031420640698944305,
+      "fcf_cagr": -40.637386132873765,
+      "fcf_cagr_r2": 0.08876144023903676,
+      "fcf_sma_cagr": -2.309684649627992,
+      "pbr": 1.5073640139679,
+      "amount_millions": 1910,
+      "ratio_percent": 2.0
+    },
+    {
+      "code": "4579",
+      "name": "ラクオリア創薬",
+      "price": 501.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1754996737854138,
+      "per_actual": 47.72551332954983,
+      "per": -651.72767865,
+      "per_next": 162.9319196625,
+      "fcf_yield_avg": -0.03909570029736837,
+      "total_payout_ratio": 0.0007748635151510916,
+      "equity_ratio": 65.61517369901809,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.024093916695705785,
+      "fcf_cagr": -15.418991968369417,
+      "fcf_cagr_r2": 0.03537720139091332,
+      "fcf_sma_cagr": -0.2484254664249808,
+      "pbr": 1.890089396677592,
+      "amount_millions": 371,
+      "ratio_percent": 3.0
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "有山田興産",
+  "name": "(有)山田興産",
+  "aliases": [
+    "(有)山田興産"
+  ],
+  "stocks": [
+    {
+      "code": "2816",
+      "name": "ダイショー",
+      "price": 1399.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.19648061335269124,
+      "per_actual": 30.145089956331876,
+      "per": 32.872502857142855,
+      "per_next": 31.37829818181818,
+      "fcf_yield_avg": 0.028175234487483648,
+      "total_payout_ratio": 0.00037663552528255774,
+      "equity_ratio": 51.991446137396416,
+      "peg_trailing_5": 11.864275212314052,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 25.57544189208135,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.6433166547533953,
+      "has_preferred_shares": false,
+      "croic": -0.18261914297156587,
+      "fcf_cagr": -49.210874814987925,
+      "fcf_cagr_r2": 0.3301329783414586,
+      "fcf_sma_cagr": -0.25133790845558146,
+      "pbr": 1.4089653229921422,
+      "amount_millions": 3414,
+      "ratio_percent": 24.7
+    },
+    {
+      "code": "4527",
+      "name": "ロート製薬",
+      "price": 2344.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.06929870713291232,
+      "per_actual": 17.854671955105463,
+      "per": 16.775816928484847,
+      "per_next": 16.282410548235294,
+      "fcf_yield_avg": 0.007674828337742459,
+      "total_payout_ratio": 4.632389679942698,
+      "equity_ratio": 53.33499259259259,
+      "peg_trailing_5": 1.1896650103048443,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.3604166884474818,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.9812286689419796,
+      "has_preferred_shares": false,
+      "croic": -0.2091291123028896,
+      "fcf_cagr": -53.25054346895808,
+      "fcf_cagr_r2": 0.11310985858678563,
+      "fcf_sma_cagr": -0.27962542799389467,
+      "pbr": 2.0395002897141175,
+      "amount_millions": 19713,
+      "ratio_percent": 3.5
+    }
+  ]
+}

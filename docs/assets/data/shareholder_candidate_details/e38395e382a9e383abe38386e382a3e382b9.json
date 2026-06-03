@@ -1,0 +1,61 @@
+{
+  "id": "フォルティス",
+  "name": "(株)フォルティス",
+  "aliases": [
+    "(株)フォルティス"
+  ],
+  "stocks": [
+    {
+      "code": "1518",
+      "name": "三井松島 HD",
+      "price": 1399.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.16554599626868505,
+      "per_actual": 10.570905494505494,
+      "per": 13.538589333333332,
+      "per_next": 14.2789809375,
+      "fcf_yield_avg": 0.05092603444061429,
+      "total_payout_ratio": 17.138390412533596,
+      "equity_ratio": 52.759995579246265,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.9306647605432454,
+      "has_preferred_shares": false,
+      "croic": -0.07826439146051607,
+      "fcf_cagr": 15.952081896773446,
+      "fcf_cagr_r2": 0.0605292547251526,
+      "fcf_sma_cagr": 0.2418785178169851,
+      "pbr": 1.39560296880011,
+      "amount_millions": 1091,
+      "ratio_percent": 6.0
+    },
+    {
+      "code": "9006",
+      "name": "京浜急行電鉄",
+      "price": 1479.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.1518253620464778,
+      "per_actual": 16.783253734949177,
+      "per": 13.156446742354838,
+      "per_next": 12.74530778165625,
+      "fcf_yield_avg": 0.02024078228783866,
+      "total_payout_ratio": 4.227781386146937,
+      "equity_ratio": 33.773905750460706,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.555104800540906,
+      "has_preferred_shares": false,
+      "croic": -0.07763745488601581,
+      "fcf_cagr": -21.67669524002502,
+      "fcf_cagr_r2": 0.012971935910866792,
+      "fcf_sma_cagr": -0.05201042220689667,
+      "pbr": 1.0946432618770918,
+      "amount_millions": 21002,
+      "ratio_percent": 5.1
+    }
+  ]
+}

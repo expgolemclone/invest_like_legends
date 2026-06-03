@@ -1,0 +1,61 @@
+{
+  "id": "kodenホルディングス",
+  "name": "(株)KODENホールディングス",
+  "aliases": [
+    "(株)KODENホールディングス"
+  ],
+  "stocks": [
+    {
+      "code": "6324",
+      "name": "ハーモニック・ドライブ・システムズ",
+      "price": 7780.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.008366118810610938,
+      "per_actual": 215.7263275293584,
+      "per": 576.4106246153846,
+      "per_next": 535.2384371428572,
+      "fcf_yield_avg": 6.286450610612435e-05,
+      "total_payout_ratio": 1.649440049556979,
+      "equity_ratio": 55.716242609399146,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.12853470437017994,
+      "has_preferred_shares": false,
+      "croic": 0.11680019761377934,
+      "fcf_cagr": 4367.282350856168,
+      "fcf_cagr_r2": 0.37596167471059394,
+      "fcf_sma_cagr": 0.25881041476700173,
+      "pbr": 9.492078911655142,
+      "amount_millions": 260552,
+      "ratio_percent": 34.7
+    },
+    {
+      "code": "7721",
+      "name": "東京計器",
+      "price": 5790.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.0006685372101137408,
+      "per_actual": 26.039658101132474,
+      "per": 30.801427355140188,
+      "per_next": 23.541090907142856,
+      "fcf_yield_avg": -0.004973067264945936,
+      "total_payout_ratio": 2.383876254520555,
+      "equity_ratio": 47.29597239107416,
+      "peg_trailing_5": 1.2025527860176972,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.4098456800736017,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.690846286701209,
+      "has_preferred_shares": false,
+      "croic": -0.0804901273828132,
+      "fcf_cagr": -90.11530805307498,
+      "fcf_cagr_r2": 0.12806519869533914,
+      "fcf_sma_cagr": -0.5701749387429483,
+      "pbr": 2.411114731875046,
+      "amount_millions": 2084,
+      "ratio_percent": 2.1
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "帝人",
+  "name": "帝人",
+  "aliases": [
+    "帝人"
+  ],
+  "stocks": [
+    {
+      "code": "3105",
+      "name": "日清紡 HD",
+      "price": 2422.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.22846183655238894,
+      "per_actual": 29.462244831752873,
+      "per": 35.66212591808696,
+      "per_next": 32.80915584464,
+      "fcf_yield_avg": 0.028149459387900744,
+      "total_payout_ratio": 12.846170196995649,
+      "equity_ratio": 32.55517604373653,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.7431874483897605,
+      "has_preferred_shares": false,
+      "croic": 0.10878749770386176,
+      "fcf_cagr": 7.076438078213816,
+      "fcf_cagr_r2": 0.015082232734685608,
+      "fcf_sma_cagr": 0.015000848669603162,
+      "pbr": 1.2954077913080284,
+      "amount_millions": 7629,
+      "ratio_percent": 1.8
+    },
+    {
+      "code": "7774",
+      "name": "ジャパン・ティッシュエンジニアリング",
+      "price": 608.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.16444436178725128,
+      "per_actual": -96.7121611882305,
+      "per": -45.724077037037034,
+      "per_next": -493.820032,
+      "fcf_yield_avg": -0.015300225811819636,
+      "total_payout_ratio": 0.0012514680651918146,
+      "equity_ratio": 89.43718629999432,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_per",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.06538861998254088,
+      "fcf_cagr": 44.12654775584953,
+      "fcf_cagr_r2": 0.22281404950402808,
+      "fcf_sma_cagr": 0.1499767464391633,
+      "pbr": 4.238773088917062,
+      "amount_millions": 14245,
+      "ratio_percent": 57.7
+    }
+  ]
+}

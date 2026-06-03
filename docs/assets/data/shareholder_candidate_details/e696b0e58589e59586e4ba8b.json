@@ -1,0 +1,61 @@
+{
+  "id": "新光商事",
+  "name": "新光商事",
+  "aliases": [
+    "新光商事"
+  ],
+  "stocks": [
+    {
+      "code": "3156",
+      "name": "レスター",
+      "price": 4310.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.18140991591763464,
+      "per_actual": 17.34418457513716,
+      "per": 19.63834717121212,
+      "per_next": 18.784505989855074,
+      "fcf_yield_avg": 0.0022104248657302678,
+      "total_payout_ratio": 15.534696220411487,
+      "equity_ratio": 25.603666836547085,
+      "peg_trailing_5": 3.1622914928530235,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 6.930503726318905,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.3921113689095126,
+      "has_preferred_shares": false,
+      "croic": 0.11759617784847236,
+      "fcf_cagr": 516.1161351737268,
+      "fcf_cagr_r2": 0.04843552968710353,
+      "fcf_sma_cagr": 0.3060495484159606,
+      "pbr": 1.295340755439182,
+      "amount_millions": 2370,
+      "ratio_percent": 1.8
+    },
+    {
+      "code": "8150",
+      "name": "三信電気",
+      "price": 2814.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2881190488611741,
+      "per_actual": 13.00845645144804,
+      "per": 10.90851991,
+      "per_next": 15.271927874,
+      "fcf_yield_avg": 0.05385698562656793,
+      "total_payout_ratio": 16.915567927290837,
+      "equity_ratio": 41.24736760699116,
+      "peg_trailing_5": 0.6703484100884339,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.3967322257053192,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.4214641080312722,
+      "has_preferred_shares": false,
+      "croic": 0.0299205633706986,
+      "fcf_cagr": 10.831475852752448,
+      "fcf_cagr_r2": 0.019814853136341525,
+      "fcf_sma_cagr": 0.35265363128491617,
+      "pbr": 1.1298311662351113,
+      "amount_millions": 2251,
+      "ratio_percent": 4.9
+    }
+  ]
+}

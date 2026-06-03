@@ -1,0 +1,62 @@
+{
+  "id": "mnホルディングス",
+  "name": "(株)MNホールディングス",
+  "aliases": [
+    "(株)MNホールディングス",
+    "M･Nホールディングス(株)"
+  ],
+  "stocks": [
+    {
+      "code": "4684",
+      "name": "オービック",
+      "price": 4161.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1486709153364238,
+      "per_actual": 32.066634685319016,
+      "per": 27.964615384615385,
+      "per_next": 26.634678663239075,
+      "fcf_yield_avg": 0.01480283064485773,
+      "total_payout_ratio": 6.3257114012406275,
+      "equity_ratio": 72.09632775418436,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.1295361691900985,
+      "has_preferred_shares": false,
+      "croic": 0.16315917860469242,
+      "fcf_cagr": 12.96260896444765,
+      "fcf_cagr_r2": 0.3631450796478054,
+      "fcf_sma_cagr": 0.14544387793148106,
+      "pbr": 4.776254465829203,
+      "amount_millions": 351771,
+      "ratio_percent": 16.9
+    },
+    {
+      "code": "4917",
+      "name": "マンダム",
+      "price": 3085.0,
+      "price_date": "2026-05-14",
+      "net_cash_ratio": 0.1792445569034321,
+      "per_actual": 80.10248467993544,
+      "per": 70.90977096190475,
+      "per_next": 53.18232822142857,
+      "fcf_yield_avg": 0.02797720421242005,
+      "total_payout_ratio": 6.8631820419800995,
+      "equity_ratio": 66.54289582734994,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.04369776354876941,
+      "fcf_cagr": -2.3818512044910833,
+      "fcf_cagr_r2": 0.004769406025650815,
+      "fcf_sma_cagr": 0.0015902362190118868,
+      "pbr": 1.942150679117812,
+      "amount_millions": 3301,
+      "ratio_percent": 2.2
+    }
+  ]
+}

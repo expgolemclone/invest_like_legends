@@ -1,0 +1,61 @@
+{
+  "id": "東鉄工業",
+  "name": "東鉄工業",
+  "aliases": [
+    "東鉄工業"
+  ],
+  "stocks": [
+    {
+      "code": "1799",
+      "name": "第一建設工業",
+      "price": 3140.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.633195706375651,
+      "per_actual": 12.492704014123985,
+      "per": 12.357672026415095,
+      "per_next": 11.908302134545455,
+      "fcf_yield_avg": 0.023351377165580188,
+      "total_payout_ratio": 4.641457035838172,
+      "equity_ratio": 80.62807643438971,
+      "peg_trailing_5": 0.8288354462532043,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.0531494007037985,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 4.140127388535031,
+      "has_preferred_shares": false,
+      "croic": 0.032264829227999316,
+      "fcf_cagr": -20.828920546662093,
+      "fcf_cagr_r2": 0.04247674733770587,
+      "fcf_sma_cagr": -0.16112695082330036,
+      "pbr": 0.9140143781333406,
+      "amount_millions": 1601,
+      "ratio_percent": 2.4
+    },
+    {
+      "code": "1869",
+      "name": "名工建設",
+      "price": 1838.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 1.0205105810084711,
+      "per_actual": 9.594189814814815,
+      "per": 9.564669230769232,
+      "per_next": 9.473577142857144,
+      "fcf_yield_avg": 0.036393956283019155,
+      "total_payout_ratio": 8.549091327296694,
+      "equity_ratio": 57.89310583688797,
+      "peg_trailing_5": 15.253558694313929,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 15.023717453441428,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.7954298150163224,
+      "has_preferred_shares": false,
+      "croic": -0.07034175334323922,
+      "fcf_cagr": -55.192329906434104,
+      "fcf_cagr_r2": 0.27292568982742815,
+      "fcf_sma_cagr": -0.23678831829884245,
+      "pbr": 0.6721300575691235,
+      "amount_millions": 956,
+      "ratio_percent": 1.9
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "テイエステック",
+  "name": "テイ･エス テック",
+  "aliases": [
+    "テイ･エス テック"
+  ],
+  "stocks": [
+    {
+      "code": "3106",
+      "name": "倉敷紡績",
+      "price": 9960.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.15184148358138436,
+      "per_actual": 18.78411360106501,
+      "per": 14.723478260869566,
+      "per_next": 14.11,
+      "fcf_yield_avg": 0.037625797306874556,
+      "total_payout_ratio": 16.146940703992442,
+      "equity_ratio": 52.75364905080067,
+      "peg_trailing_5": 0.912251392797945,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7035667030456729,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.4156626506024097,
+      "has_preferred_shares": false,
+      "croic": 0.07269070147113207,
+      "fcf_cagr": -0.5142782125264702,
+      "fcf_cagr_r2": 0.0007324287765078609,
+      "fcf_sma_cagr": -0.03181096373864012,
+      "pbr": 1.3972372134475417,
+      "amount_millions": 2988,
+      "ratio_percent": 1.7
+    },
+    {
+      "code": "7266",
+      "name": "今仙電機製作所",
+      "price": 915.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.7128404099673454,
+      "per_actual": 9.999734683301343,
+      "per": 11.264565989189188,
+      "per_next": 10.968130042105264,
+      "fcf_yield_avg": 0.10522831971413323,
+      "total_payout_ratio": 7.9272736635390615,
+      "equity_ratio": 54.333533339290966,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.639344262295082,
+      "has_preferred_shares": false,
+      "croic": 0.16587958843793488,
+      "fcf_cagr": -7.493881769954551,
+      "fcf_cagr_r2": 0.028263792008010342,
+      "fcf_sma_cagr": -0.09962281273597828,
+      "pbr": 0.39289317848456856,
+      "amount_millions": 7302,
+      "ratio_percent": 34.0
+    }
+  ]
+}

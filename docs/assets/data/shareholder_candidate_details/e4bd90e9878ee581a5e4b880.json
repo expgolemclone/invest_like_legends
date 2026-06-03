@@ -1,0 +1,61 @@
+{
+  "id": "佐野健一",
+  "name": "佐野健一",
+  "aliases": [
+    "佐野健一"
+  ],
+  "stocks": [
+    {
+      "code": "9271",
+      "name": "和心",
+      "price": 989.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.0339951412273395,
+      "per_actual": 9.180884646617265,
+      "per": 9.98391544,
+      "per_next": 8.652726714666667,
+      "fcf_yield_avg": -0.02272354983006547,
+      "total_payout_ratio": 0.01155705054575416,
+      "equity_ratio": 66.44248074080505,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.6066734074823054,
+      "has_preferred_shares": false,
+      "croic": 0.2965586812335269,
+      "fcf_cagr": 24.964824335388975,
+      "fcf_cagr_r2": 0.15871197535169243,
+      "fcf_sma_cagr": 0.1763163655362485,
+      "pbr": 5.119859691808597,
+      "amount_millions": 702,
+      "ratio_percent": 11.0
+    },
+    {
+      "code": "9416",
+      "name": "ビジョン",
+      "price": 1027.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2627759354751896,
+      "per_actual": 11.568606040475792,
+      "per": 10.257635725490196,
+      "per_next": 8.86676986440678,
+      "fcf_yield_avg": 0.02268145450525806,
+      "total_payout_ratio": 13.314053017400015,
+      "equity_ratio": 68.24865576194138,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.142161635832522,
+      "has_preferred_shares": false,
+      "croic": 0.06687396785764595,
+      "fcf_cagr": 11.165995088629018,
+      "fcf_cagr_r2": 0.1272724730259905,
+      "fcf_sma_cagr": 0.1409372789899348,
+      "pbr": 2.4572883829841823,
+      "amount_millions": 2793,
+      "ratio_percent": 5.3
+    }
+  ]
+}

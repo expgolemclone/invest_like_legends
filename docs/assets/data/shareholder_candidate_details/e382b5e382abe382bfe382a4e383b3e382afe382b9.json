@@ -1,0 +1,61 @@
+{
+  "id": "サカタインクス",
+  "name": "サカタインクス",
+  "aliases": [
+    "サカタインクス"
+  ],
+  "stocks": [
+    {
+      "code": "7613",
+      "name": "シークス",
+      "price": 1408.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.08294580853174603,
+      "per_actual": 28.52218649517685,
+      "per": 11.8272,
+      "per_next": 11.264,
+      "fcf_yield_avg": 0.0362821856962482,
+      "total_payout_ratio": 17.78527462121212,
+      "equity_ratio": 33.86862437578778,
+      "peg_trailing_5": 3.746768788707389,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.5538576055517465,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.7755681818181819,
+      "has_preferred_shares": false,
+      "croic": 0.25520510368167154,
+      "fcf_cagr": 90.6308590232931,
+      "fcf_cagr_r2": 0.38156206734020626,
+      "fcf_sma_cagr": 0.8722834814259716,
+      "pbr": 0.6837585755029677,
+      "amount_millions": 15220,
+      "ratio_percent": 21.4
+    },
+    {
+      "code": "7811",
+      "name": "中本パックス",
+      "price": 1866.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.06361376494775849,
+      "per_actual": 8.281153958201708,
+      "per": 8.120095612682928,
+      "per_next": 7.926760002857143,
+      "fcf_yield_avg": 0.033510929451926096,
+      "total_payout_ratio": 15.177023021291944,
+      "equity_ratio": 44.59887735917614,
+      "peg_trailing_5": 0.6315804005280081,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8019982050592354,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.822079314040729,
+      "has_preferred_shares": false,
+      "croic": 0.04797788495669079,
+      "fcf_cagr": 25.184559624455687,
+      "fcf_cagr_r2": 0.4018888883369613,
+      "fcf_sma_cagr": 0.1906363598078471,
+      "pbr": 0.8194648929689352,
+      "amount_millions": 280,
+      "ratio_percent": 1.6
+    }
+  ]
+}

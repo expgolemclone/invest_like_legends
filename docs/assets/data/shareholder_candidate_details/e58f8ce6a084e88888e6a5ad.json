@@ -1,0 +1,61 @@
+{
+  "id": "双栄興業",
+  "name": "双栄興業",
+  "aliases": [
+    "双栄興業"
+  ],
+  "stocks": [
+    {
+      "code": "1960",
+      "name": "サンテック",
+      "price": 1351.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.6153404885270171,
+      "per_actual": 12.366132723112129,
+      "per": 10.54439024390244,
+      "per_next": 10.293333333333333,
+      "fcf_yield_avg": 0.014657258512213178,
+      "total_payout_ratio": 22.12426905995559,
+      "equity_ratio": 47.514354917935606,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.9607698001480385,
+      "has_preferred_shares": false,
+      "croic": -0.0689322573385204,
+      "fcf_cagr": -52.7139856638552,
+      "fcf_cagr_r2": 0.07055324203248971,
+      "fcf_sma_cagr": -0.2180088574900301,
+      "pbr": 0.7066592565955082,
+      "amount_millions": 2270,
+      "ratio_percent": 10.5
+    },
+    {
+      "code": "9388",
+      "name": "パパネッツ",
+      "price": 1335.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.21774197115809962,
+      "per_actual": 10.592342113689076,
+      "per": 9.0424,
+      "per_next": 7.978588235294118,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 3.9775575805833263,
+      "equity_ratio": 53.6373260194778,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.4981273408239701,
+      "has_preferred_shares": false,
+      "croic": 0.1479365146777955,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.137290789004068,
+      "amount_millions": 27,
+      "ratio_percent": 1.3
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "村田製作所",
+  "name": "村田製作所",
+  "aliases": [
+    "村田製作所"
+  ],
+  "stocks": [
+    {
+      "code": "3858",
+      "name": "ユビキタスAI",
+      "price": 392.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3966571364180054,
+      "per_actual": 45.01260375038426,
+      "per": -204.9964,
+      "per_next": 204.9964,
+      "fcf_yield_avg": -0.0043948820564653854,
+      "total_payout_ratio": 0.002926880667172692,
+      "equity_ratio": 66.26398792514424,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.06847115680210832,
+      "fcf_cagr": 258.8920836619061,
+      "fcf_cagr_r2": 0.0670846613856538,
+      "fcf_sma_cagr": 0.16525864481765953,
+      "pbr": 1.7111209792124364,
+      "amount_millions": 78,
+      "ratio_percent": 1.9
+    },
+    {
+      "code": "6994",
+      "name": "指月電機製作所",
+      "price": 1296.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.09497439755813193,
+      "per_actual": 35.86512439230182,
+      "per": 23.80392216,
+      "per_next": 25.204152875294117,
+      "fcf_yield_avg": -0.0074503151636176514,
+      "total_payout_ratio": 10.221389779013908,
+      "equity_ratio": 51.98047786879106,
+      "peg_trailing_5": 3.2147038372905863,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.8778492271124423,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.8487654320987654,
+      "has_preferred_shares": false,
+      "croic": 0.03637716605112175,
+      "fcf_cagr": -5.612971444122663,
+      "fcf_cagr_r2": 0.0015786065451634257,
+      "fcf_sma_cagr": -0.141246336996337,
+      "pbr": 1.8043144176130352,
+      "amount_millions": 5793,
+      "ratio_percent": 13.5
+    }
+  ]
+}

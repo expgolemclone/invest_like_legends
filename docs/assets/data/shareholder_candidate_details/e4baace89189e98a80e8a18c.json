@@ -1,0 +1,61 @@
+{
+  "id": "京葉銀行",
+  "name": "京葉銀行",
+  "aliases": [
+    "京葉銀行"
+  ],
+  "stocks": [
+    {
+      "code": "1879",
+      "name": "新日本建設",
+      "price": 2283.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3736298010340463,
+      "per_actual": 10.930596423220974,
+      "per": 10.300479688235294,
+      "per_next": 9.93521445106383,
+      "fcf_yield_avg": 0.04343387098693468,
+      "total_payout_ratio": 6.510262197400679,
+      "equity_ratio": 70.37535992229148,
+      "peg_trailing_5": 2.739655579484904,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.3398258931370153,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.226456416995182,
+      "has_preferred_shares": false,
+      "croic": -0.26109746378895304,
+      "fcf_cagr": -46.510731441292705,
+      "fcf_cagr_r2": 0.3854091137825132,
+      "fcf_sma_cagr": -0.1783015426788155,
+      "pbr": 1.1453118128081234,
+      "amount_millions": 3927,
+      "ratio_percent": 2.8
+    },
+    {
+      "code": "1965",
+      "name": "テクノ菱和",
+      "price": 6030.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2810805925053492,
+      "per_actual": 17.64174229878721,
+      "per": 12.800848212,
+      "per_next": 13.3342168875,
+      "fcf_yield_avg": 0.007305765872009232,
+      "total_payout_ratio": 5.399642184273718,
+      "equity_ratio": 58.92369297556229,
+      "peg_trailing_5": 0.8118939877197051,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.6743193552585577,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.8291873963515755,
+      "has_preferred_shares": false,
+      "croic": 0.09496828752642707,
+      "fcf_cagr": 1.8676931850584548,
+      "fcf_cagr_r2": 0.0005390242063675151,
+      "fcf_sma_cagr": 0.06482762085834248,
+      "pbr": 2.41762639042079,
+      "amount_millions": 4342,
+      "ratio_percent": 3.4
+    }
+  ]
+}

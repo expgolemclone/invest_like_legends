@@ -1,0 +1,61 @@
+{
+  "id": "東宝",
+  "name": "東宝",
+  "aliases": [
+    "東宝"
+  ],
+  "stocks": [
+    {
+      "code": "4676",
+      "name": "フジ・メディアHD",
+      "price": 3774.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.0064499329392162345,
+      "per_actual": -31.701112645276645,
+      "per": 28.367564533333333,
+      "per_next": 35.45945566666666,
+      "fcf_yield_avg": 0.0025760250045324846,
+      "total_payout_ratio": 10.447612906109002,
+      "equity_ratio": 47.00943417186467,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.6497085320614735,
+      "has_preferred_shares": false,
+      "croic": 0.020791314018585888,
+      "fcf_cagr": -28.864732963990964,
+      "fcf_cagr_r2": 0.00327482837409978,
+      "fcf_sma_cagr": -0.24983224137720675,
+      "pbr": 0.7689789343186876,
+      "amount_millions": 70083,
+      "ratio_percent": 7.9
+    },
+    {
+      "code": "9632",
+      "name": "スバル興業",
+      "price": 3680.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.30970183214647373,
+      "per_actual": 20.207842808819517,
+      "per": 23.43578947368421,
+      "per_next": 16.05927868852459,
+      "fcf_yield_avg": 0.03341302714533041,
+      "total_payout_ratio": 6.952193512560023,
+      "equity_ratio": 84.27989045462144,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 7.609026177764027,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.0869565217391304,
+      "has_preferred_shares": false,
+      "croic": 0.06568278989004075,
+      "fcf_cagr": 1.3938613902392398,
+      "fcf_cagr_r2": 0.0036813800862571513,
+      "fcf_sma_cagr": -0.006033402094095197,
+      "pbr": 1.3221005745807075,
+      "amount_millions": 25024,
+      "ratio_percent": 51.1
+    }
+  ]
+}

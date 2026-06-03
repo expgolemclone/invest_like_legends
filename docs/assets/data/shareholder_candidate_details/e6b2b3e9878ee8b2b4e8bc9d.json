@@ -1,0 +1,61 @@
+{
+  "id": "河野貴輝",
+  "name": "河野貴輝",
+  "aliases": [
+    "河野貴輝"
+  ],
+  "stocks": [
+    {
+      "code": "3479",
+      "name": "ティーケーピー",
+      "price": 1562.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.60502471566285,
+      "per_actual": 17.515583259435207,
+      "per": 6.381398554807692,
+      "per_next": 11.851168744642857,
+      "fcf_yield_avg": -0.06471031454087763,
+      "total_payout_ratio": 4.3244680001005635,
+      "equity_ratio": 33.76937904674037,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.20187109151157287,
+      "fcf_cagr": 30.39504155324022,
+      "fcf_cagr_r2": 0.029676104003079545,
+      "fcf_sma_cagr": 0.4052977988778593,
+      "pbr": 1.459920917090125,
+      "amount_millions": 2905,
+      "ratio_percent": 4.3
+    },
+    {
+      "code": "8931",
+      "name": "和田興産",
+      "price": 1256.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -4.247347384805187,
+      "per_actual": 4.465284316928339,
+      "per": 5.362153846153846,
+      "per_next": 5.014964028776978,
+      "fcf_yield_avg": -0.09010418459861134,
+      "total_payout_ratio": 2.1778848912606876,
+      "equity_ratio": 29.7284191609947,
+      "peg_trailing_5": 0.3759511737578341,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7639387570398474,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.786624203821656,
+      "has_preferred_shares": false,
+      "croic": -0.05202251633493016,
+      "fcf_cagr": 46.34227932565414,
+      "fcf_cagr_r2": 0.09969057718458463,
+      "fcf_sma_cagr": 0.09484173804019636,
+      "pbr": 0.42337760067198166,
+      "amount_millions": 151,
+      "ratio_percent": 1.1
+    }
+  ]
+}

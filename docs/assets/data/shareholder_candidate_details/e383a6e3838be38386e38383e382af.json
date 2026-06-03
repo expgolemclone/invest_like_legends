@@ -1,0 +1,61 @@
+{
+  "id": "ユニテック",
+  "name": "ユニテック(株)",
+  "aliases": [
+    "ユニテック(株)"
+  ],
+  "stocks": [
+    {
+      "code": "7985",
+      "name": "ネポン",
+      "price": 845.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.5616650132545391,
+      "per_actual": -2.9041725319437504,
+      "per": 20.3422765,
+      "per_next": 13.561517666666667,
+      "fcf_yield_avg": 0.07093036022787323,
+      "total_payout_ratio": 55.76022919558684,
+      "equity_ratio": 37.64059986397966,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.4201183431952662,
+      "has_preferred_shares": false,
+      "croic": 0.028373789118062296,
+      "fcf_cagr": 29.500177516824717,
+      "fcf_cagr_r2": 0.040536991541017454,
+      "fcf_sma_cagr": 0.15527915347787147,
+      "pbr": 0.3487797973823011,
+      "amount_millions": 25,
+      "ratio_percent": 3.2
+    },
+    {
+      "code": "8113",
+      "name": "ユニ・チャーム",
+      "price": 934.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1070853403079203,
+      "per_actual": 26.69001124511593,
+      "per": 20.121491483427747,
+      "per_next": 18.244329280047168,
+      "fcf_yield_avg": 0.03351996430563209,
+      "total_payout_ratio": 0.8043623958788539,
+      "equity_ratio": 64.97061747450898,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.177100053504548,
+      "has_preferred_shares": false,
+      "croic": 0.09029735901509134,
+      "fcf_cagr": 7.745784845565791,
+      "fcf_cagr_r2": 0.14753435431979592,
+      "fcf_sma_cagr": 0.1009646005443241,
+      "pbr": 1.9528655680520477,
+      "amount_millions": 434421,
+      "ratio_percent": 24.9
+    }
+  ]
+}

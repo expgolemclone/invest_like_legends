@@ -1,0 +1,62 @@
+{
+  "id": "tm",
+  "name": "(株)TM",
+  "aliases": [
+    "(株)TM",
+    "TM(株)"
+  ],
+  "stocks": [
+    {
+      "code": "6238",
+      "name": "フリュー",
+      "price": 1339.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.36434772393324977,
+      "per_actual": 23.282363069571772,
+      "per": 18.042068571428572,
+      "per_next": 16.47319304347826,
+      "fcf_yield_avg": 0.03965536736047372,
+      "total_payout_ratio": 17.039784056014696,
+      "equity_ratio": 79.69597526559139,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 2.912621359223301,
+      "has_preferred_shares": false,
+      "croic": 0.05594173044779256,
+      "fcf_cagr": -9.364160230150652,
+      "fcf_cagr_r2": 0.09052023426823647,
+      "fcf_sma_cagr": -0.1605163559235011,
+      "pbr": 1.689631044976118,
+      "amount_millions": 1888,
+      "ratio_percent": 5.0
+    },
+    {
+      "code": "6547",
+      "name": "グリーンズ",
+      "price": 1945.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.183946180472082,
+      "per_actual": 5.13179116634981,
+      "per": 6.74830538375,
+      "per_next": 6.134823076136364,
+      "fcf_yield_avg": 0.005252022246258347,
+      "total_payout_ratio": 21.06271380993947,
+      "equity_ratio": 34.511137561639174,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.7994858611825193,
+      "has_preferred_shares": true,
+      "croic": 0.2730563002680965,
+      "fcf_cagr": 299.8557320198864,
+      "fcf_cagr_r2": 0.0774338042030005,
+      "fcf_sma_cagr": 0.24050325858392907,
+      "pbr": 2.65237511398251,
+      "amount_millions": 4182,
+      "ratio_percent": 15.4
+    }
+  ]
+}

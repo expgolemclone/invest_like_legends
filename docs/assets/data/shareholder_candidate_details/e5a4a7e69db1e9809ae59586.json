@@ -1,0 +1,61 @@
+{
+  "id": "大東通商",
+  "name": "大東通商",
+  "aliases": [
+    "大東通商"
+  ],
+  "stocks": [
+    {
+      "code": "1333",
+      "name": "Umios",
+      "price": 1258.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.9319906160902967,
+      "per_actual": 8.208407801474381,
+      "per": 9.792840979153846,
+      "per_next": 9.792840979153846,
+      "fcf_yield_avg": 0.07302823028334719,
+      "total_payout_ratio": 12.006677881299229,
+      "equity_ratio": 28.932298509566053,
+      "peg_trailing_5": 0.6236748111635866,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.907032181168057,
+      "has_preferred_shares": false,
+      "croic": 0.08672770528440632,
+      "fcf_cagr": 8.988714726049349,
+      "fcf_cagr_r2": 0.049850258050270296,
+      "fcf_sma_cagr": 0.026845078804029532,
+      "pbr": 0.6934029509996514,
+      "amount_millions": 6204,
+      "ratio_percent": 9.7
+    },
+    {
+      "code": "2112",
+      "name": "塩水港精糖",
+      "price": 427.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.028604884576781533,
+      "per_actual": 6.996722846441948,
+      "per": 5.535185185185185,
+      "per_next": 7.4725,
+      "fcf_yield_avg": 0.06553362328537973,
+      "total_payout_ratio": 3.4660421545667446,
+      "equity_ratio": 50.181941846624724,
+      "peg_trailing_5": 0.31170064020990784,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.5159748706244394,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 4.683840749414521,
+      "has_preferred_shares": false,
+      "croic": 0.1492306248827172,
+      "fcf_cagr": 10.280873785489607,
+      "fcf_cagr_r2": 0.05937825840515595,
+      "fcf_sma_cagr": 0.14501844210749026,
+      "pbr": 0.8993260320134794,
+      "amount_millions": 214,
+      "ratio_percent": 1.4
+    }
+  ]
+}

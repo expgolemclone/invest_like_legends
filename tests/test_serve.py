@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pytest
@@ -55,6 +56,17 @@ def test_main_refreshes_prices_before_building_document(
     tmp_path: Path,
 ) -> None:
     events: list[str] = []
+    candidate_doc = [
+        {
+            "id": "candidate",
+            "name": "candidate",
+            "aliases": [],
+            "holding_count": 0,
+            "priced_holding_count": 0,
+            "total_amount_millions": 0,
+            "stocks": [],
+        }
+    ]
 
     def fake_write_investors_document(doc: dict[str, object]) -> Path:
         assert doc == {"watch": {"stocks": []}}
@@ -62,11 +74,22 @@ def test_main_refreshes_prices_before_building_document(
         return tmp_path / "investors.json"
 
     def fake_write_shareholder_candidates_document(doc: list[dict[str, object]]) -> Path:
-        assert doc == [{"name": "candidate"}]
+        assert doc == candidate_doc
         events.append("write_candidates")
         return tmp_path / "shareholder_candidates.json"
 
-    def fake_write_stock_price_metadata() -> Path:
+    def fake_write_shareholder_candidate_detail_documents(
+        doc: list[dict[str, object]],
+    ) -> list[Path]:
+        assert doc == candidate_doc
+        events.append("write_candidate_details")
+        return [tmp_path / "shareholder_candidate_details" / "candidate.json"]
+
+    def fake_write_stock_price_metadata(metadata: dict[str, str]) -> Path:
+        assert metadata == {
+            "price_date": "2026-05-20",
+            "target_price_date": "2026-05-20",
+        }
         events.append("write_metadata")
         return tmp_path / "stock-price-meta.json"
 
@@ -82,13 +105,26 @@ def test_main_refreshes_prices_before_building_document(
     monkeypatch.setattr(
         serve,
         "build_shareholder_candidates_document",
-        lambda **kwargs: events.append("build_candidates") or [{"name": "candidate"}],
+        lambda **kwargs: events.append("build_candidates") or candidate_doc,
     )
     monkeypatch.setattr(serve, "write_investors_document", fake_write_investors_document)
     monkeypatch.setattr(
         serve,
         "write_shareholder_candidates_document",
         fake_write_shareholder_candidates_document,
+    )
+    monkeypatch.setattr(
+        serve,
+        "write_shareholder_candidate_detail_documents",
+        fake_write_shareholder_candidate_detail_documents,
+    )
+    monkeypatch.setattr(
+        serve,
+        "build_stock_price_metadata",
+        lambda: events.append("build_metadata") or {
+            "price_date": "2026-05-20",
+            "target_price_date": "2026-05-20",
+        },
     )
     monkeypatch.setattr(serve, "write_stock_price_metadata", fake_write_stock_price_metadata)
     monkeypatch.setattr(serve, "_serve", lambda **kwargs: events.append("serve"))
@@ -104,24 +140,136 @@ def test_main_refreshes_prices_before_building_document(
         "write_investors",
         "build_candidates",
         "write_candidates",
+        "write_candidate_details",
+        "build_metadata",
         "write_metadata",
         "serve",
     ]
 
 
-def test_create_api_routes_includes_portfolios_and_candidates(
-    monkeypatch: pytest.MonkeyPatch,
-) -> None:
-    monkeypatch.setattr(serve, "_load_and_enrich_investors", lambda: {"watch": {"stocks": []}})
-    monkeypatch.setattr(serve, "_load_shareholder_candidates", lambda: [{"name": "candidate"}])
-    monkeypatch.setattr(
-        serve,
-        "_load_stock_price_metadata",
-        lambda: {"price_date": "2026-05-20", "target_price_date": "2026-05-20"},
+def test_create_api_routes_reuses_prebuilt_payloads() -> None:
+    routes = serve._create_api_routes(
+        investors_doc={"watch": {"stocks": []}},
+        shareholder_candidates_doc=[
+            {
+                "id": "alpha",
+                "name": "Alpha",
+                "aliases": ["Alpha㈱"],
+                "holding_count": 1,
+                "priced_holding_count": 1,
+                "total_amount_millions": 200,
+                "stocks": [{"code": "1001"}],
+            }
+        ],
+        stock_price_metadata={
+            "price_date": "2026-05-20",
+            "target_price_date": "2026-05-20",
+        },
     )
 
-    assert set(serve._create_api_routes()) == {
+    assert set(routes) == {
         "/api/portfolio",
         "/api/shareholder-candidates",
+        "/api/shareholder-candidate",
         "/api/stock-price-meta",
     }
+
+    handler = _JsonRecorder()
+    routes["/api/portfolio"](handler, {})
+    routes["/api/shareholder-candidates"](handler, {})
+    routes["/api/stock-price-meta"](handler, {})
+
+    assert handler.responses == [
+        (200, {"watch": {"stocks": []}}),
+        (
+            200,
+            [
+                {
+                    "id": "alpha",
+                    "name": "Alpha",
+                    "aliases": ["Alpha㈱"],
+                    "holding_count": 1,
+                    "priced_holding_count": 1,
+                    "total_amount_millions": 200,
+                }
+            ],
+        ),
+        (
+            200,
+            {
+                "price_date": "2026-05-20",
+                "target_price_date": "2026-05-20",
+            },
+        ),
+    ]
+
+
+def test_candidate_detail_route_handles_found_missing_and_bad_request() -> None:
+    routes = serve._create_api_routes(
+        investors_doc={},
+        shareholder_candidates_doc=[
+            {
+                "id": "alpha",
+                "name": "Alpha",
+                "aliases": ["Alpha㈱"],
+                "holding_count": 1,
+                "priced_holding_count": 1,
+                "total_amount_millions": 200,
+                "stocks": [{"code": "1001"}],
+            }
+        ],
+        stock_price_metadata={},
+    )
+
+    handler = _JsonRecorder()
+    route = routes["/api/shareholder-candidate"]
+
+    route(handler, {"id": ["alpha"]})
+    route(handler, {"id": ["missing"]})
+    route(handler, {})
+
+    assert handler.responses == [
+        (
+            200,
+            {
+                "id": "alpha",
+                "name": "Alpha",
+                "aliases": ["Alpha㈱"],
+                "stocks": [{"code": "1001"}],
+            },
+        ),
+        (404, {"error": "Candidate not found"}),
+        (400, {"error": "Missing id parameter"}),
+    ]
+
+
+class _JsonRecorder:
+    def __init__(self) -> None:
+        self._status_code: int | None = None
+        self.responses: list[tuple[int, object]] = []
+        self.wfile = _JsonWriter(self)
+
+    def send_response(self, status_code: int) -> None:
+        self._status_code = status_code
+
+    def send_header(self, _name: str, _value: str) -> None:
+        return
+
+    def end_headers(self) -> None:
+        return
+
+    def send_json_response(self, status_code: int, body: object) -> None:
+        self.responses.append((status_code, body))
+
+
+class _JsonWriter:
+    def __init__(self, recorder: _JsonRecorder) -> None:
+        self._recorder = recorder
+
+    def write(self, payload: bytes) -> int:
+        status_code = self._recorder._status_code
+        assert status_code is not None
+        self._recorder.responses.append(
+            (status_code, json.loads(payload.decode("utf-8")))
+        )
+        return len(payload)

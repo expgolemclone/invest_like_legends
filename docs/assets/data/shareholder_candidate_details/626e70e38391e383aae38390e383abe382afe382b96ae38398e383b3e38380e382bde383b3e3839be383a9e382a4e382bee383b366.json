@@ -1,0 +1,61 @@
+{
+  "id": "bnpパリバルクスjヘンダソンホライゾンf",
+  "name": "BNPパリバルクスJ.ヘンダーソンホライゾンF",
+  "aliases": [
+    "BNPパリバルクスJ.ヘンダーソンホライゾンF"
+  ],
+  "stocks": [
+    {
+      "code": "9470",
+      "name": "学研 HD",
+      "price": 941.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.31402477169571,
+      "per_actual": 11.738365375069872,
+      "per": 10.370338595555555,
+      "per_next": 9.333304736,
+      "fcf_yield_avg": 0.00827145391516337,
+      "total_payout_ratio": 19.690536522280095,
+      "equity_ratio": 35.39879592511171,
+      "peg_trailing_5": 1.2982322673078264,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.9408561823744299,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.5409139213602552,
+      "has_preferred_shares": false,
+      "croic": 0.11550096379778538,
+      "fcf_cagr": 244.87360653163762,
+      "fcf_cagr_r2": 0.11254379013053464,
+      "fcf_sma_cagr": 0.5060952110504858,
+      "pbr": 0.7062244003295723,
+      "amount_millions": 1129,
+      "ratio_percent": 2.6
+    },
+    {
+      "code": "9740",
+      "name": "セントラル警備保障",
+      "price": 2545.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.46476338664856653,
+      "per_actual": 11.673028472687852,
+      "per": 11.78390035625,
+      "per_next": 11.426812466666666,
+      "fcf_yield_avg": 0.07627303495258203,
+      "total_payout_ratio": 7.681030665877412,
+      "equity_ratio": 58.066203519757195,
+      "peg_trailing_5": 4.8994113999317115,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 5.695569071893146,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.1787819253438114,
+      "has_preferred_shares": false,
+      "croic": 0.0010551303279299439,
+      "fcf_cagr": 22.009021794053144,
+      "fcf_cagr_r2": 0.2940685661518181,
+      "fcf_sma_cagr": 0.5125500761797082,
+      "pbr": 0.8971465816220245,
+      "amount_millions": 1323,
+      "ratio_percent": 3.5
+    }
+  ]
+}

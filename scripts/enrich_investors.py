@@ -10,12 +10,14 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from investor_data import (
+    DEFAULT_SHAREHOLDER_CANDIDATE_DETAILS_OUTPUT_DIR,
     build_investors_document,
     build_shareholder_candidates_document,
     compute_metrics_map,
     load_major_shareholder_rows,
     load_stock_names,
     resolve_handbook_db_path,
+    write_shareholder_candidate_detail_documents,
     write_investors_document,
     write_shareholder_candidates_document,
     write_stock_price_metadata,
@@ -70,12 +72,24 @@ def main() -> None:
     )
     candidates_output_path = write_shareholder_candidates_document(shareholder_candidates)
     print(f"  {candidates_output_path} に保存しました")
+    candidate_detail_output_paths = write_shareholder_candidate_detail_documents(
+        shareholder_candidates
+    )
+    print(
+        f"  {DEFAULT_SHAREHOLDER_CANDIDATE_DETAILS_OUTPUT_DIR} に"
+        f"{len(candidate_detail_output_paths)}件の詳細を保存しました"
+    )
 
     metadata_output_path = write_stock_price_metadata()
     print(f"  {metadata_output_path} に保存しました")
 
     _auto_push_json(
-        [investors_output_path, candidates_output_path, metadata_output_path],
+        [
+            investors_output_path,
+            candidates_output_path,
+            DEFAULT_SHAREHOLDER_CANDIDATE_DETAILS_OUTPUT_DIR,
+            metadata_output_path,
+        ],
         "Update investors data",
     )
 

@@ -1,0 +1,61 @@
+{
+  "id": "リテルパトナズ",
+  "name": "リテールパートナズ",
+  "aliases": [
+    "リテールパートナズ"
+  ],
+  "stocks": [
+    {
+      "code": "9948",
+      "name": "アークス",
+      "price": 3225.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.027418660707820453,
+      "per_actual": 16.80564261954262,
+      "per": 15.365357380165289,
+      "per_next": 14.993614862903225,
+      "fcf_yield_avg": 0.049174695919202635,
+      "total_payout_ratio": 15.03220529772576,
+      "equity_ratio": 64.4946968464102,
+      "peg_trailing_5": 1.6809666070987468,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.7033856463555492,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.3333333333333335,
+      "has_preferred_shares": false,
+      "croic": 0.03819375565479503,
+      "fcf_cagr": 6.5640103703674235,
+      "fcf_cagr_r2": 0.08213769076069098,
+      "fcf_sma_cagr": 0.036827701973509486,
+      "pbr": 1.0102361171938252,
+      "amount_millions": 4289,
+      "ratio_percent": 2.3
+    },
+    {
+      "code": "9956",
+      "name": "バロー HD",
+      "price": 3280.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.1024458214470507,
+      "per_actual": 12.969019827156878,
+      "per": 11.067437295,
+      "per_next": 9.319947195789474,
+      "fcf_yield_avg": 0.024057624443943146,
+      "total_payout_ratio": 12.511929935447627,
+      "equity_ratio": 36.77804150690768,
+      "peg_trailing_5": 0.8062657092438483,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.560807825262213,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.0670731707317074,
+      "has_preferred_shares": false,
+      "croic": -0.008779954713482052,
+      "fcf_cagr": 11.316422363111407,
+      "fcf_cagr_r2": 0.04637021901198309,
+      "fcf_sma_cagr": 0.14252118091377408,
+      "pbr": 0.9416941695250555,
+      "amount_millions": 4133,
+      "ratio_percent": 2.3
+    }
+  ]
+}

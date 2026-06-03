@@ -1,0 +1,61 @@
+{
+  "id": "前澤工業",
+  "name": "前澤工業",
+  "aliases": [
+    "前澤工業"
+  ],
+  "stocks": [
+    {
+      "code": "6485",
+      "name": "前澤給装工業",
+      "price": 1388.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.6453454862274647,
+      "per_actual": 12.543926019335855,
+      "per": 11.477692307692308,
+      "per_next": 13.50316742081448,
+      "fcf_yield_avg": 0.0322029354600898,
+      "total_payout_ratio": 20.38067153676027,
+      "equity_ratio": 80.87960346102004,
+      "peg_trailing_5": 2.13838411825836,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 4.405431542177281,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.053314121037464,
+      "has_preferred_shares": false,
+      "croic": 0.032389861032712415,
+      "fcf_cagr": -9.323621227887617,
+      "fcf_cagr_r2": 0.055240563685893626,
+      "fcf_sma_cagr": -0.1828150299635266,
+      "pbr": 0.7506665995874628,
+      "amount_millions": 1721,
+      "ratio_percent": 5.8
+    },
+    {
+      "code": "7925",
+      "name": "前澤化成工業",
+      "price": 1926.0,
+      "price_date": "2026-05-27",
+      "net_cash_ratio": 0.7510371674668032,
+      "per_actual": 17.67784830805134,
+      "per": 16.83324,
+      "per_next": 16.37828756756757,
+      "fcf_yield_avg": 0.024739411096404755,
+      "total_payout_ratio": 8.950544676287315,
+      "equity_ratio": 76.50147291637442,
+      "peg_trailing_5": 0.8689019616134679,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.0638889053451603,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.8172377985462098,
+      "has_preferred_shares": false,
+      "croic": 0.036748474224126734,
+      "fcf_cagr": 33.05682222437826,
+      "fcf_cagr_r2": 0.3838032190099631,
+      "fcf_sma_cagr": 0.633078231292517,
+      "pbr": 0.7298877941849541,
+      "amount_millions": 1676,
+      "ratio_percent": 5.5
+    }
+  ]
+}

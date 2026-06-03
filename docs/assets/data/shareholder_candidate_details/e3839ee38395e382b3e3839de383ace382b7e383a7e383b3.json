@@ -1,0 +1,61 @@
+{
+  "id": "マフコポレション",
+  "name": "(株)マーフコーポレーション",
+  "aliases": [
+    "(株)マーフコーポレーション"
+  ],
+  "stocks": [
+    {
+      "code": "4015",
+      "name": "ペイクラウド HD",
+      "price": 473.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.11397290714701215,
+      "per_actual": 52.52387050189559,
+      "per": 20.97380278888889,
+      "per_next": 15.101138008,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 0.005244637851666735,
+      "equity_ratio": 46.55667153292739,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.19510381475152688,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 1.666681898329029,
+      "amount_millions": 218,
+      "ratio_percent": 2.9
+    },
+    {
+      "code": "6417",
+      "name": "三共",
+      "price": 1597.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.618012655644009,
+      "per_actual": 6.805174840717143,
+      "per": 7.9875,
+      "per_next": 7.6546875,
+      "fcf_yield_avg": 0.09050717833571477,
+      "total_payout_ratio": 68.87963529972103,
+      "equity_ratio": 83.43584519570312,
+      "peg_trailing_5": 0.2071291401720123,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.33893922707425356,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.8169014084507045,
+      "has_preferred_shares": false,
+      "croic": 0.1938377424039639,
+      "fcf_cagr": 11.017040431316953,
+      "fcf_cagr_r2": 0.34492188403589535,
+      "fcf_sma_cagr": 0.08095655387292733,
+      "pbr": 1.289192432386914,
+      "amount_millions": 6390,
+      "ratio_percent": 1.5
+    }
+  ]
+}

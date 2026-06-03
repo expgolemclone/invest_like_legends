@@ -1,0 +1,61 @@
+{
+  "id": "リンク&モチベ",
+  "name": "リンク&モチベ",
+  "aliases": [
+    "リンク&モチベ"
+  ],
+  "stocks": [
+    {
+      "code": "5139",
+      "name": "オープンワーク",
+      "price": 915.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.34025321010984777,
+      "per_actual": 23.330017094874762,
+      "per": 20.13339587628866,
+      "per_next": 17.753994545454546,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 3.3134668694788996,
+      "equity_ratio": 81.70131438741419,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "missing_input",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "missing_input",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.2314813588060574,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.843339369125967,
+      "amount_millions": 9992,
+      "ratio_percent": 51.1
+    },
+    {
+      "code": "9564",
+      "name": "FCE",
+      "price": 457.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.27227265598963024,
+      "per_actual": 15.223149625073377,
+      "per": 11.595193103448276,
+      "per_next": 10.293691836734693,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 5.901335650583704,
+      "equity_ratio": 68.04254073118388,
+      "peg_trailing_5": 0.6855949721146455,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.4678681892313561,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.1881838074398248,
+      "has_preferred_shares": false,
+      "croic": 0.055400855768004596,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.6553150427048062,
+      "amount_millions": 2066,
+      "ratio_percent": 20.5
+    }
+  ]
+}

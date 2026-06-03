@@ -1,0 +1,61 @@
+{
+  "id": "中央倉庫",
+  "name": "中央倉庫",
+  "aliases": [
+    "中央倉庫"
+  ],
+  "stocks": [
+    {
+      "code": "8118",
+      "name": "キング",
+      "price": 1093.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3870684254631474,
+      "per_actual": 36.93767554297408,
+      "per": 38.67902310428571,
+      "per_next": 33.84414521625,
+      "fcf_yield_avg": 0.029728184699932,
+      "total_payout_ratio": 9.30737053594591,
+      "equity_ratio": 81.77859003771825,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.646843549862763,
+      "has_preferred_shares": false,
+      "croic": 0.014245014245014245,
+      "fcf_cagr": 11.022692577594917,
+      "fcf_cagr_r2": 0.05085816697987912,
+      "fcf_sma_cagr": -0.03413261661358025,
+      "pbr": 1.2046859253837596,
+      "amount_millions": 1104,
+      "ratio_percent": 4.0
+    },
+    {
+      "code": "9324",
+      "name": "安田倉庫",
+      "price": 2209.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.5672938768279961,
+      "per_actual": 23.93477516059957,
+      "per": 11.17754,
+      "per_next": 11.17754,
+      "fcf_yield_avg": -0.030160184322012423,
+      "total_payout_ratio": 7.6716343667748,
+      "equity_ratio": 23.91593761886649,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 1.0455629416738943,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.765504753282028,
+      "has_preferred_shares": false,
+      "croic": 0.059952735161940184,
+      "fcf_cagr": -12.950886229177621,
+      "fcf_cagr_r2": 0.027843328126055035,
+      "fcf_sma_cagr": -0.5478227654698242,
+      "pbr": 0.7120586080586081,
+      "amount_millions": 2165,
+      "ratio_percent": 3.2
+    }
+  ]
+}

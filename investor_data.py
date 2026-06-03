@@ -17,6 +17,9 @@ DEFAULT_OUTPUT_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "data" / "investo
 DEFAULT_SHAREHOLDER_CANDIDATES_OUTPUT_PATH: Path = (
     PROJECT_ROOT / "docs" / "assets" / "data" / "shareholder_candidates.json"
 )
+DEFAULT_SHAREHOLDER_CANDIDATE_DETAILS_OUTPUT_DIR: Path = (
+    PROJECT_ROOT / "docs" / "assets" / "data" / "shareholder_candidate_details"
+)
 DEFAULT_STOCK_PRICE_METADATA_OUTPUT_PATH: Path = (
     PROJECT_ROOT / "docs" / "assets" / "stock-price-meta.json"
 )
@@ -139,6 +142,22 @@ class ShareholderCandidateEntry(TypedDict):
     holding_count: int
     priced_holding_count: int
     total_amount_millions: int
+    stocks: list[StockEntry]
+
+
+class ShareholderCandidateSummaryEntry(TypedDict):
+    id: str
+    name: str
+    aliases: list[str]
+    holding_count: int
+    priced_holding_count: int
+    total_amount_millions: int
+
+
+class ShareholderCandidateDetailEntry(TypedDict):
+    id: str
+    name: str
+    aliases: list[str]
     stocks: list[StockEntry]
 
 
@@ -347,12 +366,90 @@ def write_shareholder_candidates_document(
     output_path: Path | None = None,
 ) -> Path:
     resolved_output_path: Path = output_path or DEFAULT_SHAREHOLDER_CANDIDATES_OUTPUT_PATH
+    summary_document: list[ShareholderCandidateSummaryEntry] = (
+        summarize_shareholder_candidates_document(document)
+    )
     resolved_output_path.parent.mkdir(parents=True, exist_ok=True)
     resolved_output_path.write_text(
-        json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(summary_document, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
     return resolved_output_path
+
+
+def write_shareholder_candidate_detail_documents(
+    document: list[ShareholderCandidateEntry],
+    *,
+    output_dir: Path | None = None,
+) -> list[Path]:
+    resolved_output_dir: Path = (
+        output_dir or DEFAULT_SHAREHOLDER_CANDIDATE_DETAILS_OUTPUT_DIR
+    )
+    resolved_output_dir.mkdir(parents=True, exist_ok=True)
+
+    written_paths: list[Path] = []
+    for candidate in document:
+        detail_path: Path = resolved_output_dir / shareholder_candidate_detail_filename(
+            candidate["id"]
+        )
+        detail: ShareholderCandidateDetailEntry = build_shareholder_candidate_detail(
+            candidate
+        )
+        detail_path.write_text(
+            json.dumps(detail, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        written_paths.append(detail_path)
+
+    return written_paths
+
+
+def summarize_shareholder_candidates_document(
+    document: list[ShareholderCandidateEntry],
+) -> list[ShareholderCandidateSummaryEntry]:
+    return [summarize_shareholder_candidate(candidate) for candidate in document]
+
+
+def summarize_shareholder_candidate(
+    candidate: ShareholderCandidateEntry,
+) -> ShareholderCandidateSummaryEntry:
+    return {
+        "id": candidate["id"],
+        "name": candidate["name"],
+        "aliases": candidate["aliases"],
+        "holding_count": candidate["holding_count"],
+        "priced_holding_count": candidate["priced_holding_count"],
+        "total_amount_millions": candidate["total_amount_millions"],
+    }
+
+
+def build_shareholder_candidate_details_map(
+    document: list[ShareholderCandidateEntry],
+) -> dict[str, ShareholderCandidateDetailEntry]:
+    details: dict[str, ShareholderCandidateDetailEntry] = {}
+    for candidate in document:
+        candidate_id: str = candidate["id"]
+        if candidate_id in details:
+            raise ValueError(f"duplicate shareholder candidate id: {candidate_id}")
+        details[candidate_id] = build_shareholder_candidate_detail(candidate)
+    return details
+
+
+def build_shareholder_candidate_detail(
+    candidate: ShareholderCandidateEntry,
+) -> ShareholderCandidateDetailEntry:
+    return {
+        "id": candidate["id"],
+        "name": candidate["name"],
+        "aliases": candidate["aliases"],
+        "stocks": candidate["stocks"],
+    }
+
+
+def shareholder_candidate_detail_filename(candidate_id: str) -> str:
+    if not candidate_id:
+        raise ValueError("candidate_id must not be empty")
+    return candidate_id.encode("utf-8").hex() + ".json"
 
 
 def write_stock_price_metadata(

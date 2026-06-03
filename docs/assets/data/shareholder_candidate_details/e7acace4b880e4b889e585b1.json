@@ -1,0 +1,61 @@
+{
+  "id": "第一三共",
+  "name": "第一三共",
+  "aliases": [
+    "第一三共"
+  ],
+  "stocks": [
+    {
+      "code": "3034",
+      "name": "クオール HD",
+      "price": 1805.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.6545173687810344,
+      "per_actual": 13.597894447134005,
+      "per": 10.326401018382352,
+      "per_next": 9.36260359,
+      "fcf_yield_avg": 0.01334244249467364,
+      "total_payout_ratio": 16.85001383253053,
+      "equity_ratio": 35.77150229537355,
+      "peg_trailing_5": 2.779612345914555,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.0247596170481716,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.2742382271468145,
+      "has_preferred_shares": false,
+      "croic": -0.08647487140662229,
+      "fcf_cagr": -5.63884118158854,
+      "fcf_cagr_r2": 0.0005660191172541351,
+      "fcf_sma_cagr": -0.34328139858093776,
+      "pbr": 1.1300577251440342,
+      "amount_millions": 2346,
+      "ratio_percent": 3.3
+    },
+    {
+      "code": "4894",
+      "name": "クオリプス",
+      "price": 4560.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.12902670004467004,
+      "per_actual": -58.55057494312027,
+      "per": -38.49652506122449,
+      "per_next": -37.72659456,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 0.0022265460474150994,
+      "equity_ratio": 95.34158456279415,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_per",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.17036609031444386,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 6.822541585453672,
+      "amount_millions": 4560,
+      "ratio_percent": 12.1
+    }
+  ]
+}

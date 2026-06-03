@@ -1,0 +1,61 @@
+{
+  "id": "インダスジャパンロングオンリマスタファンド",
+  "name": "インダスジャパン･ロングオンリーマスターファンド",
+  "aliases": [
+    "インダスジャパン･ロングオンリーマスターファンド"
+  ],
+  "stocks": [
+    {
+      "code": "268A",
+      "name": "リガクHD",
+      "price": 2853.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.06413212288335758,
+      "per_actual": 56.625656337163406,
+      "per": 51.647128632,
+      "per_next": 43.03927386,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 47.72770221749483,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.33298282509638977,
+      "has_preferred_shares": false,
+      "croic": 0.019166244069162425,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 7.303374676455948,
+      "amount_millions": 7560,
+      "ratio_percent": 1.1
+    },
+    {
+      "code": "4419",
+      "name": "Finatext HD",
+      "price": 1318.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.12829961909021106,
+      "per_actual": 103.68434218464365,
+      "per": 48.85858008571429,
+      "per_next": 40.236477717647055,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 46.95696861104576,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.14347241698341118,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 7.105097728575385,
+      "amount_millions": 1924,
+      "ratio_percent": 2.8
+    }
+  ]
+}

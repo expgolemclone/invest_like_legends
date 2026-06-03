@@ -1,0 +1,61 @@
+{
+  "id": "椿本興業",
+  "name": "椿本興業",
+  "aliases": [
+    "椿本興業"
+  ],
+  "stocks": [
+    {
+      "code": "6246",
+      "name": "テクノスマート",
+      "price": 1943.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.5414413952698133,
+      "per_actual": 10.078490485543446,
+      "per": 10.040225816666666,
+      "per_next": 9.957248743801653,
+      "fcf_yield_avg": 0.0316225581772232,
+      "total_payout_ratio": 6.537510662795534,
+      "equity_ratio": 54.16521735558224,
+      "peg_trailing_5": 3.0627862874342546,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 3.956555127429704,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.2645393721049922,
+      "has_preferred_shares": false,
+      "croic": -0.1194075814962109,
+      "fcf_cagr": -29.376824376865716,
+      "fcf_cagr_r2": 0.11839345849634934,
+      "fcf_sma_cagr": -0.22650093667936902,
+      "pbr": 1.227436978111607,
+      "amount_millions": 855,
+      "ratio_percent": 3.6
+    },
+    {
+      "code": "6371",
+      "name": "椿本チエイン",
+      "price": 2649.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.19803953219512427,
+      "per_actual": 12.71851442324383,
+      "per": 10.821499079653845,
+      "per_next": 13.592221066231884,
+      "fcf_yield_avg": 0.038076624210121375,
+      "total_payout_ratio": 12.224952080903325,
+      "equity_ratio": 58.08215122069392,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.5100037750094375,
+      "has_preferred_shares": false,
+      "croic": 0.0421792540293824,
+      "fcf_cagr": 13.480848887636776,
+      "fcf_cagr_r2": 0.21246545125388142,
+      "fcf_sma_cagr": 0.09053246686577787,
+      "pbr": 1.0732256241217262,
+      "amount_millions": 9192,
+      "ratio_percent": 3.2
+    }
+  ]
+}

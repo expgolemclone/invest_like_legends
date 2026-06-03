@@ -1,0 +1,61 @@
+{
+  "id": "三井物産流通グルプ",
+  "name": "三井物産流通グループ",
+  "aliases": [
+    "三井物産流通グループ"
+  ],
+  "stocks": [
+    {
+      "code": "141A",
+      "name": "トライアル HD",
+      "price": 2686.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.24475323196267676,
+      "per_actual": 28.047901327433628,
+      "per": 68.67061175,
+      "per_next": 24.059776379562045,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 0.9386596637291984,
+      "equity_ratio": 41.692003876343314,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "missing_input",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "missing_input",
+      "dividend_yield": 0.5956813104988831,
+      "has_preferred_shares": false,
+      "croic": -0.25097526831544564,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.5546310599249775,
+      "amount_millions": 2686,
+      "ratio_percent": 0.8
+    },
+    {
+      "code": "3198",
+      "name": "SFP HD",
+      "price": 2248.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.027248284869542713,
+      "per_actual": 34.53191211410542,
+      "per": 36.63226633714286,
+      "per_next": 28.491762706666666,
+      "fcf_yield_avg": 0.03673438919084862,
+      "total_payout_ratio": 30.561022069903338,
+      "equity_ratio": 62.328689917309966,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.6227758007117438,
+      "has_preferred_shares": false,
+      "croic": 0.16604355092691778,
+      "fcf_cagr": -2.3028395026073283,
+      "fcf_cagr_r2": 0.001405497334912488,
+      "fcf_sma_cagr": 0.018540652128457902,
+      "pbr": 5.87280687983523,
+      "amount_millions": 472,
+      "ratio_percent": 0.9
+    }
+  ]
+}

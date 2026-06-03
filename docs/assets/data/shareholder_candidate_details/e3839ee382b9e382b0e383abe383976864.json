@@ -1,0 +1,61 @@
+{
+  "id": "マスグルプhd",
+  "name": "マースグループHD",
+  "aliases": [
+    "マースグループHD"
+  ],
+  "stocks": [
+    {
+      "code": "2676",
+      "name": "高千穂交易",
+      "price": 1993.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2731294178358994,
+      "per_actual": 27.80647963865453,
+      "per": 27.0298632,
+      "per_next": 25.183102360248448,
+      "fcf_yield_avg": 0.015399816501229402,
+      "total_payout_ratio": 11.953070730549117,
+      "equity_ratio": 65.77694601385323,
+      "peg_trailing_5": 0.5536689589925177,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.1020049314519964,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.483692925238334,
+      "has_preferred_shares": false,
+      "croic": 0.16323429917879806,
+      "fcf_cagr": 18.8122360446244,
+      "fcf_cagr_r2": 0.1340681718599265,
+      "fcf_sma_cagr": 0.1560217676332556,
+      "pbr": 2.4084263092368503,
+      "amount_millions": 3189,
+      "ratio_percent": 7.9
+    },
+    {
+      "code": "7173",
+      "name": "東京きらぼし FG",
+      "price": 11100.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 10.848387376040305,
+      "per": 10.309584136363636,
+      "per_next": 9.320993876712329,
+      "fcf_yield_avg": 0.20849090681291962,
+      "total_payout_ratio": 5.184643186817078,
+      "equity_ratio": 5.3060328144103535,
+      "peg_trailing_5": 0.3330136053854918,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.35123014134030084,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.7657657657657657,
+      "has_preferred_shares": true,
+      "croic": -0.4555945170545107,
+      "fcf_cagr": -2.419696884254489,
+      "fcf_cagr_r2": 0.0015851116507908263,
+      "fcf_sma_cagr": 0.09233947843930923,
+      "pbr": 0.9162445908606147,
+      "amount_millions": 6549,
+      "ratio_percent": 1.9
+    }
+  ]
+}

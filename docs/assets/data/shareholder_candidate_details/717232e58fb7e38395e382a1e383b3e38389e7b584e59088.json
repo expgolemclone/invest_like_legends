@@ -1,0 +1,61 @@
+{
+  "id": "qr2号ファンド組合",
+  "name": "QR2号ファンド投資事業組合",
+  "aliases": [
+    "QR2号ファンド投資事業組合"
+  ],
+  "stocks": [
+    {
+      "code": "8101",
+      "name": "GSIクレオス",
+      "price": 2272.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.19036614580507893,
+      "per_actual": 12.169307983036472,
+      "per": 11.4780912896,
+      "per_next": 11.03662624,
+      "fcf_yield_avg": 0.04005544026440848,
+      "total_payout_ratio": 12.632762394160494,
+      "equity_ratio": 32.04401925842556,
+      "peg_trailing_5": 0.6568479757907356,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7613950158906665,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 4.48943661971831,
+      "has_preferred_shares": false,
+      "croic": 0.045387653938502054,
+      "fcf_cagr": -25.42670484205198,
+      "fcf_cagr_r2": 0.08056081542992079,
+      "fcf_sma_cagr": -0.12645752518624387,
+      "pbr": 0.953773456890248,
+      "amount_millions": 682,
+      "ratio_percent": 2.3
+    },
+    {
+      "code": "9505",
+      "name": "北陸電力",
+      "price": 804.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -6.279382384531336,
+      "per_actual": 2.5973699395683676,
+      "per": 2.729249303596774,
+      "per_next": 4.338806585205128,
+      "fcf_yield_avg": -0.18205703363311168,
+      "total_payout_ratio": 6.214044791366008,
+      "equity_ratio": 18.76090825505557,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.8645121193287757,
+      "has_preferred_shares": false,
+      "croic": -0.10287428042349342,
+      "fcf_cagr": -5.402264083386574,
+      "fcf_cagr_r2": 0.0033832201917974557,
+      "fcf_sma_cagr": -0.10765627648264277,
+      "pbr": 0.4221397611133425,
+      "amount_millions": 4907,
+      "ratio_percent": 2.9
+    }
+  ]
+}

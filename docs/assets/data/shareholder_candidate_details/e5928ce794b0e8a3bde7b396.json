@@ -1,0 +1,61 @@
+{
+  "id": "和田製糖",
+  "name": "和田製糖",
+  "aliases": [
+    "和田製糖"
+  ],
+  "stocks": [
+    {
+      "code": "2109",
+      "name": "DM三井製糖",
+      "price": 3225.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.12551402926794522,
+      "per_actual": 16.119764177918984,
+      "per": 12.6842394375,
+      "per_next": 12.527643888888889,
+      "fcf_yield_avg": 0.03543275118816125,
+      "total_payout_ratio": 13.63108926254058,
+      "equity_ratio": 54.11531385388435,
+      "peg_trailing_5": 0.7657893344657118,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.6441854725025206,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.0155038759689923,
+      "has_preferred_shares": false,
+      "croic": 0.12525946445060018,
+      "fcf_cagr": 8.374272554497836,
+      "fcf_cagr_r2": 0.00976304529244946,
+      "fcf_sma_cagr": -0.12110593038246487,
+      "pbr": 0.8502854467450415,
+      "amount_millions": 1064,
+      "ratio_percent": 1.0
+    },
+    {
+      "code": "2114",
+      "name": "フジ日本",
+      "price": 614.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3484209812530861,
+      "per_actual": 11.097180146584732,
+      "per": 10.5275212,
+      "per_next": 11.081601263157895,
+      "fcf_yield_avg": 0.02463939311120393,
+      "total_payout_ratio": 10.456665398751861,
+      "equity_ratio": 63.08659453506179,
+      "peg_trailing_5": 0.49489151724413766,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.3703509073212214,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.710097719869707,
+      "has_preferred_shares": false,
+      "croic": 0.06886494711491531,
+      "fcf_cagr": 1.8748866618086815,
+      "fcf_cagr_r2": 0.00378969919846558,
+      "fcf_sma_cagr": 0.031752261202898424,
+      "pbr": 1.3228639648728124,
+      "amount_millions": 1504,
+      "ratio_percent": 9.5
+    }
+  ]
+}

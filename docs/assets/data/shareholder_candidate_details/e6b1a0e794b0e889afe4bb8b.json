@@ -1,0 +1,61 @@
+{
+  "id": "池田良介",
+  "name": "池田良介",
+  "aliases": [
+    "池田良介"
+  ],
+  "stocks": [
+    {
+      "code": "142A",
+      "name": "ジンジブ",
+      "price": 840.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.057970765064941025,
+      "per_actual": -13.232305815372102,
+      "per": 22.185163636363637,
+      "per_next": 27.1152,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 18.647821303869517,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.24496033048373264,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 6.259440326262601,
+      "amount_millions": 17,
+      "ratio_percent": 0.6
+    },
+    {
+      "code": "6089",
+      "name": "ウィルグループ",
+      "price": 1002.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.2594847503993695,
+      "per_actual": 20.056396363636363,
+      "per": 10.529608090909091,
+      "per_next": 9.65214075,
+      "fcf_yield_avg": 0.058333346067986694,
+      "total_payout_ratio": 1.3684356326168714,
+      "equity_ratio": 34.837649980970696,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 211.1611485093742,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 4.39121756487026,
+      "has_preferred_shares": false,
+      "croic": 0.046297453848397715,
+      "fcf_cagr": 36.386509960105755,
+      "fcf_cagr_r2": 0.39313282138405725,
+      "fcf_sma_cagr": 1.3499837292547998,
+      "pbr": 1.3344742093438562,
+      "amount_millions": 4208,
+      "ratio_percent": 18.1
+    }
+  ]
+}

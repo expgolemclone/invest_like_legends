@@ -1,0 +1,61 @@
+{
+  "id": "東京濾器",
+  "name": "東京濾器",
+  "aliases": [
+    "東京濾器"
+  ],
+  "stocks": [
+    {
+      "code": "3896",
+      "name": "阿波製紙",
+      "price": 402.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -3.4908376320060697,
+      "per_actual": 114.0161081774333,
+      "per": 15.145984266666666,
+      "per_next": 68.1569292,
+      "fcf_yield_avg": -0.1434304887472346,
+      "total_payout_ratio": 5.0717758373812805,
+      "equity_ratio": 13.726919701957588,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.33012134321324954,
+      "fcf_cagr": -68.73050328347765,
+      "fcf_cagr_r2": 0.3991954058334911,
+      "fcf_sma_cagr": -1.7926896816771956,
+      "pbr": 0.539236973786438,
+      "amount_millions": 113,
+      "ratio_percent": 2.8
+    },
+    {
+      "code": "4746",
+      "name": "東計電算",
+      "price": 4280.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3461528936978359,
+      "per_actual": 14.89271000393921,
+      "per": 14.552,
+      "per_next": 13.56542372881356,
+      "fcf_yield_avg": 0.020017267229746616,
+      "total_payout_ratio": 12.746040531760707,
+      "equity_ratio": 52.52392986697573,
+      "peg_trailing_5": 0.9039281868081335,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.0430019637605425,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.0210280373831777,
+      "has_preferred_shares": false,
+      "croic": 0.0854240040094005,
+      "fcf_cagr": 25.92630817249626,
+      "fcf_cagr_r2": 0.5574639031509261,
+      "fcf_sma_cagr": 0.15030809501965203,
+      "pbr": 1.5843531879495882,
+      "amount_millions": 5992,
+      "ratio_percent": 7.5
+    }
+  ]
+}

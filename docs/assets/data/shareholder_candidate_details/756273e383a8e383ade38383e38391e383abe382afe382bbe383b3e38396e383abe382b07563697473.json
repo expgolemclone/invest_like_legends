@@ -1,0 +1,61 @@
+{
+  "id": "ubsヨロッパルクセンブルグucits",
+  "name": "UBSヨーロッパ(ルクセンブルグ)UCITS",
+  "aliases": [
+    "UBSヨーロッパ(ルクセンブルグ)UCITS"
+  ],
+  "stocks": [
+    {
+      "code": "4480",
+      "name": "メドレー",
+      "price": 2159.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.16132108845163154,
+      "per_actual": 72.49501271794871,
+      "per": 39.26813188888889,
+      "per_next": 33.65839876190476,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 10.715502814556832,
+      "equity_ratio": 36.35702511393387,
+      "peg_trailing_5": 4.402746395910448,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.3783670503280134,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.11717015732072193,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 4.776176593013042,
+      "amount_millions": 1490,
+      "ratio_percent": 2.1
+    },
+    {
+      "code": "4483",
+      "name": "JMDC",
+      "price": 2859.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.048287036341416505,
+      "per_actual": 25.716776917113403,
+      "per": 25.282371901621623,
+      "per_next": 21.021297985617977,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 54.553209341350865,
+      "peg_trailing_5": 0.7024352409390806,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7351570124109392,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.5596362364463099,
+      "has_preferred_shares": false,
+      "croic": 0.09645743766122097,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.3840656523988533,
+      "amount_millions": 2687,
+      "ratio_percent": 1.4
+    }
+  ]
+}

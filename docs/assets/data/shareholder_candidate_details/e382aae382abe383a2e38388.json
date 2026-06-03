@@ -1,0 +1,61 @@
+{
+  "id": "オカモト",
+  "name": "オカモト",
+  "aliases": [
+    "オカモト"
+  ],
+  "stocks": [
+    {
+      "code": "5199",
+      "name": "不二ラテックス",
+      "price": 1930.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.9530142772329121,
+      "per_actual": 8.325722339983097,
+      "per": 70.92468771428571,
+      "per_next": 17.119752206896553,
+      "fcf_yield_avg": 0.03567401779224109,
+      "total_payout_ratio": 10.649082590048929,
+      "equity_ratio": 32.72011974361379,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 4.145077720207254,
+      "has_preferred_shares": false,
+      "croic": 0.11434410924577729,
+      "fcf_cagr": 160.44242145698965,
+      "fcf_cagr_r2": 0.2421063800106444,
+      "fcf_sma_cagr": 0.5371187911977039,
+      "pbr": 0.6102077228873489,
+      "amount_millions": 39,
+      "ratio_percent": 2.0
+    },
+    {
+      "code": "7313",
+      "name": "テイ・エステック",
+      "price": 1784.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.4848247866338782,
+      "per_actual": 25.633371958285053,
+      "per": 31.602285714285713,
+      "per_next": 26.652530120481927,
+      "fcf_yield_avg": 0.08592190438304644,
+      "total_payout_ratio": null,
+      "equity_ratio": 70.84322078979383,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 2.57847533632287,
+      "has_preferred_shares": false,
+      "croic": -0.023356034240716677,
+      "fcf_cagr": -13.557821245393914,
+      "fcf_cagr_r2": 0.2897942594038006,
+      "fcf_sma_cagr": -0.12254673996975718,
+      "pbr": 0.6792309156672378,
+      "amount_millions": 7939,
+      "ratio_percent": 3.5
+    }
+  ]
+}

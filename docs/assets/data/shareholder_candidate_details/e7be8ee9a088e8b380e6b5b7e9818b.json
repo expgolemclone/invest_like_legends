@@ -1,0 +1,61 @@
+{
+  "id": "美須賀海運",
+  "name": "美須賀海運",
+  "aliases": [
+    "美須賀海運"
+  ],
+  "stocks": [
+    {
+      "code": "3865",
+      "name": "北越コーポレーション",
+      "price": 905.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.14603518527531575,
+      "per_actual": 9.502419226608282,
+      "per": 22.35804063181818,
+      "per_next": 15.371152934375,
+      "fcf_yield_avg": 0.07112416494287643,
+      "total_payout_ratio": 17.208912985425897,
+      "equity_ratio": 54.72376468790734,
+      "peg_trailing_5": 0.6796665783522352,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 3.3286141729464713,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.4364640883977902,
+      "has_preferred_shares": false,
+      "croic": 0.07584466179234282,
+      "fcf_cagr": -4.03534164932124,
+      "fcf_cagr_r2": 0.014073821346857179,
+      "fcf_sma_cagr": -0.10227537212102267,
+      "pbr": 0.5550196267724828,
+      "amount_millions": 17014,
+      "ratio_percent": 10.0
+    },
+    {
+      "code": "9119",
+      "name": "飯野海運",
+      "price": 1512.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.6448443064604681,
+      "per_actual": 8.964817335438559,
+      "per": 11.4345,
+      "per_next": 14.9688,
+      "fcf_yield_avg": 0.027658742305206947,
+      "total_payout_ratio": 15.501333683151866,
+      "equity_ratio": 41.912208621190416,
+      "peg_trailing_5": 0.24145805732036543,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.9099441725907395,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.0502645502645502,
+      "has_preferred_shares": false,
+      "croic": -0.0002288366267072417,
+      "fcf_cagr": 5.133855794784168,
+      "fcf_cagr_r2": 0.004842132084719676,
+      "fcf_sma_cagr": 0.021408464244729863,
+      "pbr": 1.130535205465344,
+      "amount_millions": 3735,
+      "ratio_percent": 2.2
+    }
+  ]
+}

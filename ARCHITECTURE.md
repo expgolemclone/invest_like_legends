@@ -2,7 +2,7 @@
 
 ## 概要
 
-portfolio と candidates を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` は `scripts/enrich_investors.py` で再生成する。portfolio と candidates の表示データは静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
+portfolio と candidates を表示する Web アプリケーション。GitHub Pages で静的にホスティングし、`docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/data/shareholder_candidate_details/*.json`、`docs/assets/stock-price-meta.json` は `scripts/enrich_investors.py` で再生成する。portfolio と candidates の表示データは静的JSONを手入力せず、`../japan_company_handbook/data/stock_performance.db` の `major_shareholders` から導出する。
 
 コードレビュー監査メモは `codereview-report.md` に記録する。
 
@@ -18,7 +18,8 @@ invest_like_legends/
 │   └── assets/
 │       ├── data/
 │       │   ├── investors.json                 # 生成済みの投資家別表示データ
-│       │   └── shareholder_candidates.json    # 生成済みの株主候補データ
+│       │   ├── shareholder_candidates.json    # 生成済みの株主候補一覧データ
+│       │   └── shareholder_candidate_details/ # 生成済みの株主候補詳細データ
 │       ├── stock-price-meta.json              # 株価基準日 metadata
 │       └── app.js         # invest_like_legends 用テーブル設定
 ├── scripts/
@@ -68,7 +69,7 @@ uv run python serve.py
 uv run python scripts/enrich_investors.py
 ```
 
-`serve.py` はローカル確認用で、`/api/portfolio` と `/api/shareholder-candidates` が手元の四季報 DB、設定、`stock_db` / `formula_screening` の公開 API から毎回データを組み立てる。`/api/stock-price-meta` は `stock_db.api.get_stock_price_metadata()` を返し、共通UIのステータス欄に株価基準日を表示する。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/stock-price-meta.json` を完全再生成する。
+`serve.py` はローカル確認用で、起動時に手元の四季報 DB、設定、`stock_db` / `formula_screening` の公開 API から portfolio と candidates の payload を組み立て、API ルートはその payload を返す。`/api/stock-price-meta` は同じく起動時に取得した `stock_db.api.get_stock_price_metadata()` の結果を返し、共通UIのステータス欄に株価基準日を表示する。`scripts/enrich_investors.py` は公開ページが読む `docs/assets/data/investors.json`、`docs/assets/data/shareholder_candidates.json`、`docs/assets/data/shareholder_candidate_details/*.json`、`docs/assets/stock-price-meta.json` を完全再生成する。
 
 ### 投資家と監視銘柄の追加
 
@@ -120,9 +121,13 @@ uv run python scripts/enrich_investors.py
   - 各銘柄は `code`, `name`, `price`, `price_date`, `net_cash_ratio`, `per_actual`, `per`, `per_next`, `fcf_yield_avg`, `total_payout_ratio`, `equity_ratio`, `peg_trailing_5`, `peg_trailing_5_status`, `peg_blended_5y_actual_2f`, `peg_blended_5y_actual_2f_status`, `dividend_yield`, `has_preferred_shares`, `croic`, `fcf_cagr`, `fcf_cagr_r2`, `fcf_sma_cagr`, `pbr`, `amount_millions`, `ratio_percent` を含む
   - `watch` は `amount_millions: null`, `ratio_percent: 0`
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
-- `assets/data/shareholder_candidates.json`: 株主候補の完全データ
-  - 各候補は `id`, `name`, `aliases`, `holding_count`, `priced_holding_count`, `total_amount_millions`, `stocks` を持つ
-  - `aliases` は同一候補に名寄せして `stocks` に含めた DB 上の株主名をすべて列挙する
+- `assets/data/shareholder_candidates.json`: 株主候補の一覧データ
+  - 各候補は `id`, `name`, `aliases`, `holding_count`, `priced_holding_count`, `total_amount_millions` を持つ
+  - `aliases` は同一候補に名寄せした DB 上の株主名をすべて列挙する
+- `assets/data/shareholder_candidate_details/*.json`: 株主候補ごとの詳細データ
+  - ファイル名は候補 `id` の UTF-8 bytes を hex 文字列にしたものに `.json` を付ける
+  - 各詳細は `id`, `name`, `aliases`, `stocks` を持つ
+  - detail 画面は一覧 JSON を再取得せず、この個別 JSON だけを読む
   - `?view=candidates` は candidates、`?view=candidate&id=...` は candidate 詳細を表示する
   - 人手で編集しない。常に `scripts/enrich_investors.py` で再生成する
 - `assets/stock-price-meta.json`: `stock_db.api.get_stock_price_metadata()` の `price_date` と `target_price_date` を持つ metadata。ローカルでは `/api/stock-price-meta` が同じ形を返す
@@ -160,15 +165,17 @@ uv run python scripts/enrich_investors.py
 
 - 起動時に `stock_db.api.ensure_prices_fresh()` で株価鮮度を判定し、前営業日終値が揃っていない場合は `stock_db` 側の `refresh-prices --if-needed` 経由で Stooq 更新と Yahoo Finance JP 補完を実行する。個別銘柄の株価が取得できない場合も処理は継続し、古い株価は `price_date` と `target_price_date` により共通 UI 側で目立ちにくく表示する
 - 起動時に `build_investors_document()` / `build_shareholder_candidates_document()` を呼び出し、公開用 JSON を自動生成する
-- `/api/portfolio` は `build_investors_document()` を毎回呼び、最新DBから投資家データを組み立てて返す
-- `/api/shareholder-candidates` は `build_shareholder_candidates_document()` を毎回呼び、最新DBから候補データを組み立てて返す
-- `/api/stock-price-meta` は `stock_db.api.get_stock_price_metadata()` 経由で `{ "price_date": "YYYY-MM-DD", "target_price_date": "YYYY-MM-DD" }` を返す
+- `/api/portfolio` は起動時に生成した投資家データを返す
+- `/api/shareholder-candidates` は起動時に生成した候補 summary を返す
+- `/api/shareholder-candidate?id=...` は起動時に生成した候補詳細を返す
+- `/api/stock-price-meta` は起動時に取得した `{ "price_date": "YYYY-MM-DD", "target_price_date": "YYYY-MM-DD" }` を返す
 - 生成済み JSON はローカルAPIの入力には使わない
 - `stock_web_ui.page.IndexPage` でローカル用 `index.html` を描画し、HTTPサーバー本体は `stock_web_ui` に委譲する
 
 ### 生成スクリプト (`scripts/enrich_investors.py`)
 
 - 投資家別表示データと株主候補データを同じ入力ソースから完全再生成する
+- 株主候補は一覧 summary と個別 detail JSON に分けて出力する
 - 株価基準日 metadata も同時に `docs/assets/stock-price-meta.json` へ書き出す
 - 既存JSONへのマージは行わない
 - 生成した公開JSONに差分がある場合は、対象JSONだけを `jj commit` し、`jj git push` する
@@ -229,6 +236,7 @@ stock_web_ui/assets/stock-table.js + style.css
   ↓
 invest_like_legends/assets/data/investors.json
 invest_like_legends/assets/data/shareholder_candidates.json
+invest_like_legends/assets/data/shareholder_candidate_details/*.json
 invest_like_legends/assets/stock-price-meta.json
 ```
 

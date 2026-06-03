@@ -1,0 +1,61 @@
+{
+  "id": "モルガンスタンレsb",
+  "name": "モルガンスタンレーSB",
+  "aliases": [
+    "モルガンスタンレーSB"
+  ],
+  "stocks": [
+    {
+      "code": "2337",
+      "name": "いちご",
+      "price": 445.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.161388836611875,
+      "per_actual": 12.18918531243827,
+      "per": 11.356880818404909,
+      "per_next": 10.578123276571429,
+      "fcf_yield_avg": -0.025051162553682716,
+      "total_payout_ratio": 22.957353392125075,
+      "equity_ratio": 27.413053366608064,
+      "peg_trailing_5": 0.7619676564391027,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7255982212663347,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.584269662921348,
+      "has_preferred_shares": false,
+      "croic": -0.07365785192510128,
+      "fcf_cagr": 16.366537675892054,
+      "fcf_cagr_r2": 0.01361961522599282,
+      "fcf_sma_cagr": 0.022432272311089563,
+      "pbr": 1.508623517513406,
+      "amount_millions": 3667,
+      "ratio_percent": 1.8
+    },
+    {
+      "code": "3350",
+      "name": "メタプラネット",
+      "price": 295.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.07588847136856593,
+      "per_actual": -3.954722400732277,
+      "per": 46.9850681625,
+      "per_next": 39.56637318947369,
+      "fcf_yield_avg": -0.1531946606974341,
+      "total_payout_ratio": 0.033787329934471075,
+      "equity_ratio": 86.92601813626342,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -1.133970657950031,
+      "fcf_cagr": -53.15555626104006,
+      "fcf_cagr_r2": 0.28901368368416847,
+      "fcf_sma_cagr": -23.172336449272308,
+      "pbr": 0.8196404326721792,
+      "amount_millions": 5953,
+      "ratio_percent": 1.7
+    }
+  ]
+}

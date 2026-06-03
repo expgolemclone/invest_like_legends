@@ -1,0 +1,61 @@
+{
+  "id": "横浜振興",
+  "name": "横浜振興",
+  "aliases": [
+    "横浜振興"
+  ],
+  "stocks": [
+    {
+      "code": "2874",
+      "name": "横浜冷凍",
+      "price": 2508.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.5153397796923924,
+      "per_actual": 75.09137627502528,
+      "per": 38.08480571076923,
+      "per_next": 36.227010310243905,
+      "fcf_yield_avg": -0.040222649591688156,
+      "total_payout_ratio": 3.895489857180049,
+      "equity_ratio": 33.68829951108432,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.4784688995215311,
+      "has_preferred_shares": false,
+      "croic": -0.03693070342951317,
+      "fcf_cagr": 18.340477570847654,
+      "fcf_cagr_r2": 0.10604230104382155,
+      "fcf_sma_cagr": 0.07132494683916611,
+      "pbr": 1.802185741679508,
+      "amount_millions": 2232,
+      "ratio_percent": 1.5
+    },
+    {
+      "code": "9068",
+      "name": "丸全昭和運輸",
+      "price": 7560.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.19783424374038394,
+      "per_actual": 15.899013121175031,
+      "per": 12.98949372,
+      "per_next": 12.4699139712,
+      "fcf_yield_avg": 0.026527207867190074,
+      "total_payout_ratio": 10.251233512535492,
+      "equity_ratio": 60.899171213193945,
+      "peg_trailing_5": 3.9036340864589256,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.9107524585225055,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.1904761904761905,
+      "has_preferred_shares": false,
+      "croic": 0.041082312250880486,
+      "fcf_cagr": 13.15410507894002,
+      "fcf_cagr_r2": 0.15725894672923738,
+      "fcf_sma_cagr": 0.13665277036151835,
+      "pbr": 1.1795137731837064,
+      "amount_millions": 3326,
+      "ratio_percent": 2.1
+    }
+  ]
+}

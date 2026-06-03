@@ -1,0 +1,61 @@
+{
+  "id": "豊島",
+  "name": "豊島",
+  "aliases": [
+    "豊島"
+  ],
+  "stocks": [
+    {
+      "code": "2685",
+      "name": "アンドエスティHD",
+      "price": 3230.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.10995977769882759,
+      "per_actual": 16.395256916996047,
+      "per": 13.245714285714286,
+      "per_next": 14.329454545454546,
+      "fcf_yield_avg": 0.040796452316906054,
+      "total_payout_ratio": 14.628482972136222,
+      "equity_ratio": 56.55182258016047,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.393188854489164,
+      "has_preferred_shares": false,
+      "croic": 0.058478910660909995,
+      "fcf_cagr": -10.373197804968274,
+      "fcf_cagr_r2": 0.09489852520493738,
+      "fcf_sma_cagr": -0.04744066188100904,
+      "pbr": 2.041761658031088,
+      "amount_millions": 6460,
+      "ratio_percent": 4.0
+    },
+    {
+      "code": "325A",
+      "name": "TENTIAL",
+      "price": 3635.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.06980451724409943,
+      "per_actual": 34.045860334621466,
+      "per": 12.825420753456221,
+      "per_next": 11.044112315476191,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 61.739109901936686,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "missing_input",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "missing_input",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.09680479463918955,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 5.979698886507566,
+      "amount_millions": 872,
+      "ratio_percent": 3.2
+    }
+  ]
+}

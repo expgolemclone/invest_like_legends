@@ -1,0 +1,61 @@
+{
+  "id": "日本触媒",
+  "name": "日本触媒",
+  "aliases": [
+    "日本触媒"
+  ],
+  "stocks": [
+    {
+      "code": "4471",
+      "name": "三洋化成工業",
+      "price": 5260.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3680189934206601,
+      "per_actual": 29.82240316068417,
+      "per": 8.970492428985507,
+      "per_next": 14.737237561904761,
+      "fcf_yield_avg": 0.04746237432735536,
+      "total_payout_ratio": 9.130579814859972,
+      "equity_ratio": 68.42758808387104,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.6159695817490494,
+      "has_preferred_shares": false,
+      "croic": 0.07171230766736385,
+      "fcf_cagr": 3.860612765386827,
+      "fcf_cagr_r2": 0.022870203797942617,
+      "fcf_sma_cagr": 0.04598889453305577,
+      "pbr": 0.8950904218304869,
+      "amount_millions": 3945,
+      "ratio_percent": 3.2
+    },
+    {
+      "code": "4634",
+      "name": "artience",
+      "price": 4195.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.0807761755905456,
+      "per_actual": 20.401552425531914,
+      "per": 10.045335813333333,
+      "per_next": 9.58872964,
+      "fcf_yield_avg": 0.038209156633106686,
+      "total_payout_ratio": 22.14057627763087,
+      "equity_ratio": 45.612191958495465,
+      "peg_trailing_5": 1.6028682341883544,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.4493008914712765,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.430274135876043,
+      "has_preferred_shares": false,
+      "croic": 0.06318272573794124,
+      "fcf_cagr": 0.15211103880260116,
+      "fcf_cagr_r2": 2.9840686460259494e-05,
+      "fcf_sma_cagr": 0.013468147508773232,
+      "pbr": 0.760955385902893,
+      "amount_millions": 6964,
+      "ratio_percent": 3.3
+    }
+  ]
+}

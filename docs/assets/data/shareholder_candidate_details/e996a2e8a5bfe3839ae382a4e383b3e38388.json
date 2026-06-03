@@ -1,0 +1,61 @@
+{
+  "id": "関西ペイント",
+  "name": "関西ペイント",
+  "aliases": [
+    "関西ペイント"
+  ],
+  "stocks": [
+    {
+      "code": "4619",
+      "name": "日本特殊塗料",
+      "price": 2325.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.503287668837315,
+      "per_actual": 11.108061513557264,
+      "per": 10.979208,
+      "per_next": 10.979208,
+      "fcf_yield_avg": 0.040777076087819816,
+      "total_payout_ratio": 6.361114572198651,
+      "equity_ratio": 54.586300341377004,
+      "peg_trailing_5": 0.6794870648575702,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.9458631812005719,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.5806451612903225,
+      "has_preferred_shares": false,
+      "croic": 0.03760916048839951,
+      "fcf_cagr": 27.167272456528657,
+      "fcf_cagr_r2": 0.29395361675658327,
+      "fcf_sma_cagr": 0.5262711147667403,
+      "pbr": 0.8562254733755498,
+      "amount_millions": 3394,
+      "ratio_percent": 6.2
+    },
+    {
+      "code": "7670",
+      "name": "オーウエル",
+      "price": 1029.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.6271738627423759,
+      "per_actual": 6.0733558178752105,
+      "per": 7.7175,
+      "per_next": 9.822272727272727,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 17.048452033874774,
+      "equity_ratio": 34.083369707551284,
+      "peg_trailing_5": 0.21815011194778655,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8718010013604377,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.9718172983479106,
+      "has_preferred_shares": false,
+      "croic": 0.08620511228396978,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 0.5016249593760156,
+      "amount_millions": 720,
+      "ratio_percent": 6.6
+    }
+  ]
+}

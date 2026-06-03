@@ -1,0 +1,61 @@
+{
+  "id": "高島勇二",
+  "name": "高島勇二",
+  "aliases": [
+    "高島勇二"
+  ],
+  "stocks": [
+    {
+      "code": "6670",
+      "name": "MCJ",
+      "price": 2183.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.17871564449696575,
+      "per_actual": 15.810857536293765,
+      "per": 14.81161134,
+      "per_next": 13.88588563125,
+      "fcf_yield_avg": 0.01875195482051223,
+      "total_payout_ratio": 6.079551008976628,
+      "equity_ratio": 60.324782757746945,
+      "peg_trailing_5": 1.1889417132427482,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.220799922000915,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.07675763868288342,
+      "fcf_cagr": -6.790869668311942,
+      "fcf_cagr_r2": 0.010070805967758065,
+      "fcf_sma_cagr": 0.05506477458431336,
+      "pbr": 2.4817829148142354,
+      "amount_millions": 70860,
+      "ratio_percent": 31.9
+    },
+    {
+      "code": "6840",
+      "name": "AKIBA HD",
+      "price": 1015.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.08435318071101491,
+      "per_actual": 83.10870773506252,
+      "per": 17.604619622641508,
+      "per_next": 17.278608148148148,
+      "fcf_yield_avg": -0.01609854034453478,
+      "total_payout_ratio": 0.024661194203699794,
+      "equity_ratio": 25.914099956515635,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.05044587303840918,
+      "fcf_cagr": -15.43270765368862,
+      "fcf_cagr_r2": 0.035612165615713044,
+      "fcf_sma_cagr": -0.15754293502858333,
+      "pbr": 2.3454929609683983,
+      "amount_millions": 2436,
+      "ratio_percent": 26.1
+    }
+  ]
+}

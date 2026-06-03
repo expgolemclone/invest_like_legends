@@ -1,0 +1,61 @@
+{
+  "id": "大日本塗料",
+  "name": "大日本塗料",
+  "aliases": [
+    "大日本塗料"
+  ],
+  "stocks": [
+    {
+      "code": "4615",
+      "name": "神東塗料",
+      "price": 127.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.4716040706303375,
+      "per_actual": -73.31559322033898,
+      "per": 28.837466666666668,
+      "per_next": 25.444823529411764,
+      "fcf_yield_avg": 0.07566545373842361,
+      "total_payout_ratio": 1.7800916400423523,
+      "equity_ratio": 13.695720087472665,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.04165781083953241,
+      "fcf_cagr": -56.4008554842652,
+      "fcf_cagr_r2": 0.28125098008618926,
+      "fcf_sma_cagr": -0.2025824702285897,
+      "pbr": 0.29593076554696585,
+      "amount_millions": 2165,
+      "ratio_percent": 50.0
+    },
+    {
+      "code": "7670",
+      "name": "オーウエル",
+      "price": 1029.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.6271738627423759,
+      "per_actual": 6.0733558178752105,
+      "per": 7.7175,
+      "per_next": 9.822272727272727,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 17.048452033874774,
+      "equity_ratio": 34.083369707551284,
+      "peg_trailing_5": 0.21815011194778655,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8718010013604377,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.9718172983479106,
+      "has_preferred_shares": false,
+      "croic": 0.08620511228396978,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 0.5016249593760156,
+      "amount_millions": 566,
+      "ratio_percent": 5.2
+    }
+  ]
+}

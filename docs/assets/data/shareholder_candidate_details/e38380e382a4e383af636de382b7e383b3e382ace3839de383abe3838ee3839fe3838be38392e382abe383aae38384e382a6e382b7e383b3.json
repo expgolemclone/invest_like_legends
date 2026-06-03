@@ -1,0 +1,61 @@
+{
+  "id": "ダイワcmシンガポルノミニヒカリツウシン",
+  "name": "ダイワCMシンガポール･ノミニー･ヒカリツウシン",
+  "aliases": [
+    "ダイワCMシンガポール･ノミニー･ヒカリツウシン"
+  ],
+  "stocks": [
+    {
+      "code": "4686",
+      "name": "ジャストシステム",
+      "price": 4210.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.33893641576835476,
+      "per_actual": 21.934485925204836,
+      "per": 17.672314248366014,
+      "per_next": 17.33246205128205,
+      "fcf_yield_avg": 0.023144507323016025,
+      "total_payout_ratio": 1.9470327813223511,
+      "equity_ratio": 86.84980171844019,
+      "peg_trailing_5": 3.764299442725924,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.2536728876653185,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.332541567695962,
+      "has_preferred_shares": false,
+      "croic": -0.11519838665182691,
+      "fcf_cagr": -5.360485974133853,
+      "fcf_cagr_r2": 0.0132811629989255,
+      "fcf_sma_cagr": -0.05238126300887014,
+      "pbr": 2.5744956724589385,
+      "amount_millions": 13388,
+      "ratio_percent": 4.9
+    },
+    {
+      "code": "9517",
+      "name": "イーレックス",
+      "price": 795.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.27446761572099754,
+      "per_actual": 29.338280623229462,
+      "per": 15.53461959,
+      "per_next": 11.297905156363637,
+      "fcf_yield_avg": -0.07384152494718411,
+      "total_payout_ratio": 6.274695008479444,
+      "equity_ratio": 41.8197702468347,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.767295597484277,
+      "has_preferred_shares": false,
+      "croic": 0.11031511960030889,
+      "fcf_cagr": 16.354813059546736,
+      "fcf_cagr_r2": 0.03669618316232682,
+      "fcf_sma_cagr": 0.09281827239978539,
+      "pbr": 0.8573189619205298,
+      "amount_millions": 4245,
+      "ratio_percent": 6.8
+    }
+  ]
+}

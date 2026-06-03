@@ -1,0 +1,61 @@
+{
+  "id": "野村正治",
+  "name": "野村正治",
+  "aliases": [
+    "野村正治"
+  ],
+  "stocks": [
+    {
+      "code": "3174",
+      "name": "ハピネス・アンド・ディ",
+      "price": 519.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -2.3112282820438335,
+      "per_actual": -2.0484933478767373,
+      "per": -33.128808,
+      "per_next": 82.82202,
+      "fcf_yield_avg": 0.15174309923858414,
+      "total_payout_ratio": 17.776854512845738,
+      "equity_ratio": 2.46767875456028,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.05446346528203629,
+      "fcf_cagr": -1.8879756188262857,
+      "fcf_cagr_r2": 0.0009623864419859703,
+      "fcf_sma_cagr": -0.016902412913540554,
+      "pbr": 8.326833829325183,
+      "amount_millions": 52,
+      "ratio_percent": 4.1
+    },
+    {
+      "code": "7483",
+      "name": "ドウシシャ",
+      "price": 2918.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.5597893010161382,
+      "per_actual": 17.017023848962396,
+      "per": 12.830835982117646,
+      "per_next": 11.727108155698925,
+      "fcf_yield_avg": 0.040012981283177984,
+      "total_payout_ratio": 18.099778879670325,
+      "equity_ratio": 84.80786941782767,
+      "peg_trailing_5": 1.9419271450470021,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.9785460968132133,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.0562028786840303,
+      "has_preferred_shares": false,
+      "croic": -0.014544824399260628,
+      "fcf_cagr": -1.3464464299726338,
+      "fcf_cagr_r2": 0.003739540304937881,
+      "fcf_sma_cagr": 0.020383332026996825,
+      "pbr": 1.222135006533018,
+      "amount_millions": 3122,
+      "ratio_percent": 2.8
+    }
+  ]
+}

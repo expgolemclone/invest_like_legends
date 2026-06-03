@@ -1,0 +1,61 @@
+{
+  "id": "ライラック",
+  "name": "(株)ライラック",
+  "aliases": [
+    "(株)ライラック"
+  ],
+  "stocks": [
+    {
+      "code": "7561",
+      "name": "ハークスレイ",
+      "price": 633.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -2.3644524230575925,
+      "per_actual": 10.015523681063122,
+      "per": 9.6469524096,
+      "per_next": 9.275915778461538,
+      "fcf_yield_avg": -0.09019221439655437,
+      "total_payout_ratio": 21.511149966231095,
+      "equity_ratio": 33.33242540210005,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 84.03938764442759,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.211690363349131,
+      "has_preferred_shares": false,
+      "croic": -0.12028917234381795,
+      "fcf_cagr": -72.21237754522049,
+      "fcf_cagr_r2": 0.42327323872099015,
+      "fcf_sma_cagr": -0.5327078698778089,
+      "pbr": 0.4889583371989295,
+      "amount_millions": 5077,
+      "ratio_percent": 42.1
+    },
+    {
+      "code": "9763",
+      "name": "丸建リース",
+      "price": 1220.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.30603699703907433,
+      "per_actual": 10.305213793103448,
+      "per": 9.437406315789474,
+      "per_next": 8.597089315068493,
+      "fcf_yield_avg": 0.058477899624262766,
+      "total_payout_ratio": 15.559582829180544,
+      "equity_ratio": 36.58298869952322,
+      "peg_trailing_5": 1.1087148959426094,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 6.885245901639345,
+      "has_preferred_shares": false,
+      "croic": -0.03889264663252488,
+      "fcf_cagr": -19.25191974238296,
+      "fcf_cagr_r2": 0.4064846262041649,
+      "fcf_sma_cagr": -0.2474317616259173,
+      "pbr": 0.7185156792031598,
+      "amount_millions": 98,
+      "ratio_percent": 2.4
+    }
+  ]
+}

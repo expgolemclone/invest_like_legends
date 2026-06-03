@@ -1,0 +1,61 @@
+{
+  "id": "ニチレイ",
+  "name": "ニチレイ",
+  "aliases": [
+    "ニチレイ"
+  ],
+  "stocks": [
+    {
+      "code": "8424",
+      "name": "芙蓉総合リース",
+      "price": 4094.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.9133072352226903,
+      "per_actual": 8.215979027320715,
+      "per": 21.882051907058823,
+      "per_next": 7.591732294285714,
+      "fcf_yield_avg": -0.24801954102108265,
+      "total_payout_ratio": 14.136753618192424,
+      "equity_ratio": 10.76476475353998,
+      "peg_trailing_5": 0.7099379993731176,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.9296531509526136,
+      "has_preferred_shares": false,
+      "croic": -0.08487965506199678,
+      "fcf_cagr": 7.010141737331696,
+      "fcf_cagr_r2": 0.07011044887095323,
+      "fcf_sma_cagr": 0.03319326236630167,
+      "pbr": 0.7002744330805157,
+      "amount_millions": 5077,
+      "ratio_percent": 1.3
+    },
+    {
+      "code": "9723",
+      "name": "京都ホテル",
+      "price": 628.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.307839657096003,
+      "per_actual": 9.820672600230965,
+      "per": 9.471339,
+      "per_next": 18.942678,
+      "fcf_yield_avg": 0.0691625281282826,
+      "total_payout_ratio": 0.0023491926537525473,
+      "equity_ratio": 15.999254496162152,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.47770700636942676,
+      "has_preferred_shares": true,
+      "croic": 0.08757109671624284,
+      "fcf_cagr": 5.0574459490870805,
+      "fcf_cagr_r2": 0.00999693457190512,
+      "fcf_sma_cagr": 0.054820864548887016,
+      "pbr": 2.848196428604991,
+      "amount_millions": 1256,
+      "ratio_percent": 16.6
+    }
+  ]
+}

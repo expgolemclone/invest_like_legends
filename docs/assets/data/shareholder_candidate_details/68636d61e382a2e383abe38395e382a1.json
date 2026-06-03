@@ -1,0 +1,61 @@
+{
+  "id": "hcmaアルファ",
+  "name": "(株)HCMAアルファ",
+  "aliases": [
+    "(株)HCMAアルファ"
+  ],
+  "stocks": [
+    {
+      "code": "2588",
+      "name": "プレミアムウォーター HD",
+      "price": 3420.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.5448048775332303,
+      "per_actual": 13.232951763452318,
+      "per": 10.644964482857143,
+      "per_next": 9.935300184,
+      "fcf_yield_avg": 0.0659956184369678,
+      "total_payout_ratio": 0.00012614951839620564,
+      "equity_ratio": 22.357150505014452,
+      "peg_trailing_5": 0.3814999019967987,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.2854683603912412,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.608187134502924,
+      "has_preferred_shares": false,
+      "croic": 0.31468252384563195,
+      "fcf_cagr": 28.237421374407557,
+      "fcf_cagr_r2": 0.7591733785038544,
+      "fcf_sma_cagr": 5.906317682950591,
+      "pbr": 2.971912071949906,
+      "amount_millions": 39501,
+      "ratio_percent": 38.5
+    },
+    {
+      "code": "2763",
+      "name": "エフティグループ",
+      "price": 1031.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.5304179441748063,
+      "per_actual": 4.730512370784818,
+      "per": 6.517266314166666,
+      "per_next": 6.517266314166666,
+      "fcf_yield_avg": 0.10384594307516874,
+      "total_payout_ratio": 9.745123098920185,
+      "equity_ratio": 73.51694915254238,
+      "peg_trailing_5": 0.2820471371687808,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.9707604837961308,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.939864209505335,
+      "has_preferred_shares": false,
+      "croic": 0.07023657931774009,
+      "fcf_cagr": 23.127165268395338,
+      "fcf_cagr_r2": 0.23037886541631195,
+      "fcf_sma_cagr": 0.26020244293770656,
+      "pbr": 1.0482835704041285,
+      "amount_millions": 3990,
+      "ratio_percent": 12.7
+    }
+  ]
+}

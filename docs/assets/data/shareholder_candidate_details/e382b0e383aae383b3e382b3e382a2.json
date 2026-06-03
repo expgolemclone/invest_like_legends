@@ -1,0 +1,61 @@
+{
+  "id": "グリンコア",
+  "name": "グリーンコア(株)",
+  "aliases": [
+    "グリーンコア(株)"
+  ],
+  "stocks": [
+    {
+      "code": "2593",
+      "name": "伊藤園",
+      "price": 3010.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.029468289970583945,
+      "per_actual": 18.11876686917208,
+      "per": 256.4892638,
+      "per_next": 18.3206617,
+      "fcf_yield_avg": 0.05965122973696959,
+      "total_payout_ratio": 19.52674324764466,
+      "equity_ratio": 49.95298869987638,
+      "peg_trailing_5": 1.3121520147004904,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.2511168289237833,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.7973421926910298,
+      "has_preferred_shares": true,
+      "croic": 0.020340228692475627,
+      "fcf_cagr": -8.780832618558577,
+      "fcf_cagr_r2": 0.44597756761191476,
+      "fcf_sma_cagr": -0.0635229841006536,
+      "pbr": 1.4575655295474823,
+      "amount_millions": 50508,
+      "ratio_percent": 19.6
+    },
+    {
+      "code": "3143",
+      "name": "オーウイル",
+      "price": 646.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.15743882582272675,
+      "per_actual": 6.671052329628468,
+      "per": 6.426,
+      "per_next": 5.549727272727273,
+      "fcf_yield_avg": 0.02412472357363998,
+      "total_payout_ratio": 17.334430848362736,
+      "equity_ratio": 30.219223510343614,
+      "peg_trailing_5": 0.4721792234831089,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 0.9287925696594427,
+      "has_preferred_shares": false,
+      "croic": 0.023382465697143227,
+      "fcf_cagr": 10.362019836591758,
+      "fcf_cagr_r2": 0.00997262045612636,
+      "fcf_sma_cagr": 0.21354470493805744,
+      "pbr": 1.1592284722782664,
+      "amount_millions": 162,
+      "ratio_percent": 7.9
+    }
+  ]
+}

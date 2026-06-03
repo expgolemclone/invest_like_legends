@@ -1,0 +1,61 @@
+{
+  "id": "幸栄企画",
+  "name": "(株)幸栄企画",
+  "aliases": [
+    "(株)幸栄企画"
+  ],
+  "stocks": [
+    {
+      "code": "3190",
+      "name": "ホットマン",
+      "price": 569.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.5406073468760686,
+      "per_actual": 12.378960226542151,
+      "per": 10.61476794871795,
+      "per_next": 10.34939875,
+      "fcf_yield_avg": 0.04911106550996501,
+      "total_payout_ratio": 2.6325442335478666,
+      "equity_ratio": 44.552282105733134,
+      "peg_trailing_5": 3.1517393507481635,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.8977800615566878,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.7574692442882252,
+      "has_preferred_shares": false,
+      "croic": 0.010551285573802058,
+      "fcf_cagr": -42.30534236456286,
+      "fcf_cagr_r2": 0.21780489395102895,
+      "fcf_sma_cagr": -0.1604113950420396,
+      "pbr": 0.5604488698108592,
+      "amount_millions": 199,
+      "ratio_percent": 4.8
+    },
+    {
+      "code": "9882",
+      "name": "イエローハット",
+      "price": 1621.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.06823188357552015,
+      "per_actual": 12.383719043694494,
+      "per": 11.524022845619834,
+      "per_next": 11.429563641967214,
+      "fcf_yield_avg": 0.01635319089341923,
+      "total_payout_ratio": 13.55701971886143,
+      "equity_ratio": 63.23874201633115,
+      "peg_trailing_5": 1.2616598984620588,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 2.0357803824799507,
+      "has_preferred_shares": false,
+      "croic": -0.003006630342020613,
+      "fcf_cagr": -20.841223709267386,
+      "fcf_cagr_r2": 0.15456693354503742,
+      "fcf_sma_cagr": -0.1446905887704884,
+      "pbr": 1.1562820408312189,
+      "amount_millions": 20327,
+      "ratio_percent": 14.0
+    }
+  ]
+}

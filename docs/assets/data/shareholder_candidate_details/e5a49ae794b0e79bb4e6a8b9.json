@@ -1,0 +1,61 @@
+{
+  "id": "多田直樹",
+  "name": "多田直樹",
+  "aliases": [
+    "多田直樹"
+  ],
+  "stocks": [
+    {
+      "code": "9739",
+      "name": "NSW",
+      "price": 2601.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.6085088595248601,
+      "per_actual": 10.582987438558165,
+      "per": 11.168559077809798,
+      "per_next": 9.616600496277915,
+      "fcf_yield_avg": 0.060185937778190625,
+      "total_payout_ratio": 8.068657124647464,
+      "equity_ratio": 75.08112579269974,
+      "peg_trailing_5": 1.618569578929354,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.584545399016739,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.7301038062283738,
+      "has_preferred_shares": false,
+      "croic": 0.2897175141242938,
+      "fcf_cagr": 9.986163889700867,
+      "fcf_cagr_r2": 0.04250358247614886,
+      "fcf_sma_cagr": 0.05800904496201964,
+      "pbr": 1.0943383972440277,
+      "amount_millions": 780,
+      "ratio_percent": 2.0
+    },
+    {
+      "code": "9989",
+      "name": "サンドラッグ",
+      "price": 3600.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.0753735642702302,
+      "per_actual": 13.97048007804878,
+      "per": 14.31974208,
+      "per_next": 12.70983024852071,
+      "fcf_yield_avg": 0.022936400076092246,
+      "total_payout_ratio": 13.957886407220354,
+      "equity_ratio": 61.113901357411024,
+      "peg_trailing_5": 2.609631632733172,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.440871418834941,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.8055555555555554,
+      "has_preferred_shares": false,
+      "croic": 0.018911487316142853,
+      "fcf_cagr": -34.65130433151299,
+      "fcf_cagr_r2": 0.40993522160522283,
+      "fcf_sma_cagr": -0.19060097482538566,
+      "pbr": 1.5927755147137883,
+      "amount_millions": 11196,
+      "ratio_percent": 2.6
+    }
+  ]
+}

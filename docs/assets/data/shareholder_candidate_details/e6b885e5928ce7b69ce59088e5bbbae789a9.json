@@ -1,0 +1,61 @@
+{
+  "id": "清和綜合建物",
+  "name": "清和綜合建物",
+  "aliases": [
+    "清和綜合建物"
+  ],
+  "stocks": [
+    {
+      "code": "5715",
+      "name": "古河機械金属",
+      "price": 4000.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.33526761616205314,
+      "per_actual": 6.991904613566787,
+      "per": 11.320197565217391,
+      "per_next": 23.669504,
+      "fcf_yield_avg": 0.05030715702979895,
+      "total_payout_ratio": 13.065527078832975,
+      "equity_ratio": 42.26061523023488,
+      "peg_trailing_5": 0.19388681544896808,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 3.705479784803928,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.75,
+      "has_preferred_shares": false,
+      "croic": 0.09457758518119595,
+      "fcf_cagr": 13.848120699443783,
+      "fcf_cagr_r2": 0.3488233013123604,
+      "fcf_sma_cagr": 0.17236607404621562,
+      "pbr": 0.9746224657862427,
+      "amount_millions": 7720,
+      "ratio_percent": 5.3
+    },
+    {
+      "code": "8439",
+      "name": "東京センチュリー",
+      "price": 2306.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -2.050939664881379,
+      "per_actual": 13.309950636381759,
+      "per": 10.318720730181818,
+      "per_next": 9.303764592786886,
+      "fcf_yield_avg": -0.08490217354359793,
+      "total_payout_ratio": 10.285806391282525,
+      "equity_ratio": 10.425826779822584,
+      "peg_trailing_5": 1.5372828164707961,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7965540410865215,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.5608064166486018,
+      "has_preferred_shares": false,
+      "croic": 0.00578257853325571,
+      "fcf_cagr": 7.871121638827021,
+      "fcf_cagr_r2": 0.02028028235322071,
+      "fcf_sma_cagr": -0.04318985673511678,
+      "pbr": 0.9644573790051568,
+      "amount_millions": 36927,
+      "ratio_percent": 3.2
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "グニズ",
+  "name": "(株)グーニーズ",
+  "aliases": [
+    "(株)グーニーズ"
+  ],
+  "stocks": [
+    {
+      "code": "186A",
+      "name": "アストロスケール HD",
+      "price": 2349.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.003996726884617068,
+      "per_actual": -14.793163213891793,
+      "per": -38.88004642682927,
+      "per_next": -70.8480846,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 18.219485446237478,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.7853975845677468,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 52.04014143809818,
+      "amount_millions": 8973,
+      "ratio_percent": 2.8
+    },
+    {
+      "code": "446A",
+      "name": "ノースサンド",
+      "price": 1383.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.13825227660934536,
+      "per_actual": 23.585516559565,
+      "per": 25.79108108108108,
+      "per_next": 19.0854,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 75.2710306024427,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.14159240150093808,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 5.799270738377393,
+      "amount_millions": 705,
+      "ratio_percent": 48.5
+    }
+  ]
+}

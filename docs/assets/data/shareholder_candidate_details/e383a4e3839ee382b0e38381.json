@@ -1,0 +1,61 @@
+{
+  "id": "ヤマグチ",
+  "name": "(株)ヤマグチ",
+  "aliases": [
+    "(株)ヤマグチ"
+  ],
+  "stocks": [
+    {
+      "code": "4886",
+      "name": "あすか製薬 HD",
+      "price": 2717.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.11522642027354883,
+      "per_actual": 15.32044926151735,
+      "per": 15.6299223366,
+      "per_next": 17.366580374,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 3.7325841257309014,
+      "equity_ratio": 59.72009469433227,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.9937430990062569,
+      "has_preferred_shares": false,
+      "croic": -0.05273836611063608,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 1.1294112534576197,
+      "amount_millions": 1549,
+      "ratio_percent": 2.0
+    },
+    {
+      "code": "9221",
+      "name": "フルハシEPO",
+      "price": 1130.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.3010685489868941,
+      "per_actual": 12.88280099183728,
+      "per": 15.846366666666666,
+      "per_next": 13.310948,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 10.166278164410228,
+      "equity_ratio": 45.73683465772748,
+      "peg_trailing_5": 0.5010438083276532,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7735621572198811,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.3274336283185841,
+      "has_preferred_shares": false,
+      "croic": -0.12003283307882334,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.380469593320996,
+      "amount_millions": 5492,
+      "ratio_percent": 41.2
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "横田大輔",
+  "name": "横田大輔",
+  "aliases": [
+    "横田大輔"
+  ],
+  "stocks": [
+    {
+      "code": "4316",
+      "name": "ビーマップ",
+      "price": 156.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.7308097291039393,
+      "per_actual": -3.094178974804518,
+      "per": -5.555784,
+      "per_next": 18.51928,
+      "fcf_yield_avg": -0.046120943506803,
+      "total_payout_ratio": 0.009179622533921405,
+      "equity_ratio": 39.565095244399814,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.585516792044598,
+      "fcf_cagr": 15.786459889208116,
+      "fcf_cagr_r2": 0.008497123416121336,
+      "fcf_sma_cagr": 0.08985890195032042,
+      "pbr": 1.1003731431966726,
+      "amount_millions": 3,
+      "ratio_percent": 0.7
+    },
+    {
+      "code": "6961",
+      "name": "エンプラス",
+      "price": 12950.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2268801131051497,
+      "per_actual": 31.965766205934568,
+      "per": 26.817237478723403,
+      "per_next": 25.20820323,
+      "fcf_yield_avg": 0.019251669608187298,
+      "total_payout_ratio": 17.591099054305744,
+      "equity_ratio": 78.69215452011152,
+      "peg_trailing_5": 0.6169672912764601,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.6399348788566802,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.34749034749034746,
+      "has_preferred_shares": false,
+      "croic": 0.004898884592805523,
+      "fcf_cagr": 1.6996671849340301,
+      "fcf_cagr_r2": 0.002064385377217779,
+      "fcf_sma_cagr": 0.07174767839568985,
+      "pbr": 2.2420843914543904,
+      "amount_millions": 18389,
+      "ratio_percent": 14.6
+    }
+  ]
+}

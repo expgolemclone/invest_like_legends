@@ -1,0 +1,61 @@
+{
+  "id": "酉島製作所",
+  "name": "酉島製作所",
+  "aliases": [
+    "酉島製作所"
+  ],
+  "stocks": [
+    {
+      "code": "6357",
+      "name": "三精テクノロジーズ",
+      "price": 2610.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.23051171794590117,
+      "per_actual": 16.84438075287268,
+      "per": 12.30650457804878,
+      "per_next": 13.278070728947368,
+      "fcf_yield_avg": 0.019939810227784883,
+      "total_payout_ratio": 5.804245645604875,
+      "equity_ratio": 39.83052915732659,
+      "peg_trailing_5": 1.0467460325349338,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8797685126128999,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.1494252873563218,
+      "has_preferred_shares": false,
+      "croic": -0.0026095940766277187,
+      "fcf_cagr": 51.45628252527354,
+      "fcf_cagr_r2": 0.05201558378576864,
+      "fcf_sma_cagr": 0.307355325891736,
+      "pbr": 1.1132523497993034,
+      "amount_millions": 2088,
+      "ratio_percent": 4.1
+    },
+    {
+      "code": "7983",
+      "name": "ミロク",
+      "price": 1097.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.1765773843723604,
+      "per_actual": -1.3056707425206378,
+      "per": 5.404866847540983,
+      "per_next": 13.737369904166666,
+      "fcf_yield_avg": -0.156173241188083,
+      "total_payout_ratio": 7.465402818402245,
+      "equity_ratio": 42.401313922810694,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.4557885141294439,
+      "has_preferred_shares": false,
+      "croic": -0.07559101733125154,
+      "fcf_cagr": -67.39212913942953,
+      "fcf_cagr_r2": 0.5948406927176324,
+      "fcf_sma_cagr": -1.028724586501794,
+      "pbr": 0.30675794782292837,
+      "amount_millions": 121,
+      "ratio_percent": 3.8
+    }
+  ]
+}

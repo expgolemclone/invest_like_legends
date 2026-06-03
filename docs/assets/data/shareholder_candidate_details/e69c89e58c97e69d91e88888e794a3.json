@@ -1,0 +1,61 @@
+{
+  "id": "有北村興産",
+  "name": "(有)北村興産",
+  "aliases": [
+    "(有)北村興産"
+  ],
+  "stocks": [
+    {
+      "code": "6289",
+      "name": "技研製作所",
+      "price": 1764.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.20624030744675884,
+      "per_actual": 32.11823819233356,
+      "per": 21.70900917818182,
+      "per_next": 20.765139213913045,
+      "fcf_yield_avg": 0.02515084845736515,
+      "total_payout_ratio": 12.204819818346774,
+      "equity_ratio": 83.11976085456864,
+      "peg_trailing_5": 26.47688043356848,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.60446218672203,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.530612244897959,
+      "has_preferred_shares": false,
+      "croic": 0.005933408522532242,
+      "fcf_cagr": 19.94873813055631,
+      "fcf_cagr_r2": 0.28216198335770937,
+      "fcf_sma_cagr": 0.35085226378822165,
+      "pbr": 1.1855484719374456,
+      "amount_millions": 10584,
+      "ratio_percent": 21.2
+    },
+    {
+      "code": "6484",
+      "name": "KVK",
+      "price": 2271.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.5181102341538609,
+      "per_actual": 8.953877826206426,
+      "per": 9.449833119,
+      "per_next": 9.310180412807881,
+      "fcf_yield_avg": 0.034302251258623524,
+      "total_payout_ratio": 15.679710756170445,
+      "equity_ratio": 75.6612518615437,
+      "peg_trailing_5": 2.0317468303982014,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 3.6437634278212787,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.7613386173491854,
+      "has_preferred_shares": false,
+      "croic": 0.12104869520812664,
+      "fcf_cagr": 3.5249156089148497,
+      "fcf_cagr_r2": 0.001694355923843538,
+      "fcf_sma_cagr": -0.10694839738579243,
+      "pbr": 0.6672276033333161,
+      "amount_millions": 2702,
+      "ratio_percent": 14.3
+    }
+  ]
+}

@@ -6,12 +6,17 @@ import sys
 from pathlib import Path
 
 from investor_data import (
+    ShareholderCandidateEntry,
+    StockPriceMetadata,
     build_investors_document,
+    build_shareholder_candidate_details_map,
     build_shareholder_candidates_document,
     build_stock_price_metadata,
     compute_metrics_map,
     load_major_shareholder_rows,
     load_stock_names,
+    summarize_shareholder_candidates_document,
+    write_shareholder_candidate_detail_documents,
     write_investors_document,
     write_shareholder_candidates_document,
     write_stock_price_metadata,
@@ -31,28 +36,44 @@ _STATIC_ROOT: Path = _DOCS_DIR / "assets"
 _HANDBOOK_DATA_DIR: Path = _PROJECT_ROOT.parent / "japan_company_handbook" / "data"
 
 
-def _load_and_enrich_investors() -> dict:
-    """Build the investor payload from config, handbook DB, and stock metrics."""
-    return build_investors_document()
-
-
-def _load_shareholder_candidates() -> list[dict]:
-    """Build candidates from the handbook DB."""
-    return build_shareholder_candidates_document()
-
-
-def _load_stock_price_metadata() -> dict[str, str | None]:
-    """Build the latest stock price metadata from stock_db API."""
-    return build_stock_price_metadata()
-
-
-def _create_api_routes() -> dict[str, ApiHandler]:
+def _create_api_routes(
+    *,
+    investors_doc: dict,
+    shareholder_candidates_doc: list[ShareholderCandidateEntry],
+    stock_price_metadata: StockPriceMetadata,
+) -> dict[str, ApiHandler]:
     """Create API routes for the portfolio/candidates UI."""
+    candidate_summaries = summarize_shareholder_candidates_document(
+        shareholder_candidates_doc
+    )
+    candidate_details = build_shareholder_candidate_details_map(
+        shareholder_candidates_doc
+    )
+
     return {
-        "/api/portfolio": json_route(lambda _params: _load_and_enrich_investors()),
-        "/api/shareholder-candidates": json_route(lambda _params: _load_shareholder_candidates()),
-        "/api/stock-price-meta": json_route(lambda _params: _load_stock_price_metadata()),
+        "/api/portfolio": json_route(lambda _params: investors_doc),
+        "/api/shareholder-candidates": json_route(lambda _params: candidate_summaries),
+        "/api/shareholder-candidate": _create_candidate_detail_route(candidate_details),
+        "/api/stock-price-meta": json_route(lambda _params: stock_price_metadata),
     }
+
+
+def _create_candidate_detail_route(candidate_details: dict[str, dict]) -> ApiHandler:
+    def route(handler, query_params):
+        candidate_ids: list[str] = query_params.get("id", [])
+        if not candidate_ids or not candidate_ids[0]:
+            handler.send_json_response(400, {"error": "Missing id parameter"})
+            return
+
+        candidate_id: str = candidate_ids[0]
+        detail: dict | None = candidate_details.get(candidate_id)
+        if detail is None:
+            handler.send_json_response(404, {"error": "Candidate not found"})
+            return
+
+        handler.send_json_response(200, detail)
+
+    return route
 
 
 def _ensure_prices_fresh() -> PriceRefreshCommandResult | None:
@@ -95,11 +116,21 @@ def main() -> None:
     )
     candidates_output = write_shareholder_candidates_document(candidates_doc)
     print(f"GitHub Pages JSON saved to {candidates_output}")
+    candidate_detail_outputs = write_shareholder_candidate_detail_documents(candidates_doc)
+    print(
+        "GitHub Pages JSON saved to "
+        f"{candidate_detail_outputs[0].parent} ({len(candidate_detail_outputs)} files)"
+    )
 
-    metadata_output = write_stock_price_metadata()
+    stock_price_metadata = build_stock_price_metadata()
+    metadata_output = write_stock_price_metadata(stock_price_metadata)
     print(f"GitHub Pages JSON saved to {metadata_output}")
 
-    api_routes = _create_api_routes()
+    api_routes = _create_api_routes(
+        investors_doc=investors_doc,
+        shareholder_candidates_doc=candidates_doc,
+        stock_price_metadata=stock_price_metadata,
+    )
     _serve(
         static_root=_STATIC_ROOT,
         index_page=IndexPage(

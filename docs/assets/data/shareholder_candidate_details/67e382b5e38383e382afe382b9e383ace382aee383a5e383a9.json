@@ -1,0 +1,61 @@
+{
+  "id": "gサックスレギュラ",
+  "name": "Gサックスレギュラー",
+  "aliases": [
+    "Gサックスレギュラー"
+  ],
+  "stocks": [
+    {
+      "code": "4290",
+      "name": "プレステージ・インターナショナル",
+      "price": 639.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3209610502164446,
+      "per_actual": 16.686845619227594,
+      "per": 14.511724232142857,
+      "per_next": 14.511724232142857,
+      "fcf_yield_avg": 0.031702514153220576,
+      "total_payout_ratio": 10.237991594769106,
+      "equity_ratio": 59.73374218725206,
+      "peg_trailing_5": 1.8946132922074705,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.6998801360725055,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.0344287949921753,
+      "has_preferred_shares": false,
+      "croic": 0.09259051961751223,
+      "fcf_cagr": 9.183335854708009,
+      "fcf_cagr_r2": 0.13801207379305305,
+      "fcf_sma_cagr": 0.0966352453050856,
+      "pbr": 1.6370364888893427,
+      "amount_millions": 3080,
+      "ratio_percent": 3.7
+    },
+    {
+      "code": "8715",
+      "name": "アニコム HD",
+      "price": 1218.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 28.119499963031423,
+      "per": 43.4647128,
+      "per_next": 32.5985346,
+      "fcf_yield_avg": 0.011710649103840391,
+      "total_payout_ratio": 5.51843386060848,
+      "equity_ratio": 41.564819157447516,
+      "peg_trailing_5": 1.5430799773214856,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 3.1505839162146705,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.8210180623973727,
+      "has_preferred_shares": false,
+      "croic": 0.043442187707420685,
+      "fcf_cagr": -80.39020573401713,
+      "fcf_cagr_r2": 0.36756147893883456,
+      "fcf_sma_cagr": -0.17772901306547428,
+      "pbr": 3.2521875892539014,
+      "amount_millions": 2436,
+      "ratio_percent": 2.6
+    }
+  ]
+}

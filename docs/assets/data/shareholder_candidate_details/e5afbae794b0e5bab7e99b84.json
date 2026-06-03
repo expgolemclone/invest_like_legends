@@ -1,0 +1,61 @@
+{
+  "id": "寺田康雄",
+  "name": "寺田康雄",
+  "aliases": [
+    "寺田康雄"
+  ],
+  "stocks": [
+    {
+      "code": "4052",
+      "name": "フィーチャ",
+      "price": 255.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.4411536772218988,
+      "per_actual": -38.70175677076584,
+      "per": -74.66536425,
+      "per_next": 298.661457,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 0.0015402054373557816,
+      "equity_ratio": 95.34022004516454,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.024385198737913012,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.164831531611199,
+      "amount_millions": 10,
+      "ratio_percent": 0.7
+    },
+    {
+      "code": "8337",
+      "name": "千葉興業銀行",
+      "price": 2226.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 18.56901356348036,
+      "per": 16.294855549411764,
+      "per_next": 14.278997130927834,
+      "fcf_yield_avg": 0.15711707245495785,
+      "total_payout_ratio": 53.19109297055886,
+      "equity_ratio": 4.895458546540243,
+      "peg_trailing_5": 1.732884966393607,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.1556545948186727,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.44923629829290207,
+      "has_preferred_shares": true,
+      "croic": -0.014482723909706318,
+      "fcf_cagr": -41.22407994807669,
+      "fcf_cagr_r2": 0.019529284840561118,
+      "fcf_sma_cagr": -1.1486438096511293,
+      "pbr": 0.7924153107729275,
+      "amount_millions": 2226,
+      "ratio_percent": 1.6
+    }
+  ]
+}

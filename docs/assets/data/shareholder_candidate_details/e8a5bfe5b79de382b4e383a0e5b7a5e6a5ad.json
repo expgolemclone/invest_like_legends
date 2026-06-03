@@ -1,0 +1,61 @@
+{
+  "id": "西川ゴム工業",
+  "name": "西川ゴム工業",
+  "aliases": [
+    "西川ゴム工業"
+  ],
+  "stocks": [
+    {
+      "code": "4246",
+      "name": "ダイキョーニシカワ",
+      "price": 1077.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.01679207746018981,
+      "per_actual": 11.767410064635273,
+      "per": 9.930471506493506,
+      "per_next": 9.212606096385542,
+      "fcf_yield_avg": 0.04980080293489314,
+      "total_payout_ratio": 20.090334419270704,
+      "equity_ratio": 50.01876366836186,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.7641597028783658,
+      "has_preferred_shares": false,
+      "croic": 0.09489284461954167,
+      "fcf_cagr": -5.440539852304558,
+      "fcf_cagr_r2": 0.002178215144291206,
+      "fcf_sma_cagr": -0.014575408518896826,
+      "pbr": 0.8500887236100457,
+      "amount_millions": 12741,
+      "ratio_percent": 16.6
+    },
+    {
+      "code": "7279",
+      "name": "ハイレックスコーポレーション",
+      "price": 2348.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.7147519378963106,
+      "per_actual": 10.658385809716119,
+      "per": 3.148524566035088,
+      "per_next": 19.507163072173913,
+      "fcf_yield_avg": 0.04372418374998713,
+      "total_payout_ratio": 7.554638502387225,
+      "equity_ratio": 48.80810983512457,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.278534923339012,
+      "has_preferred_shares": false,
+      "croic": 0.08829505915100905,
+      "fcf_cagr": 20.866495978003563,
+      "fcf_cagr_r2": 0.14845489172171425,
+      "fcf_sma_cagr": 0.1919194641966695,
+      "pbr": 0.46811004179621474,
+      "amount_millions": 2418,
+      "ratio_percent": 2.7
+    }
+  ]
+}

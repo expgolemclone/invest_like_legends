@@ -1,0 +1,61 @@
+{
+  "id": "宜本興産",
+  "name": "宜本興産",
+  "aliases": [
+    "宜本興産"
+  ],
+  "stocks": [
+    {
+      "code": "5423",
+      "name": "東京製鐵",
+      "price": 1705.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3302491229543552,
+      "per_actual": 8.85061286350988,
+      "per": 21.32494824375,
+      "per_next": 28.87069916076923,
+      "fcf_yield_avg": 0.07718818691114607,
+      "total_payout_ratio": 24.14851858980888,
+      "equity_ratio": 67.77484614623191,
+      "peg_trailing_5": 0.5296585174008396,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.466275659824047,
+      "has_preferred_shares": false,
+      "croic": -0.011522849286368993,
+      "fcf_cagr": 1.9432716963282854,
+      "fcf_cagr_r2": 0.005173169175537903,
+      "fcf_sma_cagr": 0.05483444778026292,
+      "pbr": 0.8939659512047562,
+      "amount_millions": 6820,
+      "ratio_percent": 3.6
+    },
+    {
+      "code": "9206",
+      "name": "スターフライヤー",
+      "price": 1920.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.6295707987894534,
+      "per_actual": 3.778172605304212,
+      "per": 24.2180864,
+      "per_next": 6.0545216,
+      "fcf_yield_avg": 0.0847851188330608,
+      "total_payout_ratio": null,
+      "equity_ratio": 18.458277281806694,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.6792373475396046,
+      "fcf_cagr": -30.42896497441952,
+      "fcf_cagr_r2": 0.025937104283839066,
+      "fcf_sma_cagr": -0.09304467792989435,
+      "pbr": 1.6923889867225717,
+      "amount_millions": 192,
+      "ratio_percent": 2.7
+    }
+  ]
+}

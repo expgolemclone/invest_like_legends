@@ -1,0 +1,61 @@
+{
+  "id": "経済産業大臣",
+  "name": "経済産業大臣",
+  "aliases": [
+    "経済産業大臣"
+  ],
+  "stocks": [
+    {
+      "code": "1605",
+      "name": "INPEX",
+      "price": 3416.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.38863260907179903,
+      "per_actual": 10.921319546389867,
+      "per": 13.033966075369698,
+      "per_next": 12.28916801392,
+      "fcf_yield_avg": 0.024786357704662202,
+      "total_payout_ratio": 4.445029494579249,
+      "equity_ratio": 61.370866007566974,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.5807962529274004,
+      "has_preferred_shares": false,
+      "croic": 0.0041988322910380405,
+      "fcf_cagr": 34.17667733157742,
+      "fcf_cagr_r2": 0.1544300230089201,
+      "fcf_sma_cagr": 0.7915458191916075,
+      "pbr": 0.8563193047669844,
+      "amount_millions": 945959,
+      "ratio_percent": 21.9
+    },
+    {
+      "code": "1662",
+      "name": "石油資源開発",
+      "price": 1753.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.4770736152192283,
+      "per_actual": 5.5515096932953805,
+      "per": 10.01159258088889,
+      "per_next": 10.477248049767441,
+      "fcf_yield_avg": 0.02486228930113048,
+      "total_payout_ratio": 17.04646097445066,
+      "equity_ratio": 67.31108365928303,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.1409013120365088,
+      "has_preferred_shares": false,
+      "croic": 0.05163571212164145,
+      "fcf_cagr": 75.92850205474079,
+      "fcf_cagr_r2": 0.3908080456855416,
+      "fcf_sma_cagr": 0.22879800734829114,
+      "pbr": 0.8084630002673812,
+      "amount_millions": 170321,
+      "ratio_percent": 37.8
+    }
+  ]
+}

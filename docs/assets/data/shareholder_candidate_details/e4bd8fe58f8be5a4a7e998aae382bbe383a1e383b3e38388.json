@@ -1,0 +1,61 @@
+{
+  "id": "住友大阪セメント",
+  "name": "住友大阪セメント",
+  "aliases": [
+    "住友大阪セメント"
+  ],
+  "stocks": [
+    {
+      "code": "5273",
+      "name": "三谷セキサン",
+      "price": 1541.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.42499618587681987,
+      "per_actual": 12.713650735724816,
+      "per": 9.37401422,
+      "per_next": 9.046251485034965,
+      "fcf_yield_avg": 0.040427825859725826,
+      "total_payout_ratio": 15.748129343652426,
+      "equity_ratio": 58.234984109746556,
+      "peg_trailing_5": 0.764560915174073,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 5.256327060350422,
+      "has_preferred_shares": false,
+      "croic": 0.1097297445155643,
+      "fcf_cagr": 7.912441032019779,
+      "fcf_cagr_r2": 0.2075134146755982,
+      "fcf_sma_cagr": 0.09035908338082566,
+      "pbr": 1.4287446294095558,
+      "amount_millions": 1526,
+      "ratio_percent": 4.7
+    },
+    {
+      "code": "5357",
+      "name": "ヨータイ",
+      "price": 1720.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.34715258705204016,
+      "per_actual": 12.847461723524969,
+      "per": 16.04841904761905,
+      "per_next": 15.318945454545455,
+      "fcf_yield_avg": 0.04268156364905251,
+      "total_payout_ratio": 27.981065038894204,
+      "equity_ratio": 75.76959248967088,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 2.616279069767442,
+      "has_preferred_shares": false,
+      "croic": 0.06933098202831464,
+      "fcf_cagr": 10.855973952866949,
+      "fcf_cagr_r2": 0.04655123724033917,
+      "fcf_sma_cagr": 0.9930910490871696,
+      "pbr": 1.02285248106755,
+      "amount_millions": 4420,
+      "ratio_percent": 13.1
+    }
+  ]
+}

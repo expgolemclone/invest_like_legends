@@ -1,0 +1,61 @@
+{
+  "id": "セブン&アイhld",
+  "name": "セブン&アイHLD",
+  "aliases": [
+    "セブン&アイHLD"
+  ],
+  "stocks": [
+    {
+      "code": "4337",
+      "name": "ぴあ",
+      "price": 2699.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.3447517027861502,
+      "per_actual": 26.58067654745443,
+      "per": 14.582709098965518,
+      "per_next": 19.22266199409091,
+      "fcf_yield_avg": 0.0403855710544577,
+      "total_payout_ratio": 13.182830296188397,
+      "equity_ratio": 7.087616250611846,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.7410151908114117,
+      "has_preferred_shares": false,
+      "croic": 0.5392010941711252,
+      "fcf_cagr": 57.39211897652088,
+      "fcf_cagr_r2": 0.06418553145257352,
+      "fcf_sma_cagr": 0.19887761516754066,
+      "pbr": 5.841947283740848,
+      "amount_millions": 3779,
+      "ratio_percent": 9.0
+    },
+    {
+      "code": "9627",
+      "name": "アイン HD",
+      "price": 5452.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.4674384895467532,
+      "per_actual": 20.85677700291545,
+      "per": 14.307749024,
+      "per_next": 12.224975431898734,
+      "fcf_yield_avg": 0.0027314905661208998,
+      "total_payout_ratio": 7.876221984211358,
+      "equity_ratio": 45.43361941004293,
+      "peg_trailing_5": 117.15075704129482,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.5153630955444242,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.467351430667645,
+      "has_preferred_shares": false,
+      "croic": -0.23718926232553497,
+      "fcf_cagr": -493.37882234015666,
+      "fcf_cagr_r2": 0.22821699310868462,
+      "fcf_sma_cagr": -0.36550922080079745,
+      "pbr": 1.3542165280161536,
+      "amount_millions": 14993,
+      "ratio_percent": 7.7
+    }
+  ]
+}

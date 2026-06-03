@@ -1,0 +1,61 @@
+{
+  "id": "エステ",
+  "name": "エステー",
+  "aliases": [
+    "エステー"
+  ],
+  "stocks": [
+    {
+      "code": "2391",
+      "name": "プラネット",
+      "price": 1191.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.38594764172778573,
+      "per_actual": 19.7105293624496,
+      "per": 19.267475121951218,
+      "per_next": 18.371313488372092,
+      "fcf_yield_avg": 0.04238682380548602,
+      "total_payout_ratio": 0.0026077055826470006,
+      "equity_ratio": 75.53497657246454,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.8471872376154492,
+      "has_preferred_shares": false,
+      "croic": 0.10213916671889971,
+      "fcf_cagr": 11.171703289082933,
+      "fcf_cagr_r2": 0.29526950793226975,
+      "fcf_sma_cagr": 0.19359174427250014,
+      "pbr": 1.4017214579657356,
+      "amount_millions": 357,
+      "ratio_percent": 4.5
+    },
+    {
+      "code": "4998",
+      "name": "フマキラー",
+      "price": 1130.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.18059215292722325,
+      "per_actual": 12.745348837209303,
+      "per": 9.506989795918367,
+      "per_next": 8.469863636363636,
+      "fcf_yield_avg": 0.006444436692659,
+      "total_payout_ratio": 9.795113155197303,
+      "equity_ratio": 30.638756349084197,
+      "peg_trailing_5": 0.9315480576939624,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.5234620867238072,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.9469026548672566,
+      "has_preferred_shares": false,
+      "croic": 0.007309616453585325,
+      "fcf_cagr": 84.64415766972233,
+      "fcf_cagr_r2": 0.009375520564328147,
+      "fcf_sma_cagr": 0.6376086125568315,
+      "pbr": 0.6721386574324568,
+      "amount_millions": 1944,
+      "ratio_percent": 10.4
+    }
+  ]
+}

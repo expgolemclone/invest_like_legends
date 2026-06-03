@@ -1,0 +1,61 @@
+{
+  "id": "カインズ",
+  "name": "(株)カインズ",
+  "aliases": [
+    "(株)カインズ"
+  ],
+  "stocks": [
+    {
+      "code": "3904",
+      "name": "カヤック",
+      "price": 400.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.4306736690504569,
+      "per_actual": 9.421397699159556,
+      "per": 10.7392,
+      "per_next": 8.949333333333334,
+      "fcf_yield_avg": 0.021740027190107276,
+      "total_payout_ratio": 9.914379097139452,
+      "equity_ratio": 42.39158753753851,
+      "peg_trailing_5": 1.5086983701685013,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.7238792951093531,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.975,
+      "has_preferred_shares": false,
+      "croic": 0.12674546371431247,
+      "fcf_cagr": 73.81325337341194,
+      "fcf_cagr_r2": 0.10875673153614945,
+      "fcf_sma_cagr": 0.19341201642540412,
+      "pbr": 1.0232003020920637,
+      "amount_millions": 212,
+      "ratio_percent": 3.3
+    },
+    {
+      "code": "7564",
+      "name": "ワークマン",
+      "price": 7980.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.10721125363475878,
+      "per_actual": 38.665497968269,
+      "per": 32.1742656,
+      "per_next": 31.250602472727273,
+      "fcf_yield_avg": 0.007751170908687146,
+      "total_payout_ratio": 0.00027635830841663553,
+      "equity_ratio": 83.6960876774476,
+      "peg_trailing_5": 8.07351600605717,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 4.741314358888578,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.9147869674185464,
+      "has_preferred_shares": false,
+      "croic": -0.037453238144547915,
+      "fcf_cagr": 9.349848092788921,
+      "fcf_cagr_r2": 0.04219846152191585,
+      "fcf_sma_cagr": 6.171442964855652,
+      "pbr": 4.827257480894591,
+      "amount_millions": 62962,
+      "ratio_percent": 9.6
+    }
+  ]
+}

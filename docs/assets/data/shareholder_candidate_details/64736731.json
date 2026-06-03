@@ -1,0 +1,61 @@
+{
+  "id": "dsg1",
+  "name": "(株)DSG1",
+  "aliases": [
+    "(株)DSG1"
+  ],
+  "stocks": [
+    {
+      "code": "254A",
+      "name": "AIフュージョンキャピタルグループ",
+      "price": 997.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.27001624087731213,
+      "per_actual": 14.481275748502995,
+      "per": -24.1837305,
+      "per_next": 12.8979896,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 61.81675186787259,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.1412556053811659,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 1.7009833304026727,
+      "amount_millions": 1954,
+      "ratio_percent": 20.2
+    },
+    {
+      "code": "8362",
+      "name": "福井銀行",
+      "price": 4975.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 16.762451615266535,
+      "per": 20.0199547125,
+      "per_next": 18.76870754296875,
+      "fcf_yield_avg": 0.6010927683311061,
+      "total_payout_ratio": 6.3944533594142445,
+      "equity_ratio": 3.006418548122782,
+      "peg_trailing_5": 0.6130598607903898,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.1078902170164242,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.9246231155778893,
+      "has_preferred_shares": false,
+      "croic": -0.1653799300118716,
+      "fcf_cagr": -19.25048714646391,
+      "fcf_cagr_r2": 0.05207748206467877,
+      "fcf_sma_cagr": -0.38225444686723836,
+      "pbr": 0.8803204710516673,
+      "amount_millions": 1841,
+      "ratio_percent": 1.5
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "gセキュリティe",
+  "name": "GセキュリティE",
+  "aliases": [
+    "GセキュリティE"
+  ],
+  "stocks": [
+    {
+      "code": "4258",
+      "name": "網屋",
+      "price": 3515.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.056335024074340885,
+      "per_actual": 41.28962466826741,
+      "per": 36.51630117647059,
+      "per_next": 31.352379797979797,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 2.907790802599168,
+      "equity_ratio": 40.1653652965997,
+      "peg_trailing_5": 1.7295992408531373,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.4790965801036473,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.44751066856330013,
+      "has_preferred_shares": false,
+      "croic": 0.33967513214447537,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 10.953870998592954,
+      "amount_millions": 1230,
+      "ratio_percent": 3.9
+    },
+    {
+      "code": "4398",
+      "name": "ブロードバンドセキュリティ",
+      "price": 1279.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.17076144542299126,
+      "per_actual": 41.245892772814855,
+      "per": 17.838848624242424,
+      "per_next": 11.773640092,
+      "fcf_yield_avg": 0.050535365048595536,
+      "total_payout_ratio": 5.401558014603526,
+      "equity_ratio": 55.381442332605204,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 0.9445322141665851,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.6254886630179828,
+      "has_preferred_shares": false,
+      "croic": -0.08561018526838486,
+      "fcf_cagr": 3.560180228776355,
+      "fcf_cagr_r2": 0.016104552512097844,
+      "fcf_sma_cagr": 0.036966327505854935,
+      "pbr": 2.7928661584605035,
+      "amount_millions": 1292,
+      "ratio_percent": 22.0
+    }
+  ]
+}

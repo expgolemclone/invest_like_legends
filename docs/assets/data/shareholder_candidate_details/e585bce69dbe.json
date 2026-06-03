@@ -1,0 +1,61 @@
+{
+  "id": "兼松",
+  "name": "兼松",
+  "aliases": [
+    "兼松"
+  ],
+  "stocks": [
+    {
+      "code": "2288",
+      "name": "丸大食品",
+      "price": 2197.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.1281168849515925,
+      "per_actual": 10.610925921465014,
+      "per": 6.470306828555556,
+      "per_next": 10.21627393982456,
+      "fcf_yield_avg": 0.028281330968927133,
+      "total_payout_ratio": 11.608585667007553,
+      "equity_ratio": 47.970559047304,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.9585798816568047,
+      "has_preferred_shares": false,
+      "croic": 0.03506323106557606,
+      "fcf_cagr": -6.749503658848488,
+      "fcf_cagr_r2": 0.008512004225296339,
+      "fcf_sma_cagr": -0.027032630460654627,
+      "pbr": 0.8690548966078171,
+      "amount_millions": 2614,
+      "ratio_percent": 4.5
+    },
+    {
+      "code": "7897",
+      "name": "ホクシン",
+      "price": 100.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.9112901858650503,
+      "per_actual": 139.47306198692425,
+      "per": 141.865025,
+      "per_next": 94.57668333333334,
+      "fcf_yield_avg": 0.019217421630172767,
+      "total_payout_ratio": 0.0078595834315047,
+      "equity_ratio": 41.443517869978166,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 2.0,
+      "has_preferred_shares": false,
+      "croic": 0.0071814573287012715,
+      "fcf_cagr": -31.3176885275129,
+      "fcf_cagr_r2": 0.021683988214000208,
+      "fcf_sma_cagr": -0.07235212305984662,
+      "pbr": 0.4872198610789137,
+      "amount_millions": 752,
+      "ratio_percent": 26.5
+    }
+  ]
+}

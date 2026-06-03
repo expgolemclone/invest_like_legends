@@ -1,0 +1,61 @@
+{
+  "id": "シノケングルプ",
+  "name": "(株)シノケングループ",
+  "aliases": [
+    "(株)シノケングループ"
+  ],
+  "stocks": [
+    {
+      "code": "3236",
+      "name": "プロパスト",
+      "price": 278.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.8638518082241167,
+      "per_actual": 4.9929077005620845,
+      "per": 6.344883357142857,
+      "per_next": 4.140305241525423,
+      "fcf_yield_avg": -0.019874895881566122,
+      "total_payout_ratio": 3.6024528065454584,
+      "equity_ratio": 40.10005963819495,
+      "peg_trailing_5": 0.2925212540208977,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.2769720985559671,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.158273381294964,
+      "has_preferred_shares": false,
+      "croic": 0.3593815684992293,
+      "fcf_cagr": 269.9497550166963,
+      "fcf_cagr_r2": 0.20318842746489787,
+      "fcf_sma_cagr": 0.27074153736922335,
+      "pbr": 0.8025560878850103,
+      "amount_millions": 3431,
+      "ratio_percent": 35.1
+    },
+    {
+      "code": "8596",
+      "name": "九州リースサービス",
+      "price": 1396.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.30619234826489794,
+      "per_actual": 10.151166742504904,
+      "per": 9.410263403636364,
+      "per_next": 8.730003398554217,
+      "fcf_yield_avg": -0.11917355522919656,
+      "total_payout_ratio": 7.471808736460883,
+      "equity_ratio": 20.704989798546045,
+      "peg_trailing_5": 1.1974120554715093,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.052700131299178,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.148997134670487,
+      "has_preferred_shares": false,
+      "croic": -0.02073387157247482,
+      "fcf_cagr": -23.084934952639234,
+      "fcf_cagr_r2": 0.16773384739210292,
+      "fcf_sma_cagr": -0.4792949907235622,
+      "pbr": 0.8498595848932676,
+      "amount_millions": 949,
+      "ratio_percent": 2.6
+    }
+  ]
+}

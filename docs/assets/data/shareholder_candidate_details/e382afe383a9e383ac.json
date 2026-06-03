@@ -1,0 +1,61 @@
+{
+  "id": "クラレ",
+  "name": "クラレ",
+  "aliases": [
+    "クラレ"
+  ],
+  "stocks": [
+    {
+      "code": "7839",
+      "name": "SHOEI",
+      "price": 1856.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.19276158598216214,
+      "per_actual": 15.368425306095705,
+      "per": 16.34736553804714,
+      "per_next": 15.91858217967213,
+      "fcf_yield_avg": 0.03860998976823614,
+      "total_payout_ratio": 16.942497638264005,
+      "equity_ratio": 82.75744575525059,
+      "peg_trailing_5": 1.134864384062713,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.701169548983879,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 3.2327586206896552,
+      "has_preferred_shares": false,
+      "croic": 0.26699392683855655,
+      "fcf_cagr": 21.482310968968577,
+      "fcf_cagr_r2": 0.7471191833905787,
+      "fcf_sma_cagr": 0.20418366032895907,
+      "pbr": 3.0122887614981857,
+      "amount_millions": 1782,
+      "ratio_percent": 1.7
+    },
+    {
+      "code": "9837",
+      "name": "モリト",
+      "price": 1754.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.27269518286560357,
+      "per_actual": 16.115686045953524,
+      "per": 15.669066666666666,
+      "per_next": 14.922920634920635,
+      "fcf_yield_avg": 0.04501742286288058,
+      "total_payout_ratio": 18.559616399189913,
+      "equity_ratio": 59.86050568612242,
+      "peg_trailing_5": 0.34037002394848503,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.4473706832012088,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.0524515393386547,
+      "has_preferred_shares": false,
+      "croic": -0.057960565057246005,
+      "fcf_cagr": -4.51920195173841,
+      "fcf_cagr_r2": 0.008155005595149692,
+      "fcf_sma_cagr": 0.08645411156264049,
+      "pbr": 1.1801189156739873,
+      "amount_millions": 2315,
+      "ratio_percent": 4.9
+    }
+  ]
+}

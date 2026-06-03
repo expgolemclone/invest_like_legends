@@ -1,0 +1,61 @@
+{
+  "id": "auフィナンシャルホルディングス",
+  "name": "auフィナンシャルホールディングス",
+  "aliases": [
+    "auフィナンシャルホールディングス"
+  ],
+  "stocks": [
+    {
+      "code": "4419",
+      "name": "Finatext HD",
+      "price": 1318.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.12829961909021106,
+      "per_actual": 103.68434218464365,
+      "per": 48.85858008571429,
+      "per_next": 40.236477717647055,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 46.95696861104576,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.14347241698341118,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 7.105097728575385,
+      "amount_millions": 4218,
+      "ratio_percent": 6.2
+    },
+    {
+      "code": "7157",
+      "name": "ライフネット生命保険",
+      "price": 1670.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 22.387632664775573,
+      "per": 17.201164430769232,
+      "per_next": 16.77113532,
+      "fcf_yield_avg": -0.011747862994405795,
+      "total_payout_ratio": 0.0,
+      "equity_ratio": 79.28265248153696,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.07617062393468609,
+      "fcf_cagr": -14.855828940335982,
+      "fcf_cagr_r2": 0.03599444414873714,
+      "fcf_sma_cagr": -0.0011532362692806776,
+      "pbr": 1.4564598627876684,
+      "amount_millions": 24582,
+      "ratio_percent": 18.3
+    }
+  ]
+}

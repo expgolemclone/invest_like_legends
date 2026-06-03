@@ -1,0 +1,61 @@
+{
+  "id": "太田興産",
+  "name": "(株)太田興産",
+  "aliases": [
+    "(株)太田興産"
+  ],
+  "stocks": [
+    {
+      "code": "3080",
+      "name": "ジェーソン",
+      "price": 748.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.02146122619001905,
+      "per_actual": 27.73055855365767,
+      "per": 43.5608,
+      "per_next": 25.901016216216217,
+      "fcf_yield_avg": 0.04187803963864091,
+      "total_payout_ratio": 5.213841134898599,
+      "equity_ratio": 58.01503583255543,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.7379679144385027,
+      "has_preferred_shares": false,
+      "croic": 0.020442798524902068,
+      "fcf_cagr": 3.6081032685847143,
+      "fcf_cagr_r2": 0.01741399117664208,
+      "fcf_sma_cagr": 0.18792836968541748,
+      "pbr": 1.521170069284094,
+      "amount_millions": 3201,
+      "ratio_percent": 33.4
+    },
+    {
+      "code": "4814",
+      "name": "ネクストウェア",
+      "price": 168.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.33905157726998797,
+      "per_actual": -20.63821812793189,
+      "per": 218.6557296,
+      "per_next": 218.6557296,
+      "fcf_yield_avg": 0.015081150656479303,
+      "total_payout_ratio": 2.9055721574834963,
+      "equity_ratio": 79.0739743073175,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.11076432866156946,
+      "fcf_cagr": -5.742062085198567,
+      "fcf_cagr_r2": 0.00021773995577408536,
+      "fcf_sma_cagr": -0.505299000688903,
+      "pbr": 1.7883886570137923,
+      "amount_millions": 72,
+      "ratio_percent": 3.3
+    }
+  ]
+}

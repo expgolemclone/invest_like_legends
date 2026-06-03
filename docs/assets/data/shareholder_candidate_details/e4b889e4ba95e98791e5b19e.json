@@ -1,0 +1,61 @@
+{
+  "id": "三井金属",
+  "name": "三井金属",
+  "aliases": [
+    "三井金属"
+  ],
+  "stocks": [
+    {
+      "code": "1787",
+      "name": "ナカボーテック",
+      "price": 5360.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.44590670566475976,
+      "per_actual": 13.320511988021527,
+      "per": 15.162391304347826,
+      "per_next": 14.23408163265306,
+      "fcf_yield_avg": 0.03824651239479834,
+      "total_payout_ratio": 4.481088792349492,
+      "equity_ratio": 70.42040483208729,
+      "peg_trailing_5": 0.7586920277694041,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.2721289223045793,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 4.850746268656716,
+      "has_preferred_shares": false,
+      "croic": 0.06760993090715314,
+      "fcf_cagr": 9.271127513526661,
+      "fcf_cagr_r2": 0.1110459065307494,
+      "fcf_sma_cagr": 0.0902614541491722,
+      "pbr": 1.5977537479531836,
+      "amount_millions": 4181,
+      "ratio_percent": 30.0
+    },
+    {
+      "code": "5695",
+      "name": "パウダーテック",
+      "price": 2629.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.33534392998067397,
+      "per_actual": 24.521404053124638,
+      "per": 26.0271,
+      "per_next": 23.661,
+      "fcf_yield_avg": 0.06535394518277744,
+      "total_payout_ratio": 11.790044479279931,
+      "equity_ratio": 80.73394895620515,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.901863826550019,
+      "has_preferred_shares": false,
+      "croic": 0.027611666746149375,
+      "fcf_cagr": -30.573176231868576,
+      "fcf_cagr_r2": 0.45105965129871683,
+      "fcf_sma_cagr": -0.1604216221857893,
+      "pbr": 0.6108151438016242,
+      "amount_millions": 2682,
+      "ratio_percent": 34.5
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "扇商會",
+  "name": "(株)扇商會",
+  "aliases": [
+    "(株)扇商會"
+  ],
+  "stocks": [
+    {
+      "code": "4613",
+      "name": "関西ペイント",
+      "price": 2419.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.27071877943391764,
+      "per_actual": 11.23909103847961,
+      "per": 12.300703466285714,
+      "per_next": 11.795195104657534,
+      "fcf_yield_avg": 0.031120635932320805,
+      "total_payout_ratio": 56.2330208334483,
+      "equity_ratio": 30.446290723712167,
+      "peg_trailing_5": 0.5722852480690475,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.9155903915347773,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.273666804464655,
+      "has_preferred_shares": false,
+      "croic": -0.017069139286434186,
+      "fcf_cagr": 40.80168163701773,
+      "fcf_cagr_r2": 0.23118406350766196,
+      "fcf_sma_cagr": 0.40223005998666966,
+      "pbr": 1.2300387170615612,
+      "amount_millions": 6289,
+      "ratio_percent": 1.4
+    },
+    {
+      "code": "5451",
+      "name": "ヨドコウ",
+      "price": 1240.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.47657574851663703,
+      "per_actual": 14.354958885843395,
+      "per": 11.398681764705882,
+      "per_next": 18.99780294117647,
+      "fcf_yield_avg": 0.033041488440433184,
+      "total_payout_ratio": 10.999723961888472,
+      "equity_ratio": 62.135202228142404,
+      "peg_trailing_5": 0.46647241544522156,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.6129032258064515,
+      "has_preferred_shares": false,
+      "croic": 0.027721224460117794,
+      "fcf_cagr": 8.643039323845858,
+      "fcf_cagr_r2": 0.02885833060901331,
+      "fcf_sma_cagr": 0.20508792640895357,
+      "pbr": 0.9007883506879881,
+      "amount_millions": 5282,
+      "ratio_percent": 2.6
+    }
+  ]
+}

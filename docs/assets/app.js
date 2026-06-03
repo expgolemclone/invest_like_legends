@@ -368,6 +368,15 @@ function getCandidatesDataUrl() {
         ? "assets/data/shareholder_candidates.json"
         : "/api/shareholder-candidates";
 }
+function getCandidateDetailDataUrl(candidateId) {
+    return IS_GITHUB_PAGES
+        ? "assets/data/shareholder_candidate_details/" + shareholderCandidateDetailFilename(candidateId)
+        : "/api/shareholder-candidate?id=" + encodeURIComponent(candidateId);
+}
+function shareholderCandidateDetailFilename(candidateId) {
+    const bytes = new TextEncoder().encode(candidateId);
+    return Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("") + ".json";
+}
 function getStockPriceMetadataUrl() {
     return IS_GITHUB_PAGES ? "assets/stock-price-meta.json" : "/api/stock-price-meta";
 }
@@ -407,18 +416,15 @@ async function bootstrapCandidateDetailView() {
         return;
     }
     try {
-        const response = await fetch(getCandidatesDataUrl(), { cache: "no-store" });
+        const response = await fetch(getCandidateDetailDataUrl(candidateId), { cache: "no-store" });
         if (!response.ok) {
             throw new Error("HTTP " + response.status);
         }
         const raw = await response.json();
-        if (!Array.isArray(raw)) {
-            throw new Error("Candidate data must be an array.");
+        if (!isShareholderCandidateDetail(raw) || raw.id !== candidateId) {
+            throw new Error("Candidate detail not found.");
         }
-        const candidate = raw.find((entry) => isShareholderCandidate(entry) && entry.id === candidateId);
-        if (!candidate) {
-            throw new Error("Candidate not found.");
-        }
+        const candidate = raw;
         const payload = {
             [candidate.id]: {
                 name: candidate.name,
@@ -444,7 +450,7 @@ async function bootstrapCandidateDetailView() {
         renderStandaloneError("候補データを読み込めませんでした。");
     }
 }
-function isShareholderCandidate(value) {
+function isShareholderCandidateDetail(value) {
     if (!value || typeof value !== "object") {
         return false;
     }
@@ -452,9 +458,6 @@ function isShareholderCandidate(value) {
     return (typeof candidate.id === "string"
         && typeof candidate.name === "string"
         && Array.isArray(candidate.aliases)
-        && typeof candidate.holding_count === "number"
-        && typeof candidate.priced_holding_count === "number"
-        && typeof candidate.total_amount_millions === "number"
         && Array.isArray(candidate.stocks));
 }
 function renderStandaloneError(message) {

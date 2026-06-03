@@ -1,0 +1,61 @@
+{
+  "id": "晃永",
+  "name": "(株)晃永",
+  "aliases": [
+    "(株)晃永"
+  ],
+  "stocks": [
+    {
+      "code": "6142",
+      "name": "富士精工",
+      "price": 1627.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 1.3813350445402166,
+      "per_actual": -1.8626541090218918,
+      "per": 17.517819515,
+      "per_next": 46.714185373333336,
+      "fcf_yield_avg": 0.10311378927344769,
+      "total_payout_ratio": 17.294389849180952,
+      "equity_ratio": 61.72876564518794,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.921942224953903,
+      "has_preferred_shares": false,
+      "croic": 0.03371410421374506,
+      "fcf_cagr": -10.947372138268314,
+      "fcf_cagr_r2": 0.10808136244738804,
+      "fcf_sma_cagr": -0.18091547819160403,
+      "pbr": 0.34303121595665753,
+      "amount_millions": 342,
+      "ratio_percent": 4.8
+    },
+    {
+      "code": "6278",
+      "name": "ユニオンツール",
+      "price": 23070.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.07269036120340652,
+      "per_actual": 74.6360157016683,
+      "per": 63.378416666666666,
+      "per_next": 53.061,
+      "fcf_yield_avg": 0.0048485580220746375,
+      "total_payout_ratio": 1.2831256522221244,
+      "equity_ratio": 79.21589079612707,
+      "peg_trailing_5": 3.8841667074425623,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.7869013475621176,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.28175119202427396,
+      "has_preferred_shares": false,
+      "croic": 0.010075855159582082,
+      "fcf_cagr": -8.164149269017063,
+      "fcf_cagr_r2": 0.06400818568074142,
+      "fcf_sma_cagr": -0.3123924350510361,
+      "pbr": 5.704200105002625,
+      "amount_millions": 141419,
+      "ratio_percent": 31.0
+    }
+  ]
+}

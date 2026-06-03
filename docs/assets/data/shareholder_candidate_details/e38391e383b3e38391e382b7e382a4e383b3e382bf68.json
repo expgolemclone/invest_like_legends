@@ -1,0 +1,61 @@
+{
+  "id": "パンパシインタh",
+  "name": "パンパシインターH",
+  "aliases": [
+    "パンパシインターH"
+  ],
+  "stocks": [
+    {
+      "code": "2669",
+      "name": "カネ美食品",
+      "price": 3910.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.4345697928388747,
+      "per_actual": 20.070992795488902,
+      "per": 23.0,
+      "per_next": 18.61904761904762,
+      "fcf_yield_avg": 0.022638777493606137,
+      "total_payout_ratio": 1.961915601023018,
+      "equity_ratio": 76.8573345471716,
+      "peg_trailing_5": 2.3010939642579147,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.5504571552978375,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.4859335038363171,
+      "has_preferred_shares": false,
+      "croic": 0.029722976652952832,
+      "fcf_cagr": 34.20284759877939,
+      "fcf_cagr_r2": 0.11692773837140283,
+      "fcf_sma_cagr": 0.27446014987026784,
+      "pbr": 1.3443892327969496,
+      "amount_millions": 14897,
+      "ratio_percent": 38.1
+    },
+    {
+      "code": "9304",
+      "name": "澁澤倉庫",
+      "price": 1401.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.0442024948904342,
+      "per_actual": 17.37576491198044,
+      "per": 13.980369539016394,
+      "per_next": 16.400048882307694,
+      "fcf_yield_avg": 0.02203206378651231,
+      "total_payout_ratio": 8.92469197291741,
+      "equity_ratio": 46.15823442262827,
+      "peg_trailing_5": 1.4785667389869275,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 2.141327623126338,
+      "has_preferred_shares": false,
+      "croic": 0.004594598279411564,
+      "fcf_cagr": 3.5136612815041683,
+      "fcf_cagr_r2": 0.0065714639785845125,
+      "fcf_sma_cagr": -0.004456059733015105,
+      "pbr": 1.3054165777002205,
+      "amount_millions": 2017,
+      "ratio_percent": 9.5
+    }
+  ]
+}

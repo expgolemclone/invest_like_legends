@@ -1,0 +1,61 @@
+{
+  "id": "大石キャピタル",
+  "name": "(株)大石キャピタル",
+  "aliases": [
+    "(株)大石キャピタル"
+  ],
+  "stocks": [
+    {
+      "code": "6191",
+      "name": "エアトリ",
+      "price": 834.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.41707249291907555,
+      "per_actual": 10.675605514333895,
+      "per": 13.565644435714285,
+      "per_next": 12.66126814,
+      "fcf_yield_avg": 0.03524660103017664,
+      "total_payout_ratio": null,
+      "equity_ratio": 47.43833017077799,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.1990407673860912,
+      "has_preferred_shares": false,
+      "croic": 0.20957377049180329,
+      "fcf_cagr": 50.273877103874106,
+      "fcf_cagr_r2": 0.3193847904355917,
+      "fcf_sma_cagr": 0.6945671151278628,
+      "pbr": 1.1503968871524624,
+      "amount_millions": 5254,
+      "ratio_percent": 28.0
+    },
+    {
+      "code": "7044",
+      "name": "ピアラ",
+      "price": 523.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.01276780431662533,
+      "per_actual": 19.334513713958835,
+      "per": 17.514081363636365,
+      "per_next": 13.761063928571428,
+      "fcf_yield_avg": -0.02482841144524254,
+      "total_payout_ratio": 5.513407795841367,
+      "equity_ratio": 15.241944590426847,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.13346770433882124,
+      "fcf_cagr": 8.278175535611016,
+      "fcf_cagr_r2": 0.0053266784371944305,
+      "fcf_sma_cagr": 0.13878947627793856,
+      "pbr": 5.923623480505425,
+      "amount_millions": 178,
+      "ratio_percent": 4.7
+    }
+  ]
+}

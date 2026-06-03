@@ -1,0 +1,61 @@
+{
+  "id": "嶋村吉洋映画企画",
+  "name": "(株)嶋村吉洋映画企画",
+  "aliases": [
+    "(株)嶋村吉洋映画企画"
+  ],
+  "stocks": [
+    {
+      "code": "4751",
+      "name": "サイバーエージェント",
+      "price": 1354.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1905708947797566,
+      "per_actual": 21.680820436669087,
+      "per": 21.590142791446542,
+      "per_next": 21.125124331323075,
+      "fcf_yield_avg": 0.021744287135374216,
+      "total_payout_ratio": 4.751615184087997,
+      "equity_ratio": 29.845000197429112,
+      "peg_trailing_5": 0.5894218372963579,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8275127308347533,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.255539143279173,
+      "has_preferred_shares": false,
+      "croic": 0.22203526627542716,
+      "fcf_cagr": 12.950232587312346,
+      "fcf_cagr_r2": 0.03792857751921502,
+      "fcf_sma_cagr": 0.11781994212838831,
+      "pbr": 2.4904383717702707,
+      "amount_millions": 11834,
+      "ratio_percent": 1.7
+    },
+    {
+      "code": "9405",
+      "name": "朝日放送グループ HD",
+      "price": 807.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2827019371383193,
+      "per_actual": 13.492898081534772,
+      "per": 8.233958780487805,
+      "per_next": 16.8796155,
+      "fcf_yield_avg": 0.028261899686044388,
+      "total_payout_ratio": 6.64114653559496,
+      "equity_ratio": 52.15033686536277,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.2391573729863694,
+      "has_preferred_shares": false,
+      "croic": 0.020769155712911724,
+      "fcf_cagr": -33.574398211228726,
+      "fcf_cagr_r2": 0.07823597633233295,
+      "fcf_sma_cagr": -0.15728571428571428,
+      "pbr": 0.43156023572725183,
+      "amount_millions": 646,
+      "ratio_percent": 1.9
+    }
+  ]
+}

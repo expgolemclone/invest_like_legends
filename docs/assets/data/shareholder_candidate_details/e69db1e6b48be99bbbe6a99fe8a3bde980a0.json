@@ -1,0 +1,61 @@
+{
+  "id": "東洋電機製造",
+  "name": "東洋電機製造",
+  "aliases": [
+    "東洋電機製造"
+  ],
+  "stocks": [
+    {
+      "code": "6332",
+      "name": "月島 HD",
+      "price": 2573.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.42718448768556816,
+      "per_actual": 15.48113411306043,
+      "per": 6.882912226666667,
+      "per_next": 14.749097628571429,
+      "fcf_yield_avg": 0.017703746513174093,
+      "total_payout_ratio": 11.461233859852776,
+      "equity_ratio": 42.70577587283093,
+      "peg_trailing_5": 3.972889622879167,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 3.0124290987504203,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.554605518849592,
+      "has_preferred_shares": false,
+      "croic": 0.21152844370262483,
+      "fcf_cagr": 30.375977744398796,
+      "fcf_cagr_r2": 0.03859556844496661,
+      "fcf_sma_cagr": 0.14032968723355976,
+      "pbr": 0.9213743677155657,
+      "amount_millions": 2264,
+      "ratio_percent": 1.9
+    },
+    {
+      "code": "7565",
+      "name": "萬世電機",
+      "price": 6040.0,
+      "price_date": "2026-05-28",
+      "net_cash_ratio": 0.7949916965574408,
+      "per_actual": 11.319500059560353,
+      "per": 9.688870588235295,
+      "per_next": 9.066649541284404,
+      "fcf_yield_avg": 0.061463344642043304,
+      "total_payout_ratio": 33.57244940829624,
+      "equity_ratio": 54.21535507756686,
+      "peg_trailing_5": 0.53710139119073,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.49464317139991765,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.6556291390728477,
+      "has_preferred_shares": false,
+      "croic": 0.22687925847941914,
+      "fcf_cagr": 20.9698658307744,
+      "fcf_cagr_r2": 0.11312103430157862,
+      "fcf_sma_cagr": 0.12927330266749748,
+      "pbr": 0.8424774476022253,
+      "amount_millions": 302,
+      "ratio_percent": 3.0
+    }
+  ]
+}

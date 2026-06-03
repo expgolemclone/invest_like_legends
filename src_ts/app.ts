@@ -33,13 +33,10 @@ type StockColumnsApi = {
 
 type AppView = "portfolio" | "candidates" | "candidate";
 
-type ShareholderCandidate = {
+type ShareholderCandidateDetail = {
   id: string;
   name: string;
   aliases: string[];
-  holding_count: number;
-  priced_holding_count: number;
-  total_amount_millions: number;
   stocks: Record<string, unknown>[];
 };
 
@@ -453,6 +450,17 @@ function getCandidatesDataUrl(): string {
     : "/api/shareholder-candidates";
 }
 
+function getCandidateDetailDataUrl(candidateId: string): string {
+  return IS_GITHUB_PAGES
+    ? "assets/data/shareholder_candidate_details/" + shareholderCandidateDetailFilename(candidateId)
+    : "/api/shareholder-candidate?id=" + encodeURIComponent(candidateId);
+}
+
+function shareholderCandidateDetailFilename(candidateId: string): string {
+  const bytes: Uint8Array = new TextEncoder().encode(candidateId);
+  return Array.from(bytes, (byte: number): string => byte.toString(16).padStart(2, "0")).join("") + ".json";
+}
+
 function getStockPriceMetadataUrl(): string {
   return IS_GITHUB_PAGES ? "assets/stock-price-meta.json" : "/api/stock-price-meta";
 }
@@ -497,21 +505,15 @@ async function bootstrapCandidateDetailView(): Promise<void> {
   }
 
   try {
-    const response: Response = await fetch(getCandidatesDataUrl(), { cache: "no-store" });
+    const response: Response = await fetch(getCandidateDetailDataUrl(candidateId), { cache: "no-store" });
     if (!response.ok) {
       throw new Error("HTTP " + response.status);
     }
     const raw: unknown = await response.json();
-    if (!Array.isArray(raw)) {
-      throw new Error("Candidate data must be an array.");
+    if (!isShareholderCandidateDetail(raw) || raw.id !== candidateId) {
+      throw new Error("Candidate detail not found.");
     }
-    const candidate: ShareholderCandidate | undefined = raw.find(
-      (entry: unknown): entry is ShareholderCandidate =>
-        isShareholderCandidate(entry) && entry.id === candidateId,
-    );
-    if (!candidate) {
-      throw new Error("Candidate not found.");
-    }
+    const candidate: ShareholderCandidateDetail = raw;
 
     const payload: Record<string, { name: string; stocks: Record<string, unknown>[] }> = {
       [candidate.id]: {
@@ -541,7 +543,7 @@ async function bootstrapCandidateDetailView(): Promise<void> {
   }
 }
 
-function isShareholderCandidate(value: unknown): value is ShareholderCandidate {
+function isShareholderCandidateDetail(value: unknown): value is ShareholderCandidateDetail {
   if (!value || typeof value !== "object") {
     return false;
   }
@@ -550,9 +552,6 @@ function isShareholderCandidate(value: unknown): value is ShareholderCandidate {
     typeof candidate.id === "string"
     && typeof candidate.name === "string"
     && Array.isArray(candidate.aliases)
-    && typeof candidate.holding_count === "number"
-    && typeof candidate.priced_holding_count === "number"
-    && typeof candidate.total_amount_millions === "number"
     && Array.isArray(candidate.stocks)
   );
 }

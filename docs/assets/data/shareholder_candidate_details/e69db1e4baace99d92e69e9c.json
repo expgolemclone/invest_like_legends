@@ -1,0 +1,61 @@
+{
+  "id": "東京青果",
+  "name": "東京青果",
+  "aliases": [
+    "東京青果"
+  ],
+  "stocks": [
+    {
+      "code": "1377",
+      "name": "サカタのタネ",
+      "price": 4150.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.23588597493202773,
+      "per_actual": 19.406303418803418,
+      "per": 17.449501157407408,
+      "per_next": 17.449501157407408,
+      "fcf_yield_avg": 0.02046222137439061,
+      "total_payout_ratio": 8.512394463149581,
+      "equity_ratio": 75.15419978427738,
+      "peg_trailing_5": 1.8958637758764236,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.8990501381206601,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.0843373493975903,
+      "has_preferred_shares": false,
+      "croic": 0.06260843431100668,
+      "fcf_cagr": 14.381562631134749,
+      "fcf_cagr_r2": 0.2042092513408877,
+      "fcf_sma_cagr": 0.1233078385830857,
+      "pbr": 1.1649684270065772,
+      "amount_millions": 2324,
+      "ratio_percent": 1.2
+    },
+    {
+      "code": "7555",
+      "name": "大田花き",
+      "price": 800.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.28428984090909093,
+      "per_actual": 19.848072030457768,
+      "per": 36.666666666666664,
+      "per_next": 35.2,
+      "fcf_yield_avg": -0.01134581818181819,
+      "total_payout_ratio": 4.543909090909091,
+      "equity_ratio": 62.01891729591562,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.5,
+      "has_preferred_shares": false,
+      "croic": -0.03201341348838549,
+      "fcf_cagr": 384.7666595767618,
+      "fcf_cagr_r2": 0.3960770753753604,
+      "fcf_sma_cagr": 0.21593122781390983,
+      "pbr": 0.8459874143990519,
+      "amount_millions": 400,
+      "ratio_percent": 9.0
+    }
+  ]
+}

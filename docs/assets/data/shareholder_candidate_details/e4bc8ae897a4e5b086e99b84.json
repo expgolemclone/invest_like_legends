@@ -1,0 +1,61 @@
+{
+  "id": "伊藤将雄",
+  "name": "伊藤将雄",
+  "aliases": [
+    "伊藤将雄"
+  ],
+  "stocks": [
+    {
+      "code": "3984",
+      "name": "ユーザーローカル",
+      "price": 1812.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.27041066163053695,
+      "per_actual": 20.59332332484991,
+      "per": 19.36658447368421,
+      "per_next": 16.35400466666667,
+      "fcf_yield_avg": 0.024906947358500204,
+      "total_payout_ratio": 3.753959903344639,
+      "equity_ratio": 87.2423664160415,
+      "peg_trailing_5": 0.7422356398702851,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7088572595077135,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.5518763796909493,
+      "has_preferred_shares": false,
+      "croic": 0.17770695921683147,
+      "fcf_cagr": 25.709014181239674,
+      "fcf_cagr_r2": 0.9496278401557252,
+      "fcf_sma_cagr": 0.25032042027073165,
+      "pbr": 3.383888221779731,
+      "amount_millions": 10999,
+      "ratio_percent": 37.3
+    },
+    {
+      "code": "5031",
+      "name": "モイ",
+      "price": 510.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.22435677120626282,
+      "per_actual": 70.04494183130586,
+      "per": 39.57033333333333,
+      "per_next": 30.968086956521738,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 46.44138677871362,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "missing_input",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "missing_input",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.0005411444597295797,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 3.6089775257841654,
+      "amount_millions": 163,
+      "ratio_percent": 2.2
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "ワイズ",
+  "name": "ワイズ(株)",
+  "aliases": [
+    "ワイズ(株)",
+    "合同会社ワイズ"
+  ],
+  "stocks": [
+    {
+      "code": "1787",
+      "name": "ナカボーテック",
+      "price": 5360.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.44590670566475976,
+      "per_actual": 13.320511988021527,
+      "per": 15.162391304347826,
+      "per_next": 14.23408163265306,
+      "fcf_yield_avg": 0.03824651239479834,
+      "total_payout_ratio": 4.481088792349492,
+      "equity_ratio": 70.42040483208729,
+      "peg_trailing_5": 0.7586920277694041,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.2721289223045793,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 4.850746268656716,
+      "has_preferred_shares": false,
+      "croic": 0.06760993090715314,
+      "fcf_cagr": 9.271127513526661,
+      "fcf_cagr_r2": 0.1110459065307494,
+      "fcf_sma_cagr": 0.0902614541491722,
+      "pbr": 1.5977537479531836,
+      "amount_millions": 268,
+      "ratio_percent": 1.9
+    },
+    {
+      "code": "5280",
+      "name": "ヨシコン",
+      "price": 2152.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.5118255450491136,
+      "per_actual": 5.7265720635861115,
+      "per": 5.40034178,
+      "per_next": 4.937455341714286,
+      "fcf_yield_avg": -0.010111275540415876,
+      "total_payout_ratio": 14.663099712181548,
+      "equity_ratio": 61.64190031993113,
+      "peg_trailing_5": 0.24104934715072165,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.26072044912912157,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 3.717472118959108,
+      "has_preferred_shares": false,
+      "croic": 0.05584423350102705,
+      "fcf_cagr": 284.90792761641177,
+      "fcf_cagr_r2": 0.09435744246360264,
+      "fcf_sma_cagr": 0.05283606615874487,
+      "pbr": 0.6242083412001603,
+      "amount_millions": 5380,
+      "ratio_percent": 31.1
+    }
+  ]
+}

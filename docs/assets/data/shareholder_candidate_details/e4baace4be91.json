@@ -1,0 +1,61 @@
+{
+  "id": "京侑",
+  "name": "京侑(株)",
+  "aliases": [
+    "京侑(株)"
+  ],
+  "stocks": [
+    {
+      "code": "5131",
+      "name": "リンカーズ",
+      "price": 128.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.47572092897747714,
+      "per_actual": -3.2447474891192125,
+      "per": -4.9411555555555555,
+      "per_next": -9.36218947368421,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 81.96636439500936,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_per",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.2906006708501974,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 1.5914199367660504,
+      "amount_millions": 77,
+      "ratio_percent": 4.3
+    },
+    {
+      "code": "7821",
+      "name": "前田工繊",
+      "price": 1793.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.17116204109100444,
+      "per_actual": 12.864215124459902,
+      "per": 16.061649646842106,
+      "per_next": 14.886406989756098,
+      "fcf_yield_avg": 0.017330428024410458,
+      "total_payout_ratio": 9.91759323588879,
+      "equity_ratio": 76.90865810324405,
+      "peg_trailing_5": 0.5112087476890214,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.9946566229049534,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.7808142777467931,
+      "has_preferred_shares": false,
+      "croic": 0.0826469542545627,
+      "fcf_cagr": 36.24932854902129,
+      "fcf_cagr_r2": 0.258553757643003,
+      "fcf_sma_cagr": 0.2164730358981397,
+      "pbr": 1.7834283568944862,
+      "amount_millions": 12282,
+      "ratio_percent": 10.0
+    }
+  ]
+}

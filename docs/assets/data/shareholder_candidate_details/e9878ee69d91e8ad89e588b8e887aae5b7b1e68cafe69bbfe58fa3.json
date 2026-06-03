@@ -1,0 +1,61 @@
+{
+  "id": "野村證券自己振替口",
+  "name": "野村證券(自己振替口)",
+  "aliases": [
+    "野村證券(自己振替口)"
+  ],
+  "stocks": [
+    {
+      "code": "2882",
+      "name": "イートアンド HD",
+      "price": 1980.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.35528253095942014,
+      "per_actual": 25.326563513513513,
+      "per": 42.43394037735849,
+      "per_next": 32.12855485714286,
+      "fcf_yield_avg": -0.03605282873333985,
+      "total_payout_ratio": 1.9875510473807094,
+      "equity_ratio": 37.35034818702617,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.3787878787878788,
+      "has_preferred_shares": false,
+      "croic": -0.08138065701814841,
+      "fcf_cagr": -17.618685427024978,
+      "fcf_cagr_r2": 0.13932434003961497,
+      "fcf_sma_cagr": -0.9325568420318795,
+      "pbr": 2.0536926673363163,
+      "amount_millions": 356,
+      "ratio_percent": 1.5
+    },
+    {
+      "code": "6104",
+      "name": "芝浦機械",
+      "price": 4025.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1466515217583067,
+      "per_actual": 7.930629050567595,
+      "per": 24.9755335375,
+      "per_next": 18.849459273584905,
+      "fcf_yield_avg": 0.06016788381091857,
+      "total_payout_ratio": 26.426862873979957,
+      "equity_ratio": 51.40751576848507,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.7391304347826086,
+      "has_preferred_shares": false,
+      "croic": 0.08196154255507858,
+      "fcf_cagr": 2.995467325268187,
+      "fcf_cagr_r2": 0.004596504243054973,
+      "fcf_sma_cagr": 0.0021353652093918374,
+      "pbr": 0.8526182600643504,
+      "amount_millions": 4508,
+      "ratio_percent": 4.5
+    }
+  ]
+}

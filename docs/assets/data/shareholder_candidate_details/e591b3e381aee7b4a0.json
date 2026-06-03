@@ -1,0 +1,61 @@
+{
+  "id": "味の素",
+  "name": "味の素",
+  "aliases": [
+    "味の素"
+  ],
+  "stocks": [
+    {
+      "code": "2613",
+      "name": "J-オイルミルズ",
+      "price": 1968.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.08495158290704631,
+      "per_actual": 9.426046559176672,
+      "per": 16.08405408,
+      "per_next": 14.335787332173913,
+      "fcf_yield_avg": 0.0466770438489458,
+      "total_payout_ratio": 6.822391094389628,
+      "equity_ratio": 58.90964011189206,
+      "peg_trailing_5": 1.5450177120514876,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.7784552845528454,
+      "has_preferred_shares": false,
+      "croic": 0.1290683925570975,
+      "fcf_cagr": 17.048887891290672,
+      "fcf_cagr_r2": 0.01960115956990747,
+      "fcf_sma_cagr": 0.3070795681556966,
+      "pbr": 0.6204333671533946,
+      "amount_millions": 17810,
+      "ratio_percent": 27.0
+    },
+    {
+      "code": "2692",
+      "name": "伊藤忠食品",
+      "price": 12940.0,
+      "price_date": "2026-05-18",
+      "net_cash_ratio": 0.33329445043889067,
+      "per_actual": 20.062993661628475,
+      "per": 19.830939759036145,
+      "per_next": 19.594857142857144,
+      "fcf_yield_avg": 0.00731788224315418,
+      "total_payout_ratio": 2.5990784754017087,
+      "equity_ratio": 37.34952182094708,
+      "peg_trailing_5": 1.2870111468218235,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.7376227721301105,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.03181724066533232,
+      "fcf_cagr": -4.2361346969068014,
+      "fcf_cagr_r2": 0.0004341297449129199,
+      "fcf_sma_cagr": -0.05591463887547021,
+      "pbr": 1.423946293861167,
+      "amount_millions": 4270,
+      "ratio_percent": 2.6
+    }
+  ]
+}

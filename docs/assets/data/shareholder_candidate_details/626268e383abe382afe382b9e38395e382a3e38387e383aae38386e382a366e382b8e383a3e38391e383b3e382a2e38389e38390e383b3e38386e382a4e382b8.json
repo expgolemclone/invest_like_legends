@@ -1,0 +1,61 @@
+{
+  "id": "bbhルクスフィデリティfジャパンアドバンテイジ",
+  "name": "BBHルクスフィデリティFジャパンアドバンテイジ",
+  "aliases": [
+    "BBHルクスフィデリティFジャパンアドバンテイジ"
+  ],
+  "stocks": [
+    {
+      "code": "1944",
+      "name": "きんでん",
+      "price": 6823.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2557298466848651,
+      "per_actual": 28.873806775449737,
+      "per": 20.82881481129771,
+      "per_next": 20.362498061791044,
+      "fcf_yield_avg": 0.015011719999942797,
+      "total_payout_ratio": 6.082222984405763,
+      "equity_ratio": 64.36917437534456,
+      "peg_trailing_5": 3.582565199122478,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.834519483705382,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.9526601201817383,
+      "has_preferred_shares": false,
+      "croic": 0.051760310230889596,
+      "fcf_cagr": -3.286781958350915,
+      "fcf_cagr_r2": 0.016370130598482878,
+      "fcf_sma_cagr": -0.04859136653981988,
+      "pbr": 2.274805615352037,
+      "amount_millions": 13714,
+      "ratio_percent": 1.0
+    },
+    {
+      "code": "2791",
+      "name": "大黒天物産",
+      "price": 4060.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.6898059882869056,
+      "per_actual": 8.692020076764098,
+      "per": 13.38176,
+      "per_next": 11.323027692307692,
+      "fcf_yield_avg": -0.00898101730877091,
+      "total_payout_ratio": 5.798258905473502,
+      "equity_ratio": 52.2641169042035,
+      "peg_trailing_5": 0.6884681328430351,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.3453812966588816,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.960591133004926,
+      "has_preferred_shares": false,
+      "croic": -0.07025038566512401,
+      "fcf_cagr": 22.51409709806079,
+      "fcf_cagr_r2": 0.004005301054899327,
+      "fcf_sma_cagr": 0.012661191556804273,
+      "pbr": 0.964230053714136,
+      "amount_millions": 1177,
+      "ratio_percent": 2.0
+    }
+  ]
+}

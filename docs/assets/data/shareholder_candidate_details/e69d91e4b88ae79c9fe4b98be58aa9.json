@@ -1,0 +1,61 @@
+{
+  "id": "村上真之助",
+  "name": "村上真之助",
+  "aliases": [
+    "村上真之助"
+  ],
+  "stocks": [
+    {
+      "code": "2292",
+      "name": "エスフーズ",
+      "price": 2655.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.03442129670370612,
+      "per_actual": 32.122534403824524,
+      "per": 10.708849906875,
+      "per_next": 11.27247358618421,
+      "fcf_yield_avg": -0.009212006971604621,
+      "total_payout_ratio": 8.895679818879728,
+      "equity_ratio": 47.126780719443175,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 5.04598972647082,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.0715630885122414,
+      "has_preferred_shares": false,
+      "croic": -0.04874454566332389,
+      "fcf_cagr": -71.0946259349706,
+      "fcf_cagr_r2": 0.043956347236703955,
+      "fcf_sma_cagr": -0.8167539267015707,
+      "pbr": 0.659696291928479,
+      "amount_millions": 21240,
+      "ratio_percent": 24.7
+    },
+    {
+      "code": "324A",
+      "name": "ブッキングリゾート",
+      "price": 806.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.16150868385667042,
+      "per_actual": 14.232149243661354,
+      "per": 12.22392,
+      "per_next": 9.16794,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 74.48503624424873,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.14210243012361518,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.5077253338537457,
+      "amount_millions": 40,
+      "ratio_percent": 0.8
+    }
+  ]
+}

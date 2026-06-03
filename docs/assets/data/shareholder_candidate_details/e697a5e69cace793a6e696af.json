@@ -1,0 +1,61 @@
+{
+  "id": "日本瓦斯",
+  "name": "日本瓦斯",
+  "aliases": [
+    "日本瓦斯"
+  ],
+  "stocks": [
+    {
+      "code": "147A",
+      "name": "ソラコム",
+      "price": 1143.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1724923018752184,
+      "per_actual": 147.7034617510972,
+      "per": 85.4055315,
+      "per_next": 66.79150540384616,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 8.061826653042191e-05,
+      "equity_ratio": 73.70462412043437,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.1112816855976611,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 5.031122510144838,
+      "amount_millions": 1097,
+      "ratio_percent": 2.1
+    },
+    {
+      "code": "485A",
+      "name": "パワーエックス",
+      "price": 3465.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.029756611481899665,
+      "per_actual": -79.76825759416768,
+      "per": 105.0388416,
+      "per_next": 34.55225052631579,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 23.498246683945723,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.007973695026715988,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 19.750083032490974,
+      "amount_millions": 3950,
+      "ratio_percent": 3.5
+    }
+  ]
+}

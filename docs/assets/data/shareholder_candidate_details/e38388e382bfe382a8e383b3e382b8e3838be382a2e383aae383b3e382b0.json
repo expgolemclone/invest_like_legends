@@ -1,0 +1,61 @@
+{
+  "id": "トタエンジニアリング",
+  "name": "トーターエンジニアリング(株)",
+  "aliases": [
+    "トーターエンジニアリング(株)"
+  ],
+  "stocks": [
+    {
+      "code": "6418",
+      "name": "日本金銭機械",
+      "price": 962.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2703034507573981,
+      "per_actual": 7.491235390431352,
+      "per": 5.7090180524,
+      "per_next": 11.4180361048,
+      "fcf_yield_avg": 0.028789413256611683,
+      "total_payout_ratio": 20.335647730382362,
+      "equity_ratio": 57.78452872117204,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.079002079002079,
+      "has_preferred_shares": false,
+      "croic": 0.2185629914586728,
+      "fcf_cagr": -6.403520754082523,
+      "fcf_cagr_r2": 0.0023529466406755793,
+      "fcf_sma_cagr": -0.13693354654020884,
+      "pbr": 0.8911700534715952,
+      "amount_millions": 414,
+      "ratio_percent": 1.4
+    },
+    {
+      "code": "8707",
+      "name": "岩井コスモ HD",
+      "price": 3780.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.6423557699304517,
+      "per_actual": 14.059239256505576,
+      "per": 13.506912,
+      "per_next": 13.22355020979021,
+      "fcf_yield_avg": 0.019545548234859312,
+      "total_payout_ratio": 13.998123965820506,
+      "equity_ratio": 32.53689653870834,
+      "peg_trailing_5": 0.7021425935398019,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8859087069233946,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.5873015873015872,
+      "has_preferred_shares": false,
+      "croic": 0.03861215538847118,
+      "fcf_cagr": 1.3393677030040667,
+      "fcf_cagr_r2": 0.00027986419619283927,
+      "fcf_sma_cagr": -0.1837408401654212,
+      "pbr": 1.396558160145345,
+      "amount_millions": 3780,
+      "ratio_percent": 3.9
+    }
+  ]
+}

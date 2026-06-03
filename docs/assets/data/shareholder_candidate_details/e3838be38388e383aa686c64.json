@@ -1,0 +1,61 @@
+{
+  "id": "ニトリhld",
+  "name": "ニトリHLD",
+  "aliases": [
+    "ニトリHLD"
+  ],
+  "stocks": [
+    {
+      "code": "2730",
+      "name": "エディオン",
+      "price": 2340.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.522780851040404,
+      "per_actual": 18.56447005524862,
+      "per": 18.07539229241379,
+      "per_next": 17.472879216,
+      "fcf_yield_avg": 0.0331328717785985,
+      "total_payout_ratio": 19.177911618966995,
+      "equity_ratio": 51.714463123519536,
+      "peg_trailing_5": 3.5965292100516146,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 3.830368440477977,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.0256410256410255,
+      "has_preferred_shares": false,
+      "croic": 0.05148723685274536,
+      "fcf_cagr": -39.609978340272335,
+      "fcf_cagr_r2": 0.2085525468520426,
+      "fcf_sma_cagr": -0.2352864214221854,
+      "pbr": 1.1755904489876472,
+      "amount_millions": 23915,
+      "ratio_percent": 9.1
+    },
+    {
+      "code": "8919",
+      "name": "カチタス",
+      "price": 3415.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.067366132790176,
+      "per_actual": 28.124810010471204,
+      "per": 21.660639967741936,
+      "per_next": 19.605250773722627,
+      "fcf_yield_avg": 0.007332312474686228,
+      "total_payout_ratio": 6.166603611162181,
+      "equity_ratio": 54.86565301395673,
+      "peg_trailing_5": 2.168273877808257,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.3180853052861219,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.2884333821376281,
+      "has_preferred_shares": false,
+      "croic": 0.013985239341447542,
+      "fcf_cagr": 33.89680290259147,
+      "fcf_cagr_r2": 0.11649759524989498,
+      "fcf_sma_cagr": 0.3631863299409473,
+      "pbr": 5.874842748091603,
+      "amount_millions": 91215,
+      "ratio_percent": 33.9
+    }
+  ]
+}

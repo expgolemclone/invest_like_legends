@@ -1,0 +1,61 @@
+{
+  "id": "住友金属鉱山",
+  "name": "住友金属鉱山",
+  "aliases": [
+    "住友金属鉱山"
+  ],
+  "stocks": [
+    {
+      "code": "1911",
+      "name": "住友林業",
+      "price": 1286.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.6614553820952962,
+      "per_actual": 7.460409519865749,
+      "per": 8.203835482948454,
+      "per_next": 7.578781350914285,
+      "fcf_yield_avg": -0.021051631772760815,
+      "total_payout_ratio": 11.065857477943592,
+      "equity_ratio": 29.658340176171993,
+      "peg_trailing_5": 2.3518840107153367,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 3.7408472284186964,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.9432568985619898,
+      "has_preferred_shares": false,
+      "croic": -0.03487190488163486,
+      "fcf_cagr": -18.991114562468944,
+      "fcf_cagr_r2": 0.04991545755638777,
+      "fcf_sma_cagr": -0.09989691014474351,
+      "pbr": 0.7000192136831382,
+      "amount_millions": 39020,
+      "ratio_percent": 4.9
+    },
+    {
+      "code": "4094",
+      "name": "日本化学産業",
+      "price": 2010.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.5359691949522604,
+      "per_actual": 17.29212693823113,
+      "per": 18.528545454545455,
+      "per_next": 18.528545454545455,
+      "fcf_yield_avg": 0.015126990785716384,
+      "total_payout_ratio": 9.761748456926412,
+      "equity_ratio": 77.11352345197352,
+      "peg_trailing_5": 4.828312268731187,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 12.043042297620106,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.2388059701492535,
+      "has_preferred_shares": false,
+      "croic": -0.19331425746929903,
+      "fcf_cagr": -71.93586250876942,
+      "fcf_cagr_r2": 0.15369474258390198,
+      "fcf_sma_cagr": -0.3760499174917492,
+      "pbr": 0.8770178793073068,
+      "amount_millions": 1085,
+      "ratio_percent": 2.6
+    }
+  ]
+}

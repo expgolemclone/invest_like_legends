@@ -1,0 +1,62 @@
+{
+  "id": "ミツバ",
+  "name": "ミツバ",
+  "aliases": [
+    "(株)ミツバ",
+    "ミツバ"
+  ],
+  "stocks": [
+    {
+      "code": "6612",
+      "name": "バルミューダ",
+      "price": 571.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.21546853767028845,
+      "per_actual": -3.05041365914787,
+      "per": 695.4943142857143,
+      "per_next": 194.738408,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 0.0,
+      "equity_ratio": 59.755312298776566,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.29346557759626607,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 1.7325481138790035,
+      "amount_millions": 69,
+      "ratio_percent": 1.4
+    },
+    {
+      "code": "9691",
+      "name": "両毛システムズ",
+      "price": 5180.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.13344331144331145,
+      "per_actual": 11.584202699654803,
+      "per": 9.569368421052632,
+      "per_next": 9.276428571428571,
+      "fcf_yield_avg": 0.004811663311663312,
+      "total_payout_ratio": 2.9634139634139633,
+      "equity_ratio": 54.53413605424026,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "missing_input",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "missing_input",
+      "dividend_yield": 0.42471042471042475,
+      "has_preferred_shares": false,
+      "croic": 0.09303997232188296,
+      "fcf_cagr": -61.36358873626075,
+      "fcf_cagr_r2": 0.01671249172442098,
+      "fcf_sma_cagr": -0.15064236610113976,
+      "pbr": 1.3339437466021917,
+      "amount_millions": 9272,
+      "ratio_percent": 51.1
+    }
+  ]
+}

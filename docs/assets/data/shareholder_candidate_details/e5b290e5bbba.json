@@ -1,0 +1,61 @@
+{
+  "id": "岐建",
+  "name": "岐建",
+  "aliases": [
+    "岐建"
+  ],
+  "stocks": [
+    {
+      "code": "8361",
+      "name": "大垣共立銀行",
+      "price": 7010.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 19.66205313018073,
+      "per": 16.92316362397661,
+      "per_next": 16.07700544277778,
+      "fcf_yield_avg": 0.24701393916790856,
+      "total_payout_ratio": 3.1673947243140264,
+      "equity_ratio": 4.388939664155622,
+      "peg_trailing_5": 0.9033056535136063,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.860342477940845,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.7845934379457917,
+      "has_preferred_shares": false,
+      "croic": 0.3736590972415715,
+      "fcf_cagr": -23.3507107831417,
+      "fcf_cagr_r2": 0.008131165196033666,
+      "fcf_sma_cagr": -1.6593332962052811,
+      "pbr": 0.9085192621301311,
+      "amount_millions": 7431,
+      "ratio_percent": 2.5
+    },
+    {
+      "code": "9076",
+      "name": "セイノー HD",
+      "price": 2688.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.16527723941673264,
+      "per_actual": 26.20283886687789,
+      "per": 22.421478075733333,
+      "per_next": 21.65164191862661,
+      "fcf_yield_avg": 0.020440718027735165,
+      "total_payout_ratio": 30.024980608796287,
+      "equity_ratio": 47.41775206268486,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.599702380952381,
+      "has_preferred_shares": false,
+      "croic": -0.03988401537368302,
+      "fcf_cagr": -5.73829842254978,
+      "fcf_cagr_r2": 0.01656154285190551,
+      "fcf_sma_cagr": -0.05664339041691102,
+      "pbr": 1.1910240708263786,
+      "amount_millions": 8064,
+      "ratio_percent": 1.5
+    }
+  ]
+}

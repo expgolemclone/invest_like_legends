@@ -1,0 +1,61 @@
+{
+  "id": "hsbc香港プライベトバンキングディビジョン",
+  "name": "HSBC(香港)プライベートバンキングディビジョン",
+  "aliases": [
+    "HSBC(香港)プライベートバンキングディビジョン"
+  ],
+  "stocks": [
+    {
+      "code": "3076",
+      "name": "あい HD",
+      "price": 2850.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.25272151297521467,
+      "per_actual": 7.579072767857143,
+      "per": 15.658511504854369,
+      "per_next": 16.457415153061223,
+      "fcf_yield_avg": 0.03523937229498407,
+      "total_payout_ratio": 11.473024455817459,
+      "equity_ratio": 75.06990475920117,
+      "peg_trailing_5": 0.2121391105500907,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.4511512845765075,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.9298245614035088,
+      "has_preferred_shares": false,
+      "croic": 0.13926336289209476,
+      "fcf_cagr": 5.723202981120079,
+      "fcf_cagr_r2": 0.08495714080450449,
+      "fcf_sma_cagr": 0.07990248130152033,
+      "pbr": 1.4391885825190738,
+      "amount_millions": 7923,
+      "ratio_percent": 4.9
+    },
+    {
+      "code": "7088",
+      "name": "フォーラムエンジニアリング",
+      "price": 1699.0,
+      "price_date": "2026-05-12",
+      "net_cash_ratio": 0.11408207241902632,
+      "per_actual": 31.46991012482663,
+      "per": 30.354254448160535,
+      "per_next": 23.271595076923077,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 6.028037649261087,
+      "equity_ratio": 68.76664181488977,
+      "peg_trailing_5": 5.076801413102254,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.589020358660075,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.315883218462015,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 6.894501731996353,
+      "amount_millions": 1801,
+      "ratio_percent": 1.9
+    }
+  ]
+}

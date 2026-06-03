@@ -1,0 +1,61 @@
+{
+  "id": "jpm",
+  "name": "JPM(株)",
+  "aliases": [
+    "JPM(株)"
+  ],
+  "stocks": [
+    {
+      "code": "6577",
+      "name": "ベストワンドットコム",
+      "price": 1952.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.24454914941611733,
+      "per_actual": 312.69325488548014,
+      "per": 15.664286315789473,
+      "per_next": 11.023016296296296,
+      "fcf_yield_avg": -0.016589933843475794,
+      "total_payout_ratio": 1.9478099427245563,
+      "equity_ratio": 28.44740790214775,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.0245901639344261,
+      "has_preferred_shares": false,
+      "croic": -0.061451993103097166,
+      "fcf_cagr": -12.151383076867935,
+      "fcf_cagr_r2": 0.0108535586103465,
+      "fcf_sma_cagr": -0.0443607603458156,
+      "pbr": 2.5946932929046005,
+      "amount_millions": 59,
+      "ratio_percent": 2.0
+    },
+    {
+      "code": "7373",
+      "name": "アイドマHD",
+      "price": 1156.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.268338781287928,
+      "per_actual": 9.056346510881927,
+      "per": 7.6965675826086954,
+      "per_next": 6.104174289655172,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 8.384646702228657,
+      "equity_ratio": 65.74341338211053,
+      "peg_trailing_5": 0.14137631476030255,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.12045370421719072,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.5951557093425603,
+      "has_preferred_shares": false,
+      "croic": 0.2302086783703213,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.4555597164096494,
+      "amount_millions": 6936,
+      "ratio_percent": 39.1
+    }
+  ]
+}

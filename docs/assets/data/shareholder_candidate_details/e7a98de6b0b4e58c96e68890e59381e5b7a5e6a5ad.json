@@ -1,0 +1,61 @@
+{
+  "id": "積水化成品工業",
+  "name": "積水化成品工業",
+  "aliases": [
+    "積水化成品工業"
+  ],
+  "stocks": [
+    {
+      "code": "4212",
+      "name": "積水樹脂",
+      "price": 2128.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.17848623955342022,
+      "per_actual": 19.10252159819413,
+      "per": 15.744031754418605,
+      "per_next": 11.982183459115044,
+      "fcf_yield_avg": 0.0734955503849908,
+      "total_payout_ratio": 61.67711846461311,
+      "equity_ratio": 63.1935125049338,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.6917293233082706,
+      "has_preferred_shares": false,
+      "croic": 0.02756796473181484,
+      "fcf_cagr": -21.72809370333287,
+      "fcf_cagr_r2": 0.5234782955734525,
+      "fcf_sma_cagr": -0.15002427577277877,
+      "pbr": 0.6947725961761476,
+      "amount_millions": 1724,
+      "ratio_percent": 2.5
+    },
+    {
+      "code": "7947",
+      "name": "エフピコ",
+      "price": 2451.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.30758422912897093,
+      "per_actual": 16.600769439692456,
+      "per": 14.100490287346938,
+      "per_next": 13.547529883921568,
+      "fcf_yield_avg": 0.02536410090820281,
+      "total_payout_ratio": 11.164276241425823,
+      "equity_ratio": 51.747962193644646,
+      "peg_trailing_5": 5.556489883213101,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.638942383348591,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.7135862913096693,
+      "has_preferred_shares": false,
+      "croic": 0.06122622122509003,
+      "fcf_cagr": 16.243079019356266,
+      "fcf_cagr_r2": 0.056380876639969435,
+      "fcf_sma_cagr": 1.0236305048335124,
+      "pbr": 1.3449602711239732,
+      "amount_millions": 6887,
+      "ratio_percent": 3.3
+    }
+  ]
+}

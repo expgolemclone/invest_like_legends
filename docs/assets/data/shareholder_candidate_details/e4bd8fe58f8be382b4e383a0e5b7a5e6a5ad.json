@@ -1,0 +1,61 @@
+{
+  "id": "住友ゴム工業",
+  "name": "住友ゴム工業",
+  "aliases": [
+    "住友ゴム工業"
+  ],
+  "stocks": [
+    {
+      "code": "9027",
+      "name": "ロジネットジャパン",
+      "price": 4035.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.1237084914662211,
+      "per_actual": 10.302891459074733,
+      "per": 10.248185840707965,
+      "per_next": 9.897820512820513,
+      "fcf_yield_avg": 0.05534955031971989,
+      "total_payout_ratio": 21.557029303697178,
+      "equity_ratio": 56.50936619329171,
+      "peg_trailing_5": 9.339027575213276,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 7.246183671397823,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.734820322180917,
+      "has_preferred_shares": false,
+      "croic": 0.044171498321635645,
+      "fcf_cagr": 6.2315801082834374,
+      "fcf_cagr_r2": 0.039634732800097675,
+      "fcf_sma_cagr": 0.049738088830536986,
+      "pbr": 1.1008032319391634,
+      "amount_millions": 605,
+      "ratio_percent": 2.6
+    },
+    {
+      "code": "9882",
+      "name": "イエローハット",
+      "price": 1621.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.06823188357552015,
+      "per_actual": 12.383719043694494,
+      "per": 11.524022845619834,
+      "per_next": 11.429563641967214,
+      "fcf_yield_avg": 0.01635319089341923,
+      "total_payout_ratio": 13.55701971886143,
+      "equity_ratio": 63.23874201633115,
+      "peg_trailing_5": 1.2616598984620588,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 2.0357803824799507,
+      "has_preferred_shares": false,
+      "croic": -0.003006630342020613,
+      "fcf_cagr": -20.841223709267386,
+      "fcf_cagr_r2": 0.15456693354503742,
+      "fcf_sma_cagr": -0.1446905887704884,
+      "pbr": 1.1562820408312189,
+      "amount_millions": 2010,
+      "ratio_percent": 1.3
+    }
+  ]
+}

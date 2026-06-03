@@ -1,0 +1,62 @@
+{
+  "id": "和幸",
+  "name": "(株)和幸",
+  "aliases": [
+    "(株)和幸",
+    "和幸(株)"
+  ],
+  "stocks": [
+    {
+      "code": "7827",
+      "name": "オービス",
+      "price": 1635.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.3100761552456575,
+      "per_actual": 6.9085830983245256,
+      "per": 8.329185171428572,
+      "per_next": 4.351066880597015,
+      "fcf_yield_avg": 0.059879532513763545,
+      "total_payout_ratio": 8.094909479415001,
+      "equity_ratio": 44.82509930809068,
+      "peg_trailing_5": 0.41409511658277903,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.22658651304659178,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 3.7920489296636086,
+      "has_preferred_shares": false,
+      "croic": 0.059441568192912915,
+      "fcf_cagr": 168.5553085935873,
+      "fcf_cagr_r2": 0.3847553893674475,
+      "fcf_sma_cagr": 0.23577606581031435,
+      "pbr": 0.5102520389324249,
+      "amount_millions": 262,
+      "ratio_percent": 9.2
+    },
+    {
+      "code": "7965",
+      "name": "象印マホービン",
+      "price": 1427.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.31219437800313127,
+      "per_actual": 17.324448160535116,
+      "per": 20.72004,
+      "per_next": 19.547207547169812,
+      "fcf_yield_avg": 0.039879266642342384,
+      "total_payout_ratio": 14.236459002974897,
+      "equity_ratio": 64.92918230064564,
+      "peg_trailing_5": 1.9944521500293704,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 4.529276097405608,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.6117729502452698,
+      "has_preferred_shares": false,
+      "croic": 0.10139004581424406,
+      "fcf_cagr": 0.6253506870716117,
+      "fcf_cagr_r2": 0.0007177091625171825,
+      "fcf_sma_cagr": 0.037484871420957244,
+      "pbr": 1.1563942001808258,
+      "amount_millions": 5979,
+      "ratio_percent": 5.7
+    }
+  ]
+}

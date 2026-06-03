@@ -1,0 +1,61 @@
+{
+  "id": "パソナグルプ",
+  "name": "パソナグループ",
+  "aliases": [
+    "パソナグループ"
+  ],
+  "stocks": [
+    {
+      "code": "5029",
+      "name": "サークレイス",
+      "price": 799.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.13658237908822612,
+      "per_actual": 19.005769634930207,
+      "per": 15.208499495652173,
+      "per_next": 9.45393211891892,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 0.0016866998562466307,
+      "equity_ratio": 54.365743870214466,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.022531720353640792,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 3.7641600466598297,
+      "amount_millions": 1151,
+      "ratio_percent": 32.9
+    },
+    {
+      "code": "9216",
+      "name": "ビーウィズ",
+      "price": 1514.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.23731843832877092,
+      "per_actual": 47.43199379747702,
+      "per": 30.676235428571427,
+      "per_next": 24.401550909090908,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 9.64531185163864,
+      "equity_ratio": 61.68518930038057,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 5.085865257595773,
+      "has_preferred_shares": false,
+      "croic": 0.07775912129334402,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.3985551500258304,
+      "amount_millions": 11870,
+      "ratio_percent": 55.4
+    }
+  ]
+}

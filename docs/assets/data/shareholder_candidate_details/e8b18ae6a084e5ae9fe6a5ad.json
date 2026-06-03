@@ -1,0 +1,61 @@
+{
+  "id": "豊栄実業",
+  "name": "豊栄実業",
+  "aliases": [
+    "豊栄実業"
+  ],
+  "stocks": [
+    {
+      "code": "4326",
+      "name": "インテージ HD",
+      "price": 1701.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.24503320064592513,
+      "per_actual": 19.618673004171114,
+      "per": 21.15834646153846,
+      "per_next": 20.22489,
+      "fcf_yield_avg": 0.03710442633687849,
+      "total_payout_ratio": 18.311236070708798,
+      "equity_ratio": 69.90530672836138,
+      "peg_trailing_5": 1.2419708026960128,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.9147569090952024,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.4109347442680775,
+      "has_preferred_shares": false,
+      "croic": 0.2231098601556139,
+      "fcf_cagr": 17.589478947957502,
+      "fcf_cagr_r2": 0.32305610752502767,
+      "fcf_sma_cagr": 0.21980269677818098,
+      "pbr": 2.063699067373411,
+      "amount_millions": 1021,
+      "ratio_percent": 1.4
+    },
+    {
+      "code": "7999",
+      "name": "MUTOH HD",
+      "price": 7560.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3111887797943755,
+      "per_actual": 27.832792483612526,
+      "per": 3.688650972972973,
+      "per_next": 63.6907068,
+      "fcf_yield_avg": 0.012529300428488882,
+      "total_payout_ratio": 2.430105967463791,
+      "equity_ratio": 80.94872479636801,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.06738422202977443,
+      "fcf_cagr": 14.035087719298245,
+      "fcf_cagr_r2": 0.045651460116705816,
+      "fcf_sma_cagr": 0.031380606970798475,
+      "pbr": 1.5531793236872053,
+      "amount_millions": 2192,
+      "ratio_percent": 5.7
+    }
+  ]
+}

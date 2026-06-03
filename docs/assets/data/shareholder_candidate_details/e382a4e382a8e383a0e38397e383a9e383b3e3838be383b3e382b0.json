@@ -1,0 +1,62 @@
+{
+  "id": "イエムプランニング",
+  "name": "(株)イー･エムプランニング",
+  "aliases": [
+    "(株)イー･エムプランニング",
+    "合同会社イーエム･プランニング"
+  ],
+  "stocks": [
+    {
+      "code": "2670",
+      "name": "エービーシー・マート",
+      "price": 2560.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2992885377020525,
+      "per_actual": 13.978312331870894,
+      "per": 13.843412461768558,
+      "per_next": 13.489963632957446,
+      "fcf_yield_avg": 0.03607599271789446,
+      "total_payout_ratio": 11.585760615385578,
+      "equity_ratio": 81.66171114693415,
+      "peg_trailing_5": 1.5824498645269909,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.9914831565952846,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.3669205233352861,
+      "has_preferred_shares": false,
+      "croic": 0.11926456137086505,
+      "fcf_cagr": -2.2556181466879988,
+      "fcf_cagr_r2": 0.006113686629868474,
+      "fcf_sma_cagr": 0.03407302618470287,
+      "pbr": 1.714762501789061,
+      "amount_millions": 316299,
+      "ratio_percent": 49.8
+    },
+    {
+      "code": "6419",
+      "name": "マースグループ HD",
+      "price": 2978.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.6738661850637067,
+      "per_actual": 7.762506859293251,
+      "per": 9.397244444444445,
+      "per_next": 9.397244444444445,
+      "fcf_yield_avg": 0.042121301516283724,
+      "total_payout_ratio": 15.436370531787096,
+      "equity_ratio": 83.56179688080454,
+      "peg_trailing_5": 0.254326224203152,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.5309382787096018,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.5184687709872398,
+      "has_preferred_shares": false,
+      "croic": 0.1388345908016549,
+      "fcf_cagr": 15.87253471962381,
+      "fcf_cagr_r2": 0.14223028557463713,
+      "fcf_sma_cagr": 0.08734876447947149,
+      "pbr": 0.8648847424287036,
+      "amount_millions": 6462,
+      "ratio_percent": 9.5
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "三井e&s",
+  "name": "三井E&S",
+  "aliases": [
+    "三井E&S"
+  ],
+  "stocks": [
+    {
+      "code": "6269",
+      "name": "三井海洋開発",
+      "price": 9825.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 11.894086943814653,
+      "per": 11.577458146551724,
+      "per_next": 12.43504763888889,
+      "fcf_yield_avg": 0.027467169043035096,
+      "total_payout_ratio": 0.027699487323815483,
+      "equity_ratio": 30.504704990710746,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.0178117048346056,
+      "has_preferred_shares": false,
+      "croic": 0.1717793569267572,
+      "fcf_cagr": 24.16224706400373,
+      "fcf_cagr_r2": 0.18229694398078033,
+      "fcf_sma_cagr": 0.2806894921902816,
+      "pbr": null,
+      "amount_millions": 24562,
+      "ratio_percent": 3.6
+    },
+    {
+      "code": "6391",
+      "name": "加地テック",
+      "price": 4330.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.22441745732590934,
+      "per_actual": 12.84979660226458,
+      "per": 10.190328767123289,
+      "per_next": 13.525345454545455,
+      "fcf_yield_avg": -0.019437164434717852,
+      "total_payout_ratio": 0.09832045963537815,
+      "equity_ratio": 67.63667585834008,
+      "peg_trailing_5": 0.7173856607871271,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.1590501864266851,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.3856812933025404,
+      "has_preferred_shares": false,
+      "croic": 0.03256110348445247,
+      "fcf_cagr": 79.4202793580352,
+      "fcf_cagr_r2": 0.23417527488600753,
+      "fcf_sma_cagr": 0.20223376726542086,
+      "pbr": 0.9514685720578581,
+      "amount_millions": 36545,
+      "ratio_percent": 49.1
+    }
+  ]
+}

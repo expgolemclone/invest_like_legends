@@ -1,0 +1,61 @@
+{
+  "id": "マンインタナショナルicvcジャパンcaf",
+  "name": "マンインターナショナルICVCジャパンCAF",
+  "aliases": [
+    "マンインターナショナルICVCジャパンCAF"
+  ],
+  "stocks": [
+    {
+      "code": "7211",
+      "name": "三菱自動車工業",
+      "price": 348.7,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.33874640943113243,
+      "per_actual": 12.425117139585723,
+      "per": 50.92682762002,
+      "per_next": 14.146341005561112,
+      "fcf_yield_avg": 0.023788836976834336,
+      "total_payout_ratio": 20.220187436045826,
+      "equity_ratio": 40.713293438768964,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.4338973329509608,
+      "has_preferred_shares": false,
+      "croic": 0.056189279802604034,
+      "fcf_cagr": 1.4717163963133801,
+      "fcf_cagr_r2": 2.432325870627494e-05,
+      "fcf_sma_cagr": 0.0635851640916345,
+      "pbr": 0.5230963276208573,
+      "amount_millions": 4202,
+      "ratio_percent": 0.8
+    },
+    {
+      "code": "7261",
+      "name": "マツダ",
+      "price": 1120.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.7370901264742448,
+      "per_actual": 6.205667637948264,
+      "per": 35.396817923475,
+      "per_next": 7.4519616681,
+      "fcf_yield_avg": 0.09873020245930944,
+      "total_payout_ratio": 13.350070083181324,
+      "equity_ratio": 36.602551392014,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.677376171352075,
+      "has_preferred_shares": false,
+      "croic": 0.05426805280073792,
+      "fcf_cagr": 6.493881206842275,
+      "fcf_cagr_r2": 0.02431733549073571,
+      "fcf_sma_cagr": 0.03546469185346224,
+      "pbr": 0.39111879338369715,
+      "amount_millions": 12729,
+      "ratio_percent": 1.7
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "サカタのタネ",
+  "name": "サカタのタネ",
+  "aliases": [
+    "サカタのタネ"
+  ],
+  "stocks": [
+    {
+      "code": "2114",
+      "name": "フジ日本",
+      "price": 614.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3484209812530861,
+      "per_actual": 11.097180146584732,
+      "per": 10.5275212,
+      "per_next": 11.081601263157895,
+      "fcf_yield_avg": 0.02463939311120393,
+      "total_payout_ratio": 10.456665398751861,
+      "equity_ratio": 63.08659453506179,
+      "peg_trailing_5": 0.49489151724413766,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.3703509073212214,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.710097719869707,
+      "has_preferred_shares": false,
+      "croic": 0.06886494711491531,
+      "fcf_cagr": 1.8748866618086815,
+      "fcf_cagr_r2": 0.00378969919846558,
+      "fcf_sma_cagr": 0.031752261202898424,
+      "pbr": 1.3228639648728124,
+      "amount_millions": 344,
+      "ratio_percent": 2.1
+    },
+    {
+      "code": "2874",
+      "name": "横浜冷凍",
+      "price": 2508.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.5153397796923924,
+      "per_actual": 75.09137627502528,
+      "per": 38.08480571076923,
+      "per_next": 36.227010310243905,
+      "fcf_yield_avg": -0.040222649591688156,
+      "total_payout_ratio": 3.895489857180049,
+      "equity_ratio": 33.68829951108432,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.4784688995215311,
+      "has_preferred_shares": false,
+      "croic": -0.03693070342951317,
+      "fcf_cagr": 18.340477570847654,
+      "fcf_cagr_r2": 0.10604230104382155,
+      "fcf_sma_cagr": 0.07132494683916611,
+      "pbr": 1.802185741679508,
+      "amount_millions": 2558,
+      "ratio_percent": 1.7
+    }
+  ]
+}

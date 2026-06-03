@@ -1,0 +1,61 @@
+{
+  "id": "山田事務所",
+  "name": "(株)山田事務所",
+  "aliases": [
+    "(株)山田事務所"
+  ],
+  "stocks": [
+    {
+      "code": "4098",
+      "name": "チタン工業",
+      "price": 1161.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.5263406479171986,
+      "per_actual": 17.57536893,
+      "per": 35.15073786,
+      "per_next": 33.4768932,
+      "fcf_yield_avg": -0.046485510674284324,
+      "total_payout_ratio": 6.9130839007656615,
+      "equity_ratio": 33.704974271012006,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.8613264427217916,
+      "has_preferred_shares": false,
+      "croic": 0.09282989337767779,
+      "fcf_cagr": -10.266681502911613,
+      "fcf_cagr_r2": 0.0018815202645546432,
+      "fcf_sma_cagr": -0.012480305791320201,
+      "pbr": 0.6219168057324841,
+      "amount_millions": 104,
+      "ratio_percent": 3.1
+    },
+    {
+      "code": "8418",
+      "name": "山口 FG",
+      "price": 2680.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 17.80102449794879,
+      "per": 17.237731804931506,
+      "per_next": 15.76885240300752,
+      "fcf_yield_avg": 0.16347365769358238,
+      "total_payout_ratio": 15.670942668456748,
+      "equity_ratio": 4.761526916694136,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.6791044776119404,
+      "has_preferred_shares": false,
+      "croic": 0.7572055704975691,
+      "fcf_cagr": 2.5979952086789067,
+      "fcf_cagr_r2": 0.00043176784854534033,
+      "fcf_sma_cagr": -0.9913817634863206,
+      "pbr": 1.0112527819780899,
+      "amount_millions": 12087,
+      "ratio_percent": 1.9
+    }
+  ]
+}

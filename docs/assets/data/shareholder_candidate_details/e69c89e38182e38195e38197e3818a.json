@@ -1,0 +1,61 @@
+{
+  "id": "有あさしお",
+  "name": "(有)あさしお",
+  "aliases": [
+    "(有)あさしお"
+  ],
+  "stocks": [
+    {
+      "code": "2751",
+      "name": "テンポス HD",
+      "price": 3460.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.08832566028513923,
+      "per_actual": 23.99670930232558,
+      "per": 25.66280207253886,
+      "per_next": 24.160589268292682,
+      "fcf_yield_avg": 0.016767883710153413,
+      "total_payout_ratio": 1.447630658661047,
+      "equity_ratio": 60.18917578855029,
+      "peg_trailing_5": 1.450530493064562,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.1106214314566967,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.26011560693641617,
+      "has_preferred_shares": false,
+      "croic": -0.011995637949836423,
+      "fcf_cagr": -3.783773922244723,
+      "fcf_cagr_r2": 0.014708216637010985,
+      "fcf_sma_cagr": -0.09564270483382298,
+      "pbr": 2.875926605504587,
+      "amount_millions": 7197,
+      "ratio_percent": 14.5
+    },
+    {
+      "code": "7678",
+      "name": "あさくま",
+      "price": 6540.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.041610617252342226,
+      "per_actual": 108.31418035534696,
+      "per": 119.3831552542373,
+      "per_next": 97.82786333333334,
+      "fcf_yield_avg": 0.0036707532211028675,
+      "total_payout_ratio": 0.5304101216244038,
+      "equity_ratio": 68.57016041923335,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.13549937655603309,
+      "fcf_cagr": -8.534632233875794,
+      "fcf_cagr_r2": 0.00284336669693897,
+      "fcf_sma_cagr": -0.09587420023338067,
+      "pbr": 10.371501572303892,
+      "amount_millions": 2224,
+      "ratio_percent": 6.3
+    }
+  ]
+}

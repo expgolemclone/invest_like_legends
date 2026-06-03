@@ -1,0 +1,61 @@
+{
+  "id": "ダイナパック",
+  "name": "ダイナパック",
+  "aliases": [
+    "ダイナパック"
+  ],
+  "stocks": [
+    {
+      "code": "2811",
+      "name": "カゴメ",
+      "price": 2533.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.2754641285115999,
+      "per_actual": 15.597263098108108,
+      "per": 17.226827899402984,
+      "per_next": 16.48853527514286,
+      "fcf_yield_avg": 0.025671950241753033,
+      "total_payout_ratio": null,
+      "equity_ratio": 50.704858708956415,
+      "peg_trailing_5": 1.00770786111929,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.657168008524673,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.289774970390841,
+      "has_preferred_shares": false,
+      "croic": 0.061906785095876354,
+      "fcf_cagr": -30.60104427614257,
+      "fcf_cagr_r2": 0.16235956964671566,
+      "fcf_sma_cagr": -0.14489526583364756,
+      "pbr": 1.0742216662106194,
+      "amount_millions": 9803,
+      "ratio_percent": 4.2
+    },
+    {
+      "code": "8190",
+      "name": "ヤマナカ",
+      "price": 521.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.4136771567131183,
+      "per_actual": 35.9511438445946,
+      "per": 133.019232225,
+      "per_next": 23.647863506666667,
+      "fcf_yield_avg": 0.05108283882218144,
+      "total_payout_ratio": 9.52869730789036,
+      "equity_ratio": 36.727472685107706,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.9596928982725527,
+      "has_preferred_shares": false,
+      "croic": 0.024155033063923585,
+      "fcf_cagr": -4.591165518317837,
+      "fcf_cagr_r2": 0.0071164443842561265,
+      "fcf_sma_cagr": 0.007938993057585053,
+      "pbr": 0.6115475304867536,
+      "amount_millions": 198,
+      "ratio_percent": 1.8
+    }
+  ]
+}

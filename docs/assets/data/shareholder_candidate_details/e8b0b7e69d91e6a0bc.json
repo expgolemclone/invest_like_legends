@@ -1,0 +1,61 @@
+{
+  "id": "谷村格",
+  "name": "谷村格",
+  "aliases": [
+    "谷村格"
+  ],
+  "stocks": [
+    {
+      "code": "2413",
+      "name": "エムスリー",
+      "price": 1474.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.07383337379800974,
+      "per_actual": 24.734781206155517,
+      "per": 19.634566320588235,
+      "per_next": 18.89363928962264,
+      "fcf_yield_avg": 0.014944232768924945,
+      "total_payout_ratio": null,
+      "equity_ratio": 65.05231709643982,
+      "peg_trailing_5": 1.8527219757541762,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.3837831839343184,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.4242115971515767,
+      "has_preferred_shares": false,
+      "croic": 0.03126179081359096,
+      "fcf_cagr": 17.348660009339216,
+      "fcf_cagr_r2": 0.15415077755615234,
+      "fcf_sma_cagr": 0.20343774900006206,
+      "pbr": 2.4257880526600113,
+      "amount_millions": 28753,
+      "ratio_percent": 2.8
+    },
+    {
+      "code": "7114",
+      "name": "フーディソン",
+      "price": 766.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.5040639087351546,
+      "per_actual": 24.902000308127565,
+      "per": 29.632965333333335,
+      "per_next": 17.7797792,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 2.502477646066606,
+      "equity_ratio": 71.20538981726573,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.02890194879935534,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 1.5512597554772452,
+      "amount_millions": 46,
+      "ratio_percent": 1.3
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "ミツイワ",
+  "name": "ミツイワ(株)",
+  "aliases": [
+    "ミツイワ(株)"
+  ],
+  "stocks": [
+    {
+      "code": "338A",
+      "name": "ZenmuTech",
+      "price": 2366.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1087635806340224,
+      "per_actual": 41.29350359486137,
+      "per": 21.461197333333335,
+      "per_next": 40.239745,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 62.91683925281144,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.10117610585612327,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 7.900903313211984,
+      "amount_millions": 95,
+      "ratio_percent": 2.9
+    },
+    {
+      "code": "9692",
+      "name": "シーイーシー",
+      "price": 2063.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3210456099288107,
+      "per_actual": 13.949624418381081,
+      "per": 14.142689395711502,
+      "per_next": 13.561120859813084,
+      "fcf_yield_avg": 0.049497852137676386,
+      "total_payout_ratio": 20.939695269530322,
+      "equity_ratio": 65.15190483845042,
+      "peg_trailing_5": 2.434172966672672,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 3.0260785182362744,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.6965584100824043,
+      "has_preferred_shares": false,
+      "croic": 0.08903071205007825,
+      "fcf_cagr": 13.056689389150877,
+      "fcf_cagr_r2": 0.33825475941703004,
+      "fcf_sma_cagr": 0.07361943906247204,
+      "pbr": 1.7029785836678168,
+      "amount_millions": 9160,
+      "ratio_percent": 12.3
+    }
+  ]
+}

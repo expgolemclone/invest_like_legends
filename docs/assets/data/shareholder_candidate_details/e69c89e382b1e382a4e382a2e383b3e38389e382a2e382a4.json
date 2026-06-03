@@ -1,0 +1,61 @@
+{
+  "id": "有ケイアンドアイ",
+  "name": "(有)ケイアンドアイ",
+  "aliases": [
+    "(有)ケイアンドアイ"
+  ],
+  "stocks": [
+    {
+      "code": "1828",
+      "name": "田辺工業",
+      "price": 2206.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.5768892233776366,
+      "per_actual": 9.126382012835414,
+      "per": 8.765173333333333,
+      "per_next": 8.452131428571429,
+      "fcf_yield_avg": 0.047315423565180176,
+      "total_payout_ratio": 8.152888569780876,
+      "equity_ratio": 52.417412358669054,
+      "peg_trailing_5": 1.375027085411085,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.4444579797408232,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 4.170444242973708,
+      "has_preferred_shares": false,
+      "croic": 0.45722043359909353,
+      "fcf_cagr": 34.83812134019459,
+      "fcf_cagr_r2": 0.07562366533821321,
+      "fcf_sma_cagr": 0.3838827788215633,
+      "pbr": 0.9470863508928861,
+      "amount_millions": 1897,
+      "ratio_percent": 8.0
+    },
+    {
+      "code": "2894",
+      "name": "石井食品",
+      "price": 324.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.03978541394809337,
+      "per_actual": 20.699552940277407,
+      "per": 25.90873043478261,
+      "per_next": 23.836032,
+      "fcf_yield_avg": 0.0019312778234229582,
+      "total_payout_ratio": 7.0057633753805995,
+      "equity_ratio": 45.33905167086239,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.2345679012345678,
+      "has_preferred_shares": false,
+      "croic": -0.10206841036388883,
+      "fcf_cagr": -87.00494101197928,
+      "fcf_cagr_r2": 0.0017001924148908577,
+      "fcf_sma_cagr": -0.17207827032990605,
+      "pbr": 1.5471244009412028,
+      "amount_millions": 687,
+      "ratio_percent": 11.5
+    }
+  ]
+}

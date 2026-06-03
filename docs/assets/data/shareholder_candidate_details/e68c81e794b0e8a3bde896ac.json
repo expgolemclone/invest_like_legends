@@ -1,0 +1,61 @@
+{
+  "id": "持田製薬",
+  "name": "持田製薬",
+  "aliases": [
+    "持田製薬"
+  ],
+  "stocks": [
+    {
+      "code": "1332",
+      "name": "ニッスイ",
+      "price": 1308.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.46490195292581943,
+      "per_actual": 16.10712806644734,
+      "per": 14.86600063470909,
+      "per_next": 14.344386577350877,
+      "fcf_yield_avg": 0.02309430817582623,
+      "total_payout_ratio": 6.249281193013763,
+      "equity_ratio": 35.25181215918649,
+      "peg_trailing_5": 1.4080824191209982,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.4566957178738251,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.3756209400076425,
+      "has_preferred_shares": false,
+      "croic": 0.023022903016078684,
+      "fcf_cagr": -13.760367489197206,
+      "fcf_cagr_r2": 0.07222273919093518,
+      "fcf_sma_cagr": -0.23601238375597455,
+      "pbr": 1.4297280799558647,
+      "amount_millions": 10468,
+      "ratio_percent": 2.5
+    },
+    {
+      "code": "4552",
+      "name": "JCRファーマ",
+      "price": 465.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.35454783707775844,
+      "per_actual": -12.671597650766968,
+      "per": 37.6900832625,
+      "per_next": 50.25344435,
+      "fcf_yield_avg": -0.011047335637336602,
+      "total_payout_ratio": 17.046924399852937,
+      "equity_ratio": 43.46859949454008,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.1505376344086025,
+      "has_preferred_shares": false,
+      "croic": -0.1904903638663591,
+      "fcf_cagr": -194.51616131291905,
+      "fcf_cagr_r2": 0.17171832777065585,
+      "fcf_sma_cagr": -1.0554948656325103,
+      "pbr": 1.2713003735638242,
+      "amount_millions": 1023,
+      "ratio_percent": 1.6
+    }
+  ]
+}

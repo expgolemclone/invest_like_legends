@@ -1,0 +1,61 @@
+{
+  "id": "日産東京販売hld",
+  "name": "日産東京販売HLD",
+  "aliases": [
+    "日産東京販売HLD"
+  ],
+  "stocks": [
+    {
+      "code": "3434",
+      "name": "アルファ",
+      "price": 1232.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.05386586452762923,
+      "per_actual": -41.74883720930232,
+      "per": 13.962666666666667,
+      "per_next": 15.708,
+      "fcf_yield_avg": 0.09539724980901453,
+      "total_payout_ratio": 8.761459129106187,
+      "equity_ratio": 35.89206414777003,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.4350649350649354,
+      "has_preferred_shares": false,
+      "croic": 0.054259523548139205,
+      "fcf_cagr": 6.4134841912619684,
+      "fcf_cagr_r2": 0.03255686040863843,
+      "fcf_sma_cagr": 0.02563685262379245,
+      "pbr": 0.34550603502790683,
+      "amount_millions": 456,
+      "ratio_percent": 3.7
+    },
+    {
+      "code": "8117",
+      "name": "中央自動車工業",
+      "price": 1988.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.28424836900189016,
+      "per_actual": 13.752678131370658,
+      "per": 12.502542408376963,
+      "per_next": 12.309204123711341,
+      "fcf_yield_avg": 0.020809551782891823,
+      "total_payout_ratio": 5.05143414600155,
+      "equity_ratio": 83.74790040562351,
+      "peg_trailing_5": 0.7857209093548873,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.6096579476861168,
+      "has_preferred_shares": false,
+      "croic": 0.11008524753488738,
+      "fcf_cagr": 21.655433645393583,
+      "fcf_cagr_r2": 0.6577252477737657,
+      "fcf_sma_cagr": 0.2151329791296661,
+      "pbr": 2.143548953217408,
+      "amount_millions": 6322,
+      "ratio_percent": 5.2
+    }
+  ]
+}

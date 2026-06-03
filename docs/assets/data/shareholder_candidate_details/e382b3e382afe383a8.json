@@ -1,0 +1,61 @@
+{
+  "id": "コクヨ",
+  "name": "コクヨ",
+  "aliases": [
+    "コクヨ"
+  ],
+  "stocks": [
+    {
+      "code": "3551",
+      "name": "ダイニック",
+      "price": 1401.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.9648118800223162,
+      "per_actual": 9.057803141417773,
+      "per": 4.96464606125,
+      "per_next": 6.8086574554285715,
+      "fcf_yield_avg": 0.0023774521260356506,
+      "total_payout_ratio": 5.901108821298387,
+      "equity_ratio": 30.791234761476655,
+      "peg_trailing_5": 0.7172607778730702,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.5082386949779776,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.4982155603140614,
+      "has_preferred_shares": false,
+      "croic": 0.003269627089249178,
+      "fcf_cagr": 822.6142288611179,
+      "fcf_cagr_r2": 0.24351446565692397,
+      "fcf_sma_cagr": 0.31108152560122165,
+      "pbr": 0.44804080406270674,
+      "amount_millions": 224,
+      "ratio_percent": 1.9
+    },
+    {
+      "code": "7885",
+      "name": "タカノ",
+      "price": 1183.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.8008504004985928,
+      "per_actual": 35.73242865212362,
+      "per": 30.996571666666668,
+      "per_next": 24.797257333333334,
+      "fcf_yield_avg": 0.010903415501380987,
+      "total_payout_ratio": 4.42012323620951,
+      "equity_ratio": 79.5040066174804,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.69061707523246,
+      "has_preferred_shares": false,
+      "croic": 0.016350366629575737,
+      "fcf_cagr": 26.13594539913117,
+      "fcf_cagr_r2": 0.013888448013568979,
+      "fcf_sma_cagr": 0.022412783707226547,
+      "pbr": 0.5828807359300847,
+      "amount_millions": 2543,
+      "ratio_percent": 13.6
+    }
+  ]
+}

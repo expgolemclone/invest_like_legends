@@ -14,6 +14,9 @@ from investor_data import (
     load_investor_config,
     load_watch_codes,
     select_matching_shareholder_names,
+    shareholder_candidate_detail_filename,
+    write_shareholder_candidate_detail_documents,
+    write_shareholder_candidates_document,
     write_stock_price_metadata,
 )
 
@@ -23,6 +26,9 @@ WATCH_CODES_PATH: Path = PROJECT_ROOT / "config" / "watch_codes.txt"
 INVESTOR_DATA_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "data" / "investors.json"
 SHAREHOLDER_CANDIDATES_DATA_PATH: Path = (
     PROJECT_ROOT / "docs" / "assets" / "data" / "shareholder_candidates.json"
+)
+SHAREHOLDER_CANDIDATE_DETAILS_DIR: Path = (
+    PROJECT_ROOT / "docs" / "assets" / "data" / "shareholder_candidate_details"
 )
 STOCK_PRICE_METADATA_PATH: Path = PROJECT_ROOT / "docs" / "assets" / "stock-price-meta.json"
 EXPECTED_INVESTOR_NAMES: dict[str, str] = {
@@ -192,6 +198,7 @@ def test_generated_shareholder_candidate_data_matches_schema() -> None:
         assert raw_candidate["holding_count"] >= 2
         assert _is_int(raw_candidate["priced_holding_count"])
         assert _is_int(raw_candidate["total_amount_millions"])
+        assert "stocks" not in raw_candidate
 
         ranking_key: tuple[int, int, str] = (
             -raw_candidate["total_amount_millions"],
@@ -202,7 +209,15 @@ def test_generated_shareholder_candidate_data_matches_schema() -> None:
             assert previous_rank <= ranking_key
         previous_rank = ranking_key
 
-        raw_stocks: object = raw_candidate["stocks"]
+        detail_path = SHAREHOLDER_CANDIDATE_DETAILS_DIR / shareholder_candidate_detail_filename(
+            raw_candidate["id"]
+        )
+        raw_detail: object = json.loads(detail_path.read_text(encoding="utf-8"))
+        assert isinstance(raw_detail, dict)
+        assert raw_detail["id"] == raw_candidate["id"]
+        assert raw_detail["name"] == raw_candidate["name"]
+        assert raw_detail["aliases"] == raw_candidate["aliases"]
+        raw_stocks: object = raw_detail["stocks"]
         assert isinstance(raw_stocks, list)
         assert len(raw_stocks) == raw_candidate["holding_count"]
         for raw_stock in raw_stocks:
@@ -348,6 +363,62 @@ def test_write_stock_price_metadata_writes_json(tmp_path: Path) -> None:
         '{\n  "price_date": "2026-05-20",\n'
         '  "target_price_date": "2026-05-20"\n}\n'
     )
+
+
+def test_write_shareholder_candidates_splits_summary_and_detail(tmp_path: Path) -> None:
+    summary_path = tmp_path / "shareholder_candidates.json"
+    detail_dir = tmp_path / "details"
+    document = [
+        {
+            "id": "alpha",
+            "name": "Alpha",
+            "aliases": ["Alpha㈱"],
+            "holding_count": 1,
+            "priced_holding_count": 1,
+            "total_amount_millions": 200,
+            "stocks": [
+                {
+                    "code": "1001",
+                    "name": "Alpha 1",
+                    "amount_millions": 200,
+                    "ratio_percent": 1.1,
+                    **_metrics(price=1000.0),
+                }
+            ],
+        }
+    ]
+
+    write_shareholder_candidates_document(document, output_path=summary_path)
+    detail_paths = write_shareholder_candidate_detail_documents(
+        document,
+        output_dir=detail_dir,
+    )
+
+    assert json.loads(summary_path.read_text(encoding="utf-8")) == [
+        {
+            "id": "alpha",
+            "name": "Alpha",
+            "aliases": ["Alpha㈱"],
+            "holding_count": 1,
+            "priced_holding_count": 1,
+            "total_amount_millions": 200,
+        }
+    ]
+    assert detail_paths == [detail_dir / "616c706861.json"]
+    assert json.loads(detail_paths[0].read_text(encoding="utf-8")) == {
+        "id": "alpha",
+        "name": "Alpha",
+        "aliases": ["Alpha㈱"],
+        "stocks": [
+            {
+                "code": "1001",
+                "name": "Alpha 1",
+                "amount_millions": 200,
+                "ratio_percent": 1.1,
+                **_metrics(price=1000.0),
+            }
+        ],
+    }
 
 
 def test_shareholder_name_matching_handles_aliases_and_prefix_fallback() -> None:

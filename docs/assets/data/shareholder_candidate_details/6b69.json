@@ -1,0 +1,61 @@
+{
+  "id": "ki",
+  "name": "(株)KI",
+  "aliases": [
+    "(株)KI"
+  ],
+  "stocks": [
+    {
+      "code": "2780",
+      "name": "コメ兵 HD",
+      "price": 5290.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.4527901899477628,
+      "per_actual": 12.465592182054765,
+      "per": 13.848727906976745,
+      "per_next": 10.827187272727272,
+      "fcf_yield_avg": -0.019247669964817523,
+      "total_payout_ratio": 4.712873468522758,
+      "equity_ratio": 35.41265045698289,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.001890359168242,
+      "has_preferred_shares": false,
+      "croic": -0.1574106367134867,
+      "fcf_cagr": -76.82342634905898,
+      "fcf_cagr_r2": 0.3996741409969696,
+      "fcf_sma_cagr": -1.1692647203277284,
+      "pbr": 1.7937019810066095,
+      "amount_millions": 4867,
+      "ratio_percent": 8.2
+    },
+    {
+      "code": "6544",
+      "name": "ジャパンエレベーターサービス HD",
+      "price": 1733.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.015600373647485776,
+      "per_actual": 56.04377287522604,
+      "per": 46.95788848484848,
+      "per_next": 37.79537365853658,
+      "fcf_yield_avg": 0.0013788769811496865,
+      "total_payout_ratio": 2.1247574035258103,
+      "equity_ratio": 56.32784477645664,
+      "peg_trailing_5": 2.10713101439628,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.8339031440397653,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.0960484568791462,
+      "has_preferred_shares": false,
+      "croic": 0.17783338366624962,
+      "fcf_cagr": 94.42747093232275,
+      "fcf_cagr_r2": 0.49691059346757505,
+      "fcf_sma_cagr": 0.6149678415383221,
+      "pbr": 15.255823972434161,
+      "amount_millions": 31567,
+      "ratio_percent": 20.4
+    }
+  ]
+}

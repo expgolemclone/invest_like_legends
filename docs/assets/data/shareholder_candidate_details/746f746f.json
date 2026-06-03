@@ -1,0 +1,61 @@
+{
+  "id": "toto",
+  "name": "TOTO",
+  "aliases": [
+    "TOTO"
+  ],
+  "stocks": [
+    {
+      "code": "5331",
+      "name": "ノリタケ",
+      "price": 4420.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1485471513238582,
+      "per_actual": 19.20047316794188,
+      "per": 20.702910193333334,
+      "per_next": 19.8747937856,
+      "fcf_yield_avg": 0.020340538088646925,
+      "total_payout_ratio": 6.489828341940007,
+      "equity_ratio": 64.42928314978418,
+      "peg_trailing_5": 1.358261671254711,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.809954751131222,
+      "has_preferred_shares": false,
+      "croic": -0.024264156581503063,
+      "fcf_cagr": -8.498616865426673,
+      "fcf_cagr_r2": 0.025956142517353377,
+      "fcf_sma_cagr": -0.11055669417218095,
+      "pbr": 1.6467693807585742,
+      "amount_millions": 3094,
+      "ratio_percent": 2.4
+    },
+    {
+      "code": "9206",
+      "name": "スターフライヤー",
+      "price": 1920.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.6295707987894534,
+      "per_actual": 3.778172605304212,
+      "per": 24.2180864,
+      "per_next": 6.0545216,
+      "fcf_yield_avg": 0.0847851188330608,
+      "total_payout_ratio": null,
+      "equity_ratio": 18.458277281806694,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.6792373475396046,
+      "fcf_cagr": -30.42896497441952,
+      "fcf_cagr_r2": 0.025937104283839066,
+      "fcf_sma_cagr": -0.09304467792989435,
+      "pbr": 1.6923889867225717,
+      "amount_millions": 269,
+      "ratio_percent": 3.6
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "nstyle",
+  "name": "Nstyle(株)",
+  "aliases": [
+    "(株)N-Style",
+    "Nstyle(株)"
+  ],
+  "stocks": [
+    {
+      "code": "146A",
+      "name": "コロンビア・ワークス",
+      "price": 2751.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.9104578681998077,
+      "per_actual": 6.128281351039261,
+      "per": 5.054373,
+      "per_next": 4.1461653515625,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 2.948884442197263,
+      "equity_ratio": 26.044828565874667,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 3.4169392948018897,
+      "has_preferred_shares": false,
+      "croic": -0.11196609791457567,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 1.2172926543953209,
+      "amount_millions": 7153,
+      "ratio_percent": 33.6
+    },
+    {
+      "code": "6099",
+      "name": "エラン",
+      "price": 684.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.11501644374963813,
+      "per_actual": 14.976154001792063,
+      "per": 12.95325,
+      "per_next": 11.514,
+      "fcf_yield_avg": 0.022296153957501015,
+      "total_payout_ratio": 7.200753189354023,
+      "equity_ratio": 55.00863115167309,
+      "peg_trailing_5": 1.0805611473851378,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8275502337662235,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.3391812865497075,
+      "has_preferred_shares": false,
+      "croic": 0.055207245401063317,
+      "fcf_cagr": 15.545941821359577,
+      "fcf_cagr_r2": 0.1524574215022129,
+      "fcf_sma_cagr": 0.12839726907118343,
+      "pbr": 2.8232961299828907,
+      "amount_millions": 561,
+      "ratio_percent": 1.3
+    }
+  ]
+}

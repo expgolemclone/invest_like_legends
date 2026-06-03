@@ -1,0 +1,61 @@
+{
+  "id": "光和",
+  "name": "(株)光和",
+  "aliases": [
+    "(株)光和"
+  ],
+  "stocks": [
+    {
+      "code": "4626",
+      "name": "太陽 HD",
+      "price": 4995.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.015368037460818046,
+      "per_actual": 54.138579027829316,
+      "per": 29.035516513432835,
+      "per_next": 26.527903723636364,
+      "fcf_yield_avg": 0.00014684366265939382,
+      "total_payout_ratio": 5.284315701768631,
+      "equity_ratio": 48.958452677297394,
+      "peg_trailing_5": 2.304950799460391,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.5994228828710262,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.4514514514514516,
+      "has_preferred_shares": false,
+      "croic": 0.10910455794453415,
+      "fcf_cagr": 1659.6230684912132,
+      "fcf_cagr_r2": 0.09417303550614677,
+      "fcf_sma_cagr": 0.9807012865808945,
+      "pbr": 5.667364698479287,
+      "amount_millions": 17632,
+      "ratio_percent": 6.0
+    },
+    {
+      "code": "6777",
+      "name": "santec HD",
+      "price": 25380.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.03808699238908551,
+      "per_actual": 59.901748751540104,
+      "per": 45.99586636363637,
+      "per_next": 44.64304676470588,
+      "fcf_yield_avg": 0.004061911782204355,
+      "total_payout_ratio": 1.1944067384869546,
+      "equity_ratio": 68.82219423990071,
+      "peg_trailing_5": 1.3750903869199675,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.2746301662227075,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.49251379038613086,
+      "has_preferred_shares": false,
+      "croic": 0.17873139958008588,
+      "fcf_cagr": 29.13500305840302,
+      "fcf_cagr_r2": 0.5316063756336196,
+      "fcf_sma_cagr": 0.3236702056006866,
+      "pbr": 14.166965128353459,
+      "amount_millions": 50506,
+      "ratio_percent": 16.6
+    }
+  ]
+}

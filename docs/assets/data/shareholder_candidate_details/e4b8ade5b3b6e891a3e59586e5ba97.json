@@ -1,0 +1,61 @@
+{
+  "id": "中島董商店",
+  "name": "中島董商店",
+  "aliases": [
+    "中島董商店"
+  ],
+  "stocks": [
+    {
+      "code": "2809",
+      "name": "キユーピー",
+      "price": 4074.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.11635225362594129,
+      "per_actual": 18.896971087654887,
+      "per": 22.60670588235294,
+      "per_next": 21.919049429657793,
+      "fcf_yield_avg": 0.02486855366531881,
+      "total_payout_ratio": 12.662562383884012,
+      "equity_ratio": 58.90962289633759,
+      "peg_trailing_5": 0.8849524080099114,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.7651878668738745,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.7854688267059401,
+      "has_preferred_shares": false,
+      "croic": 0.05131923894433325,
+      "fcf_cagr": 10.218817640692642,
+      "fcf_cagr_r2": 0.1552182046624023,
+      "fcf_sma_cagr": 0.10129059743703328,
+      "pbr": 1.6584321058688147,
+      "amount_millions": 46647,
+      "ratio_percent": 8.0
+    },
+    {
+      "code": "9369",
+      "name": "キユーソー流通システム",
+      "price": 3315.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.526043365899475,
+      "per_actual": 31.742627265861028,
+      "per": 40.02594142857143,
+      "per_next": 38.20658045454545,
+      "fcf_yield_avg": -0.015870659691333274,
+      "total_payout_ratio": 2.111725708554465,
+      "equity_ratio": 30.287831416165712,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.36199095022624433,
+      "has_preferred_shares": false,
+      "croic": -0.03563983275425475,
+      "fcf_cagr": 0.49975012493753124,
+      "fcf_cagr_r2": 0.00018469851392918958,
+      "fcf_sma_cagr": 0.01898450346305247,
+      "pbr": 1.4704607431510444,
+      "amount_millions": 4873,
+      "ratio_percent": 5.8
+    }
+  ]
+}

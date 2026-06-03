@@ -1,0 +1,61 @@
+{
+  "id": "野村殖産",
+  "name": "野村殖産",
+  "aliases": [
+    "野村殖産"
+  ],
+  "stocks": [
+    {
+      "code": "4992",
+      "name": "北興化学工業",
+      "price": 1732.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3196054883891985,
+      "per_actual": 10.692933443845464,
+      "per": 10.508816709050773,
+      "per_next": 10.348899933043478,
+      "fcf_yield_avg": 0.05576522136517109,
+      "total_payout_ratio": 6.679979053800583,
+      "equity_ratio": 50.88788659793815,
+      "peg_trailing_5": 0.7062199144449356,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.9312424138812716,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.558891454965358,
+      "has_preferred_shares": false,
+      "croic": 0.1286028303983798,
+      "fcf_cagr": 7.84597238937732,
+      "fcf_cagr_r2": 0.15479072035641417,
+      "fcf_sma_cagr": 0.0899149496640399,
+      "pbr": 0.8999043420037807,
+      "amount_millions": 3637,
+      "ratio_percent": 7.6
+    },
+    {
+      "code": "6254",
+      "name": "野村マイクロ・サイエンス",
+      "price": 4615.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.13922576138469905,
+      "per_actual": 18.37377429521546,
+      "per": 48.676862337662335,
+      "per_next": 16.296166956521738,
+      "fcf_yield_avg": -0.015968957117256488,
+      "total_payout_ratio": 2.716448338451635,
+      "equity_ratio": 29.90993905455873,
+      "peg_trailing_5": 1.2332862467935852,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.320840066051389,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.5167930660888407,
+      "has_preferred_shares": false,
+      "croic": -0.26346618314636033,
+      "fcf_cagr": -59.74144931062803,
+      "fcf_cagr_r2": 0.30852665900206466,
+      "fcf_sma_cagr": -1.5335188892091332,
+      "pbr": 5.063117848369328,
+      "amount_millions": 5538,
+      "ratio_percent": 2.9
+    }
+  ]
+}

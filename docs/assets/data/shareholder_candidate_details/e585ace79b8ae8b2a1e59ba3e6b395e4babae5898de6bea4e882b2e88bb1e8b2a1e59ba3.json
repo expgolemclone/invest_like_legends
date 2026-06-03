@@ -1,0 +1,61 @@
+{
+  "id": "公益財団法人前澤育英財団",
+  "name": "公益財団法人前澤育英財団",
+  "aliases": [
+    "公益財団法人前澤育英財団"
+  ],
+  "stocks": [
+    {
+      "code": "6489",
+      "name": "前澤工業",
+      "price": 1719.0,
+      "price_date": "2026-05-27",
+      "net_cash_ratio": 0.3706821385341869,
+      "per_actual": 11.614701433864154,
+      "per": 11.1682613475,
+      "per_next": null,
+      "fcf_yield_avg": 0.020983010936832847,
+      "total_payout_ratio": 4.815543648791749,
+      "equity_ratio": 66.33693537422938,
+      "peg_trailing_5": 0.48999909898651445,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "missing_input",
+      "dividend_yield": 1.3961605584642234,
+      "has_preferred_shares": false,
+      "croic": 0.03218187186300561,
+      "fcf_cagr": 25.599372845672352,
+      "fcf_cagr_r2": 0.2539303995892955,
+      "fcf_sma_cagr": 0.5951306030312802,
+      "pbr": 1.1945063776195728,
+      "amount_millions": 2200,
+      "ratio_percent": 6.1
+    },
+    {
+      "code": "7925",
+      "name": "前澤化成工業",
+      "price": 1926.0,
+      "price_date": "2026-05-27",
+      "net_cash_ratio": 0.7510371674668032,
+      "per_actual": 17.67784830805134,
+      "per": 16.83324,
+      "per_next": 16.37828756756757,
+      "fcf_yield_avg": 0.024739411096404755,
+      "total_payout_ratio": 8.950544676287315,
+      "equity_ratio": 76.50147291637442,
+      "peg_trailing_5": 0.8689019616134679,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.0638889053451603,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.8172377985462098,
+      "has_preferred_shares": false,
+      "croic": 0.036748474224126734,
+      "fcf_cagr": 33.05682222437826,
+      "fcf_cagr_r2": 0.3838032190099631,
+      "fcf_sma_cagr": 0.633078231292517,
+      "pbr": 0.7298877941849541,
+      "amount_millions": 693,
+      "ratio_percent": 2.2
+    }
+  ]
+}

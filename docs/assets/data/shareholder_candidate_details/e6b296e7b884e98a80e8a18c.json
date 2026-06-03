@@ -1,0 +1,61 @@
+{
+  "id": "沖縄銀行",
+  "name": "沖縄銀行",
+  "aliases": [
+    "沖縄銀行"
+  ],
+  "stocks": [
+    {
+      "code": "409A",
+      "name": "オリオンビール",
+      "price": 1110.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.33114650222534947,
+      "per_actual": 20.188624187256178,
+      "per": 13.42223515850144,
+      "per_next": 16.633984285714284,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 0.27053049484149877,
+      "equity_ratio": 76.93022280157624,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 1.8018018018018018,
+      "has_preferred_shares": false,
+      "croic": -0.24320864242998194,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 0.8715084764791737,
+      "amount_millions": 644,
+      "ratio_percent": 1.4
+    },
+    {
+      "code": "9511",
+      "name": "沖縄電力",
+      "price": 898.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -6.34119085960707,
+      "per_actual": 11.828161168440538,
+      "per": 8.968651328070175,
+      "per_next": 8.968651328070175,
+      "fcf_yield_avg": -0.08354245588182085,
+      "total_payout_ratio": 14.972229027804088,
+      "equity_ratio": 23.080827559745888,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.783964365256125,
+      "has_preferred_shares": false,
+      "croic": 0.00015996941072731459,
+      "fcf_cagr": -114.65228287369338,
+      "fcf_cagr_r2": 0.28812853306289965,
+      "fcf_sma_cagr": -0.3987790304501283,
+      "pbr": 0.4137702352893565,
+      "amount_millions": 2263,
+      "ratio_percent": 4.4
+    }
+  ]
+}

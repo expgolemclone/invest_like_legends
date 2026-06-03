@@ -1,0 +1,61 @@
+{
+  "id": "bbhエンプロイbpロプライスドsp",
+  "name": "BBHエンプロイーBPロープライスドSP",
+  "aliases": [
+    "BBHエンプロイーBPロープライスドSP"
+  ],
+  "stocks": [
+    {
+      "code": "9039",
+      "name": "サカイ引越センター",
+      "price": 2854.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.12947388805694013,
+      "per_actual": 13.781254535082715,
+      "per": 13.572213033707865,
+      "per_next": 13.273922637362638,
+      "fcf_yield_avg": 0.03755690658647109,
+      "total_payout_ratio": 9.842482528910523,
+      "equity_ratio": 75.38315230205762,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 56.216037307521766,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.051156271899089,
+      "has_preferred_shares": false,
+      "croic": 0.018446749304325827,
+      "fcf_cagr": -2.7233671577875818,
+      "fcf_cagr_r2": 0.01956527963708991,
+      "fcf_sma_cagr": -0.01510484685933744,
+      "pbr": 1.25825725,
+      "amount_millions": 1227,
+      "ratio_percent": 1.0
+    },
+    {
+      "code": "9267",
+      "name": "Genky DrugStores",
+      "price": 3310.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.581364907263725,
+      "per_actual": 14.536440713274837,
+      "per": 13.16852436923077,
+      "per_next": 11.943545358139534,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 1.8912472801909468,
+      "equity_ratio": 41.80607260103985,
+      "peg_trailing_5": 2.854685060248606,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.8252273140163355,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.1963746223564955,
+      "has_preferred_shares": false,
+      "croic": -0.03454189963297088,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 1.9224842794040577,
+      "amount_millions": 1258,
+      "ratio_percent": 1.2
+    }
+  ]
+}

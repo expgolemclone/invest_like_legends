@@ -1,0 +1,61 @@
+{
+  "id": "アルプスアルパイン",
+  "name": "アルプスアルパイン",
+  "aliases": [
+    "アルプスアルパイン"
+  ],
+  "stocks": [
+    {
+      "code": "3843",
+      "name": "フリービット",
+      "price": 1433.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.018093674280440467,
+      "per_actual": 12.207316838012368,
+      "per": 8.829542631578947,
+      "per_next": 7.625514090909091,
+      "fcf_yield_avg": 0.0529717817534925,
+      "total_payout_ratio": 15.324567386842652,
+      "equity_ratio": 15.629106374098544,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.09351011863224,
+      "has_preferred_shares": false,
+      "croic": 0.17827504549781414,
+      "fcf_cagr": 23.520343770375966,
+      "fcf_cagr_r2": 0.42290897233248015,
+      "fcf_sma_cagr": 0.28765651385084734,
+      "pbr": 3.9304305634041725,
+      "amount_millions": 5030,
+      "ratio_percent": 14.9
+    },
+    {
+      "code": "7287",
+      "name": "日本精機",
+      "price": 2615.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.03315185664629987,
+      "per_actual": 24.975897890395295,
+      "per": 17.77935428895349,
+      "per_next": 16.80246669065934,
+      "fcf_yield_avg": 0.05522409988867457,
+      "total_payout_ratio": null,
+      "equity_ratio": 65.25060600129481,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.5296367112810707,
+      "has_preferred_shares": false,
+      "croic": 0.027962983789341773,
+      "fcf_cagr": 19.082881061350726,
+      "fcf_cagr_r2": 0.05745827338666552,
+      "fcf_sma_cagr": 0.13490382591162087,
+      "pbr": 0.694285278504291,
+      "amount_millions": 7845,
+      "ratio_percent": 5.1
+    }
+  ]
+}

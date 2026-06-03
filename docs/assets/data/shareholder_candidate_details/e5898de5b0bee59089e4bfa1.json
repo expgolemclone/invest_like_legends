@@ -1,0 +1,61 @@
+{
+  "id": "前尾吉信",
+  "name": "前尾吉信",
+  "aliases": [
+    "前尾吉信"
+  ],
+  "stocks": [
+    {
+      "code": "5659",
+      "name": "日本精線",
+      "price": 1402.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.30213216955222805,
+      "per_actual": 13.487321963076923,
+      "per": 19.058172339130437,
+      "per_next": 13.2829686,
+      "fcf_yield_avg": 0.03607034139350537,
+      "total_payout_ratio": 15.401358215644473,
+      "equity_ratio": 70.49065922267555,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.8544935805991443,
+      "has_preferred_shares": false,
+      "croic": 0.08519546027742748,
+      "fcf_cagr": 6.145702167459173,
+      "fcf_cagr_r2": 0.05295317711925099,
+      "fcf_sma_cagr": -0.010259163876551125,
+      "pbr": 1.0460527963917525,
+      "amount_millions": 813,
+      "ratio_percent": 1.8
+    },
+    {
+      "code": "6507",
+      "name": "シンフォニアテクノロジー",
+      "price": 13380.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.01383215767775731,
+      "per_actual": 32.94853702240225,
+      "per": 35.27242941238938,
+      "per_next": 31.384130107086616,
+      "fcf_yield_avg": 0.007953766645510087,
+      "total_payout_ratio": 2.1396038720872514,
+      "equity_ratio": 47.19309430118636,
+      "peg_trailing_5": 0.6825508328152491,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.9392244666397119,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.8968609865470852,
+      "has_preferred_shares": false,
+      "croic": 0.12437863286078746,
+      "fcf_cagr": 8.458930017379696,
+      "fcf_cagr_r2": 0.12399602710397975,
+      "fcf_sma_cagr": 0.0814168166576601,
+      "pbr": 4.974209741292166,
+      "amount_millions": 6958,
+      "ratio_percent": 1.7
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "フリクアウトhd",
+  "name": "フリークアウトHD",
+  "aliases": [
+    "フリークアウトHD"
+  ],
+  "stocks": [
+    {
+      "code": "7072",
+      "name": "インティメート・マージャー",
+      "price": 1028.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.4542688542819546,
+      "per_actual": 21.187262183997916,
+      "per": 17.114847368421053,
+      "per_next": 15.484861904761905,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 6.659191880487887,
+      "equity_ratio": 69.0962779054404,
+      "peg_trailing_5": 0.40684561421736204,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.3793866028623714,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.13506430099159092,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.0892510085431426,
+      "amount_millions": 1275,
+      "ratio_percent": 39.8
+    },
+    {
+      "code": "9244",
+      "name": "デジタリフト",
+      "price": 1050.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3477739989694159,
+      "per_actual": 15.25553048239124,
+      "per": 14.995909090909091,
+      "per_next": 12.688846153846153,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 9.1685005001364,
+      "equity_ratio": 31.97600369832278,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.17336879099821684,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.117933001133724,
+      "amount_millions": 5040,
+      "ratio_percent": 30.5
+    }
+  ]
+}

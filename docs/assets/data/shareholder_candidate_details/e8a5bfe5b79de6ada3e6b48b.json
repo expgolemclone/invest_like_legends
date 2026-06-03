@@ -1,0 +1,61 @@
+{
+  "id": "西川正洋",
+  "name": "西川正洋",
+  "aliases": [
+    "西川正洋"
+  ],
+  "stocks": [
+    {
+      "code": "4625",
+      "name": "アトミクス",
+      "price": 720.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.439738370309,
+      "per_actual": 22.785925291475117,
+      "per": 6.437333333333333,
+      "per_next": 15.800727272727272,
+      "fcf_yield_avg": 0.06083011138727791,
+      "total_payout_ratio": 20.458590321887755,
+      "equity_ratio": 66.96132758476104,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 7.092115205208003,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.7777777777777777,
+      "has_preferred_shares": false,
+      "croic": 0.0362403135105983,
+      "fcf_cagr": -5.426733942277661,
+      "fcf_cagr_r2": 0.02135970132451733,
+      "fcf_sma_cagr": -0.244268410697546,
+      "pbr": 0.5037066718934857,
+      "amount_millions": 202,
+      "ratio_percent": 3.8
+    },
+    {
+      "code": "5161",
+      "name": "西川ゴム工業",
+      "price": 2962.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.34766410569921713,
+      "per_actual": 27.696234521101847,
+      "per": 10.9594,
+      "per_next": 12.177111111111111,
+      "fcf_yield_avg": 0.029907659178422176,
+      "total_payout_ratio": 4.179973356205632,
+      "equity_ratio": 48.080202312138724,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 10.482598956974547,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 3.072248480756246,
+      "has_preferred_shares": false,
+      "croic": 0.05768053855569155,
+      "fcf_cagr": 2.910947347594997,
+      "fcf_cagr_r2": 0.0061070480422789125,
+      "fcf_sma_cagr": 0.021838508580972693,
+      "pbr": 1.1948626813924836,
+      "amount_millions": 5924,
+      "ratio_percent": 5.0
+    }
+  ]
+}

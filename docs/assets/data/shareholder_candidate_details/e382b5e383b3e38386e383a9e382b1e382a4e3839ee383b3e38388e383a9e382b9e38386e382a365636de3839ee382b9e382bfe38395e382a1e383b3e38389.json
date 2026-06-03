@@ -1,0 +1,61 @@
+{
+  "id": "サンテラケイマントラスティecmマスタファンド",
+  "name": "サンテラケイマントラスティECMマスターファンド",
+  "aliases": [
+    "サンテラケイマントラスティECMマスターファンド"
+  ],
+  "stocks": [
+    {
+      "code": "7740",
+      "name": "タムロン",
+      "price": 1044.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.22483164643283354,
+      "per_actual": 15.161567893886573,
+      "per": 13.01570802919708,
+      "per_next": 12.048324324324325,
+      "fcf_yield_avg": 0.029096229597925467,
+      "total_payout_ratio": 12.651192943731102,
+      "equity_ratio": 68.62870829639968,
+      "peg_trailing_5": 1.501409641551227,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.1272174438716538,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 3.8314176245210727,
+      "has_preferred_shares": false,
+      "croic": 0.10507565392899232,
+      "fcf_cagr": 8.314862286298016,
+      "fcf_cagr_r2": 0.10324754490553789,
+      "fcf_sma_cagr": 0.06855004127409514,
+      "pbr": 2.075580542654608,
+      "amount_millions": 18312,
+      "ratio_percent": 10.2
+    },
+    {
+      "code": "7752",
+      "name": "リコー",
+      "price": 1467.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.4640101250873335,
+      "per_actual": 18.285207992430376,
+      "per": 13.701615936491804,
+      "per_next": 12.474605554119403,
+      "fcf_yield_avg": 0.01187259745462218,
+      "total_payout_ratio": null,
+      "equity_ratio": 43.701969948046724,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.3633265167007498,
+      "has_preferred_shares": false,
+      "croic": 0.03910649850790717,
+      "fcf_cagr": 28.70541127940529,
+      "fcf_cagr_r2": 0.0394424113168167,
+      "fcf_sma_cagr": 0.15698115872352103,
+      "pbr": 0.792413910524769,
+      "amount_millions": 43438,
+      "ratio_percent": 5.1
+    }
+  ]
+}

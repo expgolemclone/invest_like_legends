@@ -1,0 +1,61 @@
+{
+  "id": "ヨウザン",
+  "name": "(株)ヨウザン",
+  "aliases": [
+    "(株)ヨウザン"
+  ],
+  "stocks": [
+    {
+      "code": "2157",
+      "name": "コシダカ HD",
+      "price": 930.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.22827609947169222,
+      "per_actual": 14.816407644532982,
+      "per": 9.166679576470589,
+      "per_next": 8.201765936842106,
+      "fcf_yield_avg": -0.0068826307347078595,
+      "total_payout_ratio": 6.986881710881458,
+      "equity_ratio": 51.18069847153539,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.3978494623655915,
+      "has_preferred_shares": false,
+      "croic": 0.10271781083474033,
+      "fcf_cagr": 150.142373370494,
+      "fcf_cagr_r2": 0.14557711143848986,
+      "fcf_sma_cagr": 0.2656680060733264,
+      "pbr": 2.219499853527459,
+      "amount_millions": 20990,
+      "ratio_percent": 26.9
+    },
+    {
+      "code": "7085",
+      "name": "カーブス HD",
+      "price": 842.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.04898263342061219,
+      "per_actual": 18.365793424587498,
+      "per": 16.81447002255319,
+      "per_next": 15.197694058846153,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 5.912162096520878,
+      "equity_ratio": 40.46932789185053,
+      "peg_trailing_5": 0.4449953693414167,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.48244641771728775,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.7814726840855106,
+      "has_preferred_shares": false,
+      "croic": 0.25819209039548024,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 3.9200401342261904,
+      "amount_millions": 25058,
+      "ratio_percent": 31.7
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "片岡尚",
+  "name": "片岡尚",
+  "aliases": [
+    "片岡尚"
+  ],
+  "stocks": [
+    {
+      "code": "6570",
+      "name": "共和コーポレーション",
+      "price": 1666.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.4088529836889485,
+      "per_actual": 11.043585167935161,
+      "per": 11.510791568181817,
+      "per_next": 10.12949658,
+      "fcf_yield_avg": 0.015654272524568046,
+      "total_payout_ratio": 3.9383003572720487,
+      "equity_ratio": 30.496294113608908,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.7503001200480192,
+      "has_preferred_shares": false,
+      "croic": -0.02078482980222912,
+      "fcf_cagr": -15.420707208619039,
+      "fcf_cagr_r2": 0.026965437282747175,
+      "fcf_sma_cagr": -0.1483892638016996,
+      "pbr": 2.0791688699494264,
+      "amount_millions": 67,
+      "ratio_percent": 0.7
+    },
+    {
+      "code": "9166",
+      "name": "GENDA",
+      "price": 601.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.9292512841180971,
+      "per_actual": 29.493388860951384,
+      "per": 32.24048736628571,
+      "per_next": 18.806950963666665,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 1.8016388408090647,
+      "equity_ratio": 28.230844895190955,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "missing_input",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "missing_input",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.4169572503298035,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 1.726543534464556,
+      "amount_millions": 14160,
+      "ratio_percent": 12.8
+    }
+  ]
+}

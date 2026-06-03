@@ -1,0 +1,61 @@
+{
+  "id": "ソフトクリエイトh",
+  "name": "ソフトクリエイトH",
+  "aliases": [
+    "ソフトクリエイトH"
+  ],
+  "stocks": [
+    {
+      "code": "303A",
+      "name": "visumo",
+      "price": 634.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.21387249625772164,
+      "per_actual": 26.584002290060727,
+      "per": 21.669063333333334,
+      "per_next": 20.002212307692307,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 74.71432841311444,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.03559256837327384,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.4973517553480633,
+      "amount_millions": 5497,
+      "ratio_percent": 53.0
+    },
+    {
+      "code": "3969",
+      "name": "エイトレッド",
+      "price": 1345.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.42752528088576663,
+      "per_actual": 13.82668169623611,
+      "per": 12.910965384615384,
+      "per_next": 11.70994534883721,
+      "fcf_yield_avg": 0.04583268664590713,
+      "total_payout_ratio": 0.0039322567489590695,
+      "equity_ratio": 80.80256098600003,
+      "peg_trailing_5": 1.1478692844602545,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.0579550513300486,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.2639405204460967,
+      "has_preferred_shares": false,
+      "croic": 0.1371402563398804,
+      "fcf_cagr": 22.568779424219663,
+      "fcf_cagr_r2": 0.5636647087773857,
+      "fcf_sma_cagr": 0.16223617197792528,
+      "pbr": 1.960369806278601,
+      "amount_millions": 5165,
+      "ratio_percent": 51.2
+    }
+  ]
+}

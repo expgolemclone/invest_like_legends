@@ -1,0 +1,61 @@
+{
+  "id": "エイチアイエス",
+  "name": "エイチ･アイ･エス",
+  "aliases": [
+    "エイチ･アイ･エス"
+  ],
+  "stocks": [
+    {
+      "code": "231A",
+      "name": "Cross E HD",
+      "price": 1050.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.8804136225091517,
+      "per_actual": 6.770768788030416,
+      "per": 9.327,
+      "per_next": 8.161125,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 4.766691173091945,
+      "equity_ratio": 74.11992821854822,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 5.238095238095238,
+      "has_preferred_shares": false,
+      "croic": 0.12979451713434187,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 0.8976311537362974,
+      "amount_millions": 18375,
+      "ratio_percent": 70.3
+    },
+    {
+      "code": "475A",
+      "name": "株式会社ギミック",
+      "price": 692.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": null,
+      "per": null,
+      "per_next": null,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": null,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "missing_input",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": null,
+      "has_preferred_shares": null,
+      "croic": null,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": null,
+      "amount_millions": 35,
+      "ratio_percent": 1.2
+    }
+  ]
+}

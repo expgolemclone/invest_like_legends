@@ -1,0 +1,61 @@
+{
+  "id": "旭化成ホムズ",
+  "name": "旭化成ホームズ",
+  "aliases": [
+    "旭化成ホームズ"
+  ],
+  "stocks": [
+    {
+      "code": "1853",
+      "name": "森組",
+      "price": 312.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 1.156689727954972,
+      "per_actual": 11.111400651465798,
+      "per": 15.049411764705882,
+      "per_next": 14.018630136986301,
+      "fcf_yield_avg": 0.054076766729205736,
+      "total_payout_ratio": 0.0,
+      "equity_ratio": 58.064898620607885,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 4.487179487179487,
+      "has_preferred_shares": false,
+      "croic": -0.29927054418694726,
+      "fcf_cagr": -78.76597562177612,
+      "fcf_cagr_r2": 0.30224572953199297,
+      "fcf_sma_cagr": -0.21055001739913617,
+      "pbr": 0.6867726998188041,
+      "amount_millions": 3092,
+      "ratio_percent": 30.2
+    },
+    {
+      "code": "3271",
+      "name": "THEグローバル社",
+      "price": 1269.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.478113804907162,
+      "per_actual": 9.751150745174689,
+      "per": 11.587198064516128,
+      "per_next": 11.225098125,
+      "fcf_yield_avg": -0.015167345140691138,
+      "total_payout_ratio": 2.285469998953795,
+      "equity_ratio": 27.228760180887246,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.6792750197005515,
+      "has_preferred_shares": false,
+      "croic": 0.7643335524463892,
+      "fcf_cagr": 276.88870367940984,
+      "fcf_cagr_r2": 0.22247239485038353,
+      "fcf_sma_cagr": 0.3623619181321099,
+      "pbr": 3.3096101226747128,
+      "amount_millions": 3541,
+      "ratio_percent": 9.8
+    }
+  ]
+}

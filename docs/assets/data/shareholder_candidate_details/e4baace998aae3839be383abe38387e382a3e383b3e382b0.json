@@ -1,0 +1,61 @@
+{
+  "id": "京阪ホルディング",
+  "name": "京阪ホールディング",
+  "aliases": [
+    "京阪ホールディング"
+  ],
+  "stocks": [
+    {
+      "code": "9049",
+      "name": "京福電気鉄道",
+      "price": 7300.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.39445205479452056,
+      "per_actual": 8.410138248847927,
+      "per": 8.11111111111111,
+      "per_next": 7.3,
+      "fcf_yield_avg": 0.03328767123287672,
+      "total_payout_ratio": 0.547945205479452,
+      "equity_ratio": 48.37049063477606,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.273972602739726,
+      "has_preferred_shares": false,
+      "croic": 0.03677464712562868,
+      "fcf_cagr": 20.15712682379349,
+      "fcf_cagr_r2": 0.3470005395560054,
+      "fcf_sma_cagr": 0.4120356545903736,
+      "pbr": 1.0691271236086701,
+      "amount_millions": 6205,
+      "ratio_percent": 42.8
+    },
+    {
+      "code": "9723",
+      "name": "京都ホテル",
+      "price": 628.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.307839657096003,
+      "per_actual": 9.820672600230965,
+      "per": 9.471339,
+      "per_next": 18.942678,
+      "fcf_yield_avg": 0.0691625281282826,
+      "total_payout_ratio": 0.0023491926537525473,
+      "equity_ratio": 15.999254496162152,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.47770700636942676,
+      "has_preferred_shares": true,
+      "croic": 0.08757109671624284,
+      "fcf_cagr": 5.0574459490870805,
+      "fcf_cagr_r2": 0.00999693457190512,
+      "fcf_sma_cagr": 0.054820864548887016,
+      "pbr": 2.848196428604991,
+      "amount_millions": 226,
+      "ratio_percent": 3.0
+    }
+  ]
+}

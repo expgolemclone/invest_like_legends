@@ -1,0 +1,61 @@
+{
+  "id": "立花エレテック",
+  "name": "立花エレテック",
+  "aliases": [
+    "立花エレテック"
+  ],
+  "stocks": [
+    {
+      "code": "6648",
+      "name": "かわでん",
+      "price": 1729.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.22700433004119225,
+      "per_actual": 18.460159194106577,
+      "per": 13.9384,
+      "per_next": 12.715733333333333,
+      "fcf_yield_avg": 0.012186759102689196,
+      "total_payout_ratio": 0.0018819067633852689,
+      "equity_ratio": 68.36362119156348,
+      "peg_trailing_5": 0.7600585715289196,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.67727009832273,
+      "has_preferred_shares": false,
+      "croic": 0.05341017685770915,
+      "fcf_cagr": -15.49758813523338,
+      "fcf_cagr_r2": 0.03602447193912379,
+      "fcf_sma_cagr": -0.017032121140030165,
+      "pbr": 2.0423368607193937,
+      "amount_millions": 173,
+      "ratio_percent": 2.5
+    },
+    {
+      "code": "7510",
+      "name": "たけびし",
+      "price": 2391.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.5763439701976998,
+      "per_actual": 14.412541556976306,
+      "per": 13.493995774647887,
+      "per_next": 12.774316,
+      "fcf_yield_avg": 0.028009327466143784,
+      "total_payout_ratio": 10.583736929632867,
+      "equity_ratio": 57.14846448533568,
+      "peg_trailing_5": 1.4073357539932874,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.4106986238592745,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.631116687578419,
+      "has_preferred_shares": false,
+      "croic": 0.04549532907584314,
+      "fcf_cagr": 9.054208942414643,
+      "fcf_cagr_r2": 0.010022880111290478,
+      "fcf_sma_cagr": 0.06745539152328184,
+      "pbr": 0.9382301326935318,
+      "amount_millions": 2511,
+      "ratio_percent": 6.6
+    }
+  ]
+}

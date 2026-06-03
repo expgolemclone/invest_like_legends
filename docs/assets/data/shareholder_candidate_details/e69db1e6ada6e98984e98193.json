@@ -1,0 +1,61 @@
+{
+  "id": "東武鉄道",
+  "name": "東武鉄道",
+  "aliases": [
+    "東武鉄道"
+  ],
+  "stocks": [
+    {
+      "code": "8237",
+      "name": "松屋",
+      "price": 1405.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.32086651758136125,
+      "per_actual": 31.419196055392362,
+      "per": 62.393286833333335,
+      "per_next": 41.595524555555556,
+      "fcf_yield_avg": -0.00478683976794608,
+      "total_payout_ratio": 1.415750601010839,
+      "equity_ratio": 31.358482136991338,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.42704626334519574,
+      "has_preferred_shares": false,
+      "croic": -0.053998992310893994,
+      "fcf_cagr": 45.1366341991342,
+      "fcf_cagr_r2": 0.015155833076652043,
+      "fcf_sma_cagr": 0.15514196440700992,
+      "pbr": 2.5641076780821916,
+      "amount_millions": 3386,
+      "ratio_percent": 4.5
+    },
+    {
+      "code": "8424",
+      "name": "芙蓉総合リース",
+      "price": 4094.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.9133072352226903,
+      "per_actual": 8.215979027320715,
+      "per": 21.882051907058823,
+      "per_next": 7.591732294285714,
+      "fcf_yield_avg": -0.24801954102108265,
+      "total_payout_ratio": 14.136753618192424,
+      "equity_ratio": 10.76476475353998,
+      "peg_trailing_5": 0.7099379993731176,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.9296531509526136,
+      "has_preferred_shares": false,
+      "croic": -0.08487965506199678,
+      "fcf_cagr": 7.010141737331696,
+      "fcf_cagr_r2": 0.07011044887095323,
+      "fcf_sma_cagr": 0.03319326236630167,
+      "pbr": 0.7002744330805157,
+      "amount_millions": 4872,
+      "ratio_percent": 1.3
+    }
+  ]
+}

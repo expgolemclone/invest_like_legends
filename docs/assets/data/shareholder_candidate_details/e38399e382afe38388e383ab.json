@@ -1,0 +1,61 @@
+{
+  "id": "ベクトル",
+  "name": "ベクトル",
+  "aliases": [
+    "ベクトル"
+  ],
+  "stocks": [
+    {
+      "code": "3922",
+      "name": "PR TIMES",
+      "price": 2277.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.17225670273948096,
+      "per_actual": 27.54083572646609,
+      "per": 12.83972122125,
+      "per_next": 12.83972122125,
+      "fcf_yield_avg": 0.017907446823648067,
+      "total_payout_ratio": 3.2039376835209623,
+      "equity_ratio": 82.82799971462143,
+      "peg_trailing_5": 0.9748335913619257,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.3871412449297891,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.7465963987703118,
+      "has_preferred_shares": false,
+      "croic": 0.1550107801715159,
+      "fcf_cagr": 21.238041316946923,
+      "fcf_cagr_r2": 0.6230033341782605,
+      "fcf_sma_cagr": 0.3189414077077162,
+      "pbr": 4.463079932519362,
+      "amount_millions": 16144,
+      "ratio_percent": 52.4
+    },
+    {
+      "code": "8887",
+      "name": "シーラ HD",
+      "price": 341.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.29651579051705357,
+      "per_actual": -21.708850977030362,
+      "per": 2.197309779076923,
+      "per_next": 14.282513564,
+      "fcf_yield_avg": 0.04834818443586392,
+      "total_payout_ratio": 11.890533080119678,
+      "equity_ratio": 65.92120001337435,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.7595307917888565,
+      "has_preferred_shares": false,
+      "croic": -0.008154155035870438,
+      "fcf_cagr": 7.785262664330099,
+      "fcf_cagr_r2": 0.007471501768792884,
+      "fcf_sma_cagr": 0.14889728435528848,
+      "pbr": 1.2906629436810622,
+      "amount_millions": 239,
+      "ratio_percent": 1.6
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "jfe商事",
+  "name": "JFE商事",
+  "aliases": [
+    "JFE商事"
+  ],
+  "stocks": [
+    {
+      "code": "5989",
+      "name": "エイチワン",
+      "price": 1692.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.106853876418467,
+      "per_actual": 4.478063791946309,
+      "per": 4.804066836,
+      "per_next": 4.367333487272727,
+      "fcf_yield_avg": 0.07675371983521673,
+      "total_payout_ratio": null,
+      "equity_ratio": 35.8475136388587,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.8912529550827424,
+      "has_preferred_shares": false,
+      "croic": 0.06130937654626423,
+      "fcf_cagr": -1.9958760988782953,
+      "fcf_cagr_r2": 0.0009797890635289178,
+      "fcf_sma_cagr": 0.0999848643586867,
+      "pbr": 0.7329865024946217,
+      "amount_millions": 1218,
+      "ratio_percent": 2.5
+    },
+    {
+      "code": "9991",
+      "name": "ジェコス",
+      "price": 1484.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.5216429508158693,
+      "per_actual": 11.039596536209553,
+      "per": 9.118706738909092,
+      "per_next": 8.95587269,
+      "fcf_yield_avg": 0.06599819459597842,
+      "total_payout_ratio": 15.327133590914984,
+      "equity_ratio": 60.352283021863585,
+      "peg_trailing_5": 17.971433362183397,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.5697915176941173,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.6954177897574128,
+      "has_preferred_shares": false,
+      "croic": 0.08431796239253368,
+      "fcf_cagr": -9.439165064542708,
+      "fcf_cagr_r2": 0.05624187597904478,
+      "fcf_sma_cagr": -0.32072305612774366,
+      "pbr": 0.7566021552340579,
+      "amount_millions": 4393,
+      "ratio_percent": 8.7
+    }
+  ]
+}

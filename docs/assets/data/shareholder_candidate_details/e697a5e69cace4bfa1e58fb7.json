@@ -1,0 +1,61 @@
+{
+  "id": "日本信号",
+  "name": "日本信号",
+  "aliases": [
+    "日本信号"
+  ],
+  "stocks": [
+    {
+      "code": "4666",
+      "name": "パーク二四(パーク24)",
+      "price": 1833.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.35358789561059756,
+      "per_actual": 19.697911690456746,
+      "per": 13.063819182375,
+      "per_next": 12.152389937093023,
+      "fcf_yield_avg": 0.029547255256010464,
+      "total_payout_ratio": 0.673616182002311,
+      "equity_ratio": 29.42778291983656,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 3.546099290780142,
+      "has_preferred_shares": false,
+      "croic": 0.08350921451876425,
+      "fcf_cagr": 33.339090385722514,
+      "fcf_cagr_r2": 0.2989242096120495,
+      "fcf_sma_cagr": 0.8308435690310206,
+      "pbr": 3.193014373499129,
+      "amount_millions": 7057,
+      "ratio_percent": 2.2
+    },
+    {
+      "code": "6797",
+      "name": "名古屋電機工業",
+      "price": 1161.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.7705343000254026,
+      "per_actual": 6.75800865604677,
+      "per": 11.47068,
+      "per_next": 13.556258181818182,
+      "fcf_yield_avg": 0.03073200542600788,
+      "total_payout_ratio": 12.832255132885958,
+      "equity_ratio": 78.93870348667969,
+      "peg_trailing_5": 0.7552026144231049,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 3.875968992248062,
+      "has_preferred_shares": false,
+      "croic": -0.005990872278511433,
+      "fcf_cagr": -19.336622381014564,
+      "fcf_cagr_r2": 0.0289595432217251,
+      "fcf_sma_cagr": -0.6594689424860853,
+      "pbr": 0.6657226593541369,
+      "amount_millions": 511,
+      "ratio_percent": 3.4
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "富士電機",
+  "name": "富士電機",
+  "aliases": [
+    "富士電機"
+  ],
+  "stocks": [
+    {
+      "code": "6424",
+      "name": "高見沢サイバネティックス",
+      "price": 882.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.2824239736410218,
+      "per_actual": 3.986517329796022,
+      "per": 4.587413793103448,
+      "per_next": 6.335,
+      "fcf_yield_avg": 0.09696836672053721,
+      "total_payout_ratio": 4.756943661442477,
+      "equity_ratio": 32.49711176191712,
+      "peg_trailing_5": 1.0285748164909914,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 2.2675736961451247,
+      "has_preferred_shares": false,
+      "croic": 0.05531783338576056,
+      "fcf_cagr": 10.532232088271698,
+      "fcf_cagr_r2": 0.07000399872601269,
+      "fcf_sma_cagr": 0.06682122981091432,
+      "pbr": 0.6609018290738183,
+      "amount_millions": 538,
+      "ratio_percent": 13.6
+    },
+    {
+      "code": "9551",
+      "name": "メタウォーター",
+      "price": 3345.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.265942007069386,
+      "per_actual": 21.606054071803854,
+      "per": 16.634233988764045,
+      "per_next": 15.262338402061856,
+      "fcf_yield_avg": 0.004712090891883266,
+      "total_payout_ratio": 15.84521619005127,
+      "equity_ratio": 38.12981812453312,
+      "peg_trailing_5": 4.7711303591346645,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.8022292512079496,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.046337817638266,
+      "has_preferred_shares": false,
+      "croic": 0.11522746866917397,
+      "fcf_cagr": -0.7071865443425076,
+      "fcf_cagr_r2": 3.7167264763949815e-06,
+      "fcf_sma_cagr": -3.644535621036926,
+      "pbr": 1.7345598418277681,
+      "amount_millions": 30440,
+      "ratio_percent": 20.5
+    }
+  ]
+}

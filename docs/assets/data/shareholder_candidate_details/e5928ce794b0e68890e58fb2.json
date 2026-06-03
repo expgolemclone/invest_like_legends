@@ -1,0 +1,61 @@
+{
+  "id": "和田成史",
+  "name": "和田成史",
+  "aliases": [
+    "和田成史"
+  ],
+  "stocks": [
+    {
+      "code": "4733",
+      "name": "オービックビジネスコンサルタント",
+      "price": 6379.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3033519449215895,
+      "per_actual": 29.72282604128303,
+      "per": 27.32966568181818,
+      "per_next": 25.315900842105265,
+      "fcf_yield_avg": 0.029869104983313625,
+      "total_payout_ratio": 0.0006236978799486196,
+      "equity_ratio": 69.60951598748655,
+      "peg_trailing_5": 2.9141303595848185,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.6181694412164433,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.8308512306004076,
+      "has_preferred_shares": false,
+      "croic": 0.1142845766025569,
+      "fcf_cagr": 4.892270960675171,
+      "fcf_cagr_r2": 0.3351307078609806,
+      "fcf_sma_cagr": 0.05758971479419239,
+      "pbr": 3.0253606819452497,
+      "amount_millions": 101043,
+      "ratio_percent": 21.0
+    },
+    {
+      "code": "4792",
+      "name": "山田コンサルティンググループ",
+      "price": 1636.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.43738354172749644,
+      "per_actual": 11.293026360572835,
+      "per": 11.836311272727272,
+      "per_next": 11.421002105263158,
+      "fcf_yield_avg": 0.037485508384430336,
+      "total_payout_ratio": 12.207826664425182,
+      "equity_ratio": 75.41429830636959,
+      "peg_trailing_5": 0.61012822431794,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8982418988117444,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.3838630806845966,
+      "has_preferred_shares": false,
+      "croic": -0.049655769229374265,
+      "fcf_cagr": -10.182996518849738,
+      "fcf_cagr_r2": 0.040144913754929665,
+      "fcf_sma_cagr": -0.08616024008012269,
+      "pbr": 1.751873449914793,
+      "amount_millions": 589,
+      "ratio_percent": 1.8
+    }
+  ]
+}

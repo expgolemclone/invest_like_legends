@@ -1,0 +1,61 @@
+{
+  "id": "aig損害保険",
+  "name": "AIG損害保険",
+  "aliases": [
+    "AIG損害保険"
+  ],
+  "stocks": [
+    {
+      "code": "8850",
+      "name": "スターツコーポレーション",
+      "price": 4510.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.08122549707214533,
+      "per_actual": 10.03262357048694,
+      "per": 10.189619437238493,
+      "per_next": 9.366611713461538,
+      "fcf_yield_avg": 0.04365341789464521,
+      "total_payout_ratio": 12.524026392500037,
+      "equity_ratio": 50.415558959019556,
+      "peg_trailing_5": 1.0013256018240588,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.1543580545834817,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.5521064301552108,
+      "has_preferred_shares": false,
+      "croic": 0.07736317285566033,
+      "fcf_cagr": 11.215684262434333,
+      "fcf_cagr_r2": 0.05021674597207245,
+      "fcf_sma_cagr": 1.9039628842064562,
+      "pbr": 1.366322210907826,
+      "amount_millions": 3969,
+      "ratio_percent": 1.6
+    },
+    {
+      "code": "9686",
+      "name": "東洋テック",
+      "price": 1630.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.06101857815270992,
+      "per_actual": 26.901731044906693,
+      "per": 11.293884727272728,
+      "per_next": 16.940827090909092,
+      "fcf_yield_avg": -0.026386604779809558,
+      "total_payout_ratio": 13.065123610096574,
+      "equity_ratio": 56.14961427985693,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 4.762457763377446,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.024539877300614,
+      "has_preferred_shares": false,
+      "croic": -0.05530780546640284,
+      "fcf_cagr": 2.9164102958519202,
+      "fcf_cagr_r2": 0.002423107209606294,
+      "fcf_sma_cagr": -0.008778754328377155,
+      "pbr": 0.8572404507390727,
+      "amount_millions": 538,
+      "ratio_percent": 2.9
+    }
+  ]
+}

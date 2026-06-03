@@ -1,0 +1,61 @@
+{
+  "id": "ハドオフコポ",
+  "name": "ハードオフコーポ",
+  "aliases": [
+    "ハードオフコーポ"
+  ],
+  "stocks": [
+    {
+      "code": "9278",
+      "name": "ブックオフグループ HD",
+      "price": 1849.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.6453646151394142,
+      "per_actual": 18.082897019038555,
+      "per": 17.269166653181816,
+      "per_next": 15.830069432083333,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 18.582778043314782,
+      "equity_ratio": 31.883931683513417,
+      "peg_trailing_5": 0.33285057220111963,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.40642913254698726,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.6224986479177934,
+      "has_preferred_shares": false,
+      "croic": 0.016917466057801343,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.0136835022526105,
+      "amount_millions": 2644,
+      "ratio_percent": 6.9
+    },
+    {
+      "code": "9927",
+      "name": "ワットマン",
+      "price": 963.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.06771647784321734,
+      "per_actual": 25.377322979566763,
+      "per": 14.59720536,
+      "per_next": 17.17318277647059,
+      "fcf_yield_avg": 0.02227089537454677,
+      "total_payout_ratio": 8.470331383120765,
+      "equity_ratio": 69.34356427313992,
+      "peg_trailing_5": 4.1219640584364825,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.6596879642198195,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.06579358873102413,
+      "fcf_cagr": 22.617381039923934,
+      "fcf_cagr_r2": 0.3955738864932793,
+      "fcf_sma_cagr": 0.5368143060918915,
+      "pbr": 2.556467061379799,
+      "amount_millions": 1233,
+      "ratio_percent": 14.1
+    }
+  ]
+}

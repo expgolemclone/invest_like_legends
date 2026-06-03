@@ -1,0 +1,61 @@
+{
+  "id": "jpjpmseluxマッコリニロンドンeq",
+  "name": "JPJPMSELuxマッコリーニ(ロンドン)EQ",
+  "aliases": [
+    "JPJPMSELuxマッコリーニ(ロンドン)EQ"
+  ],
+  "stocks": [
+    {
+      "code": "6946",
+      "name": "日本アビオニクス",
+      "price": 5490.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.023395566202195087,
+      "per_actual": 46.86293630346232,
+      "per": 26.755467122093023,
+      "per_next": 22.178025759036146,
+      "fcf_yield_avg": 0.0074772807599269315,
+      "total_payout_ratio": 3.596309112955266,
+      "equity_ratio": 43.27276780737933,
+      "peg_trailing_5": 1.205006564460331,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.544787128373738,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.1092896174863388,
+      "has_preferred_shares": false,
+      "croic": 0.10215380871258213,
+      "fcf_cagr": -4.727307953114405,
+      "fcf_cagr_r2": 0.00257048484004818,
+      "fcf_sma_cagr": -0.2386018513473298,
+      "pbr": 6.593982440177676,
+      "amount_millions": 1976,
+      "ratio_percent": 2.1
+    },
+    {
+      "code": "8185",
+      "name": "チヨダ",
+      "price": 950.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.18693117030529752,
+      "per_actual": 11.16709757098871,
+      "per": 32.6414262,
+      "per_next": 26.11314096,
+      "fcf_yield_avg": 0.05118648890409083,
+      "total_payout_ratio": 35.378356108716844,
+      "equity_ratio": 65.88471849865952,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 2.8421052631578947,
+      "has_preferred_shares": false,
+      "croic": -0.006564425420833414,
+      "fcf_cagr": -54.81823260133052,
+      "fcf_cagr_r2": 0.390004106050961,
+      "fcf_sma_cagr": -0.17441094084692702,
+      "pbr": 0.6273457400395918,
+      "amount_millions": 703,
+      "ratio_percent": 2.0
+    }
+  ]
+}

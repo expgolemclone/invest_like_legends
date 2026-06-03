@@ -1,0 +1,61 @@
+{
+  "id": "方永義",
+  "name": "方永義",
+  "aliases": [
+    "方永義"
+  ],
+  "stocks": [
+    {
+      "code": "3445",
+      "name": "RS Technologies",
+      "price": 7190.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.43365006749766954,
+      "per_actual": 20.544593242981605,
+      "per": 19.100308338,
+      "per_next": 16.60896377217391,
+      "fcf_yield_avg": 0.012465572585878533,
+      "total_payout_ratio": 1.3082856861679633,
+      "equity_ratio": 34.003177047295125,
+      "peg_trailing_5": 0.767370507641973,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7510366414057326,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.764951321279555,
+      "has_preferred_shares": false,
+      "croic": -0.004416951048312542,
+      "fcf_cagr": 15.893848921244395,
+      "fcf_cagr_r2": 0.04479221323311897,
+      "fcf_sma_cagr": 0.10797410554039955,
+      "pbr": 1.245691239084073,
+      "amount_millions": 15315,
+      "ratio_percent": 8.0
+    },
+    {
+      "code": "6444",
+      "name": "サンデン",
+      "price": 159.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -3.9487325206966544,
+      "per_actual": 65.10487871167884,
+      "per": 35.677473534,
+      "per_next": 17.838736767,
+      "fcf_yield_avg": -0.08232645725883307,
+      "total_payout_ratio": 28.55583366992345,
+      "equity_ratio": 7.875216152300507,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.041454727647013974,
+      "fcf_cagr": -149.1257392115352,
+      "fcf_cagr_r2": 0.18472306692870968,
+      "fcf_sma_cagr": -1.4270827590009372,
+      "pbr": 0.6342436452748347,
+      "amount_millions": 318,
+      "ratio_percent": 1.7
+    }
+  ]
+}

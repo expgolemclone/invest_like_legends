@@ -1,0 +1,61 @@
+{
+  "id": "スタツコポ",
+  "name": "スターツコーポ",
+  "aliases": [
+    "スターツコーポ"
+  ],
+  "stocks": [
+    {
+      "code": "2373",
+      "name": "ケア21",
+      "price": 409.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -2.108337862918608,
+      "per_actual": 15.80324540442612,
+      "per": 24.284784,
+      "per_next": 17.85645882352941,
+      "fcf_yield_avg": 0.10309145018543295,
+      "total_payout_ratio": 16.00348596882723,
+      "equity_ratio": 12.839482237712922,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.7114914425427872,
+      "has_preferred_shares": false,
+      "croic": 0.20994691692203918,
+      "fcf_cagr": 6.123262210769184,
+      "fcf_cagr_r2": 0.014918855214970229,
+      "fcf_sma_cagr": 0.07863155321859128,
+      "pbr": 1.3516031708998166,
+      "amount_millions": 605,
+      "ratio_percent": 9.9
+    },
+    {
+      "code": "7849",
+      "name": "スターツ出版",
+      "price": 3450.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.6536286835748792,
+      "per_actual": 9.619147680201095,
+      "per": 8.832,
+      "per_next": 7.36,
+      "fcf_yield_avg": 0.04308328804347827,
+      "total_payout_ratio": 0.004159118357487923,
+      "equity_ratio": 77.75978759423468,
+      "peg_trailing_5": 0.18733538360333826,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.18544282045230842,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.4492753623188406,
+      "has_preferred_shares": false,
+      "croic": -0.0185746648640179,
+      "fcf_cagr": 23.394521661591575,
+      "fcf_cagr_r2": 0.2755752831302206,
+      "fcf_sma_cagr": 0.49388403495756794,
+      "pbr": 1.2297466126041046,
+      "amount_millions": 6417,
+      "ratio_percent": 48.5
+    }
+  ]
+}

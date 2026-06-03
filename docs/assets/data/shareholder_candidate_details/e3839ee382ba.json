@@ -1,0 +1,61 @@
+{
+  "id": "マズ",
+  "name": "合同会社マーズ",
+  "aliases": [
+    "合同会社マーズ"
+  ],
+  "stocks": [
+    {
+      "code": "3046",
+      "name": "ジンズ HD",
+      "price": 8110.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.013887960476722793,
+      "per_actual": 23.346674669867948,
+      "per": 21.97489265536723,
+      "per_next": 19.44778,
+      "fcf_yield_avg": 0.015036163510693767,
+      "total_payout_ratio": 5.089526928009263,
+      "equity_ratio": 54.206269657484526,
+      "peg_trailing_5": 0.6204644127725203,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.6718348280599399,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.8384710234278667,
+      "has_preferred_shares": false,
+      "croic": 0.07246809666033126,
+      "fcf_cagr": 10.046985137608214,
+      "fcf_cagr_r2": 0.13194087540103785,
+      "fcf_sma_cagr": 0.13865520468833759,
+      "pbr": 6.126828807258522,
+      "amount_millions": 9732,
+      "ratio_percent": 5.0
+    },
+    {
+      "code": "4890",
+      "name": "坪田ラボ",
+      "price": 249.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.19367903998341404,
+      "per_actual": 31.214003771274164,
+      "per": -8.679433378378379,
+      "per_next": 45.877005,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 63.4116661466496,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.19807504774530116,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 4.046427266404246,
+      "amount_millions": 62,
+      "ratio_percent": 0.9
+    }
+  ]
+}

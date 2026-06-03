@@ -1,0 +1,61 @@
+{
+  "id": "cepluxエルステグルプバンクucits",
+  "name": "CEPLUXエルステグループバンクUCITS",
+  "aliases": [
+    "CEPLUXエルステグループバンクUCITS"
+  ],
+  "stocks": [
+    {
+      "code": "1407",
+      "name": "ウエスト HD",
+      "price": 2600.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.30855809133346246,
+      "per_actual": 22.33926988986373,
+      "per": 18.132040727272727,
+      "per_next": 16.171820108108108,
+      "fcf_yield_avg": -0.01814551138859256,
+      "total_payout_ratio": 10.499578659805001,
+      "equity_ratio": 24.160865994372113,
+      "peg_trailing_5": 5.678095820690029,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.1139039074279684,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.3461538461538463,
+      "has_preferred_shares": false,
+      "croic": -0.016897376905379305,
+      "fcf_cagr": -29.687899022460385,
+      "fcf_cagr_r2": 0.12700827301501916,
+      "fcf_sma_cagr": -0.45186897411721766,
+      "pbr": 3.2753501601116675,
+      "amount_millions": 1664,
+      "ratio_percent": 1.4
+    },
+    {
+      "code": "5857",
+      "name": "ARE HD",
+      "price": 3245.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.017851947446199164,
+      "per_actual": 18.63689095118374,
+      "per": 11.165759059832636,
+      "per_next": 10.465162412941176,
+      "fcf_yield_avg": -0.008979559543519536,
+      "total_payout_ratio": 0.1266573937198849,
+      "equity_ratio": 25.77376810322486,
+      "peg_trailing_5": 2.39606873547923,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.7447568967367038,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.095531587057011,
+      "has_preferred_shares": false,
+      "croic": 0.03588738066574876,
+      "fcf_cagr": 49.46691806433908,
+      "fcf_cagr_r2": 0.0292030912595641,
+      "fcf_sma_cagr": 1.6594511757099755,
+      "pbr": 2.1120993559901544,
+      "amount_millions": 3797,
+      "ratio_percent": 1.4
+    }
+  ]
+}

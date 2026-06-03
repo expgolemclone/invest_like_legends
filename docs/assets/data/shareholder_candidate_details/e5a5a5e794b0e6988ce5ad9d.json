@@ -1,0 +1,61 @@
+{
+  "id": "奥田昌孝",
+  "name": "奥田昌孝",
+  "aliases": [
+    "奥田昌孝"
+  ],
+  "stocks": [
+    {
+      "code": "4356",
+      "name": "応用技術",
+      "price": 1531.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.6422887025724358,
+      "per_actual": 9.566804609159295,
+      "per": 11.221052307692307,
+      "per_next": 8.931041632653061,
+      "fcf_yield_avg": 0.05286078109955591,
+      "total_payout_ratio": 0.016029850849949994,
+      "equity_ratio": 75.96501088352659,
+      "peg_trailing_5": 0.682056816541744,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8183451531450439,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.612671456564337,
+      "has_preferred_shares": false,
+      "croic": 0.21156097246565744,
+      "fcf_cagr": 24.49319558279533,
+      "fcf_cagr_r2": 0.7828485399964393,
+      "fcf_sma_cagr": 0.440694631638165,
+      "pbr": 1.3998231432803323,
+      "amount_millions": 168,
+      "ratio_percent": 1.9
+    },
+    {
+      "code": "9715",
+      "name": "トランス・コスモス",
+      "price": 3860.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.4397518409399527,
+      "per_actual": 14.941019039887045,
+      "per": 14.109302313333334,
+      "per_next": 13.5449302208,
+      "fcf_yield_avg": 0.039421391715996824,
+      "total_payout_ratio": 18.35313995329815,
+      "equity_ratio": 53.647876759750744,
+      "peg_trailing_5": 0.9989091748175616,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.1261138133410409,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 2.7979274611398965,
+      "has_preferred_shares": false,
+      "croic": 0.11781366030567308,
+      "fcf_cagr": 37.54397673642561,
+      "fcf_cagr_r2": 0.7868900420210981,
+      "fcf_sma_cagr": 1.0778330526068391,
+      "pbr": 1.3118017460563425,
+      "amount_millions": 24704,
+      "ratio_percent": 14.6
+    }
+  ]
+}

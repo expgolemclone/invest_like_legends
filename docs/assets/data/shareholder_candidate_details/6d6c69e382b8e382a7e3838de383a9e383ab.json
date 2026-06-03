@@ -1,0 +1,61 @@
+{
+  "id": "mliジェネラル",
+  "name": "MLIジェネラル",
+  "aliases": [
+    "MLIジェネラル"
+  ],
+  "stocks": [
+    {
+      "code": "7244",
+      "name": "市光工業",
+      "price": 526.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.2835136392945484,
+      "per_actual": 8.177136896018055,
+      "per": 10.1445560332,
+      "per_next": 9.754380801153847,
+      "fcf_yield_avg": 0.08865444648900082,
+      "total_payout_ratio": 6.728732117660556,
+      "equity_ratio": 54.96332178863168,
+      "peg_trailing_5": 0.4880293272910855,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.0933937335977526,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.7110266159695817,
+      "has_preferred_shares": false,
+      "croic": 0.01748649217598765,
+      "fcf_cagr": -6.449839077485403,
+      "fcf_cagr_r2": 0.03523556395714882,
+      "fcf_sma_cagr": -0.10362746492898911,
+      "pbr": 0.6330851243884174,
+      "amount_millions": 373,
+      "ratio_percent": 0.7
+    },
+    {
+      "code": "8848",
+      "name": "レオパレス21",
+      "price": 616.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.1106737554363075,
+      "per_actual": 11.533511989698225,
+      "per": 15.846158280615384,
+      "per_next": 8.24000230592,
+      "fcf_yield_avg": 0.03368397115624481,
+      "total_payout_ratio": 16.34611193048223,
+      "equity_ratio": 33.860357761107906,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.8116883116883116,
+      "has_preferred_shares": false,
+      "croic": 0.2447508466376391,
+      "fcf_cagr": 4.943321293175016,
+      "fcf_cagr_r2": 0.003362216420415181,
+      "fcf_sma_cagr": 0.010467645731417452,
+      "pbr": 2.3338022573072914,
+      "amount_millions": 5144,
+      "ratio_percent": 2.4
+    }
+  ]
+}

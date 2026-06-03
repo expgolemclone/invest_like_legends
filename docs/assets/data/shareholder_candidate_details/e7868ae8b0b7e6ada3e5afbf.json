@@ -1,0 +1,61 @@
+{
+  "id": "熊谷正寿",
+  "name": "熊谷正寿",
+  "aliases": [
+    "熊谷正寿"
+  ],
+  "stocks": [
+    {
+      "code": "8887",
+      "name": "シーラ HD",
+      "price": 341.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.29651579051705357,
+      "per_actual": -21.708850977030362,
+      "per": 2.197309779076923,
+      "per_next": 14.282513564,
+      "fcf_yield_avg": 0.04834818443586392,
+      "total_payout_ratio": 11.890533080119678,
+      "equity_ratio": 65.92120001337435,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.7595307917888565,
+      "has_preferred_shares": false,
+      "croic": -0.008154155035870438,
+      "fcf_cagr": 7.785262664330099,
+      "fcf_cagr_r2": 0.007471501768792884,
+      "fcf_sma_cagr": 0.14889728435528848,
+      "pbr": 1.2906629436810622,
+      "amount_millions": 92,
+      "ratio_percent": 0.6
+    },
+    {
+      "code": "9449",
+      "name": "GMOインターネットグループ",
+      "price": 3355.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.2954828215355775,
+      "per_actual": 21.5031524840289,
+      "per": 15.65896960673913,
+      "per_next": 12.862725034107143,
+      "fcf_yield_avg": -0.002563053867313399,
+      "total_payout_ratio": 10.695356404388692,
+      "equity_ratio": 5.461221599767058,
+      "peg_trailing_5": 2.061684394304837,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8212856505346203,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.5812220566318927,
+      "has_preferred_shares": false,
+      "croic": 0.07876991031239126,
+      "fcf_cagr": 534.6694110425017,
+      "fcf_cagr_r2": 0.1886920615334733,
+      "fcf_sma_cagr": 0.44061756157862203,
+      "pbr": 1.500713783720155,
+      "amount_millions": 30161,
+      "ratio_percent": 8.3
+    }
+  ]
+}

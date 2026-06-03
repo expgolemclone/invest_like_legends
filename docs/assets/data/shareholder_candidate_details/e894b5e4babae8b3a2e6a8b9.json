@@ -1,0 +1,61 @@
+{
+  "id": "蔵人賢樹",
+  "name": "蔵人賢樹",
+  "aliases": [
+    "蔵人賢樹"
+  ],
+  "stocks": [
+    {
+      "code": "2705",
+      "name": "大戸屋 HD",
+      "price": 7630.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.017088008784860508,
+      "per_actual": 45.27694362745098,
+      "per": 46.57057058823529,
+      "per_next": 42.62998384615385,
+      "fcf_yield_avg": 0.00635264861158846,
+      "total_payout_ratio": 3.616392860647974,
+      "equity_ratio": 35.48930436247263,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.1310615989515072,
+      "has_preferred_shares": true,
+      "croic": 0.10887512899896801,
+      "fcf_cagr": 2.1250931182354273,
+      "fcf_cagr_r2": 0.00023136055077480365,
+      "fcf_sma_cagr": -0.0025855329096887703,
+      "pbr": 11.743797202797202,
+      "amount_millions": 76,
+      "ratio_percent": 0.2
+    },
+    {
+      "code": "7616",
+      "name": "コロワイド",
+      "price": 1776.5,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.7076974395405214,
+      "per_actual": 151.41290279143314,
+      "per": 70.04248725425926,
+      "per_next": 61.0047469633871,
+      "fcf_yield_avg": 0.0395104102651512,
+      "total_payout_ratio": null,
+      "equity_ratio": 24.83361411285415,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.28145229383619474,
+      "has_preferred_shares": true,
+      "croic": 0.03481699564424978,
+      "fcf_cagr": 24.726331840892872,
+      "fcf_cagr_r2": 0.2500237972796931,
+      "fcf_sma_cagr": 0.6733335594332606,
+      "pbr": 2.171037282298985,
+      "amount_millions": 5081,
+      "ratio_percent": 2.6
+    }
+  ]
+}

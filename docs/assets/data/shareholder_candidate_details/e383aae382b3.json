@@ -1,0 +1,61 @@
+{
+  "id": "リコ",
+  "name": "リコー",
+  "aliases": [
+    "リコー"
+  ],
+  "stocks": [
+    {
+      "code": "4776",
+      "name": "サイボウズ",
+      "price": 2597.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.06516582175215001,
+      "per_actual": 19.349245389069342,
+      "per": 18.415592284946236,
+      "per_next": 16.507470674698794,
+      "fcf_yield_avg": 0.009410854070361453,
+      "total_payout_ratio": 4.479169491996915,
+      "equity_ratio": 52.66423357664234,
+      "peg_trailing_5": 0.5144770744874332,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.5792917195538893,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.9252984212552944,
+      "has_preferred_shares": false,
+      "croic": 0.47611264772441536,
+      "fcf_cagr": 38.38383838383839,
+      "fcf_cagr_r2": 0.32804631282210583,
+      "fcf_sma_cagr": 0.6825621948936718,
+      "pbr": 7.690822711198428,
+      "amount_millions": 4519,
+      "ratio_percent": 3.2
+    },
+    {
+      "code": "8566",
+      "name": "リコーリース",
+      "price": 6000.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.041083042766319786,
+      "per_actual": 11.97211253033593,
+      "per": 14.201465,
+      "per_next": 12.928230206896552,
+      "fcf_yield_avg": -0.19736920227468208,
+      "total_payout_ratio": 11.861238942388669,
+      "equity_ratio": 16.633568544358386,
+      "peg_trailing_5": 2.0740286182563126,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 4.376976647390881,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.5833333333333335,
+      "has_preferred_shares": false,
+      "croic": -0.11892011822774338,
+      "fcf_cagr": -6.436671689775177,
+      "fcf_cagr_r2": 0.03253932583718236,
+      "fcf_sma_cagr": -0.11846344485749691,
+      "pbr": 0.8008687059426667,
+      "amount_millions": 62280,
+      "ratio_percent": 33.2
+    }
+  ]
+}

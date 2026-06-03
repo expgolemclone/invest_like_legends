@@ -1,0 +1,61 @@
+{
+  "id": "ユロクリアバンク",
+  "name": "ユーロクリア･バンク",
+  "aliases": [
+    "ユーロクリア･バンク"
+  ],
+  "stocks": [
+    {
+      "code": "3189",
+      "name": "ANAP HD",
+      "price": 119.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 2.3263255638158804,
+      "per_actual": -1.9471295704543574,
+      "per": -2.2519146086956523,
+      "per_next": 51.794036,
+      "fcf_yield_avg": -0.26911316584789796,
+      "total_payout_ratio": 6.211796277084876,
+      "equity_ratio": 68.87211830627899,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.7168962663675533,
+      "fcf_cagr": -59.94143115023856,
+      "fcf_cagr_r2": 0.4013419668671002,
+      "fcf_sma_cagr": -1.1682126648156699,
+      "pbr": 0.40960302287042205,
+      "amount_millions": 43,
+      "ratio_percent": 0.9
+    },
+    {
+      "code": "3350",
+      "name": "メタプラネット",
+      "price": 295.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.07588847136856593,
+      "per_actual": -3.954722400732277,
+      "per": 46.9850681625,
+      "per_next": 39.56637318947369,
+      "fcf_yield_avg": -0.1531946606974341,
+      "total_payout_ratio": 0.033787329934471075,
+      "equity_ratio": 86.92601813626342,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -1.133970657950031,
+      "fcf_cagr": -53.15555626104006,
+      "fcf_cagr_r2": 0.28901368368416847,
+      "fcf_sma_cagr": -23.172336449272308,
+      "pbr": 0.8196404326721792,
+      "amount_millions": 5791,
+      "ratio_percent": 1.7
+    }
+  ]
+}

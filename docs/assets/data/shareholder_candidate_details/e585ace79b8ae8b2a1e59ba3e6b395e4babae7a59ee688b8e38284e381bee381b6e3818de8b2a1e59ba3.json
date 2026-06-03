@@ -1,0 +1,61 @@
+{
+  "id": "公益財団法人神戸やまぶき財団",
+  "name": "公益財団法人神戸やまぶき財団",
+  "aliases": [
+    "公益財団法人神戸やまぶき財団"
+  ],
+  "stocks": [
+    {
+      "code": "6809",
+      "name": "TOA",
+      "price": 1535.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.3905197501008366,
+      "per_actual": 22.55530233714044,
+      "per": 17.200237008064516,
+      "per_next": 15.916637231343284,
+      "fcf_yield_avg": 0.029508220547124125,
+      "total_payout_ratio": 13.315645473788058,
+      "equity_ratio": 59.28894069648841,
+      "peg_trailing_5": 8.227655467069267,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 2.310128516808625,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 3.257328990228013,
+      "has_preferred_shares": false,
+      "croic": 0.07576328684508105,
+      "fcf_cagr": 2.8172920253764286,
+      "fcf_cagr_r2": 0.004911041436902416,
+      "fcf_sma_cagr": -0.020621963140805222,
+      "pbr": 1.013972059578595,
+      "amount_millions": 3070,
+      "ratio_percent": 5.8
+    },
+    {
+      "code": "6869",
+      "name": "シスメックス",
+      "price": 1457.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.08970809393811442,
+      "per_actual": 17.089054588906073,
+      "per": 22.36957245687805,
+      "per_next": 19.938097189826088,
+      "fcf_yield_avg": 0.02080635511429168,
+      "total_payout_ratio": 0.0004361325000637582,
+      "equity_ratio": 69.71265715471058,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.3726835964310227,
+      "has_preferred_shares": false,
+      "croic": 0.07207312525824625,
+      "fcf_cagr": 5.685147909544908,
+      "fcf_cagr_r2": 0.07603533588162481,
+      "fcf_sma_cagr": 0.04371231519572838,
+      "pbr": 1.9743495002131168,
+      "amount_millions": 52452,
+      "ratio_percent": 5.7
+    }
+  ]
+}

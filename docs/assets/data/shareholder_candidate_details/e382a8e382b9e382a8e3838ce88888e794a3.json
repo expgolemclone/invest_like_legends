@@ -1,0 +1,62 @@
+{
+  "id": "エスエヌ興産",
+  "name": "(株)エスエヌ興産",
+  "aliases": [
+    "(株)エスエヌ興産",
+    "エスエヌ興産合同会社"
+  ],
+  "stocks": [
+    {
+      "code": "6594",
+      "name": "ニデック",
+      "price": 2899.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.1473268979146938,
+      "per_actual": 21.034023943442946,
+      "per": 43.2157168183,
+      "per_next": 21.60785840915,
+      "fcf_yield_avg": 0.008161093369869822,
+      "total_payout_ratio": null,
+      "equity_ratio": 51.7947885752481,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "missing_input",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "missing_input",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.07575023787053548,
+      "fcf_cagr": 48.78969385508461,
+      "fcf_cagr_r2": 0.1786415353034218,
+      "fcf_sma_cagr": 0.36337715553343974,
+      "pbr": 1.9826076520917333,
+      "amount_millions": 117381,
+      "ratio_percent": 3.3
+    },
+    {
+      "code": "7874",
+      "name": "レック",
+      "price": 884.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.1285725104154878,
+      "per_actual": 19.513106165413532,
+      "per": 11.633848468965517,
+      "per_next": 10.223685018181818,
+      "fcf_yield_avg": -0.06088061607114481,
+      "total_payout_ratio": 29.23099492179309,
+      "equity_ratio": 33.828742689077515,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 2.599201752753709,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.1312217194570136,
+      "has_preferred_shares": false,
+      "croic": -0.0871057884231537,
+      "fcf_cagr": -16.29636186598212,
+      "fcf_cagr_r2": 0.05168565142794488,
+      "fcf_sma_cagr": -0.17409854115056428,
+      "pbr": 0.9359491929980304,
+      "amount_millions": 2900,
+      "ratio_percent": 8.5
+    }
+  ]
+}

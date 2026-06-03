@@ -1,0 +1,61 @@
+{
+  "id": "ググルインタナショナルllc",
+  "name": "グーグル･インターナショナルLLC",
+  "aliases": [
+    "グーグル･インターナショナルLLC"
+  ],
+  "stocks": [
+    {
+      "code": "4165",
+      "name": "プレイド",
+      "price": 604.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.14953243602341354,
+      "per_actual": 22.675293867379036,
+      "per": 18.7379251518797,
+      "per_next": 20.767867043333332,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 0.002050443275878105,
+      "equity_ratio": 48.99349391899013,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.15145741819178593,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 5.178637164548334,
+      "amount_millions": 858,
+      "ratio_percent": 3.4
+    },
+    {
+      "code": "5243",
+      "name": "note",
+      "price": 2008.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.061071314860653876,
+      "per_actual": 88.03096935834532,
+      "per": 45.635461647058825,
+      "per_next": 48.487678,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 0.00017788024413130282,
+      "equity_ratio": 45.479130568360375,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.10194923718312063,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 13.475120586080484,
+      "amount_millions": 1968,
+      "ratio_percent": 5.8
+    }
+  ]
+}

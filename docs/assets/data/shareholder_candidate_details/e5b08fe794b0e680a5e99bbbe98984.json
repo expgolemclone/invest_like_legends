@@ -1,0 +1,61 @@
+{
+  "id": "小田急電鉄",
+  "name": "小田急電鉄",
+  "aliases": [
+    "小田急電鉄"
+  ],
+  "stocks": [
+    {
+      "code": "2440",
+      "name": "ぐるなび",
+      "price": 124.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.38305174698350547,
+      "per_actual": 33.43840164536507,
+      "per": 23.520237333333334,
+      "per_next": 20.753150588235293,
+      "fcf_yield_avg": 0.018684746265032044,
+      "total_payout_ratio": 102.0203991138865,
+      "equity_ratio": 42.8728535515662,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.015720180926366494,
+      "fcf_cagr": -543.6469351477517,
+      "fcf_cagr_r2": 0.4124959218431259,
+      "fcf_sma_cagr": -0.19783781327791014,
+      "pbr": 1.4174481770828102,
+      "amount_millions": 139,
+      "ratio_percent": 1.9
+    },
+    {
+      "code": "9081",
+      "name": "神奈川中央交通",
+      "price": 3300.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -1.7463973063973064,
+      "per_actual": 8.180208538264804,
+      "per": 12.229411764705882,
+      "per_next": 10.395,
+      "fcf_yield_avg": 0.023576238576238574,
+      "total_payout_ratio": 5.286195286195286,
+      "equity_ratio": 31.237760208892436,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.3636363636363635,
+      "has_preferred_shares": false,
+      "croic": -0.04786235546323962,
+      "fcf_cagr": -23.34783105975598,
+      "fcf_cagr_r2": 0.02546168400772338,
+      "fcf_sma_cagr": -0.22365371774225226,
+      "pbr": 0.6558152739661209,
+      "amount_millions": 18381,
+      "ratio_percent": 44.2
+    }
+  ]
+}

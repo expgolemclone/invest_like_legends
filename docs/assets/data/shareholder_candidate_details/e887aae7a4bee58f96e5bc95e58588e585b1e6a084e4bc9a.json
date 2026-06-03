@@ -1,0 +1,61 @@
+{
+  "id": "自社取引先共栄会",
+  "name": "自社取引先共栄会",
+  "aliases": [
+    "自社取引先共栄会"
+  ],
+  "stocks": [
+    {
+      "code": "2220",
+      "name": "亀田製菓",
+      "price": 1195.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.08494687544228519,
+      "per_actual": 14.770603701310689,
+      "per": 3.2791950922131146,
+      "per_next": 13.561416991525423,
+      "fcf_yield_avg": 0.0034732133776793567,
+      "total_payout_ratio": 7.1238993352905124,
+      "equity_ratio": 52.687668534336595,
+      "peg_trailing_5": 3.7389637538777514,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 4.2677824267782425,
+      "has_preferred_shares": false,
+      "croic": 0.01851213854245619,
+      "fcf_cagr": 59.84057923604523,
+      "fcf_cagr_r2": 0.14679910308781594,
+      "fcf_sma_cagr": 0.517211703958692,
+      "pbr": 1.013995542277082,
+      "amount_millions": 2199,
+      "ratio_percent": 8.2
+    },
+    {
+      "code": "5279",
+      "name": "日本興業",
+      "price": 1129.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.350379903718528,
+      "per_actual": 8.787480790382109,
+      "per": 8.045306511627906,
+      "per_next": 7.687737333333334,
+      "fcf_yield_avg": 0.14161753936673407,
+      "total_payout_ratio": 7.194459008282686,
+      "equity_ratio": 46.53694841725434,
+      "peg_trailing_5": 1.1311195952638478,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.021791331673199,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 4.428697962798937,
+      "has_preferred_shares": false,
+      "croic": 0.03302431587896846,
+      "fcf_cagr": -6.810949857463465,
+      "fcf_cagr_r2": 0.03583422710826647,
+      "fcf_sma_cagr": -0.089189502711995,
+      "pbr": 0.43716358634996116,
+      "amount_millions": 350,
+      "ratio_percent": 10.2
+    }
+  ]
+}

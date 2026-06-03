@@ -1,0 +1,61 @@
+{
+  "id": "三菱倉庫",
+  "name": "三菱倉庫",
+  "aliases": [
+    "三菱倉庫"
+  ],
+  "stocks": [
+    {
+      "code": "8081",
+      "name": "カナデン",
+      "price": 2563.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.4429288594095461,
+      "per_actual": 14.628995433789955,
+      "per": 14.786538461538461,
+      "per_next": 14.134191176470589,
+      "fcf_yield_avg": 0.02235921446221876,
+      "total_payout_ratio": 24.353405297611307,
+      "equity_ratio": 50.86157542012326,
+      "peg_trailing_5": 3.7579166323496405,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 4.320024425243563,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.404603979711276,
+      "has_preferred_shares": false,
+      "croic": 0.07082634413348636,
+      "fcf_cagr": 26.159218993095212,
+      "fcf_cagr_r2": 0.14854267937019972,
+      "fcf_sma_cagr": 0.4356973193077706,
+      "pbr": 1.2016816353747735,
+      "amount_millions": 1666,
+      "ratio_percent": 2.9
+    },
+    {
+      "code": "9369",
+      "name": "キユーソー流通システム",
+      "price": 3315.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.526043365899475,
+      "per_actual": 31.742627265861028,
+      "per": 40.02594142857143,
+      "per_next": 38.20658045454545,
+      "fcf_yield_avg": -0.015870659691333274,
+      "total_payout_ratio": 2.111725708554465,
+      "equity_ratio": 30.287831416165712,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.36199095022624433,
+      "has_preferred_shares": false,
+      "croic": -0.03563983275425475,
+      "fcf_cagr": 0.49975012493753124,
+      "fcf_cagr_r2": 0.00018469851392918958,
+      "fcf_sma_cagr": 0.01898450346305247,
+      "pbr": 1.4704607431510444,
+      "amount_millions": 4177,
+      "ratio_percent": 5.0
+    }
+  ]
+}

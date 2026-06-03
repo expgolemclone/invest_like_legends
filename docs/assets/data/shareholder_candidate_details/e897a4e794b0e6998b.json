@@ -1,0 +1,61 @@
+{
+  "id": "藤田晋",
+  "name": "藤田晋",
+  "aliases": [
+    "藤田晋"
+  ],
+  "stocks": [
+    {
+      "code": "242A",
+      "name": "リプライオリティ",
+      "price": 504.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.9701156245030417,
+      "per_actual": 5.178091225499176,
+      "per": 7.195287272727272,
+      "per_next": 6.59568,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 5.957434765381786,
+      "equity_ratio": 73.59928538075806,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "insufficient_history",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "insufficient_history",
+      "dividend_yield": 4.523809523809524,
+      "has_preferred_shares": false,
+      "croic": 0.10525196682968319,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 0.9356695206990908,
+      "amount_millions": 146,
+      "ratio_percent": 2.4
+    },
+    {
+      "code": "4751",
+      "name": "サイバーエージェント",
+      "price": 1354.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1905708947797566,
+      "per_actual": 21.680820436669087,
+      "per": 21.590142791446542,
+      "per_next": 21.125124331323075,
+      "fcf_yield_avg": 0.021744287135374216,
+      "total_payout_ratio": 4.751615184087997,
+      "equity_ratio": 29.845000197429112,
+      "peg_trailing_5": 0.5894218372963579,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8275127308347533,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.255539143279173,
+      "has_preferred_shares": false,
+      "croic": 0.22203526627542716,
+      "fcf_cagr": 12.950232587312346,
+      "fcf_cagr_r2": 0.03792857751921502,
+      "fcf_sma_cagr": 0.11781994212838831,
+      "pbr": 2.4904383717702707,
+      "amount_millions": 114074,
+      "ratio_percent": 16.6
+    }
+  ]
+}

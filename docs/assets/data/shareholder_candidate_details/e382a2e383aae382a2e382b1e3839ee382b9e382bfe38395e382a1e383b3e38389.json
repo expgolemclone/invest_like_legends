@@ -1,0 +1,61 @@
+{
+  "id": "アリアケマスタファンド",
+  "name": "アリアケ･マスター･ファンド",
+  "aliases": [
+    "アリアケ･マスター･ファンド"
+  ],
+  "stocks": [
+    {
+      "code": "7157",
+      "name": "ライフネット生命保険",
+      "price": 1670.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 22.387632664775573,
+      "per": 17.201164430769232,
+      "per_next": 16.77113532,
+      "fcf_yield_avg": -0.011747862994405795,
+      "total_payout_ratio": 0.0,
+      "equity_ratio": 79.28265248153696,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": -0.07617062393468609,
+      "fcf_cagr": -14.855828940335982,
+      "fcf_cagr_r2": 0.03599444414873714,
+      "fcf_sma_cagr": -0.0011532362692806776,
+      "pbr": 1.4564598627876684,
+      "amount_millions": 9452,
+      "ratio_percent": 7.0
+    },
+    {
+      "code": "8366",
+      "name": "滋賀銀行",
+      "price": 1984.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 25.483632666666665,
+      "per": 23.270907488780487,
+      "per_next": 19.0821441408,
+      "fcf_yield_avg": 0.1537885878204549,
+      "total_payout_ratio": 7.670207232480523,
+      "equity_ratio": 4.273229637243454,
+      "peg_trailing_5": 2.9750633166476566,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 3.2762096774193545,
+      "has_preferred_shares": false,
+      "croic": -1.409094865370627,
+      "fcf_cagr": -69.70801445417545,
+      "fcf_cagr_r2": 0.10992079785753096,
+      "fcf_sma_cagr": -0.38203268042787814,
+      "pbr": 1.0724860750296192,
+      "amount_millions": 5158,
+      "ratio_percent": 4.8
+    }
+  ]
+}

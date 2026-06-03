@@ -1,0 +1,61 @@
+{
+  "id": "azcom丸和h",
+  "name": "AZ-COM丸和H",
+  "aliases": [
+    "AZ-COM丸和H"
+  ],
+  "stocks": [
+    {
+      "code": "4418",
+      "name": "JDSC",
+      "price": 695.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.1561723246416788,
+      "per_actual": 32.494869487990236,
+      "per": 21.601401923076924,
+      "per_next": 18.721215,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": 2.448176217907509,
+      "equity_ratio": 47.380719206698615,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 0.0,
+      "has_preferred_shares": false,
+      "croic": 0.15050040134496445,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 2.8797793235418987,
+      "amount_millions": 403,
+      "ratio_percent": 3.6
+    },
+    {
+      "code": "9325",
+      "name": "ファイズ HD",
+      "price": 1212.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.07254951226911138,
+      "per_actual": 14.273377149075081,
+      "per": 13.1172336,
+      "per_next": 9.505241739130435,
+      "fcf_yield_avg": 0.024600034568264456,
+      "total_payout_ratio": 6.819440952854572,
+      "equity_ratio": 38.31800444203164,
+      "peg_trailing_5": 0.37601784360592977,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.28487704844158457,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.2376237623762376,
+      "has_preferred_shares": false,
+      "croic": -0.023637074320042865,
+      "fcf_cagr": 13.542813180477722,
+      "fcf_cagr_r2": 0.05973981877351161,
+      "fcf_sma_cagr": 0.1816836002717126,
+      "pbr": 3.250217329789717,
+      "amount_millions": 7587,
+      "ratio_percent": 57.8
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "千葉県民共済生活協同組合",
+  "name": "千葉県民共済生活協同組合",
+  "aliases": [
+    "千葉県民共済生活協同組合"
+  ],
+  "stocks": [
+    {
+      "code": "3648",
+      "name": "AGS",
+      "price": 1042.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.347986914385917,
+      "per_actual": 12.960349813634341,
+      "per": 10.579525884023669,
+      "per_next": 10.642499252380953,
+      "fcf_yield_avg": 0.056498516223258965,
+      "total_payout_ratio": 8.777907034075598,
+      "equity_ratio": 63.987221180535,
+      "peg_trailing_5": 0.5380571206961282,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.5277443799930258,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.5355086372360844,
+      "has_preferred_shares": false,
+      "croic": 0.009675877514695654,
+      "fcf_cagr": -1.4592363157894694,
+      "fcf_cagr_r2": 0.0035491822772439475,
+      "fcf_sma_cagr": 0.05840494525395745,
+      "pbr": 1.2194725170213532,
+      "amount_millions": 1042,
+      "ratio_percent": 5.8
+    },
+    {
+      "code": "8544",
+      "name": "京葉銀行",
+      "price": 2507.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": null,
+      "per_actual": 24.847494512856695,
+      "per": 21.130309333733333,
+      "per_next": 16.681823158210527,
+      "fcf_yield_avg": 0.2053744977475886,
+      "total_payout_ratio": 8.96847574134327,
+      "equity_ratio": 4.359016171089548,
+      "peg_trailing_5": 1.3766031403156025,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.8408201603034625,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.8376545672118069,
+      "has_preferred_shares": false,
+      "croic": -0.4326879374602309,
+      "fcf_cagr": -6.867527402627196,
+      "fcf_cagr_r2": 0.0009143709053343429,
+      "fcf_sma_cagr": -30.858594179022514,
+      "pbr": 1.0200520075887283,
+      "amount_millions": 7772,
+      "ratio_percent": 2.3
+    }
+  ]
+}

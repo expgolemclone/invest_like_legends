@@ -1,0 +1,61 @@
+{
+  "id": "伊藤忠テクノs",
+  "name": "伊藤忠テクノS",
+  "aliases": [
+    "伊藤忠テクノS"
+  ],
+  "stocks": [
+    {
+      "code": "3774",
+      "name": "インターネットイニシアティブ",
+      "price": 3142.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": -0.07778502489648136,
+      "per_actual": 28.916685545778357,
+      "per": 24.116999706443515,
+      "per_next": 21.507324365074627,
+      "fcf_yield_avg": null,
+      "total_payout_ratio": null,
+      "equity_ratio": 45.027925808568185,
+      "peg_trailing_5": 0.7644738780502468,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 0.6902447593276583,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 0.6206238064926799,
+      "has_preferred_shares": false,
+      "croic": 0.03889293684989587,
+      "fcf_cagr": null,
+      "fcf_cagr_r2": null,
+      "fcf_sma_cagr": null,
+      "pbr": 4.056671966161339,
+      "amount_millions": 24508,
+      "ratio_percent": 4.2
+    },
+    {
+      "code": "3850",
+      "name": "エヌ・ティ・ティ・データ・イントラマート",
+      "price": 2576.0,
+      "price_date": "2026-06-01",
+      "net_cash_ratio": 0.09342896628664189,
+      "per_actual": 37.39743165284244,
+      "per": 15.195333333333334,
+      "per_next": 13.024571428571429,
+      "fcf_yield_avg": 0.014850055781536937,
+      "total_payout_ratio": 7.112772718441125,
+      "equity_ratio": 54.85655845771426,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": 1.4002772779405586,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 1.9409937888198756,
+      "has_preferred_shares": false,
+      "croic": 0.03805557636191025,
+      "fcf_cagr": -48.0928235247078,
+      "fcf_cagr_r2": 0.2519143476451643,
+      "fcf_sma_cagr": -0.23672900138728095,
+      "pbr": 2.493989277320139,
+      "amount_millions": 155,
+      "ratio_percent": 1.2
+    }
+  ]
+}
