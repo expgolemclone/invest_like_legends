@@ -1,0 +1,61 @@
+{
+  "id": "自社互助会",
+  "name": "自社互助会",
+  "aliases": [
+    "自社互助会"
+  ],
+  "stocks": [
+    {
+      "code": "1799",
+      "name": "第一建設工業",
+      "price": 3165.0,
+      "price_date": "2026-06-02",
+      "net_cash_ratio": 0.6281941605117043,
+      "per_actual": 12.592168218058093,
+      "per": 12.45606113490566,
+      "per_next": 12.003113457272727,
+      "fcf_yield_avg": 0.02316692710898003,
+      "total_payout_ratio": 4.6047946579879495,
+      "equity_ratio": 80.62807643438971,
+      "peg_trailing_5": 0.8354344545832456,
+      "peg_trailing_5_status": "ok",
+      "peg_blended_5y_actual_2f": 1.0615343481616313,
+      "peg_blended_5y_actual_2f_status": "ok",
+      "dividend_yield": 4.107424960505529,
+      "has_preferred_shares": false,
+      "croic": 0.032264829227999316,
+      "fcf_cagr": -20.828920546662093,
+      "fcf_cagr_r2": 0.04247674733770587,
+      "fcf_sma_cagr": -0.16112695082330036,
+      "pbr": 0.9212915626726189,
+      "amount_millions": 1456,
+      "ratio_percent": 2.2
+    },
+    {
+      "code": "7521",
+      "name": "ムサシ",
+      "price": 2618.0,
+      "price_date": "2026-06-02",
+      "net_cash_ratio": 0.8780191321811743,
+      "per_actual": 6.064423076923077,
+      "per": 9.049173913043479,
+      "per_next": 26.016375,
+      "fcf_yield_avg": 0.0365346824836281,
+      "total_payout_ratio": 12.367211035357538,
+      "equity_ratio": 63.8272670695228,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_eps",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.8334606569900689,
+      "has_preferred_shares": false,
+      "croic": 0.16044068084624316,
+      "fcf_cagr": 15.645672931312069,
+      "fcf_cagr_r2": 0.021041144413687284,
+      "fcf_sma_cagr": 0.0485006184726029,
+      "pbr": 0.6127808037685853,
+      "amount_millions": 759,
+      "ratio_percent": 3.7
+    }
+  ]
+}

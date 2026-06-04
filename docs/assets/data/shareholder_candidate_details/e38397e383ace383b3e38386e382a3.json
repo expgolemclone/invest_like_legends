@@ -34,14 +34,14 @@
     {
       "code": "7048",
       "name": "ベルトラ",
-      "price": 133.0,
-      "price_date": "2026-06-01",
-      "net_cash_ratio": 0.4084154650790559,
-      "per_actual": 34.640340550886954,
-      "per": 14.318381,
-      "per_next": 9.73649908,
-      "fcf_yield_avg": -0.034581238824499524,
-      "total_payout_ratio": 0.0014173472299039134,
+      "price": 130.0,
+      "price_date": "2026-06-02",
+      "net_cash_ratio": 0.41784043735011106,
+      "per_actual": 33.85897948582935,
+      "per": 13.99541,
+      "per_next": 9.5168788,
+      "fcf_yield_avg": -0.035379267412757216,
+      "total_payout_ratio": 0.0014500552429016957,
       "equity_ratio": 26.592424850701036,
       "peg_trailing_5": null,
       "peg_trailing_5_status": "non_positive_eps",
@@ -53,8 +53,8 @@
       "fcf_cagr": 36.0992630563008,
       "fcf_cagr_r2": 0.021353090545867506,
       "fcf_sma_cagr": 0.30027319514931006,
-      "pbr": 1.6392643420701285,
-      "amount_millions": 100,
+      "pbr": 1.602288454655013,
+      "amount_millions": 98,
       "ratio_percent": 2.0
     }
   ]
