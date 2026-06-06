@@ -138,6 +138,7 @@ const TOTAL_PAYOUT_RATIO_SPEC: MetricColSpec = {
   decimals: 1,
   suffix: "%",
   title: "(|配当支払額| + |自己株式取得額|) / 時価総額 * 100",
+  stockLink: "buffett_code",
 };
 
 const PBR_SPEC: MetricColSpec = {
