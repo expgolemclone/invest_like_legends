@@ -75,11 +75,11 @@
       "peg_blended_5y_actual_2f_status": "non_positive_growth",
       "dividend_yield": 3.3003300330033,
       "has_preferred_shares": false,
-      "croic": -0.1106494184507245,
+      "croic": -0.11101232558319733,
       "fcf_cagr": -616.6049005638666,
       "fcf_cagr_r2": 0.4168363940789796,
       "fcf_sma_cagr": -0.45769417819884933,
-      "pbr": 0.6636859946815272,
+      "pbr": null,
       "amount_millions": 9935,
       "ratio_percent": 61.3
     }
