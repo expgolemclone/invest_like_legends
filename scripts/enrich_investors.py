@@ -44,10 +44,10 @@ def _auto_push_json(paths: list[Path], message: str) -> None:
 
 
 def _sync_shikiho_dividends() -> None:
-    from stock_db.cli.sync_shikiho_dividends import main as sync_shikiho_dividends
+    from stock_db_bridge import sync_shikiho_dividends
 
     handbook_db_path = resolve_handbook_db_path()
-    sync_shikiho_dividends(["--shikiho-db", str(handbook_db_path)])
+    sync_shikiho_dividends(handbook_db_path)
 
 
 def main() -> None:

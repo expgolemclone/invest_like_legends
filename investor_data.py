@@ -494,7 +494,7 @@ def load_major_shareholder_rows(db_path: Path | None = None) -> list[Shareholder
 
 
 def load_stock_names() -> dict[str, str]:
-    from stock_db.api import get_stock_names
+    from stock_db_bridge import get_stock_names
 
     return get_stock_names()
 
@@ -561,7 +561,7 @@ def _stock_metric_value(value: object) -> StockMetricValue:
 
 
 def build_stock_price_metadata() -> StockPriceMetadata:
-    from stock_db.api import get_stock_price_metadata
+    from stock_db_bridge import get_stock_price_metadata
 
     return get_stock_price_metadata()
 

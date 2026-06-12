@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 
 import serve
-from stock_db.api import PriceRefreshCommandResult, PriceRefreshError
+from stock_db_bridge import PriceRefreshCommandResult, PriceRefreshError
 
 
 def test_ensure_prices_fresh_skips_command_when_fresh(

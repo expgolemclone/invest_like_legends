@@ -243,15 +243,15 @@ def test_generated_stock_price_metadata_matches_schema() -> None:
     )
 
 
-def test_stock_price_metadata_uses_stock_db_api(
+def test_stock_price_metadata_uses_stock_db_bridge(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     def fake_get_stock_price_metadata() -> dict[str, str]:
         return {"price_date": "2026-05-20", "target_price_date": "2026-05-20"}
 
-    import stock_db.api as stock_db_api
+    import stock_db_bridge
 
-    monkeypatch.setattr(stock_db_api, "get_stock_price_metadata", fake_get_stock_price_metadata)
+    monkeypatch.setattr(stock_db_bridge, "get_stock_price_metadata", fake_get_stock_price_metadata)
 
     assert build_stock_price_metadata() == {
         "price_date": "2026-05-20",

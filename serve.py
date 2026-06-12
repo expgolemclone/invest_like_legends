@@ -21,7 +21,7 @@ from investor_data import (
     write_shareholder_candidates_document,
     write_stock_price_metadata,
 )
-from stock_db.api import (
+from stock_db_bridge import (
     PriceRefreshCommandResult,
     PriceRefreshError,
     ensure_prices_fresh,

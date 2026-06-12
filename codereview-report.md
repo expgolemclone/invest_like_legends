@@ -6,7 +6,7 @@
 
 更新日: 2026-06-03
 
-- High の `STOCKS_DB_PATH` 指摘は現行コードでは解消済み。`investor_data.resolve_stocks_db_path()` は存在せず、通常実装は `stock_db.api` と `formula_screening.web.run_screening_strategy_payload()` の公開 API 経由で指標を取得する。
+- High の `STOCKS_DB_PATH` 指摘は現行コードでは解消済み。`investor_data.resolve_stocks_db_path()` は存在せず、通常実装は `stock_db_bridge.py` と `formula_screening.web.run_screening_strategy_payload()` の公開境界経由で指標を取得する。
 - Medium のローカル API 再計算は対応済み。`serve.py` は起動時に生成した portfolio / candidate / stock-price metadata payload を API route に閉じ込め、リクエストごとの全量再計算を行わない。
 - Medium の candidate 詳細 payload は対応済み。`shareholder_candidates.json` は summary のみにし、詳細画面は `shareholder_candidate_details/*.json` または `/api/shareholder-candidate?id=...` から個別 detail を取得する。
 
