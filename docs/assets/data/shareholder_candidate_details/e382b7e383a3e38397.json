@@ -1,0 +1,61 @@
+{
+  "id": "シャプ",
+  "name": "シャープ",
+  "aliases": [
+    "シャープ"
+  ],
+  "stocks": [
+    {
+      "code": "3627",
+      "name": "テクミラ HD",
+      "price": 259.0,
+      "price_date": "2026-06-11",
+      "net_cash_ratio": 0.4267299557477076,
+      "per_actual": -97.61557972088062,
+      "per": -36.60475777777778,
+      "per_next": 23.53163,
+      "fcf_yield_avg": -0.0740624427632085,
+      "total_payout_ratio": 12.056022347064658,
+      "equity_ratio": 54.439630646613445,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_per",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_eps",
+      "dividend_yield": 1.9305019305019304,
+      "has_preferred_shares": false,
+      "croic": -0.04829901002781754,
+      "fcf_cagr": -17.387832472666734,
+      "fcf_cagr_r2": 0.012663684536662428,
+      "fcf_sma_cagr": -0.2888909472169269,
+      "pbr": null,
+      "amount_millions": 93,
+      "ratio_percent": 2.8
+    },
+    {
+      "code": "8173",
+      "name": "上新電機",
+      "price": 3900.0,
+      "price_date": "2026-06-11",
+      "net_cash_ratio": -0.6203626373626374,
+      "per_actual": 32.05165835045494,
+      "per": 31.2,
+      "per_next": 32.11764705882353,
+      "fcf_yield_avg": 0.031865384615384615,
+      "total_payout_ratio": 9.317765567765568,
+      "equity_ratio": 43.44954493030328,
+      "peg_trailing_5": null,
+      "peg_trailing_5_status": "non_positive_growth",
+      "peg_blended_5y_actual_2f": null,
+      "peg_blended_5y_actual_2f_status": "non_positive_growth",
+      "dividend_yield": 1.282051282051282,
+      "has_preferred_shares": false,
+      "croic": 0.10428261383415346,
+      "fcf_cagr": 8.24330902785942,
+      "fcf_cagr_r2": 0.008899706183593216,
+      "fcf_sma_cagr": -0.0282376975494949,
+      "pbr": 1.043328715425405,
+      "amount_millions": 2106,
+      "ratio_percent": 1.9
+    }
+  ]
+}
